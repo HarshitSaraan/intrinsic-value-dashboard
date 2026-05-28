@@ -21,6 +21,7 @@
       padding: 0;
       min-height: 100%;
       background: #061124;
+      overflow-x: hidden;
     }
 
     /* Logo entrance animation */
@@ -76,6 +77,7 @@
       width: 100%;
       max-width: 100%;
       min-height: 100vh;
+      overflow-x: hidden;
       font-family: 'Poppins', sans-serif;
       color: var(--iv-white);
       background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.13), transparent 26%),
@@ -90,9 +92,9 @@
       box-sizing: border-box;
     }
 
-    img, video {
+    #iv-dashboard-app *,
+    body * {
       max-width: 100%;
-      height: auto;
     }
 
     #iv-dashboard-app button,
@@ -108,7 +110,7 @@
       width: 100%;
       max-width: 100%;
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: 1fr;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
@@ -243,8 +245,6 @@
 
      .iv-main {
       width: 100%;
-      min-width: 0;
-      max-width: 100%;
       padding: 20px 24px;
       display: block;
       overflow-x: hidden;
@@ -261,49 +261,19 @@
       height: 42px;
       min-width: 42px;
       cursor: pointer;
+      font-size: 19px;
       line-height: 1;
-    }
-
-    .iv-mobile-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-    
-    .iv-mobile-logo img {
-      display: block;
     }
 
 
 
      .iv-content {
       width: 100%;
-      min-width: 0;
       max-width: 100%;
       display: grid;
       gap: 12px;
       overflow-x: hidden;
     }
-
-     .iv-content > * {
-      min-width: 0;
-      max-width: 100%;
-     }
-
-     .iv-page-shell {
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-      box-sizing: border-box;
-     }
-
-     @media (max-width: 640px) {
-       .iv-page-shell {
-         padding: 0 !important;
-       }
-     }
 
      .iv-view {
       width: 100%;
@@ -400,7 +370,6 @@
 
      .iv-card {
       width: 100%;
-      max-width: 100%;
       min-width: 0;
       border: 1px solid rgba(212, 175, 55, 0.17);
       background: var(--iv-card);
@@ -550,7 +519,6 @@
       margin-top: 12px;
       border-radius: 15px;
       border: 1px solid rgba(212, 175, 55, 0.14);
-      max-width: 100%;
     }
 
      table {
@@ -1096,10 +1064,6 @@
         padding: 22px;
       }
 
-      .iv-mobile-header {
-        display: none;
-      }
-
 
 
        .iv-menu-btn {
@@ -1535,11 +1499,5 @@
 
        .iv-turnaround-table-wrap table {
         min-width: 760px;
-      }
-    }
-
-    @media (max-width: 640px) {
-       .iv-main {
-        padding: 12px 14px;
       }
     }

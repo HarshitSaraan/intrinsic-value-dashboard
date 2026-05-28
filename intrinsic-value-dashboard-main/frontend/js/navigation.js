@@ -160,22 +160,18 @@
     // Create iv-main wrapper and wrap the current main element inside it
     var ivMain = document.createElement("div");
     ivMain.className = "iv-main";
-    // Create mobile header (logo + hamburger)
-    var mobileHeader = document.createElement("div");
-    mobileHeader.className = "iv-mobile-header";
-    
-    var logoWrap = document.createElement("div");
-    logoWrap.className = "iv-mobile-logo";
-    logoWrap.innerHTML = '<img src="' + getLogoSrc() + '" alt="IV" style="height:44px;width:auto;margin-left:-4px;">';
-    
+    // Create menu button for mobile (since topbar is removed)
     var menuBtn = document.createElement("button");
     menuBtn.className = "iv-menu-btn";
     menuBtn.id = "ivMenuBtn";
     menuBtn.innerHTML = "☰";
-    
-    mobileHeader.appendChild(logoWrap);
-    mobileHeader.appendChild(menuBtn);
-    ivMain.appendChild(mobileHeader);
+    menuBtn.style.position = "fixed";
+    menuBtn.style.top = "16px";
+    menuBtn.style.left = "16px";
+    menuBtn.style.zIndex = "100";
+    menuBtn.style.display = "none"; // Hide by default on desktop
+    // On mobile, main.css will show it via media query for .iv-menu-btn
+    ivMain.appendChild(menuBtn);
     
     var ivContent = document.createElement("section");
     ivContent.className = "iv-content";

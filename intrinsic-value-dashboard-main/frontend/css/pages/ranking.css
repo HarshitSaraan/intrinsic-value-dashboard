@@ -11,12 +11,6 @@
               gap: 10px;
             }
 
-             @media (max-width: 480px) {
-               .iv-ranking-page .iv-ranking-range {
-                 grid-template-columns: minmax(0, 1fr);
-               }
-             }
-
              .iv-ranking-page .iv-ranking-summary {
               display: grid;
               grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -24,12 +18,6 @@
               margin-top: 12px;
               padding-bottom: 12px;
             }
-
-             @media (max-width: 480px) {
-               .iv-ranking-page .iv-ranking-summary {
-                 grid-template-columns: minmax(0, 1fr);
-               }
-             }
 
              .iv-ranking-page .iv-ranking-mini {
               border: 1px solid rgba(212, 175, 55, 0.16);
@@ -60,10 +48,6 @@
               max-height: 560px;
               overflow: auto;
               -webkit-overflow-scrolling: touch;
-            }
-
-             .iv-ranking-page .iv-ranking-table-wrap table {
-              min-width: 800px;
             }
 
              .iv-ranking-page table thead th {

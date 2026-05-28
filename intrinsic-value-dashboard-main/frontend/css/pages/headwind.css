@@ -31,7 +31,6 @@
 
              .iv-headwind-page .iv-hw-sector-table {
               width: 100%;
-              min-width: 600px;
               border-collapse: collapse;
             }
 
@@ -117,5 +116,4 @@
               overflow-x: auto;
               max-height: 560px;
               overflow-y: auto;
-              max-width: 100%;
             }

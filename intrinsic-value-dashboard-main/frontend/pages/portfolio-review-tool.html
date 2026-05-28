@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Review Tool</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css">
+</head>
+<body>
+  <main class="iv-page-shell iv-portfolio-review-tool-page">
+    <div class="iv-view" id="view-portfolio">
+          <div class="iv-section-title">
+            <div class="iv-kicker">Portfolio Review Tool</div>
+            <h2>Quality, valuation and allocation review.</h2>
+            <p>Placeholder structure for client portfolio upload/review. File upload and analysis logic can be added
+              later.</p>
+          </div>
+          <div class="iv-grid two">
+            <div class="iv-card">
+              <h3>Portfolio Inputs</h3>
+              <div class="iv-form-grid">
+                <div class="iv-field"><label>Client Name</label><input type="text" placeholder="Name"></div>
+                <div class="iv-field"><label>Portfolio Value</label><input type="number" placeholder="₹"></div>
+                <div class="iv-field"><label>Risk Profile</label><select>
+                    <option>Select</option>
+                    <option>Conservative</option>
+                    <option>Balanced</option>
+                    <option>Aggressive</option>
+                  </select></div>
+                <div class="iv-field"><label>Holding Count</label><input type="number" placeholder="No. of stocks">
+                </div>
+              </div>
+              <div class="iv-btn-row"><button class="iv-primary-btn">Generate Review</button></div>
+            </div>
+            <div class="iv-card">
+              <h3>Review Summary</h3>
+              <p>Allocation risk, concentration, valuation comfort and suggested action buckets will appear here.</p>
+              <div class="iv-note">No client data is saved in this version.</div>
+            </div>
+          </div>
+  </main>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modules/portfolio-review-tool.js"></script>
+</body>
+</html>
