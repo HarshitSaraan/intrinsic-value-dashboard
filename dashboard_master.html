@@ -17,10 +17,12 @@
         transform: scale(0.3);
         opacity: 0;
       }
+
       70% {
         transform: scale(1.1);
         opacity: 1;
       }
+
       100% {
         transform: scale(1);
         opacity: 1;
@@ -29,9 +31,12 @@
 
     /* Optional: subtle pulse after entrance */
     @keyframes logoPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
       }
+
       50% {
         transform: scale(1.02);
       }
@@ -188,12 +193,12 @@
       font-size: 13px;
     }
 
-    a:hover{
+    a:hover {
       transform: scale(1.02);
       transition: 0.2s ease;
     }
 
-    button:hover{
+    button:hover {
       transform: scale(1.02);
       transition: 0.2s ease;
     }
@@ -1537,7 +1542,8 @@
     <aside class="iv-sidebar" aria-label="Intrinsic Value Wealth Dashboard Navigation">
       <a href="#" class="iv-brand-link">
         <div class="iv-brand">
-          <div class="iv-brand-mark animate-logo"><img src="/static/logo.png" alt="IV" width="100px" height="100px"></div>
+          <div class="iv-brand-mark animate-logo"><img src="/static/logo.png" alt="IV" width="100px" height="100px">
+          </div>
         </div>
       </a>
 
@@ -1610,20 +1616,6 @@
 
             <button class="iv-nav-btn" data-view="headwind">
               <span class="iv-nav-icon">⇄</span>Headwind / Tailwind Indicator
-            </button>
-          </div>
-        </div>
-
-        <!-- Sector Insights -->
-        <div class="iv-nav-group">
-          <button class="iv-nav-group-btn">
-            <span>Sector Insights</span>
-            <span class="iv-nav-arrow">▾</span>
-          </button>
-
-          <div class="iv-nav-dropdown">
-            <button class="iv-nav-btn" data-view="turnaround">
-              <span class="iv-nav-icon">⟳</span>Turnaround Sectors
             </button>
           </div>
         </div>
@@ -3793,7 +3785,7 @@
                     <th class="center" style="min-width:110px">Signal</th>
                   </tr>
                 </thead>
-                <tbody id="ivHeadwindTableBody">  
+                <tbody id="ivHeadwindTableBody">
                   <tr>
                     <td colspan="3" style="color:#AAB6CC;text-align:center;padding:24px">Loading data…</td>
                   </tr>
@@ -3963,7 +3955,8 @@
               <button class="iv-primary-btn" id="ivRankingApply" type="button">Apply Ranking</button>
               <button class="iv-secondary-btn" id="ivRankingReset" type="button">Reset</button>
             </div>
-            <div class="iv-note">Rankings are computed server-side from <b>stock_master.csv</b> using Sales Growth 3Y, ROCE 3Y, and P/B ratio. Lower total score = better rank.</div>
+            <div class="iv-note">Rankings are computed server-side from <b>stock_master.csv</b> using Sales Growth 3Y,
+              ROCE 3Y, and P/B ratio. Lower total score = better rank.</div>
           </div>
 
           <div class="iv-ranking-summary">
@@ -3990,7 +3983,7 @@
                 </thead>
                 <tbody id="ivRankingTableBody">
                   <tr>
-                  <td colspan="8">Ranking data will appear here.</td>
+                    <td colspan="8">Ranking data will appear here.</td>
                   </tr>
                 </tbody>
               </table>
@@ -6009,52 +6002,87 @@
       var market = data.market;
       var sectors = data.sectorBreakdown || [];
 
-      // For visualization, use a fixed maxScore of 10 so that scores of 10+ fill the bar completely
-      // This prevents extremely wide bars for high scores while preserving score labels
-      var maxScore = 10;
+      // ── helpers ──────────────────────────────────────────────────────────────
+      // New formula: score = (inc − dec) / total  →  range [−1, +1], neutral = 0
+      // Positive = Tailwind (green), Negative = Headwind (red), 0 = Neutral (gold)
 
-      function scoreForBar(s) {
-        if (s.score !== null) {
-          // For visualization, map scores 0-10 to 0-100% bar width
-          // A score of 10 will fill the bar completely
-          // Scores above 10 are capped at 10 for visualization but show actual value
-          return Math.min(s.score, 10);
-        }
-        // For null scores (infinity cases - pure tailwind), use max visualization value
-        return s.signal === 'Tailwind' ? 10 : 0;
+      function colorFor(signal) {
+        if (signal === 'Tailwind') return '#34D399';   // green
+        if (signal === 'Headwind') return '#F87171';   // red
+        return '#F4D676';                               // gold / neutral
       }
+
       function badgeHtml(signal) {
-        if (signal === 'Tailwind') return '<span class="iv-hw-badge tailwind">▲ Tailwind</span>';
-        if (signal === 'Headwind') return '<span class="iv-hw-badge headwind">▼ Headwind</span>';
-        return '<span class="iv-hw-badge neutral">Neutral</span>';
-      }
-      function barHtml(s) {
-        var val = scoreForBar(s);
-        var pct = maxScore > 0 ? Math.min((val / maxScore) * 100, 100) : 0;
-        var color = s.signal === 'Tailwind' ? '#34D399' : s.signal === 'Headwind' ? '#F87171' : '#F4D676';
-        var label = s.scoreDisplay || '—';
-        // Show infinity symbol for pure tailwind cases
-        if (s.score === null && s.signal === 'Tailwind') {
-          label = '∞';
-        }
-        return '<div class="iv-hw-bar-wrap">' +
-          '<div class="iv-hw-bar-bg"><div class="iv-hw-bar-fill" style="width:' + pct.toFixed(1) + '%;background:' + color + '"></div></div>' +
-          '<span class="iv-hw-score-val" style="color:' + color + '">' + label + '</span>' +
-          '</div>';
+        if (signal === 'Tailwind')
+          return '<span class="iv-hw-badge tailwind">▲ Tailwind</span>';
+        if (signal === 'Headwind')
+          return '<span class="iv-hw-badge headwind">▼ Headwind</span>';
+        return '<span class="iv-hw-badge neutral">● Neutral</span>';
       }
 
-      var mBarVal = { score: market.score, signal: market.signal, scoreDisplay: market.scoreDisplay };
-      var html = '<tr class="market-row">' +
-        '<td>🌐 Full Market</td>' +  
-        '<td class="right">' + barHtml(mBarVal) + '</td>' +
+      function barHtml(s) {
+        // score lives in [−1, +1].
+        // We split the bar at the centre:
+        //   positive score → green bar grows rightward from centre
+        //   negative score → red bar grows leftward from centre
+        // The bar track is split 50/50 with a centre divider.
+
+        var score = (s.score !== null && s.score !== undefined) ? s.score : 0;
+        // Cap at ±1 just in case of floating-point edge cases
+        var clamped = Math.max(-1, Math.min(1, score));
+        var pct = Math.abs(clamped) * 50;   // max 50% of track width per side
+        var color = colorFor(s.signal);
+        var label = (s.scoreDisplay !== undefined && s.scoreDisplay !== null)
+          ? s.scoreDisplay : '—';
+        // Show +/− prefix for clarity
+        if (s.score !== null && isFinite(s.score) && s.score > 0) label = '+' + label;
+
+        // Two-sided bar: negative side (left) | centre | positive side (right)
+        if (clamped >= 0) {
+          // Tailwind — bar grows right from centre
+          return '<div class="iv-hw-bar-wrap">' +
+            '<div class="iv-hw-bar-bg" style="display:flex;align-items:center;">' +
+            '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:99px 0 0 99px;overflow:hidden;">' +
+            '<div style="height:100%;width:0%;background:transparent"></div>' +
+            '</div>' +
+            '<div style="width:2px;height:10px;background:rgba(255,255,255,0.25);flex-shrink:0;"></div>' +
+            '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:0 99px 99px 0;overflow:hidden;">' +
+            '<div style="height:100%;width:' + (pct * 2).toFixed(1) + '%;background:' + color + ';border-radius:0 99px 99px 0;"></div>' +
+            '</div>' +
+            '</div>' +
+            '<span class="iv-hw-score-val" style="color:' + color + '">' + label + '</span>' +
+            '</div>';
+        } else {
+          // Headwind — bar grows left from centre
+          return '<div class="iv-hw-bar-wrap">' +
+            '<div class="iv-hw-bar-bg" style="display:flex;align-items:center;">' +
+            '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:99px 0 0 99px;overflow:hidden;direction:rtl;">' +
+            '<div style="height:100%;width:' + (pct * 2).toFixed(1) + '%;background:' + color + ';border-radius:99px 0 0 99px;"></div>' +
+            '</div>' +
+            '<div style="width:2px;height:10px;background:rgba(255,255,255,0.25);flex-shrink:0;"></div>' +
+            '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:0 99px 99px 0;overflow:hidden;">' +
+            '<div style="height:100%;width:0%;background:transparent"></div>' +
+            '</div>' +
+            '</div>' +
+            '<span class="iv-hw-score-val" style="color:' + color + '">' + label + '</span>' +
+            '</div>';
+        }
+      }
+
+      // ── render ────────────────────────────────────────────────────────────────
+      var mVal = { score: market.score, signal: market.signal, scoreDisplay: market.scoreDisplay };
+
+      var html = '<tr class="market-row" style="cursor:pointer;" title="Click to view history">' +
+        '<td>🌐 Full Market</td>' +
+        '<td class="right">' + barHtml(mVal) + '</td>' +
         '<td class="center">' + badgeHtml(market.signal) + '</td>' +
         '</tr>';
 
       if (!sectors.length) {
-        html += '<tr><td colspan="6" style="color:#AAB6CC;text-align:center;padding:20px">No sector data available.</td></tr>';
+        html += '<tr><td colspan="3" style="color:#AAB6CC;text-align:center;padding:20px">No sector data available.</td></tr>';
       } else {
         html += sectors.map(function (s) {
-          return'<tr>' +
+          return '<tr>' +
             '<td>' + s.industry + '</td>' +
             '<td class="right">' + barHtml(s) + '</td>' +
             '<td class="center">' + badgeHtml(s.signal) + '</td>' +
@@ -6069,7 +6097,7 @@
       var tbody = app.querySelector('#ivHeadwindTableBody');
       if (!tbody) return;
 
-      tbody.innerHTML = '<tr><td colspan="6" style="color:#AAB6CC;text-align:center;padding:24px">Loading…</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="3" style="color:#AAB6CC;text-align:center;padding:24px">Loading…</td></tr>';
 
       fetch('/headwind-tailwind', { cache: 'no-store' })
         .then(function (res) {
@@ -6078,11 +6106,207 @@
         })
         .then(function (data) {
           ivRenderHeadwindTable(data);
+          ivBindHeadwindMarketClick(data.market.score);  // ← this line must be here
         })
         .catch(function (err) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="color:#F87171;text-align:center;padding:24px">Failed to load data: ' + err.message + '</td></tr>';
+          if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="color:#F87171;text-align:center;padding:24px">Failed to load data: ' + err.message + '</td></tr>';
         });
     }
+    function ivBindHeadwindMarketClick(currentScore) {
+      var marketRow = app.querySelector('#ivHeadwindTableBody .market-row');
+      if (!marketRow) return;
+
+      var newRow = marketRow.cloneNode(true);
+      marketRow.parentNode.replaceChild(newRow, marketRow);
+      newRow.style.cursor = 'pointer';
+
+      newRow.addEventListener('click', function () {
+        var existing = app.querySelector('#ivHeadwindChartRow');
+        if (existing) { existing.remove(); return; }
+
+        var chartRow = document.createElement('tr');
+        chartRow.id = 'ivHeadwindChartRow';
+        chartRow.innerHTML = '<td colspan="3" style="padding:16px 10px;">' +
+          '<div style="position:relative;">' +
+          '<canvas id="ivHeadwindHistoryCanvas" style="width:100%;height:220px;display:block;border-radius:14px;background:rgba(6,17,36,0.38);border:1px solid rgba(255,255,255,0.07);"></canvas>' +
+          '<div id="ivHeadwindChartTooltip" style="position:fixed;display:none;pointer-events:none;z-index:80;padding:9px 10px;border-radius:12px;background:rgba(6,17,36,0.96);border:1px solid rgba(212,175,55,0.28);color:#fff;font-size:11px;line-height:1.5;"></div>' +
+          '</div>' +
+          '<div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
+          '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#D4AF37;margin-right:5px;"></i>Historical Score</span>' +
+          '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#4C8DFF;margin-right:5px;"></i>Current Score</span>' +
+          '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (0)</span>' +
+          '</div>' +
+          '</td>';
+
+        newRow.after(chartRow);
+
+        fetch('/headwind-history', { cache: 'no-store' })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            ivDrawHeadwindHistoryChart(data.data, currentScore);
+          })
+          .catch(function (err) {
+            var canvas = app.querySelector('#ivHeadwindHistoryCanvas');
+            if (canvas) {
+              canvas.insertAdjacentHTML('afterend',
+                '<div style="color:#F87171;font-size:12px;margin-top:8px;">Failed to load history: ' + err.message + '</div>'
+              );
+            }
+          });
+      });
+    }
+
+    function ivDrawHeadwindHistoryChart(historyRows, currentScore) {
+      var canvas = app.querySelector('#ivHeadwindHistoryCanvas');
+      if (!canvas) return;
+
+      var rect = canvas.getBoundingClientRect();
+      var dpr = window.devicePixelRatio || 1;
+      var width = Math.max(300, Math.floor(rect.width));
+      var height = 220;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      var ctx = canvas.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      var points = [];
+      historyRows.forEach(function (row) {
+        var keys = Object.keys(row);
+        var dateStr = row[keys[0]] || '';
+        var scoreRaw = row[keys[3]];
+        var score = parseFloat(scoreRaw);
+        if (dateStr && isFinite(score)) {
+          points.push({ label: dateStr, score: score });
+        }
+      });
+
+      points.push({ label: 'Current', score: currentScore, isCurrent: true });
+
+      if (points.length < 2) return;
+
+      var padL = 52, padR = 20, padT = 20, padB = 44;
+      var plotW = width - padL - padR;
+      var plotH = height - padT - padB;
+
+      var allScores = points.map(function (p) { return p.score; });
+      var minScore = Math.min.apply(null, allScores.concat([-0.2]));
+      var maxScore = Math.max.apply(null, allScores.concat([0.2]));
+      var pad = (maxScore - minScore) * 0.15 || 0.1;
+      minScore -= pad;
+      maxScore += pad;
+
+      function xAt(i) { return padL + (i / (points.length - 1)) * plotW; }
+      function yAt(v) { return padT + plotH - ((v - minScore) / (maxScore - minScore)) * plotH; }
+
+      // Grid
+      ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+      ctx.lineWidth = 1;
+      ctx.fillStyle = 'rgba(203,213,232,0.7)';
+      ctx.font = '10px Inter, Arial';
+      for (var g = 0; g <= 4; g++) {
+        var gv = minScore + (maxScore - minScore) * (1 - g / 4);
+        var gy = padT + plotH * g / 4;
+        ctx.beginPath();
+        ctx.moveTo(padL, gy);
+        ctx.lineTo(width - padR, gy);
+        ctx.stroke();
+        ctx.fillText(gv.toFixed(2), 4, gy + 3);
+      }
+
+      // Zero line
+      var zeroY = yAt(0);
+      ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+      ctx.setLineDash([5, 5]);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(padL, zeroY);
+      ctx.lineTo(width - padR, zeroY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = 'rgba(255,255,255,0.5)';
+      ctx.fillText('0', padL - 16, zeroY + 3);
+
+      // Line
+      ctx.beginPath();
+      points.forEach(function (p, i) {
+        var x = xAt(i), y = yAt(p.score);
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          var px = xAt(i - 1), py = yAt(points[i - 1].score);
+          var mx = (px + x) / 2;
+          ctx.bezierCurveTo(mx, py, mx, y, x, y);
+        }
+      });
+      ctx.strokeStyle = '#D4AF37';
+      ctx.lineWidth = 2.5;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.stroke();
+
+      // Dots
+      points.forEach(function (p, i) {
+        var x = xAt(i), y = yAt(p.score);
+        ctx.beginPath();
+        ctx.arc(x, y, p.isCurrent ? 6 : 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = p.isCurrent ? '#4C8DFF' : '#D4AF37';
+        ctx.fill();
+        if (p.isCurrent) {
+          ctx.strokeStyle = 'rgba(76,141,255,0.4)';
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.arc(x, y, 9, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+      });
+
+      // X labels
+      var step = Math.max(1, Math.ceil(points.length / 8));
+      ctx.fillStyle = 'rgba(203,213,232,0.75)';
+      ctx.font = '9px Inter, Arial';
+      points.forEach(function (p, i) {
+        if (i === 0 || i === points.length - 1 || i % step === 0) {
+          var x = xAt(i);
+          var lbl = p.label.length > 8 ? p.label.slice(0, 8) : p.label;
+          ctx.save();
+          ctx.translate(x, height - 10);
+          ctx.rotate(-0.5);
+          ctx.fillText(lbl, -16, 0);
+          ctx.restore();
+        }
+      });
+
+      // Tooltip
+      canvas._ivHwPoints = points.map(function (p, i) {
+        return { x: xAt(i), score: p.score, label: p.label, isCurrent: p.isCurrent };
+      });
+
+      canvas.onmousemove = function (e) {
+        var tooltip = app.querySelector('#ivHeadwindChartTooltip');
+        if (!tooltip || !canvas._ivHwPoints) return;
+        var cr = canvas.getBoundingClientRect();
+        var mx = e.clientX - cr.left;
+        var closest = null;
+        canvas._ivHwPoints.forEach(function (p) {
+          if (!closest || Math.abs(p.x - mx) < Math.abs(closest.x - mx)) closest = p;
+        });
+        if (!closest) return;
+        var scoreColor = closest.score > 0 ? '#34D399' : closest.score < 0 ? '#F87171' : '#F4D676';
+        tooltip.innerHTML = '<b>' + closest.label + '</b><br>Score: <span style="color:' + scoreColor + '">' +
+          (closest.score > 0 ? '+' : '') + closest.score.toFixed(4) + '</span>' +
+          (closest.isCurrent ? '<br><span style="color:#4C8DFF">● Current</span>' : '');
+        tooltip.style.display = 'block';
+        tooltip.style.left = Math.min(e.clientX + 14, window.innerWidth - 180) + 'px';
+        tooltip.style.top = Math.max(e.clientY - 18, 10) + 'px';
+      };
+
+      canvas.onmouseleave = function () {
+        var tooltip = app.querySelector('#ivHeadwindChartTooltip');
+        if (tooltip) tooltip.style.display = 'none';
+      };
+    }
+
+
 
     var ivTurnaroundState = window.ivTurnaroundState || { rows: [], lastSignature: '', pollMs: 60000, timer: null, page: 1, pageSize: 10, selectedSectorKey: '' };
     window.ivTurnaroundState = ivTurnaroundState;
@@ -7031,11 +7255,11 @@
 
       var sortKey = ivRankingState.sortKey || 'rank';
       var sortDir = ivRankingState.sortDirection || 'asc';
-      var sorted  = ivRankingSortData(ivRankingState.rows, sortKey, sortDir);
+      var sorted = ivRankingSortData(ivRankingState.rows, sortKey, sortDir);
 
       var totalPages = Math.max(1, Math.ceil(sorted.length / ivRankingState.pageSize));
       if (ivRankingState.page > totalPages) ivRankingState.page = totalPages;
-      var start    = (ivRankingState.page - 1) * ivRankingState.pageSize;
+      var start = (ivRankingState.page - 1) * ivRankingState.pageSize;
       var pageRows = sorted.slice(start, start + ivRankingState.pageSize);
 
       if (!pageRows.length) {
@@ -7069,12 +7293,12 @@
       elements.body.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#AAB6CC;padding:20px">Loading…</td></tr>';
 
       var filters = ivGetRankingFilters();
-      var params  = new URLSearchParams();
-      if (filters.search)   params.set('search',   filters.search);
+      var params = new URLSearchParams();
+      if (filters.search) params.set('search', filters.search);
       if (filters.industry) params.set('industry', filters.industry);
       if (filters.minMcap !== null) params.set('min_mcap', filters.minMcap);
       if (filters.maxMcap !== null) params.set('max_mcap', filters.maxMcap);
-      if (filters.count > 0)       params.set('top_n',    filters.count);
+      if (filters.count > 0) params.set('top_n', filters.count);
 
       fetch('/ranking?' + params.toString(), { cache: 'no-store' })
         .then(function (res) { if (!res.ok) throw new Error('API error ' + res.status); return res.json(); })
@@ -7115,11 +7339,11 @@
 
       if (elements.apply) elements.apply.addEventListener('click', function () { ivRankingState.page = 1; ivRenderRankingTable(); });
       if (elements.reset) elements.reset.addEventListener('click', function () {
-        if (elements.search)   elements.search.value = '';
+        if (elements.search) elements.search.value = '';
         if (elements.industry) elements.industry.value = '';
-        if (elements.count)    elements.count.value = '0';
-        if (elements.minMcap)  elements.minMcap.value = '';
-        if (elements.maxMcap)  elements.maxMcap.value = '';
+        if (elements.count) elements.count.value = '0';
+        if (elements.minMcap) elements.minMcap.value = '';
+        if (elements.maxMcap) elements.maxMcap.value = '';
         ivRankingState.page = 1;
         ivRankingState.sortKey = 'rank';
         ivRankingState.sortDirection = 'asc';
