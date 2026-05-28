@@ -286,11 +286,11 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         score: float | None = None
         score_display = "—"
     else:
-        score         = round((increase_count - decrease_count) / total_companies, 4)
+        score         = score = round((increase_count/decrease_count), 4)
         score_display = str(score)
 
-    signal = "Tailwind" if (score is not None and score > 0) else \
-             "Headwind" if (score is not None and score < 0) else "Neutral"
+    signal = "Tailwind" if (score is not None and score > 1) else \
+             "Headwind" if (score is not None and score < 1) else "Neutral"
 
     # Sector-wise breakdown
     sector_breakdown: list[dict[str, Any]] = []

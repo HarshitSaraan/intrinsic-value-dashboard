@@ -6082,8 +6082,8 @@
         html += '<tr><td colspan="3" style="color:#AAB6CC;text-align:center;padding:20px">No sector data available.</td></tr>';
       } else {
         html += sectors.map(function (s) {
-          return '<tr>' +
-            '<td>' + s.industry + '</td>' +
+          return '<tr class="iv-hw-sector-row" data-industry="' + s.industry + '" style="cursor:pointer;" title="Click to view companies in ranking tool">' +
+            '<td>' + s.industry + ' <span style="font-size:10px;color:#AAB6CC;margin-left:4px;">↗</span></td>' +
             '<td class="right">' + barHtml(s) + '</td>' +
             '<td class="center">' + badgeHtml(s.signal) + '</td>' +
             '</tr>';
@@ -6154,6 +6154,43 @@
             }
           });
       });
+      // Sector row click → redirect to ranking tool with industry filter
+      var sectorRows = app.querySelectorAll('.iv-hw-sector-row');
+      sectorRows.forEach(function (row) {
+        row.addEventListener('click', function () {
+          var industry = row.getAttribute('data-industry');
+          if (!industry) return;
+
+          // Navigate to ranking view
+          var rankingBtn = app.querySelector('.iv-nav-btn[data-view="ranking"]');
+          openView('ranking', rankingBtn ? rankingBtn.textContent.trim() : 'Ranking Tool');
+
+          // Wait for view to render then set the industry filter and apply
+          setTimeout(function () {
+            var industrySelect = app.querySelector('#ivRankingIndustry');
+            if (industrySelect) {
+              // Check if option exists, if not wait a bit more for industries to load
+              var found = Array.prototype.some.call(industrySelect.options, function (opt) {
+                return opt.value === industry;
+              });
+
+              if (found) {
+                industrySelect.value = industry;
+                ivRankingState.page = 1;
+                ivRenderRankingTable();
+              } else {
+                // Industries not loaded yet, load then set
+                ivRenderRankingTable();
+                setTimeout(function () {
+                  industrySelect.value = industry;
+                  ivRankingState.page = 1;
+                  ivRenderRankingTable();
+                }, 800);
+              }
+            }
+          }, 150);
+        });
+      });
     }
 
     function ivDrawHeadwindHistoryChart(historyRows, currentScore) {
@@ -6189,8 +6226,8 @@
       var plotH = height - padT - padB;
 
       var allScores = points.map(function (p) { return p.score; });
-      var minScore = Math.min.apply(null, allScores.concat([-0.2]));
-      var maxScore = Math.max.apply(null, allScores.concat([0.2]));
+      var minScore = Math.min.apply(null, allScores.concat([0.8]));
+      var maxScore = Math.max.apply(null, allScores.concat([1.2]));
       var pad = (maxScore - minScore) * 0.15 || 0.1;
       minScore -= pad;
       maxScore += pad;
@@ -6213,8 +6250,8 @@
         ctx.fillText(gv.toFixed(2), 4, gy + 3);
       }
 
-      // Zero line
-      var zeroY = yAt(0);
+      // about line
+      var zeroY = yAt(1);
       ctx.strokeStyle = 'rgba(255,255,255,0.28)';
       ctx.setLineDash([5, 5]);
       ctx.lineWidth = 1.5;
