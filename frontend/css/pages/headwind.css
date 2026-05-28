@@ -1,0 +1,119 @@
+ .iv-headwind-page .iv-hw-badge {
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              padding: 5px 14px;
+              border-radius: 999px;
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 0.06em;
+              text-transform: uppercase;
+              transition: all 0.3s ease;
+            }
+
+             .iv-headwind-page .iv-hw-badge.tailwind {
+              background: rgba(52, 211, 153, 0.13);
+              border: 1px solid rgba(52, 211, 153, 0.35);
+              color: #34D399;
+            }
+
+             .iv-headwind-page .iv-hw-badge.headwind {
+              background: rgba(248, 113, 113, 0.13);
+              border: 1px solid rgba(248, 113, 113, 0.35);
+              color: #F87171;
+            }
+
+             .iv-headwind-page .iv-hw-badge.neutral {
+              background: rgba(212, 175, 55, 0.12);
+              border: 1px solid rgba(212, 175, 55, 0.28);
+              color: #F4D676;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table th {
+              font-size: 10px;
+              font-weight: 600;
+              letter-spacing: 0.08em;
+              text-transform: uppercase;
+              color: #AAB6CC;
+              padding: 8px 10px;
+              border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+              text-align: left;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table th.right,
+             .iv-headwind-page .iv-hw-sector-table td.right {
+              text-align: right;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table th.center,
+             .iv-headwind-page .iv-hw-sector-table td.center {
+              text-align: center;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table td {
+              font-size: 12.5px;
+              padding: 9px 10px;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+              color: #E8EEF8;
+              vertical-align: middle;
+              transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table tr:last-child td {
+              border-bottom: none;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table tr.market-row td {
+              background: rgba(212, 175, 55, 0.07);
+              font-weight: 700;
+              color: #F4D676;
+              border-bottom: 2px solid rgba(212, 175, 55, 0.22);
+              transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+             .iv-headwind-page .iv-hw-sector-table tr.market-row:hover td {
+              background: rgba(212, 175, 55, 0.12);
+              color: #FFFFFF;
+              transform: translateY(-2px);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+             .iv-headwind-page .iv-hw-bar-wrap {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              min-width: 80px;
+            }
+
+             .iv-headwind-page .iv-hw-bar-bg {
+              flex: 1;
+              height: 5px;
+              border-radius: 99px;
+              background: rgba(255, 255, 255, 0.08);
+              overflow: hidden;
+            }
+
+             .iv-headwind-page .iv-hw-bar-fill {
+              height: 100%;
+              border-radius: 99px;
+              transition: width 0.4s ease, background-color 0.4s ease;
+            }
+
+             .iv-headwind-page .iv-hw-score-val {
+              font-size: 11px;
+              font-weight: 700;
+              min-width: 32px;
+              text-align: right;
+              transition: color 0.3s ease, transform 0.2s ease;
+            }
+
+             .iv-headwind-page .iv-hw-table-wrap {
+              overflow-x: auto;
+              max-height: 560px;
+              overflow-y: auto;
+            }

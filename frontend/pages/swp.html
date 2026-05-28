@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWP Calculator</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/swp.css">
+</head>
+<body>
+  <main class="iv-page-shell iv-swp-page">
+    <div class="iv-section-title">
+      <div class="iv-kicker">SWP Calculator</div>
+      <h2>Systematic withdrawal calculator.</h2>
+      <p>Estimate how long a corpus may last when withdrawals happen monthly and remaining corpus compounds.</p>
+    </div>
+
+    <div class="iv-grid two">
+      <div class="iv-card">
+        <h3>SWP Inputs</h3>
+        <div class="iv-form-grid">
+          <div class="iv-field">
+            <label>Starting Corpus</label>
+            <input id="ivSwpCorpus" type="number" min="1" inputmode="decimal" placeholder="Example: 10000000">
+          </div>
+          <div class="iv-field">
+            <label>Monthly Withdrawal</label>
+            <input id="ivSwpWithdrawal" type="number" min="1" inputmode="decimal" placeholder="Example: 50000">
+          </div>
+          <div class="iv-field">
+            <label>Expected Annual Return %</label>
+            <input id="ivSwpReturn" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Example: 10">
+          </div>
+          <div class="iv-field">
+            <label>Withdrawal Period</label>
+            <input id="ivSwpYears" type="number" min="1" max="80" inputmode="numeric" placeholder="Years">
+          </div>
+          <div class="iv-field">
+            <label>Annual Withdrawal Increase %</label>
+            <input id="ivSwpIncrease" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Optional, blank = 0">
+          </div>
+        </div>
+        <div class="iv-btn-row">
+          <button class="iv-primary-btn" id="ivSwpCalculate" type="button">Calculate SWP</button>
+          <button class="iv-secondary-btn" id="ivSwpReset" type="button">Reset</button>
+        </div>
+        <div class="iv-swp-error" id="ivSwpError"></div>
+        <div class="iv-note">This calculator is for educational illustration only. Actual returns may vary.</div>
+      </div>
+
+      <div class="iv-card">
+        <h3>SWP Summary</h3>
+        <div class="iv-swp-results">
+          <div class="iv-swp-result-card"><span>Total Withdrawn</span><strong id="ivSwpTotalWithdrawn">—</strong></div>
+          <div class="iv-swp-result-card"><span>Final Corpus</span><strong id="ivSwpFinalCorpus">—</strong></div>
+          <div class="iv-swp-result-card"><span>Corpus Lasts</span><strong id="ivSwpLasts">—</strong></div>
+          <div class="iv-swp-result-card"><span>Status</span><strong id="ivSwpStatus">—</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="iv-grid two">
+      <div class="iv-card iv-swp-chart-card">
+        <h3>Corpus Journey</h3>
+        <canvas id="ivSwpLineChart" aria-label="SWP corpus journey line chart"></canvas>
+        <div class="iv-swp-legend">
+          <span><i class="iv-swp-dot gold"></i>Closing Corpus</span>
+        </div>
+      </div>
+
+      <div class="iv-card iv-swp-chart-card">
+        <h3>Withdrawal vs Corpus</h3>
+        <canvas id="ivSwpBarChart" aria-label="SWP annual withdrawal and closing corpus chart"></canvas>
+        <div class="iv-swp-legend">
+          <span><i class="iv-swp-dot blue"></i>Annual Withdrawal</span>
+          <span><i class="iv-swp-dot gold"></i>Closing Corpus</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="iv-card">
+      <h3>Year-wise Table</h3>
+      <div class="iv-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Opening Corpus</th>
+              <th>Total Withdrawal</th>
+              <th>Growth Earned</th>
+              <th>Closing Corpus</th>
+            </tr>
+          </thead>
+          <tbody id="ivSwpTableBody">
+            <tr>
+              <td colspan="5">Enter SWP details and click Calculate SWP.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="iv-swp-tooltip" id="ivSwpTooltip"></div>
+  </main>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modules/swp.js"></script>
+</body>
+</html>

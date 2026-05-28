@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIP Calculator</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/sip.css">
+</head>
+<body>
+  <main class="iv-page-shell iv-sip-page">
+    <div class="iv-section-title">
+      <div class="iv-kicker">SIP Calculator</div>
+      <h2>Monthly SIP compounding calculator.</h2>
+      <p>Estimate future value using monthly compounding with optional annual SIP step-up.</p>
+    </div>
+
+    <div class="iv-grid two">
+      <div class="iv-card">
+        <h3>SIP Inputs</h3>
+        <div class="iv-form-grid">
+          <div class="iv-field">
+            <label>Monthly SIP Amount</label>
+            <input id="ivSipAmount" type="number" min="1" inputmode="decimal" placeholder="Example: 20000">
+          </div>
+          <div class="iv-field">
+            <label>Expected CAGR %</label>
+            <input id="ivSipCagr" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Example: 15">
+          </div>
+          <div class="iv-field">
+            <label>Investment Period</label>
+            <input id="ivSipYears" type="number" min="1" max="60" inputmode="numeric" placeholder="Years">
+          </div>
+          <div class="iv-field">
+            <label>Annual SIP Step-up %</label>
+            <input id="ivSipStepup" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Optional, blank = 0">
+          </div>
+        </div>
+        <div class="iv-btn-row">
+          <button class="iv-primary-btn" id="ivSipCalculate" type="button">Calculate SIP</button>
+          <button class="iv-secondary-btn" id="ivSipReset" type="button">Reset</button>
+        </div>
+        <div class="iv-sip-error" id="ivSipError"></div>
+        <div class="iv-note">This calculator is for educational illustration only. Actual returns may vary.</div>
+      </div>
+
+      <div class="iv-card">
+        <h3>SIP Summary</h3>
+        <div class="iv-sip-results">
+          <div class="iv-sip-result-card"><span>Total Invested</span><strong id="ivSipInvested">—</strong></div>
+          <div class="iv-sip-result-card"><span>Future Value</span><strong id="ivSipFutureValue">—</strong></div>
+          <div class="iv-sip-result-card"><span>Wealth Gain</span><strong id="ivSipGain">—</strong></div>
+          <div class="iv-sip-result-card"><span>Wealth Multiple</span><strong id="ivSipMultiple">—</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="iv-grid two">
+      <div class="iv-card iv-sip-chart-card">
+        <h3>Net Worth Growth Journey</h3>
+        <canvas id="ivSipLineChart" aria-label="SIP net worth growth line chart"></canvas>
+        <div class="iv-sip-legend">
+          <span><i class="iv-sip-dot blue"></i>Total Invested</span>
+          <span><i class="iv-sip-dot gold"></i>Portfolio Value</span>
+        </div>
+      </div>
+
+      <div class="iv-card iv-sip-chart-card">
+        <h3>Wealth Composition</h3>
+        <canvas id="ivSipStackedChart" aria-label="SIP wealth composition stacked bar chart"></canvas>
+        <div class="iv-sip-legend">
+          <span><i class="iv-sip-dot blue"></i>Invested Amount</span>
+          <span><i class="iv-sip-dot gold"></i>Compounding Gain</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="iv-card">
+      <h3>Year-wise Table</h3>
+      <div class="iv-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Annual SIP</th>
+              <th>Total Invested</th>
+              <th>Portfolio Value</th>
+              <th>Wealth Gain</th>
+              <th>Multiple</th>
+            </tr>
+          </thead>
+          <tbody id="ivSipTableBody">
+            <tr>
+              <td colspan="6">Enter SIP details and click Calculate SIP.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="iv-sip-tooltip" id="ivSipTooltip"></div>
+  </main>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modules/sip.js"></script>
+</body>
+</html>

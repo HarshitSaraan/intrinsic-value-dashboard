@@ -1,0 +1,90 @@
+ .iv-ranking-page .iv-ranking-controls {
+              display: grid;
+              grid-template-columns: minmax(0, 1fr);
+              gap: 10px;
+              margin-top: 12px;
+            }
+
+             .iv-ranking-page .iv-ranking-range {
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 10px;
+            }
+
+             .iv-ranking-page .iv-ranking-summary {
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 10px;
+              margin-top: 12px;
+              padding-bottom: 12px;
+            }
+
+             .iv-ranking-page .iv-ranking-mini {
+              border: 1px solid rgba(212, 175, 55, 0.16);
+              background: rgba(255, 255, 255, 0.055);
+              border-radius: 15px;
+              padding: 12px;
+              min-width: 0;
+            }
+
+             .iv-ranking-page .iv-ranking-mini span {
+              display: block;
+              color: #AAB6CC;
+              font-size: 10px;
+              text-transform: uppercase;
+              letter-spacing: 0.07em;
+            }
+
+             .iv-ranking-page .iv-ranking-mini strong {
+              display: block;
+              margin-top: 6px;
+              color: #F4D676;
+              font-size: 18px;
+              line-height: 1.1;
+              overflow-wrap: anywhere;
+            }
+
+             .iv-ranking-page .iv-ranking-table-wrap {
+              max-height: 560px;
+              overflow: auto;
+              -webkit-overflow-scrolling: touch;
+            }
+
+             .iv-ranking-page table thead th {
+              position: sticky;
+              top: 0;
+              background: #081832;
+              z-index: 2;
+              cursor: pointer;
+              user-select: none;
+            }
+
+             .iv-ranking-page .iv-ranking-pagination {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+              margin-top: 12px;
+              flex-wrap: wrap;
+            }
+
+             .iv-ranking-page .iv-ranking-page-info {
+              color: #AAB6CC;
+              font-size: 12px;
+            }
+
+            @media (min-width: 640px) {
+               .iv-ranking-page .iv-ranking-controls {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+
+               .iv-ranking-page .iv-ranking-summary {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+              }
+            }
+
+            @media (min-width: 1024px) {
+               .iv-ranking-page .iv-ranking-controls {
+                grid-template-columns: 1.1fr 0.8fr 1.1fr 1.1fr;
+              }
+            }

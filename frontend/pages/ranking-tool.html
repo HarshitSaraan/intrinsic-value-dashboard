@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intrinsic Value Ranking Tool</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/ranking.css">
+</head>
+<body>
+  <main class="iv-page-shell iv-ranking-page">
+    <div class="iv-section-title">
+            <div class="iv-kicker">Market Analysis Tool</div>
+            <h2>Intrinsic Value Ranking Tool</h2>
+            <p>Native stock ranking engine using quality and valuation factors from a single admin-controlled master
+              data source.</p>
+          </div>
+
+          <div class="iv-card">
+            <h3>Filters</h3>
+            <div class="iv-ranking-controls">
+              <div class="iv-field">
+                <label>Search Company</label>
+                <input id="ivRankingSearch" type="text" placeholder="Search by company, NSE or BSE code">
+              </div>
+              <div class="iv-field">
+                <label>Industry</label>
+                <select id="ivRankingIndustry">
+                  <option value="">All Industries</option>
+                </select>
+              </div>
+              <div class="iv-field">
+                <label>Stock Count</label>
+                <select id="ivRankingCount">
+                  <option value="0">No Filter</option>
+                  <option value="10">Top 10</option>
+                  <option value="25">Top 25</option>
+                  <option value="50">Top 50</option>
+                  <option value="100">Top 100</option>
+                </select>
+              </div>
+              <div class="iv-ranking-range">
+                <div class="iv-field">
+                  <label>Min Market Cap</label>
+                  <input id="ivRankingMinMcap" type="number" min="0" inputmode="decimal" placeholder="₹ Cr">
+                </div>
+                <div class="iv-field">
+                  <label>Max Market Cap</label>
+                  <input id="ivRankingMaxMcap" type="number" min="0" inputmode="decimal" placeholder="₹ Cr">
+                </div>
+              </div>
+            </div>
+            <div class="iv-btn-row">
+              <button class="iv-primary-btn" id="ivRankingApply" type="button">Apply Ranking</button>
+              <button class="iv-secondary-btn" id="ivRankingReset" type="button">Reset</button>
+            </div>
+            <div class="iv-note">Rankings are computed server-side from <b>stock_master.csv</b> using Sales Growth 3Y,
+              ROCE 3Y, and P/B ratio. Lower total score = better rank.</div>
+          </div>
+
+          <div class="iv-ranking-summary">
+            <div class="iv-ranking-mini"><span>Companies Shown</span><strong id="ivRankingShown">—</strong></div>
+            <div class="iv-ranking-mini"><span>Industries</span><strong id="ivRankingIndustries">—</strong></div>
+            <div class="iv-ranking-mini"><span>Best Ranked</span><strong id="ivRankingBest">—</strong></div>
+          </div>
+
+          <div class="iv-card">
+            <h3>Ranked Companies</h3>
+            <div class="iv-table-wrap iv-ranking-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-rank-sort="rank">Rank</th>
+                    <th data-rank-sort="name">Company</th>
+                    <th data-rank-sort="sector">Sector</th>
+                    <th data-rank-sort="mcap">Market Cap</th>
+                    <th data-rank-sort="sales3Y">Sales Growth 3Y ↑</th>
+                    <th data-rank-sort="roce3Y">ROCE 3Y ↑</th>
+                    <th data-rank-sort="pb">P/B ↓</th>
+                    <th data-rank-sort="totalScore">Total Score</th>
+                  </tr>
+                </thead>
+                <tbody id="ivRankingTableBody">
+                  <tr>
+                    <td colspan="8">Ranking data will appear here.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="iv-ranking-pagination">
+              <button class="iv-secondary-btn" id="ivRankingPrev" type="button">Previous</button>
+              <span class="iv-ranking-page-info" id="ivRankingPageInfo">Page —</span>
+              <button class="iv-secondary-btn" id="ivRankingNext" type="button">Next</button>
+            </div>
+          </div>
+  </main>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/modules/ranking.js"></script>
+</body>
+</html>
