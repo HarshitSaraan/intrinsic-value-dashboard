@@ -782,7 +782,6 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     q = query.strip().lower()
     match_row = None
 
-    # 1. Try exact matches on code/name first (case-insensitive)
     for col in [nse_col, bse_col, name_col]:
         if col:
             temp = df[df[col].astype(str).str.strip().str.lower() == q]
@@ -790,7 +789,6 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                 match_row = temp.iloc[0]
                 break
 
-    # 2. Try contains matches if no exact match found
     if match_row is None:
         for col in [nse_col, bse_col, name_col]:
             if col:
@@ -802,82 +800,135 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     if match_row is None:
         raise HTTPException(status_code=404, detail=f"Stock not found matching: {query}")
 
-    # Extract quality columns
-    bv_growth_3y_col = pick_column(df, "book value growth 3 years")
-    sales_growth_3y_col = pick_column(df, "Sales growth 3Years")
-    roce_10y_col = pick_column(df, "Average return on capital employed 10Years")
+    def get_val(col_name) -> float | None:
+        if col_name is None:
+            return None
+        return number_or_none(match_row.get(col_name))
+
+    def get_fallback_val(col_10, col_5, col_3):
+        val = get_val(col_10)
+        if val is None:
+            val = get_val(col_5)
+        if val is None:
+            val = get_val(col_3)
+        return val
+
+    # FALLBACK LOGIC FOR QUALITY
+    bv_10 = pick_column(df, "BOOK VALUE GOWTH 10 YR")
+    bv_5 = pick_column(df, "book value growth 5 yrs")
+    bv_3 = pick_column(df, "book value growth 3 years")
+    bv_growth = get_fallback_val(bv_10, bv_5, bv_3)
+
+    sg_10 = pick_column(df, "Sales growth 10Years")
+    sg_5 = pick_column(df, "Sales growth 5years median")
+    sg_3 = pick_column(df, "Sales growth 3Years")
+    sales_growth = get_fallback_val(sg_10, sg_5, sg_3)
+
+    roce_10 = pick_column(df, "Average return on capital employed 10Years")
+    roce_5 = pick_column(df, "Average return on capital employed 5Years")
+    roce_3 = pick_column(df, "Average return on capital employed 3Years")
+    roce = get_fallback_val(roce_10, roce_5, roce_3)
+
     icr_col = pick_column(df, "Interest Coverage Ratio")
-    q_turnover_col = pick_column(df, "Quality turnover")
+    icr = get_val(icr_col)
+
     net_block_col = pick_column(df, "Net block")
     net_block_prev_col = pick_column(df, "Net block preceding year")
+    net_block = get_val(net_block_col)
+    net_block_prev = get_val(net_block_prev_col)
 
-    # Extract management columns
+    q_turnover_col = pick_column(df, "Quality turnover")
+    q_turnover = get_val(q_turnover_col)
+
+    # QUALITY SCORING
+    q1_score = 0
+    if bv_growth is not None:
+        if bv_growth > 136: q1_score = 1
+        elif bv_growth >= 100: q1_score = 0
+        else: q1_score = -1
+
+    q2_score = 0
+    if sales_growth is not None:
+        if sales_growth > 10: q2_score = 1
+        elif sales_growth >= 0: q2_score = 0
+        else: q2_score = -1
+
+    q3_score = 0
+    if roce is not None:
+        if roce > 10: q3_score = 1
+        elif roce >= 0: q3_score = 0
+        else: q3_score = -1
+
+    q4_score = 0
+    if icr is not None:
+        if icr > 5: q4_score = 1
+        elif icr >= 2: q4_score = 0
+        else: q4_score = -1
+
+    q5_score = 0
+    net_block_ratio = None
+    if net_block is not None and net_block_prev is not None and net_block_prev != 0:
+        net_block_ratio = round(net_block / net_block_prev, 2)
+        q5_score = 1 if net_block_ratio > 2.0 else 0
+
+    q6_score = 0
+    if q_turnover is not None:
+        q6_score = 1 if q_turnover > 0.1 else 0
+
+    quality_total = q1_score + q2_score + q3_score + q4_score + q5_score + q6_score
+
+    # MANAGEMENT PARAMETERS
     sh_var_col = pick_column(df, "shareholder Var", "Pft per Inv")
     pledged_col = pick_column(df, "Pledged percentage")
     hold_inv_col = pick_column(df, "Holding per Investor")
     chg_prom_3y_col = pick_column(df, "Change in promoter holding 3Years")
     chg_prom_col = pick_column(df, "Change in promoter holding")
 
-    def get_val(col_name) -> float | None:
-        if col_name is None:
-            return None
-        return number_or_none(match_row.get(col_name))
-
-    # QUALITY PARAMETERS CALCULATIONS
-    bv_growth_3y = get_val(bv_growth_3y_col)
-    q1_score = 1 if (bv_growth_3y is not None and bv_growth_3y > 136.0) else 0
-
-    sales_growth_3y = get_val(sales_growth_3y_col)
-    q2_score = 1 if (sales_growth_3y is not None and sales_growth_3y > 10.0) else 0
-
-    roce_10y = get_val(roce_10y_col)
-    q3_score = 1 if (roce_10y is not None and roce_10y > 10.0) else 0
-
-    icr = get_val(icr_col)
-    q4_score = 1 if (icr is not None and icr > 5.0) else 0
-
-    q_turnover = get_val(q_turnover_col)
-    q5_score = 1 if (q_turnover is not None and q_turnover < 0.1) else 0
-
-    net_block = get_val(net_block_col)
-    net_block_prev = get_val(net_block_prev_col)
-    if net_block is not None and net_block_prev is not None and net_block_prev != 0:
-        net_block_ratio = round(net_block / net_block_prev, 2)
-        q6_score = 1 if net_block_ratio > 2.0 else 0
-    else:
-        net_block_ratio = None
-        q6_score = 0
-
-    quality_total = q1_score + q2_score + q3_score + q4_score + q5_score + q6_score
-
-    # MANAGEMENT PARAMETERS CALCULATIONS
     sh_var = get_val(sh_var_col) if (sh_var_col and "shareholder" in sh_var_col.lower()) else None
+    m1_score = 0
     if sh_var is not None:
-        if sh_var <= 1.2:
-            m1_score = 1
-        elif sh_var <= 2.0:
-            m1_score = 0
-        else:
-            m1_score = -1
-    else:
-        m1_score = 0
+        if sh_var < 1.2: m1_score = 1
+        elif sh_var <= 2.0: m1_score = 0
+        else: m1_score = -1
 
     pledged_val = get_val(pledged_col)
-    if pledged_val is None:
-        m2_score = 1  # 0% pledged (good)
-    else:
-        m2_score = 1 if pledged_val < 1.0 else 0
+    m2_score = 1
+    if pledged_val is not None:
+        if pledged_val <= 1.0: m2_score = 1
+        else: m2_score = -1
 
     hold_inv = get_val(hold_inv_col)
-    m3_score = 1 if (hold_inv is not None and hold_inv >= 0.02) else 0
+    m3_score = 1
+    if hold_inv is not None:
+        if hold_inv >= 0.02: m3_score = 1
+        else: m3_score = -1
 
     chg_prom_3y = get_val(chg_prom_3y_col)
-    m4_score = 1 if (chg_prom_3y is not None and chg_prom_3y >= 0.0) else 0
+    m4_score = 0
+    if chg_prom_3y is not None:
+        if chg_prom_3y > 0.5: m4_score = 1
+        elif chg_prom_3y >= -0.5: m4_score = 0
+        else: m4_score = -1
 
     chg_prom = get_val(chg_prom_col)
-    m5_score = 1 if (chg_prom is not None and chg_prom >= 0.0) else 0
+    m5_score = 0
+    if chg_prom is not None:
+        if chg_prom > 0.5: m5_score = 1
+        elif chg_prom >= -0.5: m5_score = 0
+        else: m5_score = -1
 
     management_total = m1_score + m2_score + m3_score + m4_score + m5_score
+
+    combined_score = quality_total + management_total
+    # Final rating logic
+    if combined_score >= 8:
+        final_rating = "Excellent"
+    elif combined_score >= 5:
+        final_rating = "Good"
+    elif combined_score >= 2:
+        final_rating = "Average"
+    else:
+        final_rating = "Poor"
 
     stock_name = clean_text(match_row.get(name_col)) if name_col else ""
     nse_code = clean_text(match_row.get(nse_col)) if nse_col else ""
@@ -889,102 +940,95 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             "nseCode": nse_code,
             "bseCode": bse_code,
         },
+        "overall": {
+            "combinedScore": combined_score,
+            "finalRating": final_rating
+        },
         "quality": {
-            "score": f"{quality_total}/6",
+            "score": f"{quality_total}",
             "total": quality_total,
             "parameters": [
                 {
-                    "name": "Book Value Growth 3 Years",
-                    "value": bv_growth_3y,
-                    "displayValue": f"{bv_growth_3y}%" if bv_growth_3y is not None else "N/A",
-                    "threshold": "> 136",
-                    "passed": bool(q1_score),
+                    "name": "Book Value Growth",
+                    "value": bv_growth,
+                    "displayValue": f"{bv_growth}%" if bv_growth is not None else "N/A",
+                    "threshold": "> 136 (1), 100-136 (0), < 100 (-1)",
                     "score": q1_score
                 },
                 {
-                    "name": "Sales Growth 3 Years",
-                    "value": sales_growth_3y,
-                    "displayValue": f"{sales_growth_3y}%" if sales_growth_3y is not None else "N/A",
-                    "threshold": "> 10",
-                    "passed": bool(q2_score),
+                    "name": "Sales Growth",
+                    "value": sales_growth,
+                    "displayValue": f"{sales_growth}%" if sales_growth is not None else "N/A",
+                    "threshold": "> 10 (1), 0-10 (0), < 0 (-1)",
                     "score": q2_score
                 },
                 {
-                    "name": "Average ROCE 10 Years",
-                    "value": roce_10y,
-                    "displayValue": f"{roce_10y}%" if roce_10y is not None else "N/A",
-                    "threshold": "> 10",
-                    "passed": bool(q3_score),
+                    "name": "ROCE",
+                    "value": roce,
+                    "displayValue": f"{roce}%" if roce is not None else "N/A",
+                    "threshold": "> 10 (1), 0-10 (0), < 0 (-1)",
                     "score": q3_score
                 },
                 {
                     "name": "Interest Coverage Ratio",
                     "value": icr,
                     "displayValue": f"{icr}x" if icr is not None else "N/A",
-                    "threshold": "> 5",
-                    "passed": bool(q4_score),
+                    "threshold": "> 5 (1), 2-5 (0), < 2 (-1)",
                     "score": q4_score
+                },
+                {
+                    "name": "Capex (Net Block)",
+                    "value": net_block_ratio,
+                    "displayValue": f"{net_block_ratio}x" if net_block_ratio is not None else "N/A",
+                    "threshold": "> 2 (1), < 2 (0)",
+                    "score": q5_score
                 },
                 {
                     "name": "Quality Turnover",
                     "value": q_turnover,
                     "displayValue": f"{q_turnover}" if q_turnover is not None else "N/A",
-                    "threshold": "< 0.1",
-                    "passed": bool(q5_score),
-                    "score": q5_score
-                },
-                {
-                    "name": "Net Block Ratio",
-                    "value": net_block_ratio,
-                    "displayValue": f"{net_block_ratio}x" if net_block_ratio is not None else "N/A",
-                    "threshold": "> 2",
-                    "passed": bool(q6_score),
+                    "threshold": "> 0.1 (1), < 0.1 (0)",
                     "score": q6_score
                 }
             ]
         },
         "management": {
-            "score": f"{management_total}/5",
+            "score": f"{management_total}",
             "total": management_total,
             "parameters": [
                 {
-                    "name": "Shareholder Var",
+                    "name": "Shareholder Variation",
                     "value": sh_var,
                     "displayValue": f"{sh_var}" if sh_var is not None else "N/A",
-                    "threshold": "<= 1.2 (+1), 1.2-2 (0), > 2 (-1)",
-                    "passed": m1_score > 0,
+                    "threshold": "< 1.2 (1), 1.2-2 (0), > 2 (-1)",
                     "score": m1_score
                 },
                 {
                     "name": "Pledged Percentage",
                     "value": pledged_val,
                     "displayValue": f"{pledged_val}%" if pledged_val is not None else "0% (N/A)",
-                    "threshold": "< 1%",
-                    "passed": bool(m2_score),
+                    "threshold": "<= 1 (1), > 1 (-1)",
                     "score": m2_score
                 },
                 {
-                    "name": "Holding per Investor",
+                    "name": "Holding Investor",
                     "value": hold_inv,
                     "displayValue": f"{hold_inv}" if hold_inv is not None else "N/A",
-                    "threshold": ">= 0.02",
-                    "passed": bool(m3_score),
+                    "threshold": ">= 0.02 (1), < 0.02 (-1)",
                     "score": m3_score
                 },
                 {
-                    "name": "Change in Promoter Holding 3 Years",
+                    "name": "Change in Promoter Holding (3 Years)",
                     "value": chg_prom_3y,
                     "displayValue": f"{chg_prom_3y}%" if chg_prom_3y is not None else "N/A",
-                    "threshold": ">= 0",
-                    "passed": bool(m4_score),
+                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), <= -0.5 (-1)",
                     "score": m4_score
                 },
                 {
-                    "name": "Change in Promoter Holding (1 Year)",
+                    "name": "Change in Promoter Holding (Quarterly)",
                     "value": chg_prom,
                     "displayValue": f"{chg_prom}%" if chg_prom is not None else "N/A",
-                    "threshold": ">= 0",
-                    "passed": bool(m5_score),
+                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), <= -0.5 (-1)",
                     "score": m5_score
                 }
             ]

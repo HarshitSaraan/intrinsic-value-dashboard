@@ -19,12 +19,33 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/'/g, '&#039;');
   }
 
-  // Load portfolio from localStorage
+  // Load portfolio from localStorage and refresh dynamically from backend
   function loadPortfolio() {
     try {
       var saved = localStorage.getItem('iv_portfolio_stocks');
       if (saved) {
         portfolio = JSON.parse(saved);
+        
+        // Refresh each stock's details from backend to ensure up-to-date scoring
+        portfolio.forEach(function (item, index) {
+          var queryVal = item.stock.nseCode || item.stock.bseCode || item.stock.name;
+          if (queryVal) {
+            fetch(baseUrl + '/portfolio-evaluate?q=' + encodeURIComponent(queryVal))
+              .then(function (res) {
+                if (res.ok) return res.json();
+              })
+              .then(function (updatedData) {
+                if (updatedData) {
+                  portfolio[index] = updatedData;
+                  savePortfolio();
+                  renderTable();
+                }
+              })
+              .catch(function (err) {
+                console.error('Failed to auto-refresh stock:', queryVal, err);
+              });
+          }
+        });
       } else {
         portfolio = [];
       }
@@ -43,11 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Helper: Get color class for score badge
   function getScoreClass(total, max) {
     var ratio = total / max;
-    if (ratio >= 0.7) return 'score-green';
-    if (ratio >= 0.4) return 'score-yellow';
+    if (ratio >= 0.5) return 'score-green';
+    if (ratio >= 0.0) return 'score-yellow';
     return 'score-red';
   }
 
@@ -89,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ${escapeHtml(item.management.score)}
           </span>
         </td>
-        <td style="color: #aab6cc; font-style: italic;">—</td>
-        <td style="color: #aab6cc; font-style: italic;">—</td>
+        <td style="font-weight: 600; color: #fff;">${item.overall.combinedScore} / 11</td>
+        <td style="font-weight: 600; color: ${item.overall.finalRating === 'Excellent' || item.overall.finalRating === 'Good' ? '#34D399' : (item.overall.finalRating === 'Average' ? '#F4D676' : '#F87171')};">${escapeHtml(item.overall.finalRating)}</td>
         <td>
           <button class="btn-delete" data-index="${index}" title="Remove Stock">
             <svg style="width:16px;height:16px" viewBox="0 0 24 24">
@@ -178,8 +198,16 @@ document.addEventListener('DOMContentLoaded', function () {
       // Build parameters list
       var html = '';
       item.quality.parameters.forEach(function (param) {
-        var badgeClass = param.passed ? 'pass' : 'fail';
-        var badgeText = param.passed ? '+1 Pass' : '0 Fail';
+        var badgeClass = 'neutral';
+        var badgeText = '0 Neutral';
+        var scoreVal = Number(param.score);
+        if (scoreVal === 1) {
+          badgeClass = 'pass';
+          badgeText = '+1 Pass';
+        } else if (scoreVal === -1) {
+          badgeClass = 'fail';
+          badgeText = '-1 Fail';
+        }
         
         html += `
           <div class="iv-drawer-param-item">
@@ -206,11 +234,12 @@ document.addEventListener('DOMContentLoaded', function () {
       item.management.parameters.forEach(function (param) {
         var badgeClass = 'neutral';
         var badgeText = '0 Neutral';
+        var scoreVal = Number(param.score);
 
-        if (param.score === 1) {
+        if (scoreVal === 1) {
           badgeClass = 'pass';
           badgeText = '+1 Pass';
-        } else if (param.score === -1) {
+        } else if (scoreVal === -1) {
           badgeClass = 'fail';
           badgeText = '-1 Fail';
         }
