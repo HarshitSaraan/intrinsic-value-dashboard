@@ -425,6 +425,304 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // CSV Import Feature
+  var fileInput = document.getElementById('ivPortfolioFileInput');
+  var fileDropzone = document.getElementById('ivFileDropzone');
+  var uploadStatus = document.getElementById('ivUploadStatus');
+  var progressLabel = document.getElementById('ivUploadProgressLabel');
+  var progressPct = document.getElementById('ivUploadProgressPct');
+  var progressBar = document.getElementById('ivUploadProgressBar');
+  var uploadLogs = document.getElementById('ivUploadLogs');
+
+  // Trigger file browser on click
+  if (fileDropzone && fileInput) {
+    fileDropzone.addEventListener('click', function () {
+      fileInput.click();
+    });
+
+    // Drag-and-drop event listeners
+    ['dragenter', 'dragover'].forEach(function (eventName) {
+      fileDropzone.addEventListener(eventName, function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        fileDropzone.classList.add('dragover');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(function (eventName) {
+      fileDropzone.addEventListener(eventName, function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        fileDropzone.classList.remove('dragover');
+      }, false);
+    });
+
+    fileDropzone.addEventListener('drop', function (e) {
+      var dt = e.dataTransfer;
+      var files = dt.files;
+      if (files && files.length > 0) {
+        handleCSVFile(files[0]);
+      }
+    }, false);
+
+    fileInput.addEventListener('change', function () {
+      if (fileInput.files && fileInput.files.length > 0) {
+        handleCSVFile(fileInput.files[0]);
+      }
+    });
+  }
+
+  // Handle uploaded CSV file
+  function handleCSVFile(file) {
+    if (!file) return;
+
+    if (!file.name.endsWith('.csv')) {
+      alert('Please upload a valid .csv file.');
+      return;
+    }
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var text = e.target.result;
+      processCSVContent(text);
+    };
+    reader.onerror = function () {
+      alert('Error reading file.');
+    };
+    reader.readAsText(file);
+  }
+
+  // CSV line parser that respects double quotes and commas
+  function parseCSV(text) {
+    var lines = [];
+    var row = [""];
+    var inQuotes = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      var next = text[i + 1];
+      if (c === '"') {
+        if (inQuotes && next === '"') {
+          row[row.length - 1] += '"';
+          i++;
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (c === ',' && !inQuotes) {
+        row.push('');
+      } else if ((c === '\r' || c === '\n') && !inQuotes) {
+        if (c === '\r' && next === '\n') { i++; }
+        lines.push(row);
+        row = [""];
+      } else {
+        row[row.length - 1] += c;
+      }
+    }
+    if (row.length > 1 || row[0] !== "") {
+      lines.push(row);
+    }
+    return lines;
+  }
+
+  function addLog(message, type) {
+    if (!uploadLogs) return;
+    var row = document.createElement('div');
+    row.className = 'iv-upload-log-row ' + (type || 'info');
+    row.textContent = message;
+    uploadLogs.appendChild(row);
+    uploadLogs.scrollTop = uploadLogs.scrollHeight;
+  }
+
+  // Process CSV content
+  function processCSVContent(text) {
+    if (uploadLogs) {
+      uploadLogs.innerHTML = '';
+      uploadLogs.style.display = 'block';
+    }
+    if (uploadStatus) {
+      uploadStatus.style.display = 'block';
+      progressBar.style.width = '0%';
+      progressPct.textContent = '0%';
+      progressLabel.textContent = 'Parsing CSV file...';
+    }
+
+    addLog('Parsing uploaded file...', 'info');
+
+    var rows = parseCSV(text);
+    if (rows.length === 0) {
+      addLog('Error: CSV file is empty.', 'error');
+      return;
+    }
+
+    // Identify header row and matching columns
+    var headers = rows[0];
+    var nseColIndex = -1;
+    var bseColIndex = -1;
+    var nameColIndex = -1;
+
+    // Detect column indexes from header keywords
+    for (var col = 0; col < headers.length; col++) {
+      var h = headers[col].trim().toLowerCase();
+      
+      // Look for NSE
+      if (nseColIndex === -1 && (h === 'nse' || h === 'symbol' || h === 'ticker' || h === 'nse code' || h === 'instrument' || h === 'tradingsymbol')) {
+        nseColIndex = col;
+        addLog('Found potential NSE column: "' + headers[col] + '"', 'success');
+      }
+      // Look for BSE
+      else if (bseColIndex === -1 && (h === 'bse' || h === 'scrip' || h === 'bse code' || h === 'scrip code' || h === 'bse symbol')) {
+        bseColIndex = col;
+        addLog('Found potential BSE column: "' + headers[col] + '"', 'success');
+      }
+      // Look for Name
+      else if (nameColIndex === -1 && (h === 'company' || h === 'name' || h === 'security' || h === 'company name' || h === 'holding' || h === 'security name')) {
+        nameColIndex = col;
+        addLog('Found potential Name column: "' + headers[col] + '"', 'success');
+      }
+    }
+
+    // Heuristics for headerless CSVs or unmatched column headers
+    if (nseColIndex === -1 && bseColIndex === -1 && nameColIndex === -1) {
+      addLog('Header labels not matched. Scanning columns for codes...', 'info');
+      var sampleRows = rows.slice(1, Math.min(6, rows.length));
+      for (var col = 0; col < headers.length; col++) {
+        var allBseLike = true;
+        var allNseLike = true;
+        var hasText = false;
+        var validSampleCount = 0;
+        
+        sampleRows.forEach(function(row) {
+          if (!row || row.length <= col) return;
+          var val = (row[col] || '').trim();
+          if (!val) return;
+          validSampleCount++;
+          if (!/^\d{6}(\.0)?$/.test(val)) allBseLike = false;
+          if (!/^[A-Za-z\-&]{2,10}$/.test(val)) allNseLike = false;
+          if (val.length > 5) hasText = true;
+        });
+
+        if (validSampleCount > 0) {
+          if (allBseLike) {
+            bseColIndex = col;
+            addLog('Mapped column ' + col + ' to BSE (numeric codes detected)', 'success');
+          } else if (allNseLike) {
+            nseColIndex = col;
+            addLog('Mapped column ' + col + ' to NSE (uppercase symbols detected)', 'success');
+          } else if (hasText && nameColIndex === -1) {
+            nameColIndex = col;
+            addLog('Mapped column ' + col + ' to Name (text descriptions detected)', 'success');
+          }
+        }
+      }
+    }
+
+    if (nseColIndex === -1 && bseColIndex === -1 && nameColIndex === -1) {
+      addLog('Failed to auto-detect any Stock Name, NSE Code, or BSE Code columns. Please ensure your CSV headers contain terms like "NSE", "BSE", "Symbol", or "Name".', 'error');
+      return;
+    }
+
+    // Extracted keys
+    var queries = [];
+    for (var r = 1; r < rows.length; r++) {
+      var row = rows[r];
+      if (!row || row.length <= Math.max(nseColIndex, bseColIndex, nameColIndex)) continue;
+
+      var nseVal = nseColIndex !== -1 ? row[nseColIndex].trim() : '';
+      var bseVal = bseColIndex !== -1 ? row[bseColIndex].trim() : '';
+      var nameVal = nameColIndex !== -1 ? row[nameColIndex].trim() : '';
+
+      // Prefer NSE Code, then BSE Code, then Name
+      var key = nseVal || bseVal || nameVal;
+      if (key && key !== '-' && key !== 'N/A' && key !== 'null' && key !== 'undefined') {
+        queries.push(key);
+      }
+    }
+
+    // De-duplicate import queries
+    queries = queries.filter(function (value, index, self) {
+      return self.indexOf(value) === index;
+    });
+
+    if (queries.length === 0) {
+      addLog('No valid stocks found in the file to import.', 'error');
+      return;
+    }
+
+    addLog('Found ' + queries.length + ' unique stock(s) to process. Beginning batch import...', 'info');
+    progressBar.style.width = '0%';
+    progressPct.textContent = '0%';
+    progressLabel.textContent = 'Importing 0 of ' + queries.length + ' stocks...';
+
+    // Batch evaluation with rate control (fetch sequentially)
+    var successCount = 0;
+    var failCount = 0;
+    var index = 0;
+
+    function processNext() {
+      if (index >= queries.length) {
+        progressLabel.textContent = 'Import Complete. ' + successCount + ' added, ' + failCount + ' failed.';
+        progressBar.style.width = '100%';
+        progressPct.textContent = '100%';
+        addLog('Completed import! ' + successCount + ' successfully added, ' + failCount + ' failed.', 'info');
+        
+        savePortfolio();
+        renderTable();
+        return;
+      }
+
+      var q = queries[index];
+      progressLabel.textContent = 'Importing ' + (index + 1) + ' of ' + queries.length + ' (' + q + ')...';
+      var pct = Math.round((index / queries.length) * 100);
+      progressBar.style.width = pct + '%';
+      progressPct.textContent = pct + '%';
+
+      // Check if duplicate in active list to skip network fetch
+      var isDuplicate = portfolio.some(function (item) {
+        return (item.stock.name && item.stock.name.toLowerCase() === q.toLowerCase()) ||
+               (item.stock.nseCode && item.stock.nseCode.toLowerCase() === q.toLowerCase()) ||
+               (item.stock.bseCode && item.stock.bseCode.toLowerCase() === q.toLowerCase());
+      });
+
+      if (isDuplicate) {
+        addLog('Skipped "' + q + '" (already exists in portfolio review list)', 'info');
+        successCount++;
+        index++;
+        processNext();
+        return;
+      }
+
+      fetch(baseUrl + '/portfolio-evaluate?q=' + encodeURIComponent(q))
+        .then(function (res) {
+          if (!res.ok) {
+            throw new Error('Stock not found');
+          }
+          return res.json();
+        })
+        .then(function (data) {
+          var duplicateSec = portfolio.some(function (item) {
+            return item.stock.name.toLowerCase() === data.stock.name.toLowerCase();
+          });
+          if (!duplicateSec) {
+            portfolio.push(data);
+            addLog('Successfully added: ' + data.stock.name + ' (' + (data.stock.nseCode || data.stock.bseCode || '') + ')', 'success');
+            successCount++;
+          } else {
+            addLog('Skipped duplicate resolved stock: ' + data.stock.name, 'info');
+            successCount++;
+          }
+        })
+        .catch(function (err) {
+          addLog('Failed to resolve stock: "' + q + '" (Not found in CSV)', 'error');
+          failCount++;
+        })
+        .then(function () {
+          index++;
+          setTimeout(processNext, 50);
+        });
+    }
+
+    processNext();
+  }
+
   // Initialize
   loadPortfolio();
   renderTable();

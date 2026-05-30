@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Review Tool - Quality & Management Stock Evaluation</title>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css?v=5">
+  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css?v=6">
 </head>
 <body>
   <main class="iv-page-shell iv-portfolio-page">
@@ -32,6 +32,37 @@
           </div>
         </div>
       </div>
+      
+      <!-- CSV Upload Area -->
+      <div class="iv-portfolio-upload-box">
+        <label class="iv-upload-label">Or Import Portfolio from CSV</label>
+        <div class="iv-file-dropzone" id="ivFileDropzone">
+          <svg class="iv-upload-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,21H18A2,2 0 0,0 20,19V8L14,2M13.5,16V19H10.5V16H8L12,12L16,16H13.5M13,9V3.5L18.5,9H13Z"/>
+          </svg>
+          <span class="dropzone-text">
+            Drag & drop your CSV file here or <span class="browse-link">browse</span>
+          </span>
+          <input type="file" id="ivPortfolioFileInput" accept=".csv" style="display: none;">
+        </div>
+        
+        <!-- Status indicator -->
+        <div id="ivUploadStatus" class="iv-upload-status" style="display: none;">
+          <div class="iv-upload-status-info">
+            <span id="ivUploadProgressLabel">Processing...</span>
+            <span id="ivUploadProgressPct">0%</span>
+          </div>
+          <div class="iv-upload-progress-bar-wrap">
+            <div id="ivUploadProgressBar"></div>
+          </div>
+        </div>
+
+        <!-- Import report logs -->
+        <div id="ivUploadLogs" class="iv-upload-logs" style="display: none;">
+          <!-- Log rows will be inserted here dynamically -->
+        </div>
+      </div>
+
       <div class="iv-note">All scores are calculated server-side. Once added, stocks are saved locally in your browser.</div>
     </div>
 
@@ -100,6 +131,6 @@
   </main>
 
   <script src="../js/navigation.js?v=2"></script>
-  <script src="../js/modules/portfolio-review-tool.js?v=5"></script>
+  <script src="../js/modules/portfolio-review-tool.js?v=6"></script>
 </body>
 </html>

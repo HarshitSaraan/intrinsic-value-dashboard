@@ -416,3 +416,143 @@
 .iv-portfolio-page .iv-card {
   overflow: visible;
 }
+
+/* CSV Portfolio Import Styling */
+.iv-portfolio-upload-box {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(212, 175, 55, 0.18);
+}
+
+.iv-upload-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #aab6cc;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.iv-file-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 2px dashed rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  background: rgba(6, 17, 36, 0.4);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+
+.iv-file-dropzone:hover,
+.iv-file-dropzone.dragover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.iv-upload-icon {
+  width: 32px;
+  height: 32px;
+  color: #d4af37;
+  margin-bottom: 8px;
+  transition: transform 0.2s;
+}
+
+.iv-file-dropzone:hover .iv-upload-icon {
+  transform: translateY(-2px);
+}
+
+.dropzone-text {
+  color: #cbd5e8;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.dropzone-text .browse-link {
+  color: #d4af37;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Upload Status & Progress bar */
+.iv-upload-status {
+  margin-top: 12px;
+  background: rgba(6, 17, 36, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.iv-upload-status-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+#ivUploadProgressLabel {
+  font-size: 12px;
+  color: #cbd5e8;
+}
+
+#ivUploadProgressPct {
+  font-size: 12px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.iv-upload-progress-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#ivUploadProgressBar {
+  width: 0%;
+  height: 100%;
+  background: #d4af37;
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+/* Log messages container */
+.iv-upload-logs {
+  margin-top: 12px;
+  max-height: 140px;
+  overflow-y: auto;
+  background: rgba(3, 8, 16, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  color: #cbd5e8;
+  scrollbar-width: thin;
+}
+
+.iv-upload-log-row {
+  margin-bottom: 4px;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.iv-upload-log-row:last-child {
+  margin-bottom: 0;
+}
+
+.iv-upload-log-row.success {
+  color: #2ecc71;
+}
+
+.iv-upload-log-row.error {
+  color: #e74c3c;
+}
+
+.iv-upload-log-row.info {
+  color: #cbd5e8;
+}
