@@ -921,14 +921,12 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 
     combined_score = quality_total + management_total
     # Final rating logic
-    if combined_score >= 8:
-        final_rating = "Excellent"
-    elif combined_score >= 5:
+    if combined_score >= 6:
         final_rating = "Good"
-    elif combined_score >= 2:
+    elif combined_score >= 4:
         final_rating = "Average"
     else:
-        final_rating = "Poor"
+        final_rating = "Below Average"
 
     stock_name = clean_text(match_row.get(name_col)) if name_col else ""
     nse_code = clean_text(match_row.get(nse_col)) if nse_col else ""
