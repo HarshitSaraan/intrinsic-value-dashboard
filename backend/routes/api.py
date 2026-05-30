@@ -7,10 +7,13 @@ from fastapi import APIRouter, HTTPException
 
 from backend.services.analytics import (
     compute_headwind_tailwind,
+    compute_monthly_analysis,
     compute_ranking,
     load_headwind_history,
     load_turnaround_sectors,
     pick_column,
+    evaluate_portfolio_stock,
+    search_stocks,
 )
 from backend.utils.paths import CSV_PATH
 
@@ -35,6 +38,11 @@ async def headwind_tailwind() -> dict[str, Any]:
 @router.get("/headwind-history")
 async def headwind_history() -> dict[str, Any]:
     return load_headwind_history()
+
+
+@router.get("/monthly-analysis")
+async def monthly_analysis() -> dict[str, Any]:
+    return compute_monthly_analysis()
 
 
 @router.get("/ranking")
@@ -63,3 +71,15 @@ async def ranking_industries() -> dict[str, Any]:
     if industry_col is None:
         return {"industries": []}
     return {"industries": sorted(frame[industry_col].dropna().astype(str).str.strip().unique().tolist())}
+
+
+@router.get("/portfolio-search")
+async def portfolio_search_endpoint(q: str = "") -> dict[str, Any]:
+    return {"results": search_stocks(q)}
+
+
+@router.get("/portfolio-evaluate")
+async def portfolio_evaluate_endpoint(q: str = "") -> dict[str, Any]:
+    if not q:
+        raise HTTPException(status_code=400, detail="Query parameter 'q' is required")
+    return evaluate_portfolio_stock(q)

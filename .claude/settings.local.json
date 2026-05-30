@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill *)",
+      "Bash(tasklist)",
+      "Bash(findstr python *)",
+      "Bash(powershell *)"
+    ]
+  }
+}

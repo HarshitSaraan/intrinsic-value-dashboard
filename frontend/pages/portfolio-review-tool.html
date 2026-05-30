@@ -3,44 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Review Tool</title>
+  <title>Portfolio Review Tool - Quality & Management Stock Evaluation</title>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css">
+  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css?v=3">
 </head>
 <body>
-  <main class="iv-page-shell iv-portfolio-review-tool-page">
-    <div class="iv-view" id="view-portfolio">
-          <div class="iv-section-title">
-            <div class="iv-kicker">Portfolio Review Tool</div>
-            <h2>Quality, valuation and allocation review.</h2>
-            <p>Placeholder structure for client portfolio upload/review. File upload and analysis logic can be added
-              later.</p>
-          </div>
-          <div class="iv-grid two">
-            <div class="iv-card">
-              <h3>Portfolio Inputs</h3>
-              <div class="iv-form-grid">
-                <div class="iv-field"><label>Client Name</label><input type="text" placeholder="Name"></div>
-                <div class="iv-field"><label>Portfolio Value</label><input type="number" placeholder="₹"></div>
-                <div class="iv-field"><label>Risk Profile</label><select>
-                    <option>Select</option>
-                    <option>Conservative</option>
-                    <option>Balanced</option>
-                    <option>Aggressive</option>
-                  </select></div>
-                <div class="iv-field"><label>Holding Count</label><input type="number" placeholder="No. of stocks">
-                </div>
+  <main class="iv-page-shell iv-portfolio-page">
+    <div class="iv-section-title">
+      <div class="iv-kicker">Portfolio Analysis</div>
+      <h2>Portfolio Review Tool</h2>
+      <p>Evaluate your stock holdings on core Quality and Management parameters calculated in real-time from the master CSV database.</p>
+    </div>
+
+    <!-- Search Input & Autocomplete -->
+    <div class="iv-card">
+      <h3>Search and Add Stocks</h3>
+      <div class="iv-portfolio-search-box">
+        <div class="iv-field">
+          <label for="ivPortfolioSearchInput">Stock Name, NSE Code or BSE Code</label>
+          <div class="iv-search-input-group">
+            <div class="iv-search-input-wrapper">
+              <input id="ivPortfolioSearchInput" type="text" autocomplete="off" placeholder="Type stock name or code, e.g. Reliance, TCS, 500325...">
+              <div class="iv-autocomplete-dropdown" id="ivPortfolioAutocomplete" style="display: none;">
+                <!-- Suggestions will be injected here -->
               </div>
-              <div class="iv-btn-row"><button class="iv-primary-btn">Generate Review</button></div>
             </div>
-            <div class="iv-card">
-              <h3>Review Summary</h3>
-              <p>Allocation risk, concentration, valuation comfort and suggested action buckets will appear here.</p>
-              <div class="iv-note">No client data is saved in this version.</div>
+            <button class="iv-primary-btn" id="ivPortfolioAddBtn" type="button">Add Stock</button>
+          </div>
+        </div>
+      </div>
+      <div class="iv-note">All scores are calculated server-side. Once added, stocks are saved locally in your browser.</div>
+    </div>
+
+    <!-- Evaluation Table -->
+    <div class="iv-card">
+      <div class="iv-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px;">
+        <h3 style="margin: 0;">Stock Evaluation Table</h3>
+        <button class="iv-secondary-btn" id="ivClearPortfolio" type="button" style="padding: 6px 12px; font-size: 12px;">Clear Portfolio</button>
+      </div>
+      <div class="iv-table-wrap iv-portfolio-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>NSE Code</th>
+              <th>BSE Code</th>
+              <th>Quality Score</th>
+              <th>Management Score</th>
+              <th>Valuation</th>
+              <th>Remark</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ivPortfolioTableBody">
+            <tr class="empty-row">
+              <td colspan="8" style="text-align: center; color: #AAB6CC; padding: 30px;">
+                No stocks added yet. Search for a stock above to add it to your portfolio review list.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Slide-out Drawer for Parameter Breakdown -->
+    <div class="iv-portfolio-drawer" id="ivPortfolioDrawer" style="display: none;">
+      <div class="iv-drawer-overlay" id="ivDrawerOverlay"></div>
+      <div class="iv-drawer-content">
+        <div class="iv-drawer-header">
+          <h3 id="ivDrawerTitle">Parameter Breakdown</h3>
+          <button class="iv-drawer-close" id="ivDrawerClose" type="button">&times;</button>
+        </div>
+        <div class="iv-drawer-body">
+          <div class="iv-drawer-stock-info">
+            <h4 id="ivDrawerStockName">Reliance Industries</h4>
+            <div class="iv-drawer-stock-codes">
+              <span id="ivDrawerNseCode">NSE: RELIANCE</span>
+              <span id="ivDrawerBseCode">BSE: 500325</span>
             </div>
           </div>
+          
+          <div class="iv-drawer-score-card">
+            <div class="iv-drawer-score-label" id="ivDrawerScoreLabel">Quality Parameter</div>
+            <div class="iv-drawer-score-value" id="ivDrawerScoreValue">5/6</div>
+          </div>
+          
+          <div class="iv-drawer-section">
+            <h4 id="ivDrawerSectionTitle">Detailed Checks Checklist</h4>
+            <div class="iv-drawer-params-list" id="ivDrawerParamsList">
+              <!-- Parameter lines will be injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <script src="../js/navigation.js"></script>
-  <script src="../js/modules/portfolio-review-tool.js"></script>
+
+  <script src="../js/navigation.js?v=2"></script>
+  <script src="../js/modules/portfolio-review-tool.js?v=3"></script>
 </body>
 </html>

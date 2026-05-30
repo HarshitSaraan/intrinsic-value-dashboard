@@ -2,22 +2,10 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse, HTMLResponse
-
-from backend.utils.paths import BASE_DIR, DASHBOARD_PATH
+from backend.utils.paths import BASE_DIR
 
 router = APIRouter()
 PAGES_DIR = BASE_DIR / "frontend" / "pages"
-
-
-def _dashboard_html(initial_view: str | None = None) -> HTMLResponse:
-    if not DASHBOARD_PATH.exists():
-        raise HTTPException(status_code=404, detail="dashboard_master.html not found")
-
-    html = DASHBOARD_PATH.read_text(encoding="utf-8")
-    if not initial_view:
-        return HTMLResponse(content=html)
-
-    return HTMLResponse(content=html)
 
 
 def _frontend_page(filename: str) -> FileResponse:

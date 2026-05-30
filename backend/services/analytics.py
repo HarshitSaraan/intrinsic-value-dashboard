@@ -513,3 +513,515 @@ def compute_ranking(
         "bestRanked": records[0]["name"] if records else None,
         "data": records,
     }
+
+
+def compute_monthly_analysis() -> dict[str, Any]:
+    if not CSV_PATH.exists():
+        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
+
+    frame = pd.read_csv(CSV_PATH)
+    total_rows = len(frame)
+
+    name_col = pick_column(frame, "Name", "Company Name")
+    bse_col = pick_column(frame, "BSE Code")
+    nse_col = pick_column(frame, "NSE Code")
+    industry_col = pick_column(frame, "Industry", "Industry Group")
+    price_col = pick_column(frame, "Current Price", "CMP", "Price")
+    mcap_col = pick_column(frame, "Market Capitalization", "Market Cap")
+    promoter_col = pick_column(frame, "Promoter holding", "Promoter Holding")
+    change_col = pick_column(frame, "Change in promoter holding", "Change in promoter holding 3Years")
+    graham_col = pick_column(frame, "Graham Number")
+    pb_col = pick_column(frame, "Price to book value", "Price to Book Value", "P/B")
+    pc_col = pick_column(frame, "P/C ratio", "PC ratio", "P/C", "PC Ratio", "Price to Cash Flow", "Price to Cashflow")
+
+    def to_num(series: pd.Series) -> pd.Series:
+        return pd.to_numeric(
+            series.astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
+            errors="coerce",
+        )
+
+    df = pd.DataFrame()
+    df["name"] = frame[name_col].apply(clean_text) if name_col else ""
+    df["bseCode"] = frame[bse_col].apply(clean_text) if bse_col else ""
+    df["nseCode"] = frame[nse_col].apply(clean_text) if nse_col else ""
+    df["industry"] = frame[industry_col].apply(clean_text) if industry_col else ""
+    df["currentPrice"] = to_num(frame[price_col]) if price_col else float("nan")
+    df["marketCap"] = to_num(frame[mcap_col]) if mcap_col else float("nan")
+    df["promoterHolding"] = to_num(frame[promoter_col]) if promoter_col else float("nan")
+    df["promoterChange"] = to_num(frame[change_col]) if change_col else float("nan")
+    df["grahamNumber"] = to_num(frame[graham_col]) if graham_col else float("nan")
+    df["pb"] = to_num(frame[pb_col]) if pb_col else float("nan")
+    df["pc"] = to_num(frame[pc_col]) if pc_col else float("nan")
+
+    # Filter rows where grahamNumber > 0 and currentPrice > 0 are valid (finite numbers)
+    valid_df = df[
+        df["grahamNumber"].notna() & (df["grahamNumber"] > 0) & 
+        df["currentPrice"].notna() & (df["currentPrice"] > 0)
+    ].copy()
+
+    # Classification
+    if not valid_df.empty:
+        valid_df["valuationRatio"] = valid_df["grahamNumber"] / valid_df["currentPrice"]
+        
+        def classify_zone(ratio: float) -> str:
+            if ratio > 2:
+                return "Extremely Undervalued"
+            elif ratio > 1.2:
+                return "Undervalued"
+            elif ratio >= 0.8:
+                return "Fairly Valued"
+            elif ratio >= 0.5:
+                return "Overvalued"
+            else:
+                return "Extremely Overvalued"
+
+        valid_df["valuationZone"] = valid_df["valuationRatio"].apply(classify_zone)
+    else:
+        valid_df["valuationRatio"] = []
+        valid_df["valuationZone"] = []
+
+    # Counts
+    undervalued_count = int(valid_df["valuationZone"].isin(["Extremely Undervalued", "Undervalued"]).sum())
+    overvalued_count = int(valid_df["valuationZone"].isin(["Overvalued", "Extremely Overvalued"]).sum())
+    
+    if overvalued_count == 0:
+        market_ratio = float("inf")
+    else:
+        market_ratio = round(undervalued_count / overvalued_count, 4)
+
+    # Market Status
+    def get_market_status(ratio: float) -> str:
+        if ratio > 2:
+            return "Extremely Undervalued"
+        elif ratio > 1.2:
+            return "Undervalued"
+        elif ratio >= 0.8:
+            return "Fairly Valued"
+        elif ratio >= 0.5:
+            return "Overvalued"
+        else:
+            return "Extremely Overvalued"
+
+    status = get_market_status(market_ratio)
+
+    def get_commentary(st: str) -> str:
+        if st == "Extremely Overvalued":
+            return "The current valuation breadth suggests limited margin of safety across the market. Investors should be selective and avoid chasing momentum."
+        elif st == "Overvalued":
+            return "Market breadth appears valuation-stretched. Selective stock picking and cash discipline may be important."
+        elif st == "Fairly Valued":
+            return "The market appears broadly balanced between undervalued and overvalued opportunities."
+        elif st == "Undervalued":
+            return "Valuation breadth is improving, suggesting a better opportunity set for long-term investors."
+        else:
+            return "The market shows unusually high valuation comfort based on the available Graham Number framework."
+
+    commentary = get_commentary(status)
+
+    # Distribution chart
+    zones = ["Extremely Undervalued", "Undervalued", "Fairly Valued", "Overvalued", "Extremely Overvalued"]
+    distribution = []
+    for zone in zones:
+        count = int((valid_df["valuationZone"] == zone).sum())
+        distribution.append({
+            "name": zone,
+            "count": count
+        })
+
+    # Group stats helper
+    def get_group_stats(df_source: pd.DataFrame, group_col: str) -> list[dict[str, Any]]:
+        stats = []
+        for name, group in df_source.groupby(group_col, dropna=True):
+            clean_name = str(name).strip()
+            if not clean_name:
+                continue
+            total = len(group)
+            if total == 0:
+                continue
+            undervalued = int(group["valuationZone"].isin(["Extremely Undervalued", "Undervalued"]).sum())
+            overvalued = int(group["valuationZone"].isin(["Overvalued", "Extremely Overvalued"]).sum())
+            stats.append({
+                "name": clean_name,
+                "total": total,
+                "undervalued": undervalued,
+                "overvalued": overvalued,
+                "underPct": round((undervalued / total) * 100, 2),
+                "overPct": round((overvalued / total) * 100, 2)
+            })
+        return stats
+
+    # Industry stats
+    sector_stats = get_group_stats(valid_df, "industry")
+    
+    under_sectors = [
+        {"name": x["name"], "value": x["underPct"]}
+        for x in sector_stats if x["underPct"] > 50
+    ]
+    under_sectors.sort(key=lambda x: x["value"], reverse=True)
+    under_sectors = under_sectors[:15]
+
+    over_sectors = [
+        {"name": x["name"], "value": x["overPct"]}
+        for x in sector_stats if x["overPct"] > 50
+    ]
+    over_sectors.sort(key=lambda x: x["value"], reverse=True)
+    over_sectors = over_sectors[:15]
+
+    # Market Cap Segment stats
+    def segment_name(mcap: float) -> str:
+        if pd.isna(mcap) or not math.isfinite(mcap):
+            return "Unclassified"
+        if mcap < 100:
+            return "0–100 Cr"
+        elif mcap < 300:
+            return "100–300 Cr"
+        elif mcap < 1000:
+            return "300–1000 Cr"
+        elif mcap < 5000:
+            return "1000–5000 Cr"
+        elif mcap < 20000:
+            return "5000–20000 Cr"
+        elif mcap < 50000:
+            return "20000–50000 Cr"
+        else:
+            return "Above 50000 Cr"
+
+    import math
+    valid_df["segment"] = valid_df["marketCap"].apply(segment_name)
+    segment_stats = get_group_stats(valid_df, "segment")
+
+    segment_order = ["0–100 Cr", "100–300 Cr", "300–1000 Cr", "1000–5000 Cr", "5000–20000 Cr", "20000–50000 Cr", "Above 50000 Cr"]
+    segment_under = []
+    segment_over = []
+    for name in segment_order:
+        found = next((x for x in segment_stats if x["name"] == name), None)
+        segment_under.append({
+            "name": name,
+            "value": found["underPct"] if found else 0.0
+        })
+        segment_over.append({
+            "name": name,
+            "value": found["overPct"] if found else 0.0
+        })
+
+    # Count by industry (turnaround / negative turnaround)
+    def count_by_industry(df_source: pd.DataFrame, mask_condition: pd.Series) -> list[dict[str, Any]]:
+        filtered = df_source[mask_condition].copy()
+        counts = filtered["industry"].value_counts(dropna=True).to_dict()
+        res = [{"name": str(name).strip(), "count": int(count)} for name, count in counts.items() if str(name).strip()]
+        res.sort(key=lambda x: x["count"], reverse=True)
+        return res
+
+    turnaround_series = df["promoterChange"].notna() & (df["promoterChange"] > 0)
+    negative_turnaround_series = df["promoterChange"].notna() & (df["promoterChange"] < 0)
+
+    turnaround = count_by_industry(df, turnaround_series)
+    negative_turnaround = count_by_industry(df, negative_turnaround_series)
+
+    # Top Turnaround Companies grouped by top turnaround industry sectors
+    top_turnaround_sectors = [x["name"] for x in turnaround[:5]]
+    
+    top_companies = []
+    missing_pc_count = 0
+    
+    for sector in top_turnaround_sectors:
+        # count how many companies in this sector have promoterChange > 0 but DO NOT have pc > 0
+        sector_all = df[(df["industry"] == sector) & (df["promoterChange"].notna()) & (df["promoterChange"] > 0)]
+        sector_invalid_pc = sector_all[~(sector_all["pc"].notna() & (sector_all["pc"] > 0))]
+        missing_pc_count += len(sector_invalid_pc)
+        
+        # filter companies in this sector with promoterChange > 0 and pc > 0
+        sector_companies = df[(df["industry"] == sector) & (df["promoterChange"].notna()) & (df["promoterChange"] > 0) & (df["pc"].notna()) & (df["pc"] > 0)].copy()
+        # sort by pc ascending, select top 3
+        sector_companies = sector_companies.sort_values("pc", ascending=True).head(3)
+        for _, row in sector_companies.iterrows():
+            top_companies.append({
+                "industry": row["industry"],
+                "name": row["name"],
+                "nseCode": row["nseCode"],
+                "bseCode": row["bseCode"],
+                "promoterChange": round(float(row["promoterChange"]), 2) if pd.notna(row["promoterChange"]) else None,
+                "pc": round(float(row["pc"]), 2) if pd.notna(row["pc"]) else None,
+                "marketCap": round(float(row["marketCap"]), 2) if pd.notna(row["marketCap"]) else None,
+                "currentPrice": round(float(row["currentPrice"]), 2) if pd.notna(row["currentPrice"]) else None
+            })
+
+    return {
+        "source": CSV_PATH.name,
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "totalRows": total_rows,
+        "validRows": len(valid_df),
+        "firstGraham": round(float(valid_df.iloc[0]["grahamNumber"]), 2) if len(valid_df) > 0 and pd.notna(valid_df.iloc[0]["grahamNumber"]) else None,
+        "firstCurrentPrice": round(float(valid_df.iloc[0]["currentPrice"]), 2) if len(valid_df) > 0 and pd.notna(valid_df.iloc[0]["currentPrice"]) else None,
+        "undervaluedCount": undervalued_count,
+        "overvaluedCount": overvalued_count,
+        "marketRatio": "Infinity" if math.isinf(market_ratio) else market_ratio,
+        "status": status,
+        "commentary": commentary,
+        "distribution": distribution,
+        "underSectors": under_sectors,
+        "overSectors": over_sectors,
+        "segmentUnder": segment_under,
+        "segmentOver": segment_over,
+        "turnaround": turnaround[:15],
+        "negativeTurnaround": negative_turnaround[:15],
+        "topCompanies": top_companies,
+        "missingPcCount": missing_pc_count
+    }
+
+
+def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
+    if not CSV_PATH.exists():
+        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
+
+    df = pd.read_csv(CSV_PATH)
+    name_col = pick_column(df, "Name", "Company Name")
+    bse_col = pick_column(df, "BSE Code")
+    nse_col = pick_column(df, "NSE Code")
+
+    q = query.strip().lower()
+    match_row = None
+
+    # 1. Try exact matches on code/name first (case-insensitive)
+    for col in [nse_col, bse_col, name_col]:
+        if col:
+            temp = df[df[col].astype(str).str.strip().str.lower() == q]
+            if not temp.empty:
+                match_row = temp.iloc[0]
+                break
+
+    # 2. Try contains matches if no exact match found
+    if match_row is None:
+        for col in [nse_col, bse_col, name_col]:
+            if col:
+                temp = df[df[col].astype(str).str.lower().str.contains(q, na=False)]
+                if not temp.empty:
+                    match_row = temp.iloc[0]
+                    break
+
+    if match_row is None:
+        raise HTTPException(status_code=404, detail=f"Stock not found matching: {query}")
+
+    # Extract quality columns
+    bv_growth_3y_col = pick_column(df, "book value growth 3 years")
+    sales_growth_3y_col = pick_column(df, "Sales growth 3Years")
+    roce_10y_col = pick_column(df, "Average return on capital employed 10Years")
+    icr_col = pick_column(df, "Interest Coverage Ratio")
+    q_turnover_col = pick_column(df, "Quality turnover")
+    net_block_col = pick_column(df, "Net block")
+    net_block_prev_col = pick_column(df, "Net block preceding year")
+
+    # Extract management columns
+    sh_var_col = pick_column(df, "shareholder Var", "Pft per Inv")
+    pledged_col = pick_column(df, "Pledged percentage")
+    hold_inv_col = pick_column(df, "Holding per Investor")
+    chg_prom_3y_col = pick_column(df, "Change in promoter holding 3Years")
+    chg_prom_col = pick_column(df, "Change in promoter holding")
+
+    def get_val(col_name) -> float | None:
+        if col_name is None:
+            return None
+        return number_or_none(match_row.get(col_name))
+
+    # QUALITY PARAMETERS CALCULATIONS
+    bv_growth_3y = get_val(bv_growth_3y_col)
+    q1_score = 1 if (bv_growth_3y is not None and bv_growth_3y > 136.0) else 0
+
+    sales_growth_3y = get_val(sales_growth_3y_col)
+    q2_score = 1 if (sales_growth_3y is not None and sales_growth_3y > 10.0) else 0
+
+    roce_10y = get_val(roce_10y_col)
+    q3_score = 1 if (roce_10y is not None and roce_10y > 10.0) else 0
+
+    icr = get_val(icr_col)
+    q4_score = 1 if (icr is not None and icr > 5.0) else 0
+
+    q_turnover = get_val(q_turnover_col)
+    q5_score = 1 if (q_turnover is not None and q_turnover < 0.1) else 0
+
+    net_block = get_val(net_block_col)
+    net_block_prev = get_val(net_block_prev_col)
+    if net_block is not None and net_block_prev is not None and net_block_prev != 0:
+        net_block_ratio = round(net_block / net_block_prev, 2)
+        q6_score = 1 if net_block_ratio > 2.0 else 0
+    else:
+        net_block_ratio = None
+        q6_score = 0
+
+    quality_total = q1_score + q2_score + q3_score + q4_score + q5_score + q6_score
+
+    # MANAGEMENT PARAMETERS CALCULATIONS
+    sh_var = get_val(sh_var_col) if (sh_var_col and "shareholder" in sh_var_col.lower()) else None
+    if sh_var is not None:
+        if sh_var <= 1.2:
+            m1_score = 1
+        elif sh_var <= 2.0:
+            m1_score = 0
+        else:
+            m1_score = -1
+    else:
+        m1_score = 0
+
+    pledged_val = get_val(pledged_col)
+    if pledged_val is None:
+        m2_score = 1  # 0% pledged (good)
+    else:
+        m2_score = 1 if pledged_val < 1.0 else 0
+
+    hold_inv = get_val(hold_inv_col)
+    m3_score = 1 if (hold_inv is not None and hold_inv >= 0.02) else 0
+
+    chg_prom_3y = get_val(chg_prom_3y_col)
+    m4_score = 1 if (chg_prom_3y is not None and chg_prom_3y >= 0.0) else 0
+
+    chg_prom = get_val(chg_prom_col)
+    m5_score = 1 if (chg_prom is not None and chg_prom >= 0.0) else 0
+
+    management_total = m1_score + m2_score + m3_score + m4_score + m5_score
+
+    stock_name = clean_text(match_row.get(name_col)) if name_col else ""
+    nse_code = clean_text(match_row.get(nse_col)) if nse_col else ""
+    bse_code = clean_text(match_row.get(bse_col)) if bse_col else ""
+
+    return {
+        "stock": {
+            "name": stock_name,
+            "nseCode": nse_code,
+            "bseCode": bse_code,
+        },
+        "quality": {
+            "score": f"{quality_total}/6",
+            "total": quality_total,
+            "parameters": [
+                {
+                    "name": "Book Value Growth 3 Years",
+                    "value": bv_growth_3y,
+                    "displayValue": f"{bv_growth_3y}%" if bv_growth_3y is not None else "N/A",
+                    "threshold": "> 136",
+                    "passed": bool(q1_score),
+                    "score": q1_score
+                },
+                {
+                    "name": "Sales Growth 3 Years",
+                    "value": sales_growth_3y,
+                    "displayValue": f"{sales_growth_3y}%" if sales_growth_3y is not None else "N/A",
+                    "threshold": "> 10",
+                    "passed": bool(q2_score),
+                    "score": q2_score
+                },
+                {
+                    "name": "Average ROCE 10 Years",
+                    "value": roce_10y,
+                    "displayValue": f"{roce_10y}%" if roce_10y is not None else "N/A",
+                    "threshold": "> 10",
+                    "passed": bool(q3_score),
+                    "score": q3_score
+                },
+                {
+                    "name": "Interest Coverage Ratio",
+                    "value": icr,
+                    "displayValue": f"{icr}x" if icr is not None else "N/A",
+                    "threshold": "> 5",
+                    "passed": bool(q4_score),
+                    "score": q4_score
+                },
+                {
+                    "name": "Quality Turnover",
+                    "value": q_turnover,
+                    "displayValue": f"{q_turnover}" if q_turnover is not None else "N/A",
+                    "threshold": "< 0.1",
+                    "passed": bool(q5_score),
+                    "score": q5_score
+                },
+                {
+                    "name": "Net Block Ratio",
+                    "value": net_block_ratio,
+                    "displayValue": f"{net_block_ratio}x" if net_block_ratio is not None else "N/A",
+                    "threshold": "> 2",
+                    "passed": bool(q6_score),
+                    "score": q6_score
+                }
+            ]
+        },
+        "management": {
+            "score": f"{management_total}/5",
+            "total": management_total,
+            "parameters": [
+                {
+                    "name": "Shareholder Var",
+                    "value": sh_var,
+                    "displayValue": f"{sh_var}" if sh_var is not None else "N/A",
+                    "threshold": "<= 1.2 (+1), 1.2-2 (0), > 2 (-1)",
+                    "passed": m1_score > 0,
+                    "score": m1_score
+                },
+                {
+                    "name": "Pledged Percentage",
+                    "value": pledged_val,
+                    "displayValue": f"{pledged_val}%" if pledged_val is not None else "0% (N/A)",
+                    "threshold": "< 1%",
+                    "passed": bool(m2_score),
+                    "score": m2_score
+                },
+                {
+                    "name": "Holding per Investor",
+                    "value": hold_inv,
+                    "displayValue": f"{hold_inv}" if hold_inv is not None else "N/A",
+                    "threshold": ">= 0.02",
+                    "passed": bool(m3_score),
+                    "score": m3_score
+                },
+                {
+                    "name": "Change in Promoter Holding 3 Years",
+                    "value": chg_prom_3y,
+                    "displayValue": f"{chg_prom_3y}%" if chg_prom_3y is not None else "N/A",
+                    "threshold": ">= 0",
+                    "passed": bool(m4_score),
+                    "score": m4_score
+                },
+                {
+                    "name": "Change in Promoter Holding (1 Year)",
+                    "value": chg_prom,
+                    "displayValue": f"{chg_prom}%" if chg_prom is not None else "N/A",
+                    "threshold": ">= 0",
+                    "passed": bool(m5_score),
+                    "score": m5_score
+                }
+            ]
+        },
+        "valuation": "",
+        "remark": ""
+    }
+
+
+def search_stocks(query: str) -> list[dict[str, str]]:
+    if not query:
+        return []
+    if not CSV_PATH.exists():
+        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
+
+    df = pd.read_csv(CSV_PATH)
+    name_col = pick_column(df, "Name", "Company Name")
+    bse_col = pick_column(df, "BSE Code")
+    nse_col = pick_column(df, "NSE Code")
+
+    q = query.strip().lower()
+    mask = pd.Series(False, index=df.index)
+    if name_col:
+        mask = mask | df[name_col].astype(str).str.lower().str.contains(q, na=False)
+    if nse_col:
+        mask = mask | df[nse_col].astype(str).str.lower().str.contains(q, na=False)
+    if bse_col:
+        mask = mask | df[bse_col].astype(str).str.lower().str.contains(q, na=False)
+
+    matching_df = df[mask].head(15)
+
+    results = []
+    for _, row in matching_df.iterrows():
+        results.append({
+            "name": clean_text(row.get(name_col)) if name_col else "",
+            "nseCode": clean_text(row.get(nse_col)) if nse_col else "",
+            "bseCode": clean_text(row.get(bse_col)) if bse_col else ""
+        })
+    return results
+

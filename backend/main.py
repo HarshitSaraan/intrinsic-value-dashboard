@@ -16,8 +16,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Existing static usage (logo/images directly in repo root) remains unchanged.
-app.mount("/static", StaticFiles(directory=BASE_DIR), name="static")
+# Serve logo and other static images from the frontend/assets folder.
+app.mount("/static", StaticFiles(directory=BASE_DIR / "frontend" / "assets"), name="static")
 
 # New modular frontend path for incremental migration.
 frontend_dir = BASE_DIR / "frontend"

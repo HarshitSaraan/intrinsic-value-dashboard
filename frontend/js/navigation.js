@@ -75,18 +75,20 @@
     nav.className = "iv-nav";
     nav.id = "ivNav";
 
-    // Nav Groups matching original monolith sidebar
-    var groups = [
+    // Nav Items: supports standalone links and grouped dropdowns
+    var navItems = [
       {
-        name: "Core Index",
-        items: [
-          { view: "home", label: "Dashboard Home", icon: "◆", path: "/dashboard" },
-          { view: "gawp", label: "GAWP Index", icon: "◎", path: "/gawp" }
-        ]
+        type: "standalone",
+        view: "home",
+        label: "Dashboard Home",
+        icon: "◆",
+        path: "/dashboard"
       },
       {
+        type: "group",
         name: "Personal Finance",
         items: [
+          { view: "gawp", label: "GAWP Index", icon: "◎", path: "/gawp" },
           { view: "sip", label: "SIP Calculator", icon: "↗", path: "/sip" },
           { view: "swp", label: "SWP Calculator", icon: "↘", path: "/swp" },
           { view: "lumpsum", label: "Lumpsum Calculator", icon: "◆", path: "/lumpsum" },
@@ -94,6 +96,7 @@
         ]
       },
       {
+        type: "group",
         name: "Market Analysis",
         items: [
           { view: "monthly", label: "Monthly Market Dashboard", icon: "▣", path: "/monthly-market-dashboard" },
@@ -103,6 +106,7 @@
         ]
       },
       {
+        type: "group",
         name: "Portfolio Tools",
         items: [
           { view: "portfolio", label: "Portfolio Review Tool", icon: "◈", path: "/portfolio-review-tool" },
@@ -111,40 +115,55 @@
       }
     ];
 
-    groups.forEach(function (g) {
+    navItems.forEach(function (item) {
       var groupDiv = document.createElement("div");
       groupDiv.className = "iv-nav-group";
-      
-      var isGroupActive = g.items.some(function (item) { return item.view === activeView; });
-      // Keep dropdown collapsed on page load. Trigger button active highlight is handled via iv-nav-btn active.
 
-      var btn = document.createElement("button");
-      btn.className = "iv-nav-group-btn";
-      btn.innerHTML = `
-        <span>${g.name}</span>
-        <span class="iv-nav-arrow">▾</span>
-      `;
-      groupDiv.appendChild(btn);
-
-      var dropdown = document.createElement("div");
-      dropdown.className = "iv-nav-dropdown";
-
-      g.items.forEach(function (item) {
+      if (item.type === "standalone") {
         var a = document.createElement("a");
-        a.className = "iv-nav-btn";
+        a.className = "iv-nav-group-btn";
         if (item.view === activeView) a.classList.add("active");
         a.href = getLink(item.path);
         a.innerHTML = `
-          <span class="iv-nav-icon">${item.icon}</span>${item.label}
+          <span>${item.label}</span>
         `;
         a.addEventListener("click", function () {
-          setGroupState(groupDiv, false);
           shell.classList.remove("iv-sidebar-open");
         });
-        dropdown.appendChild(a);
-      });
+        groupDiv.appendChild(a);
+      } else {
+        var isGroupActive = item.items.some(function (sub) { return sub.view === activeView; });
+        
+        var btn = document.createElement("button");
+        btn.className = "iv-nav-group-btn";
+        if (isGroupActive) btn.classList.add("active");
+        btn.innerHTML = `
+          <span>${item.name}</span>
+          <span class="iv-nav-arrow">▾</span>
+        `;
+        groupDiv.appendChild(btn);
 
-      groupDiv.appendChild(dropdown);
+        var dropdown = document.createElement("div");
+        dropdown.className = "iv-nav-dropdown";
+
+        item.items.forEach(function (sub) {
+          var a = document.createElement("a");
+          a.className = "iv-nav-btn";
+          if (sub.view === activeView) a.classList.add("active");
+          a.href = getLink(sub.path);
+          a.innerHTML = `
+            <span class="iv-nav-icon">${sub.icon}</span>${sub.label}
+          `;
+          a.addEventListener("click", function () {
+            setGroupState(groupDiv, false);
+            shell.classList.remove("iv-sidebar-open");
+          });
+          dropdown.appendChild(a);
+        });
+
+        groupDiv.appendChild(dropdown);
+      }
+
       nav.appendChild(groupDiv);
     });
 
@@ -209,6 +228,7 @@
     navGroups.forEach(function (group) {
       var button = group.querySelector(".iv-nav-group-btn");
       if (!button) return;
+      if (button.tagName === "A") return;
 
       button.addEventListener("click", function (e) {
         e.stopPropagation();

@@ -1,91 +1,413 @@
-/* Portfolio Review Tool styles */
-.iv-portfolio-review-tool-page {
-  max-width: 1100px;
+/* Portfolio Review Tool Page Styles */
+.iv-portfolio-page {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
 }
 
-.iv-portfolio-review-tool-page .iv-section-title {
-  margin-bottom: 24px;
+/* Autocomplete Suggestion Dropdown */
+.iv-portfolio-search-box {
+  margin-top: 12px;
 }
 
-.iv-portfolio-review-tool-page .iv-kicker {
-  color: #f4d676;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.iv-portfolio-review-tool-page .iv-grid {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.iv-portfolio-review-tool-page .iv-grid.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.iv-portfolio-review-tool-page .iv-card {
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  background: rgba(255, 255, 255, 0.055);
-  border-radius: 15px;
-  padding: 16px;
-}
-
-.iv-portfolio-review-tool-page .iv-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.iv-portfolio-review-tool-page .iv-field {
+.iv-search-input-group {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+  align-items: stretch;
 }
 
-.iv-portfolio-review-tool-page .iv-field label {
-  font-size: 12px;
-  color: #cbd5e8;
+.iv-search-input-group .iv-primary-btn {
+  margin-top: 0;
+  border-radius: 12px;
+  padding: 12px 24px;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
-.iv-portfolio-review-tool-page .iv-field input,
-.iv-portfolio-review-tool-page .iv-field select {
+.iv-search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.iv-search-input-wrapper input {
   width: 100%;
   border: 1px solid rgba(212, 175, 55, 0.24);
-  border-radius: 10px;
-  padding: 10px;
-  background: rgba(6, 17, 36, 0.5);
-  color: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: rgba(6, 17, 36, 0.6);
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.iv-portfolio-review-tool-page .iv-btn-row {
-  margin-top: 16px;
+.iv-search-input-wrapper input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.iv-autocomplete-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #081832;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  scrollbar-width: thin;
+}
+
+.iv-autocomplete-item {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.iv-portfolio-review-tool-page .iv-primary-btn {
-  background: #d4af37;
-  color: #061124;
-  border-radius: 10px;
-  padding: 9px 16px;
-  border: 1px solid rgba(212, 175, 55, 0.24);
+.iv-autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.iv-autocomplete-item:hover,
+.iv-autocomplete-item.is-selected {
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.iv-autocomplete-item .stock-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.iv-autocomplete-item .stock-codes {
+  font-size: 11px;
+  color: #aab6cc;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Evaluation Table Styling */
+.iv-portfolio-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.iv-portfolio-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.iv-portfolio-table-wrap th {
+  background: #061124;
+  color: #cbd5e8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.16);
+}
+
+.iv-portfolio-table-wrap td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.iv-portfolio-table-wrap tr:hover td {
+  background: rgba(212, 175, 55, 0.03);
+}
+
+/* Score Interactive Badges */
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 13px;
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+  min-width: 54px;
+}
+
+.score-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.score-badge.score-green {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.score-badge.score-yellow {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+.score-badge.score-red {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Action Delete Button */
+.btn-delete {
+  background: none;
+  border: none;
+  color: rgba(231, 76, 60, 0.8);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete:hover {
+  background: rgba(231, 76, 60, 0.12);
+  color: #e74c3c;
+}
+
+/* Slide-out Drawer Container */
+.iv-portfolio-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none; /* Controlled dynamically */
+}
+
+.iv-portfolio-drawer.is-open {
+  display: block;
+}
+
+.iv-drawer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(3, 8, 16, 0.7);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.iv-portfolio-drawer.is-open .iv-drawer-overlay {
+  opacity: 1;
+}
+
+.iv-drawer-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 440px;
+  max-width: 100%;
+  background: #081832;
+  border-left: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iv-portfolio-drawer.is-open .iv-drawer-content {
+  transform: translateX(0);
+}
+
+.iv-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.iv-drawer-header h3 {
+  margin: 0;
+  color: #f4d676;
+  font-size: 18px;
   font-weight: 600;
 }
 
-.iv-portfolio-review-tool-page .iv-note {
-  margin-top: 12px;
+.iv-drawer-close {
+  background: none;
+  border: none;
   color: #aab6cc;
-  font-size: 12px;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
 }
 
-@media (max-width: 768px) {
-  .iv-portfolio-review-tool-page .iv-grid.two,
-  .iv-portfolio-review-tool-page .iv-form-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
+.iv-drawer-close:hover {
+  color: #ffffff;
+}
+
+.iv-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  scrollbar-width: thin;
+}
+
+.iv-drawer-stock-info {
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.iv-drawer-stock-info h4 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.iv-drawer-stock-codes {
+  display: flex;
+  gap: 12px;
+}
+
+.iv-drawer-stock-codes span {
+  font-size: 12px;
+  color: #aab6cc;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Drawer Score Summary Card */
+.iv-drawer-score-card {
+  margin: 20px 24px;
+  background: rgba(212, 175, 55, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iv-drawer-score-label {
+  color: #cbd5e8;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.iv-drawer-score-value {
+  color: #f4d676;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* Detailed Parameters Checklist */
+.iv-drawer-section {
+  padding: 0 24px 24px 24px;
+}
+
+.iv-drawer-section h4 {
+  margin: 0 0 12px 0;
+  color: #cbd5e8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 6px;
+}
+
+.iv-drawer-param-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.iv-drawer-param-item:last-child {
+  border-bottom: none;
+}
+
+.iv-param-meta {
+  flex: 1;
+  padding-right: 12px;
+}
+
+.iv-param-name {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.iv-param-threshold {
+  color: #aab6cc;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.iv-param-status-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.iv-param-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.iv-param-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.iv-param-badge.pass {
+  background: rgba(46, 204, 113, 0.18);
+  color: #2ecc71;
+}
+
+.iv-param-badge.fail {
+  background: rgba(231, 76, 60, 0.18);
+  color: #e74c3c;
+}
+
+.iv-param-badge.neutral {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e8;
+}
+
+/* Card Header layout adjustment */
+.iv-card-header h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
 }
