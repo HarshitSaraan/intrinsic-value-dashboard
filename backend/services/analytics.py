@@ -778,24 +778,25 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     name_col = pick_column(df, "Name", "Company Name")
     bse_col = pick_column(df, "BSE Code")
     nse_col = pick_column(df, "NSE Code")
+    isin_col = pick_column(df, "ISIN Code")
 
     q = query.strip().lower()
     match_row = None
 
-    for col in [nse_col, bse_col, name_col]:
-        if col:
-            temp = df[df[col].astype(str).str.strip().str.lower() == q]
-            if not temp.empty:
-                match_row = temp.iloc[0]
-                break
+    for col in [nse_col, bse_col, isin_col, name_col]:
+      if col:
+        temp = df[df[col].astype(str).str.strip().str.lower() == q]
+        if not temp.empty:
+          match_row = temp.iloc[0]
+          break
 
     if match_row is None:
-        for col in [nse_col, bse_col, name_col]:
-            if col:
-                temp = df[df[col].astype(str).str.lower().str.contains(q, na=False)]
-                if not temp.empty:
-                    match_row = temp.iloc[0]
-                    break
+      for col in [nse_col, bse_col, isin_col, name_col]:
+        if col:
+          temp = df[df[col].astype(str).str.lower().str.contains(q, na=False)]
+          if not temp.empty:
+            match_row = temp.iloc[0]
+            break
 
     if match_row is None:
         raise HTTPException(status_code=404, detail=f"Stock not found matching: {query}")
@@ -873,8 +874,13 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 
     q6_score = 0
     if q_turnover is not None:
-        q6_score = 1 if q_turnover > 0.1 else 0
-
+        if q_turnover > 0.1:
+            q6_score = -1
+        elif q_turnover >= 0:
+            q6_score = 1
+        else:
+            q6_score = 0
+        
     quality_total = q1_score + q2_score + q3_score + q4_score + q5_score + q6_score
 
     # MANAGEMENT PARAMETERS
@@ -906,26 +912,121 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     chg_prom_3y = get_val(chg_prom_3y_col)
     m4_score = 0
     if chg_prom_3y is not None:
-        if chg_prom_3y > 0.5: m4_score = 1
-        elif chg_prom_3y >= -0.5: m4_score = 0
-        else: m4_score = -1
+        if chg_prom_3y > 0.5:
+            m4_score = 1
+        elif chg_prom_3y >= -0.5:
+            m4_score = 0
+        elif chg_prom_3y >= -5.0:
+            m4_score = -1
+        else:
+            m4_score = -2
 
     chg_prom = get_val(chg_prom_col)
     m5_score = 0
     if chg_prom is not None:
-        if chg_prom > 0.5: m5_score = 1
-        elif chg_prom >= -0.5: m5_score = 0
-        else: m5_score = -1
+        if chg_prom > 0.5:
+            m5_score = 1
+        elif chg_prom >= -0.5:
+            m5_score = 0
+        elif chg_prom >= -5.0:
+            m5_score = -1
+        else:
+            m5_score = -2
 
     management_total = m1_score + m2_score + m3_score + m4_score + m5_score
 
+    # VALUATION PARAMETERS
+    
+    # 1. Sectoral Average calculations (based on Industry Group / Industry)
+    sector_pb = None
+    sector_ps = None
+    sector_name = "N/A"
+    
+    ind_col = pick_column(df, "Industry")
+    if ind_col:
+        sector_name = clean_text(match_row.get(ind_col)) or "N/A"
+        if sector_name != "N/A":
+            sector_df = df[df[ind_col] == sector_name]
+            
+            pb_col_name = pick_column(df, "Price to book value")
+            if pb_col_name:
+                sector_pb_vals = pd.to_numeric(sector_df[pb_col_name], errors='coerce').dropna()
+                if not sector_pb_vals.empty:
+                    sector_pb = round(float(sector_pb_vals.mean()), 2)
+                    
+            ps_col_name = pick_column(df, "Price to Sales")
+            if ps_col_name:
+                sector_ps_vals = pd.to_numeric(sector_df[ps_col_name], errors='coerce').dropna()
+                if not sector_ps_vals.empty:
+                    sector_ps = round(float(sector_ps_vals.mean()), 2)
+
+    # Valuation parameters scores calculation
+    pb_col = pick_column(df, "Price to book value")
+    stock_pb = get_val(pb_col)
+    v1_score = 0
+    if stock_pb is not None and sector_pb is not None:
+        v1_score = 1 if stock_pb < sector_pb else 0
+
+    ps_col = pick_column(df, "Price to Sales")
+    stock_ps = get_val(ps_col)
+    v2_score = 0
+    if stock_ps is not None and sector_ps is not None:
+        v2_score = 1 if stock_ps < sector_ps else 0
+
+    cmp_val = get_val(pick_column(df, "Current Price"))
+    graham_val = get_val(pick_column(df, "Graham Number"))
+    v3_score = 0
+    if cmp_val is not None and graham_val is not None:
+        if cmp_val < graham_val:
+            v3_score = 1
+        elif cmp_val <= graham_val * 1.5:
+            v3_score = 0
+        else:
+            v3_score = -1
+
+    iv_val = get_val(pick_column(df, "Intrinsic Value"))
+    v4_score = 0
+    if cmp_val is not None and iv_val is not None:
+        if cmp_val < iv_val:
+            v4_score = 1
+        elif cmp_val <= iv_val * 1.5:
+            v4_score = 0
+        else:
+            v4_score = -1
+
+    # 5. Cash Rich check
+    ev_val = get_val(pick_column(df, "Enterprise Value"))
+    cash_eq = get_val(pick_column(df, "Cash Equivalents"))
+    investments = get_val(pick_column(df, "Investments"))
+    mcap_val = get_val(pick_column(df, "Market Capitalization"))
+    debt_val = get_val(pick_column(df, "Debt"))
+
+    cash_val = cash_eq if cash_eq is not None else 0.0
+    inv_val = investments if investments is not None else 0.0
+
+    v5_score = 0
+    if ev_val is not None and ev_val < 0:
+        v5_score = 2
+    elif mcap_val is not None and (cash_val + inv_val) > 2 * mcap_val and (cash_eq is not None or investments is not None):
+        v5_score = 1
+    elif debt_val is not None and mcap_val is not None and debt_val > mcap_val:
+        v5_score = -1
+
+    valuation_total = v1_score + v2_score + v3_score + v4_score + v5_score
+
     combined_score = quality_total + management_total
-    # Final rating logic
-    if combined_score >= 8:
+    total_score = quality_total + management_total + valuation_total
+
+    # Final rating logic based on total score (out of 17)
+    # above 12 (i.e. >= 13) excellent
+    # btw 9-12 Good
+    # 5-8 Average
+    # below 5 poor
+    if total_score >= 13:
         final_rating = "Excellent"
-    elif combined_score >= 5:
+    elif total_score >= 9:
         final_rating = "Good"
-    elif combined_score >= 2:
+    elif total_score >= 5:
         final_rating = "Average"
     else:
         final_rating = "Poor"
@@ -939,9 +1040,11 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             "name": stock_name,
             "nseCode": nse_code,
             "bseCode": bse_code,
+            "isinCode": clean_text(match_row.get(isin_col)) if isin_col else ""
         },
         "overall": {
             "combinedScore": combined_score,
+            "totalScore": total_score,
             "finalRating": final_rating
         },
         "quality": {
@@ -1021,19 +1124,59 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                     "name": "Change in Promoter Holding (3 Years)",
                     "value": chg_prom_3y,
                     "displayValue": f"{chg_prom_3y}%" if chg_prom_3y is not None else "N/A",
-                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), <= -0.5 (-1)",
+                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), -5 to -0.5 (-1), < -5 (-2)",
                     "score": m4_score
                 },
                 {
                     "name": "Change in Promoter Holding (Quarterly)",
                     "value": chg_prom,
                     "displayValue": f"{chg_prom}%" if chg_prom is not None else "N/A",
-                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), <= -0.5 (-1)",
+                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), -5 to -0.5 (-1), < -5 (-2)",
                     "score": m5_score
                 }
             ]
         },
-        "valuation": "",
+        "valuation": {
+            "score": f"{valuation_total}",
+            "total": valuation_total,
+            "parameters": [
+                {
+                    "name": "P/B Ratio vs Sector Average",
+                    "value": stock_pb,
+                    "displayValue": f"{stock_pb}x (Sector Avg: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
+                    "threshold": "P/B < Sector P/B (1), P/B > Sector P/B (0)",
+                    "score": v1_score
+                },
+                {
+                    "name": "P/S Ratio vs Sector Average",
+                    "value": stock_ps,
+                    "displayValue": f"{stock_ps}x (Sector Avg: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
+                    "threshold": "P/S < Sector P/S (1), P/S > Sector P/S (0)",
+                    "score": v2_score
+                },
+                {
+                    "name": "Current Price vs Graham Number",
+                    "value": cmp_val,
+                    "displayValue": f"CMP: {cmp_val} (Graham: {graham_val})" if cmp_val is not None and graham_val is not None else "N/A",
+                    "threshold": "CMP < Graham (1), Graham <= CMP <= Graham * 1.5 (0), CMP > Graham * 1.5 (-1)",
+                    "score": v3_score
+                },
+                {
+                    "name": "Current Price vs Intrinsic Value",
+                    "value": cmp_val,
+                    "displayValue": f"CMP: {cmp_val} (Intrinsic: {iv_val})" if cmp_val is not None and iv_val is not None else "N/A",
+                    "threshold": "CMP < Intrinsic (1), Intrinsic <= CMP <= Intrinsic * 1.5 (0), CMP > Intrinsic * 1.5 (-1)",
+                    "score": v4_score
+                },
+                {
+                    "name": "Cash Rich Rating",
+                    "value": ev_val,
+                    "displayValue": f"EV: {ev_val} (Cash+Inv: {round(cash_val + inv_val, 2)}, Debt: {debt_val}, Mcap: {mcap_val})" if ev_val is not None else "N/A",
+                    "threshold": "EV < 0 (+2), Cash+Inv > 2*Mcap (+1), Debt > Mcap (-1), Else (0)",
+                    "score": v5_score
+                }
+            ]
+        },
         "remark": ""
     }
 
@@ -1048,6 +1191,7 @@ def search_stocks(query: str) -> list[dict[str, str]]:
     name_col = pick_column(df, "Name", "Company Name")
     bse_col = pick_column(df, "BSE Code")
     nse_col = pick_column(df, "NSE Code")
+    isin_col = pick_column(df, "ISIN Code")
 
     q = query.strip().lower()
     mask = pd.Series(False, index=df.index)
@@ -1057,6 +1201,8 @@ def search_stocks(query: str) -> list[dict[str, str]]:
         mask = mask | df[nse_col].astype(str).str.lower().str.contains(q, na=False)
     if bse_col:
         mask = mask | df[bse_col].astype(str).str.lower().str.contains(q, na=False)
+    if isin_col:
+        mask = mask | df[isin_col].astype(str).str.lower().str.contains(q, na=False)
 
     matching_df = df[mask].head(15)
 
@@ -1065,7 +1211,8 @@ def search_stocks(query: str) -> list[dict[str, str]]:
         results.append({
             "name": clean_text(row.get(name_col)) if name_col else "",
             "nseCode": clean_text(row.get(nse_col)) if nse_col else "",
-            "bseCode": clean_text(row.get(bse_col)) if bse_col else ""
+            "bseCode": clean_text(row.get(bse_col)) if bse_col else "",
+            "isinCode": clean_text(row.get(isin_col)) if isin_col else ""
         })
     return results
 

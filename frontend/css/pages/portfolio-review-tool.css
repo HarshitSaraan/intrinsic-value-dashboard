@@ -114,12 +114,26 @@
   padding: 14px 16px;
   text-align: left;
   border-bottom: 2px solid rgba(212, 175, 55, 0.16);
+  white-space: normal;
+  line-height: 1.4;
+  vertical-align: bottom;
 }
 
 .iv-portfolio-table-wrap td {
   padding: 14px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   color: #ffffff;
+}
+
+.nse-code-sub {
+  font-size: 11px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #aab6cc;
+  margin-top: 4px;
+  font-family: monospace;
+  font-weight: normal;
+  display: block;
 }
 
 .iv-portfolio-table-wrap tr:hover td {

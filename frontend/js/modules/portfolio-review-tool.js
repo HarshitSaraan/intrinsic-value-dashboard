@@ -91,14 +91,40 @@ document.addEventListener('DOMContentLoaded', function () {
     portfolio.forEach(function (item, index) {
       var tr = document.createElement('tr');
       
-      // Clean codes for display
-      var nseCode = item.stock.nseCode || '—';
-      var bseCode = item.stock.bseCode ? parseFloat(item.stock.bseCode).toString() : '—'; // Clean float decimals (e.g. 532540.0 -> 532540)
+      var valScore = item.valuation ? item.valuation.score : '—';
+      var valTotal = item.valuation ? item.valuation.total : 0;
       
+      var totalScore = item.overall.totalScore !== undefined ? item.overall.totalScore : (item.quality.total + item.management.total + valTotal);
+      var combinedScore = item.overall.combinedScore !== undefined ? item.overall.combinedScore : (item.quality.total + item.management.total);
+      
+      var rating = item.overall.finalRating;
+      if (item.overall.totalScore === undefined) {
+        if (totalScore >= 13) {
+          rating = 'Excellent';
+        } else if (totalScore >= 9) {
+          rating = 'Good';
+        } else if (totalScore >= 5) {
+          rating = 'Average';
+        } else {
+          rating = 'Poor';
+        }
+      }
+      
+      var codeToDisplay = '';
+      if (item.stock.nseCode && item.stock.nseCode.trim() !== '') {
+        codeToDisplay = item.stock.nseCode.trim();
+      } else if (item.stock.bseCode && item.stock.bseCode.trim() !== '') {
+        var cleanBse = parseFloat(item.stock.bseCode).toString();
+        if (cleanBse && cleanBse !== 'NaN' && cleanBse !== '0') {
+          codeToDisplay = 'bse: ' + cleanBse;
+        }
+      }
+
       tr.innerHTML = `
-        <td style="font-weight: 600;">${escapeHtml(item.stock.name)}</td>
-        <td><span style="font-family: monospace; color: #aab6cc;">${escapeHtml(nseCode)}</span></td>
-        <td><span style="font-family: monospace; color: #aab6cc;">${escapeHtml(bseCode)}</span></td>
+        <td style="font-weight: 600;">
+          <div>${escapeHtml(item.stock.name)}</div>
+          ${codeToDisplay ? `<div class="nse-code-sub">${escapeHtml(codeToDisplay)}</div>` : ''}
+        </td>
         <td>
           <span class="score-badge ${getScoreClass(item.quality.total, 6)}" data-index="${index}" data-type="quality">
             ${escapeHtml(item.quality.score)}
@@ -109,8 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ${escapeHtml(item.management.score)}
           </span>
         </td>
-        <td style="font-weight: 600; color: #fff;">${item.overall.combinedScore} / 11</td>
-        <td style="font-weight: 600; color: ${item.overall.finalRating === 'Excellent' || item.overall.finalRating === 'Good' ? '#34D399' : (item.overall.finalRating === 'Average' ? '#F4D676' : '#F87171')};">${escapeHtml(item.overall.finalRating)}</td>
+        <td style="font-weight: 600; color: #fff;">${combinedScore} / 11</td>
+        <td>
+          <span class="score-badge ${getScoreClass(valTotal, 6)}" data-index="${index}" data-type="valuation">
+            ${escapeHtml(valScore)}
+          </span>
+        </td>
+        <td style="font-weight: 600; color: #fff;">${totalScore} / 17</td>
+        <td style="font-weight: 600; color: ${rating === 'Excellent' || rating === 'Good' ? '#34D399' : (rating === 'Average' ? '#F4D676' : '#F87171')};">${escapeHtml(rating)}</td>
         <td>
           <button class="btn-delete" data-index="${index}" title="Remove Stock">
             <svg style="width:16px;height:16px" viewBox="0 0 24 24">
@@ -207,6 +239,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (scoreVal === -1) {
           badgeClass = 'fail';
           badgeText = '-1 Fail';
+        } else if (scoreVal === -2) {
+          badgeClass = 'fail';
+          badgeText = '-2 Fail';
         }
         
         html += `
@@ -223,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
       });
       paramsListEl.innerHTML = html;
-    } else {
+    } else if (type === 'management') {
       drawerTitle.textContent = 'Management Parameters';
       scoreLabelEl.textContent = 'Management Score';
       scoreValueEl.textContent = item.management.score;
@@ -242,6 +277,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (scoreVal === -1) {
           badgeClass = 'fail';
           badgeText = '-1 Fail';
+        } else if (scoreVal === -2) {
+          badgeClass = 'fail';
+          badgeText = '-2 Fail';
         }
 
         html += `
@@ -257,6 +295,51 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
       });
+      paramsListEl.innerHTML = html;
+    } else if (type === 'valuation') {
+      drawerTitle.textContent = 'Valuation Parameters';
+      scoreLabelEl.textContent = 'Valuation Score';
+      var valScore = item.valuation ? item.valuation.score : '—';
+      var valTotal = item.valuation ? item.valuation.total : 0;
+      scoreValueEl.textContent = valScore;
+      scoreValueEl.className = 'iv-drawer-score-value ' + getScoreClass(valTotal, 6) + '-text';
+
+      // Build parameters list
+      var html = '';
+      if (item.valuation && item.valuation.parameters) {
+        item.valuation.parameters.forEach(function (param) {
+          var badgeClass = 'neutral';
+          var badgeText = '0 Neutral';
+          var scoreVal = Number(param.score);
+
+          if (scoreVal === 2) {
+            badgeClass = 'pass';
+            badgeText = '+2 Pass';
+          } else if (scoreVal === 1) {
+            badgeClass = 'pass';
+            badgeText = '+1 Pass';
+          } else if (scoreVal === -1) {
+            badgeClass = 'fail';
+            badgeText = '-1 Fail';
+          } else if (scoreVal === -2) {
+            badgeClass = 'fail';
+            badgeText = '-2 Fail';
+          }
+
+          html += `
+            <div class="iv-drawer-param-item">
+              <div class="iv-param-meta">
+                <div class="iv-param-name">${escapeHtml(param.name)}</div>
+                <div class="iv-param-threshold">Target: ${escapeHtml(param.threshold)}</div>
+              </div>
+              <div class="iv-param-status-wrapper">
+                <div class="iv-param-value">${escapeHtml(param.displayValue)}</div>
+                <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
+              </div>
+            </div>
+          `;
+        });
+      }
       paramsListEl.innerHTML = html;
     }
 
@@ -557,6 +640,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var headers = rows[0];
     var nseColIndex = -1;
     var bseColIndex = -1;
+    var isinColIndex = -1;
     var nameColIndex = -1;
 
     // Detect column indexes from header keywords
@@ -573,6 +657,11 @@ document.addEventListener('DOMContentLoaded', function () {
         bseColIndex = col;
         addLog('Found potential BSE column: "' + headers[col] + '"', 'success');
       }
+      // Look for ISIN
+      else if (isinColIndex === -1 && (h === 'isin' || h === 'isin code' || h === 'isin_code' || h === 'isin number')) {
+        isinColIndex = col;
+        addLog('Found potential ISIN column: "' + headers[col] + '"', 'success');
+      }
       // Look for Name
       else if (nameColIndex === -1 && (h === 'company' || h === 'name' || h === 'security' || h === 'company name' || h === 'holding' || h === 'security name')) {
         nameColIndex = col;
@@ -581,12 +670,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Heuristics for headerless CSVs or unmatched column headers
-    if (nseColIndex === -1 && bseColIndex === -1 && nameColIndex === -1) {
+    if (nseColIndex === -1 && bseColIndex === -1 && isinColIndex === -1 && nameColIndex === -1) {
       addLog('Header labels not matched. Scanning columns for codes...', 'info');
       var sampleRows = rows.slice(1, Math.min(6, rows.length));
       for (var col = 0; col < headers.length; col++) {
         var allBseLike = true;
         var allNseLike = true;
+        var allIsinLike = true;
         var hasText = false;
         var validSampleCount = 0;
         
@@ -597,11 +687,15 @@ document.addEventListener('DOMContentLoaded', function () {
           validSampleCount++;
           if (!/^\d{6}(\.0)?$/.test(val)) allBseLike = false;
           if (!/^[A-Za-z\-&]{2,10}$/.test(val)) allNseLike = false;
+          if (!/^IN[A-Z0-9]{10}$/i.test(val)) allIsinLike = false;
           if (val.length > 5) hasText = true;
         });
 
         if (validSampleCount > 0) {
-          if (allBseLike) {
+          if (allIsinLike) {
+            isinColIndex = col;
+            addLog('Mapped column ' + col + ' to ISIN (ISIN codes detected)', 'success');
+          } else if (allBseLike) {
             bseColIndex = col;
             addLog('Mapped column ' + col + ' to BSE (numeric codes detected)', 'success');
           } else if (allNseLike) {
@@ -615,23 +709,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    if (nseColIndex === -1 && bseColIndex === -1 && nameColIndex === -1) {
-      addLog('Failed to auto-detect any Stock Name, NSE Code, or BSE Code columns. Please ensure your CSV headers contain terms like "NSE", "BSE", "Symbol", or "Name".', 'error');
+    if (nseColIndex === -1 && bseColIndex === -1 && isinColIndex === -1 && nameColIndex === -1) {
+      addLog('Failed to auto-detect any Stock Name, ISIN, NSE, or BSE Code columns. Please ensure your CSV headers contain terms like "ISIN", "NSE", "BSE", or "Name".', 'error');
       return;
     }
 
     // Extracted keys
     var queries = [];
+    var maxIndex = Math.max(nseColIndex, bseColIndex, isinColIndex, nameColIndex);
     for (var r = 1; r < rows.length; r++) {
       var row = rows[r];
-      if (!row || row.length <= Math.max(nseColIndex, bseColIndex, nameColIndex)) continue;
+      if (!row || row.length <= maxIndex) continue;
 
+      var isinVal = isinColIndex !== -1 ? row[isinColIndex].trim() : '';
       var nseVal = nseColIndex !== -1 ? row[nseColIndex].trim() : '';
       var bseVal = bseColIndex !== -1 ? row[bseColIndex].trim() : '';
       var nameVal = nameColIndex !== -1 ? row[nameColIndex].trim() : '';
 
-      // Prefer NSE Code, then BSE Code, then Name
-      var key = nseVal || bseVal || nameVal;
+      // Prefer ISIN Code, then NSE Code, then BSE Code, then Name
+      var key = isinVal || nseVal || bseVal || nameVal;
       if (key && key !== '-' && key !== 'N/A' && key !== 'null' && key !== 'undefined') {
         queries.push(key);
       }
