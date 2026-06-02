@@ -35,26 +35,36 @@
       return;
     }
 
-    var diff = divVal - pbVal; // positive if divVal > pbVal
-    var threshold = 0.15; // numerical difference threshold
+    var canvas = app.querySelector('#ivSectorValuationCanvas');
+    if (canvas && canvas._yAtPB && canvas._yAtDiv) {
+      var yPB = canvas._yAtPB(pbVal);
+      var yDiv = canvas._yAtDiv(divVal);
 
-    if (Math.abs(diff) < threshold) {
-      badge.textContent = 'Normal';
-      badge.style.background = 'rgba(var(--iv-warning-rgb), 0.12)';
-      badge.style.color = 'var(--iv-warning)';
-      badge.style.borderColor = 'rgba(var(--iv-warning-rgb), 0.3)';
-    } else if (diff > 0) {
-      // P/B < Div Yield -> Undervalued
-      badge.textContent = 'Undervalued';
-      badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
-      badge.style.color = 'var(--iv-success)';
-      badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+      // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
+      if (yPB > yDiv) {
+        badge.textContent = 'Undervalued';
+        badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
+        badge.style.color = 'var(--iv-success)';
+        badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+      } else {
+        badge.textContent = 'Overvalued';
+        badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
+        badge.style.color = 'var(--iv-danger)';
+        badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+      }
     } else {
-      // P/B > Div Yield -> Overvalued
-      badge.textContent = 'Overvalued';
-      badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
-      badge.style.color = 'var(--iv-danger)';
-      badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+      // Fallback to value-wise if canvas helpers are not loaded yet
+      if (pbVal < divVal) {
+        badge.textContent = 'Undervalued';
+        badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
+        badge.style.color = 'var(--iv-success)';
+        badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+      } else {
+        badge.textContent = 'Overvalued';
+        badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
+        badge.style.color = 'var(--iv-danger)';
+        badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+      }
     }
   }
 
@@ -400,19 +410,15 @@
         if (closest.pb !== null && closest.div_yield !== null) {
           var pbVal = closest.pb;
           var divVal = closest.div_yield;
-          var diff = divVal - pbVal; // positive if divVal > pbVal
           
-          var statusText = 'Normal';
-          var statusColor = 'var(--iv-warning)';
-          if (Math.abs(diff) < 0.15) {
-            statusText = 'Normal';
-            statusColor = 'var(--iv-warning)';
-          } else if (diff > 0) {
+          var yPB = canvas._yAtPB(pbVal);
+          var yDiv = canvas._yAtDiv(divVal);
+          
+          var statusText = 'Overvalued';
+          var statusColor = 'var(--iv-danger)';
+          if (yPB > yDiv) {
             statusText = 'Undervalued';
             statusColor = 'var(--iv-success)';
-          } else {
-            statusText = 'Overvalued';
-            statusColor = 'var(--iv-danger)';
           }
           statusHtml = '<div style="margin-top:5px;border-top:1px solid rgba(255,255,255,0.08);padding-top:5px;display:flex;align-items:center;">' +
                        'Valuation: <b style="color:' + statusColor + ';margin-left:auto;">' + statusText + '</b>' +
