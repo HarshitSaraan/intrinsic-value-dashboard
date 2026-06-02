@@ -1458,23 +1458,32 @@
       }
 
        .iv-sidebar {
-        position: sticky;
-        inset: 0 0 auto 0;
-        transform: none;
-        width: 100%;
-        max-width: none;
-        height: auto;
-        padding: 20px 30px 16px;
-        border-right: 0;
-        border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.14);
-        background: rgba(var(--iv-bg-rgb), 0.86);
-        backdrop-filter: blur(18px);
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        overflow: visible;
-        z-index: 60;
-      }
+         position: sticky;
+         inset: 0 0 auto 0;
+         transform: none;
+         width: 100%;
+         max-width: none;
+         height: auto;
+         padding: 20px 30px 16px;
+         border-right: 0;
+         border-bottom: 1px solid transparent;
+         background: transparent;
+         backdrop-filter: none;
+         box-shadow: none;
+         display: flex;
+         align-items: center;
+         gap: 18px;
+         overflow: visible;
+         z-index: 60;
+         transition: background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease, box-shadow 0.25s ease;
+       }
+
+       .iv-sidebar.scrolled {
+         background: rgba(var(--iv-bg-rgb), 0.86);
+         backdrop-filter: blur(18px);
+         border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.14);
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       }
 
        .iv-brand {
         display: flex;

@@ -237,6 +237,17 @@
       shell.classList.remove("iv-sidebar-open");
     });
 
+    // Setup scroll listener for sticky nav bar blending
+    function handleNavbarScroll() {
+      if (window.scrollY > 15) {
+        sidebar.classList.add("scrolled");
+      } else {
+        sidebar.classList.remove("scrolled");
+      }
+    }
+    window.addEventListener("scroll", handleNavbarScroll);
+    handleNavbarScroll(); // Initial check
+
     // Inject and setup theme toggle button dynamically
     var toggleBtn = document.getElementById("ivThemeToggle");
     if (!toggleBtn) {
