@@ -1,0 +1,115 @@
+/* Strategies page specific styling */
+
+.iv-strat-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .iv-strat-directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.iv-strat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--iv-card);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: var(--iv-shadow);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.iv-strat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.iv-strat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--iv-accent-rgb), 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.iv-strat-card:hover::before {
+  background-color: var(--iv-success);
+}
+
+.iv-strat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+/* Green icon background highlight matching the user's screenshot */
+.iv-strat-icon-wrap.bg-green {
+  background: rgba(102, 187, 106, 0.08);
+  border: 1px solid rgba(102, 187, 106, 0.15);
+}
+
+.iv-strat-card:hover .iv-strat-icon-wrap.bg-green {
+  background: rgba(102, 187, 106, 0.16);
+  border-color: rgba(102, 187, 106, 0.4);
+}
+
+.iv-strat-icon {
+  font-size: 20px;
+}
+
+.iv-strat-info {
+  flex-grow: 1;
+}
+
+.iv-strat-info h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--iv-text);
+  transition: color 0.2s;
+}
+
+.iv-strat-card:hover h4 {
+  color: var(--iv-accent-light);
+}
+
+.iv-strat-info p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--iv-text-muted);
+}
+
+/* Details view custom elements */
+.iv-strat-details-view {
+  animation: ivFade 0.28s ease;
+}
+
+.iv-stat-box strong {
+  display: block;
+}
+
+.iv-strat-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}

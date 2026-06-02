@@ -49,6 +49,16 @@
     else if (path.indexOf("portfolio-review-tool") >= 0) activeView = "portfolio";
     else if (path.indexOf("ranking-tool") >= 0) activeView = "ranking";
     else if (path.indexOf("turnaround") >= 0) activeView = "turnaround";
+    else if (path.indexOf("strategies") >= 0) {
+      var query = window.location.search;
+      if (query.indexOf("undervalued-growth") >= 0) activeView = "strategies-ug";
+      else if (query.indexOf("aggressive-smallcaps") >= 0) activeView = "strategies-as";
+      else if (query.indexOf("undervalued-largecaps") >= 0) activeView = "strategies-ul";
+      else if (query.indexOf("growth-tech") >= 0) activeView = "strategies-gt";
+      else if (query.indexOf("portfolio-anchors") >= 0) activeView = "strategies-pa";
+      else if (query.indexOf("solid-large-growth") >= 0) activeView = "strategies-sl";
+      else activeView = "strategies-directory";
+    }
 
     // Create iv-shell wrapper
     var shell = document.createElement("div");
@@ -111,6 +121,18 @@
         items: [
           { view: "portfolio", label: "Portfolio Review Tool", icon: "◈", path: "/portfolio-review-tool" },
           { view: "ranking", label: "Intrinsic Value Ranking Tool", icon: "★", path: "/ranking-tool" }
+        ]
+      },
+      {
+        type: "group",
+        name: "Value & Growth Strategies",
+        items: [
+          { view: "strategies-ug", label: "Undervalued Growth", icon: "📈", path: "/strategies?type=undervalued-growth" },
+          { view: "aggressive-smallcaps", label: "Aggressive Small Caps", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
+          { view: "undervalued-largecaps", label: "Undervalued Large Caps", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
+          { view: "growth-tech", label: "Growth Technology", icon: "💻", path: "/strategies?type=growth-tech" },
+          { view: "portfolio-anchors", label: "Portfolio Anchors", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
+          { view: "solid-large-growth", label: "Solid Large Growth", icon: "🚀", path: "/strategies?type=solid-large-growth" }
         ]
       }
     ];

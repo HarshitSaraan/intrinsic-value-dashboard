@@ -86,4 +86,10 @@ async def ranking_tool_page() -> FileResponse:
     return _frontend_page("ranking-tool.html")
 
 
+@router.get("/strategies", response_class=HTMLResponse)
+async def strategies_page() -> FileResponse:
+    return _frontend_page("strategies.html")
+
+
+
 
