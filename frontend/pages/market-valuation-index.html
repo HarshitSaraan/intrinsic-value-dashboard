@@ -44,7 +44,8 @@
               <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
                 <div>
                   <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                    <h4 id="ivSelectedSectorTitle" style="margin: 0; font-size: 18px; color: var(--iv-accent-light);">Nifty 50</h4>
+                    <h4 id="ivSelectedSectorTitle" style="margin: 0; font-size: 18px; color: var(--iv-accent-light); display: inline-block;">Nifty 50</h4>
+                    <span id="ivSelectedSectorIndexValue" style="color: var(--iv-text); font-weight: 650; font-size: 18px;">—</span>
                     <span id="ivSectorValuationBadge" class="iv-status" style="font-weight: 600; font-size: 11px; padding: 4px 10px; border-radius: 99px;">—</span>
                   </div>
                   <span id="ivSelectedSectorSubtitle" style="font-size: 11px; color: var(--iv-text-muted);">P/B vs Dividend Yield trend from starting year</span>
@@ -52,34 +53,16 @@
                 
                 <div class="iv-chart-legend" style="display: flex; gap: 16px; font-size: 12px; font-weight: 500;">
                   <span style="display: flex; align-items: center; gap: 6px; color: var(--iv-text-secondary);">
-                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #BCA374;"></i>
+                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #42A5F5;"></i>
                     P/B Ratio (Left)
                   </span>
                   <span style="display: flex; align-items: center; gap: 6px; color: var(--iv-text-secondary);">
-                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #42A5F5;"></i>
+                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #BCA374;"></i>
                     Div Yield % (Right)
                   </span>
                 </div>
               </div>
-              
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 20px;">
-                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest Index Value</span>
-                  <strong id="ivStatIndex" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
-                </div>
-                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest P/E Ratio</span>
-                  <strong id="ivStatPE" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
-                </div>
-                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest P/B Ratio</span>
-                  <strong id="ivStatPB" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
-                </div>
-                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest Div Yield %</span>
-                  <strong id="ivStatDiv" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
-                </div>
-              </div>
+
               
               <div style="position: relative; margin-top: 15px;">
                 <canvas id="ivSectorValuationCanvas" style="width: 100%; height: 260px; display: block; border-radius: 14px; background: rgba(0, 0, 0, 0.15); border: 1px solid var(--iv-border-subtle);"></canvas>
