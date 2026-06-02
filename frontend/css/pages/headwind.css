@@ -14,19 +14,19 @@
              .iv-headwind-page .iv-hw-badge.tailwind {
               background: rgba(52, 211, 153, 0.13);
               border: 1px solid rgba(52, 211, 153, 0.35);
-              color: #34D399;
+              color: var(--iv-success);
             }
 
              .iv-headwind-page .iv-hw-badge.headwind {
               background: rgba(248, 113, 113, 0.13);
               border: 1px solid rgba(248, 113, 113, 0.35);
-              color: #F87171;
+              color: var(--iv-danger);
             }
 
              .iv-headwind-page .iv-hw-badge.neutral {
-              background: rgba(212, 175, 55, 0.12);
-              border: 1px solid rgba(212, 175, 55, 0.28);
-              color: #F4D676;
+              background: rgba(var(--iv-accent-rgb), 0.12);
+              border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+              color: var(--iv-accent-light);
             }
 
              .iv-headwind-page .iv-hw-sector-table {
@@ -40,9 +40,9 @@
               font-weight: 600;
               letter-spacing: 0.08em;
               text-transform: uppercase;
-              color: #AAB6CC;
+              color: var(--iv-text-muted);
               padding: 8px 10px;
-              border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+              border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.14);
               text-align: left;
             }
 
@@ -59,8 +59,8 @@
              .iv-headwind-page .iv-hw-sector-table td {
               font-size: 12.5px;
               padding: 9px 10px;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.045);
-              color: #E8EEF8;
+              border-bottom: 1px solid var(--iv-border-subtle);
+              color: var(--iv-text);
               vertical-align: middle;
               transition: background-color 0.3s ease, color 0.3s ease;
             }
@@ -70,16 +70,16 @@
             }
 
              .iv-headwind-page .iv-hw-sector-table tr.market-row td {
-              background: rgba(212, 175, 55, 0.07);
+              background: rgba(var(--iv-accent-rgb), 0.07);
               font-weight: 700;
-              color: #F4D676;
-              border-bottom: 2px solid rgba(212, 175, 55, 0.22);
+              color: var(--iv-accent-light);
+              border-bottom: 2px solid rgba(var(--iv-accent-rgb), 0.22);
               transition: background-color 0.3s ease, color 0.3s ease;
             }
 
              .iv-headwind-page .iv-hw-sector-table tr.market-row:hover td {
-              background: rgba(212, 175, 55, 0.12);
-              color: #FFFFFF;
+              background: rgba(var(--iv-accent-rgb), 0.12);
+              color: var(--iv-text);
               transform: translateY(-2px);
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
@@ -95,7 +95,7 @@
               flex: 1;
               height: 5px;
               border-radius: 99px;
-              background: rgba(255, 255, 255, 0.08);
+              background: var(--iv-card);
               overflow: hidden;
             }
 

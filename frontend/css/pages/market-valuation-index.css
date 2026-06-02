@@ -10,7 +10,7 @@
 }
 
 .iv-market-valuation-index-page .iv-kicker {
-  color: #f4d676;
+  color: var(--iv-accent-light);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -28,8 +28,8 @@
 }
 
 .iv-market-valuation-index-page .iv-card {
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  background: var(--iv-card);
   border-radius: 15px;
   padding: 16px;
 }
@@ -44,13 +44,13 @@
 
 .iv-market-valuation-index-page .iv-metric strong {
   font-size: 28px;
-  color: #f4d676;
+  color: var(--iv-accent-light);
 }
 
 .iv-market-valuation-index-page .iv-pill {
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.28);
-  color: #f4d676;
+  background: rgba(var(--iv-accent-rgb), 0.12);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+  color: var(--iv-accent-light);
   padding: 2px 8px;
   border-radius: 99px;
   font-size: 10px;
@@ -62,15 +62,15 @@
   align-items: flex-end;
   justify-content: space-around;
   height: 200px;
-  background: rgba(6, 17, 36, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(var(--iv-bg-rgb), 0.38);
+  border: 1px solid var(--iv-border-subtle);
   border-radius: 14px;
   padding: 20px;
 }
 
 .iv-market-valuation-index-page .iv-bar {
   width: 40px;
-  background: linear-gradient(180deg, #f4d676, #d4af37);
+  background: linear-gradient(180deg, var(--iv-accent-light), var(--iv-accent));
   border-radius: 6px 6px 0 0;
 }
 

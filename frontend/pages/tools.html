@@ -6,6 +6,13 @@
   <title>Tools Directory</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/pages/tools.css">
+  <link rel="stylesheet" href="../css/theme-toggle.css">
+  <script>
+    (function(){
+      var t=localStorage.getItem('iv-theme')||'';
+      if(t)document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
 </head>
 <body>
   <main class="iv-page-shell iv-tools-page">
@@ -118,5 +125,27 @@
     </div>
   </main>
 <script src="../js/navigation.js?v=2"></script>
+    <button class="iv-theme-toggle" id="ivThemeToggle" title="Switch theme" aria-label="Toggle theme">
+    <span class="iv-theme-icon">☀️</span>
+  </button>
+  <script>
+    (function(){
+      var b=document.getElementById('ivThemeToggle');
+      var i=b.querySelector('.iv-theme-icon');
+      function u(){
+        var t=document.documentElement.getAttribute('data-theme')||'';
+        if(t==='dark')i.textContent='🌙';
+        else i.textContent='☀️';
+      }
+      u();
+      b.onclick=function(){
+        var t=document.documentElement.getAttribute('data-theme')||'';
+        var n=t==='dark'?'':'dark';
+        if(n)document.documentElement.setAttribute('data-theme',n);
+        else document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('iv-theme',n);u();
+      };
+    })();
+  </script>
 </body>
 </html>

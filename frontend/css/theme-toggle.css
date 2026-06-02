@@ -1,0 +1,51 @@
+/* Floating Theme Toggle button styling */
+.iv-theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--iv-accent), var(--iv-accent-light));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0;
+  outline: none;
+}
+
+.iv-theme-toggle:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 12px 40px rgba(var(--iv-accent-rgb), 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.iv-theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.iv-theme-icon {
+  font-size: 24px;
+  line-height: 1;
+  user-select: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
+}
+
+/* Specific styling adjust for mobile viewports */
+@media (max-width: 768px) {
+  .iv-theme-toggle {
+    bottom: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+  }
+  
+  .iv-theme-icon {
+    font-size: 20px;
+  }
+}

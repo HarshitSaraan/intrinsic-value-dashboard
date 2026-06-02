@@ -1,26 +1,26 @@
 .iv-xirr-page { max-width: 1100px; margin: 0 auto; padding: 24px; }
-.iv-xirr-page .iv-kicker { color:#f4d676; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+.iv-xirr-page .iv-kicker { color:var(--iv-accent-light); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
 .iv-xirr-page .iv-grid { display:grid; gap:14px; margin-bottom:14px; }
 .iv-xirr-page .iv-grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.iv-xirr-page .iv-card { border:1px solid rgba(212,175,55,.16); background:rgba(255,255,255,.055); border-radius:15px; padding:12px; }
+.iv-xirr-page .iv-card { border:1px solid rgba(var(--iv-accent-rgb),.16); background:rgba(255,255,255,.055); border-radius:15px; padding:12px; }
 .iv-xirr-page .iv-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-.iv-xirr-page .iv-field label{display:block;margin-bottom:6px;font-size:12px;color:#cbd5e8;}
-.iv-xirr-page .iv-field input,.iv-xirr-page .iv-xirr-table-input{width:100%; border:1px solid rgba(212,175,55,.2); background:rgba(6,17,36,.76); color:#fff; border-radius:11px; padding:9px 10px;}
+.iv-xirr-page .iv-field label{display:block;margin-bottom:6px;font-size:12px;color:var(--iv-text-secondary);}
+.iv-xirr-page .iv-field input,.iv-xirr-page .iv-xirr-table-input{width:100%; border:1px solid rgba(var(--iv-accent-rgb),.2); background:rgba(var(--iv-bg-rgb),.76); color: var(--iv-text); border-radius:11px; padding:9px 10px;}
 .iv-xirr-page .iv-btn-row { display:flex; gap:8px; margin-top:12px; }
-.iv-xirr-page .iv-primary-btn,.iv-xirr-page .iv-secondary-btn,.iv-xirr-page .iv-xirr-delete { border-radius:10px; padding:8px 10px; border:1px solid rgba(212,175,55,.24); cursor:pointer; }
-.iv-xirr-page .iv-primary-btn{ background:#d4af37; color:#061124; } .iv-xirr-page .iv-secondary-btn{ background:transparent; color:#f4d676; }
-.iv-xirr-page .iv-xirr-delete{ border-color:rgba(255,120,120,.28); background:rgba(255,120,120,.08); color:#ffd0d0; font-weight:800; font-size:11px;}
+.iv-xirr-page .iv-primary-btn,.iv-xirr-page .iv-secondary-btn,.iv-xirr-page .iv-xirr-delete { border-radius:10px; padding:8px 10px; border:1px solid rgba(var(--iv-accent-rgb),.24); cursor:pointer; }
+.iv-xirr-page .iv-primary-btn{ background:var(--iv-accent); color:var(--iv-bg); } .iv-xirr-page .iv-secondary-btn{ background:transparent; color:var(--iv-accent-light); }
+.iv-xirr-page .iv-xirr-delete{ border-color:rgba(255,120,120,.28); background:rgba(255,120,120,.08); color:var(--iv-danger); font-weight:800; font-size:11px;}
 .iv-xirr-page .iv-xirr-results { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:12px; }
-.iv-xirr-page .iv-xirr-result-card{ border:1px solid rgba(212,175,55,.16); background:rgba(255,255,255,.055); border-radius:15px; padding:12px; }
-.iv-xirr-page .iv-xirr-result-card span{ display:block; color:#aab6cc; font-size:10px; text-transform:uppercase; }
-.iv-xirr-page .iv-xirr-result-card strong{ display:block; margin-top:6px; color:#f4d676; font-size:18px; }
+.iv-xirr-page .iv-xirr-result-card{ border:1px solid rgba(var(--iv-accent-rgb),.16); background:rgba(255,255,255,.055); border-radius:15px; padding:12px; }
+.iv-xirr-page .iv-xirr-result-card span{ display:block; color:var(--iv-text-muted); font-size:10px; text-transform:uppercase; }
+.iv-xirr-page .iv-xirr-result-card strong{ display:block; margin-top:6px; color:var(--iv-accent-light); font-size:18px; }
 .iv-xirr-page .iv-xirr-result-card.main strong{ font-size:24px; }
-.iv-xirr-page .iv-xirr-error{ display:none; margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,120,120,.28); background:rgba(255,120,120,.09); color:#ffd0d0; font-size:12px; }
-.iv-xirr-page .iv-xirr-message{ margin-top:12px; padding:12px; border-radius:15px; border:1px solid rgba(212,175,55,.18); background:rgba(212,175,55,.08); color:#eadca6; font-size:12px; line-height:1.55; }
-.iv-xirr-page .iv-xirr-chart-card canvas{ width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(6,17,36,.38); border:1px solid rgba(255,255,255,.07);}
-.iv-xirr-page .iv-xirr-legend{ display:flex; flex-wrap:wrap; gap:8px; margin-top:9px; color:#cbd5e8; font-size:11px; }
+.iv-xirr-page .iv-xirr-error{ display:none; margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,120,120,.28); background:rgba(255,120,120,.09); color:var(--iv-danger); font-size:12px; }
+.iv-xirr-page .iv-xirr-message{ margin-top:12px; padding:12px; border-radius:15px; border:1px solid rgba(var(--iv-accent-rgb),.18); background:rgba(var(--iv-accent-rgb),.08); color:#eadca6; font-size:12px; line-height:1.55; }
+.iv-xirr-page .iv-xirr-chart-card canvas{ width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(var(--iv-bg-rgb),.38); border:1px solid rgba(255,255,255,.07);}
+.iv-xirr-page .iv-xirr-legend{ display:flex; flex-wrap:wrap; gap:8px; margin-top:9px; color:var(--iv-text-secondary); font-size:11px; }
 .iv-xirr-page .iv-xirr-dot{ width:9px; height:9px; border-radius:999px; display:inline-block; }
-.iv-xirr-page .iv-xirr-dot.blue{background:#4c8dff;} .iv-xirr-page .iv-xirr-dot.gold{background:#d4af37;} .iv-xirr-page .iv-xirr-dot.green{background:#77dd77;} .iv-xirr-page .iv-xirr-dot.red{background:#ff6b6b;}
+.iv-xirr-page .iv-xirr-dot.blue{background:var(--iv-info);} .iv-xirr-page .iv-xirr-dot.gold{background:var(--iv-accent);} .iv-xirr-page .iv-xirr-dot.green{background:var(--iv-success);} .iv-xirr-page .iv-xirr-dot.red{background:var(--iv-danger);}
 .iv-xirr-page .iv-table-wrap{ overflow:auto; } .iv-xirr-page table{ width:100%; border-collapse:collapse; } .iv-xirr-page th,.iv-xirr-page td{ border-bottom:1px solid rgba(255,255,255,.08); padding:8px; text-align:left; font-size:12px;}
-.iv-xirr-page .iv-xirr-tooltip{ position:absolute; display:none; pointer-events:none; z-index:80; max-width:250px; padding:9px 10px; border-radius:12px; background:rgba(6,17,36,.96); border:1px solid rgba(212,175,55,.28); color:#fff; font-size:11px; }
+.iv-xirr-page .iv-xirr-tooltip{ position:absolute; display:none; pointer-events:none; z-index:80; max-width:250px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
 @media (max-width:900px){ .iv-xirr-page .iv-grid.two,.iv-xirr-page .iv-form-grid,.iv-xirr-page .iv-xirr-results{grid-template-columns:minmax(0,1fr);} }

@@ -1,11 +1,79 @@
 /* Shared shell styles for modular frontend pages. */
 :root {
+  color-scheme: light;
+  --iv-bg: #FAF9F5;
+  --iv-bg-rgb: 250, 249, 245;
+  --iv-bg-alt: #F4F0E6;
+  --iv-bg-alt-rgb: 244, 240, 230;
+  --iv-bg-gradient-3: #EAE3D2;
+  --iv-accent: #9E7E4F;
+  --iv-accent-rgb: 158, 126, 79;
+  --iv-accent-light: #BCA374;
+  --iv-accent-light-rgb: 188, 163, 116;
+  --iv-text: #1A1D20;
+  --iv-text-rgb: 26, 29, 32;
+  --iv-text-secondary: #4A5056;
+  --iv-text-secondary-rgb: 74, 80, 86;
+  --iv-text-muted: #7D838A;
+  --iv-text-muted-rgb: 125, 131, 138;
+  --iv-card-bg: rgba(255, 255, 255, 0.75);
+  --iv-border-accent: rgba(158, 126, 79, 0.18);
+  --iv-border-subtle: rgba(0, 0, 0, 0.08);
+  --iv-success: #2E7D32;
+  --iv-success-rgb: 46, 125, 50;
+  --iv-danger: #C62828;
+  --iv-danger-rgb: 198, 40, 40;
+  --iv-warning: #F57F17;
+  --iv-warning-rgb: 245, 127, 23;
+  --iv-info: #1565C0;
+  --iv-info-rgb: 21, 101, 192;
+
+  /* Legacy variables mapped to the new theme system */
+  --iv-gold-1: var(--iv-accent);
+  --iv-gold-2: var(--iv-accent-light);
+  --iv-white: var(--iv-text);
+  --iv-muted: var(--iv-text-muted);
+  --iv-navy: var(--iv-bg-alt);
+  --iv-navy-2: var(--iv-bg-alt);
+  --iv-navy-3: var(--iv-bg);
+  --iv-gold: var(--iv-accent);
+  --iv-cream: var(--iv-text);
+  --iv-border: var(--iv-border-accent);
+  --iv-card: var(--iv-card-bg);
+  --iv-shadow: 0 8px 24px rgba(158, 126, 79, 0.08);
+  --iv-radius: 18px;
+}
+
+[data-theme="dark"] {
   color-scheme: dark;
-  --iv-gold-1: #d4af37;
-  --iv-gold-2: #f4d676;
-  --iv-white: #ffffff;
-  --iv-muted: #aab6cc;
-  --iv-bg: #061124;
+  --iv-bg: #0A0A0C;
+  --iv-bg-rgb: 10, 10, 12;
+  --iv-bg-alt: #141418;
+  --iv-bg-alt-rgb: 20, 20, 24;
+  --iv-bg-gradient-3: #1D1D24;
+  --iv-accent: #C5A880;
+  --iv-accent-rgb: 197, 168, 128;
+  --iv-accent-light: #E5D3B3;
+  --iv-accent-light-rgb: 229, 211, 179;
+  --iv-text: #F4F4F6;
+  --iv-text-rgb: 244, 244, 246;
+  --iv-text-secondary: #A2A2AD;
+  --iv-text-secondary-rgb: 162, 162, 173;
+  --iv-text-muted: #74747E;
+  --iv-text-muted-rgb: 116, 116, 126;
+  --iv-card-bg: rgba(255, 255, 255, 0.04);
+  --iv-border-accent: rgba(197, 168, 128, 0.16);
+  --iv-border-subtle: rgba(255, 255, 255, 0.07);
+  --iv-success: #66BB6A;
+  --iv-success-rgb: 102, 187, 106;
+  --iv-danger: #EF5350;
+  --iv-danger-rgb: 239, 83, 80;
+  --iv-warning: #FFC107;
+  --iv-warning-rgb: 255, 193, 7;
+  --iv-info: #42A5F5;
+  --iv-info-rgb: 66, 165, 245;
+  
+  --iv-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -20,7 +88,7 @@
       margin: 0;
       padding: 0;
       min-height: 100%;
-      background: #061124;
+      background: var(--iv-bg);
     }
 
     /* Logo entrance animation */
@@ -61,25 +129,13 @@
       /* Removes the underline */
     }
     #iv-dashboard-app, body, :root {
-      --iv-navy: #0B1C3D;
-      --iv-navy-2: #102B5C;
-      --iv-navy-3: #061124;
-      --iv-gold: #D4AF37;
-      --iv-gold-2: #F4D676;
-      --iv-cream: #F8F3E7;
-      --iv-white: #FFFFFF;
-      --iv-muted: #AAB6CC;
-      --iv-border: rgba(212, 175, 55, 0.22);
-      --iv-card: rgba(255, 255, 255, 0.075);
-      --iv-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
-      --iv-radius: 18px;
       width: 100%;
       max-width: 100%;
       min-height: 100vh;
       font-family: 'Poppins', sans-serif;
       color: var(--iv-white);
-      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.13), transparent 26%),
-        linear-gradient(135deg, var(--iv-navy-3), var(--iv-navy) 48%, #071731);
+      background: radial-gradient(circle at top left, rgba(var(--iv-accent-rgb), 0.13), transparent 26%),
+        linear-gradient(135deg, var(--iv-navy-3), var(--iv-navy) 48%, var(--iv-bg-gradient-3));
       border-radius: 0;
     }
 
@@ -119,7 +175,7 @@
       inset: 0 auto 0 0;
       width: min(82vw, 286px);
       max-width: 286px;
-      background: linear-gradient(180deg, rgba(6, 17, 36, 0.98), rgba(11, 28, 61, 0.96));
+      background: linear-gradient(180deg, rgba(var(--iv-bg-rgb), 0.98), rgba(var(--iv-bg-alt-rgb), 0.96));
       border-right: 1px solid var(--iv-border);
       padding: 14px 11px;
       z-index: 50;
@@ -148,7 +204,7 @@
 
      .iv-brand {
       padding: 10px 9px 14px;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+      border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.16);
       margin-bottom: 10px;
     }
 
@@ -195,7 +251,7 @@
       min-height: 44px;
       border: 1px solid transparent;
       background: transparent;
-      color: #EAF0FB;
+      color: var(--iv-text);
       text-align: left;
       padding: 9px 10px;
       border-radius: 13px;
@@ -220,13 +276,13 @@
     }
 
      .iv-nav-btn:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(212, 175, 55, 0.16);
+      background: var(--iv-card);
+      border-color: rgba(var(--iv-accent-rgb), 0.16);
     }
 
      .iv-nav-btn.active {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(212, 175, 55, 0.06));
-      border-color: rgba(212, 175, 55, 0.46);
+      background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.22), rgba(var(--iv-accent-rgb), 0.06));
+      border-color: rgba(var(--iv-accent-rgb), 0.46);
       color: var(--iv-gold-2);
     }
 
@@ -237,7 +293,7 @@
       display: grid;
       place-items: center;
       border-radius: 9px;
-      background: rgba(255, 255, 255, 0.07);
+      background: var(--iv-card);
       font-size: 12px;
     }
 
@@ -253,8 +309,8 @@
 
 
      .iv-menu-btn {
-      border: 1px solid rgba(212, 175, 55, 0.28);
-      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+      background: var(--iv-card);
       color: var(--iv-gold-2);
       border-radius: 12px;
       width: 42px;
@@ -352,7 +408,7 @@
       border-radius: 50%;
       right: -80px;
       top: -80px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 65%);
+      background: radial-gradient(circle, rgba(var(--iv-accent-rgb), 0.18), transparent 65%);
       pointer-events: none;
     }
 
@@ -376,7 +432,7 @@
 
      .iv-hero p,
      .iv-section-title p {
-      color: #CBD5E8;
+      color: var(--iv-text-secondary);
       line-height: 1.6;
       margin: 9px 0 0;
       max-width: 760px;
@@ -402,7 +458,7 @@
       width: 100%;
       max-width: 100%;
       min-width: 0;
-      border: 1px solid rgba(212, 175, 55, 0.17);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.17);
       background: var(--iv-card);
       border-radius: var(--iv-radius);
       padding: 13px;
@@ -445,8 +501,8 @@
     }
 
      .iv-pill {
-      color: #DDE7FA;
-      background: rgba(255, 255, 255, 0.075);
+      color: var(--iv-text-secondary);
+      background: var(--iv-card);
       border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 6px 8px;
       border-radius: 999px;
@@ -479,8 +535,8 @@
      .iv-field select {
       width: 100%;
       min-height: 46px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      background: rgba(6, 17, 36, 0.76);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.2);
+      background: rgba(var(--iv-bg-rgb), 0.76);
       color: var(--iv-white);
       border-radius: 13px;
       padding: 12px 12px;
@@ -511,13 +567,13 @@
      .iv-primary-btn {
       background: linear-gradient(135deg, var(--iv-gold), #AA8121);
       color: var(--iv-navy-3);
-      box-shadow: 0 14px 28px rgba(212, 175, 55, 0.17);
+      box-shadow: 0 14px 28px rgba(var(--iv-accent-rgb), 0.17);
     }
 
      .iv-secondary-btn {
-      background: rgba(255, 255, 255, 0.07);
+      background: var(--iv-card);
       color: var(--iv-white);
-      border: 1px solid rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.2);
     }
 
      .iv-chart-placeholder {
@@ -528,7 +584,7 @@
       padding: 12px;
       margin-top: 12px;
       border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--iv-border-subtle);
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
       overflow: hidden;
     }
@@ -537,7 +593,7 @@
       flex: 1;
       min-width: 9px;
       border-radius: 999px 999px 4px 4px;
-      background: linear-gradient(180deg, var(--iv-gold-2), rgba(212, 175, 55, 0.26));
+      background: linear-gradient(180deg, var(--iv-gold-2), rgba(var(--iv-accent-rgb), 0.26));
       opacity: 0.88;
     }
 
@@ -549,7 +605,7 @@
       -webkit-overflow-scrolling: touch;
       margin-top: 12px;
       border-radius: 15px;
-      border: 1px solid rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.14);
       max-width: 100%;
     }
 
@@ -557,16 +613,16 @@
       width: 100%;
       border-collapse: collapse;
       min-width: 560px;
-      background: rgba(255, 255, 255, 0.035);
+      background: var(--iv-card);
     }
 
      th,
      td {
       padding: 12px 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      border-bottom: 1px solid var(--iv-border-subtle);
       text-align: left;
       font-size: 12px;
-      color: #E8EEFB;
+      color: var(--iv-text);
       white-space: nowrap;
     }
 
@@ -584,8 +640,8 @@
       border-radius: 999px;
       padding: 6px 8px;
       font-size: 10px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.2);
+      background: rgba(var(--iv-accent-rgb), 0.08);
       color: var(--iv-gold-2);
       white-space: nowrap;
     }
@@ -594,9 +650,9 @@
       margin-top: 12px;
       padding: 11px 12px;
       border-radius: 15px;
-      background: rgba(212, 175, 55, 0.08);
+      background: rgba(var(--iv-accent-rgb), 0.08);
       color: #EADCA6;
-      border: 1px solid rgba(212, 175, 55, 0.18);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
       font-size: 12px;
       line-height: 1.5;
       overflow-wrap: anywhere;
@@ -609,9 +665,9 @@
       gap: 10px;
       margin-top: 10px;
       padding: 10px 12px;
-      border: 1px solid rgba(212, 175, 55, 0.16);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.04);
+      background: var(--iv-card);
       color: var(--iv-muted);
       font-size: 12px;
     }
@@ -631,9 +687,9 @@
 
      .iv-turnaround-mini {
       min-width: 0;
-      border: 1px solid rgba(212, 175, 55, 0.16);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
       border-radius: 15px;
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--iv-card);
       padding: 12px;
     }
 
@@ -662,11 +718,11 @@
 
      .iv-turnaround-sector-card {
       min-width: 0;
-      border: 1px solid rgba(212, 175, 55, 0.18);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
       border-radius: 16px;
       padding: 14px;
       background:
-        linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.03)),
+        linear-gradient(180deg, rgba(var(--iv-accent-rgb), 0.08), rgba(255, 255, 255, 0.03)),
         rgba(255, 255, 255, 0.045);
       box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
     }
@@ -718,8 +774,8 @@
      .iv-turnaround-band {
       border-radius: 12px;
       padding: 9px 10px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: var(--iv-card);
+      border: 1px solid var(--iv-border-subtle);
     }
 
      .iv-turnaround-band span {
@@ -744,8 +800,8 @@
       min-height: 28px;
       padding: 0 10px;
       border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.18);
-      background: rgba(212, 175, 55, 0.09);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
+      background: rgba(var(--iv-accent-rgb), 0.09);
       color: var(--iv-gold-2);
       font-size: 11px;
       white-space: nowrap;
@@ -758,21 +814,21 @@
     }
 
      .iv-turnaround-pill.warm {
-      background: rgba(212, 175, 55, 0.09);
-      border-color: rgba(212, 175, 55, 0.22);
+      background: rgba(var(--iv-accent-rgb), 0.09);
+      border-color: rgba(var(--iv-accent-rgb), 0.22);
       color: var(--iv-gold-2);
     }
 
      .iv-turnaround-pill.watch {
       background: rgba(76, 141, 255, 0.12);
       border-color: rgba(76, 141, 255, 0.22);
-      color: #A9C5FF;
+      color: var(--iv-info);
     }
 
      .iv-turnaround-pill.cold {
       background: rgba(220, 88, 88, 0.12);
       border-color: rgba(220, 88, 88, 0.24);
-      color: #FFB5B5;
+      color: var(--iv-danger);
     }
 
      .iv-turnaround-table-wrap {
@@ -823,8 +879,8 @@
       gap: 10px;
       padding: 13px;
       border-radius: 18px;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(255, 255, 255, 0.055));
-      border: 1px solid rgba(212, 175, 55, 0.22);
+      background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.14), rgba(255, 255, 255, 0.055));
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.22);
       min-width: 0;
     }
 
@@ -870,8 +926,8 @@
     }
 
      .iv-compact-control {
-      border: 1px solid rgba(212, 175, 55, 0.17);
-      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.17);
+      background: var(--iv-card);
       border-radius: 16px;
       padding: 11px 12px;
       min-width: 0;
@@ -908,8 +964,8 @@
 
      .iv-micro-card {
       min-width: 0;
-      border: 1px solid rgba(212, 175, 55, 0.16);
-      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+      background: var(--iv-card);
       border-radius: 17px;
       padding: 12px;
       overflow: hidden;
@@ -931,7 +987,7 @@
     }
 
      .iv-micro-top span {
-      color: #DDE7FA;
+      color: var(--iv-text-secondary);
       font-size: 11px;
       line-height: 1.25;
       font-weight: 700;
@@ -964,8 +1020,8 @@
 
      .iv-quick-tool {
       min-height: 58px;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.15);
+      background: var(--iv-card);
       color: var(--iv-white);
       border-radius: 15px;
       padding: 10px;
@@ -1002,7 +1058,7 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+      border-bottom: 1px solid var(--iv-border-subtle);
       padding-bottom: 9px;
     }
 
@@ -1029,8 +1085,8 @@
      .iv-list-tag {
       min-width: fit-content;
       color: var(--iv-gold-2);
-      border: 1px solid rgba(212, 175, 55, 0.18);
-      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
+      background: rgba(var(--iv-accent-rgb), 0.08);
       border-radius: 999px;
       padding: 5px 7px;
       font-size: 10px;
@@ -1069,8 +1125,8 @@
     }
 
     @media (min-width: 1024px) {
-       {
-        border-radius: 24px;
+       #iv-dashboard-app, body, :root {
+        --iv-radius: 24px;
       }
 
        .iv-shell {
@@ -1128,9 +1184,9 @@
 
     .iv-nav-group-btn {
       width: 100%;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      background: rgba(255, 255, 255, 0.04);
-      color: #F4D676;
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.15);
+      background: var(--iv-card);
+      color: var(--iv-accent-light);
       padding: 12px;
       border-radius: 14px;
       display: flex;
@@ -1142,12 +1198,12 @@
     }
 
     .iv-nav-group-btn:hover {
-      background: rgba(255, 255, 255, 0.07);
+      background: var(--iv-card);
     }
 
     .iv-nav-group-btn.active {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(212, 175, 55, 0.06));
-      border-color: rgba(212, 175, 55, 0.46);
+      background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.22), rgba(var(--iv-accent-rgb), 0.06));
+      border-color: rgba(var(--iv-accent-rgb), 0.46);
       color: var(--iv-gold-2);
     }
 
@@ -1183,9 +1239,9 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(212, 175, 55, 0.18);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--iv-card);
       padding: 6px 8px 6px 12px;
       color: var(--iv-muted);
       font-size: 11px;
@@ -1203,9 +1259,9 @@
      .iv-turnaround-table-wrap {
       margin-top: 0;
       overflow-x: auto;
-      border: 1px solid rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.12);
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--iv-card);
     }
 
      .iv-turnaround-table-wrap table {
@@ -1259,7 +1315,7 @@
 
      .iv-turnaround-row:hover,
      .iv-turnaround-row.active {
-      background: rgba(212, 175, 55, 0.08);
+      background: rgba(var(--iv-accent-rgb), 0.08);
     }
 
      .iv-turnaround-row td {
@@ -1326,7 +1382,7 @@
       height: 100vh;
       padding: 18px;
       background: linear-gradient(180deg, rgba(9, 24, 49, 0.98), rgba(12, 30, 62, 0.96));
-      border-left: 1px solid rgba(212, 175, 55, 0.16);
+      border-left: 1px solid rgba(var(--iv-accent-rgb), 0.16);
       box-shadow: -18px 0 36px rgba(0, 0, 0, 0.28);
       transform: translateX(104%);
       transition: transform 0.26s ease;
@@ -1371,10 +1427,10 @@
     }
 
      .iv-turnaround-drawer-commentary {
-      border: 1px solid rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.15);
       border-radius: 14px;
       padding: 14px;
-      background: rgba(255, 255, 255, 0.04);
+      background: var(--iv-card);
     }
 
      .iv-turnaround-drawer-commentary h4 {
@@ -1387,7 +1443,7 @@
 
      .iv-turnaround-drawer-commentary p {
       margin: 0;
-      color: #E8EEFB;
+      color: var(--iv-text);
       font-size: 13px;
       line-height: 1.7;
     }
@@ -1406,8 +1462,8 @@
         height: auto;
         padding: 20px 30px 16px;
         border-right: 0;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.14);
-        background: rgba(6, 17, 36, 0.86);
+        border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.14);
+        background: rgba(var(--iv-bg-rgb), 0.86);
         backdrop-filter: blur(18px);
         display: flex;
         align-items: center;
@@ -1472,8 +1528,8 @@
         min-width: 230px;
         padding: 8px;
         border-radius: 14px;
-        border: 1px solid rgba(212, 175, 55, 0.14);
-        background: rgba(6, 17, 36, 0.98);
+        border: 1px solid rgba(var(--iv-accent-rgb), 0.14);
+        background: rgba(var(--iv-bg-rgb), 0.98);
         box-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
       }
 
@@ -1525,7 +1581,7 @@
         width: 100%;
         height: min(78vh, 700px);
         border-left: 0;
-        border-top: 1px solid rgba(212, 175, 55, 0.16);
+        border-top: 1px solid rgba(var(--iv-accent-rgb), 0.16);
         border-radius: 20px 20px 0 0;
         transform: translateY(104%);
       }

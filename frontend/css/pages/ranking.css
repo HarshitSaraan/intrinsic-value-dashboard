@@ -32,8 +32,8 @@
              }
 
              .iv-ranking-page .iv-ranking-mini {
-              border: 1px solid rgba(212, 175, 55, 0.16);
-              background: rgba(255, 255, 255, 0.055);
+              border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+              background: var(--iv-card);
               border-radius: 15px;
               padding: 12px;
               min-width: 0;
@@ -41,7 +41,7 @@
 
              .iv-ranking-page .iv-ranking-mini span {
               display: block;
-              color: #AAB6CC;
+              color: var(--iv-text-muted);
               font-size: 10px;
               text-transform: uppercase;
               letter-spacing: 0.07em;
@@ -50,7 +50,7 @@
              .iv-ranking-page .iv-ranking-mini strong {
               display: block;
               margin-top: 6px;
-              color: #F4D676;
+              color: var(--iv-accent-light);
               font-size: 18px;
               line-height: 1.1;
               overflow-wrap: anywhere;
@@ -69,7 +69,7 @@
              .iv-ranking-page table thead th {
               position: sticky;
               top: 0;
-              background: #081832;
+              background: var(--iv-bg-alt);
               z-index: 2;
               cursor: pointer;
               user-select: none;
@@ -85,7 +85,7 @@
             }
 
              .iv-ranking-page .iv-ranking-page-info {
-              color: #AAB6CC;
+              color: var(--iv-text-muted);
               font-size: 12px;
             }
 

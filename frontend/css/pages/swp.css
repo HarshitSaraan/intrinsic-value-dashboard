@@ -9,7 +9,7 @@
 }
 
 .iv-swp-page .iv-kicker {
-  color: #f4d676;
+  color: var(--iv-accent-light);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -26,8 +26,8 @@
 }
 
 .iv-swp-page .iv-card {
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  background: var(--iv-card);
   border-radius: 15px;
   padding: 12px;
 }
@@ -42,16 +42,16 @@
   display: block;
   margin-bottom: 6px;
   font-size: 12px;
-  color: #cbd5e8;
+  color: var(--iv-text-secondary);
 }
 
 .iv-swp-page .iv-field input {
   width: 100%;
-  border: 1px solid rgba(212, 175, 55, 0.24);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.24);
   border-radius: 10px;
   padding: 10px;
-  background: rgba(6, 17, 36, 0.5);
-  color: #fff;
+  background: rgba(var(--iv-bg-rgb), 0.5);
+  color: var(--iv-text);
 }
 
 .iv-swp-page .iv-btn-row {
@@ -64,23 +64,23 @@
 .iv-swp-page .iv-secondary-btn {
   border-radius: 10px;
   padding: 9px 12px;
-  border: 1px solid rgba(212, 175, 55, 0.24);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.24);
   cursor: pointer;
 }
 
 .iv-swp-page .iv-primary-btn {
-  background: #d4af37;
-  color: #061124;
+  background: var(--iv-accent);
+  color: var(--iv-bg);
 }
 
 .iv-swp-page .iv-secondary-btn {
   background: transparent;
-  color: #f4d676;
+  color: var(--iv-accent-light);
 }
 
 .iv-swp-page .iv-note {
   margin-top: 12px;
-  color: #aab6cc;
+  color: var(--iv-text-muted);
   font-size: 12px;
 }
 
@@ -93,15 +93,15 @@
 
 .iv-swp-page .iv-swp-result-card {
   min-width: 0;
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  background: var(--iv-card);
   border-radius: 15px;
   padding: 12px;
 }
 
 .iv-swp-page .iv-swp-result-card span {
   display: block;
-  color: #aab6cc;
+  color: var(--iv-text-muted);
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -109,7 +109,7 @@
 .iv-swp-page .iv-swp-result-card strong {
   display: block;
   margin-top: 6px;
-  color: #f4d676;
+  color: var(--iv-accent-light);
   font-size: 18px;
 }
 
@@ -120,7 +120,7 @@
   border-radius: 14px;
   border: 1px solid rgba(255, 120, 120, 0.28);
   background: rgba(255, 120, 120, 0.09);
-  color: #ffd0d0;
+  color: var(--iv-danger);
   font-size: 12px;
 }
 
@@ -130,8 +130,8 @@
   display: block;
   margin-top: 10px;
   border-radius: 14px;
-  background: rgba(6, 17, 36, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(var(--iv-bg-rgb), 0.38);
+  border: 1px solid var(--iv-border-subtle);
 }
 
 .iv-swp-page .iv-swp-legend {
@@ -139,7 +139,7 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 9px;
-  color: #cbd5e8;
+  color: var(--iv-text-secondary);
   font-size: 11px;
 }
 
@@ -151,11 +151,11 @@
 }
 
 .iv-swp-page .iv-swp-dot.blue {
-  background: #4c8dff;
+  background: var(--iv-info);
 }
 
 .iv-swp-page .iv-swp-dot.gold {
-  background: #d4af37;
+  background: var(--iv-accent);
 }
 
 .iv-swp-page .iv-table-wrap {
@@ -169,7 +169,7 @@
 
 .iv-swp-page th,
 .iv-swp-page td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--iv-border-subtle);
   padding: 8px;
   text-align: left;
   font-size: 12px;
@@ -183,9 +183,9 @@
   max-width: 240px;
   padding: 9px 10px;
   border-radius: 12px;
-  background: rgba(6, 17, 36, 0.96);
-  border: 1px solid rgba(212, 175, 55, 0.28);
-  color: #fff;
+  background: rgba(var(--iv-bg-rgb), 0.96);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+  color: var(--iv-text);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
   font-size: 11px;
 }

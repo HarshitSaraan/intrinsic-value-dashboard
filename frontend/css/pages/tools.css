@@ -9,7 +9,7 @@
 }
 
 .iv-tools-page .iv-kicker {
-  color: #f4d676;
+  color: var(--iv-accent-light);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -20,13 +20,13 @@
   font-size: 32px;
   font-weight: 800;
   margin: 0 0 10px;
-  background: linear-gradient(135deg, #fff, #cbd5e8);
+  background: linear-gradient(135deg, #fff, var(--iv-text-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .iv-tools-page p {
-  color: #aab6cc;
+  color: var(--iv-text-muted);
   margin: 0;
   font-size: 14px;
 }
@@ -36,9 +36,9 @@
 }
 
 .iv-directory-section h3 {
-  color: #f4d676;
+  color: var(--iv-accent-light);
   font-size: 16px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.2);
   padding-bottom: 8px;
   margin-bottom: 18px;
   text-transform: uppercase;
@@ -56,8 +56,8 @@
   gap: 16px;
   align-items: flex-start;
   padding: 20px;
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  background: var(--iv-card);
   border-radius: 16px;
   text-decoration: none;
   color: inherit;
@@ -66,8 +66,8 @@
 
 .iv-tool-card:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.065);
-  border-color: rgba(212, 175, 55, 0.35);
+  background: var(--iv-card);
+  border-color: rgba(var(--iv-accent-rgb), 0.35);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -78,9 +78,9 @@
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.24);
-  color: #f4d676;
+  background: rgba(var(--iv-accent-rgb), 0.12);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.24);
+  color: var(--iv-accent-light);
   border-radius: 12px;
   font-size: 18px;
   font-weight: 700;
@@ -88,23 +88,23 @@
 }
 
 .iv-tool-card:hover .iv-tool-icon {
-  background: #d4af37;
-  color: #061124;
+  background: var(--iv-accent);
+  color: var(--iv-bg);
 }
 
 .iv-tool-info h4 {
   margin: 0 0 6px;
   font-size: 16px;
-  color: #fff;
+  color: var(--iv-text);
   transition: color 0.2s ease;
 }
 
 .iv-tool-card:hover .iv-tool-info h4 {
-  color: #f4d676;
+  color: var(--iv-accent-light);
 }
 
 .iv-tool-info p {
-  color: #aab6cc;
+  color: var(--iv-text-muted);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -116,8 +116,8 @@
 .iv-secondary-btn {
   display: inline-block;
   background: transparent;
-  color: #f4d676;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--iv-accent-light);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.3);
   padding: 10px 20px;
   border-radius: 12px;
   text-decoration: none;
@@ -127,8 +127,8 @@
 }
 
 .iv-secondary-btn:hover {
-  background: rgba(212, 175, 55, 0.08);
-  border-color: #f4d676;
+  background: rgba(var(--iv-accent-rgb), 0.08);
+  border-color: var(--iv-accent-light);
 }
 
 @media (max-width: 768px) {

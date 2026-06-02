@@ -6,8 +6,8 @@
             }
 
              .iv-monthly-analysis-page .iv-market-mini {
-              border: 1px solid rgba(212, 175, 55, 0.16);
-              background: rgba(255, 255, 255, 0.055);
+              border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+              background: var(--iv-card);
               border-radius: 15px;
               padding: 12px;
               min-width: 0;
@@ -16,7 +16,7 @@
 
              .iv-monthly-analysis-page .iv-market-mini span {
               display: block;
-              color: #AAB6CC;
+              color: var(--iv-text-muted);
               font-size: 10px;
               text-transform: uppercase;
               letter-spacing: 0.07em;
@@ -25,7 +25,7 @@
              .iv-monthly-analysis-page .iv-market-mini strong {
               display: block;
               margin-top: 6px;
-              color: #F4D676;
+              color: var(--iv-accent-light);
               font-size: 18px;
               line-height: 1.12;
               overflow-wrap: anywhere;
@@ -43,30 +43,30 @@
               gap: 8px;
               align-items: center;
               font-size: 12px;
-              color: #E8EEFB;
+              color: var(--iv-text);
             }
 
              .iv-monthly-analysis-page .iv-market-bar-track {
               height: 12px;
               border-radius: 999px;
               overflow: hidden;
-              background: rgba(255, 255, 255, 0.08);
-              border: 1px solid rgba(255, 255, 255, 0.07);
+              background: var(--iv-card);
+              border: 1px solid var(--iv-border-subtle);
             }
 
              .iv-monthly-analysis-page .iv-market-bar-fill {
               height: 100%;
               width: 0%;
               border-radius: 999px;
-              background: linear-gradient(90deg, #D4AF37, #F4D676);
+              background: linear-gradient(90deg, var(--iv-accent), var(--iv-accent-light));
             }
 
              .iv-monthly-analysis-page .iv-market-clock {
               position: relative;
               min-height: 190px;
               border-radius: 18px;
-              border: 1px solid rgba(212, 175, 55, 0.16);
-              background: radial-gradient(circle at center, rgba(212, 175, 55, 0.13), rgba(255, 255, 255, 0.035));
+              border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+              background: radial-gradient(circle at center, rgba(var(--iv-accent-rgb), 0.13), rgba(255, 255, 255, 0.035));
               overflow: hidden;
               margin-top: 12px;
               display: grid;
@@ -77,7 +77,7 @@
               width: min(260px, 82vw);
               height: 130px;
               border-radius: 160px 160px 0 0;
-              border: 2px solid rgba(212, 175, 55, 0.32);
+              border: 2px solid rgba(var(--iv-accent-rgb), 0.32);
               border-bottom: 0;
               position: relative;
             }
@@ -88,11 +88,11 @@
               height: 100px;
               left: 50%;
               bottom: 0;
-              background: #F4D676;
+              background: var(--iv-accent-light);
               transform-origin: bottom center;
               transform: rotate(0deg);
               border-radius: 999px;
-              box-shadow: 0 0 18px rgba(212, 175, 55, 0.3);
+              box-shadow: 0 0 18px rgba(var(--iv-accent-rgb), 0.3);
             }
 
              .iv-monthly-analysis-page .iv-market-clock-labels {
@@ -100,7 +100,7 @@
               justify-content: space-between;
               gap: 6px;
               margin-top: 8px;
-              color: #AAB6CC;
+              color: var(--iv-text-muted);
               font-size: 10px;
               line-height: 1.25;
             }
@@ -109,8 +109,8 @@
               margin-top: 12px;
               padding: 12px;
               border-radius: 15px;
-              border: 1px solid rgba(212, 175, 55, 0.18);
-              background: rgba(212, 175, 55, 0.08);
+              border: 1px solid rgba(var(--iv-accent-rgb), 0.18);
+              background: rgba(var(--iv-accent-rgb), 0.08);
               color: #EADCA6;
               font-size: 12px;
               line-height: 1.55;
