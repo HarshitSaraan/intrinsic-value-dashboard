@@ -73,6 +73,36 @@
     revealItems.forEach(function (item) {
       observer.observe(item);
     });
+
+    // Equalize heights of all stacked cards so shorter cards cover taller ones when scrolled
+    function adjustStackedCardsHeight() {
+      var cards = document.querySelectorAll('.iv-stacked-card');
+      if (!cards.length) return;
+      
+      // Reset min-height first to get natural height
+      cards.forEach(function(card) {
+        card.style.minHeight = '';
+      });
+      
+      // Find max height
+      var maxHeight = 0;
+      cards.forEach(function(card) {
+        var height = card.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+      
+      // Apply max height as min-height to all cards
+      cards.forEach(function(card) {
+        card.style.minHeight = maxHeight + 'px';
+      });
+    }
+
+    // Run height adjustment
+    adjustStackedCardsHeight();
+    window.addEventListener("load", adjustStackedCardsHeight);
+    window.addEventListener("resize", adjustStackedCardsHeight);
   });
 })();
 
