@@ -14,6 +14,7 @@ from backend.services.analytics import (
     pick_column,
     evaluate_portfolio_stock,
     search_stocks,
+    compute_ticker_data,
 )
 from backend.utils.paths import CSV_PATH
 
@@ -23,6 +24,12 @@ router = APIRouter()
 @router.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@router.get("/ticker-data")
+async def ticker_data() -> dict[str, Any]:
+    return compute_ticker_data()
+
 
 
 @router.get("/turnaround-sectors")

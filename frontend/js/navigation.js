@@ -215,6 +215,41 @@
       shell.classList.remove("iv-sidebar-open");
     });
 
+    // Inject and setup theme toggle button dynamically
+    var toggleBtn = document.getElementById("ivThemeToggle");
+    if (!toggleBtn) {
+      toggleBtn = document.createElement("button");
+      toggleBtn.className = "iv-theme-toggle";
+      toggleBtn.id = "ivThemeToggle";
+      toggleBtn.title = "Switch theme";
+      toggleBtn.setAttribute("aria-label", "Toggle theme");
+      toggleBtn.innerHTML = '<span class="iv-theme-icon">☀️</span>';
+      sidebar.appendChild(toggleBtn);
+    }
+
+    var themeIcon = toggleBtn.querySelector(".iv-theme-icon");
+    function updateToggleIcon() {
+      var currentTheme = document.documentElement.getAttribute("data-theme") || "";
+      if (currentTheme === "dark") {
+        themeIcon.textContent = "🌙";
+      } else {
+        themeIcon.textContent = "☀️";
+      }
+    }
+    updateToggleIcon();
+
+    toggleBtn.onclick = function () {
+      var currentTheme = document.documentElement.getAttribute("data-theme") || "";
+      var newTheme = currentTheme === "dark" ? "" : "dark";
+      if (newTheme) {
+        document.documentElement.setAttribute("data-theme", newTheme);
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+      }
+      localStorage.setItem("iv-theme", newTheme);
+      updateToggleIcon();
+    };
+
     // Setup navigation dropdown click logic
     var navGroups = Array.from(shell.querySelectorAll(".iv-nav-group"));
     

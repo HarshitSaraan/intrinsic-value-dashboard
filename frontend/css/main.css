@@ -83,12 +83,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-    html,
+    html {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
     body {
       margin: 0;
       padding: 0;
       min-height: 100%;
       background: var(--iv-bg);
+      overflow: visible;
     }
 
     /* Logo entrance animation */
@@ -167,7 +171,7 @@
       grid-template-columns: minmax(0, 1fr);
       min-height: 100vh;
       position: relative;
-      overflow-x: hidden;
+      overflow: visible;
     }
 
      .iv-sidebar {
@@ -303,7 +307,7 @@
       max-width: 100%;
       padding: 20px 24px;
       display: block;
-      overflow-x: hidden;
+      overflow: visible;
     }
 
 
@@ -340,7 +344,7 @@
       max-width: 100%;
       display: grid;
       gap: 12px;
-      overflow-x: hidden;
+      overflow: visible;
     }
 
      .iv-content > * {

@@ -1216,3 +1216,53 @@ def search_stocks(query: str) -> list[dict[str, str]]:
         })
     return results
 
+
+def compute_ticker_data() -> dict[str, Any]:
+    # Get Top 15 ranked stocks from compute_ranking
+    try:
+        ranking_res = compute_ranking(top_n=15)
+        top_stocks = ranking_res.get("data", [])
+    except Exception:
+        top_stocks = []
+
+    ticker_items = []
+
+    # Add Stocks only
+    for stock in top_stocks:
+        name = stock.get("nseCode") or stock.get("bseCode") or stock.get("name")
+        roce = stock.get("roce3Y")
+        pb = stock.get("pb")
+        rank = stock.get("rank", 1)
+        
+        badge = f"RANK #{rank}"
+        badge_class = "attractive" if rank <= 3 else "fair"
+        
+        ticker_items.append({
+            "label": name.upper(),
+            "value": f"ROCE: {roce or 'N/A'}%",
+            "change": f"▲ P/B: {pb or 'N/A'}",
+            "changeClass": "up",
+            "badge": badge,
+            "badgeClass": badge_class
+        })
+
+    # Fallback to some placeholder data if all are empty
+    if not ticker_items:
+        ticker_items = [
+            {
+                "label": "NO DATA FOUND",
+                "value": "ROCE: —",
+                "change": "▲ P/B: —",
+                "changeClass": "up",
+                "badge": "RANK #0",
+                "badgeClass": "fair"
+            }
+        ]
+
+    return {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "items": ticker_items
+    }
+
+
+

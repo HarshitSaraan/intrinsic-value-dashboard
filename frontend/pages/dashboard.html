@@ -3,165 +3,292 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wealth Dashboard</title>
+  <title>Wealth Dashboard | Intrinsic Value</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/pages/dashboard.css">
   <link rel="stylesheet" href="../css/theme-toggle.css">
   <script>
     (function(){
-      var t=localStorage.getItem('iv-theme')||'';
+      var t=localStorage.getItem('iv-theme');
+      if(t===null)t='dark';
       if(t)document.documentElement.setAttribute('data-theme',t);
     })();
   </script>
 </head>
 <body>
-  <main class="iv-page-shell iv-dashboard-page">
-    <div class="iv-home-head">
-      <div class="iv-welcome-card">
-        <div class="iv-welcome-copy">
-          <h2>Wealth Dashboard</h2>
-          <p>Compact view for valuation, portfolio discipline and market cycle tracking.</p>
-        </div>
-      </div>
-
-      <div class="iv-home-controls">
-        <div class="iv-compact-control">
-          <span>Month</span>
-          <select aria-label="Month selector placeholder">
-            <option>May 2026</option>
-            <option>April 2026</option>
-            <option>March 2026</option>
-          </select>
-        </div>
-        <div class="iv-compact-control">
-          <span>Last Updated</span>
-          <strong id="ivDashboardLastUpdated">Live Snapshot</strong>
+  <main class="iv-page-shell iv-dashboard-page animate-fade-in">
+    <!-- Scrolling Benchmark Ticker -->
+    <div class="iv-ticker-wrap">
+      <div class="iv-ticker">
+        <div style="padding-left: 24px; color: var(--iv-text-muted); font-size: 12px; font-weight: 500;">
+          Loading top-performing stocks and ROCE factors...
         </div>
       </div>
     </div>
 
+    <!-- Hero Header (Welcome Card is now Full Width & Large) -->
+    <div class="iv-home-head">
+      <div class="iv-welcome-card large-hero">
+        <div class="iv-welcome-glow"></div>
+        <div class="iv-welcome-copy">
+          <span class="iv-engine-badge">QUANTITATIVE ALLOCATION ENGINE</span>
+          <h2>Intrinsic Value Wealth Dashboard</h2>
+          <p>Real-time valuation index tracker, personal finance asset planner, and sector cycle benchmarking suite. Calibrate your asset allocation dynamically based on historical margin of safety, cycle tailwinds, and quantitative age-parity targets.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metric Cards with Visual Gauges -->
     <div class="iv-home-metrics">
       <div class="iv-micro-card">
-        <div class="iv-micro-top"><span class="iv-mini-icon">∑</span><span>Market Valuation Zone</span></div>
-        <div class="iv-micro-value" id="ivMetricValuation">Fair</div>
-        <div class="iv-micro-sub">Undervalued / Fair / Overvalued</div>
+        <div class="iv-micro-top">
+          <span class="iv-mini-icon">∑</span>
+          <span>MARKET VALUATION ZONE</span>
+        </div>
+        <div class="iv-metric-flex">
+          <div class="iv-micro-value" id="ivMetricValuation">Fair</div>
+          <span class="iv-status-badge warn">FAIR VALUE</span>
+        </div>
+        <div class="iv-gauge-bar">
+          <div class="iv-gauge-fill valuation-fair" style="width: 50%;"></div>
+        </div>
+        <div class="iv-micro-sub">Current Index P/E valuation zone comfort</div>
       </div>
+
       <div class="iv-micro-card">
-        <div class="iv-micro-top"><span class="iv-mini-icon">◎</span><span>GAWP Category</span></div>
-        <div class="iv-micro-value" id="ivMetricGawp">Active</div>
-        <div class="iv-micro-sub">Age + investable capital</div>
+        <div class="iv-micro-top">
+          <span class="iv-mini-icon">◎</span>
+          <span>GAWP CATEGORY</span>
+        </div>
+        <div class="iv-metric-flex">
+          <div class="iv-micro-value" id="ivMetricGawp">Active</div>
+          <span class="iv-status-badge success">ACTIVE</span>
+        </div>
+        <div class="iv-gauge-bar">
+          <div class="iv-gauge-fill gawp-active" style="width: 75%;"></div>
+        </div>
+        <div class="iv-micro-sub">Age-parity wealth targets based on capital</div>
       </div>
+
       <div class="iv-micro-card">
-        <div class="iv-micro-top"><span class="iv-mini-icon">◈</span><span>Portfolio Health</span></div>
-        <div class="iv-micro-value" id="ivMetricPortfolio">Good</div>
-        <div class="iv-micro-sub">Allocation and valuation comfort</div>
+        <div class="iv-micro-top">
+          <span class="iv-mini-icon">◈</span>
+          <span>PORTFOLIO HEALTH</span>
+        </div>
+        <div class="iv-metric-flex">
+          <div class="iv-micro-value" id="ivMetricPortfolio">Good</div>
+          <span class="iv-status-badge success">GOOD</span>
+        </div>
+        <div class="iv-gauge-bar">
+          <div class="iv-gauge-fill health-good" style="width: 85%;"></div>
+        </div>
+        <div class="iv-micro-sub">Diversification & valuation comfort check</div>
       </div>
+
       <div class="iv-micro-card">
-        <div class="iv-micro-top"><span class="iv-mini-icon">⇄</span><span>Tailwind Score</span></div>
-        <div class="iv-micro-value" id="ivMetricTailwind">Stable</div>
-        <div class="iv-micro-sub">Sector cycle strength</div>
+        <div class="iv-micro-top">
+          <span class="iv-mini-icon">⇄</span>
+          <span>TAILWIND SCORE</span>
+        </div>
+        <div class="iv-metric-flex">
+          <div class="iv-micro-value" id="ivMetricTailwind">Stable</div>
+          <span class="iv-status-badge info">STABLE</span>
+        </div>
+        <div class="iv-gauge-bar">
+          <div class="iv-gauge-fill tailwind-stable" style="width: 60%;"></div>
+        </div>
+        <div class="iv-micro-sub">Sector rotation & tailwind momentum indicator</div>
       </div>
     </div>
 
-    <div class="iv-grid two">
-      <div class="iv-card">
-        <h3>Personal Finance Bundle</h3>
-        <p>Use the core wealth calculators and investor benchmarking tools.</p>
-        <div class="iv-quick-grid">
-          <button class="iv-quick-tool" type="button" data-quick-view="sip">
-            <span class="iv-mini-icon">↗</span>
-            <span><b>SIP Calculator</b><small>Monthly compounding journey</small></span>
-          </button>
-          <button class="iv-quick-tool" type="button" data-quick-view="swp">
-            <span class="iv-mini-icon">↘</span>
-            <span><b>SWP Calculator</b><small>Withdrawal sustainability</small></span>
-          </button>
-          <button class="iv-quick-tool" type="button" data-quick-view="lumpsum">
-            <span class="iv-mini-icon">◆</span>
-            <span><b>Lumpsum Calculator</b><small>One-time investment growth</small></span>
-          </button>
-          <button class="iv-quick-tool" type="button" data-quick-view="gawp">
-            <span class="iv-mini-icon">◎</span>
-            <span><b>How Rich Are You?</b><small>GAWP age-parity wealth badge</small></span>
-          </button>
-          <button class="iv-quick-tool" type="button" data-quick-view="xirr">
-            <span class="iv-mini-icon">%</span>
-            <span><b>XIRR Calculator</b><small>Real portfolio return</small></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="iv-card">
-        <h3>Recent Monthly Market Updates</h3>
-        <div class="iv-home-list">
-          <a href="/monthly-market-dashboard" class="iv-list-row">
-            <div><b>Market valuation dashboard</b><small>Zone distribution overview</small></div>
-            <span class="iv-list-tag active">View</span>
-          </a>
-          <a href="/headwind-tailwind-indicator" class="iv-list-row">
-            <div><b>Sector breadth update</b><small>Undervalued sectors snapshot</small></div>
-            <span class="iv-list-tag active">View</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="iv-grid two">
-      <div class="iv-card">
-        <h3>Market Analysis Suite</h3>
-        <p>Research and ranking engine</p>
-        <div class="iv-quick-grid">
-          <button class="iv-quick-tool" type="button" data-quick-view="ranking">
-            <span class="iv-mini-icon">★</span>
-            <span><b>Intrinsic Value Ranking Tool</b><small>Quality + valuation ranking</small></span>
-          </button>
-          <button class="iv-quick-tool" type="button" data-quick-view="monthly-analysis">
-            <span class="iv-mini-icon">◌</span>
-            <span><b>Monthly Market Analysis</b><small>Valuation, sector and promoter action dashboard</small></span>
-          </button>
-        </div>
-      </div>
+    <!-- Vertical Stacked Cards Deck (Overlapping Sticky Scrolling) -->
+    <div class="iv-stacked-deck">
       
-      <div class="iv-card">
-        <h3>Tools Directory</h3>
-        <p>Browse the list of all calculators and cycles indicators.</p>
-        <div class="iv-btn-row">
-          <a href="/tools" class="iv-primary-btn">Open Tools Directory</a>
+      <!-- Card 1: Personal Finance Bundle -->
+      <div class="iv-stacked-card" id="stackedCard1">
+        <div class="iv-card-header">
+          <div class="header-main">
+            <span class="iv-stacked-num">01</span>
+            <div>
+              <h3>Personal Finance Bundle</h3>
+              <p class="mb-0">Interactive compounding, withdrawal viability, and absolute wealth benchmark models.</p>
+            </div>
+          </div>
+          <span class="iv-card-tag compound">5 MODULES</span>
+        </div>
+        
+        <div class="iv-quick-grid">
+          <div class="iv-quick-tool" data-quick-view="sip">
+            <div class="tool-head">
+              <span class="iv-mini-icon">↗</span>
+              <span class="tool-badge compound">Compounding</span>
+            </div>
+            <div class="tool-body">
+              <b>SIP Calculator</b>
+              <small>Simulate monthly compounding wealth models</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="swp">
+            <div class="tool-head">
+              <span class="iv-mini-icon">↘</span>
+              <span class="tool-badge cashflow">Cashflow</span>
+            </div>
+            <div class="tool-body">
+              <b>SWP Calculator</b>
+              <small>Withdrawal sustainability & capital longevity</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="lumpsum">
+            <div class="tool-head">
+              <span class="iv-mini-icon">◆</span>
+              <span class="tool-badge growth">Growth</span>
+            </div>
+            <div class="tool-body">
+              <b>Lumpsum Planner</b>
+              <small>Compound one-time long-term capital lumpsums</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="gawp">
+            <div class="tool-head">
+              <span class="iv-mini-icon">◎</span>
+              <span class="tool-badge index">Benchmarking</span>
+            </div>
+            <div class="tool-body">
+              <b>How Rich Are You?</b>
+              <small>Calibrate age-parity GAWP index level</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="xirr">
+            <div class="tool-head">
+              <span class="iv-mini-icon">%</span>
+              <span class="tool-badge returns">Returns</span>
+            </div>
+            <div class="tool-body">
+              <b>XIRR Calculator</b>
+              <small>Internal rate of return for irregular cashflows</small>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Card 2: Market Analysis Suite -->
+      <div class="iv-stacked-card" id="stackedCard2">
+        <div class="iv-card-header">
+          <div class="header-main">
+            <span class="iv-stacked-num">02</span>
+            <div>
+              <h3>Market Analysis Suite</h3>
+              <p class="mb-0">Macro valuation cycles, index allocations, and quantitative research models.</p>
+            </div>
+          </div>
+          <span class="iv-card-tag analysis">4 MODULES</span>
+        </div>
+        
+        <div class="iv-quick-grid">
+          <div class="iv-quick-tool" data-quick-view="monthly-market-dashboard">
+            <div class="tool-head">
+              <span class="iv-mini-icon">⚄</span>
+              <span class="tool-badge index">Valuation Map</span>
+            </div>
+            <div class="tool-body">
+              <b>Market Valuation Dashboard</b>
+              <small>Macro indicator allocations and zone distributions</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="headwind-tailwind-indicator">
+            <div class="tool-head">
+              <span class="iv-mini-icon">⇄</span>
+              <span class="tool-badge growth">Sector Breadth</span>
+            </div>
+            <div class="tool-body">
+              <b>Sector Breadth Update</b>
+              <small>Identify cyclical tailwind momentum sectors</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="ranking">
+            <div class="tool-head">
+              <span class="iv-mini-icon">★</span>
+              <span class="tool-badge ranking">Factor Rank</span>
+            </div>
+            <div class="tool-body">
+              <b>Intrinsic Value Ranker</b>
+              <small>Filter stock universe on quality and value margin</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="monthly-analysis">
+            <div class="tool-head">
+              <span class="iv-mini-icon">◌</span>
+              <span class="tool-badge analysis">Macro</span>
+            </div>
+            <div class="tool-body">
+              <b>Monthly Market Analysis</b>
+              <small>Deep dive valuation & historical promoter activity</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Portfolio Review & Global Tools -->
+      <div class="iv-stacked-card" id="stackedCard3">
+        <div class="iv-card-header">
+          <div class="header-main">
+            <span class="iv-stacked-num">03</span>
+            <div>
+              <h3>Portfolio Tools & Directory</h3>
+              <p class="mb-0">Run full portfolio benchmarking reviews and explore global calculator directories.</p>
+            </div>
+          </div>
+          <span class="iv-card-tag global">2 MODULES</span>
+        </div>
+        
+        <div class="iv-quick-grid">
+          <div class="iv-quick-tool" data-quick-view="portfolio-review-tool">
+            <div class="tool-head">
+              <span class="iv-mini-icon">◈</span>
+              <span class="tool-badge returns">Audit</span>
+            </div>
+            <div class="tool-body">
+              <b>Portfolio Review Tool</b>
+              <small>Upload holdings for diversification and quality check</small>
+            </div>
+          </div>
+
+          <div class="iv-quick-tool" data-quick-view="tools">
+            <div class="tool-head">
+              <span class="iv-mini-icon">≡</span>
+              <span class="tool-badge index">Global</span>
+            </div>
+            <div class="tool-body">
+              <b>Global Tools Catalog</b>
+              <small>View complete list of calculators and cycle indices</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
+    <!-- Investor Discipline Note -->
     <div class="iv-grid">
-      <div class="iv-card">
-        <h3>Investor Discipline Note</h3>
-        <p>Dashboard outputs should support process, not replace judgment. The core discipline remains valuation comfort, staggered allocation, and patience through sector cycles.</p>
-        <div class="iv-note">Detailed logic, calculations and data upload modules are intentionally modularized into standalone page controllers.</div>
+      <div class="iv-card iv-discipline-card">
+        <div class="iv-card-header">
+          <h3>Investor Discipline Protocol</h3>
+          <span class="iv-card-tag warning">CORE STATEMENT</span>
+        </div>
+        <p>System models and metrics are structured as raw input helpers rather than automated advisory templates. Absolute investment success relies on strict valuation discipline, staggering capital allocations over intervals, and maintaining rational patience across sector rotations.</p>
+        <div class="iv-note">Data loaders, background cycle calculations, and asset indices are computed via independent backend page micro-controllers.</div>
       </div>
     </div>
   </main>
+  
   <script src="../js/navigation.js?v=2"></script>
   <script src="../js/modules/dashboard.js"></script>
-    <button class="iv-theme-toggle" id="ivThemeToggle" title="Switch theme" aria-label="Toggle theme">
-    <span class="iv-theme-icon">☀️</span>
-  </button>
-  <script>
-    (function(){
-      var b=document.getElementById('ivThemeToggle');
-      var i=b.querySelector('.iv-theme-icon');
-      function u(){
-        var t=document.documentElement.getAttribute('data-theme')||'';
-        if(t==='dark')i.textContent='🌙';
-        else i.textContent='☀️';
-      }
-      u();
-      b.onclick=function(){
-        var t=document.documentElement.getAttribute('data-theme')||'';
-        var n=t==='dark'?'':'dark';
-        if(n)document.documentElement.setAttribute('data-theme',n);
-        else document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('iv-theme',n);u();
-      };
-    })();
-  </script>
 </body>
 </html>
