@@ -17,25 +17,77 @@
 </head>
 <body>
   <main class="iv-page-shell iv-market-valuation-index-page">
-    <div class="iv-view" id="view-valuation">
+    <div class="iv-view active" id="view-valuation">
           <div class="iv-section-title">
             <div class="iv-kicker">Market Valuation Index</div>
             <h2>Intrinsic value zone indicator.</h2>
-            <p>Placeholder for overall market undervaluation, fair valuation and overvaluation scoring.</p>
+            <p>Compare sector valuations and see overvaluation/undervaluation status based on P/B vs Dividend Yield visual trends.</p>
           </div>
-          <div class="iv-grid two">
-            <div class="iv-card">
-              <h3>Current Market Zone</h3>
-              <div class="iv-metric"><strong>—</strong><span class="iv-pill">Pending data</span></div>
-              <p>Final model can classify the market into undervalued, fair, overvalued and very overvalued zones.</p>
+
+          <!-- Sector Valuation Analytics Tool -->
+          <div class="iv-card iv-sector-card" style="margin-top: 12px;">
+            <div class="iv-section-title" style="margin-bottom: 20px;">
+              <div class="iv-kicker">Sector Valuations</div>
+              <h3>Sector Valuation Index & Analytics</h3>
+              <p>Compare key valuation metrics across 35 NSE/BSE indices (excluding Gold, Silver, and Oil). Select a sector button to plot its historical trend.</p>
             </div>
-            <div class="iv-card">
-              <h3>Zone Distribution</h3>
-              <div class="iv-chart-placeholder"><span class="iv-bar" style="height: 62%"></span><span class="iv-bar"
-                  style="height: 72%"></span><span class="iv-bar" style="height: 38%"></span><span class="iv-bar"
-                  style="height: 26%"></span></div>
+            
+            <div class="iv-sector-selector-section" style="margin-bottom: 24px;">
+              <div class="iv-sector-buttons-grid" id="ivSectorButtonsGrid">
+                <div style="grid-column: 1 / -1; text-align: center; padding: 20px; color: var(--iv-text-muted);">
+                  Loading sector list...
+                </div>
+              </div>
+            </div>
+            
+            <div class="iv-sector-chart-section" id="ivSectorChartSection" style="display: none; border-top: 1px solid var(--iv-border-subtle); padding-top: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <h4 id="ivSelectedSectorTitle" style="margin: 0; font-size: 18px; color: var(--iv-accent-light);">Nifty 50</h4>
+                    <span id="ivSectorValuationBadge" class="iv-status" style="font-weight: 600; font-size: 11px; padding: 4px 10px; border-radius: 99px;">—</span>
+                  </div>
+                  <span id="ivSelectedSectorSubtitle" style="font-size: 11px; color: var(--iv-text-muted);">P/B vs Dividend Yield trend from starting year</span>
+                </div>
+                
+                <div class="iv-chart-legend" style="display: flex; gap: 16px; font-size: 12px; font-weight: 500;">
+                  <span style="display: flex; align-items: center; gap: 6px; color: var(--iv-text-secondary);">
+                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #BCA374;"></i>
+                    P/B Ratio (Left)
+                  </span>
+                  <span style="display: flex; align-items: center; gap: 6px; color: var(--iv-text-secondary);">
+                    <i style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #42A5F5;"></i>
+                    Div Yield % (Right)
+                  </span>
+                </div>
+              </div>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 20px;">
+                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest Index Value</span>
+                  <strong id="ivStatIndex" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+                </div>
+                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest P/E Ratio</span>
+                  <strong id="ivStatPE" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+                </div>
+                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest P/B Ratio</span>
+                  <strong id="ivStatPB" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+                </div>
+                <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+                  <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Latest Div Yield %</span>
+                  <strong id="ivStatDiv" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+                </div>
+              </div>
+              
+              <div style="position: relative; margin-top: 15px;">
+                <canvas id="ivSectorValuationCanvas" style="width: 100%; height: 260px; display: block; border-radius: 14px; background: rgba(0, 0, 0, 0.15); border: 1px solid var(--iv-border-subtle);"></canvas>
+                <div id="ivSectorValuationTooltip" style="position: fixed; display: none; pointer-events: none; z-index: 100; padding: 9px 12px; border-radius: 12px; background: rgba(10, 10, 12, 0.95); border: 1px solid var(--iv-accent); color: #fff; font-size: 11px; line-height: 1.5; box-shadow: 0 8px 32px rgba(0,0,0,0.5);"></div>
+              </div>
             </div>
           </div>
+    </div>
   </main>
   <script src="../js/navigation.js?v=2"></script>
   <script src="../js/modules/market-valuation-index.js"></script>
