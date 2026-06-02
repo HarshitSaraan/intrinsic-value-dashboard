@@ -113,3 +113,123 @@
   align-items: center;
   margin-top: 16px;
 }
+
+/* Premium Yahoo Finance Styled Table Extensions */
+.iv-table-wrap th {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--iv-text-muted);
+  border-bottom: 2px solid var(--iv-border-subtle);
+  padding: 12px 10px;
+  letter-spacing: 0.05em;
+}
+
+.iv-table-wrap td {
+  padding: 12px 10px;
+  font-size: 13px;
+  color: var(--iv-text);
+  border-bottom: 1px solid var(--iv-border-subtle);
+  vertical-align: middle;
+  transition: background 0.15s;
+}
+
+.iv-strat-table-row {
+  transition: background-color 0.2s ease;
+}
+
+.iv-strat-table-row:hover {
+  background: rgba(var(--iv-accent-rgb), 0.04) !important;
+}
+
+/* Symbol & Avatar badge */
+.iv-strat-symbol-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iv-strat-symbol-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--iv-border-subtle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--iv-text-secondary);
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .iv-strat-symbol-avatar {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.iv-strat-symbol-ticker {
+  font-weight: 600;
+  color: var(--iv-info); /* Soft blue like Yahoo Finance in dark mode */
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* Star Buttons */
+.iv-strat-star-btn {
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+  display: inline-block;
+}
+
+.iv-strat-star-btn:hover {
+  transform: scale(1.22);
+}
+
+.iv-strat-star-active {
+  color: #FFC107 !important; /* Bright Gold */
+  text-shadow: 0 0 6px rgba(255, 193, 7, 0.3);
+}
+
+.iv-strat-star-inactive {
+  color: var(--iv-text-muted);
+}
+
+.iv-strat-star-inactive:hover {
+  color: var(--iv-text);
+}
+
+/* Text coloring overrides */
+.iv-strat-green {
+  color: var(--iv-success) !important;
+}
+
+.iv-strat-red {
+  color: var(--iv-danger) !important;
+}
+
+/* Loading animations */
+.iv-strat-loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--iv-accent-light);
+  border-radius: 50%;
+  animation: ivSpin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+[data-theme="light"] .iv-strat-loading-spinner {
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-top-color: var(--iv-accent);
+}
+
+@keyframes ivSpin {
+  to { transform: rotate(360deg); }
+}
+

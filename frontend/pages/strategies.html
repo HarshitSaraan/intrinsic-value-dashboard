@@ -120,11 +120,11 @@
           <strong id="ivStratPeStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
         </div>
         <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Average ROCE %</span>
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Avg Vol (3M)</span>
           <strong id="ivStratRoceStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
         </div>
         <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
-          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Min Market Cap</span>
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Avg Market Cap</span>
           <strong id="ivStratMinCapStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
         </div>
       </div>
@@ -137,24 +137,26 @@
         </div>
 
         <div class="iv-table-wrap">
-          <table style="min-width: 800px;">
+          <table style="min-width: 1000px;">
             <thead>
               <tr>
-                <th>Company Name</th>
-                <th>NSE Code</th>
-                <th>Industry</th>
-                <th>M. Cap (Cr)</th>
-                <th>PE Ratio</th>
-                <th>PB Ratio</th>
-                <th>Sales Gr. 3Y</th>
-                <th>ROCE 3Y</th>
-                <th>Debt/Equity</th>
-                <th>Piotroski</th>
+                <th style="width: 40px; text-align: left; padding-left: 10px;">#</th>
+                <th style="width: 130px; text-align: left;">Symbol</th>
+                <th style="text-align: left;">Name</th>
+                <th style="width: 120px; text-align: left;">1D Chart</th>
+                <th style="text-align: right;">Price (Intraday)</th>
+                <th style="text-align: right;">Change</th>
+                <th style="text-align: right;">Change %</th>
+                <th style="text-align: right;">Volume</th>
+                <th style="text-align: right;">Avg Vol (3M)</th>
+                <th style="text-align: right;">Market Cap</th>
+                <th style="text-align: right;">P/E Ratio</th>
+                <th style="width: 70px; text-align: center;">Follow</th>
               </tr>
             </thead>
             <tbody id="ivStratTableBody">
               <tr>
-                <td colspan="10" style="text-align: center; padding: 24px; color: var(--iv-text-muted);">
+                <td colspan="12" style="text-align: center; padding: 24px; color: var(--iv-text-muted);">
                   Loading strategy results...
                 </td>
               </tr>

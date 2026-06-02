@@ -155,78 +155,213 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
     return {"sectors": sectors, "data": result}
 
 
+# Dynamic cache for Yahoo Finance predefined screeners
+STRATEGIES_CACHE = {}
+CACHE_TTL = 120 # 2 minutes
+
 @router.get("/strategies-data")
-async def strategies_endpoint() -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-    df = pd.read_csv(CSV_PATH)
+async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any]:
+    import time
+    import urllib.request
+    import json
+    import pandas as pd
+    from backend.utils.paths import CSV_PATH
     
-    def to_float(val):
+    # 1. Check cache first
+    now = time.time()
+    if type in STRATEGIES_CACHE:
+        cached = STRATEGIES_CACHE[type]
+        if now - cached['timestamp'] < CACHE_TTL:
+            return {"type": type, "quotes": cached['quotes']}
+            
+    # 2. Load stock_master.csv
+    if not CSV_PATH.exists():
+        raise HTTPException(status_code=404, detail=f"stock_master.csv not found at {CSV_PATH}")
+            
+    try:
+        df = pd.read_csv(CSV_PATH)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read stock_master.csv: {str(e)}")
+        
+    # 3. Filter rows where NSE Code is present and valid
+    df_nse = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')].copy()
+    
+    # 4. Helper to parse float columns
+    def clean_col(col_name):
+        if col_name not in df_nse.columns:
+            return pd.Series(float('nan'), index=df_nse.index)
+        return pd.to_numeric(df_nse[col_name].astype(str).str.replace(',', '').str.replace('%', '').str.strip(), errors='coerce')
+        
+    df_nse['clean_mcap'] = clean_col('Market Capitalization')
+    df_nse['clean_pe'] = clean_col('Price to Earning')
+    df_nse['clean_pb'] = clean_col('Price to book value')
+    df_nse['clean_sales_3y'] = clean_col('Sales growth 3Years')
+    df_nse['clean_roce_3y'] = clean_col('Average return on capital employed 3Years')
+    df_nse['clean_piotroski'] = clean_col('Piotroski score')
+    df_nse['clean_de'] = clean_col('Debt to equity')
+    
+    # 5. Filter by active strategy type
+    if type == 'undervalued-growth':
+        # Criteria: Sales Growth 3Years > 20% | PE between 0 and 25 | PB < 4.5
+        filtered = df_nse[
+            (df_nse['clean_sales_3y'] > 20) & 
+            (df_nse['clean_pe'] > 0) & 
+            (df_nse['clean_pe'] <= 25) & 
+            (df_nse['clean_pb'] < 4.5)
+        ]
+    elif type == 'aggressive-smallcaps':
+        # Criteria: Market Cap < 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%
+        filtered = df_nse[
+            (df_nse['clean_mcap'] < 2000) & 
+            (df_nse['clean_sales_3y'] > 25) & 
+            (df_nse['clean_roce_3y'] > 12)
+        ]
+    elif type == 'undervalued-largecaps':
+        # Criteria: Market Cap > 15000 Cr | PE between 0 and 18 | PB < 3.0
+        filtered = df_nse[
+            (df_nse['clean_mcap'] > 15000) & 
+            (df_nse['clean_pe'] > 0) & 
+            (df_nse['clean_pe'] < 18) & 
+            (df_nse['clean_pb'] < 3.0)
+        ]
+    elif type == 'growth-tech':
+        # Criteria: Industry Group contains software/IT/tech/telecom | Sales Growth 3Years > 20%
+        tech_mask = df_nse['Industry Group'].fillna('').str.lower().str.contains('software|it -|telecom|tech')
+        filtered = df_nse[tech_mask & (df_nse['clean_sales_3y'] > 20)]
+    elif type == 'portfolio-anchors':
+        # Criteria: Market Cap > 25000 Cr | Piotroski >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%
+        filtered = df_nse[
+            (df_nse['clean_mcap'] > 25000) & 
+            (df_nse['clean_piotroski'] >= 7) & 
+            (df_nse['clean_de'] < 0.8) & 
+            (df_nse['clean_roce_3y'] > 15)
+        ]
+    elif type == 'solid-large-growth':
+        # Criteria: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0
+        filtered = df_nse[
+            (df_nse['clean_mcap'] > 20000) & 
+            (df_nse['clean_sales_3y'] > 15) & 
+            (df_nse['clean_roce_3y'] > 18) & 
+            (df_nse['clean_de'] < 1.0)
+        ]
+    else:
+        filtered = pd.DataFrame(columns=df_nse.columns)
+        
+    # 6. Sort descending by market capitalization
+    filtered = filtered.sort_values(by='clean_mcap', ascending=False)
+    
+    # 7. Convert filtered rows to list of records
+    records = []
+    for _, row in filtered.iterrows():
+        nse_code = str(row['NSE Code']).strip()
+        records.append({
+            'symbol': nse_code,
+            'name': str(row['Name']).strip(),
+            'csvPrice': row.get('Current Price'),
+            'csvMcap': row.get('Market Capitalization'),
+            'pe': row['clean_pe'] if pd.notna(row['clean_pe']) else None,
+            'pb': row['clean_pb'] if pd.notna(row['clean_pb']) else None,
+            # Fallbacks
+            'price': row.get('Current Price'),
+            'change': 0.0,
+            'changePercent': 0.0,
+            'volume': 0,
+            'avgVolume': 0,
+            'prevClose': row.get('Current Price'),
+            'open': row.get('Current Price'),
+            'low': row.get('Current Price'),
+            'high': row.get('Current Price'),
+            'closePrices': []
+        })
+        
+    if not records:
+        return {"type": type, "quotes": []}
+        
+    # 8. Query Yahoo Finance spark endpoint in parallel/batches of 100
+    # Map NSE Codes to Yahoo symbols: e.g. "ABB" -> "ABB.NS"
+    yahoo_symbols = [r['symbol'] + '.NS' for r in records]
+    quotes_data = {}
+    batch_size = 20
+    
+    import urllib.parse
+    for i in range(0, len(yahoo_symbols), batch_size):
+        batch = yahoo_symbols[i:i+batch_size]
+        symbols_str = ",".join([urllib.parse.quote(s) for s in batch])
+        url = f"https://query1.finance.yahoo.com/v7/finance/spark?symbols={symbols_str}&range=1d&interval=15m"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         try:
-            return float(str(val).replace(',', '').strip())
-        except ValueError:
-            return 0.0
-
-    df['Market Cap Float'] = df['Market Capitalization'].apply(to_float)
-    df['PE Float'] = df['Price to Earning'].apply(to_float)
-    df['PB Float'] = df['Price to book value'].apply(to_float)
-    df['Sales Growth 3Y Float'] = df['Sales growth 3Years'].apply(to_float)
-    df['ROCE 3Y Float'] = df['Average return on capital employed 3Years'].apply(to_float)
-    df['Debt Equity Float'] = df['Debt to equity'].apply(to_float)
-    df['Piotroski Float'] = df['Piotroski score'].apply(to_float)
-    df['Industry Str'] = df['Industry'].fillna('').astype(str).str.strip()
-
-    # S1: Undervalued Growth Stocks
-    ug_df = df[(df['Sales Growth 3Y Float'] > 20) & (df['PE Float'] > 0) & (df['PE Float'] < 25) & (df['PB Float'] < 4.5)]
-    ug_list = ug_df.sort_values(by='Sales Growth 3Y Float', ascending=False).head(30)
-
-    # S2: Aggressive Small Caps
-    as_df = df[(df['Market Cap Float'] > 0) & (df['Market Cap Float'] < 2000) & (df['Sales Growth 3Y Float'] > 25) & (df['ROCE 3Y Float'] > 12)]
-    as_list = as_df.sort_values(by='Sales Growth 3Y Float', ascending=False).head(30)
-
-    # S3: Undervalued Large Caps
-    ul_df = df[(df['Market Cap Float'] > 15000) & (df['PE Float'] > 0) & (df['PE Float'] < 18) & (df['PB Float'] < 3)]
-    ul_list = ul_df.sort_values(by='Market Cap Float', ascending=False).head(30)
-
-    # S4: Growth Technology Stocks
-    tech_mask = df['Industry Str'].str.lower().str.contains('software|it |computers|telecom|tech')
-    gt_df = df[tech_mask & (df['Sales Growth 3Y Float'] > 20)]
-    gt_list = gt_df.sort_values(by='Sales Growth 3Y Float', ascending=False).head(30)
-
-    # S5: Portfolio Anchors
-    pa_df = df[(df['Market Cap Float'] > 25000) & (df['Piotroski Float'] >= 7) & (df['Debt Equity Float'] < 0.8) & (df['ROCE 3Y Float'] > 15)]
-    pa_list = pa_df.sort_values(by='Market Cap Float', ascending=False).head(30)
-
-    # S6: Solid Large Growth Funds
-    sl_df = df[(df['Market Cap Float'] > 20000) & (df['Sales Growth 3Y Float'] > 15) & (df['ROCE 3Y Float'] > 18) & (df['Debt Equity Float'] < 1.0)]
-    sl_list = sl_df.sort_values(by='Market Cap Float', ascending=False).head(30)
-
-    def df_to_records(sub_df):
-        records = []
-        for _, row in sub_df.iterrows():
-            records.append({
-                'name': str(row['Name']),
-                'nseCode': str(row['NSE Code']) if pd.notna(row['NSE Code']) else '',
-                'bseCode': str(row['BSE Code']) if pd.notna(row['BSE Code']) else '',
-                'industry': str(row['Industry']) if pd.notna(row['Industry']) else '',
-                'mcap': float(row['Market Cap Float']),
-                'price': float(to_float(row['Current Price'])),
-                'pe': float(row['PE Float']),
-                'pb': float(row['PB Float']),
-                'salesGrowth3Y': float(row['Sales Growth 3Y Float']),
-                'roce3Y': float(row['ROCE 3Y Float']),
-                'debtEquity': float(row['Debt Equity Float']),
-                'piotroski': int(row['Piotroski Float'])
-            })
-        return records
-
-    return {
-        'undervalued-growth': df_to_records(ug_list),
-        'aggressive-smallcaps': df_to_records(as_list),
-        'undervalued-largecaps': df_to_records(ul_list),
-        'growth-tech': df_to_records(gt_list),
-        'portfolio-anchors': df_to_records(pa_list),
-        'solid-large-growth': df_to_records(sl_list)
+            with urllib.request.urlopen(req) as res:
+                raw_res = json.loads(res.read().decode())
+                spark_res = raw_res.get('spark', {}).get('result', [])
+                for item in spark_res:
+                    sym = item.get('symbol')
+                    if not sym: continue
+                    clean_sym = sym.replace('.NS', '')
+                    resp_list = item.get('response', [])
+                    if resp_list:
+                        meta = resp_list[0].get('meta', {})
+                        indicators = resp_list[0].get('indicators', {})
+                        close_prices = indicators.get('quote', [{}])[0].get('close', [])
+                        # filter out None close prices
+                        clean_closes = [c for c in close_prices if c is not None]
+                        
+                        price = meta.get('regularMarketPrice')
+                        prev_close = meta.get('previousClose')
+                        
+                        change = 0.0
+                        change_percent = 0.0
+                        if price is not None and prev_close is not None and prev_close > 0:
+                            change = price - prev_close
+                            change_percent = (change / prev_close) * 100
+                            
+                        quotes_data[clean_sym] = {
+                            'price': price,
+                            'prevClose': prev_close,
+                            'change': change,
+                            'changePercent': change_percent,
+                            'volume': meta.get('regularMarketVolume', 0),
+                            'high': meta.get('regularMarketDayHigh', price),
+                            'low': meta.get('regularMarketDayLow', price),
+                            'open': clean_closes[0] if clean_closes else price,
+                            'closePrices': clean_closes,
+                            # Fetch name if available
+                            'name': meta.get('longName', meta.get('shortName'))
+                        }
+        except Exception as e:
+            # print error and continue with fallbacks
+            print(f"Error fetching spark batch: {e}")
+            
+    # 9. Merge Yahoo Finance data back into records
+    for r in records:
+        sym = r['symbol']
+        if sym in quotes_data:
+            yd = quotes_data[sym]
+            if yd.get('price') is not None:
+                r['price'] = yd['price']
+                r['prevClose'] = yd['prevClose']
+                r['change'] = yd['change']
+                r['changePercent'] = yd['changePercent']
+                r['volume'] = yd['volume']
+                r['high'] = yd['high']
+                r['low'] = yd['low']
+                r['open'] = yd['open']
+            r['closePrices'] = yd['closePrices']
+            if yd.get('name'):
+                r['name'] = yd['name']
+        
+        # Format market cap to standard absolute number (CSV has it in crores, i.e., 1 Cr = 10,000,000)
+        # So we convert CSV mcap (Cr) to absolute value for formatMarketCap to work properly
+        if r['csvMcap'] is not None and not pd.isna(r['csvMcap']):
+            r['marketCap'] = float(r['csvMcap']) * 10000000
+        else:
+            r['marketCap'] = None
+            
+    # Store in cache
+    STRATEGIES_CACHE[type] = {
+        'timestamp': now,
+        'quotes': records
     }
+    return {"type": type, "quotes": records}
+
 
 
