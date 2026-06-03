@@ -87,5 +87,11 @@ async def strategies_page() -> FileResponse:
     return _frontend_page("strategies.html")
 
 
+@router.get("/admin", response_class=HTMLResponse)
+async def admin_page() -> FileResponse:
+    return _frontend_page("admin.html")
+
+
+
 
 

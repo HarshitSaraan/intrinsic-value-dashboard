@@ -47,6 +47,7 @@
     else if (path.indexOf("portfolio-review-tool") >= 0) activeView = "portfolio";
     else if (path.indexOf("ranking-tool") >= 0) activeView = "ranking";
     else if (path.indexOf("turnaround") >= 0) activeView = "turnaround";
+    else if (path.indexOf("admin") >= 0) activeView = "admin";
     else if (path.indexOf("strategies") >= 0) {
       var query = window.location.search;
       if (query.indexOf("undervalued-growth") >= 0) activeView = "strategies-ug";

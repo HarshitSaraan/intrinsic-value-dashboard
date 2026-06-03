@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 import pandas as pd
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, File, UploadFile, Header, Form
 
 from backend.services.analytics import (
     compute_headwind_tailwind,
@@ -381,6 +381,67 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
         'quotes': records
     }
     return {"type": type, "quotes": records}
+
+
+# --- Admin Page Endpoints ---
+from pydantic import BaseModel
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+@router.post("/admin/login")
+async def admin_login(req: LoginRequest) -> dict[str, str]:
+    if req.username == "admin" and req.password == "adminpassword":
+        return {"status": "ok", "token": "admin-session-token"}
+    raise HTTPException(status_code=401, detail="Invalid admin username or password")
+
+
+@router.post("/admin/upload-csv")
+async def admin_upload_csv(
+    file: UploadFile = File(...),
+    file_type: str = Form(...),
+    authorization: str = Header(None)
+) -> dict[str, str]:
+    # 1. Validate session token
+    if not authorization or authorization != "Bearer admin-session-token":
+        raise HTTPException(status_code=401, detail="Unauthorized admin session")
+        
+    # 2. Validate file type
+    valid_types = {'sector_data', 'headwind_tailwind_history', 'stock_master'}
+    if file_type not in valid_types:
+        raise HTTPException(status_code=400, detail=f"Invalid file_type: {file_type}")
+        
+    # 3. Validate file extension
+    if not file.filename.lower().endswith('.csv'):
+        raise HTTPException(status_code=400, detail="Only CSV files are allowed")
+        
+    # 4. Determine file path
+    from backend.utils.paths import BASE_DIR, CSV_PATH, HW_HISTORY_PATH
+    import shutil
+    
+    if file_type == 'sector_data':
+        target_path = BASE_DIR / "sector_data.csv"
+    elif file_type == 'headwind_tailwind_history':
+        target_path = HW_HISTORY_PATH
+    elif file_type == 'stock_master':
+        target_path = CSV_PATH
+    else:
+        raise HTTPException(status_code=400, detail="Invalid file type")
+        
+    # 5. Overwrite the file on disk
+    try:
+        with open(target_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
+        
+    # 6. Post-processing (clear cache if stock_master was updated)
+    if file_type == 'stock_master':
+        STRATEGIES_CACHE.clear()
+        
+    return {"status": "success", "message": f"Successfully updated {file_type} CSV dataset"}
+
 
 
 

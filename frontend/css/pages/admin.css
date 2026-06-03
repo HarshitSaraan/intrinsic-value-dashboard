@@ -1,0 +1,307 @@
+/* admin.css - Premium Admin styles */
+.iv-admin-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: ivFade 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Login Card - Glassmorphism style */
+.iv-admin-login-card {
+  max-width: 440px;
+  margin: 80px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.12), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--iv-border-accent);
+  border-radius: 20px;
+  box-shadow: var(--iv-shadow);
+  backdrop-filter: blur(16px);
+  text-align: center;
+}
+
+.iv-admin-login-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--iv-text);
+  letter-spacing: -0.03em;
+}
+
+.iv-admin-login-card p {
+  margin: 0 0 30px 0;
+  font-size: 13px;
+  color: var(--iv-text-secondary);
+  line-height: 1.45;
+}
+
+.iv-admin-form-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.iv-admin-form-group label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--iv-text-muted);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.iv-admin-input {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--iv-border-subtle);
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--iv-text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s;
+}
+
+[data-theme="light"] .iv-admin-input {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0,0,0,0.1);
+}
+
+.iv-admin-input:focus {
+  border-color: var(--iv-accent-light);
+  box-shadow: 0 0 0 3px rgba(var(--iv-accent-rgb), 0.16);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .iv-admin-input:focus {
+  background: #ffffff;
+}
+
+.iv-admin-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.25);
+  background: linear-gradient(135deg, var(--iv-accent), var(--iv-accent-light));
+  color: #0A0A0C;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.iv-admin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(var(--iv-accent-rgb), 0.3);
+}
+
+.iv-admin-btn:active {
+  transform: translateY(0);
+}
+
+.iv-admin-error-box {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: rgba(239, 83, 80, 0.1);
+  border: 1px solid rgba(239, 83, 80, 0.25);
+  border-radius: 12px;
+  color: var(--iv-danger);
+  font-size: 12px;
+  display: none;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Dashboard Control Panel Styles */
+.iv-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.iv-admin-header-title h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--iv-text);
+}
+
+.iv-admin-header-title p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: var(--iv-text-secondary);
+}
+
+.iv-admin-logout-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--iv-border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--iv-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.iv-admin-logout-btn:hover {
+  background: rgba(239, 83, 80, 0.08);
+  border-color: rgba(239, 83, 80, 0.2);
+  color: var(--iv-danger);
+  transform: translateY(-1px);
+}
+
+.iv-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.iv-admin-card {
+  background: var(--iv-card);
+  border: 1px solid var(--iv-border-subtle);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iv-admin-card:hover {
+  border-color: rgba(var(--iv-accent-rgb), 0.35);
+  box-shadow: var(--iv-shadow);
+  transform: translateY(-4px);
+}
+
+.iv-admin-card-head {
+  margin-bottom: 24px;
+}
+
+.iv-admin-card-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.iv-admin-card-head h4 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--iv-text);
+  letter-spacing: -0.02em;
+}
+
+.iv-admin-card-head p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--iv-text-secondary);
+  line-height: 1.55;
+}
+
+.iv-admin-upload-zone {
+  border: 2px dashed var(--iv-border-subtle);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.15);
+  transition: all 0.25s;
+  margin-bottom: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+[data-theme="light"] .iv-admin-upload-zone {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.iv-admin-upload-zone:hover {
+  border-color: var(--iv-accent-light);
+  background: rgba(var(--iv-accent-rgb), 0.08);
+}
+
+.iv-admin-upload-zone p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--iv-text-muted);
+}
+
+.iv-admin-file-name {
+  font-weight: 600;
+  color: var(--iv-accent-light);
+  word-break: break-all;
+  display: none;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.iv-admin-upload-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--iv-border-accent);
+  background: rgba(var(--iv-accent-rgb), 0.04);
+  color: var(--iv-accent-light);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.iv-admin-upload-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: rgba(0,0,0,0.1) !important;
+  color: var(--iv-text-muted) !important;
+  border-color: var(--iv-border-subtle) !important;
+}
+
+.iv-admin-upload-btn:not(:disabled):hover {
+  background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.18), rgba(var(--iv-accent-rgb), 0.04));
+  color: var(--iv-text);
+  transform: translateY(-1px);
+}
+
+.iv-admin-status-bar {
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--iv-text-muted);
+  text-align: center;
+  min-height: 16px;
+}
+
+.iv-admin-status-success {
+  color: var(--iv-success) !important;
+}
+
+.iv-admin-status-error {
+  color: var(--iv-danger) !important;
+}

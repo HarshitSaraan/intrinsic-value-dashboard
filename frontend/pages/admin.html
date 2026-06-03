@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard - Update Datasets</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/admin.css">
+  <link rel="stylesheet" href="../css/theme-toggle.css">
+  <script>
+    (function(){
+      var t=localStorage.getItem('iv-theme');
+      if(t===null)t='dark';
+      if(t)document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+</head>
+<body>
+  <main class="iv-page-shell iv-admin-page">
+    
+    <!-- 1. ADMIN LOGIN PANEL -->
+    <div id="adminLoginSection">
+      <div class="iv-admin-login-card">
+        <h3>Admin Access</h3>
+        <p>Log in to update the dashboard CSV datasets.</p>
+        
+        <form id="adminLoginForm" onsubmit="return false;">
+          <div class="iv-admin-form-group">
+            <label for="adminUsername">Admin Username / ID</label>
+            <input type="text" id="adminUsername" class="iv-admin-input" placeholder="e.g. admin" required autocomplete="username">
+          </div>
+          
+          <div class="iv-admin-form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" class="iv-admin-input" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+          
+          <button type="submit" class="iv-admin-btn">
+            Secure Log In
+          </button>
+        </form>
+        
+        <div id="loginErrorMessage" class="iv-admin-error-box"></div>
+      </div>
+    </div>
+
+    <!-- 2. ADMIN CONTROL DASHBOARD (Hidden by default) -->
+    <div id="adminDashboardSection" style="display: none;">
+      
+      <!-- Admin Header -->
+      <div class="iv-admin-header">
+        <div class="iv-admin-header-title">
+          <div class="iv-kicker">Administration Panel</div>
+          <h2>Upload CSV Datasets</h2>
+          <p>Overwrites the active datasets on disk to update calculations globally.</p>
+        </div>
+        <button id="adminLogoutButton" class="iv-admin-logout-btn">
+          Sign Out
+        </button>
+      </div>
+
+      <!-- CSV Upload Grid -->
+      <div class="iv-admin-grid">
+        
+        <!-- 1. Stock Master -->
+        <div class="iv-admin-card" id="card-stock_master">
+          <div class="iv-admin-card-head">
+            <span class="iv-admin-card-icon">📂</span>
+            <h4>Stock Master Dataset</h4>
+            <p>File: <code>stock_master.csv</code></p>
+            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+              Updates ticker codes, sector groups, prices, Graham values, market caps, and fundamentals used across search, ranking, and strategies.
+            </p>
+          </div>
+          
+          <div>
+            <input type="file" id="file-stock_master" accept=".csv" style="display: none;">
+            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-stock_master').click()">
+              <p class="zone-prompt">Drag & drop or click to choose file</p>
+              <p class="iv-admin-file-name"></p>
+            </div>
+            <button class="iv-admin-upload-btn" id="btn-stock_master" disabled>
+              Update stock_master.csv
+            </button>
+            <div class="iv-admin-status-bar" id="status-stock_master"></div>
+          </div>
+        </div>
+
+        <!-- 2. Sector Valuation Data -->
+        <div class="iv-admin-card" id="card-sector_data">
+          <div class="iv-admin-card-head">
+            <span class="iv-admin-card-icon">📊</span>
+            <h4>Sector Valuation Data</h4>
+            <p>File: <code>sector_data.csv</code></p>
+            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+              Updates sector index history, P/E ratios, P/B ratios, and dividend yields mapped in the Market Valuation Index graphs.
+            </p>
+          </div>
+          
+          <div>
+            <input type="file" id="file-sector_data" accept=".csv" style="display: none;">
+            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-sector_data').click()">
+              <p class="zone-prompt">Drag & drop or click to choose file</p>
+              <p class="iv-admin-file-name"></p>
+            </div>
+            <button class="iv-admin-upload-btn" id="btn-sector_data" disabled>
+              Update sector_data.csv
+            </button>
+            <div class="iv-admin-status-bar" id="status-sector_data"></div>
+          </div>
+        </div>
+
+        <!-- 3. Headwind History -->
+        <div class="iv-admin-card" id="card-headwind_tailwind_history">
+          <div class="iv-admin-card-head">
+            <span class="iv-admin-card-icon">📈</span>
+            <h4>Headwind / Tailwind History</h4>
+            <p>File: <code>headwind_tailwind_history.csv</code></p>
+            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+              Updates monthly historical promoter holding increases and decreases rendered in the Monthly Indicator timelines.
+            </p>
+          </div>
+          
+          <div>
+            <input type="file" id="file-headwind_tailwind_history" accept=".csv" style="display: none;">
+            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-headwind_tailwind_history').click()">
+              <p class="zone-prompt">Drag & drop or click to choose file</p>
+              <p class="iv-admin-file-name"></p>
+            </div>
+            <button class="iv-admin-upload-btn" id="btn-headwind_tailwind_history" disabled>
+              Update headwind_tailwind_history.csv
+            </button>
+            <div class="iv-admin-status-bar" id="status-headwind_tailwind_history"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  
+  <script src="../js/navigation.js?v=2"></script>
+  <script src="../js/modules/admin.js"></script>
+</body>
+</html>
