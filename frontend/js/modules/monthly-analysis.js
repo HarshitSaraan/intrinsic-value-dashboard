@@ -107,10 +107,40 @@
     if (underEl) underEl.textContent = undervaluedCount.toLocaleString('en-IN');
     if (overEl) overEl.textContent = overvaluedCount.toLocaleString('en-IN');
     if (ratioEl) ratioEl.textContent = marketRatio === Infinity ? '∞' : Number(marketRatio).toFixed(2);
-    if (statusEl) statusEl.textContent = status;
+    var statusColorMap = {
+      'Extremely Undervalued': '#33cc33',
+      'Undervalued': '#99ff33',
+      'Fairly Valued': '#ffcc00',
+      'Overvalued': '#ff9933',
+      'Extremely Overvalued': '#ff4d4d'
+    };
+    var activeColor = statusColorMap[status] || 'var(--iv-accent-light)';
+
+    if (statusEl) {
+      statusEl.textContent = status;
+      statusEl.style.color = activeColor;
+    }
     if (needle) {
-      var angleMap = { 'Extremely Overvalued': -72, 'Overvalued': -36, 'Fairly Valued': 0, 'Undervalued': 36, 'Extremely Undervalued': 72 };
+      var angleMap = {
+        'Extremely Undervalued': -72,
+        'Undervalued': -36,
+        'Fairly Valued': 0,
+        'Overvalued': 36,
+        'Extremely Overvalued': 72
+      };
       needle.style.transform = 'rotate(' + (angleMap[status] || 0) + 'deg)';
+      needle.style.backgroundColor = activeColor;
+      needle.style.boxShadow = '0 0 14px ' + activeColor;
+    }
+    var clockEl = app.querySelector('.iv-market-clock');
+    if (clockEl) {
+      var r = 197, g = 168, b = 128; // fallback
+      if (activeColor === '#33cc33') { r = 51; g = 204; b = 51; }
+      else if (activeColor === '#99ff33') { r = 153; g = 255; b = 51; }
+      else if (activeColor === '#ffcc00') { r = 255; g = 204; b = 0; }
+      else if (activeColor === '#ff9933') { r = 255; g = 153; b = 51; }
+      else if (activeColor === '#ff4d4d') { r = 255; g = 77; b = 77; }
+      clockEl.style.background = 'radial-gradient(circle at center, rgba(' + r + ',' + g + ',' + b + ', 0.16), rgba(' + r + ',' + g + ',' + b + ', 0.02) 72%, transparent 100%)';
     }
 
     ivMonthlyRenderBarChart('ivMonthlyDistributionChart', ivAnalysisData.distribution, 'count', '');
@@ -164,5 +194,16 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     ivBindMonthlyMarketAnalysis();
+
+    // Toggle collapsible cards
+    var collapseCards = app.querySelectorAll(".iv-collapse-card");
+    collapseCards.forEach(function (card) {
+      var header = card.querySelector(".iv-collapse-header");
+      if (header) {
+        header.addEventListener("click", function () {
+          card.classList.toggle("collapsed");
+        });
+      }
+    });
   });
 })();

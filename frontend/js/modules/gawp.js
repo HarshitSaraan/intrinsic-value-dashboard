@@ -3,7 +3,7 @@
   function formatINR(v){ if(!isFinite(v)) return "—"; return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(Math.round(v));}
   function formatCompactINR(v){ if(!isFinite(v)) return "—"; var a=Math.abs(v); if(a>=1e7)return "₹"+(v/1e7).toFixed(v>=1e8?0:1)+" Cr"; if(a>=1e5)return "₹"+(v/1e5).toFixed(v>=1e6?0:1)+" L"; return formatINR(v);}
   function setupCanvas(c){ if(!c) return null; var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1,w=Math.max(280,Math.floor(r.width)),h=Math.max(220,Math.floor(r.height||240)); c.width=w*d; c.height=h*d; var x=c.getContext("2d"); x.setTransform(d,0,0,d,0,0); return {ctx:x,width:w,height:h};}
-  function badge(fv){var cr=1e7; if(fv<1*cr)return{label:"Poor",className:"poor",icon:"🛡"}; if(fv<=5*cr)return{label:"Middle Class",className:"middle",icon:"💼"}; if(fv<=25*cr)return{label:"Upper Middle",className:"upper",icon:"▰"}; if(fv<=100*cr)return{label:"Rich",className:"rich",icon:"◆"}; if(fv<=5000*cr)return{label:"Ultra Rich",className:"ultra",icon:"♛"}; return{label:"Top 500 in India",className:"top",icon:"🏆"};}
+  function badge(fv){var cr=1e7; if(fv<1*cr)return{label:"Poor",className:"poor",icon:"🛡"}; if(fv<=5*cr)return{label:"Middle Class",className:"middle",icon:"💼"}; if(fv<=25*cr)return{label:"Upper Middle",className:"upper",icon:"🎫"}; if(fv<=100*cr)return{label:"Rich",className:"rich",icon:"◆"}; if(fv<=5000*cr)return{label:"Ultra Rich",className:"ultra",icon:"👑"}; return{label:"Top 500 in India",className:"top",icon:"🏆"};}
   function interp(label){ if(label==="Poor"||label==="Middle Class") return "Consistent savings and disciplined investing can significantly improve outcomes."; if(label==="Upper Middle") return "You are on the right path. Stay disciplined and avoid lifestyle inflation."; if(label==="Rich") return "You are doing well. Continue focusing on long-term compounding."; if(label==="Ultra Rich") return "You are exceptionally well positioned under the GAWP framework."; if(label==="Top 500 in India") return "Extraordinary projection under this framework. Stay grounded and responsible."; return "Educational age-adjusted wealth benchmark.";}
   function calc(age,capital,cagr){ var yearsLeft=Math.max(0,80-age),future=age<80?capital*Math.pow(1+cagr/100,yearsLeft):capital,b=badge(future); return {age:age,capital:capital,cagr:cagr,yearsLeft:yearsLeft,futureValue:future,badge:b,interpretation:interp(b.label)};}
   function journey(result){ var cycle=[0.25,0.25,-0.10,-0.20,0.40,0.15,-0.08,0.32,-0.15,0.22],points=[],years=Math.max(0,result.yearsLeft); if(years===0) return [{year:result.age,value:result.futureValue}]; var raw=result.capital; points.push({year:result.age,value:result.capital}); for(var i=1;i<=years;i++){raw=raw*(1+cycle[(i-1)%cycle.length]); points.push({year:result.age+i,raw:raw});} var rawFinal=points[points.length-1].raw||result.capital||1,finalRatio=result.capital>0?result.futureValue/result.capital:1,rawRatio=result.capital>0?rawFinal/result.capital:1,scaler=rawRatio>0?finalRatio/rawRatio:1; for(var j=1;j<points.length;j++){var p=j/years,adj=Math.pow(scaler,p); points[j].value=points[j].raw*adj;} points[points.length-1].value=result.futureValue; return points;}
@@ -26,5 +26,25 @@
     [age,cap,cagr].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
     if(adj&&cagr){adj.addEventListener("change",function(){cagr.disabled=!adj.checked; if(!adj.checked)cagr.value="15";});}
     if(chart){chart.addEventListener("mousemove",function(e){if(!tip||!chart._bars)return; var r=chart.getBoundingClientRect(),x=e.clientX-r.left,d=null; chart._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;}); if(!d){tip.style.display="none";return;} tip.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value); tip.style.display="block"; tip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px"; tip.style.top=Math.max(e.clientY-18,10)+"px";}); chart.addEventListener("mouseleave",function(){if(tip)tip.style.display="none";});}
+
+    // Toggle FAQ Section Collapse state
+    var faqSectionCard = q("ivFaqSectionCard");
+    var faqSectionHeader = q("ivFaqSectionHeader");
+    if (faqSectionCard && faqSectionHeader) {
+      faqSectionHeader.addEventListener("click", function() {
+        faqSectionCard.classList.toggle("collapsed");
+      });
+    }
+
+    // Toggle Individual FAQ item collapse state
+    var faqQuestions = document.querySelectorAll(".iv-faq-question");
+    faqQuestions.forEach(function(question) {
+      question.addEventListener("click", function() {
+        var item = question.closest(".iv-faq-item");
+        if (item) {
+          item.classList.toggle("collapsed");
+        }
+      });
+    });
   });
 })();

@@ -15,7 +15,6 @@
       if (path === '/dashboard') return 'dashboard.html';
       if (path === '/ranking-tool') return 'ranking-tool.html';
       if (path === '/monthly-market-analysis') return 'monthly-market-analysis.html';
-      if (path === '/monthly-market-dashboard') return 'monthly-market-dashboard.html';
       if (path === '/market-valuation-index') return 'market-valuation-index.html';
       if (path === '/headwind-tailwind-indicator') return 'headwind-tailwind-indicator.html';
       if (path === '/portfolio-review-tool') return 'portfolio-review-tool.html';
@@ -42,7 +41,6 @@
     else if (path.indexOf("lumpsum") >= 0) activeView = "lumpsum";
     else if (path.indexOf("xirr") >= 0) activeView = "xirr";
     else if (path.indexOf("gawp") >= 0) activeView = "gawp";
-    else if (path.indexOf("monthly-market-dashboard") >= 0) activeView = "monthly";
     else if (path.indexOf("monthly-market-analysis") >= 0) activeView = "monthly-analysis";
     else if (path.indexOf("market-valuation-index") >= 0) activeView = "valuation";
     else if (path.indexOf("headwind-tailwind-indicator") >= 0) activeView = "headwind";
@@ -109,7 +107,6 @@
         type: "group",
         name: "Market Analysis",
         items: [
-          { view: "monthly", label: "Monthly Market Dashboard", icon: "▣", path: "/monthly-market-dashboard" },
           { view: "monthly-analysis", label: "Monthly Market Analysis", icon: "◌", path: "/monthly-market-analysis" },
           { view: "valuation", label: "Market Valuation Index", icon: "∑", path: "/market-valuation-index" },
           { view: "headwind", label: "Headwind / Tailwind Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }

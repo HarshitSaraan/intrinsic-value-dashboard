@@ -22,49 +22,89 @@
     }
   }
 
-  // Calculate and update the valuation status badge
-  function updateValuationBadge(pbVal, divVal) {
-    var badge = app.querySelector('#ivSectorValuationBadge');
-    if (!badge) return;
+  // Check if a sector is a commodity valuation (e.g. Gold Valuation or Silver Valuation)
+  function isCommoditySector(sectorName) {
+    if (!sectorName) return false;
+    var lower = sectorName.toLowerCase();
+    return lower.indexOf('valuation') >= 0 && (lower.indexOf('gold') >= 0 || lower.indexOf('silver') >= 0);
+  }
 
-    if (pbVal === null || pbVal === undefined || divVal === null || divVal === undefined) {
-      badge.textContent = '—';
-      badge.style.background = 'rgba(var(--iv-accent-rgb), 0.08)';
-      badge.style.color = 'var(--iv-gold-2)';
-      badge.style.borderColor = 'rgba(var(--iv-accent-rgb), 0.2)';
-      return;
+  // Calculate dynamic valuation status for a given point
+  function getValuationStatus(pbVal, divVal, sectorName, canvas) {
+    if (pbVal === null || pbVal === undefined || isNaN(pbVal)) {
+      return { text: '—', color: 'var(--iv-text-muted)' };
     }
 
-    var canvas = app.querySelector('#ivSectorValuationCanvas');
+    if (sectorName && sectorName.toLowerCase().indexOf('gold') >= 0) {
+      if (pbVal < 7) {
+        return { text: 'Undervalued', color: 'var(--iv-success)' };
+      } else if (pbVal > 14) {
+        return { text: 'Overvalued', color: 'var(--iv-danger)' };
+      } else {
+        return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
+      }
+    }
+
+    if (sectorName && sectorName.toLowerCase().indexOf('silver') >= 0) {
+      if (pbVal < 10) {
+        return { text: 'Undervalued', color: 'var(--iv-success)' };
+      } else if (pbVal > 20) {
+        return { text: 'Overvalued', color: 'var(--iv-danger)' };
+      } else {
+        return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
+      }
+    }
+
+    // Default sector logic: P/B vs Div Yield
+    if (divVal === null || divVal === undefined || isNaN(divVal)) {
+      return { text: '—', color: 'var(--iv-text-muted)' };
+    }
+
     if (canvas && canvas._yAtPB && canvas._yAtDiv) {
       var yPB = canvas._yAtPB(pbVal);
       var yDiv = canvas._yAtDiv(divVal);
 
       // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
       if (yPB > yDiv) {
-        badge.textContent = 'Undervalued';
-        badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
-        badge.style.color = 'var(--iv-success)';
-        badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+        return { text: 'Undervalued', color: 'var(--iv-success)' };
       } else {
-        badge.textContent = 'Overvalued';
-        badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
-        badge.style.color = 'var(--iv-danger)';
-        badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+        return { text: 'Overvalued', color: 'var(--iv-danger)' };
       }
     } else {
       // Fallback to value-wise if canvas helpers are not loaded yet
       if (pbVal < divVal) {
-        badge.textContent = 'Undervalued';
-        badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
-        badge.style.color = 'var(--iv-success)';
-        badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+        return { text: 'Undervalued', color: 'var(--iv-success)' };
       } else {
-        badge.textContent = 'Overvalued';
-        badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
-        badge.style.color = 'var(--iv-danger)';
-        badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+        return { text: 'Overvalued', color: 'var(--iv-danger)' };
       }
+    }
+  }
+
+  // Calculate and update the valuation status badge
+  function updateValuationBadge(pbVal, divVal, sectorName) {
+    var badge = app.querySelector('#ivSectorValuationBadge');
+    if (!badge) return;
+
+    var canvas = app.querySelector('#ivSectorValuationCanvas');
+    var status = getValuationStatus(pbVal, divVal, sectorName, canvas);
+
+    badge.textContent = status.text;
+    if (status.text === 'Undervalued') {
+      badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
+      badge.style.color = 'var(--iv-success)';
+      badge.style.borderColor = 'rgba(var(--iv-success-rgb), 0.3)';
+    } else if (status.text === 'Overvalued') {
+      badge.style.background = 'rgba(var(--iv-danger-rgb), 0.12)';
+      badge.style.color = 'var(--iv-danger)';
+      badge.style.borderColor = 'rgba(var(--iv-danger-rgb), 0.3)';
+    } else if (status.text === 'Fairly Valued') {
+      badge.style.background = 'rgba(var(--iv-warning-rgb), 0.12)';
+      badge.style.color = 'var(--iv-warning)';
+      badge.style.borderColor = 'rgba(var(--iv-warning-rgb), 0.3)';
+    } else {
+      badge.style.background = 'rgba(var(--iv-accent-rgb), 0.08)';
+      badge.style.color = 'var(--iv-gold-2)';
+      badge.style.borderColor = 'rgba(var(--iv-accent-rgb), 0.2)';
     }
   }
 
@@ -123,30 +163,46 @@
       return;
     }
 
+    var isCommodity = isCommoditySector(sectorName);
     var padL = 55;
-    var padR = 55;
+    var padR = isCommodity ? 25 : 55;
     var padT = 24;
     var padB = 40;
     var plotW = width - padL - padR;
     var plotH = height - padT - padB;
 
-    // Calculate Left Y-axis bounds (P/B Ratio)
+    // Calculate Left Y-axis bounds (P/B Ratio or Valuation Ratio)
     var pbValues = points.map(function (p) { return p.pb; }).filter(function (v) { return v !== null && isFinite(v); });
     var minPB = pbValues.length ? Math.min.apply(null, pbValues) : 0;
     var maxPB = pbValues.length ? Math.max.apply(null, pbValues) : 1;
+
+    // Adjust Y bounds for Gold/Silver to fit thresholds
+    if (isCommodity) {
+      if (sectorName.toLowerCase().indexOf('gold') >= 0) {
+        minPB = Math.min(minPB, 5);
+        maxPB = Math.max(maxPB, 16);
+      } else if (sectorName.toLowerCase().indexOf('silver') >= 0) {
+        minPB = Math.min(minPB, 7);
+        maxPB = Math.max(maxPB, 23);
+      }
+    }
+
     var pbRange = maxPB - minPB;
     var pbPad = pbRange * 0.1 || 0.2;
     minPB = Math.max(0, minPB - pbPad);
     maxPB += pbPad;
 
     // Calculate Right Y-axis bounds (Div Yield %)
-    var divValues = points.map(function (p) { return p.div_yield; }).filter(function (v) { return v !== null && isFinite(v); });
-    var minDiv = divValues.length ? Math.min.apply(null, divValues) : 0;
-    var maxDiv = divValues.length ? Math.max.apply(null, divValues) : 1;
-    var divRange = maxDiv - minDiv;
-    var divPad = divRange * 0.1 || 0.5;
-    minDiv = Math.max(0, minDiv - divPad);
-    maxDiv += divPad;
+    var minDiv = 0, maxDiv = 1;
+    if (!isCommodity) {
+      var divValues = points.map(function (p) { return p.div_yield; }).filter(function (v) { return v !== null && isFinite(v); });
+      minDiv = divValues.length ? Math.min.apply(null, divValues) : 0;
+      maxDiv = divValues.length ? Math.max.apply(null, divValues) : 1;
+      var divRange = maxDiv - minDiv;
+      var divPad = divRange * 0.1 || 0.5;
+      minDiv = Math.max(0, minDiv - divPad);
+      maxDiv += divPad;
+    }
 
     function xAt(i) {
       return padL + (i / (points.length - 1)) * plotW;
@@ -176,8 +232,16 @@
       ctx.stroke();
     }
 
-    // 2. Draw Left Y-axis ticks and labels (P/B Ratio - Blue color)
-    ctx.fillStyle = '#42A5F5'; // Blue text matching P/B line
+    // 2. Draw Left Y-axis ticks and labels (Valuation Ratio or P/B)
+    var leftAxisColor = '#42A5F5';
+    if (isCommodity) {
+      if (sectorName.toLowerCase().indexOf('gold') >= 0) {
+        leftAxisColor = '#D4AF37';
+      } else if (sectorName.toLowerCase().indexOf('silver') >= 0) {
+        leftAxisColor = '#C0C0C0';
+      }
+    }
+    ctx.fillStyle = leftAxisColor;
     ctx.font = '10px Poppins, Arial';
     ctx.textAlign = 'right';
     for (var g = 0; g <= gridCount; g++) {
@@ -191,31 +255,33 @@
     ctx.translate(14, padT + plotH / 2);
     ctx.rotate(-Math.PI / 2);
     ctx.textAlign = 'center';
-    ctx.fillStyle = '#42A5F5';
+    ctx.fillStyle = leftAxisColor;
     ctx.font = '9px Poppins, Arial';
-    ctx.fillText('P/B Ratio (Left)', 0, 0);
+    ctx.fillText(isCommodity ? 'Valuation Ratio' : 'P/B Ratio (Left)', 0, 0);
     ctx.restore();
 
     // 3. Draw Right Y-axis ticks and labels (Div Yield % - Gold color)
-    ctx.fillStyle = '#BCA374'; // Gold text matching Div Yield line
-    ctx.textAlign = 'left';
-    for (var g = 0; g <= gridCount; g++) {
-      var gy = padT + plotH * g / gridCount;
-      var gv = minDiv + (maxDiv - minDiv) * (1 - g / gridCount);
-      ctx.fillText(gv.toFixed(2) + '%', width - padR + 10, gy + 3);
+    if (!isCommodity) {
+      ctx.fillStyle = '#BCA374'; // Gold text matching Div Yield line
+      ctx.textAlign = 'left';
+      for (var g = 0; g <= gridCount; g++) {
+        var gy = padT + plotH * g / gridCount;
+        var gv = minDiv + (maxDiv - minDiv) * (1 - g / gridCount);
+        ctx.fillText(gv.toFixed(2) + '%', width - padR + 10, gy + 3);
+      }
+
+      // Draw Right Y-axis title
+      ctx.save();
+      ctx.translate(width - 12, padT + plotH / 2);
+      ctx.rotate(Math.PI / 2);
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#BCA374';
+      ctx.font = '9px Poppins, Arial';
+      ctx.fillText('Dividend Yield % (Right)', 0, 0);
+      ctx.restore();
     }
 
-    // Draw Right Y-axis title
-    ctx.save();
-    ctx.translate(width - 12, padT + plotH / 2);
-    ctx.rotate(Math.PI / 2);
-    ctx.textAlign = 'center';
-    ctx.fillStyle = '#BCA374';
-    ctx.font = '9px Poppins, Arial';
-    ctx.fillText('Dividend Yield % (Right)', 0, 0);
-    ctx.restore();
-
-    // 4. Draw Gold Area Gradient under P/B Line
+    // 4. Draw Area Gradient under Valuation/PB Line
     var pbPoints = points.filter(function (p) { return p.pb !== null && isFinite(p.pb); });
     if (pbPoints.length >= 2) {
       ctx.beginPath();
@@ -235,15 +301,25 @@
       ctx.closePath();
 
       var fillPB = ctx.createLinearGradient(0, padT, 0, height - padB);
-      fillPB.addColorStop(0, 'rgba(66, 165, 245, 0.08)');
-      fillPB.addColorStop(1, 'rgba(66, 165, 245, 0.00)');
+      if (isCommodity) {
+        if (sectorName.toLowerCase().indexOf('gold') >= 0) {
+          fillPB.addColorStop(0, 'rgba(212, 175, 55, 0.08)');
+          fillPB.addColorStop(1, 'rgba(212, 175, 55, 0.00)');
+        } else {
+          fillPB.addColorStop(0, 'rgba(192, 192, 192, 0.08)');
+          fillPB.addColorStop(1, 'rgba(192, 192, 192, 0.00)');
+        }
+      } else {
+        fillPB.addColorStop(0, 'rgba(66, 165, 245, 0.08)');
+        fillPB.addColorStop(1, 'rgba(66, 165, 245, 0.00)');
+      }
       ctx.fillStyle = fillPB;
       ctx.fill();
     }
 
-    // 5. Draw Gold Area Gradient under Div Yield Line
+    // 5. Draw Area Gradient under Div Yield Line (Only if not a commodity)
     var divPoints = points.filter(function (p) { return p.div_yield !== null && isFinite(p.div_yield); });
-    if (divPoints.length >= 2) {
+    if (!isCommodity && divPoints.length >= 2) {
       ctx.beginPath();
       points.forEach(function (p, i) {
         var x = xAt(i);
@@ -267,7 +343,7 @@
       ctx.fill();
     }
 
-    // 6. Draw P/B line (Blue Bezier curve)
+    // 6. Draw Valuation/PB line
     if (pbPoints.length >= 2) {
       ctx.beginPath();
       points.forEach(function (p, i) {
@@ -281,15 +357,20 @@
           ctx.bezierCurveTo(mx, py, mx, y, x, y);
         }
       });
-      ctx.strokeStyle = '#42A5F5'; // Blue line color
+      var strokeColor = '#42A5F5';
+      if (isCommodity) {
+        if (sectorName.toLowerCase().indexOf('gold') >= 0) strokeColor = '#D4AF37';
+        else strokeColor = '#C0C0C0';
+      }
+      ctx.strokeStyle = strokeColor;
       ctx.lineWidth = 2.5;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.stroke();
     }
 
-    // 7. Draw Div Yield line (Gold Bezier curve)
-    if (divPoints.length >= 2) {
+    // 7. Draw Div Yield line (Only if not a commodity)
+    if (!isCommodity && divPoints.length >= 2) {
       ctx.beginPath();
       points.forEach(function (p, i) {
         var x = xAt(i);
@@ -309,7 +390,49 @@
       ctx.stroke();
     }
 
-    // 8. Draw X date labels (6 labels distributed evenly)
+    // 8. Draw horizontal threshold lines for Gold and Silver
+    if (isCommodity) {
+      var isGold = sectorName.toLowerCase().indexOf('gold') >= 0;
+      var lowLimit = isGold ? 7 : 10;
+      var highLimit = isGold ? 14 : 20;
+
+      // Draw lower limit (Undervalued)
+      var yLow = yAtPB(lowLimit);
+      ctx.strokeStyle = 'rgba(46, 125, 50, 0.4)'; // green
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath();
+      ctx.moveTo(padL, yLow);
+      ctx.lineTo(width - padR, yLow);
+      ctx.stroke();
+
+      // Label lower limit
+      ctx.fillStyle = 'rgba(102, 187, 106, 0.8)';
+      ctx.font = '9px Poppins, Arial';
+      ctx.textAlign = 'right';
+      ctx.fillText('Undervalued (' + lowLimit + ')', width - padR - 5, yLow - 4);
+
+      // Draw upper limit (Overvalued)
+      var yHigh = yAtPB(highLimit);
+      ctx.strokeStyle = 'rgba(198, 40, 40, 0.4)'; // red
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath();
+      ctx.moveTo(padL, yHigh);
+      ctx.lineTo(width - padR, yHigh);
+      ctx.stroke();
+
+      // Label upper limit
+      ctx.fillStyle = 'rgba(239, 83, 80, 0.8)';
+      ctx.font = '9px Poppins, Arial';
+      ctx.textAlign = 'right';
+      ctx.fillText('Overvalued (' + highLimit + ')', width - padR - 5, yHigh - 4);
+
+      // Reset line dash
+      ctx.setLineDash([]);
+    }
+
+    // 9. Draw X date labels (6 labels distributed evenly)
     ctx.fillStyle = 'rgba(203, 213, 232, 0.5)';
     ctx.textAlign = 'center';
     ctx.font = '9px Poppins, Arial';
@@ -323,7 +446,7 @@
       ctx.fillText(p.date, x, height - padB + 16);
     }
 
-    // 9. Draw Hover indicator crosshair lines and dots
+    // 10. Draw Hover indicator crosshair lines and dots
     if (hoverPoint) {
       var matchIdx = points.indexOf(hoverPoint);
       if (matchIdx >= 0) {
@@ -339,22 +462,31 @@
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // P/B highlight dot (Blue)
+        // Valuation highlight dot
         if (hoverPoint.pb !== null) {
           var hyPB = yAtPB(hoverPoint.pb);
           ctx.beginPath();
           ctx.arc(hx, hyPB, 4.5, 0, Math.PI * 2);
           ctx.fillStyle = '#fff';
           ctx.fill();
-          ctx.strokeStyle = 'rgba(66, 165, 245, 0.4)';
+          
+          var strokeStyle = 'rgba(66, 165, 245, 0.4)';
+          if (isCommodity) {
+            if (sectorName.toLowerCase().indexOf('gold') >= 0) {
+              strokeStyle = 'rgba(212, 175, 55, 0.4)';
+            } else {
+              strokeStyle = 'rgba(192, 192, 192, 0.4)';
+            }
+          }
+          ctx.strokeStyle = strokeStyle;
           ctx.lineWidth = 3;
           ctx.beginPath();
           ctx.arc(hx, hyPB, 8, 0, Math.PI * 2);
           ctx.stroke();
         }
 
-        // Div Yield highlight dot (Gold)
-        if (hoverPoint.div_yield !== null) {
+        // Div Yield highlight dot (Only if not a commodity)
+        if (!isCommodity && hoverPoint.div_yield !== null) {
           var hyDiv = yAtDiv(hoverPoint.div_yield);
           ctx.beginPath();
           ctx.arc(hx, hyDiv, 4.0, 0, Math.PI * 2);
@@ -406,36 +538,37 @@
         drawSectorChart(currentSector);
 
         // Calculate dynamic valuation status for hovered point
+        var status = getValuationStatus(closest.pb, closest.div_yield, currentSector, canvas);
         var statusHtml = '';
-        if (closest.pb !== null && closest.div_yield !== null) {
-          var pbVal = closest.pb;
-          var divVal = closest.div_yield;
-          
-          var yPB = canvas._yAtPB(pbVal);
-          var yDiv = canvas._yAtDiv(divVal);
-          
-          var statusText = 'Overvalued';
-          var statusColor = 'var(--iv-danger)';
-          if (yPB > yDiv) {
-            statusText = 'Undervalued';
-            statusColor = 'var(--iv-success)';
-          }
+        if (status.text !== '—') {
           statusHtml = '<div style="margin-top:5px;border-top:1px solid rgba(255,255,255,0.08);padding-top:5px;display:flex;align-items:center;">' +
-                       'Valuation: <b style="color:' + statusColor + ';margin-left:auto;">' + statusText + '</b>' +
+                       'Valuation: <b style="color:' + status.color + ';margin-left:auto;">' + status.text + '</b>' +
                        '</div>';
         }
 
         // Show tooltip showing both parameters + status (Blue for PB, Gold for Div Yield)
+        var isCommodity = isCommoditySector(currentSector);
+        var metricHtml = '';
+        if (isCommodity) {
+          var dotColor = currentSector.toLowerCase().indexOf('gold') >= 0 ? '#D4AF37' : '#C0C0C0';
+          metricHtml = '<div style="margin-bottom:2px;display:flex;align-items:center;gap:6px;">' +
+                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:' + dotColor + ';"></i>' +
+                       'Valuation: <b style="color:' + dotColor + ';margin-left:auto;">' + formatMetricValue(closest.pb, 'pb') + '</b>' +
+                       '</div>';
+        } else {
+          metricHtml = '<div style="margin-bottom:2px;display:flex;align-items:center;gap:6px;">' +
+                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#42A5F5;"></i>' +
+                       'P/B Ratio: <b style="color:#90CAF9;margin-left:auto;">' + formatMetricValue(closest.pb, 'pb') + '</b>' +
+                       '</div>' +
+                       '<div style="display:flex;align-items:center;gap:6px;">' +
+                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#BCA374;"></i>' +
+                       'Div Yield: <b style="color:#E5D3B3;margin-left:auto;">' + formatMetricValue(closest.div_yield, 'div_yield') + '</b>' +
+                       '</div>';
+        }
+
         tooltip.style.display = 'block';
         tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:4px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
-                            '<div style="margin-bottom:2px;display:flex;align-items:center;gap:6px;">' +
-                            '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#42A5F5;"></i>' +
-                            'P/B Ratio: <b style="color:#90CAF9;margin-left:auto;">' + formatMetricValue(closest.pb, 'pb') + '</b>' +
-                            '</div>' +
-                            '<div style="display:flex;align-items:center;gap:6px;">' +
-                            '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#BCA374;"></i>' +
-                            'Div Yield: <b style="color:#E5D3B3;margin-left:auto;">' + formatMetricValue(closest.div_yield, 'div_yield') + '</b>' +
-                            '</div>' +
+                            metricHtml +
                             statusHtml;
         
         // Position tooltip near cursor
@@ -470,18 +603,47 @@
     var series = sectorValuationData[sectorName];
     if (!series || !series.length) return;
 
-    var latestIndex = '—';
+    var latestIndex = null;
+    var latestPB = null;
+    var latestDiv = null;
 
     // Reverse iterate to find latest values
     for (var i = series.length - 1; i >= 0; i--) {
       var item = series[i];
-      if (latestIndex === '—' && item.index !== null && item.index !== undefined) {
-        latestIndex = formatMetricValue(item.index, 'index');
+      if (latestIndex === null && item.index !== null && item.index !== undefined) {
+        latestIndex = item.index;
+      }
+      if (latestPB === null && item.pb !== null && item.pb !== undefined) {
+        latestPB = item.pb;
+      }
+      if (latestDiv === null && item.div_yield !== null && item.div_yield !== undefined) {
+        latestDiv = item.div_yield;
+      }
+    }
+
+    var text = '—';
+    if (latestIndex !== null) {
+      var formattedIndex = formatMetricValue(latestIndex, 'index');
+      if (isCommoditySector(sectorName)) {
+        if (latestPB !== null) {
+          text = formattedIndex + ' (Valuation: ' + formatMetricValue(latestPB, 'pb') + ')';
+        } else {
+          text = formattedIndex;
+        }
+      } else {
+        var parts = [];
+        if (latestPB !== null) parts.push('P/B: ' + formatMetricValue(latestPB, 'pb'));
+        if (latestDiv !== null) parts.push('Div Yield: ' + formatMetricValue(latestDiv, 'div_yield'));
+        if (parts.length > 0) {
+          text = formattedIndex + ' (' + parts.join(', ') + ')';
+        } else {
+          text = formattedIndex;
+        }
       }
     }
 
     var elIndex = app.querySelector('#ivSelectedSectorIndexValue');
-    if (elIndex) elIndex.textContent = latestIndex;
+    if (elIndex) elIndex.textContent = text;
   }
 
   // Update active states and redraw
@@ -491,9 +653,7 @@
 
     // Update title
     var titleEl = app.querySelector('#ivSelectedSectorTitle');
-    var subEl = app.querySelector('#ivSelectedSectorSubtitle');
     if (titleEl) titleEl.textContent = sectorName;
-    if (subEl) subEl.textContent = 'P/B vs Dividend Yield trend from starting year';
 
     // Redraw graph
     drawSectorChart(sectorName);
@@ -512,7 +672,7 @@
         }
       }
     }
-    updateValuationBadge(latestPB, latestDiv);
+    updateValuationBadge(latestPB, latestDiv, sectorName);
 
     // Highlight button in grid
     var buttons = app.querySelectorAll('.iv-sector-btn');

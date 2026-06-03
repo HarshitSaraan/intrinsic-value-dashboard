@@ -56,10 +56,6 @@ async def gawp_page() -> FileResponse:
     return _frontend_page("gawp.html")
 
 
-@router.get("/monthly-market-dashboard", response_class=HTMLResponse)
-async def monthly_market_dashboard_page() -> FileResponse:
-    return _frontend_page("monthly-market-dashboard.html")
-
 
 @router.get("/monthly-market-analysis", response_class=HTMLResponse)
 async def monthly_market_analysis_page() -> FileResponse:

@@ -120,11 +120,30 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
     
     result = {}
     for s in sectors:
-        cols = sector_columns[s]
-        idx_col = next((c[0] for c in cols if 'index' in c[1].lower() or c[1].lower() == s.lower()), None)
-        pe_col = next((c[0] for c in cols if 'p/e' in c[1].lower()), None)
-        pb_col = next((c[0] for c in cols if 'p/b' in c[1].lower()), None)
-        div_col = next((c[0] for c in cols if 'div' in c[1].lower() or 'yield' in c[1].lower()), None)
+        # Check case-insensitively if this is a commodity valuation sector (contains gold/silver and ends with valuation)
+        is_commodity_valuation = s.lower().endswith('valuation') and ('gold' in s.lower() or 'silver' in s.lower())
+        
+        if is_commodity_valuation:
+            cols = sector_columns[s]
+            pb_col = cols[0][0]  # The valuation column itself holds the PB/Valuation ratio
+            
+            # Find the index price column by scanning Row 0 for the commodity prefix (e.g. "gold")
+            commodity_prefix = s.lower().replace('valuation', '').strip()
+            idx_col = None
+            for col_idx, sec_name in enumerate(row0):
+                if pd.notna(sec_name):
+                    sec_str = str(sec_name).strip().lower()
+                    if commodity_prefix in sec_str and 'valuation' not in sec_str:
+                        idx_col = col_idx
+                        break
+            pe_col = None
+            div_col = None
+        else:
+            cols = sector_columns[s]
+            idx_col = next((c[0] for c in cols if 'index' in c[1].lower() or c[1].lower() == s.lower()), None)
+            pe_col = next((c[0] for c in cols if 'p/e' in c[1].lower()), None)
+            pb_col = next((c[0] for c in cols if 'p/b' in c[1].lower()), None)
+            div_col = next((c[0] for c in cols if 'div' in c[1].lower() or 'yield' in c[1].lower()), None)
         
         series = []
         for r_idx in range(2, len(df)):
