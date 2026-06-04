@@ -83,6 +83,11 @@
       cards.forEach(function(card) {
         card.style.minHeight = '';
       });
+
+      // Only equalize heights on desktop viewports
+      if (window.innerWidth <= 768) {
+        return;
+      }
       
       // Find max height
       var maxHeight = 0;
@@ -99,10 +104,61 @@
       });
     }
 
-    // Run height adjustment
+    // Mobile Tabs Toggling Logic
+    var tabBtns = document.querySelectorAll(".iv-tab-btn");
+    var stackedCards = document.querySelectorAll('.iv-stacked-card');
+
+    function applyTabFiltering() {
+      if (window.innerWidth <= 768) {
+        var activeBtn = document.querySelector(".iv-tab-btn.active");
+        if (activeBtn) {
+          var targetId = activeBtn.getAttribute("data-target");
+          stackedCards.forEach(function (card) {
+            if (card.id === targetId) {
+              card.classList.add("active-tab");
+            } else {
+              card.classList.remove("active-tab");
+            }
+          });
+        } else if (tabBtns.length) {
+          tabBtns[0].classList.add("active");
+          var targetId = tabBtns[0].getAttribute("data-target");
+          stackedCards.forEach(function (card) {
+            if (card.id === targetId) {
+              card.classList.add("active-tab");
+            } else {
+              card.classList.remove("active-tab");
+            }
+          });
+        }
+      } else {
+        stackedCards.forEach(function (card) {
+          card.classList.remove("active-tab");
+        });
+      }
+    }
+
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tabBtns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        applyTabFiltering();
+      });
+    });
+
+    // Run height adjustment & tab filtering
     adjustStackedCardsHeight();
-    window.addEventListener("load", adjustStackedCardsHeight);
-    window.addEventListener("resize", adjustStackedCardsHeight);
+    applyTabFiltering();
+    
+    window.addEventListener("load", function () {
+      adjustStackedCardsHeight();
+      applyTabFiltering();
+    });
+    
+    window.addEventListener("resize", function () {
+      adjustStackedCardsHeight();
+      applyTabFiltering();
+    });
   });
 })();
 

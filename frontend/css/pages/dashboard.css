@@ -346,6 +346,54 @@
 .iv-home-metrics .iv-micro-card:nth-child(3) { transition-delay: 0.2s; }
 .iv-home-metrics .iv-micro-card:nth-child(4) { transition-delay: 0.3s; }
 
+/* Dashboard Mobile Tabs (Hidden on Desktop) */
+.iv-dashboard-tabs {
+  display: none;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 16px 0;
+  margin-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.iv-dashboard-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.iv-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--iv-text-secondary);
+  cursor: pointer;
+  border-radius: 99px;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  white-space: nowrap;
+}
+
+.iv-tab-btn.active {
+  background: #FFFFFF !important;
+  color: #121316 !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .iv-tab-btn.active {
+  background: #121316 !important;
+  color: #FFFFFF !important;
+}
+
+.iv-tab-btn:hover:not(.active) {
+  color: var(--iv-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .iv-tab-btn:hover:not(.active) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 /* Vertical Stacked Card Deck Scrolling Effect */
 .iv-stacked-deck {
   display: flex;
@@ -692,10 +740,19 @@
 }
 
 @media (max-width: 768px) {
+  .iv-dashboard-tabs {
+    display: flex;
+  }
+
   .iv-stacked-card {
+    display: none;
     position: relative !important;
     top: auto !important;
     margin-bottom: 32px !important;
+  }
+
+  .iv-stacked-card.active-tab {
+    display: block !important;
   }
   
   #stackedCard1, #stackedCard2, #stackedCard3 {
@@ -727,3 +784,5 @@
     font-size: 14px;
   }
 }
+
+

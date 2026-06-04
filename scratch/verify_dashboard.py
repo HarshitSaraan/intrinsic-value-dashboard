@@ -57,7 +57,7 @@ def main():
         
         # Scroll down on mobile to check Card 1 tools listing
         print("Scrolling down on mobile...")
-        driver.execute_script("window.scrollTo(0, 1400);")
+        driver.execute_script("window.scrollTo(0, 1300);")
         time.sleep(2)
         
         mobile_scrolled_path = os.path.join(ARTIFACT_DIR, "dashboard_view_mobile_scrolled.png")
