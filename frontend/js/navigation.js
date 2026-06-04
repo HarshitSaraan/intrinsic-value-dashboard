@@ -195,7 +195,7 @@
         name: "Market Analysis",
         items: [
           { view: "monthly-analysis", label: "Market Pulse", icon: "◌", path: "/monthly-market-analysis" },
-          { view: "earnings-trends", label: "Earnings Trends", icon: "📊", path: "/earnings-trends" },
+          { view: "earnings-trends", label: "Earnings Trends", icon: "\u22bf", path: "/earnings-trends" },
           { view: "valuation", label: "M.V Tracker", icon: "∑", path: "/market-valuation-index" },
           { view: "headwind", label: "Headwind / Tailwind Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }
         ]
