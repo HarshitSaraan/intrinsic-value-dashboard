@@ -7,7 +7,7 @@
 
   var sectorValuationData = null;
   var sectorList = [];
-  var currentSector = 'Nifty 50';
+  var currentSector = null;
   var hoverPoint = null;
 
   // Formatting helpers
@@ -686,15 +686,9 @@
 
         // Render Selector Buttons
         renderSectorButtons(sectorList);
-
+ 
         // Setup Canvas hover trigger listeners
         initCanvasEvents();
-
-        // Select Nifty 50 as default
-        var defaultSec = sectorList.indexOf('Nifty 50') >= 0 ? 'Nifty 50' : sectorList[0];
-        if (defaultSec) {
-          selectSector(defaultSec);
-        }
       })
       .catch(function (err) {
         console.error('Error loading sector valuation details:', err);
