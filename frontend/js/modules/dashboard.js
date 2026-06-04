@@ -79,12 +79,13 @@
       var cards = document.querySelectorAll('.iv-stacked-card');
       if (!cards.length) return;
       
-      // Reset min-height first to get natural height
+      // Reset min-height and top first to get natural values
       cards.forEach(function(card) {
         card.style.minHeight = '';
+        card.style.top = '';
       });
 
-      // Only equalize heights on desktop viewports
+      // Only equalize heights and center on desktop viewports
       if (window.innerWidth <= 768) {
         return;
       }
@@ -98,9 +99,14 @@
         }
       });
       
-      // Apply max height as min-height to all cards
+      // Calculate topOffset for vertical centering in viewport
+      // Ensure at least 95px to clear sticky top navigation
+      var topOffset = Math.max(95, Math.floor((window.innerHeight - maxHeight) / 2));
+      
+      // Apply max height as min-height and dynamic top offset to all cards
       cards.forEach(function(card) {
         card.style.minHeight = maxHeight + 'px';
+        card.style.top = topOffset + 'px';
       });
     }
 
