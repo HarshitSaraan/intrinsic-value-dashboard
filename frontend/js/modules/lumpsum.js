@@ -19,7 +19,7 @@
     canvas._bars=vrows.map(function(r,i){return {x:pL+i*(bw+gap),w:bw,year:r.year,invested:r.invested,gain:r.gain,closing:r.closing,multiple:r.multiple};});
     canvas._rows=rows;
   }
-  function tip(tooltip,canvas,mode,e){if(!tooltip||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="line"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="bar"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tooltip.style.display="none";return;}
+  function tip(tooltip,canvas,mode,clientX,clientY){if(!tooltip||!canvas)return; var r=canvas.getBoundingClientRect(),x=clientX-r.left,d=null; if(mode==="line"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="bar"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tooltip.style.display="none";return;}
     if(canvas._rows){
       if(mode==="line") drawLine(canvas, canvas._rows);
       else drawBars(canvas, canvas._rows);
@@ -43,8 +43,8 @@
     tooltip.style.display="block";
     var ttW = tooltip.offsetWidth || 250;
     var ttH = tooltip.offsetHeight || 100;
-    tooltip.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
-    tooltip.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
+    tooltip.style.left = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+    tooltip.style.top = Math.max(10, clientY - ttH - 24) + "px";
   }
   document.addEventListener("DOMContentLoaded", function(){
     var amount=q("ivLumpsumAmount"),cagr=q("ivLumpsumCagr"),years=q("ivLumpsumYears");
@@ -166,7 +166,29 @@
     calcBtn.addEventListener("click",run);
     if(resetBtn)resetBtn.addEventListener("click",reset);
     [amount,cagr,years].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
-    if(line){line.addEventListener("mousemove",function(e){tip(tt,line,"line",e);}); line.addEventListener("mouseleave",function(){tt.style.display="none"; if(line._rows) drawLine(line, line._rows);});}
-    if(bars){bars.addEventListener("mousemove",function(e){tip(tt,bars,"bar",e);}); bars.addEventListener("mouseleave",function(){tt.style.display="none"; if(bars._rows) drawBars(bars, bars._rows);});}
+    function bindEvents(cv, mode) {
+      if(!cv) return;
+      function onLeave() {
+        tt.style.display="none"; 
+        if(cv._rows) {
+          if(mode==="line") drawLine(cv, cv._rows);
+          else drawBars(cv, cv._rows);
+        }
+      }
+      cv.addEventListener("mousemove", function(e) { tip(tt, cv, mode, e.clientX, e.clientY); });
+      cv.addEventListener("mouseleave", onLeave);
+      cv.addEventListener("touchstart", function (e) {
+        if (e.touches.length) tip(tt, cv, mode, e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+      cv.addEventListener("touchmove", function (e) {
+        if (e.touches.length) {
+          if (e.cancelable) e.preventDefault();
+          tip(tt, cv, mode, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: false });
+      cv.addEventListener("touchend", onLeave);
+    }
+    bindEvents(line, "line");
+    bindEvents(bars, "bar");
   });
 })();

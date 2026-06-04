@@ -271,7 +271,7 @@
     calc.addEventListener("click",run);
     if(reset)reset.addEventListener("click",resetAll);
     [cc,vd].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
-    function move(canvas,mode,e){if(!tt||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="journey"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="summary"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tt.style.display="none";return;}
+    function move(canvas,mode,clientX,clientY){if(!tt||!canvas)return; var r=canvas.getBoundingClientRect(),x=clientX-r.left,d=null; if(mode==="journey"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="summary"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tt.style.display="none";return;}
       if(mode==="journey"&&canvas._ptsData) drawJourney(canvas, canvas._ptsData);
       if(mode==="summary"&&canvas._sData) drawSummary(canvas, canvas._sData);
       var ctx=canvas.getContext("2d");
@@ -297,10 +297,29 @@
       tt.style.display="block";
       var ttW = tt.offsetWidth || 260;
       var ttH = tt.offsetHeight || 100;
-      tt.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
-      tt.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
+      tt.style.left = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+      tt.style.top = Math.max(10, clientY - ttH - 24) + "px";
     }
-    if(jc){jc.addEventListener("mousemove",function(e){move(jc,"journey",e);}); jc.addEventListener("mouseleave",function(){tt.style.display="none"; if(jc._ptsData) drawJourney(jc, jc._ptsData);});}
-    if(sc){sc.addEventListener("mousemove",function(e){move(sc,"summary",e);}); sc.addEventListener("mouseleave",function(){tt.style.display="none"; if(sc._sData) drawSummary(sc, sc._sData);});}
+    function bindXirrEvents(cv, mode, drawFunc, dataKey) {
+      if(!cv) return;
+      function onLeave() {
+        tt.style.display="none";
+        if(cv[dataKey]) drawFunc(cv, cv[dataKey]);
+      }
+      cv.addEventListener("mousemove", function(e) { move(cv, mode, e.clientX, e.clientY); });
+      cv.addEventListener("mouseleave", onLeave);
+      cv.addEventListener("touchstart", function (e) {
+        if (e.touches.length) move(cv, mode, e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+      cv.addEventListener("touchmove", function (e) {
+        if (e.touches.length) {
+          if (e.cancelable) e.preventDefault();
+          move(cv, mode, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: false });
+      cv.addEventListener("touchend", onLeave);
+    }
+    bindXirrEvents(jc, "journey", drawJourney, "_ptsData");
+    bindXirrEvents(sc, "summary", drawSummary, "_sData");
   });
 })();

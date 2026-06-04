@@ -15,7 +15,7 @@
 .iv-lumpsum-page .iv-lumpsum-result-card span { display:block; color:var(--iv-text-muted); font-size:10px; text-transform:uppercase; }
 .iv-lumpsum-page .iv-lumpsum-result-card strong { display:block; margin-top:6px; color:var(--iv-accent-light); font-size:18px; }
 .iv-lumpsum-page .iv-lumpsum-error { display:none; margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,120,120,.28); background:rgba(255,120,120,.09); color:var(--iv-danger); font-size:12px; }
-.iv-lumpsum-page .iv-lumpsum-chart-card canvas { width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(var(--iv-bg-rgb),.38); border:1px solid rgba(255,255,255,.07); }
+.iv-lumpsum-page .iv-lumpsum-chart-card canvas { width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(var(--iv-bg-rgb),.38); border:1px solid rgba(255,255,255,.07); touch-action:none; }
 .iv-lumpsum-page .iv-lumpsum-legend { display:flex; flex-wrap:wrap; gap:8px; margin-top:9px; color:var(--iv-text-secondary); font-size:11px; }
 .iv-lumpsum-page .iv-lumpsum-dot { width:9px; height:9px; border-radius:999px; display:inline-block; }
 .iv-lumpsum-page .iv-lumpsum-dot.blue { background:var(--iv-info); }

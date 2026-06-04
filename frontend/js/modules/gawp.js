@@ -148,9 +148,9 @@
     }
 
     if(chart){
-      chart.addEventListener("mousemove",function(e){
+      function onHover(clientX, clientY) {
         if(!tip||!chart._bars)return;
-        var r=chart.getBoundingClientRect(),x=e.clientX-r.left,d=null;
+        var r=chart.getBoundingClientRect(),x=clientX-r.left,d=null;
         chart._bars.forEach(function(b){if(!d||Math.abs(b.x-x)<Math.abs(d.x-x))d=b;});
         if(!d){tip.style.display="none";return;}
         if(chart._result) draw(chart, chart._result);
@@ -166,13 +166,34 @@
         tip.style.display="block";
         var ttW = tip.offsetWidth || 250;
         var ttH = tip.offsetHeight || 80;
-        tip.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
-        tip.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
-      });
-      chart.addEventListener("mouseleave",function(){
+        tip.style.left = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+        tip.style.top = Math.max(10, clientY - ttH - 24) + "px";
+      }
+
+      function onLeave() {
         if(tip)tip.style.display="none";
         if(chart._result) draw(chart, chart._result);
-      });
+      }
+
+      chart.addEventListener("mousemove", function(e) { onHover(e.clientX, e.clientY); });
+      chart.addEventListener("mouseleave", onLeave);
+
+      chart.addEventListener("touchstart", function (e) {
+        if (e.touches.length) {
+          var t = e.touches[0];
+          onHover(t.clientX, t.clientY);
+        }
+      }, { passive: true });
+
+      chart.addEventListener("touchmove", function (e) {
+        if (e.touches.length) {
+          if (e.cancelable) e.preventDefault();
+          var t = e.touches[0];
+          onHover(t.clientX, t.clientY);
+        }
+      }, { passive: false });
+
+      chart.addEventListener("touchend", onLeave);
     }
 
 

@@ -185,6 +185,7 @@
   border-radius: 14px;
   background: rgba(var(--iv-bg-rgb), 0.38);
   border: 1px solid var(--iv-border-subtle);
+  touch-action: none;
 }
 
 .iv-sip-page .iv-sip-legend {

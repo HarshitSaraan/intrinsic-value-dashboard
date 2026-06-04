@@ -204,9 +204,10 @@
 
   function bindTooltip(tooltip, canvas, mode) {
     if (!tooltip || !canvas) return;
-    canvas.addEventListener("mousemove", function (event) {
+
+    function onHover(clientX, clientY) {
       var rect = canvas.getBoundingClientRect();
-      var x = event.clientX - rect.left;
+      var x = clientX - rect.left;
       var data = null;
       if (mode === "line" && canvas._ivSwpPoints) {
         canvas._ivSwpPoints.forEach(function (point) {
@@ -241,16 +242,37 @@
       tooltip.style.display = "block";
       var ttW = tooltip.offsetWidth || 250;
       var ttH = tooltip.offsetHeight || 100;
-      tooltip.style.left = Math.max(10, Math.min(event.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
-      tooltip.style.top = Math.max(10, event.clientY - ttH - 24) + "px";
-    });
-    canvas.addEventListener("mouseleave", function () {
+      tooltip.style.left = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+      tooltip.style.top = Math.max(10, clientY - ttH - 24) + "px";
+    }
+
+    function onLeave() {
       tooltip.style.display = "none";
       if (canvas._rows) {
         if (mode === "line") drawLineChart(canvas, canvas._rows);
         else drawBarChart(canvas, canvas._rows);
       }
-    });
+    }
+
+    canvas.addEventListener("mousemove", function (e) { onHover(e.clientX, e.clientY); });
+    canvas.addEventListener("mouseleave", onLeave);
+
+    canvas.addEventListener("touchstart", function (e) {
+      if (e.touches.length) {
+        var t = e.touches[0];
+        onHover(t.clientX, t.clientY);
+      }
+    }, { passive: true });
+
+    canvas.addEventListener("touchmove", function (e) {
+      if (e.touches.length) {
+        if (e.cancelable) e.preventDefault();
+        var t = e.touches[0];
+        onHover(t.clientX, t.clientY);
+      }
+    }, { passive: false });
+
+    canvas.addEventListener("touchend", onLeave);
   }
 
   document.addEventListener("DOMContentLoaded", function () {

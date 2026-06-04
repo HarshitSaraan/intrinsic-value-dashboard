@@ -17,7 +17,7 @@
 .iv-xirr-page .iv-xirr-result-card.main strong{ font-size:24px; }
 .iv-xirr-page .iv-xirr-error{ display:none; margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,120,120,.28); background:rgba(255,120,120,.09); color:var(--iv-danger); font-size:12px; }
 .iv-xirr-page .iv-xirr-message{ margin-top:12px; padding:12px; border-radius:15px; border:1px solid rgba(var(--iv-accent-rgb),.18); background:rgba(var(--iv-accent-rgb),.08); color:#eadca6; font-size:12px; line-height:1.55; }
-.iv-xirr-page .iv-xirr-chart-card canvas{ width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(var(--iv-bg-rgb),.38); border:1px solid rgba(255,255,255,.07);}
+.iv-xirr-page .iv-xirr-chart-card canvas{ width:100%; height:260px; display:block; margin-top:10px; border-radius:14px; background:rgba(var(--iv-bg-rgb),.38); border:1px solid rgba(255,255,255,.07); touch-action:none;}
 .iv-xirr-page .iv-xirr-legend{ display:flex; flex-wrap:wrap; gap:8px; margin-top:9px; color:var(--iv-text-secondary); font-size:11px; }
 .iv-xirr-page .iv-xirr-dot{ width:9px; height:9px; border-radius:999px; display:inline-block; }
 .iv-xirr-page .iv-xirr-dot.blue{background:var(--iv-info);} .iv-xirr-page .iv-xirr-dot.gold{background:var(--iv-accent);} .iv-xirr-page .iv-xirr-dot.green{background:var(--iv-success);} .iv-xirr-page .iv-xirr-dot.red{background:var(--iv-danger);}
