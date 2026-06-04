@@ -242,10 +242,7 @@ def aggregate_company_rows(frame: pd.DataFrame) -> list[dict[str, Any]]:
 
 
 def load_turnaround_sectors() -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
-    frame = pd.read_csv(CSV_PATH)
+    frame = get_stock_master_raw_df()
     if frame.empty:
         return {
             "source": CSV_PATH.name,
@@ -282,10 +279,7 @@ def load_turnaround_sectors() -> dict[str, Any]:
 
 
 def compute_headwind_tailwind() -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
-    frame = pd.read_csv(CSV_PATH)
+    frame = get_stock_master_raw_df()
 
     change_col = pick_column(frame, "Change in promoter holding")
     industry_col = pick_column(frame, "Industry", "Industry Group", "Sector")
@@ -395,17 +389,53 @@ def load_headwind_history() -> dict[str, Any]:
     }
 
 
-def compute_ranking(
-    search: str = "",
-    industry: str = "",
-    min_mcap: float | None = None,
-    max_mcap: float | None = None,
-    top_n: int = 0,
-) -> dict[str, Any]:
+COMPUTE_RANKING_CACHE = {}
+COMPUTE_RANKING_CACHE_MTIME = 0
+
+
+STOCK_MASTER_CACHE = {
+    'mtime': 0,
+    'raw_df': None,
+    'clean_df': None,
+    'industries': []
+}
+
+def get_stock_master_raw_df() -> pd.DataFrame:
+    import time
     if not CSV_PATH.exists():
         raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
+        
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = time.time()
+        
+    global STOCK_MASTER_CACHE
+    if STOCK_MASTER_CACHE['raw_df'] is not None and STOCK_MASTER_CACHE['mtime'] == current_mtime:
+        return STOCK_MASTER_CACHE['raw_df'].copy()
+        
+    # Cold Cache: read raw CSV
     frame = pd.read_csv(CSV_PATH)
+    STOCK_MASTER_CACHE['raw_df'] = frame
+    STOCK_MASTER_CACHE['mtime'] = current_mtime
+    # Reset clean cache
+    STOCK_MASTER_CACHE['clean_df'] = None
+    STOCK_MASTER_CACHE['industries'] = []
+    return frame.copy()
+
+def get_stock_master_clean_df() -> tuple[pd.DataFrame, list[str]]:
+    import time
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = time.time()
+        
+    global STOCK_MASTER_CACHE
+    if STOCK_MASTER_CACHE['clean_df'] is not None and STOCK_MASTER_CACHE['mtime'] == current_mtime:
+        return STOCK_MASTER_CACHE['clean_df'].copy(), STOCK_MASTER_CACHE['industries']
+        
+    # Get raw frame (will hit cache if already read)
+    frame = get_stock_master_raw_df()
 
     name_col = pick_column(frame, "Name", "Company Name")
     bse_col = pick_column(frame, "BSE Code")
@@ -433,6 +463,35 @@ def compute_ranking(
     df["sales3Y"] = to_num(frame[sales_col]) if sales_col else float("nan")
     df["roce3Y"] = to_num(frame[roce_col]) if roce_col else float("nan")
     df["pb"] = to_num(frame[pb_col]) if pb_col else float("nan")
+    
+    # Store clean frame in cache
+    STOCK_MASTER_CACHE['clean_df'] = df
+    STOCK_MASTER_CACHE['industries'] = sorted(frame[industry_col].dropna().astype(str).str.strip().unique().tolist()) if industry_col else []
+    STOCK_MASTER_CACHE['mtime'] = current_mtime
+    
+    return STOCK_MASTER_CACHE['clean_df'].copy(), STOCK_MASTER_CACHE['industries']
+def compute_ranking(
+    search: str = "",
+    industry: str = "",
+    min_mcap: float | None = None,
+    max_mcap: float | None = None,
+    top_n: int = 0,
+) -> dict[str, Any]:
+    global COMPUTE_RANKING_CACHE, COMPUTE_RANKING_CACHE_MTIME
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = 0
+
+    if COMPUTE_RANKING_CACHE_MTIME != current_mtime:
+        COMPUTE_RANKING_CACHE.clear()
+        COMPUTE_RANKING_CACHE_MTIME = current_mtime
+
+    cache_key = (search, industry, min_mcap, max_mcap, top_n)
+    if cache_key in COMPUTE_RANKING_CACHE:
+        return COMPUTE_RANKING_CACHE[cache_key]
+
+    df, industries = get_stock_master_clean_df()
 
     df = df[df["name"] != ""].copy()
 
@@ -449,20 +508,23 @@ def compute_ranking(
 
     if industry:
         df = df[df["industry"] == industry].copy()
+
     if min_mcap is not None:
         df = df[df["mcap"].notna() & (df["mcap"] >= min_mcap)].copy()
     if max_mcap is not None:
         df = df[df["mcap"].notna() & (df["mcap"] <= max_mcap)].copy()
 
     if df.empty:
-        return {
+        result = {
             "source": CSV_PATH.name,
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "totalCompanies": 0,
-            "industries": [],
+            "industries": industries,
             "bestRanked": None,
             "data": [],
         }
+        COMPUTE_RANKING_CACHE[cache_key] = result
+        return result
 
     missing_rank = len(df) + 1
 
@@ -488,41 +550,38 @@ def compute_ranking(
 
     records = [
         {
-            "rank": int(row["rank"]),
-            "name": row["name"],
-            "bseCode": row["bseCode"],
-            "nseCode": row["nseCode"],
-            "industry": row["industry"],
-            "sector": row["sector"],
-            "mcap": fmt(row["mcap"]),
-            "sales3Y": fmt(row["sales3Y"]),
-            "roce3Y": fmt(row["roce3Y"]),
-            "pb": fmt(row["pb"]),
-            "salesRank": int(row["salesRank"]),
-            "roceRank": int(row["roceRank"]),
-            "pbRank": int(row["pbRank"]),
-            "totalScore": int(row["totalScore"]),
+            "rank": int(row.rank),
+            "name": row.name,
+            "bseCode": row.bseCode,
+            "nseCode": row.nseCode,
+            "industry": row.industry,
+            "sector": row.sector,
+            "mcap": fmt(row.mcap),
+            "sales3Y": fmt(row.sales3Y),
+            "roce3Y": fmt(row.roce3Y),
+            "pb": fmt(row.pb),
+            "salesRank": int(row.salesRank),
+            "roceRank": int(row.roceRank),
+            "pbRank": int(row.pbRank),
+            "totalScore": int(row.totalScore),
         }
-        for _, row in df.iterrows()
+        for row in df.itertuples(index=False)
     ]
 
-    return {
+    result = {
         "source": CSV_PATH.name,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "totalCompanies": len(records),
-        "industries": sorted(frame[industry_col].dropna().astype(str).str.strip().unique().tolist())
-        if industry_col
-        else [],
+        "industries": industries,
         "bestRanked": records[0]["name"] if records else None,
         "data": records,
     }
+    COMPUTE_RANKING_CACHE[cache_key] = result
+    return result
 
 
 def compute_monthly_analysis() -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
-    frame = pd.read_csv(CSV_PATH)
+    frame = get_stock_master_raw_df()
     total_rows = len(frame)
 
     name_col = pick_column(frame, "Name", "Company Name")
@@ -774,10 +833,7 @@ def compute_monthly_analysis() -> dict[str, Any]:
 
 
 def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
-    df = pd.read_csv(CSV_PATH)
+    df = get_stock_master_raw_df()
     name_col = pick_column(df, "Name", "Company Name")
     bse_col = pick_column(df, "BSE Code")
     nse_col = pick_column(df, "NSE Code")
@@ -1215,10 +1271,7 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 def search_stocks(query: str) -> list[dict[str, str]]:
     if not query:
         return []
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-
-    df = pd.read_csv(CSV_PATH)
+    df = get_stock_master_raw_df()
     name_col = pick_column(df, "Name", "Company Name")
     bse_col = pick_column(df, "BSE Code")
     nse_col = pick_column(df, "NSE Code")

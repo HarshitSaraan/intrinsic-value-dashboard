@@ -71,13 +71,12 @@ async def ranking_endpoint(
 
 @router.get("/ranking/industries")
 async def ranking_industries() -> dict[str, Any]:
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"CSV file not found: {CSV_PATH.name}")
-    frame = pd.read_csv(CSV_PATH)
-    industry_col = pick_column(frame, "Industry", "Industry Group")
-    if industry_col is None:
-        return {"industries": []}
-    return {"industries": sorted(frame[industry_col].dropna().astype(str).str.strip().unique().tolist())}
+    try:
+        from backend.services.analytics import get_stock_master_clean_df
+        _, industries = get_stock_master_clean_df()
+        return {"industries": industries}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.get("/portfolio-search")
@@ -202,36 +201,31 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
 
 # Dynamic cache for Yahoo Finance predefined screeners
 STRATEGIES_CACHE = {}
-CACHE_TTL = 120 # 2 minutes
+CACHE_TTL = 300 # 5 minutes
 
-@router.get("/strategies-data")
-async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any]:
-    import time
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+
+def update_all_strategies_cache():
     import urllib.request
+    import urllib.parse
     import json
     import pandas as pd
+    from backend.services.analytics import get_stock_master_raw_df
     from backend.utils.paths import CSV_PATH
     
-    # 1. Check cache first
-    now = time.time()
-    if type in STRATEGIES_CACHE:
-        cached = STRATEGIES_CACHE[type]
-        if now - cached['timestamp'] < CACHE_TTL:
-            return {"type": type, "quotes": cached['quotes']}
-            
-    # 2. Load stock_master.csv
-    if not CSV_PATH.exists():
-        raise HTTPException(status_code=404, detail=f"stock_master.csv not found at {CSV_PATH}")
-            
+    # 1. Load stock_master.csv
     try:
-        df = pd.read_csv(CSV_PATH)
+        df = get_stock_master_raw_df()
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read stock_master.csv: {str(e)}")
+        print(f"Error loading stock master in strategies background cache update: {e}")
+        return
         
-    # 3. Filter rows where NSE Code is present and valid
+    # 2. Filter rows where NSE Code is present and valid
     df_nse = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')].copy()
     
-    # 4. Helper to parse float columns
+    # Helper to parse float columns
     def clean_col(col_name):
         if col_name not in df_nse.columns:
             return pd.Series(float('nan'), index=df_nse.index)
@@ -245,99 +239,106 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
     df_nse['clean_piotroski'] = clean_col('Piotroski score')
     df_nse['clean_de'] = clean_col('Debt to equity')
     
-    # 5. Filter by active strategy type
-    if type == 'undervalued-growth': 
-        # Criteria: Sales Growth 3Years > 20% | PE between 0 and 25 | PB < 4.5
-        filtered = df_nse[
-            (df_nse['clean_sales_3y'] > 20) & 
-            (df_nse['clean_pe'] > 0) & 
-            (df_nse['clean_pe'] <= 25) & 
-            (df_nse['clean_pb'] < 4.5)
-        ]
-    elif type == 'aggressive-smallcaps':
-        # Criteria: Market Cap < 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%
-        filtered = df_nse[
-            (df_nse['clean_mcap'] < 2000) & 
-            (df_nse['clean_sales_3y'] > 25) & 
-            (df_nse['clean_roce_3y'] > 12)
-        ]
-    elif type == 'undervalued-largecaps':
-        # Criteria: Market Cap > 15000 Cr | PE between 0 and 18 | PB < 3.0
-        filtered = df_nse[
-            (df_nse['clean_mcap'] > 15000) & 
-            (df_nse['clean_pe'] > 0) & 
-            (df_nse['clean_pe'] < 18) & 
-            (df_nse['clean_pb'] < 3.0)
-        ]
-    elif type == 'growth-tech':
-        # Criteria: Industry Group contains software/IT/tech/telecom | Sales Growth 3Years > 20%
-        tech_mask = df_nse['Industry Group'].fillna('').str.lower().str.contains('software|it -|telecom|tech')
-        filtered = df_nse[tech_mask & (df_nse['clean_sales_3y'] > 20)]
-    elif type == 'portfolio-anchors':
-        # Criteria: Market Cap > 25000 Cr | Piotroski >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%
-        filtered = df_nse[
-            (df_nse['clean_mcap'] > 25000) & 
-            (df_nse['clean_piotroski'] >= 7) & 
-            (df_nse['clean_de'] < 0.8) & 
-            (df_nse['clean_roce_3y'] > 15)
-        ]
-    elif type == 'solid-large-growth':
-        # Criteria: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0
-        filtered = df_nse[
-            (df_nse['clean_mcap'] > 20000) & 
-            (df_nse['clean_sales_3y'] > 15) & 
-            (df_nse['clean_roce_3y'] > 18) & 
-            (df_nse['clean_de'] < 1.0)
-        ]
-    else:
-        filtered = pd.DataFrame(columns=df_nse.columns)
-        
-    # 6. Sort descending by market capitalization
-    filtered = filtered.sort_values(by='clean_mcap', ascending=False)
+    strategy_types = [
+        "undervalued-growth",
+        "aggressive-smallcaps",
+        "undervalued-largecaps",
+        "growth-tech",
+        "portfolio-anchors",
+        "solid-large-growth"
+    ]
     
-    # 7. Convert filtered rows to list of records
-    records = []
-    for _, row in filtered.iterrows():
-        nse_code = str(row['NSE Code']).strip()
-        records.append({
-            'symbol': nse_code,
-            'name': str(row['Name']).strip(),
-            'csvPrice': row.get('Current Price'),
-            'csvMcap': row.get('Market Capitalization'),
-            'pe': row['clean_pe'] if pd.notna(row['clean_pe']) else None,
-            'pb': row['clean_pb'] if pd.notna(row['clean_pb']) else None,
-            # Fallbacks
-            'price': row.get('Current Price'),
-            'change': 0.0,
-            'changePercent': 0.0,
-            'volume': 0,
-            'avgVolume': 0,
-            'prevClose': row.get('Current Price'),
-            'open': row.get('Current Price'),
-            'low': row.get('Current Price'),
-            'high': row.get('Current Price'),
-            'closePrices': []
-        })
+    # For each strategy, get the filtered rows
+    strategy_data = {}
+    all_symbols = set()
+    
+    for stype in strategy_types:
+        if stype == 'undervalued-growth': 
+            filtered = df_nse[
+                (df_nse['clean_sales_3y'] > 20) & 
+                (df_nse['clean_pe'] > 0) & 
+                (df_nse['clean_pe'] <= 25) & 
+                (df_nse['clean_pb'] < 4.5)
+            ]
+        elif stype == 'aggressive-smallcaps':
+            filtered = df_nse[
+                (df_nse['clean_mcap'] < 2000) & 
+                (df_nse['clean_sales_3y'] > 25) & 
+                (df_nse['clean_roce_3y'] > 12)
+            ]
+        elif stype == 'undervalued-largecaps':
+            filtered = df_nse[
+                (df_nse['clean_mcap'] > 15000) & 
+                (df_nse['clean_pe'] > 0) & 
+                (df_nse['clean_pe'] < 18) & 
+                (df_nse['clean_pb'] < 3.0)
+            ]
+        elif stype == 'growth-tech':
+            tech_mask = df_nse['Industry Group'].fillna('').str.lower().str.contains('software|it -|telecom|tech')
+            filtered = df_nse[tech_mask & (df_nse['clean_sales_3y'] > 20)]
+        elif stype == 'portfolio-anchors':
+            filtered = df_nse[
+                (df_nse['clean_mcap'] > 25000) & 
+                (df_nse['clean_piotroski'] >= 7) & 
+                (df_nse['clean_de'] < 0.8) & 
+                (df_nse['clean_roce_3y'] > 15)
+            ]
+        elif stype == 'solid-large-growth':
+            filtered = df_nse[
+                (df_nse['clean_mcap'] > 20000) & 
+                (df_nse['clean_sales_3y'] > 15) & 
+                (df_nse['clean_roce_3y'] > 18) & 
+                (df_nse['clean_de'] < 1.0)
+            ]
+        else:
+            filtered = pd.DataFrame(columns=df_nse.columns)
+            
+        filtered = filtered.sort_values(by='clean_mcap', ascending=False)
         
-    if not records:
-        return {"type": type, "quotes": []}
+        records = []
+        for _, row in filtered.iterrows():
+            nse_code = str(row['NSE Code']).strip()
+            records.append({
+                'symbol': nse_code,
+                'name': str(row['Name']).strip(),
+                'csvPrice': row.get('Current Price'),
+                'csvMcap': row.get('Market Capitalization'),
+                'pe': row['clean_pe'] if pd.notna(row['clean_pe']) else None,
+                'pb': row['clean_pb'] if pd.notna(row['clean_pb']) else None,
+                # Fallbacks
+                'price': row.get('Current Price'),
+                'change': 0.0,
+                'changePercent': 0.0,
+                'volume': 0,
+                'avgVolume': 0,
+                'prevClose': row.get('Current Price'),
+                'open': row.get('Current Price'),
+                'low': row.get('Current Price'),
+                'high': row.get('Current Price'),
+                'closePrices': []
+            })
+            all_symbols.add(nse_code)
+            
+        strategy_data[stype] = records
+
+    if not all_symbols:
+        return
         
-    # 8. Query Yahoo Finance spark endpoint in parallel/batches of 100
-    # Map NSE Codes to Yahoo symbols: e.g. "ABB" -> "ABB.NS"
-    yahoo_symbols = [r['symbol'] + '.NS' for r in records]
+    # Query Yahoo Finance spark endpoint in parallel/batches of 20
+    all_symbols_list = list(all_symbols)
+    batches = [all_symbols_list[i:i+20] for i in range(0, len(all_symbols_list), 20)]
+    
     quotes_data = {}
-    batch_size = 20
     
-    import urllib.parse
-    for i in range(0, len(yahoo_symbols), batch_size):
-        batch = yahoo_symbols[i:i+batch_size]
-        symbols_str = ",".join([urllib.parse.quote(s) for s in batch])
+    def fetch_batch(batch):
+        symbols_str = ",".join([urllib.parse.quote(s + ".NS") for s in batch])
         url = f"https://query1.finance.yahoo.com/v7/finance/spark?symbols={symbols_str}&range=1d&interval=15m"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         try:
-            with urllib.request.urlopen(req) as res:
+            with urllib.request.urlopen(req, timeout=5) as res:
                 raw_res = json.loads(res.read().decode())
                 spark_res = raw_res.get('spark', {}).get('result', [])
+                batch_quotes = {}
                 for item in spark_res:
                     sym = item.get('symbol')
                     if not sym: continue
@@ -347,7 +348,6 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
                         meta = resp_list[0].get('meta', {})
                         indicators = resp_list[0].get('indicators', {})
                         close_prices = indicators.get('quote', [{}])[0].get('close', [])
-                        # filter out None close prices
                         clean_closes = [c for c in close_prices if c is not None]
                         
                         price = meta.get('regularMarketPrice')
@@ -359,7 +359,7 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
                             change = price - prev_close
                             change_percent = (change / prev_close) * 100
                             
-                        quotes_data[clean_sym] = {
+                        batch_quotes[clean_sym] = {
                             'price': price,
                             'prevClose': prev_close,
                             'change': change,
@@ -369,44 +369,81 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
                             'low': meta.get('regularMarketDayLow', price),
                             'open': clean_closes[0] if clean_closes else price,
                             'closePrices': clean_closes,
-                            # Fetch name if available
                             'name': meta.get('longName', meta.get('shortName'))
                         }
+                return batch_quotes
         except Exception as e:
-            # print error and continue with fallbacks
-            print(f"Error fetching spark batch: {e}")
+            print(f"Error fetching spark batch in background scheduler: {e}")
+            return {}
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_batch, b) for b in batches]
+        for f in futures:
+            quotes_data.update(f.result())
+
+    # Merge Yahoo Finance data back into records and update global cache
+    now = time.time()
+    for stype, records in strategy_data.items():
+        for r in records:
+            sym = r['symbol']
+            if sym in quotes_data:
+                yd = quotes_data[sym]
+                if yd.get('price') is not None:
+                    r['price'] = yd['price']
+                    r['prevClose'] = yd['prevClose']
+                    r['change'] = yd['change']
+                    r['changePercent'] = yd['changePercent']
+                    r['volume'] = yd['volume']
+                    r['high'] = yd['high']
+                    r['low'] = yd['low']
+                    r['open'] = yd['open']
+                r['closePrices'] = yd['closePrices']
+                if yd.get('name'):
+                    r['name'] = yd['name']
             
-    # 9. Merge Yahoo Finance data back into records
-    for r in records:
-        sym = r['symbol']
-        if sym in quotes_data:
-            yd = quotes_data[sym]
-            if yd.get('price') is not None:
-                r['price'] = yd['price']
-                r['prevClose'] = yd['prevClose']
-                r['change'] = yd['change']
-                r['changePercent'] = yd['changePercent']
-                r['volume'] = yd['volume']
-                r['high'] = yd['high']
-                r['low'] = yd['low']
-                r['open'] = yd['open']
-            r['closePrices'] = yd['closePrices']
-            if yd.get('name'):
-                r['name'] = yd['name']
+            # Format market cap
+            if r['csvMcap'] is not None and not pd.isna(r['csvMcap']):
+                r['marketCap'] = float(r['csvMcap']) * 10000000
+            else:
+                r['marketCap'] = None
+                
+        STRATEGIES_CACHE[stype] = {
+            'timestamp': now,
+            'quotes': records
+        }
+
+def start_strategies_cache_scheduler():
+    def loop():
+        # wait a couple seconds on startup
+        time.sleep(2)
+        while True:
+            try:
+                update_all_strategies_cache()
+            except Exception as e:
+                print(f"Error in strategies cache scheduler: {e}")
+            time.sleep(300) # every 5 minutes
+            
+    t = threading.Thread(target=loop, daemon=True)
+    t.start()
+
+start_strategies_cache_scheduler()
+
+@router.get("/strategies-data")
+async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any]:
+    # 1. Check cache first
+    if type in STRATEGIES_CACHE:
+        return {"type": type, "quotes": STRATEGIES_CACHE[type]['quotes']}
         
-        # Format market cap to standard absolute number (CSV has it in crores, i.e., 1 Cr = 10,000,000)
-        # So we convert CSV mcap (Cr) to absolute value for formatMarketCap to work properly
-        if r['csvMcap'] is not None and not pd.isna(r['csvMcap']):
-            r['marketCap'] = float(r['csvMcap']) * 10000000
-        else:
-            r['marketCap'] = None
-            
-    # Store in cache
-    STRATEGIES_CACHE[type] = {
-        'timestamp': now,
-        'quotes': records
-    }
-    return {"type": type, "quotes": records}
+    # 2. Cold cache/startup fallback: populate synchronously
+    try:
+        update_all_strategies_cache()
+    except Exception as e:
+        print(f"Failed to populate strategies cache synchronously: {e}")
+        
+    if type in STRATEGIES_CACHE:
+        return {"type": type, "quotes": STRATEGIES_CACHE[type]['quotes']}
+        
+    return {"type": type, "quotes": []}
 
 
 # --- Admin Page Endpoints ---
@@ -667,22 +704,44 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=f"Failed to fetch financials for {symbol}: {str(e)}")
 
 
+SEARCH_STOCKS_CACHE = {
+    'mtime': 0,
+    'stocks': []
+}
+
 @router.get("/search-stocks")
 async def search_stocks_endpoint() -> dict[str, Any]:
     from backend.utils.paths import CSV_PATH
+    from backend.services.analytics import get_stock_master_raw_df
     import pandas as pd
+    
     if not CSV_PATH.exists():
         raise HTTPException(status_code=404, detail="stock_master.csv not found")
+        
     try:
-        df = pd.read_csv(CSV_PATH)
-        df_clean = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')].copy()
-        stocks = []
-        for _, row in df_clean.iterrows():
-            stocks.append({
-                "symbol": str(row['NSE Code']).strip(),
-                "name": str(row['Name']).strip()
-            })
-        stocks = sorted(stocks, key=lambda x: x['symbol'])
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = 0
+        
+    global SEARCH_STOCKS_CACHE
+    if SEARCH_STOCKS_CACHE['stocks'] and SEARCH_STOCKS_CACHE['mtime'] == current_mtime:
+        return {"stocks": SEARCH_STOCKS_CACHE['stocks']}
+        
+    try:
+        df = get_stock_master_raw_df()
+        df_clean = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')]
+        records = df_clean[['NSE Code', 'Name']].to_dict(orient='records')
+        stocks = [
+            {
+                "symbol": str(r['NSE Code']).strip(),
+                "name": str(r['Name']).strip()
+            }
+            for r in records
+        ]
+        stocks.sort(key=lambda x: x['symbol'])
+        
+        SEARCH_STOCKS_CACHE['stocks'] = stocks
+        SEARCH_STOCKS_CACHE['mtime'] = current_mtime
         return {"stocks": stocks}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
