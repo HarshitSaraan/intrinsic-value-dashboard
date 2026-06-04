@@ -516,13 +516,13 @@
     var tooltip = app.querySelector('#ivSectorValuationTooltip');
     if (!canvas || !tooltip) return;
 
-    canvas.onmousemove = function (e) {
+    function handleHover(clientX, clientY) {
       var points = canvas._chartPoints;
       if (!points || !points.length) return;
 
       var rect = canvas.getBoundingClientRect();
-      var mx = e.clientX - rect.left;
-      var my = e.clientY - rect.top;
+      var mx = clientX - rect.left;
+      var my = clientY - rect.top;
 
       // Find closest horizontal point
       var closest = null;
@@ -562,12 +562,12 @@
         
         // Position tooltip near cursor
         var tooltipRect = tooltip.getBoundingClientRect();
-        var tx = e.clientX + 15;
-        var ty = e.clientY - 25;
+        var tx = clientX + 15;
+        var ty = clientY - 25;
         
         // Prevent going off screen
         if (tx + tooltipRect.width > window.innerWidth) {
-          tx = e.clientX - tooltipRect.width - 15;
+          tx = clientX - tooltipRect.width - 15;
         }
         if (ty + tooltipRect.height > window.innerHeight) {
           ty = window.innerHeight - tooltipRect.height - 10;
@@ -576,15 +576,41 @@
         tooltip.style.left = tx + 'px';
         tooltip.style.top = ty + 'px';
       }
-    };
+    }
 
-    canvas.onmouseleave = function () {
+    function handleLeave() {
       if (hoverPoint !== null) {
         hoverPoint = null;
         drawSectorChart(currentSector);
       }
       tooltip.style.display = 'none';
+    }
+
+    canvas.onmousemove = function (e) {
+      handleHover(e.clientX, e.clientY);
     };
+
+    canvas.onmouseleave = handleLeave;
+
+    // Mobile touch events for smooth crosshair gliding
+    canvas.addEventListener('touchstart', function (e) {
+      if (e.touches.length) {
+        var t = e.touches[0];
+        handleHover(t.clientX, t.clientY);
+      }
+    }, { passive: true });
+
+    canvas.addEventListener('touchmove', function (e) {
+      if (e.touches.length) {
+        if (e.cancelable) e.preventDefault(); // Prevent scrolling while interacting with chart
+        var t = e.touches[0];
+        handleHover(t.clientX, t.clientY);
+      }
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', function () {
+      handleLeave();
+    });
   }
 
   // Update Statistics Box values
@@ -615,6 +641,10 @@
     var titleEl = app.querySelector('#ivSelectedSectorTitle');
     if (titleEl) titleEl.textContent = sectorName;
 
+    // Make sure section is visible FIRST so canvas layout width is calculated correctly
+    var chartSection = app.querySelector('#ivSectorChartSection');
+    if (chartSection) chartSection.style.display = 'block';
+
     // Redraw graph
     drawSectorChart(sectorName);
 
@@ -643,10 +673,6 @@
         btn.classList.remove('active');
       }
     });
-
-    // Make sure section is visible
-    var chartSection = app.querySelector('#ivSectorChartSection');
-    if (chartSection) chartSection.style.display = 'block';
   }
 
   // Render Sector selection buttons
