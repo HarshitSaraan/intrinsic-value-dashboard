@@ -90,7 +90,8 @@
     c.beginPath();
     c.arc(x(f.date),y(f.value),5,0,Math.PI*2);
     c.fill();
-    canvas._pts=pts.map(function(p){return{x:x(p.date),date:p.date,deployed:p.deployed,value:p.value,label:p.label};});
+    canvas._pts=pts.map(function(p){return{x:x(p.date),yDeployed:y(p.deployed),yValue:y(p.value),date:p.date,deployed:p.deployed,value:p.value,label:p.label};});
+    canvas._ptsData = pts;
   }
   function drawSummary(canvas,s){
     var d=setupCanvas(canvas);
@@ -120,6 +121,7 @@
       c.fillText(v.label,x,h-22);
     });
     canvas._bars=b.map(function(v,i){return{x:pL+i*(bw+gap),w:bw,label:v.label,value:v.value};});
+    canvas._sData = s;
   }
   document.addEventListener("DOMContentLoaded",function(){
     var body=q("ivXirrCashflowBody"),add=q("ivXirrAddRow"),cc=q("ivXirrCurrentCapital"),vd=q("ivXirrValuationDate");
@@ -267,8 +269,31 @@
     calc.addEventListener("click",run);
     if(reset)reset.addEventListener("click",resetAll);
     [cc,vd].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
-    function move(canvas,mode,e){if(!tt||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="journey"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;}); if(d)tt.innerHTML="<b>"+d.label+"</b><br>Date: "+d.date.toISOString().slice(0,10)+"<br>Net deployed: "+formatINR(d.deployed)+(d.value!==null?"<br>Current value: "+formatINR(d.value):"");} if(mode==="summary"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;}); if(d)tt.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);} if(!d){tt.style.display="none";return;} tt.style.display="block"; tt.style.left=Math.min(e.clientX+12,window.innerWidth-260)+"px"; tt.style.top=Math.max(e.clientY-18,10)+"px";}
-    if(jc){jc.addEventListener("mousemove",function(e){move(jc,"journey",e);}); jc.addEventListener("mouseleave",function(){tt.style.display="none";});}
-    if(sc){sc.addEventListener("mousemove",function(e){move(sc,"summary",e);}); sc.addEventListener("mouseleave",function(){tt.style.display="none";});}
+    function move(canvas,mode,e){if(!tt||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="journey"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="summary"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tt.style.display="none";return;}
+      if(mode==="journey"&&canvas._ptsData) drawJourney(canvas, canvas._ptsData);
+      if(mode==="summary"&&canvas._sData) drawSummary(canvas, canvas._sData);
+      var ctx=canvas.getContext("2d");
+      var w=canvas.width/(window.devicePixelRatio||1);
+      var h=canvas.height/(window.devicePixelRatio||1);
+      if(mode==="journey"){
+        ctx.strokeStyle="rgba(255,255,255,0.2)"; ctx.lineWidth=1; ctx.beginPath();
+        if(ctx.setLineDash) ctx.setLineDash([3,3]);
+        ctx.moveTo(d.x,18); ctx.lineTo(d.x,h-36); ctx.stroke();
+        if(ctx.setLineDash) ctx.setLineDash([]);
+        
+        ctx.fillStyle="#4C8DFF"; ctx.beginPath(); ctx.arc(d.x,d.yDeployed,4.5,0,Math.PI*2); ctx.fill(); ctx.strokeStyle="rgba(255,255,255,0.4)"; ctx.lineWidth=1.5; ctx.stroke();
+        if(d.value!==null&&isFinite(d.yValue)){
+          ctx.fillStyle="#D4AF37"; ctx.beginPath(); ctx.arc(d.x,d.yValue,5.5,0,Math.PI*2); ctx.fill(); ctx.strokeStyle="rgba(255,255,255,0.4)"; ctx.lineWidth=1.5; ctx.stroke();
+        }
+        tt.innerHTML="<b>"+d.label+"</b><br>Date: "+d.date.toISOString().slice(0,10)+"<br>Net deployed: "+formatINR(d.deployed)+(d.value!==null?"<br>Current value: "+formatINR(d.value):"");
+      }
+      if(mode==="summary"){
+        ctx.fillStyle="rgba(255,255,255,0.08)";
+        ctx.fillRect(d.x-2,18,d.w+4,h-18-48);
+        tt.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);
+      }
+      tt.style.display="block"; tt.style.left=Math.min(e.clientX+12,window.innerWidth-260)+"px"; tt.style.top=Math.max(e.clientY-18,10)+"px";}
+    if(jc){jc.addEventListener("mousemove",function(e){move(jc,"journey",e);}); jc.addEventListener("mouseleave",function(){tt.style.display="none"; if(jc._ptsData) drawJourney(jc, jc._ptsData);});}
+    if(sc){sc.addEventListener("mousemove",function(e){move(sc,"summary",e);}); sc.addEventListener("mouseleave",function(){tt.style.display="none"; if(sc._sData) drawSummary(sc, sc._sData);});}
   });
 })();

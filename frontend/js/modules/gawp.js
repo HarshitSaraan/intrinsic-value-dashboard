@@ -14,7 +14,8 @@
     c.beginPath(); pts.forEach(function(p,i){var xx=x(i),yy=y(p.value); if(i===0)c.moveTo(xx,yy); else {var px=x(i-1),py=y(pts[i-1].value),mx=(px+xx)/2; c.bezierCurveTo(mx,py,mx,yy,xx,yy);} }); c.strokeStyle="#D4AF37"; c.lineWidth=3; c.lineCap="round"; c.lineJoin="round"; c.stroke();
     c.fillStyle="#4C8DFF"; c.beginPath(); c.arc(x(0),y(result.capital),4.5,0,Math.PI*2); c.fill();
     c.fillStyle="#D4AF37"; c.beginPath(); c.arc(x(pts.length-1),y(result.futureValue),5,0,Math.PI*2); c.fill();
-    canvas._bars=pts.map(function(p,i){return{x:x(i),w:12,label:"Age "+p.year,value:p.value};});
+    canvas._bars=pts.map(function(p,i){return{x:x(i),yValue:y(p.value),w:12,label:"Age "+p.year,value:p.value};});
+    canvas._result=result;
   }
   document.addEventListener("DOMContentLoaded", function(){
     var age=q("ivGawpAge"),cap=q("ivGawpCapital"),cagr=q("ivGawpCagr"),adj=q("ivGawpAdjustCagr");
@@ -150,14 +151,26 @@
       chart.addEventListener("mousemove",function(e){
         if(!tip||!chart._bars)return;
         var r=chart.getBoundingClientRect(),x=e.clientX-r.left,d=null;
-        chart._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});
+        chart._bars.forEach(function(b){if(!d||Math.abs(b.x-x)<Math.abs(d.x-x))d=b;});
         if(!d){tip.style.display="none";return;}
+        if(chart._result) draw(chart, chart._result);
+        var ctx=chart.getContext("2d");
+        var w=chart.width/(window.devicePixelRatio||1);
+        var h=chart.height/(window.devicePixelRatio||1);
+        ctx.strokeStyle="rgba(255,255,255,0.2)"; ctx.lineWidth=1; ctx.beginPath();
+        if(ctx.setLineDash) ctx.setLineDash([3,3]);
+        ctx.moveTo(d.x,18); ctx.lineTo(d.x,h-36); ctx.stroke();
+        if(ctx.setLineDash) ctx.setLineDash([]);
+        ctx.fillStyle="#D4AF37"; ctx.beginPath(); ctx.arc(d.x,d.yValue,5.5,0,Math.PI*2); ctx.fill(); ctx.strokeStyle="rgba(255,255,255,0.4)"; ctx.lineWidth=1.5; ctx.stroke();
         tip.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);
         tip.style.display="block";
         tip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px";
         tip.style.top=Math.max(e.clientY-18,10)+"px";
       });
-      chart.addEventListener("mouseleave",function(){if(tip)tip.style.display="none";});
+      chart.addEventListener("mouseleave",function(){
+        if(tip)tip.style.display="none";
+        if(chart._result) draw(chart, chart._result);
+      });
     }
 
 

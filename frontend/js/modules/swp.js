@@ -167,8 +167,9 @@
     ctx.stroke();
 
     lineCanvas._ivSwpPoints = rows.map(function (row, index) {
-      return { x: xAt(index), year: row.year, opening: row.opening, withdrawal: row.withdrawal, growth: row.growth, closing: row.closing };
+      return { x: xAt(index), yClosing: yAt(row.closing), year: row.year, opening: row.opening, withdrawal: row.withdrawal, growth: row.growth, closing: row.closing };
     });
+    lineCanvas._rows = rows;
   }
 
   function drawBarChart(barCanvas, rows) {
@@ -198,6 +199,7 @@
     barCanvas._ivSwpBars = visibleRows.map(function (row, index) {
       return { x: padL + index * (groupW + gap), w: groupW, year: row.year, opening: row.opening, withdrawal: row.withdrawal, growth: row.growth, closing: row.closing };
     });
+    barCanvas._rows = rows;
   }
 
   function bindTooltip(tooltip, canvas, mode) {
@@ -214,12 +216,39 @@
         canvas._ivSwpBars.forEach(function (bar) { if (x >= bar.x && x <= bar.x + bar.w) data = bar; });
       }
       if (!data) { tooltip.style.display = "none"; return; }
+      
+      if (canvas._rows) {
+        if (mode === "line") drawLineChart(canvas, canvas._rows);
+        else drawBarChart(canvas, canvas._rows);
+      }
+      
+      var ctx = canvas.getContext("2d");
+      var w = canvas.width / (window.devicePixelRatio || 1);
+      var h = canvas.height / (window.devicePixelRatio || 1);
+      if (mode === "line") {
+        ctx.strokeStyle = "rgba(255,255,255,0.2)"; ctx.lineWidth = 1; ctx.beginPath();
+        if (ctx.setLineDash) ctx.setLineDash([3, 3]);
+        ctx.moveTo(data.x, 18); ctx.lineTo(data.x, h - 36); ctx.stroke();
+        if (ctx.setLineDash) ctx.setLineDash([]);
+        
+        ctx.fillStyle = "#D4AF37"; ctx.beginPath(); ctx.arc(data.x, data.yClosing, 5.5, 0, Math.PI * 2); ctx.fill(); ctx.strokeStyle = "rgba(255,255,255,0.4)"; ctx.lineWidth = 1.5; ctx.stroke();
+      } else {
+        ctx.fillStyle = "rgba(255,255,255,0.08)";
+        ctx.fillRect(data.x - 2, 18, data.w + 4, h - 18 - 36);
+      }
+      
       tooltip.innerHTML = "<b>Year " + data.year + "</b><br>Opening: " + formatINR(data.opening) + "<br>Withdrawal: " + formatINR(data.withdrawal) + "<br>Growth: " + formatINR(data.growth) + "<br>Closing: " + formatINR(data.closing);
       tooltip.style.display = "block";
       tooltip.style.left = Math.min(event.clientX + 12, window.innerWidth - 250) + "px";
       tooltip.style.top = Math.max(event.clientY - 18, 10) + "px";
     });
-    canvas.addEventListener("mouseleave", function () { tooltip.style.display = "none"; });
+    canvas.addEventListener("mouseleave", function () {
+      tooltip.style.display = "none";
+      if (canvas._rows) {
+        if (mode === "line") drawLineChart(canvas, canvas._rows);
+        else drawBarChart(canvas, canvas._rows);
+      }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
