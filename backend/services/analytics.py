@@ -1228,28 +1228,28 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             "total": valuation_total,
             "parameters": [
                 {
-                    "name": "P/B Ratio vs Sector Median",
+                    "name": "Peer analysis",
                     "value": stock_pb,
                     "displayValue": f"{stock_pb}x (Sector Median: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
                     "threshold": "P/B < Sector Median P/B (1), P/B > Sector Median P/B (0)",
                     "score": v1_score
                 },
                 {
-                    "name": "P/S Ratio vs Sector Median",
+                    "name": "Revenue analysis",
                     "value": stock_ps,
                     "displayValue": f"{stock_ps}x (Sector Median: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
                     "threshold": "P/S < Sector Median P/S (1), P/S > Sector Median P/S (0)",
                     "score": v2_score
                 },
                 {
-                    "name": "Current Price vs Graham Number",
+                    "name": "Graham analysis",
                     "value": cmp_val,
                     "displayValue": f"CMP: {cmp_val} (Graham: {graham_val})" if cmp_val is not None and graham_val is not None else "N/A",
                     "threshold": "CMP < Graham (1), Graham <= CMP <= Graham * 1.5 (0), CMP > Graham * 1.5 (-1)",
                     "score": v3_score
                 },
                 {
-                    "name": "Current Price vs Intrinsic Value",
+                    "name": "Intrinsic value analysis",
                     "value": cmp_val,
                     "displayValue": f"CMP: {cmp_val} (Intrinsic: {iv_val})" if cmp_val is not None and iv_val is not None else "N/A",
                     "threshold": "CMP < Intrinsic (1), Intrinsic <= CMP <= Intrinsic * 1.5 (0), CMP > Intrinsic * 1.5 (-1)",
