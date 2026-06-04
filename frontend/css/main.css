@@ -1894,7 +1894,9 @@ html:not([data-theme="dark"]) .iv-status {
   color: #101828 !important;
 }
 
-html:not([data-theme="dark"]) .iv-note {
+html:not([data-theme="dark"]) .iv-note,
+html:not([data-theme="dark"]) .iv-xirr-message,
+html:not([data-theme="dark"]) .iv-market-message {
   background: #F8FAFC !important;
   border: 1px solid #E4E7EC !important;
   color: #667085 !important;
