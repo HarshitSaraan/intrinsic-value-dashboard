@@ -1,3 +1,86 @@
+// Global canvas drawing hook to align chart colors dynamically in Light Mode
+(function() {
+  var originalGetContext = HTMLCanvasElement.prototype.getContext;
+  HTMLCanvasElement.prototype.getContext = function(type, contextAttributes) {
+    var ctx = originalGetContext.call(this, type, contextAttributes);
+    if (type === '2d' && ctx && !ctx._ivHooked) {
+      ctx._ivHooked = true;
+      
+      var isDark = function() {
+        return document.documentElement.getAttribute("data-theme") === "dark";
+      };
+      
+      // Override strokeStyle
+      var strokeDesc = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, 'strokeStyle') ||
+                       Object.getOwnPropertyDescriptor(Object.getPrototypeOf(ctx), 'strokeStyle');
+      if (strokeDesc && strokeDesc.set) {
+        var origStrokeSet = strokeDesc.set;
+        Object.defineProperty(ctx, 'strokeStyle', {
+          set: function(val) {
+            if (!isDark() && typeof val === 'string') {
+              var clean = val.replace(/\s+/g, '').toLowerCase();
+              if (clean.indexOf('rgba(255,255,255,0.0') >= 0 || clean.indexOf('rgba(255,255,255,0.1') >= 0) {
+                val = '#E4E7EC'; // Design system border color for gridlines
+              } else if (clean.indexOf('rgba(255,255,255,') >= 0) {
+                val = 'rgba(16, 24, 40, 0.15)';
+              } else if (clean === '#4c8dff' || clean === '#3a9ad9') {
+                val = '#1D2939'; // Navy stroke line for primary series
+              } else if (clean === '#d4af37' || clean === '#f1bf6c') {
+                val = '#125B54'; // Teal stroke line for secondary series
+              }
+            }
+            origStrokeSet.call(this, val);
+          },
+          get: strokeDesc.get,
+          configurable: true
+        });
+      }
+      
+      // Override fillStyle
+      var fillDesc = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, 'fillStyle') ||
+                     Object.getOwnPropertyDescriptor(Object.getPrototypeOf(ctx), 'fillStyle');
+      if (fillDesc && fillDesc.set) {
+        var origFillSet = fillDesc.set;
+        Object.defineProperty(ctx, 'fillStyle', {
+          set: function(val) {
+            if (!isDark() && typeof val === 'string') {
+              var clean = val.replace(/\s+/g, '').toLowerCase();
+              if (clean.indexOf('rgba(203,213,232,') >= 0) {
+                val = '#667085'; // Secondary text/muted for labels
+              } else if (clean === '#4c8dff' || clean === '#3a9ad9') {
+                val = '#1D2939'; // Navy fill bar / dot
+              } else if (clean === '#d4af37' || clean === '#f1bf6c') {
+                val = '#125B54'; // Teal fill bar / dot
+              }
+            }
+            origFillSet.call(this, val);
+          },
+          get: fillDesc.get,
+          configurable: true
+        });
+      }
+      
+      // Override font
+      var fontDesc = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, 'font') ||
+                     Object.getOwnPropertyDescriptor(Object.getPrototypeOf(ctx), 'font');
+      if (fontDesc && fontDesc.set) {
+        var origFontSet = fontDesc.set;
+        Object.defineProperty(ctx, 'font', {
+          set: function(val) {
+            if (!isDark() && typeof val === 'string') {
+              val = val.replace(/Poppins/g, 'Manrope').replace(/Inter/g, 'Manrope');
+            }
+            origFontSet.call(this, val);
+          },
+          get: fontDesc.get,
+          configurable: true
+        });
+      }
+    }
+    return ctx;
+  };
+})();
+
 (function () {
   function getLogoSrc() {
     var isFile = window.location.protocol === 'file:';

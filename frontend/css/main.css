@@ -1,66 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Shared shell styles for modular frontend pages. */
 :root {
   /* Brand Colors */
-  --primary: #083838;
-  --secondary: #125B54;
-  --accent: #17756C;
+  --primary: #101828;
+  --secondary: #667085;
+  --accent: #E5FFFB;
 
   /* Backgrounds */
   --background: #FFFFFF;
 
   /* Text */
-  --text-primary: #17756C;
-  --text-secondary: #125B54;
+  --text-primary: #000000;
+  --text-secondary: #667085;
 
   /* Links */
-  --link: #17756C;
+  --link: #1D2939;
 
   /* Optional Derived Colors */
-  --primary-light: #0E4A4A;
-  --secondary-light: #1A7268;
-  --accent-light: #249082;
+  --primary-light: #1D2939;
+  --secondary-light: #7E8B9F;
+  --accent-light: #C0FFF4;
 
-  --primary-dark: #052626;
-  --secondary-dark: #0D433D;
-  --accent-dark: #115A53;
+  --primary-dark: #090E17;
+  --secondary-dark: #4A5260;
+  --accent-dark: #9BFFE9;
 
   /* Borders & Surfaces */
-  --border: #D9E5E3;
-  --surface: #F8FBFB;
+  --border: #E4E7EC;
+  --surface: #F8FAFC;
 
   /* Map the application variables to these brand colors */
   color-scheme: light;
   --iv-bg: var(--background);
   --iv-bg-rgb: 255, 255, 255;
   --iv-bg-alt: var(--surface);
-  --iv-bg-alt-rgb: 248, 251, 251;
+  --iv-bg-alt-rgb: 248, 250, 252;
   --iv-bg-gradient-3: var(--border);
-  --iv-accent: var(--accent);
-  --iv-accent-rgb: 23, 117, 108;
-  --iv-accent-light: var(--accent-light);
-  --iv-accent-light-rgb: 36, 144, 130;
+  --iv-accent: #1D2939;
+  --iv-accent-rgb: 29, 41, 57;
+  --iv-accent-light: var(--secondary);
+  --iv-accent-light-rgb: 102, 112, 133;
   
-  --iv-text: var(--primary);
-  --iv-text-rgb: 8, 56, 56;
+  --iv-text: var(--text-primary);
+  --iv-text-rgb: 0, 0, 0;
   --iv-text-secondary: var(--text-secondary);
-  --iv-text-secondary-rgb: 18, 91, 84;
-  --iv-text-muted: var(--text-primary);
-  --iv-text-muted-rgb: 23, 117, 108;
+  --iv-text-secondary-rgb: 102, 112, 133;
+  --iv-text-muted: var(--text-secondary);
+  --iv-text-muted-rgb: 102, 112, 133;
 
   --iv-card-bg: var(--background);
-  --iv-border-accent: rgba(23, 117, 108, 0.18);
+  --iv-border-accent: var(--border);
   --iv-border-subtle: var(--border);
 
-  --iv-success: #2E7D32;
-  --iv-success-rgb: 46, 125, 50;
-  --iv-danger: #C62828;
-  --iv-danger-rgb: 198, 40, 40;
-  --iv-warning: #F57F17;
-  --iv-warning-rgb: 245, 127, 23;
-  --iv-info: #1565C0;
-  --iv-info-rgb: 21, 101, 192;
+  --iv-success: #12B76A;
+  --iv-success-rgb: 18, 183, 106;
+  --iv-danger: #FDA29B;
+  --iv-danger-rgb: 253, 162, 155;
+  --iv-warning: #FEC84B;
+  --iv-warning-rgb: 254, 200, 75;
+  --iv-info: #2E90FA;
+  --iv-info-rgb: 46, 144, 250;
 
   /* Legacy variables mapped to the new theme system */
   --iv-gold-1: var(--iv-accent);
@@ -74,8 +74,8 @@
   --iv-cream: var(--iv-text);
   --iv-border: var(--border);
   --iv-card: var(--iv-card-bg);
-  --iv-shadow: 0 8px 24px rgba(8, 56, 56, 0.08);
-  --iv-radius: 18px;
+  --iv-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  --iv-radius: 8px;
 }
 
 [data-theme="dark"] {
@@ -1686,36 +1686,40 @@
 html:not([data-theme="dark"]) body,
 html:not([data-theme="dark"]) #iv-dashboard-app,
 html:not([data-theme="dark"]) :root {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Manrope', 'Google Sans', sans-serif !important;
   background: #FFFFFF !important;
-  color: #125B54 !important;
+  color: #101828 !important;
+  font-size: 15px !important;
 }
 
 html:not([data-theme="dark"]) h1 {
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 62px !important;
-  color: #17756C !important;
+  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  font-size: 48px !important;
+  color: #101828 !important;
+  font-weight: 600 !important;
 }
 
 html:not([data-theme="dark"]) h2,
 html:not([data-theme="dark"]) .iv-section-title h2,
 html:not([data-theme="dark"]) .iv-hero h2 {
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 36px !important;
-  color: #17756C !important;
+  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  font-size: 24px !important;
+  color: #101828 !important;
+  font-weight: 600 !important;
 }
 
 html:not([data-theme="dark"]) h3,
 html:not([data-theme="dark"]) h4,
 html:not([data-theme="dark"]) h5,
 html:not([data-theme="dark"]) h6 {
-  font-family: 'Open Sans', sans-serif !important;
-  color: #17756C !important;
+  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  color: #101828 !important;
+  font-weight: 600 !important;
 }
 
 html:not([data-theme="dark"]) p {
-  color: #125B54 !important;
-  font-size: 14px !important;
+  color: #667085 !important;
+  font-size: 15px !important;
 }
 
 /* Spacing and border radius overrides (Base unit 4px, border radius 8px) */
@@ -1735,91 +1739,108 @@ html:not([data-theme="dark"]) .iv-ranking-mini {
   border-radius: 8px !important;
 }
 
-/* Component Styling: Primary Buttons (#17756C with white text) */
+/* Component Styling: Primary Buttons (Soft mint bg #E5FFFB with dark text #101828) */
 html:not([data-theme="dark"]) .iv-primary-btn {
-  background: #17756C !important;
-  color: #FFFFFF !important;
-  box-shadow: none !important;
-  border: 0 !important;
+  background: #E5FFFB !important;
+  color: #101828 !important;
+  box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05) !important;
+  border: 1px solid #E4E7EC !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
 }
 
 html:not([data-theme="dark"]) .iv-primary-btn:hover {
-  background: #125B54 !important; /* Slightly darker teal */
+  background: #C4FFF6 !important;
+  transform: translateY(-1px) !important;
 }
 
-/* Component Styling: Secondary Buttons (transparent/white bg with #17756C text) */
+/* Component Styling: Secondary Buttons (Dark navy bg #1D2939 with white text) */
 html:not([data-theme="dark"]) .iv-secondary-btn {
-  background: #FFFFFF !important;
-  color: #17756C !important;
-  border: 1px solid #D9E5E3 !important;
-  box-shadow: none !important;
+  background: #1D2939 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1D2939 !important;
+  box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
 }
 
 html:not([data-theme="dark"]) .iv-secondary-btn:hover {
-  background: #F8FBFB !important;
-  border-color: #17756C !important;
+  background: #101828 !important;
+  border-color: #101828 !important;
+  transform: translateY(-1px) !important;
 }
 
-/* Component Styling: Inputs (white bg, subtle #D9E5E3 border, 8px radius) */
+/* Component Styling: Inputs (white bg, subtle #E4E7EC border, 8px radius) */
 html:not([data-theme="dark"]) .iv-field input,
 html:not([data-theme="dark"]) .iv-field select {
   background: #FFFFFF !important;
-  border: 1px solid #D9E5E3 !important;
-  color: #083838 !important;
+  border: 1px solid #E4E7EC !important;
+  color: #101828 !important;
+  transition: all 0.2s ease !important;
+}
+
+html:not([data-theme="dark"]) .iv-field input:focus,
+html:not([data-theme="dark"]) .iv-field select:focus {
+  border-color: #E5FFFB !important;
+  box-shadow: 0 0 0 3px rgba(229, 255, 251, 0.6) !important;
 }
 
 html:not([data-theme="dark"]) .iv-field input::placeholder {
-  color: #AAB6CC !important;
+  color: #667085 !important;
 }
 
 /* Component Styling: Cards (white bg with soft borders and subtle shadows) */
 html:not([data-theme="dark"]) .iv-card {
   background: #FFFFFF !important;
-  border: 1px solid #D9E5E3 !important;
-  box-shadow: 0 4px 12px rgba(8, 56, 56, 0.04) !important;
+  border: 1px solid #E4E7EC !important;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05) !important;
+  padding: 20px !important;
 }
 
 /* Component Styling: Navigation Sidebar (clean white bg with teal accents) */
 html:not([data-theme="dark"]) .iv-sidebar {
   background: #FFFFFF !important;
-  border-right: 1px solid #D9E5E3 !important;
-  box-shadow: 0 4px 20px rgba(8, 56, 56, 0.06) !important;
+  border-right: 1px solid #E4E7EC !important;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05) !important;
 }
 
 html:not([data-theme="dark"]) .iv-brand {
-  border-bottom: 1px solid #D9E5E3 !important;
+  border-bottom: 1px solid #E4E7EC !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-group-btn {
-  color: #125B54 !important;
+  color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-group-btn:hover {
-  color: #17756C !important;
+  color: #667085 !important;
+  background: #F8FAFC !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-group-btn.active {
-  color: #17756C !important;
+  color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-btn {
-  color: #125B54 !important;
+  color: #667085 !important;
+  font-weight: 500 !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-btn:hover {
-  background: rgba(23, 117, 108, 0.04) !important;
-  color: #17756C !important;
+  background: #F8FAFC !important;
+  color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) .iv-nav-btn.active {
-  background: rgba(23, 117, 108, 0.08) !important;
-  border-color: rgba(23, 117, 108, 0.3) !important;
-  color: #17756C !important;
+  background: #E5FFFB !important;
+  border-color: #E5FFFB !important;
+  color: #101828 !important;
+  font-weight: 600 !important;
 }
 
-/* Component Styling: Tables (light, professional, investor-dashboard style) */
+/* Component Styling: Tables (Institutional-grade dashboard styling) */
 html:not([data-theme="dark"]) .iv-table-wrap {
-  border: 1px solid #D9E5E3 !important;
+  border: 1px solid #E4E7EC !important;
 }
 
 html:not([data-theme="dark"]) table {
@@ -1827,77 +1848,84 @@ html:not([data-theme="dark"]) table {
 }
 
 html:not([data-theme="dark"]) th {
-  background: #F8FBFB !important;
-  color: #125B54 !important;
-  font-weight: 700;
-  border-bottom: 2px solid #D9E5E3 !important;
+  background: #F8FAFC !important;
+  color: #667085 !important;
+  font-weight: 600 !important;
+  border-bottom: 1.5px solid #E4E7EC !important;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+  padding: 14px 12px !important;
 }
 
 html:not([data-theme="dark"]) td {
-  color: #125B54 !important;
-  border-bottom: 1px solid #D9E5E3 !important;
+  color: #101828 !important;
+  border-bottom: 1px solid #E4E7EC !important;
+  padding: 14px 12px !important;
+  font-size: 14px !important;
 }
 
 html:not([data-theme="dark"]) tr:hover td {
-  background: #F8FBFB !important;
+  background: #F8FAFC !important;
 }
 
 /* Links & Active States */
 html:not([data-theme="dark"]) a:not(.iv-nav-btn):not(.iv-brand-link):not(.iv-nav-group-btn) {
-  color: #17756C !important;
+  color: #1D2939 !important;
 }
 
 html:not([data-theme="dark"]) a:not(.iv-nav-btn):not(.iv-brand-link):not(.iv-nav-group-btn):hover {
-  color: #125B54 !important;
+  color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) .iv-link,
 html:not([data-theme="dark"]) a.iv-link {
-  color: #17756C !important;
+  color: #1D2939 !important;
 }
 
 html:not([data-theme="dark"]) .iv-link:hover,
 html:not([data-theme="dark"]) a.iv-link:hover {
-  color: #125B54 !important;
+  color: #101828 !important;
 }
 
 /* Status Badges & Alerts */
 html:not([data-theme="dark"]) .iv-status {
-  background: rgba(23, 117, 108, 0.08) !important;
-  border: 1px solid rgba(23, 117, 108, 0.2) !important;
-  color: #17756C !important;
+  background: #E5FFFB !important;
+  border: 1px solid #E4E7EC !important;
+  color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) .iv-note {
-  background: #F8FBFB !important;
-  border: 1px solid #D9E5E3 !important;
-  color: #125B54 !important;
+  background: #F8FAFC !important;
+  border: 1px solid #E4E7EC !important;
+  color: #667085 !important;
 }
 
 html:not([data-theme="dark"]) .iv-menu-btn {
   background: #FFFFFF !important;
-  color: #17756C !important;
-  border: 1px solid #D9E5E3 !important;
+  color: #101828 !important;
+  border: 1px solid #E4E7EC !important;
 }
 
 html:not([data-theme="dark"]) .iv-ranking-mini {
   background: #FFFFFF !important;
-  border: 1px solid #D9E5E3 !important;
+  border: 1px solid #E4E7EC !important;
 }
 
 /* Specific details drawer overrides */
 html:not([data-theme="dark"]) .iv-drawer-content {
   background: #FFFFFF !important;
-  border-left: 1px solid #D9E5E3 !important;
-  color: #125B54 !important;
+  border-left: 1px solid #E4E7EC !important;
+  color: #101828 !important;
+  box-shadow: -10px 0 30px rgba(16, 24, 40, 0.05) !important;
 }
 
 html:not([data-theme="dark"]) .iv-drawer-header {
-  border-bottom: 1px solid #D9E5E3 !important;
+  border-bottom: 1px solid #E4E7EC !important;
 }
 
 html:not([data-theme="dark"]) .iv-drawer-stock-codes span {
-  background: #F8FBFB !important;
-  color: #17756C !important;
-  border: 1px solid #D9E5E3 !important;
+  background: #F8FAFC !important;
+  color: #101828 !important;
+  border: 1px solid #E4E7EC !important;
 }
