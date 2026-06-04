@@ -22,12 +22,11 @@
 .iv-xirr-page .iv-xirr-dot{ width:9px; height:9px; border-radius:999px; display:inline-block; }
 .iv-xirr-page .iv-xirr-dot.blue{background:var(--iv-info);} .iv-xirr-page .iv-xirr-dot.gold{background:var(--iv-accent);} .iv-xirr-page .iv-xirr-dot.green{background:var(--iv-success);} .iv-xirr-page .iv-xirr-dot.red{background:var(--iv-danger);}
 .iv-xirr-page .iv-table-wrap{ overflow:auto; } .iv-xirr-page table{ width:100%; border-collapse:collapse; } .iv-xirr-page th,.iv-xirr-page td{ border-bottom:1px solid rgba(255,255,255,.08); padding:8px; text-align:left; font-size:12px;}
-.iv-xirr-page .iv-xirr-tooltip{ position:absolute; display:none; pointer-events:none; z-index:80; max-width:250px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
+.iv-xirr-page .iv-xirr-tooltip{ position:fixed; display:none; pointer-events:none; z-index:80; max-width:250px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
 @media (max-width:900px){
   .iv-xirr-page .iv-grid.two,
   .iv-xirr-page .iv-form-grid,
-  .iv-xirr-page .iv-xirr-results,
-  .iv-xirr-page .iv-xirr-layout-wrapper.calculated {
+  .iv-xirr-page .iv-xirr-results {
     grid-template-columns:minmax(0,1fr);
   }
 }
@@ -38,14 +37,6 @@
   max-width: 100%;
   margin: 0 0 24px 0;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.iv-xirr-page .iv-xirr-layout-wrapper.calculated {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 100%;
-  margin-bottom: 14px;
 }
 
 .iv-xirr-page .iv-xirr-inputs-area {
@@ -63,11 +54,6 @@
 .iv-xirr-page .iv-xirr-reveal-section.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Stacks input cards vertically on left side when calculated */
-.iv-xirr-page .iv-xirr-layout-wrapper.calculated #ivXirrInputsGrid {
-  grid-template-columns: minmax(0, 1fr) !important;
 }
 
 /* Specific XIRR summary results colors */

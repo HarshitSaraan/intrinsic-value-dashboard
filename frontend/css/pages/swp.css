@@ -176,7 +176,7 @@
 }
 
 .iv-swp-page .iv-swp-tooltip {
-  position: absolute;
+  position: fixed;
   display: none;
   pointer-events: none;
   z-index: 80;

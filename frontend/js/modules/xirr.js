@@ -9,18 +9,116 @@
   function bindDelete(row,body){var b=row.querySelector(".iv-xirr-delete"); if(!b||b._ivBound)return; b._ivBound=true; b.addEventListener("click",function(){var rows=body.querySelectorAll(".iv-xirr-cashflow-row"); if(rows.length<=1){row.querySelectorAll("input").forEach(function(i){i.value="";});}else row.remove();});}
   function npv(rate,cfs){var start=cfs[0].date; return cfs.reduce(function(sum,cf){var y=(cf.date-start)/(365.25*24*60*60*1000); return sum+cf.amount/Math.pow(1+rate,y);},0);}
   function calcRate(cfs){var low=-0.999999,high=10,nl=npv(low,cfs),nh=npv(high,cfs),k=0; while(nl*nh>0&&k<30){high=high*2+1;nh=npv(high,cfs);k++;} if(!isFinite(nl)||!isFinite(nh)||nl*nh>0) return null; for(var i=0;i<120;i++){var mid=(low+high)/2,nm=npv(mid,cfs); if(!isFinite(nm))return null; if(Math.abs(nm)<0.000001)return mid; if(nl*nm<=0){high=mid;nh=nm;}else{low=mid;nl=nm;}} return (low+high)/2;}
-  function perf(x){ if(x<8)return{category:"Extremely weak equity performance",message:"Performance is materially weak. Review process and risk management."}; if(x<15)return{category:"Below-average equity performance",message:"Below long-term target range for serious equity investors."}; if(x<25)return{category:"Good equity performance",message:"Good trajectory. Improve allocation and risk control for consistency."}; return{category:"Excellent equity performance",message:"Strong investing process. Keep tracking risk and avoid overconfidence."};}
-  function collect(body,current,vd){var rows=[].slice.call(body.querySelectorAll(".iv-xirr-cashflow-row")),cashflows=[],ti=0,tw=0,hasInv=false; for(var i=0;i<rows.length;i++){var r=rows[i],date=r.querySelector(".iv-xirr-date").value,ir=r.querySelector(".iv-xirr-invested").value,wr=r.querySelector(".iv-xirr-withdrawn").value,any=date||ir||wr; if(!any)continue; if(!date)return{error:"Dates are required for all filled cashflow rows."}; var inv=ir===""?0:Number(ir),wd=wr===""?0:Number(wr); if(!isFinite(inv)||inv<0||!isFinite(wd)||wd<0)return{error:"Amounts must be non-negative."}; if(inv===0&&wd===0)return{error:"Enter invested or withdrawn amount for each filled row."}; if(inv>0){cashflows.push({date:new Date(date+"T00:00:00"),amount:-inv,label:"Investment"});ti+=inv;hasInv=true;} if(wd>0){cashflows.push({date:new Date(date+"T00:00:00"),amount:wd,label:"Withdrawal"});tw+=wd;}}
-    var ccRaw=current.value,cc=Number(ccRaw),v=vd.value; if(!hasInv)return{error:"At least one investment entry is required."}; if(ccRaw===""||!isFinite(cc)||cc<0)return{error:"Current capital is required and must be non-negative."}; if(!v)return{error:"Valuation date is required."}; cashflows.push({date:new Date(v+"T00:00:00"),amount:cc,label:"Current Value"}); var neg=cashflows.some(function(c){return c.amount<0;}),pos=cashflows.some(function(c){return c.amount>0;}); if(!neg||!pos)return{error:"Need at least one investment and one positive cashflow."}; cashflows.sort(function(a,b){return a.date-b.date;}); return{cashflows:cashflows,totalInvested:ti,totalWithdrawn:tw,currentCapital:cc};}
-  function drawJourney(canvas,pts){var d=setupCanvas(canvas); if(!d||!pts.length)return; var c=d.ctx,w=d.width,h=d.height,pL=w<420?44:58,pR=16,pT=18,pB=36,pW=w-pL-pR,pH=h-pT-pB,max=Math.max.apply(null,pts.map(function(p){return Math.max(p.deployed||0,p.value||0);}))*1.12; if(max<=0)max=1,start=pts[0].date.getTime(),end=pts[pts.length-1].date.getTime(); if(end===start)end=start+86400000; function x(dt){return pL+((dt.getTime()-start)/(end-start))*pW;} function y(v){return pT+pH-(v/max)*pH;}
-    c.clearRect(0,0,w,h); c.strokeStyle="rgba(255,255,255,0.08)"; c.fillStyle="rgba(203,213,232,0.72)"; c.font="10px Inter, Arial";
-    for(var g=0;g<=4;g++){var yy=pT+(pH*g/4),val=max*(1-g/4); c.beginPath(); c.moveTo(pL,yy); c.lineTo(w-pR,yy); c.stroke(); c.fillText(formatCompactINR(val),4,yy+3);}
-    c.beginPath(); pts.forEach(function(p,i){var xx=x(p.date),yy=y(p.deployed); if(i===0)c.moveTo(xx,yy); else c.lineTo(xx,yy);}); c.strokeStyle="#4C8DFF"; c.lineWidth=2.4; c.stroke();
-    var f=pts[pts.length-1]; c.fillStyle="#D4AF37"; c.beginPath(); c.arc(x(f.date),y(f.value),5,0,Math.PI*2); c.fill();
+  function perf(x) {
+    if (x < 8) {
+      return {
+        category: 'Extremely weak equity performance',
+        message: 'Your equity performance is materially weak. You should urgently review your process, risk management and stock selection. Consider taking professional help before committing more capital.'
+      };
+    }
+    if (x < 15) {
+      return {
+        category: 'Below-average equity performance',
+        message: 'Your performance is below what a serious equity investor should aim for over the long term. Consider improving your framework or taking help from a qualified advisor or PMS manager.'
+      };
+    }
+    if (x < 25) {
+      return {
+        category: 'Good equity performance',
+        message: 'You are doing well. With better allocation discipline, risk control and professional guidance, this performance can potentially become stronger and more consistent.'
+      };
+    }
+    return {
+      category: 'Excellent equity performance',
+      message: 'Fabulous performance. You appear to have a strong investing process. Continue doing what is working, but avoid overconfidence and keep tracking risk carefully.'
+    };
+  }
+  function collect(body,current,vd){
+    var rows=[].slice.call(body.querySelectorAll(".iv-xirr-cashflow-row")),cashflows=[],ti=0,tw=0,hasInv=false;
+    for(var i=0;i<rows.length;i++){
+      var r=rows[i],date=r.querySelector(".iv-xirr-date").value,ir=r.querySelector(".iv-xirr-invested").value,wr=r.querySelector(".iv-xirr-withdrawn").value,any=date||ir||wr;
+      if(!any)continue;
+      if(!date)return{error:"Dates are required for all filled cashflow rows."};
+      var inv=ir===""?0:Number(ir),wd=wr===""?0:Number(wr);
+      if(!isFinite(inv)||inv<0||!isFinite(wd)||wd<0)return{error:"Amounts must be non-negative. Please do not enter negative numbers."};
+      if(inv===0&&wd===0)return{error:"Please enter invested capital or withdrawn capital for every filled row."};
+      if(inv>0){cashflows.push({date:new Date(date+"T00:00:00"),amount:-inv,label:"Investment"});ti+=inv;hasInv=true;}
+      if(wd>0){cashflows.push({date:new Date(date+"T00:00:00"),amount:wd,label:"Withdrawal"});tw+=wd;}
+    }
+    var ccRaw=current.value,cc=Number(ccRaw),v=vd.value;
+    if(!hasInv)return{error:"At least one investment entry is required."};
+    if(ccRaw===""||!isFinite(cc)||cc<0)return{error:"Current capital is required and must be non-negative."};
+    if(!v)return{error:"Valuation date is required."};
+    cashflows.push({date:new Date(v+"T00:00:00"),amount:cc,label:"Current Value"});
+    var neg=cashflows.some(function(c){return c.amount<0;}),pos=cashflows.some(function(c){return c.amount>0;});
+    if(!neg||!pos)return{error:"There must be at least one investment cashflow and one positive cashflow from withdrawal or current value."};
+    cashflows.sort(function(a,b){return a.date-b.date;});
+    return{cashflows:cashflows,totalInvested:ti,totalWithdrawn:tw,currentCapital:cc};
+  }
+  function drawJourney(canvas,pts){
+    var d=setupCanvas(canvas);
+    if(!d||!pts.length)return;
+    var c=d.ctx,w=d.width,h=d.height,pL=w<420?44:58,pR=16,pT=18,pB=36,pW=w-pL-pR,pH=h-pT-pB,max=Math.max.apply(null,pts.map(function(p){return Math.max(p.deployed||0,p.value||0);}))*1.12;
+    if(max<=0)max=1;
+    var start=pts[0].date.getTime(),end=pts[pts.length-1].date.getTime();
+    if(end===start)end=start+86400000;
+    function x(dt){return pL+((dt.getTime()-start)/(end-start))*pW;}
+    function y(v){return pT+pH-(v/max)*pH;}
+    c.clearRect(0,0,w,h);
+    c.strokeStyle="rgba(255,255,255,0.08)";
+    c.fillStyle="rgba(203,213,232,0.72)";
+    c.font="10px Inter, Arial";
+    for(var g=0;g<=4;g++){
+      var yy=pT+(pH*g/4),val=max*(1-g/4);
+      c.beginPath();
+      c.moveTo(pL,yy);
+      c.lineTo(w-pR,yy);
+      c.stroke();
+      c.fillText(formatCompactINR(val),4,yy+3);
+    }
+    c.beginPath();
+    pts.forEach(function(p,i){
+      var xx=x(p.date),yy=y(p.deployed);
+      if(i===0)c.moveTo(xx,yy);
+      else c.lineTo(xx,yy);
+    });
+    c.strokeStyle="#4C8DFF";
+    c.lineWidth=2.4;
+    c.stroke();
+    var f=pts[pts.length-1];
+    c.fillStyle="#D4AF37";
+    c.beginPath();
+    c.arc(x(f.date),y(f.value),5,0,Math.PI*2);
+    c.fill();
     canvas._pts=pts.map(function(p){return{x:x(p.date),date:p.date,deployed:p.deployed,value:p.value,label:p.label};});
   }
-  function drawSummary(canvas,s){var d=setupCanvas(canvas); if(!d)return; var c=d.ctx,w=d.width,h=d.height,pL=w<420?44:58,pR=16,pT=18,pB=48,pW=w-pL-pR,pH=h-pT-pB,b=[{label:"Invested",value:s.totalInvested,color:"#4C8DFF"},{label:"Withdrawn",value:s.totalWithdrawn,color:"#77DD77"},{label:"Current",value:s.currentCapital,color:"#D4AF37"},{label:"Gain/Loss",value:s.absoluteGainLoss,color:s.absoluteGainLoss>=0?"#D4AF37":"#FF6B6B"}],max=Math.max.apply(null,b.map(function(v){return Math.abs(v.value);}))*1.15; if(max<=0)max=1; var gap=12,bw=Math.max(24,(pW-gap*(b.length-1))/b.length),base=pT+pH; c.clearRect(0,0,w,h);
-    b.forEach(function(v,i){var x=pL+i*(bw+gap),hh=(Math.abs(v.value)/max)*pH; c.fillStyle=v.color; rr(c,x,base-hh,bw,Math.max(2,hh),6); c.fill(); c.fillStyle="rgba(203,213,232,0.82)"; c.fillText(v.label,x,h-22);});
+  function drawSummary(canvas,s){
+    var d=setupCanvas(canvas);
+    if(!d)return;
+    var c=d.ctx,w=d.width,h=d.height,pL=w<420?44:58,pR=16,pT=18,pB=48,pW=w-pL-pR,pH=h-pT-pB,b=[{label:"Invested",value:s.totalInvested,color:"#4C8DFF"},{label:"Withdrawn",value:s.totalWithdrawn,color:"#77DD77"},{label:"Current",value:s.currentCapital,color:"#D4AF37"},{label:"Gain/Loss",value:s.absoluteGainLoss,color:s.absoluteGainLoss>=0?"#D4AF37":"#FF6B6B"}],max=Math.max.apply(null,b.map(function(v){return Math.abs(v.value);}))*1.15;
+    if(max<=0)max=1;
+    var gap=12,bw=Math.max(24,(pW-gap*(b.length-1))/b.length),base=pT+pH;
+    c.clearRect(0,0,w,h);
+    c.strokeStyle="rgba(255,255,255,0.08)";
+    c.lineWidth=1;
+    c.fillStyle="rgba(203,213,232,0.72)";
+    c.font="10px Inter, Arial";
+    for(var g=0;g<=4;g++){
+      var yy=pT+(pH*g/4),val=max*(1-g/4);
+      c.beginPath();
+      c.moveTo(pL,yy);
+      c.lineTo(w-pR,yy);
+      c.stroke();
+      c.fillText(formatCompactINR(val),4,yy+3);
+    }
+    b.forEach(function(v,i){
+      var x=pL+i*(bw+gap),hh=(Math.abs(v.value)/max)*pH;
+      c.fillStyle=v.color;
+      rr(c,x,base-hh,bw,Math.max(2,hh),6);
+      c.fill();
+      c.fillStyle="rgba(203,213,232,0.82)";
+      c.fillText(v.label,x,h-22);
+    });
     canvas._bars=b.map(function(v,i){return{x:pL+i*(bw+gap),w:bw,label:v.label,value:v.value};});
   }
   document.addEventListener("DOMContentLoaded",function(){
@@ -72,7 +170,24 @@
         }
       }
 
-      msg.textContent=p.message;
+      // Calculate target capital at 24% CAGR and difference (wealth loss)
+      var targetRate = 0.24;
+      var targetCapital = 0;
+      var valDate = cur.date;
+      for (var i = 0; i < collected.cashflows.length - 1; i++) {
+        var cf = collected.cashflows[i];
+        var years = (valDate.getTime() - cf.date.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+        targetCapital += -cf.amount * Math.pow(1 + targetRate, years);
+      }
+      var wealthDifference = targetCapital - collected.currentCapital;
+      
+      var promoMsg = "";
+      if (wealthDifference > 0) {
+        promoMsg = "<br><br><span style='color: #F4D676; font-weight: 700;'>💡 Wealth Optimizer Opportunity:</span> By earning " + x.toFixed(2) + "% instead of our target <b>24.00% CAGR</b>, you missed out on <b>" + formatINR(wealthDifference) + "</b> in potential wealth growth. Had you partnered with us, you could have captured this additional return. Don't leave money on the table—join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a> today to optimize your equity portfolio strategy.";
+      } else {
+        promoMsg = "<br><br>To maintain this performance, join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a>.";
+      }
+      msg.innerHTML = p.message + promoMsg;
 
       // Adjust layout
       if (layoutWrapper) layoutWrapper.classList.add("calculated");

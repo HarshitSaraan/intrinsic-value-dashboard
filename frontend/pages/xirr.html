@@ -28,6 +28,7 @@
         <div class="iv-grid two" id="ivXirrInputsGrid">
           <div class="iv-card">
             <h3>Cashflow Entries</h3>
+            <p>Invested capital is treated internally as negative cashflow. Withdrawn capital is treated as positive cashflow.</p>
             <div class="iv-table-wrap">
               <table>
                 <thead><tr><th>Date</th><th>Invested Capital</th><th>Withdrawn Capital</th><th>Action</th></tr></thead>
@@ -57,41 +58,43 @@
             </div>
             <div class="iv-btn-row"><button class="iv-primary-btn" id="ivXirrCalculate" type="button">Calculate XIRR</button><button class="iv-secondary-btn" id="ivXirrReset" type="button">Reset</button></div>
             <div class="iv-xirr-error" id="ivXirrError"></div>
+            <div class="iv-note">These calculations and performance thresholds are intended only for pure equity portfolios. This tool is for educational illustration only and is not investment advice.</div>
           </div>
         </div>
       </div>
 
       <!-- XIRR Summary Reveal Card -->
-      <div class="iv-xirr-reveal-section iv-xirr-results-area" id="ivXirrResultsReveal" style="display: none;">
-        <div class="iv-card" style="height: 100%;">
-          <h3>XIRR Summary</h3>
-          <div class="iv-xirr-results">
-            <div class="iv-xirr-result-card main"><span>XIRR</span><strong id="ivXirrResult">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Performance Category</span><strong id="ivXirrCategory">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Total Invested</span><strong id="ivXirrTotalInvested">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Total Withdrawn</span><strong id="ivXirrTotalWithdrawn">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Net Capital Deployed</span><strong id="ivXirrNetDeployed">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Current Capital</span><strong id="ivXirrCurrentOut">—</strong></div>
-            <div class="iv-xirr-result-card"><span>Absolute Gain/Loss</span><strong id="ivXirrGainLoss">—</strong></div>
+      <div class="iv-xirr-reveal-section iv-xirr-results-area" id="ivXirrResultsReveal" style="display: none; margin-top: 14px;">
+        <div class="iv-grid two">
+          <div class="iv-card" style="height: 100%;">
+            <h3>XIRR Summary</h3>
+            <div class="iv-xirr-results">
+              <div class="iv-xirr-result-card main"><span>XIRR</span><strong id="ivXirrResult">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Performance Category</span><strong id="ivXirrCategory">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Total Invested</span><strong id="ivXirrTotalInvested">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Total Withdrawn</span><strong id="ivXirrTotalWithdrawn">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Net Capital Deployed</span><strong id="ivXirrNetDeployed">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Current Capital</span><strong id="ivXirrCurrentOut">—</strong></div>
+              <div class="iv-xirr-result-card"><span>Absolute Gain/Loss</span><strong id="ivXirrGainLoss">—</strong></div>
+            </div>
+            <div class="iv-xirr-message" id="ivXirrMessage">Enter cashflows and current capital to calculate your annualized portfolio return.</div>
           </div>
-          <div class="iv-xirr-message" id="ivXirrMessage">Enter cashflows and current capital to calculate your annualized portfolio return.</div>
+          
+          <div class="iv-card iv-xirr-chart-card">
+            <h3>Portfolio Value vs Net Capital Deployed</h3>
+            <canvas id="ivXirrJourneyChart" aria-label="Portfolio value vs net capital deployed"></canvas>
+            <div class="iv-xirr-legend"><span><i class="iv-xirr-dot blue"></i>Net capital deployed</span><span><i class="iv-xirr-dot gold"></i>Current portfolio value</span></div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Charts Reveal Container -->
-    <div class="iv-xirr-reveal-section" id="ivXirrChartsReveal" style="display: none;">
-      <div class="iv-grid two">
-        <div class="iv-card iv-xirr-chart-card">
-          <h3>Portfolio Value vs Net Capital Deployed</h3>
-          <canvas id="ivXirrJourneyChart"></canvas>
-          <div class="iv-xirr-legend"><span><i class="iv-xirr-dot blue"></i>Net capital deployed</span><span><i class="iv-xirr-dot gold"></i>Current portfolio value</span></div>
-        </div>
-        <div class="iv-card iv-xirr-chart-card">
-          <h3>Cashflow Summary</h3>
-          <canvas id="ivXirrSummaryChart"></canvas>
-          <div class="iv-xirr-legend"><span><i class="iv-xirr-dot blue"></i>Total invested</span><span><i class="iv-xirr-dot green"></i>Total withdrawn</span><span><i class="iv-xirr-dot gold"></i>Current capital</span><span><i class="iv-xirr-dot red"></i>Absolute gain/loss</span></div>
-        </div>
+    <div class="iv-xirr-reveal-section" id="ivXirrChartsReveal" style="display: none; margin-top: 14px;">
+      <div class="iv-card iv-xirr-chart-card">
+        <h3>Cashflow Summary</h3>
+        <canvas id="ivXirrSummaryChart" aria-label="Cashflow summary chart"></canvas>
+        <div class="iv-xirr-legend"><span><i class="iv-xirr-dot blue"></i>Total invested</span><span><i class="iv-xirr-dot green"></i>Total withdrawn</span><span><i class="iv-xirr-dot gold"></i>Current capital</span><span><i class="iv-xirr-dot red"></i>Absolute gain/loss</span></div>
       </div>
     </div>
     <div class="iv-xirr-tooltip" id="ivXirrTooltip"></div>

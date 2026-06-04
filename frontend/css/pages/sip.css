@@ -229,7 +229,7 @@
 }
 
 .iv-sip-page .iv-sip-tooltip {
-  position: absolute;
+  position: fixed;
   display: none;
   pointer-events: none;
   z-index: 80;

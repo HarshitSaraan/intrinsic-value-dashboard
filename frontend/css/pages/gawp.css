@@ -89,7 +89,7 @@
 .iv-gawp-page .iv-gawp-dot.blue { background:var(--iv-info); } .iv-gawp-page .iv-gawp-dot.gold { background:var(--iv-accent); }
 .iv-gawp-page .iv-table-wrap { overflow:auto; } .iv-gawp-page table { width:100%; border-collapse:collapse; }
 .iv-gawp-page th,.iv-gawp-page td { border-bottom:1px solid rgba(255,255,255,.08); padding:10px 8px; text-align:left; font-size:12px; vertical-align: middle; }
-.iv-gawp-page .iv-gawp-tooltip { position:absolute; display:none; pointer-events:none; z-index:80; max-width:240px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
+.iv-gawp-page .iv-gawp-tooltip { position:fixed; display:none; pointer-events:none; z-index:80; max-width:240px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
 @media (max-width:900px){ .iv-gawp-page .iv-grid.two,.iv-gawp-page .iv-grid.three,.iv-gawp-page .iv-form-grid,.iv-gawp-page .iv-gawp-results{grid-template-columns:minmax(0,1fr);} }
 
 /* Collapsible FAQ Section Styles */

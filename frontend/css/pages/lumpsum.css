@@ -23,7 +23,7 @@
 .iv-lumpsum-page .iv-table-wrap { overflow:auto; }
 .iv-lumpsum-page table { width:100%; border-collapse:collapse; }
 .iv-lumpsum-page th,.iv-lumpsum-page td { border-bottom:1px solid rgba(255,255,255,.08); padding:8px; text-align:left; font-size:12px; }
-.iv-lumpsum-page .iv-lumpsum-tooltip { position:absolute; display:none; pointer-events:none; z-index:80; max-width:240px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
+.iv-lumpsum-page .iv-lumpsum-tooltip { position:fixed; display:none; pointer-events:none; z-index:80; max-width:240px; padding:9px 10px; border-radius:12px; background:rgba(var(--iv-bg-rgb),.96); border:1px solid rgba(var(--iv-accent-rgb),.28); color: var(--iv-text); font-size:11px; }
 @media (max-width:900px){
   .iv-lumpsum-page .iv-grid.two,
   .iv-lumpsum-page .iv-form-grid,
