@@ -81,11 +81,7 @@
     });
 
     if (commentary) {
-      commentary.innerHTML = 'Debug: total rows ' + monthlyRowsLoaded.toLocaleString('en-IN') + 
-        ', valid Graham + Current Price rows ' + validCount.toLocaleString('en-IN') + 
-        ', first Graham Number: ' + (firstGraham !== null && firstGraham !== undefined ? firstGraham : '—') + 
-        ', first Current Price: ' + (firstCurrentPrice !== null && firstCurrentPrice !== undefined ? firstCurrentPrice : '—') + 
-        '<br><br>' + ivAnalysisData.commentary;
+      commentary.innerHTML = ivAnalysisData.commentary;
     }
 
     if (!validCount) {
