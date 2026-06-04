@@ -1,24 +1,56 @@
 /* Shared shell styles for modular frontend pages. */
 :root {
+  /* Brand Colors */
+  --primary: #083838;
+  --secondary: #125B54;
+  --accent: #17756C;
+
+  /* Backgrounds */
+  --background: #FFFFFF;
+
+  /* Text */
+  --text-primary: #17756C;
+  --text-secondary: #125B54;
+
+  /* Links */
+  --link: #17756C;
+
+  /* Optional Derived Colors */
+  --primary-light: #0E4A4A;
+  --secondary-light: #1A7268;
+  --accent-light: #249082;
+
+  --primary-dark: #052626;
+  --secondary-dark: #0D433D;
+  --accent-dark: #115A53;
+
+  /* Borders & Surfaces */
+  --border: #D9E5E3;
+  --surface: #F8FBFB;
+
+  /* Map the application variables to these brand colors */
   color-scheme: light;
-  --iv-bg: #FAF9F5;
-  --iv-bg-rgb: 250, 249, 245;
-  --iv-bg-alt: #F4F0E6;
-  --iv-bg-alt-rgb: 244, 240, 230;
-  --iv-bg-gradient-3: #EAE3D2;
-  --iv-accent: #9E7E4F;
-  --iv-accent-rgb: 158, 126, 79;
-  --iv-accent-light: #BCA374;
-  --iv-accent-light-rgb: 188, 163, 116;
-  --iv-text: #1A1D20;
-  --iv-text-rgb: 26, 29, 32;
-  --iv-text-secondary: #4A5056;
-  --iv-text-secondary-rgb: 74, 80, 86;
-  --iv-text-muted: #7D838A;
-  --iv-text-muted-rgb: 125, 131, 138;
-  --iv-card-bg: rgba(255, 255, 255, 0.75);
-  --iv-border-accent: rgba(158, 126, 79, 0.18);
-  --iv-border-subtle: rgba(0, 0, 0, 0.08);
+  --iv-bg: var(--background);
+  --iv-bg-rgb: 255, 255, 255;
+  --iv-bg-alt: var(--surface);
+  --iv-bg-alt-rgb: 248, 251, 251;
+  --iv-bg-gradient-3: var(--border);
+  --iv-accent: var(--accent);
+  --iv-accent-rgb: 23, 117, 108;
+  --iv-accent-light: var(--accent-light);
+  --iv-accent-light-rgb: 36, 144, 130;
+  
+  --iv-text: var(--primary);
+  --iv-text-rgb: 8, 56, 56;
+  --iv-text-secondary: var(--text-secondary);
+  --iv-text-secondary-rgb: 18, 91, 84;
+  --iv-text-muted: var(--text-primary);
+  --iv-text-muted-rgb: 23, 117, 108;
+
+  --iv-card-bg: var(--background);
+  --iv-border-accent: rgba(23, 117, 108, 0.18);
+  --iv-border-subtle: var(--border);
+
   --iv-success: #2E7D32;
   --iv-success-rgb: 46, 125, 50;
   --iv-danger: #C62828;
@@ -38,9 +70,9 @@
   --iv-navy-3: var(--iv-bg);
   --iv-gold: var(--iv-accent);
   --iv-cream: var(--iv-text);
-  --iv-border: var(--iv-border-accent);
+  --iv-border: var(--border);
   --iv-card: var(--iv-card-bg);
-  --iv-shadow: 0 8px 24px rgba(158, 126, 79, 0.08);
+  --iv-shadow: 0 8px 24px rgba(8, 56, 56, 0.08);
   --iv-radius: 18px;
 }
 
