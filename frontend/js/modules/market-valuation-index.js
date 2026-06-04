@@ -64,15 +64,21 @@
       var yPB = canvas._yAtPB(pbVal);
       var yDiv = canvas._yAtDiv(divVal);
 
-      // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
-      if (yPB > yDiv) {
+      // If coordinates are very close on the graph (within 10 pixels), mark as Fairly Valued
+      if (Math.abs(yPB - yDiv) <= 10) {
+        return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
+      } else if (yPB > yDiv) {
+        // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
         return { text: 'Undervalued', color: 'var(--iv-success)' };
       } else {
         return { text: 'Overvalued', color: 'var(--iv-danger)' };
       }
     } else {
       // Fallback to value-wise if canvas helpers are not loaded yet
-      if (pbVal < divVal) {
+      var valDiff = Math.abs(pbVal - divVal);
+      if (valDiff <= 0.15) {
+        return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
+      } else if (pbVal < divVal) {
         return { text: 'Undervalued', color: 'var(--iv-success)' };
       } else {
         return { text: 'Overvalued', color: 'var(--iv-danger)' };
