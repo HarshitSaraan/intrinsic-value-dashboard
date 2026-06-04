@@ -459,38 +459,36 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
         q_fin = ticker.quarterly_financials
         a_fin = ticker.financials
         
-        def extract_financials(df):
+        def extract_financials(df, is_quarterly=False):
             if df is None or df.empty:
                 return []
             rev_row = None
             net_row = None
+            ebitda_row = None
             
-            # Prioritize exact match for Total Revenue
+            # Find rows
             for idx in df.index:
                 clean_idx = str(idx).lower().strip()
                 if clean_idx == "total revenue":
                     rev_row = idx
-                    break
+                elif clean_idx == "net income":
+                    net_row = idx
+                elif clean_idx == "ebitda":
+                    ebitda_row = idx
+                    
             if not rev_row:
                 for idx in df.index:
                     clean_idx = str(idx).lower().strip()
                     if clean_idx in ["revenue", "operating revenue", "gross sales"]:
                         rev_row = idx
                         break
-                        
-            # Prioritize Net Income
-            for idx in df.index:
-                clean_idx = str(idx).lower().strip()
-                if clean_idx == "net income":
-                    net_row = idx
-                    break
             if not net_row:
                 for idx in df.index:
                     clean_idx = str(idx).lower().strip()
                     if clean_idx in ["netincome", "net income continuous operations"]:
                         net_row = idx
                         break
-
+                        
             if rev_row is None or net_row is None:
                 return []
                 
@@ -531,18 +529,67 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
                     
                 if pd.isna(rev) or pd.isna(net):
                     continue
+                
+                ebitda = None
+                if ebitda_row is not None:
+                    ebitda_val = df.loc[ebitda_row, col]
+                    if isinstance(ebitda_val, pd.Series):
+                        ebitda_val = ebitda_val.iloc[0]
+                    if not pd.isna(ebitda_val):
+                        ebitda = float(ebitda_val)
+                        
+                profit_margin = None
+                if rev != 0:
+                    profit_margin = (float(net) / float(rev)) * 100.0
                     
                 items.append({
                     "date": date_str,
                     "quarterLabel": label,
                     "annualLabel": annual_label,
                     "revenue": float(rev),
-                    "earnings": float(net)
+                    "earnings": float(net),
+                    "ebitda": ebitda,
+                    "profitMargin": profit_margin
                 })
+                
+            # Calculate YoY changes using labels
+            for item in items:
+                item["revenueYoY"] = None
+                item["earningsYoY"] = None
+                
+                if is_quarterly:
+                    label = item.get("quarterLabel")
+                    if label and len(label) >= 7:
+                        q_part = label[:2]
+                        try:
+                            fy_part = int(label[5:])
+                            prev_label = f"{q_part} FY{str(fy_part - 1).zfill(2)}"
+                            prev_item = next((x for x in items if x.get("quarterLabel") == prev_label), None)
+                            if prev_item:
+                                if prev_item["revenue"] > 0:
+                                    item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
+                                if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
+                                    item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
+                        except:
+                            pass
+                else:
+                    label = item.get("annualLabel")
+                    if label and label.startswith("FY") and len(label) >= 4:
+                        try:
+                            fy_val = int(label[2:])
+                            prev_label = f"FY{str(fy_val - 1).zfill(2)}"
+                            prev_item = next((x for x in items if x.get("annualLabel") == prev_label), None)
+                            if prev_item:
+                                if prev_item["revenue"] > 0:
+                                    item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
+                                if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
+                                    item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
+                        except:
+                            pass
             return items
             
-        quarterly_data = extract_financials(q_fin)
-        annual_data = extract_financials(a_fin)
+        quarterly_data = extract_financials(q_fin, is_quarterly=True)
+        annual_data = extract_financials(a_fin, is_quarterly=False)
         
         return {
             "symbol": symbol,

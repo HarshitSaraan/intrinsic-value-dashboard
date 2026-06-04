@@ -203,12 +203,66 @@
       if (modalLegendPeriod) modalLegendPeriod.textContent = "—";
       if (modalLegendRevenue) modalLegendRevenue.textContent = "—";
       if (modalLegendEarnings) modalLegendEarnings.textContent = "—";
+      updateMetricsPanel(null);
       return;
     }
     var period = activeViewType === "annual" ? item.annualLabel : item.quarterLabel;
     if (modalLegendPeriod) modalLegendPeriod.textContent = period;
     if (modalLegendRevenue) modalLegendRevenue.textContent = formatFinancial(item.revenue);
     if (modalLegendEarnings) modalLegendEarnings.textContent = formatFinancial(item.earnings);
+    updateMetricsPanel(item);
+  }
+
+  function formatPercentage(v) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    var sign = v >= 0 ? '+' : '';
+    return sign + v.toFixed(2) + '%';
+  }
+
+  function updateMetricsPanel(item) {
+    var periodSpan = q("ivMetricsPeriod");
+    var revYoYSpan = q("ivMetricRevenueYoY");
+    var earnYoYSpan = q("ivMetricEarningsYoY");
+    var ebitdaSpan = q("ivMetricEbitda");
+    var marginSpan = q("ivMetricProfitMargin");
+    
+    if (!item) {
+      if (periodSpan) periodSpan.textContent = "—";
+      if (revYoYSpan) { revYoYSpan.textContent = "—"; revYoYSpan.style.color = ""; }
+      if (earnYoYSpan) { earnYoYSpan.textContent = "—"; earnYoYSpan.style.color = ""; }
+      if (ebitdaSpan) ebitdaSpan.textContent = "—";
+      if (marginSpan) marginSpan.textContent = "—";
+      return;
+    }
+    
+    var period = activeViewType === "annual" ? item.annualLabel : item.quarterLabel;
+    if (periodSpan) periodSpan.textContent = period;
+    
+    if (revYoYSpan) {
+      revYoYSpan.textContent = formatPercentage(item.revenueYoY);
+      if (item.revenueYoY !== null && item.revenueYoY !== undefined) {
+        revYoYSpan.style.color = item.revenueYoY >= 0 ? "#28a745" : "#dc3545";
+      } else {
+        revYoYSpan.style.color = "";
+      }
+    }
+    
+    if (earnYoYSpan) {
+      earnYoYSpan.textContent = formatPercentage(item.earningsYoY);
+      if (item.earningsYoY !== null && item.earningsYoY !== undefined) {
+        earnYoYSpan.style.color = item.earningsYoY >= 0 ? "#28a745" : "#dc3545";
+      } else {
+        earnYoYSpan.style.color = "";
+      }
+    }
+    
+    if (ebitdaSpan) {
+      ebitdaSpan.textContent = formatFinancial(item.ebitda);
+    }
+    
+    if (marginSpan) {
+      marginSpan.textContent = item.profitMargin !== null && item.profitMargin !== undefined ? item.profitMargin.toFixed(2) + '%' : '—';
+    }
   }
 
   function formatFinancial(v) {

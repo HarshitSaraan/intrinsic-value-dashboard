@@ -74,8 +74,37 @@
               </span>
             </div>
             
-            <div class="iv-chart-container" style="position: relative; width: 100%; height: 320px;">
-              <canvas id="ivFinancialsChart" style="width: 100%; height: 100%; display: block;"></canvas>
+            <div class="iv-trends-content-grid">
+              <div class="iv-chart-container" style="position: relative; height: 320px;">
+                <canvas id="ivFinancialsChart" style="width: 100%; height: 100%; display: block;"></canvas>
+              </div>
+              
+              <!-- Metrics Panel Beside Graph -->
+              <div class="iv-trends-metrics-panel" id="ivTrendsMetricsPanel">
+                <h4>Latest Metrics (<span id="ivMetricsPeriod">—</span>)</h4>
+                <ul class="iv-metrics-bullets">
+                  <li>
+                    <span class="iv-metric-bullet-dot" style="background: #3a9ad9;"></span>
+                    <span class="iv-metric-label">Revenue YoY:</span>
+                    <strong class="iv-metric-value" id="ivMetricRevenueYoY">—</strong>
+                  </li>
+                  <li>
+                    <span class="iv-metric-bullet-dot" style="background: #f1bf6c;"></span>
+                    <span class="iv-metric-label">Earnings YoY:</span>
+                    <strong class="iv-metric-value" id="ivMetricEarningsYoY">—</strong>
+                  </li>
+                  <li>
+                    <span class="iv-metric-bullet-dot" style="background: #a855f7;"></span>
+                    <span class="iv-metric-label">EBITDA:</span>
+                    <strong class="iv-metric-value" id="ivMetricEbitda">—</strong>
+                  </li>
+                  <li>
+                    <span class="iv-metric-bullet-dot" style="background: #06b6d4;"></span>
+                    <span class="iv-metric-label">Profit Margin:</span>
+                    <strong class="iv-metric-value" id="ivMetricProfitMargin">—</strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
