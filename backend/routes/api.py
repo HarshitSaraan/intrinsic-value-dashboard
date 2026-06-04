@@ -220,7 +220,7 @@ async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any
     df_nse['clean_de'] = clean_col('Debt to equity')
     
     # 5. Filter by active strategy type
-    if type == 'undervalued-growth':
+    if type == 'undervalued-growth': 
         # Criteria: Sales Growth 3Years > 20% | PE between 0 and 25 | PB < 4.5
         filtered = df_nse[
             (df_nse['clean_sales_3y'] > 20) & 
