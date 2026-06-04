@@ -63,17 +63,17 @@
     var monthlyDebugEl = app.querySelector('#ivMonthlyAdminDebug');
     if (monthlyRowsEl) monthlyRowsEl.textContent = monthlyRowsLoaded.toLocaleString('en-IN');
     if (monthlyRowsLoaded < 100) {
-      if (monthlyDebugEl) monthlyDebugEl.textContent = 'Preview/sample data active. Monthly Market Analysis requires live master sheet.';
-      if (commentary) commentary.textContent = 'Preview/sample data active. Monthly Market Analysis requires live master sheet.';
+      if (monthlyDebugEl) monthlyDebugEl.textContent = 'Preview/sample data active. Market Pulse requires live master sheet.';
+      if (commentary) commentary.textContent = 'Preview/sample data active. Market Pulse requires live master sheet.';
       return;
     }
-    if (monthlyDebugEl) monthlyDebugEl.textContent = 'Live master data active. Monthly Market Analysis is ready.';
+    if (monthlyDebugEl) monthlyDebugEl.textContent = 'Live master data active. Market Pulse is ready.';
 
     var validCount = ivAnalysisData.validRows;
     var firstGraham = ivAnalysisData.firstGraham;
     var firstCurrentPrice = ivAnalysisData.firstCurrentPrice;
 
-    console.log('Monthly Market Analysis Debug', {
+    console.log('Market Pulse Debug', {
       totalRows: monthlyRowsLoaded,
       validGrahamAndCurrentPriceRows: validCount,
       firstRowGrahamNumber: firstGraham,
@@ -180,7 +180,7 @@
         return ivAnalysisData;
       })
       .catch(function (err) {
-        console.error('Error loading monthly market analysis data:', err);
+        console.error('Error loading market pulse data:', err);
         ivDataLoading = false;
         return ivAnalysisData;
       });

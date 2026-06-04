@@ -17,7 +17,7 @@ def main():
         driver = webdriver.Chrome(options=chrome_options)
         driver.set_window_size(1400, 1000)
         
-        print("Loading Market Valuation Index page...")
+        print("Loading M.V Tracker page...")
         driver.get("http://127.0.0.1:8080/market-valuation-index")
         time.sleep(3)
         

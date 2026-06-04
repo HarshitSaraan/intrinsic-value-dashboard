@@ -818,13 +818,28 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     bv_10 = pick_column(df, "BOOK VALUE GOWTH 10 YR")
     bv_5 = pick_column(df, "book value growth 5 yrs")
     bv_3 = pick_column(df, "book value growth 3 years")
-    bv_growth = get_fallback_val(bv_10, bv_5, bv_3)
+    
+    bv_growth = None
+    bv_years_considered = None
+    if get_val(bv_10) is not None:
+        bv_growth = get_val(bv_10)
+        bv_years_considered = 10
+    elif get_val(bv_5) is not None:
+        bv_growth = get_val(bv_5)
+        bv_years_considered = 5
+    elif get_val(bv_3) is not None:
+        bv_growth = get_val(bv_3)
+        bv_years_considered = 3
 
     sg_10 = pick_column(df, "Sales growth 10Years")
     sg_5 = pick_column(df, "Sales growth 5years median")
     sg_3 = pick_column(df, "Sales growth 3Years")
     sales_growth = get_fallback_val(sg_10, sg_5, sg_3)
 
+    roce_10 = pick_column(df, "Average return on capital employee 10Years") # wait, check spelling: "Average return on capital employed 10Years"
+    # Actually, in the original code it is:
+    # roce_10 = pick_column(df, "Average return on capital employed 10Years")
+    # let's be extremely careful to match the original line:
     roce_10 = pick_column(df, "Average return on capital employed 10Years")
     roce_5 = pick_column(df, "Average return on capital employed 5Years")
     roce_3 = pick_column(df, "Average return on capital employed 3Years")
@@ -843,10 +858,23 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 
     # QUALITY SCORING
     q1_score = 0
+    bv_threshold = "> 136 (1), 100-136 (0), < 100 (-1)"
     if bv_growth is not None:
-        if bv_growth > 136: q1_score = 1
-        elif bv_growth >= 100: q1_score = 0
-        else: q1_score = -1
+        if bv_years_considered == 10:
+            bv_threshold = "> 259 (1), 220-259 (0), < 220 (-1)"
+            if bv_growth > 259: q1_score = 1
+            elif bv_growth >= 220: q1_score = 0
+            else: q1_score = -1
+        elif bv_years_considered == 5:
+            bv_threshold = "> 161 (1), 110-161 (0), < 110 (-1)"
+            if bv_growth > 161: q1_score = 1
+            elif bv_growth >= 110: q1_score = 0
+            else: q1_score = -1
+        else:
+            bv_threshold = "> 136 (1), 100-136 (0), < 100 (-1)"
+            if bv_growth > 136: q1_score = 1
+            elif bv_growth >= 100: q1_score = 0
+            else: q1_score = -1
 
     q2_score = 0
     if sales_growth is not None:
@@ -937,7 +965,7 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 
     # VALUATION PARAMETERS
     
-    # 1. Sectoral Average calculations (based on Industry Group / Industry)
+    # 1. Sectoral Median calculations (based on Industry Group / Industry)
     sector_pb = None
     sector_ps = None
     sector_name = "N/A"
@@ -952,13 +980,13 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             if pb_col_name:
                 sector_pb_vals = pd.to_numeric(sector_df[pb_col_name], errors='coerce').dropna()
                 if not sector_pb_vals.empty:
-                    sector_pb = round(float(sector_pb_vals.mean()), 2)
+                    sector_pb = round(float(sector_pb_vals.median()), 2)
                     
             ps_col_name = pick_column(df, "Price to Sales")
             if ps_col_name:
                 sector_ps_vals = pd.to_numeric(sector_df[ps_col_name], errors='coerce').dropna()
                 if not sector_ps_vals.empty:
-                    sector_ps = round(float(sector_ps_vals.mean()), 2)
+                    sector_ps = round(float(sector_ps_vals.median()), 2)
 
     # Valuation parameters scores calculation
     pb_col = pick_column(df, "Price to book value")
@@ -1055,7 +1083,7 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                     "name": "Book Value Growth",
                     "value": bv_growth,
                     "displayValue": f"{bv_growth}%" if bv_growth is not None else "N/A",
-                    "threshold": "> 136 (1), 100-136 (0), < 100 (-1)",
+                    "threshold": bv_threshold,
                     "score": q1_score
                 },
                 {
@@ -1141,17 +1169,17 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             "total": valuation_total,
             "parameters": [
                 {
-                    "name": "P/B Ratio vs Sector Average",
+                    "name": "P/B Ratio vs Sector Median",
                     "value": stock_pb,
-                    "displayValue": f"{stock_pb}x (Sector Avg: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
-                    "threshold": "P/B < Sector P/B (1), P/B > Sector P/B (0)",
+                    "displayValue": f"{stock_pb}x (Sector Median: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
+                    "threshold": "P/B < Sector Median P/B (1), P/B > Sector Median P/B (0)",
                     "score": v1_score
                 },
                 {
-                    "name": "P/S Ratio vs Sector Average",
+                    "name": "P/S Ratio vs Sector Median",
                     "value": stock_ps,
-                    "displayValue": f"{stock_ps}x (Sector Avg: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
-                    "threshold": "P/S < Sector P/S (1), P/S > Sector P/S (0)",
+                    "displayValue": f"{stock_ps}x (Sector Median: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
+                    "threshold": "P/S < Sector Median P/S (1), P/S > Sector Median P/S (0)",
                     "score": v2_score
                 },
                 {

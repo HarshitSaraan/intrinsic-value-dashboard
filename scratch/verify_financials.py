@@ -16,8 +16,8 @@ def main():
         driver = webdriver.Chrome(options=chrome_options)
         driver.set_window_size(1400, 1000)
         
-        print("Loading Value & Growth Strategies page...")
-        driver.get("http://127.0.0.1:8000/strategies?type=undervalued-growth")
+        print("Loading Investment Ideas page...")
+        driver.get("http://127.0.0.1:8080/strategies?type=undervalued-growth")
         time.sleep(4)
         
         # Capture strategy listings page

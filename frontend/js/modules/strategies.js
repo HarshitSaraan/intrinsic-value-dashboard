@@ -14,32 +14,32 @@
   // Strategy Meta Details (Mapped to Indian Stock screening rules)
   var strategyMeta = {
     'undervalued-growth': {
-      title: 'Undervalued Growth Stocks',
+      title: 'Growth at Value',
       desc: 'High growth Indian companies trading at attractive valuations.',
       note: 'Indian Market Screener: Sales Growth 3Years > 20% | Price to Earning between 0 and 25 | Price to Book value < 4.5'
     },
     'aggressive-smallcaps': {
-      title: 'Aggressive Small Caps',
+      title: 'High Growth Small Cap',
       desc: 'Small cap opportunities with massive growth and ROCE momentum.',
       note: 'Indian Market Screener: Market Cap < 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%'
     },
     'undervalued-largecaps': {
-      title: 'Undervalued Large Caps',
+      title: 'Value Large Cap',
       desc: 'Stable large-cap market leaders trading at discounted valuations.',
       note: 'Indian Market Screener: Market Cap > 15000 Cr | Price to Earning between 0 and 18 | Price to Book value < 3.0'
     },
     'growth-tech': {
-      title: 'Growth Technology Stocks',
+      title: 'Technology Leaders',
       desc: 'High-growth technology innovators, software leaders, and telecom companies.',
       note: 'Indian Market Screener: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%'
     },
     'portfolio-anchors': {
-      title: 'Portfolio Anchors',
+      title: 'Core Compounders/Picks',
       desc: 'Mega-cap anchors with clean balance sheets, high Piotroski scores, and low debt.',
       note: 'Indian Market Screener: Market Cap > 25000 Cr | Piotroski Score >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%'
     },
     'solid-large-growth': {
-      title: 'Solid Large Growth Funds',
+      title: 'Large Compounders/Picks',
       desc: 'Large cap growth leaders with top-tier efficiency and market momentum.',
       note: 'Indian Market Screener: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0'
     }
@@ -223,7 +223,7 @@
     var heading = app.querySelector('#ivStratHeading');
     var sub = app.querySelector('#ivStratSubheading');
     if (kicker) kicker.textContent = 'Strategies Directory';
-    if (heading) heading.textContent = 'Value and Growth Strategies';
+    if (heading) heading.textContent = 'Investment Ideas';
     if (sub) sub.textContent = 'Target stocks based on fundamental value and growth metrics';
   }
 

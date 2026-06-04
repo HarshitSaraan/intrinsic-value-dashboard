@@ -109,9 +109,9 @@
         type: "group",
         name: "Market Analysis",
         items: [
-          { view: "monthly-analysis", label: "Monthly Market Analysis", icon: "◌", path: "/monthly-market-analysis" },
+          { view: "monthly-analysis", label: "Market Pulse", icon: "◌", path: "/monthly-market-analysis" },
           { view: "earnings-trends", label: "Earnings Trends", icon: "📊", path: "/earnings-trends" },
-          { view: "valuation", label: "Market Valuation Index", icon: "∑", path: "/market-valuation-index" },
+          { view: "valuation", label: "M.V Tracker", icon: "∑", path: "/market-valuation-index" },
           { view: "headwind", label: "Headwind / Tailwind Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }
         ]
       },
@@ -125,14 +125,14 @@
       },
       {
         type: "group",
-        name: "Value & Growth Strategies",
+        name: "Investment Ideas",
         items: [
-          { view: "strategies-ug", label: "Undervalued Growth", icon: "📈", path: "/strategies?type=undervalued-growth" },
-          { view: "aggressive-smallcaps", label: "Aggressive Small Caps", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
-          { view: "undervalued-largecaps", label: "Undervalued Large Caps", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
-          { view: "growth-tech", label: "Growth Technology", icon: "💻", path: "/strategies?type=growth-tech" },
-          { view: "portfolio-anchors", label: "Portfolio Anchors", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
-          { view: "solid-large-growth", label: "Solid Large Growth", icon: "🚀", path: "/strategies?type=solid-large-growth" }
+          { view: "strategies-ug", label: "Growth at Value", icon: "📈", path: "/strategies?type=undervalued-growth" },
+          { view: "aggressive-smallcaps", label: "High Growth Small Cap", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
+          { view: "undervalued-largecaps", label: "Value Large Cap", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
+          { view: "growth-tech", label: "Technology Leaders", icon: "💻", path: "/strategies?type=growth-tech" },
+          { view: "portfolio-anchors", label: "Core Compounders/Picks", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
+          { view: "solid-large-growth", label: "Large Compounders/Picks", icon: "🚀", path: "/strategies?type=solid-large-growth" }
         ]
       }
     ];
