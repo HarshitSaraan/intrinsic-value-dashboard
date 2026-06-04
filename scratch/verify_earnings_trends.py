@@ -17,7 +17,7 @@ def main():
         driver.set_window_size(1400, 1000)
         
         print("Loading Earnings Trends Search page...")
-        driver.get("http://127.0.0.1:8000/earnings-trends")
+        driver.get("http://127.0.0.1:8080/earnings-trends")
         time.sleep(4)
         
         # Capture Initial State
@@ -52,6 +52,31 @@ def main():
         annual_path = os.path.join(ARTIFACT_DIR, "earnings_trends_annual.png")
         driver.save_screenshot(annual_path)
         print(f"Captured annual chart: {annual_path}")
+
+        # Test mobile responsive behavior
+        print("Testing mobile responsive layout...")
+        driver.set_window_size(375, 812)
+        time.sleep(2)
+        
+        # Verify that search area is hidden in mobile view when stock is loaded
+        search_area = driver.find_element(By.ID, "ivTrendsSearchArea")
+        print(f"Is search area displayed on mobile when stock loaded? {search_area.is_displayed()}")
+        
+        # Capture mobile layout screenshot
+        mobile_path = os.path.join(ARTIFACT_DIR, "earnings_trends_mobile_chart.png")
+        driver.save_screenshot(mobile_path)
+        print(f"Captured mobile view chart: {mobile_path}")
+        
+        # Click back to search button
+        print("Clicking 'Back to Search' button...")
+        back_btn = driver.find_element(By.ID, "ivTrendsBackButton")
+        driver.execute_script("arguments[0].click();", back_btn)
+        time.sleep(2)
+        
+        print(f"Is search area displayed on mobile after clicking back? {search_area.is_displayed()}")
+        mobile_search_path = os.path.join(ARTIFACT_DIR, "earnings_trends_mobile_search.png")
+        driver.save_screenshot(mobile_search_path)
+        print(f"Captured mobile view search: {mobile_search_path}")
         
         driver.quit()
         print("Verification complete.")

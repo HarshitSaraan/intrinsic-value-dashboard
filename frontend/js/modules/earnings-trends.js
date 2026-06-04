@@ -16,6 +16,7 @@
   var searchSpinner = q("ivSearchSpinner");
   var resultsList = q("ivSearchResultsList");
   var chartArea = q("ivTrendsChartArea");
+  var backBtn = q("ivTrendsBackButton");
   
   var modalStockName = q("ivModalStockName");
   var toggleQuarterly = q("ivToggleQuarterly");
@@ -132,6 +133,20 @@
   }
 
   function bindEvents() {
+    if (backBtn) {
+      backBtn.addEventListener("click", function () {
+        if (layout) layout.classList.remove("calculated");
+        if (chartArea) {
+          chartArea.classList.remove("show");
+          setTimeout(function () {
+            chartArea.style.display = "none";
+          }, 300);
+        }
+        activeStockSymbol = null;
+        renderStockList();
+      });
+    }
+
     // Search input keyup filtering
     if (searchInput) {
       searchInput.addEventListener('keyup', function () {

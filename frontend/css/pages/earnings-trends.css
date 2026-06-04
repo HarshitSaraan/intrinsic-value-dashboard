@@ -230,3 +230,16 @@
     gap: 16px;
   }
 }
+
+.iv-back-to-search-wrap {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .iv-trends-layout-wrapper.calculated .iv-trends-search-area {
+    display: none;
+  }
+  .iv-back-to-search-wrap {
+    display: block;
+  }
+}
