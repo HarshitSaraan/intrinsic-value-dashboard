@@ -891,7 +891,7 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
         bv_years_considered = 3
 
     sg_10 = pick_column(df, "Sales growth 10Years")
-    sg_5 = pick_column(df, "Sales growth 5years median")
+    sg_5 = pick_column(df, "Sales growth 5Years")
     sg_3 = pick_column(df, "Sales growth 3Years")
     sales_growth = get_fallback_val(sg_10, sg_5, sg_3)
 
