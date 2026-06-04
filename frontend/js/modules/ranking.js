@@ -137,12 +137,12 @@ function ivRankNumber(value) {
     var urlParams = new URLSearchParams(window.location.search);
     var industryParam = urlParams.get('industry') || '';
 
-    var ivRankingState = window.ivRankingState || { page: 1, pageSize: 10, sortKey: 'rank', sortDirection: 'asc', rows: [], allIndustries: [], pendingIndustry: industryParam };
-    if (!ivRankingState) ivRankingState = { page: 1, pageSize: 10, sortKey: 'rank', sortDirection: 'asc', rows: [], allIndustries: [], pendingIndustry: industryParam };
+    var ivRankingState = window.ivRankingState || { page: 1, pageSize: 25, sortKey: 'rank', sortDirection: 'asc', rows: [], allIndustries: [], pendingIndustry: industryParam };
+    if (!ivRankingState) ivRankingState = { page: 1, pageSize: 25, sortKey: 'rank', sortDirection: 'asc', rows: [], allIndustries: [], pendingIndustry: industryParam };
     if (!ivRankingState.sortKey) ivRankingState.sortKey = 'rank';
     if (!ivRankingState.sortDirection) ivRankingState.sortDirection = 'asc';
     if (!ivRankingState.page) ivRankingState.page = 1;
-    if (!ivRankingState.pageSize) ivRankingState.pageSize = 10;
+    if (!ivRankingState.pageSize) ivRankingState.pageSize = 25;
     if (!ivRankingState.rows) ivRankingState.rows = [];
     if (!ivRankingState.allIndustries) ivRankingState.allIndustries = [];
     if (industryParam) ivRankingState.pendingIndustry = industryParam;
