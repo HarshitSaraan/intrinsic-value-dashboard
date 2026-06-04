@@ -448,11 +448,30 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
     import yfinance as yf
     import pandas as pd
     import datetime
+    import json
+    import time
+    from backend.utils.paths import BASE_DIR
 
-    if not symbol.endswith(".NS"):
-        yahoo_symbol = symbol + ".NS"
+    clean_symbol = symbol.upper().strip()
+    cache_dir = BASE_DIR / "backend" / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache_file = cache_dir / f"{clean_symbol}.json"
+
+    # Check Cache (TTL 24 hours = 86400 seconds)
+    if cache_file.exists():
+        try:
+            with open(cache_file, "r") as f:
+                cached_obj = json.load(f)
+            if time.time() - cached_obj.get("timestamp", 0) < 86400:
+                # Cache Hit! Return instantly
+                return cached_obj.get("data")
+        except Exception as cache_err:
+            print(f"Failed to read financials cache for {clean_symbol}: {cache_err}")
+
+    if not clean_symbol.endswith(".NS"):
+        yahoo_symbol = clean_symbol + ".NS"
     else:
-        yahoo_symbol = symbol
+        yahoo_symbol = clean_symbol
 
     try:
         ticker = yf.Ticker(yahoo_symbol)
@@ -591,11 +610,23 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
         quarterly_data = extract_financials(q_fin, is_quarterly=True)
         annual_data = extract_financials(a_fin, is_quarterly=False)
         
-        return {
-            "symbol": symbol,
+        result_data = {
+            "symbol": clean_symbol,
             "quarterly": quarterly_data[-4:],
             "annual": annual_data[-4:]
         }
+
+        # Save to Cache
+        try:
+            with open(cache_file, "w") as f:
+                json.dump({
+                    "timestamp": time.time(),
+                    "data": result_data
+                }, f, indent=2)
+        except Exception as cache_err:
+            print(f"Failed to write financials cache for {clean_symbol}: {cache_err}")
+
+        return result_data
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch financials for {symbol}: {str(e)}")
 
