@@ -38,7 +38,10 @@ def number_or_none(value: Any) -> float | None:
 def clean_text(value: Any) -> str:
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return ""
-    return str(value).strip()
+    s = str(value).strip()
+    if s.endswith(".0") and s[:-2].isdigit():
+        s = s[:-2]
+    return s
 
 
 def safe_average(series: pd.Series) -> float | None:
