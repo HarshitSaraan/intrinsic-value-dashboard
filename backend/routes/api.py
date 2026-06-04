@@ -473,8 +473,18 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
     else:
         yahoo_symbol = clean_symbol
 
+    # Use custom requests session with browser-like headers to bypass bot restrictions on cloud hosts
+    import requests
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://finance.yahoo.com/"
+    })
+
     try:
-        ticker = yf.Ticker(yahoo_symbol)
+        ticker = yf.Ticker(yahoo_symbol, session=session)
         q_fin = ticker.quarterly_financials
         a_fin = ticker.financials
         
