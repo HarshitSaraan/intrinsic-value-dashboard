@@ -1188,9 +1188,9 @@
 
     .iv-nav-group-btn {
       width: 100%;
-      border: 1px solid rgba(var(--iv-accent-rgb), 0.15);
-      background: var(--iv-card);
-      color: var(--iv-accent-light);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--iv-text-secondary);
       padding: 12px;
       border-radius: 14px;
       display: flex;
@@ -1202,13 +1202,14 @@
     }
 
     .iv-nav-group-btn:hover {
-      background: var(--iv-card);
+      color: var(--iv-accent-light);
+      background: transparent;
     }
 
     .iv-nav-group-btn.active {
-      background: linear-gradient(135deg, rgba(var(--iv-accent-rgb), 0.22), rgba(var(--iv-accent-rgb), 0.06));
-      border-color: rgba(var(--iv-accent-rgb), 0.46);
       color: var(--iv-gold-2);
+      background: transparent;
+      border-color: transparent;
     }
 
     .iv-nav-dropdown {
@@ -1528,13 +1529,25 @@
 
        .iv-nav-group-btn {
         width: auto;
-        min-height: 42px;
+        min-height: auto;
         min-width: max-content;
-        border-radius: 999px;
-        padding: 10px 14px;
+        border-radius: 8px;
+        padding: 8px 12px;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
       }
 
        .iv-nav-dropdown {
+        display: flex !important;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    visibility 0s linear 0.35s;
+        pointer-events: none;
+
         position: absolute;
         top: calc(100% + 10px);
         left: 0;
@@ -1544,6 +1557,22 @@
         border: 1px solid rgba(var(--iv-accent-rgb), 0.14);
         background: rgba(var(--iv-bg-rgb), 0.98);
         box-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
+      }
+
+       .iv-nav-group:hover .iv-nav-dropdown,
+       .iv-nav-group.active .iv-nav-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition: opacity 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    visibility 0s linear 0s;
+      }
+
+       .iv-nav-group:hover .iv-nav-arrow,
+       .iv-nav-group.active .iv-nav-arrow {
+        transform: rotate(180deg);
       }
 
        .iv-nav-btn {

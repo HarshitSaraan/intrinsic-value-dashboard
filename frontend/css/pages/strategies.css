@@ -233,3 +233,73 @@
   to { transform: rotate(360deg); }
 }
 
+/* Financials Modal Styling */
+.iv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: ivFadeIn 0.25s ease-out;
+}
+
+.iv-modal-container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(25, 27, 31, 0.94);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.24);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  animation: ivScaleIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  color: var(--iv-text);
+}
+
+[data-theme="light"] .iv-modal-container {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(var(--iv-accent-rgb), 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.iv-toggle-btn {
+  background: transparent;
+  color: var(--iv-text-secondary);
+}
+
+.iv-toggle-btn.active {
+  background: var(--iv-accent) !important;
+  color: var(--iv-bg) !important;
+  box-shadow: 0 2px 8px rgba(var(--iv-accent-rgb), 0.3);
+}
+
+[data-theme="light"] .iv-toggle-btn.active {
+  background: var(--iv-accent) !important;
+  color: #FFFFFF !important;
+}
+
+.iv-modal-close-btn:hover {
+  color: var(--iv-text) !important;
+}
+
+@keyframes ivFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ivScaleIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Hover style for table rows to signify clickability */
+.iv-strat-table-row {
+  cursor: pointer;
+}
+
+

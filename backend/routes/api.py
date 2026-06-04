@@ -443,5 +443,138 @@ async def admin_upload_csv(
     return {"status": "success", "message": f"Successfully updated {file_type} CSV dataset"}
 
 
+@router.get("/stock-financials")
+async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
+    import yfinance as yf
+    import pandas as pd
+    import datetime
+
+    if not symbol.endswith(".NS"):
+        yahoo_symbol = symbol + ".NS"
+    else:
+        yahoo_symbol = symbol
+
+    try:
+        ticker = yf.Ticker(yahoo_symbol)
+        q_fin = ticker.quarterly_financials
+        a_fin = ticker.financials
+        
+        def extract_financials(df):
+            if df is None or df.empty:
+                return []
+            rev_row = None
+            net_row = None
+            
+            # Prioritize exact match for Total Revenue
+            for idx in df.index:
+                clean_idx = str(idx).lower().strip()
+                if clean_idx == "total revenue":
+                    rev_row = idx
+                    break
+            if not rev_row:
+                for idx in df.index:
+                    clean_idx = str(idx).lower().strip()
+                    if clean_idx in ["revenue", "operating revenue", "gross sales"]:
+                        rev_row = idx
+                        break
+                        
+            # Prioritize Net Income
+            for idx in df.index:
+                clean_idx = str(idx).lower().strip()
+                if clean_idx == "net income":
+                    net_row = idx
+                    break
+            if not net_row:
+                for idx in df.index:
+                    clean_idx = str(idx).lower().strip()
+                    if clean_idx in ["netincome", "net income continuous operations"]:
+                        net_row = idx
+                        break
+
+            if rev_row is None or net_row is None:
+                return []
+                
+            items = []
+            cols = sorted(df.columns)
+            
+            # Indian FY Quarter mapping (FY starts in April)
+            # Month -> (Quarter, FY offset)
+            quarter_map = {
+                4: (1, 1), 5: (1, 1), 6: (1, 1),
+                7: (2, 1), 8: (2, 1), 9: (2, 1),
+                10: (3, 1), 11: (3, 1), 12: (3, 1),
+                1: (4, 0), 2: (4, 0), 3: (4, 0)
+            }
+            
+            for col in cols:
+                date_str = str(col).split(" ")[0]
+                try:
+                    dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+                except:
+                    dt = None
+                    
+                label = date_str
+                annual_label = date_str
+                if dt:
+                    q, fy_offset = quarter_map.get(dt.month, (1, 1))
+                    fy = dt.year + fy_offset
+                    label = f"Q{q} FY{str(fy)[2:]}"
+                    annual_label = f"FY{str(fy)[2:]}"
+                
+                rev = df.loc[rev_row, col]
+                net = df.loc[net_row, col]
+                
+                if isinstance(rev, pd.Series):
+                    rev = rev.iloc[0]
+                if isinstance(net, pd.Series):
+                    net = net.iloc[0]
+                    
+                if pd.isna(rev) or pd.isna(net):
+                    continue
+                    
+                items.append({
+                    "date": date_str,
+                    "quarterLabel": label,
+                    "annualLabel": annual_label,
+                    "revenue": float(rev),
+                    "earnings": float(net)
+                })
+            return items
+            
+        quarterly_data = extract_financials(q_fin)
+        annual_data = extract_financials(a_fin)
+        
+        return {
+            "symbol": symbol,
+            "quarterly": quarterly_data[-4:],
+            "annual": annual_data[-4:]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch financials for {symbol}: {str(e)}")
+
+
+@router.get("/search-stocks")
+async def search_stocks_endpoint() -> dict[str, Any]:
+    from backend.utils.paths import CSV_PATH
+    import pandas as pd
+    if not CSV_PATH.exists():
+        raise HTTPException(status_code=404, detail="stock_master.csv not found")
+    try:
+        df = pd.read_csv(CSV_PATH)
+        df_clean = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')].copy()
+        stocks = []
+        for _, row in df_clean.iterrows():
+            stocks.append({
+                "symbol": str(row['NSE Code']).strip(),
+                "name": str(row['Name']).strip()
+            })
+        stocks = sorted(stocks, key=lambda x: x['symbol'])
+        return {"stocks": stocks}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+
 
 

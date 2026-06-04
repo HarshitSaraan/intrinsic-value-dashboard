@@ -375,6 +375,17 @@
       });
     });
 
+    // Bind row clicks after rendering
+    var rows = body.querySelectorAll('.iv-strat-table-row');
+    rows.forEach(function (row, idx) {
+      row.addEventListener('click', function () {
+        var stock = pageItems[idx];
+        if (stock) {
+          openFinancialsModal(stock);
+        }
+      });
+    });
+
     if (pageInfo) {
       pageInfo.textContent = 'Page ' + currentPage + ' of ' + totalPages + ' (Showing ' + (start + 1) + '–' + end + ' of ' + filteredStocks.length + ')';
     }
@@ -442,6 +453,274 @@
         }
       });
     }
+  }
+
+  // Financials Modal Logic
+  var financialsModal = document.getElementById("ivFinancialsModal");
+  var modalStockName = document.getElementById("ivModalStockName");
+  var modalClose = document.getElementById("ivModalClose");
+  var toggleQuarterly = document.getElementById("ivToggleQuarterly");
+  var toggleAnnual = document.getElementById("ivToggleAnnual");
+  var modalLegendPeriod = document.getElementById("ivModalLegendPeriod");
+  var modalLegendRevenue = document.getElementById("ivModalLegendRevenue");
+  var modalLegendEarnings = document.getElementById("ivModalLegendEarnings");
+  var financialsChart = document.getElementById("ivFinancialsChart");
+  
+  var activeFinancialsData = null;
+  var activeViewType = "quarterly";
+
+  function openFinancialsModal(stock) {
+    if (!financialsModal) return;
+    
+    activeViewType = "quarterly";
+    if (toggleQuarterly) toggleQuarterly.classList.add("active");
+    if (toggleAnnual) toggleAnnual.classList.remove("active");
+    
+    var name = stock.name || stock.symbol;
+    if (modalStockName) modalStockName.textContent = name + " (" + stock.symbol + ".NS)";
+    
+    financialsModal.style.display = "flex";
+    
+    var ctx = financialsChart.getContext("2d");
+    ctx.clearRect(0, 0, financialsChart.width, financialsChart.height);
+    updateLegend(null);
+    
+    if (modalLegendPeriod) modalLegendPeriod.textContent = "Loading financials from Yahoo Finance...";
+    
+    var fetchUrl = apiEndpoint.replace("/strategies-data", "/stock-financials") + "?symbol=" + encodeURIComponent(stock.symbol);
+    fetch(fetchUrl)
+      .then(function(res) {
+        if (!res.ok) throw new Error("Failed to load financials");
+        return res.json();
+      })
+      .then(function(data) {
+        activeFinancialsData = data;
+        renderFinancials();
+      })
+      .catch(function(err) {
+        console.error(err);
+        if (modalLegendPeriod) modalLegendPeriod.textContent = "Error: " + err.message;
+      });
+  }
+
+  function closeFinancialsModal() {
+    if (financialsModal) financialsModal.style.display = "none";
+    activeFinancialsData = null;
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener("click", closeFinancialsModal);
+  }
+  if (financialsModal) {
+    financialsModal.addEventListener("click", function (e) {
+      if (e.target === financialsModal) closeFinancialsModal();
+    });
+  }
+
+  if (toggleQuarterly) {
+    toggleQuarterly.addEventListener("click", function () {
+      if (activeViewType === "quarterly") return;
+      activeViewType = "quarterly";
+      toggleQuarterly.classList.add("active");
+      toggleAnnual.classList.remove("active");
+      renderFinancials();
+    });
+  }
+
+  if (toggleAnnual) {
+    toggleAnnual.addEventListener("click", function () {
+      if (activeViewType === "annual") return;
+      activeViewType = "annual";
+      toggleAnnual.classList.add("active");
+      toggleQuarterly.classList.remove("active");
+      renderFinancials();
+    });
+  }
+
+  function updateLegend(item) {
+    if (!item) {
+      if (modalLegendPeriod) modalLegendPeriod.textContent = "—";
+      if (modalLegendRevenue) modalLegendRevenue.textContent = "—";
+      if (modalLegendEarnings) modalLegendEarnings.textContent = "—";
+      return;
+    }
+    var period = activeViewType === "annual" ? item.annualLabel : item.quarterLabel;
+    if (modalLegendPeriod) modalLegendPeriod.textContent = period;
+    if (modalLegendRevenue) modalLegendRevenue.textContent = formatFinancial(item.revenue);
+    if (modalLegendEarnings) modalLegendEarnings.textContent = formatFinancial(item.earnings);
+  }
+
+  function formatFinancial(v) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    var abs = Math.abs(v);
+    var suffix = 'B';
+    var formattedVal = abs / 1e9;
+    if (abs >= 1e12) {
+      formattedVal = abs / 1e12;
+      suffix = 'T';
+    } else if (abs < 1e9) {
+      formattedVal = abs / 1e6;
+      suffix = 'M';
+    }
+    var resultStr = formattedVal.toFixed(2);
+    if (resultStr.endsWith(".00")) resultStr = resultStr.substring(0, resultStr.length - 3);
+    return "₹" + resultStr + suffix;
+  }
+
+  function setupModalCanvas(c) {
+    if (!c) return null;
+    var rect = c.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var w = Math.max(280, Math.floor(rect.width || c.width || 550));
+    var h = Math.max(200, Math.floor(rect.height || c.height || 320));
+    c.width = w * dpr;
+    c.height = h * dpr;
+    c.style.width = w + "px";
+    c.style.height = h + "px";
+    var ctx = c.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { ctx: ctx, width: w, height: h };
+  }
+
+  function renderFinancials() {
+    if (!activeFinancialsData) return;
+    var dataset = activeViewType === "quarterly" ? activeFinancialsData.quarterly : activeFinancialsData.annual;
+    drawFinancialsChart(financialsChart, dataset);
+    if (dataset && dataset.length) {
+      updateLegend(dataset[dataset.length - 1]);
+    } else {
+      updateLegend(null);
+      if (modalLegendPeriod) modalLegendPeriod.textContent = "No data available";
+    }
+  }
+
+  function drawFinancialsChart(canvas, dataset) {
+    var d = setupModalCanvas(canvas);
+    if (!d) return;
+    var ctx = d.ctx;
+    var w = d.width;
+    var h = d.height;
+    ctx.clearRect(0, 0, w, h);
+
+    if (!dataset || !dataset.length) {
+      ctx.fillStyle = "rgba(203, 213, 232, 0.5)";
+      ctx.font = "12px Inter, Arial";
+      ctx.textAlign = "center";
+      ctx.fillText("No financial data found", w / 2, h / 2);
+      return;
+    }
+
+    var padL = w < 420 ? 45 : 55;
+    var padR = 15;
+    var padT = 20;
+    var padB = 30;
+    var chartW = w - padL - padR;
+    var chartH = h - padT - padB;
+
+    var maxVal = 0;
+    dataset.forEach(function (item) {
+      if (item.revenue > maxVal) maxVal = item.revenue;
+      if (item.earnings > maxVal) maxVal = item.earnings;
+    });
+    maxVal = maxVal * 1.15;
+    if (maxVal <= 0) maxVal = 1;
+
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+    ctx.lineWidth = 1;
+    ctx.fillStyle = "rgba(203, 213, 232, 0.72)";
+    ctx.font = "10px Inter, Arial";
+    ctx.textAlign = "right";
+
+    for (var g = 0; g <= 3; g++) {
+      var yy = padT + (chartH * g / 3);
+      var val = maxVal * (1 - g / 3);
+      ctx.beginPath();
+      if (ctx.setLineDash) ctx.setLineDash([4, 4]);
+      ctx.moveTo(padL, yy);
+      ctx.lineTo(w - padR, yy);
+      ctx.stroke();
+      if (ctx.setLineDash) ctx.setLineDash([]);
+      ctx.fillText(formatFinancial(val), padL - 8, yy + 3);
+    }
+
+    var numPeriods = dataset.length;
+    var groupWidth = chartW / numPeriods;
+    var barGap = 4;
+    var sideMargin = w < 480 ? 12 : 24;
+    var barWidth = (groupWidth - sideMargin * 2 - barGap) / 2;
+
+    dataset.forEach(function (item, idx) {
+      var groupCenterX = padL + (idx * groupWidth) + (groupWidth / 2);
+      var revX = groupCenterX - barWidth - (barGap / 2);
+      var earnX = groupCenterX + (barGap / 2);
+
+      var revH = (item.revenue / maxVal) * chartH;
+      var earnH = (item.earnings / maxVal) * chartH;
+
+      var revY = padT + chartH - revH;
+      var earnY = padT + chartH - earnH;
+
+      ctx.fillStyle = "#3a9ad9";
+      drawRoundedRect(ctx, revX, revY, barWidth, revH, 4);
+      ctx.fill();
+
+      ctx.fillStyle = "#f1bf6c";
+      drawRoundedRect(ctx, earnX, earnY, barWidth, earnH, 4);
+      ctx.fill();
+
+      ctx.fillStyle = "rgba(203, 213, 232, 0.72)";
+      ctx.font = "10px Inter, Arial";
+      ctx.textAlign = "center";
+      var xLabel = activeViewType === "quarterly" ? item.quarterLabel : item.annualLabel;
+      ctx.fillText(xLabel, groupCenterX, padT + chartH + 16);
+    });
+
+    canvas._bars = dataset.map(function (item, idx) {
+      var groupCenterX = padL + (idx * groupWidth) + (groupWidth / 2);
+      return {
+        x: groupCenterX - groupWidth / 2,
+        w: groupWidth,
+        item: item
+      };
+    });
+  }
+
+  function drawRoundedRect(ctx, x, y, width, height, radius) {
+    if (height < radius) radius = height;
+    ctx.beginPath();
+    ctx.moveTo(x, y + height);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+    ctx.lineTo(x + width, y + height);
+    ctx.closePath();
+  }
+
+  if (financialsChart) {
+    financialsChart.addEventListener("mousemove", function (e) {
+      if (!financialsChart._bars) return;
+      var rect = financialsChart.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var hovered = null;
+      financialsChart._bars.forEach(function (b) {
+        if (x >= b.x && x <= b.x + b.w) {
+          hovered = b;
+        }
+      });
+      if (hovered) {
+        updateLegend(hovered.item);
+      }
+    });
+
+    financialsChart.addEventListener("mouseleave", function () {
+      if (activeFinancialsData) {
+        var dataset = activeViewType === "quarterly" ? activeFinancialsData.quarterly : activeFinancialsData.annual;
+        if (dataset && dataset.length) {
+          updateLegend(dataset[dataset.length - 1]);
+        }
+      }
+    });
   }
 
   // Initial fetch and routing

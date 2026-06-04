@@ -17,15 +17,150 @@
     canvas._bars=pts.map(function(p,i){return{x:x(i),w:12,label:"Age "+p.year,value:p.value};});
   }
   document.addEventListener("DOMContentLoaded", function(){
-    var age=q("ivGawpAge"),cap=q("ivGawpCapital"),cagr=q("ivGawpCagr"),adj=q("ivGawpAdjustCagr"),calcBtn=q("ivGawpCalculate"),resetBtn=q("ivGawpReset"),err=q("ivGawpError"),ca=q("ivGawpCurrentAge"),cc=q("ivGawpCurrentCapital"),yl=q("ivGawpYearsLeft"),fv=q("ivGawpFutureValue"),badgeEl=q("ivGawpBadge"),it=q("ivGawpInterpretation"),chart=q("ivGawpProjectionChart"),tip=q("ivGawpTooltip");
+    var age=q("ivGawpAge"),cap=q("ivGawpCapital"),cagr=q("ivGawpCagr"),adj=q("ivGawpAdjustCagr");
+    var ageSlider=q("ivGawpAgeSlider"),capSlider=q("ivGawpCapitalSlider"),cagrSlider=q("ivGawpCagrSlider");
+    var calcBtn=q("ivGawpCalculate"),resetBtn=q("ivGawpReset"),err=q("ivGawpError");
+    var ca=q("ivGawpCurrentAge"),cc=q("ivGawpCurrentCapital"),yl=q("ivGawpYearsLeft"),fv=q("ivGawpFutureValue");
+    var badgeEl=q("ivGawpBadge"),it=q("ivGawpInterpretation"),chart=q("ivGawpProjectionChart"),tip=q("ivGawpTooltip");
+    
+    // Layout and reveal elements
+    var layoutWrapper=q("ivGawpLayoutWrapper");
+    var resultsReveal=q("ivGawpResultsReveal");
+    var visualsReveal=q("ivGawpVisualsReveal");
+    var extraReveal=q("ivGawpExtraReveal");
+
     if(!calcBtn) return;
     function show(m){err.textContent=m; err.style.display=m?"block":"none";}
-    function run(){var a=Number(age.value),cp=Number(cap.value),cg=15; if(adj&&adj.checked) cg=Number(cagr.value); if(!a||a<=0||!isFinite(a)) return show("Please enter a valid age greater than 0."); if(Math.floor(a)!==a) return show("Please enter age in completed whole years."); if(!isFinite(cp)||cp<0||cap.value==="") return show("Please enter valid investable capital greater than or equal to 0."); if(!isFinite(cg)||cg<12||cg>17) return show("Please enter CAGR between 12% and 17%."); show(""); var r=calc(a,cp,cg); ca.textContent=r.age+" years"; cc.textContent=formatINR(r.capital); yl.textContent=r.yearsLeft+" years"; fv.textContent=formatINR(r.futureValue); badgeEl.innerHTML="<span class=\"iv-gawp-badge-icon\">"+r.badge.icon+"</span>"+r.badge.label; badgeEl.className="iv-gawp-badge "+r.badge.className; it.textContent=r.interpretation; draw(chart,r);}
-    function reset(){age.value=""; cap.value=""; show(""); ca.textContent=cc.textContent=yl.textContent=fv.textContent="—"; badgeEl.innerHTML="<span class=\"iv-gawp-badge-icon\">◆</span>Badge pending"; badgeEl.className="iv-gawp-badge"; cagr.value="15"; cagr.disabled=true; adj.checked=false; it.textContent="Enter age and investable capital to calculate your GAWP badge."; var d=setupCanvas(chart); if(d)d.ctx.clearRect(0,0,d.width,d.height); if(tip)tip.style.display="none";}
-    calcBtn.addEventListener("click",run); if(resetBtn)resetBtn.addEventListener("click",reset);
+
+    function run(){
+      var a=Number(age.value),cp=Number(cap.value),cg=15;
+      if(adj&&adj.checked) cg=Number(cagr.value);
+      if(!a||a<=0||!isFinite(a)) return show("Please enter a valid age greater than 0.");
+      if(Math.floor(a)!==a) return show("Please enter age in completed whole years.");
+      if(!isFinite(cp)||cp<0||cap.value==="") return show("Please enter valid investable capital greater than or equal to 0.");
+      if(!isFinite(cg)||cg<12||cg>17) return show("Please enter CAGR between 12% and 17%.");
+      show("");
+      
+      var r=calc(a,cp,cg);
+      ca.textContent=r.age+" years";
+      cc.textContent=formatINR(r.capital);
+      yl.textContent=r.yearsLeft+" years";
+      fv.textContent=formatINR(r.futureValue);
+      badgeEl.innerHTML="<span class=\"iv-gawp-badge-icon\">"+r.badge.icon+"</span>"+r.badge.label;
+      badgeEl.className="iv-gawp-badge "+r.badge.className;
+      it.textContent=r.interpretation;
+
+      // Adjust layout grid and display cards
+      if(layoutWrapper) layoutWrapper.classList.add("calculated");
+      if(resultsReveal) resultsReveal.style.display="block";
+      if(visualsReveal) visualsReveal.style.display="block";
+      if(extraReveal) extraReveal.style.display="block";
+
+      // Draw the projection chart now that the canvas is visible
+      draw(chart,r);
+
+      // Trigger animations
+      requestAnimationFrame(function () {
+        [resultsReveal, visualsReveal, extraReveal].forEach(function (el) {
+          if (el) el.classList.add("show");
+        });
+      });
+    }
+
+    function reset(){
+      age.value="30"; if(ageSlider) ageSlider.value="30";
+      cap.value="1000000"; if(capSlider) capSlider.value="1000000";
+      cagr.value="15"; if(cagrSlider) cagrSlider.value="15";
+      cagr.disabled=true;
+      if(cagrSlider) cagrSlider.disabled=true;
+      if(adj) adj.checked=false;
+
+      show("");
+      ca.textContent=cc.textContent=yl.textContent=fv.textContent="—";
+      badgeEl.innerHTML="<span class=\"iv-gawp-badge-icon\">◆</span>Badge pending";
+      badgeEl.className="iv-gawp-badge";
+      it.textContent="Enter age and investable capital to calculate your GAWP badge.";
+      
+      var d=setupCanvas(chart);
+      if(d)d.ctx.clearRect(0,0,d.width,d.height);
+      if(tip)tip.style.display="none";
+
+      // Revert layout
+      if(layoutWrapper) layoutWrapper.classList.remove("calculated");
+      [resultsReveal, visualsReveal, extraReveal].forEach(function (el) {
+        if (el) {
+          el.classList.remove("show");
+          el.style.display="none";
+        }
+      });
+    }
+
+    // Set defaults from sliders on load
+    if (age && ageSlider) age.value = ageSlider.value;
+    if (cap && capSlider) cap.value = capSlider.value;
+    if (cagr && cagrSlider) cagr.value = cagrSlider.value;
+
+    // Bidirectional Slider Sync
+    function setupSync(inputEl, sliderEl) {
+      if (!inputEl || !sliderEl) return;
+      
+      inputEl.addEventListener("input", function () {
+        var val = Number(inputEl.value);
+        var min = Number(sliderEl.min);
+        var max = Number(sliderEl.max);
+        if (isFinite(val) && val >= min && val <= max) {
+          sliderEl.value = val;
+        }
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+
+      sliderEl.addEventListener("input", function () {
+        inputEl.value = sliderEl.value;
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+    }
+
+    setupSync(age, ageSlider);
+    setupSync(cap, capSlider);
+    setupSync(cagr, cagrSlider);
+
+    calcBtn.addEventListener("click",run);
+    if(resetBtn)resetBtn.addEventListener("click",reset);
     [age,cap,cagr].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
-    if(adj&&cagr){adj.addEventListener("change",function(){cagr.disabled=!adj.checked; if(!adj.checked)cagr.value="15";});}
-    if(chart){chart.addEventListener("mousemove",function(e){if(!tip||!chart._bars)return; var r=chart.getBoundingClientRect(),x=e.clientX-r.left,d=null; chart._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;}); if(!d){tip.style.display="none";return;} tip.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value); tip.style.display="block"; tip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px"; tip.style.top=Math.max(e.clientY-18,10)+"px";}); chart.addEventListener("mouseleave",function(){if(tip)tip.style.display="none";});}
+    
+    if(adj&&cagr){
+      adj.addEventListener("change",function(){
+        cagr.disabled=!adj.checked;
+        if(cagrSlider) cagrSlider.disabled=!adj.checked;
+        if(!adj.checked) {
+          cagr.value="15";
+          if(cagrSlider) cagrSlider.value="15";
+        }
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+    }
+
+    if(chart){
+      chart.addEventListener("mousemove",function(e){
+        if(!tip||!chart._bars)return;
+        var r=chart.getBoundingClientRect(),x=e.clientX-r.left,d=null;
+        chart._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});
+        if(!d){tip.style.display="none";return;}
+        tip.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);
+        tip.style.display="block";
+        tip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px";
+        tip.style.top=Math.max(e.clientY-18,10)+"px";
+      });
+      chart.addEventListener("mouseleave",function(){if(tip)tip.style.display="none";});
+    }
+
+
 
     // Toggle FAQ Section Collapse state
     var faqSectionCard = q("ivFaqSectionCard");

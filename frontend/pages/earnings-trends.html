@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Earnings Trends Search</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/earnings-trends.css">
+  <link rel="stylesheet" href="../css/theme-toggle.css">
+  <script>
+    (function(){
+      var t=localStorage.getItem('iv-theme');
+      if(t===null)t='dark';
+      if(t)document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+</head>
+<body>
+  <main class="iv-page-shell iv-trends-page">
+    <div class="iv-section-title">
+      <div class="iv-kicker">Wealth &amp; Analytics</div>
+      <h2>Earnings Trends Search</h2>
+      <p>Search any Indian stock to pull its historical Revenue vs. Earnings chart directly from Yahoo Finance.</p>
+    </div>
+
+    <!-- Layout Wrapper: Single column centered on load, shifts to dual-column when a stock is loaded -->
+    <div class="iv-trends-layout-wrapper" id="ivTrendsLayout">
+      
+      <!-- Search Side Card -->
+      <div class="iv-trends-search-area" id="ivTrendsSearchArea">
+        <div class="iv-card" style="height: 100%;">
+          <h3>Search Stock</h3>
+          <div class="iv-field" style="margin-top: 12px; position: relative;">
+            <input type="text" id="ivStockSearchInput" placeholder="Enter symbol or name (e.g. RELIANCE, TCS)..." autocomplete="off">
+            <div class="iv-search-spinner" id="ivSearchSpinner" style="display: none;"></div>
+          </div>
+          
+          <!-- Live scrollable list of matching stocks -->
+          <div class="iv-search-results-list" id="ivSearchResultsList">
+            <div style="text-align: center; padding: 24px; color: var(--iv-text-muted); font-size: 13px;">
+              Loading stock index...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph Card (Revealed on click) -->
+      <div class="iv-trends-reveal-section iv-trends-chart-area" id="ivTrendsChartArea" style="display: none;">
+        <div class="iv-card" style="height: 100%;">
+          <div class="iv-modal-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div class="iv-modal-title-area">
+              <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Revenue vs. Earnings</h3>
+              <span class="iv-modal-subtitle" id="ivModalStockName" style="font-size: 12px; color: var(--iv-text-muted);">Reliance Industries Limited</span>
+            </div>
+            <div class="iv-modal-controls" style="display: flex; align-items: center; gap: 14px;">
+              <div class="iv-toggle-group" style="display: flex; background: rgba(0,0,0,0.3); padding: 3px; border-radius: 20px; border: 1px solid rgba(var(--iv-accent-rgb), 0.16);">
+                <button class="iv-toggle-btn active" id="ivToggleQuarterly" style="padding: 4px 12px; border-radius: 16px; border: none; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Quarterly</button>
+                <button class="iv-toggle-btn" id="ivToggleAnnual" style="padding: 4px 12px; border-radius: 16px; border: none; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Annual</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="iv-modal-body" style="margin-top: 16px;">
+            <!-- Legend exactly matching user screenshot -->
+            <div class="iv-financials-legend" id="ivModalLegend" style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; margin-bottom: 20px; flex-wrap: wrap;">
+              <span id="ivModalLegendPeriod" style="font-weight: 700; color: var(--iv-text);">—</span>
+              <span style="display: flex; align-items: center; gap: 5px; color: var(--iv-text-secondary);">
+                <i class="iv-legend-dot blue" style="width: 10px; height: 10px; border-radius: 3px; background: #3a9ad9; display: inline-block;"></i> 
+                Revenue <strong id="ivModalLegendRevenue" style="color: var(--iv-text); font-weight: 600;">—</strong>
+              </span>
+              <span style="display: flex; align-items: center; gap: 5px; color: var(--iv-text-secondary);">
+                <i class="iv-legend-dot yellow" style="width: 10px; height: 10px; border-radius: 3px; background: #f1bf6c; display: inline-block;"></i> 
+                Earnings <strong id="ivModalLegendEarnings" style="color: var(--iv-text); font-weight: 600;">—</strong>
+              </span>
+            </div>
+            
+            <div class="iv-chart-container" style="position: relative; width: 100%; height: 320px;">
+              <canvas id="ivFinancialsChart" style="width: 100%; height: 100%; display: block;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="../js/navigation.js?v=2"></script>
+  <script src="../js/modules/earnings-trends.js"></script>
+</body>
+</html>

@@ -182,20 +182,43 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     var amount = q("ivSipAmount"), cagr = q("ivSipCagr"), years = q("ivSipYears"), stepup = q("ivSipStepup");
+    var amountSlider = q("ivSipAmountSlider"), cagrSlider = q("ivSipCagrSlider"), yearsSlider = q("ivSipYearsSlider"), stepupSlider = q("ivSipStepupSlider");
     var calculate = q("ivSipCalculate"), reset = q("ivSipReset"), error = q("ivSipError");
     var invested = q("ivSipInvested"), futureValue = q("ivSipFutureValue"), gain = q("ivSipGain"), multiple = q("ivSipMultiple");
     var tableBody = q("ivSipTableBody"), lineCanvas = q("ivSipLineChart"), stackedCanvas = q("ivSipStackedChart"), tooltip = q("ivSipTooltip");
+    
+    // Layout and reveal elements
+    var layoutWrapper = q("ivSipLayoutWrapper");
+    var summaryReveal = q("ivSipSummaryReveal");
+    var chartsReveal = q("ivSipChartsReveal");
+    var tableReveal = q("ivSipTableReveal");
+    var tableCard = q("ivSipTableCard");
+
     if (!calculate) return;
 
     function showError(message) { error.textContent = message; error.style.display = message ? "block" : "none"; }
 
     function resetView() {
-      [amount, cagr, years, stepup].forEach(function (el) { if (el) el.value = ""; });
+      if (amount && amountSlider) { amount.value = "20000"; amountSlider.value = "20000"; }
+      if (cagr && cagrSlider) { cagr.value = "15"; cagrSlider.value = "15"; }
+      if (years && yearsSlider) { years.value = "15"; yearsSlider.value = "15"; }
+      if (stepup && stepupSlider) { stepup.value = "0"; stepupSlider.value = "0"; }
+      
       showError("");
       invested.textContent = "—"; futureValue.textContent = "—"; gain.textContent = "—"; multiple.textContent = "—";
       tableBody.innerHTML = "<tr><td colspan=\"6\">Enter SIP details and click Calculate SIP.</td></tr>";
       [lineCanvas, stackedCanvas].forEach(function (canvas) { var data = setupCanvas(canvas); if (data) data.ctx.clearRect(0, 0, data.width, data.height); });
       if (tooltip) tooltip.style.display = "none";
+
+      // Revert layout styles
+      if (layoutWrapper) layoutWrapper.classList.remove("calculated");
+      [summaryReveal, chartsReveal, tableReveal].forEach(function (el) {
+        if (el) {
+          el.classList.remove("show");
+          el.style.display = "none";
+        }
+      });
+      if (tableCard) tableCard.classList.add("collapsed");
     }
 
     function runCalculation() {
@@ -207,6 +230,7 @@
       var err = validateInputs(amountValue, cagrValue, yearsValue, stepValue);
       if (err) { showError(err); return; }
       showError("");
+      
       var rows = calculateSipData(amountValue, cagrValue, yearsValue, stepValue);
       var last = rows[rows.length - 1];
       invested.textContent = formatINR(last.invested);
@@ -216,8 +240,72 @@
       tableBody.innerHTML = rows.map(function (row) {
         return "<tr><td>" + row.year + "</td><td>" + formatINR(row.annualSip) + "</td><td>" + formatINR(row.invested) + "</td><td>" + formatINR(row.value) + "</td><td>" + formatINR(row.gain) + "</td><td>" + row.multiple.toFixed(2) + "x</td></tr>";
       }).join("");
+
+      // Adjust layout grid
+      if (layoutWrapper) layoutWrapper.classList.add("calculated");
+
+      // Show results containers so their width can be read by chart scripts
+      if (summaryReveal) summaryReveal.style.display = "block";
+      if (chartsReveal) chartsReveal.style.display = "block";
+      if (tableReveal) tableReveal.style.display = "block";
+
+      // Draw the charts using correct active widths
       drawLineChart(lineCanvas, rows);
       drawStackedChart(stackedCanvas, rows);
+
+      // Trigger animations on next frame
+      requestAnimationFrame(function () {
+        [summaryReveal, chartsReveal, tableReveal].forEach(function (el) {
+          if (el) el.classList.add("show");
+        });
+      });
+    }
+
+    // Set default values from sliders on load
+    if (amount && amountSlider) amount.value = amountSlider.value;
+    if (cagr && cagrSlider) cagr.value = cagrSlider.value;
+    if (years && yearsSlider) years.value = yearsSlider.value;
+    if (stepup && stepupSlider) stepup.value = stepupSlider.value;
+
+    // Sync input box and slider changes
+    function setupSync(inputEl, sliderEl) {
+      if (!inputEl || !sliderEl) return;
+      
+      inputEl.addEventListener("input", function () {
+        var val = Number(inputEl.value);
+        var min = Number(sliderEl.min);
+        var max = Number(sliderEl.max);
+        if (isFinite(val) && val >= min && val <= max) {
+          sliderEl.value = val;
+        }
+        // If already calculated, update results in real-time!
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          runCalculation();
+        }
+      });
+
+      sliderEl.addEventListener("input", function () {
+        inputEl.value = sliderEl.value;
+        // If already calculated, update results in real-time!
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          runCalculation();
+        }
+      });
+    }
+
+    setupSync(amount, amountSlider);
+    setupSync(cagr, cagrSlider);
+    setupSync(years, yearsSlider);
+    setupSync(stepup, stepupSlider);
+
+    // Setup collapsible table toggle
+    if (tableCard) {
+      var tableHeader = tableCard.querySelector(".iv-collapse-header");
+      if (tableHeader) {
+        tableHeader.addEventListener("click", function () {
+          tableCard.classList.toggle("collapsed");
+        });
+      }
     }
 
     calculate.addEventListener("click", runCalculation);

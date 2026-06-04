@@ -24,18 +24,133 @@
     canvas._bars=b.map(function(v,i){return{x:pL+i*(bw+gap),w:bw,label:v.label,value:v.value};});
   }
   document.addEventListener("DOMContentLoaded",function(){
-    var body=q("ivXirrCashflowBody"),add=q("ivXirrAddRow"),cc=q("ivXirrCurrentCapital"),vd=q("ivXirrValuationDate"),calc=q("ivXirrCalculate"),reset=q("ivXirrReset"),err=q("ivXirrError"),res=q("ivXirrResult"),cat=q("ivXirrCategory"),ti=q("ivXirrTotalInvested"),tw=q("ivXirrTotalWithdrawn"),nd=q("ivXirrNetDeployed"),co=q("ivXirrCurrentOut"),gl=q("ivXirrGainLoss"),msg=q("ivXirrMessage"),jc=q("ivXirrJourneyChart"),sc=q("ivXirrSummaryChart"),tt=q("ivXirrTooltip");
+    var body=q("ivXirrCashflowBody"),add=q("ivXirrAddRow"),cc=q("ivXirrCurrentCapital"),vd=q("ivXirrValuationDate");
+    var ccSlider=q("ivXirrCurrentCapitalSlider");
+    var calc=q("ivXirrCalculate"),reset=q("ivXirrReset"),err=q("ivXirrError"),res=q("ivXirrResult"),cat=q("ivXirrCategory");
+    var ti=q("ivXirrTotalInvested"),tw=q("ivXirrTotalWithdrawn"),nd=q("ivXirrNetDeployed"),co=q("ivXirrCurrentOut"),gl=q("ivXirrGainLoss");
+    var msg=q("ivXirrMessage"),jc=q("ivXirrJourneyChart"),sc=q("ivXirrSummaryChart"),tt=q("ivXirrTooltip");
+    
+    // Layout and reveal elements
+    var layoutWrapper=q("ivXirrLayoutWrapper");
+    var resultsReveal=q("ivXirrResultsReveal");
+    var chartsReveal=q("ivXirrChartsReveal");
+
     if(!body) return;
     function show(m){err.textContent=m; err.style.display=m?"block":"none";}
     function bindRows(){body.querySelectorAll(".iv-xirr-cashflow-row").forEach(function(r){bindDelete(r,body);});}
-    function run(){var collected=collect(body,cc,vd); if(collected.error){show(collected.error);return;} var rate=calcRate(collected.cashflows); if(rate===null||!isFinite(rate)){show("XIRR could not be calculated. Please check entries."); return;} show(""); var x=rate*100,net=collected.totalInvested-collected.totalWithdrawn,ag=collected.currentCapital+collected.totalWithdrawn-collected.totalInvested,p=perf(x),deployed=0,pts=[]; collected.cashflows.forEach(function(cf){if(cf.amount<0)deployed+=Math.abs(cf.amount); if(cf.label==="Withdrawal")deployed-=cf.amount; if(cf.label!=="Current Value")pts.push({date:cf.date,deployed:deployed,value:null,label:cf.label});}); var cur=collected.cashflows[collected.cashflows.length-1]; pts.push({date:cur.date,deployed:deployed,value:cur.amount,label:"Current Value"});
-      res.textContent=x.toFixed(2)+"%"; cat.textContent=p.category; ti.textContent=formatINR(collected.totalInvested); tw.textContent=formatINR(collected.totalWithdrawn); nd.textContent=formatINR(net); co.textContent=formatINR(collected.currentCapital); gl.textContent=formatINR(ag); msg.textContent=p.message;
-      drawJourney(jc,pts); drawSummary(sc,{totalInvested:collected.totalInvested,totalWithdrawn:collected.totalWithdrawn,currentCapital:collected.currentCapital,absoluteGainLoss:ag});
+    
+    function run(){
+      var collected=collect(body,cc,vd);
+      if(collected.error){show(collected.error);return;}
+      var rate=calcRate(collected.cashflows);
+      if(rate===null||!isFinite(rate)){show("XIRR could not be calculated. Please check entries."); return;}
+      show("");
+      
+      var x=rate*100,net=collected.totalInvested-collected.totalWithdrawn,ag=collected.currentCapital+collected.totalWithdrawn-collected.totalInvested,p=perf(x),deployed=0,pts=[];
+      collected.cashflows.forEach(function(cf){
+        if(cf.amount<0)deployed+=Math.abs(cf.amount);
+        if(cf.label==="Withdrawal")deployed-=cf.amount;
+        if(cf.label!=="Current Value")pts.push({date:cf.date,deployed:deployed,value:null,label:cf.label});
+      });
+      var cur=collected.cashflows[collected.cashflows.length-1];
+      pts.push({date:cur.date,deployed:deployed,value:cur.amount,label:"Current Value"});
+      
+      res.textContent=x.toFixed(2)+"%";
+      cat.textContent=p.category;
+      ti.textContent=formatINR(collected.totalInvested);
+      tw.textContent=formatINR(collected.totalWithdrawn);
+      nd.textContent=formatINR(net);
+      co.textContent=formatINR(collected.currentCapital);
+      gl.textContent=formatINR(ag);
+      
+      // Style absolute gain/loss color
+      if (gl) {
+        if (ag >= 0) {
+          gl.className = "gain-positive";
+        } else {
+          gl.className = "gain-negative";
+        }
+      }
+
+      msg.textContent=p.message;
+
+      // Adjust layout
+      if (layoutWrapper) layoutWrapper.classList.add("calculated");
+      if (resultsReveal) resultsReveal.style.display = "block";
+      if (chartsReveal) chartsReveal.style.display = "block";
+
+      // Draw charts
+      drawJourney(jc,pts);
+      drawSummary(sc,{totalInvested:collected.totalInvested,totalWithdrawn:collected.totalWithdrawn,currentCapital:collected.currentCapital,absoluteGainLoss:ag});
+
+      // Trigger animations
+      requestAnimationFrame(function () {
+        [resultsReveal, chartsReveal].forEach(function (el) {
+          if (el) el.classList.add("show");
+        });
+      });
     }
-    function resetAll(){body.innerHTML=""; body.appendChild(createRow("","","")); bindRows(); cc.value=""; vd.value=today(); show(""); [res,cat,ti,tw,nd,co,gl].forEach(function(el){el.textContent="—";}); msg.textContent="Enter cashflows and current capital to calculate your annualized portfolio return."; [jc,sc].forEach(function(cv){var d=setupCanvas(cv); if(d)d.ctx.clearRect(0,0,d.width,d.height);}); if(tt)tt.style.display="none";}
-    vd.value=today(); bindRows();
+
+    function resetAll(){
+      body.innerHTML="";
+      body.appendChild(createRow("","",""));
+      bindRows();
+      
+      cc.value="0";
+      if(ccSlider) ccSlider.value="0";
+      vd.value=today();
+      show("");
+      [res,cat,ti,tw,nd,co,gl].forEach(function(el){el.textContent="—";});
+      if (gl) gl.className = "";
+      msg.textContent="Enter cashflows and current capital to calculate your annualized portfolio return.";
+      [jc,sc].forEach(function(cv){var d=setupCanvas(cv); if(d)d.ctx.clearRect(0,0,d.width,d.height);});
+      if(tt)tt.style.display="none";
+
+      // Revert layout
+      if (layoutWrapper) layoutWrapper.classList.remove("calculated");
+      [resultsReveal, chartsReveal].forEach(function (el) {
+        if (el) {
+          el.classList.remove("show");
+          el.style.display = "none";
+        }
+      });
+    }
+
+    vd.value=today();
+    bindRows();
+    
+    // Set defaults from slider on load
+    if (cc && ccSlider) cc.value = ccSlider.value;
+
+    // Bidirectional Slider Sync
+    function setupSync(inputEl, sliderEl) {
+      if (!inputEl || !sliderEl) return;
+      
+      inputEl.addEventListener("input", function () {
+        var val = Number(inputEl.value);
+        var min = Number(sliderEl.min);
+        var max = Number(sliderEl.max);
+        if (isFinite(val) && val >= min && val <= max) {
+          sliderEl.value = val;
+        }
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+
+      sliderEl.addEventListener("input", function () {
+        inputEl.value = sliderEl.value;
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+    }
+
+    setupSync(cc, ccSlider);
+
     if(add&&!add._ivBound){add._ivBound=true; add.addEventListener("click",function(){body.appendChild(createRow("","","")); bindRows();});}
-    calc.addEventListener("click",run); if(reset)reset.addEventListener("click",resetAll);
+    calc.addEventListener("click",run);
+    if(reset)reset.addEventListener("click",resetAll);
     [cc,vd].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
     function move(canvas,mode,e){if(!tt||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="journey"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;}); if(d)tt.innerHTML="<b>"+d.label+"</b><br>Date: "+d.date.toISOString().slice(0,10)+"<br>Net deployed: "+formatINR(d.deployed)+(d.value!==null?"<br>Current value: "+formatINR(d.value):"");} if(mode==="summary"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;}); if(d)tt.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);} if(!d){tt.style.display="none";return;} tt.style.display="block"; tt.style.left=Math.min(e.clientX+12,window.innerWidth-260)+"px"; tt.style.top=Math.max(e.clientY-18,10)+"px";}
     if(jc){jc.addEventListener("mousemove",function(e){move(jc,"journey",e);}); jc.addEventListener("mouseleave",function(){tt.style.display="none";});}

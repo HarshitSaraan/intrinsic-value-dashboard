@@ -22,144 +22,190 @@
       <h2>How Rich Are You?</h2>
       <p>Projection of your net worth through the Gangil Age Wealth Parity (GAWP) Index.</p>
     </div>
-    <div class="iv-grid two">
-      <div class="iv-card">
-        <h3>Inputs</h3>
-        <div class="iv-form-grid">
-          <div class="iv-field"><label>Age</label><input id="ivGawpAge" type="number" min="1" inputmode="numeric"></div>
-          <div class="iv-field"><label>Investable Capital</label><input id="ivGawpCapital" type="number" min="0" inputmode="decimal"></div>
-          <div class="iv-field"><label>CAGR Assumption</label><input id="ivGawpCagr" type="number" min="12" max="17" step="0.01" value="15" disabled><label><input id="ivGawpAdjustCagr" type="checkbox"> Adjust CAGR (12%–17%)</label></div>
+
+    <!-- GAWP Main Dynamic Layout Wrapper -->
+    <div class="iv-gawp-layout-wrapper" id="ivGawpLayoutWrapper">
+      <div class="iv-gawp-inputs-area" id="ivGawpInputsArea">
+        <div class="iv-card">
+          <h3>Inputs</h3>
+          <div class="iv-form-grid">
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Age</label>
+                <input id="ivGawpAge" type="number" min="1" max="79" step="1" placeholder="30">
+              </div>
+              <input id="ivGawpAgeSlider" type="range" min="1" max="79" step="1" value="30" class="iv-range-slider">
+            </div>
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Investable Capital</label>
+                <input id="ivGawpCapital" type="number" min="0" max="100000000" step="100000" placeholder="1000000">
+              </div>
+              <input id="ivGawpCapitalSlider" type="range" min="0" max="100000000" step="100000" value="1000000" class="iv-range-slider">
+            </div>
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>CAGR Assumption</label>
+                <input id="ivGawpCagr" type="number" min="12" max="17" step="0.1" value="15" disabled>
+              </div>
+              <input id="ivGawpCagrSlider" type="range" min="12" max="17" step="0.1" value="15" disabled class="iv-range-slider">
+              <label style="margin-top: 6px; display: inline-flex; align-items: center; gap: 4px; font-size: 11px;">
+                <input id="ivGawpAdjustCagr" type="checkbox"> Adjust CAGR (12%–17%)
+              </label>
+            </div>
+          </div>
+          <div class="iv-btn-row">
+            <button class="iv-primary-btn" id="ivGawpCalculate" type="button">Check Wealth Badge</button>
+            <button class="iv-secondary-btn" id="ivGawpReset" type="button">Reset</button>
+          </div>
+          <div class="iv-gawp-error" id="ivGawpError"></div>
         </div>
-        <div class="iv-btn-row"><button class="iv-primary-btn" id="ivGawpCalculate" type="button">Check Wealth Badge</button><button class="iv-secondary-btn" id="ivGawpReset" type="button">Reset</button></div>
-        <div class="iv-gawp-error" id="ivGawpError"></div>
       </div>
-      <div class="iv-card">
-        <h3>GAWP Result</h3>
-        <div class="iv-gawp-results">
-          <div class="iv-gawp-result-card"><span>Current Age</span><strong id="ivGawpCurrentAge">—</strong></div>
-          <div class="iv-gawp-result-card"><span>Current Investable Capital</span><strong id="ivGawpCurrentCapital">—</strong></div>
-          <div class="iv-gawp-result-card"><span>Years Left to Age 80</span><strong id="ivGawpYearsLeft">—</strong></div>
-          <div class="iv-gawp-result-card"><span>Future Net Worth at 80</span><strong id="ivGawpFutureValue">—</strong></div>
+
+      <!-- GAWP Results Reveal Card -->
+      <div class="iv-gawp-reveal-section iv-gawp-results-area" id="ivGawpResultsReveal" style="display: none;">
+        <div class="iv-card" style="height: 100%;">
+          <h3>GAWP Result</h3>
+          <div class="iv-gawp-results">
+            <div class="iv-gawp-result-card"><span>Current Age</span><strong id="ivGawpCurrentAge">—</strong></div>
+            <div class="iv-gawp-result-card"><span>Current Investable Capital</span><strong id="ivGawpCurrentCapital">—</strong></div>
+            <div class="iv-gawp-result-card"><span>Years Left to Age 80</span><strong id="ivGawpYearsLeft">—</strong></div>
+            <div class="iv-gawp-result-card"><span>Future Net Worth at 80</span><strong id="ivGawpFutureValue">—</strong></div>
+          </div>
+          <p style="margin-top: 14px;"><span id="ivGawpBadge" class="iv-gawp-badge"><span class="iv-gawp-badge-icon">◆</span>Badge pending</span></p>
+          <p id="ivGawpInterpretation" style="margin-top: 10px; font-size: 13.5px; line-height: 1.5;">Enter age and investable capital to calculate your GAWP badge.</p>
         </div>
-        <p><span id="ivGawpBadge" class="iv-gawp-badge"><span class="iv-gawp-badge-icon">◆</span>Badge pending</span></p>
-        <p id="ivGawpInterpretation">Enter age and investable capital to calculate your GAWP badge.</p>
       </div>
     </div>
-    <div class="iv-grid two">
-      <div class="iv-card iv-gawp-chart-card">
-        <h3>Projected Net Worth Journey to Age 80</h3>
-        <canvas id="ivGawpProjectionChart"></canvas>
-        <div class="iv-gawp-legend"><span><i class="iv-gawp-dot blue"></i>Current capital</span><span><i class="iv-gawp-dot gold"></i>Projected net worth</span></div>
-      </div>
-      <div class="iv-card">
-        <h3>GAWP Badge Table</h3>
-        <div class="iv-table-wrap">
-          <table><thead><tr><th>Badge</th><th>Future Value at 80</th></tr></thead><tbody>
-            <tr><td><span class="iv-badge-pill poor"><span class="iv-badge-icon">🛡</span>Poor</span></td><td>&lt; ₹1 Cr</td></tr>
-            <tr><td><span class="iv-badge-pill middle"><span class="iv-badge-icon">💼</span>Middle Class</span></td><td>₹1 Cr – ₹5 Cr</td></tr>
-            <tr><td><span class="iv-badge-pill upper"><span class="iv-badge-icon">🎫</span>Upper Middle</span></td><td>₹5 Cr – ₹25 Cr</td></tr>
-            <tr><td><span class="iv-badge-pill rich"><span class="iv-badge-icon">◆</span>Rich</span></td><td>₹25 Cr – ₹100 Cr</td></tr>
-            <tr><td><span class="iv-badge-pill ultra"><span class="iv-badge-icon">👑</span>Ultra Rich</span></td><td>₹100 Cr – ₹5,000 Cr</td></tr>
-            <tr><td><span class="iv-badge-pill top"><span class="iv-badge-icon">🏆</span>Top 500 in India</span></td><td>&gt; ₹5,000 Cr</td></tr>
-          </tbody></table>
+
+    <!-- Visuals Reveal Container (Chart & Badge Table) -->
+    <div class="iv-gawp-reveal-section" id="ivGawpVisualsReveal" style="display: none;">
+      <div class="iv-grid two">
+        <div class="iv-card iv-gawp-chart-card">
+          <h3>Projected Net Worth Journey to Age 80</h3>
+          <canvas id="ivGawpProjectionChart"></canvas>
+          <div class="iv-gawp-legend">
+            <span><i class="iv-gawp-dot blue"></i>Current Capital</span>
+            <span><i class="iv-gawp-dot gold"></i>Projected Net Worth</span>
+          </div>
+        </div>
+        <div class="iv-card" id="ivGawpTableCard">
+          <h3>GAWP Badge Table</h3>
+          <div class="iv-table-wrap" style="margin-top: 10px;">
+            <table>
+              <thead>
+                <tr><th>Badge</th><th>Future Value at 80</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="iv-badge-pill poor"><span class="iv-badge-icon">🛡</span>Poor</span></td><td>&lt; ₹1 Cr</td></tr>
+                <tr><td><span class="iv-badge-pill middle"><span class="iv-badge-icon">💼</span>Middle Class</span></td><td>₹1 Cr – ₹5 Cr</td></tr>
+                <tr><td><span class="iv-badge-pill upper"><span class="iv-badge-icon">🎫</span>Upper Middle</span></td><td>₹5 Cr – ₹25 Cr</td></tr>
+                <tr><td><span class="iv-badge-pill rich"><span class="iv-badge-icon">◆</span>Rich</span></td><td>₹25 Cr – ₹100 Cr</td></tr>
+                <tr><td><span class="iv-badge-pill ultra"><span class="iv-badge-icon">👑</span>Ultra Rich</span></td><td>₹100 Cr – ₹5,000 Cr</td></tr>
+                <tr><td><span class="iv-badge-pill top"><span class="iv-badge-icon">🏆</span>Top 500 in India</span></td><td>&gt; ₹5,000 Cr</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Collapsible FAQ Section -->
-    <div class="iv-grid" style="margin-top: 14px;">
-      <div class="iv-card iv-faq-section-card collapsed" id="ivFaqSectionCard">
-        <div class="iv-faq-section-header" id="ivFaqSectionHeader">
-          <h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-            FAQ <span class="iv-faq-section-arrow">▼</span>
-          </h3>
-          <span style="font-size: 11px; color: var(--iv-text-muted);">Click to toggle section</span>
-        </div>
-        
-        <div class="iv-faq-section-content" id="ivFaqSectionContent">
+
+    <!-- Extra Reveal Container (FAQ & References) -->
+    <div class="iv-gawp-reveal-section" id="ivGawpExtraReveal" style="display: none;">
+      <!-- Collapsible FAQ Section -->
+      <div class="iv-grid" style="margin-top: 14px;">
+        <div class="iv-card iv-faq-section-card collapsed" id="ivFaqSectionCard">
+          <div class="iv-faq-section-header" id="ivFaqSectionHeader">
+            <h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
+              FAQ <span class="iv-faq-section-arrow">▼</span>
+            </h3>
+            <span style="font-size: 11px; color: var(--iv-text-muted);">Click to toggle section</span>
+          </div>
           
-          <!-- Q1 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> Why does the number look so large?
+          <div class="iv-faq-section-content" id="ivFaqSectionContent">
+            <!-- Q1 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> Why does the number look so large?
+              </div>
+              <div class="iv-faq-answer">
+                Because small differences compound dramatically over long periods. GAWP is designed to show the wealth of age, not just current money.
+              </div>
             </div>
-            <div class="iv-faq-answer">
-              Because small differences compound dramatically over long periods. GAWP is designed to show the wealth of age, not just current money.
+
+            <!-- Q2 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> Is 15% CAGR guaranteed?
+              </div>
+              <div class="iv-faq-answer">
+                No. It is only a standardized assumption used for comparison. Actual returns may vary.
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> What if India becomes a developed economy and 15% returns become difficult?
+              </div>
+              <div class="iv-faq-answer">
+                If returns structurally fall as the economy matures, inflation is also likely to fall. In a lower-inflation environment, nominal return expectations should be interpreted differently.
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> Why exclude primary home and vehicle?
+              </div>
+              <div class="iv-faq-answer">
+                Because the first home and vehicle are usually consumption/lifestyle assets, not freely deployable investable capital.
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> Is this investment advice?
+              </div>
+              <div class="iv-faq-answer">
+                No. This is an educational and psychological wealth benchmarking tool.
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="iv-faq-item collapsed">
+              <div class="iv-faq-question">
+                <span class="iv-faq-arrow">▼</span> How can investors target approximately 15% CAGR over the long term?
+              </div>
+              <div class="iv-faq-answer">
+                A diversified allocation framework may improve long-term outcomes. An example approach could include approximately 70% equity exposure and 30% allocation across assets such as gold, bonds and other diversifiers. This is not expected every year. Wealth creation happens across full market cycles.
+              </div>
             </div>
           </div>
-
-          <!-- Q2 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> Is 15% CAGR guaranteed?
-            </div>
-            <div class="iv-faq-answer">
-              No. It is only a standardized assumption used for comparison. Actual returns may vary.
-            </div>
-          </div>
-
-          <!-- Q3 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> What if India becomes a developed economy and 15% returns become difficult?
-            </div>
-            <div class="iv-faq-answer">
-              If returns structurally fall as the economy matures, inflation is also likely to fall. In a lower-inflation environment, nominal return expectations should be interpreted differently.
-            </div>
-          </div>
-
-          <!-- Q4 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> Why exclude primary home and vehicle?
-            </div>
-            <div class="iv-faq-answer">
-              Because the first home and vehicle are usually consumption/lifestyle assets, not freely deployable investable capital.
-            </div>
-          </div>
-
-          <!-- Q5 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> Is this investment advice?
-            </div>
-            <div class="iv-faq-answer">
-              No. This is an educational and psychological wealth benchmarking tool.
-            </div>
-          </div>
-
-          <!-- Q6 -->
-          <div class="iv-faq-item collapsed">
-            <div class="iv-faq-question">
-              <span class="iv-faq-arrow">▼</span> How can investors target approximately 15% CAGR over the long term?
-            </div>
-            <div class="iv-faq-answer">
-              A diversified allocation framework may improve long-term outcomes. An example approach could include approximately 70% equity exposure and 30% allocation across assets such as gold, bonds and other diversifiers. This is not expected every year. Wealth creation happens across full market cycles.
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
 
-    <!-- References Section -->
-    <div class="iv-grid" style="margin-top: 14px; margin-bottom: 24px;">
-      <div class="iv-card iv-references-card">
-        <h3 style="margin-bottom: 16px;">References</h3>
-        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13.5px;">
-          <li>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5283330" target="_blank" style="color: var(--iv-accent-light); text-decoration: underline;">SSRN Paper</a>
-          </li>
-          <li>
-            <a href="https://intrinsicvalueequity.in/gawp-index-a-new-lens-on-wealth-through-age-parity/" target="_blank" style="color: var(--iv-accent-light); text-decoration: underline;">Intrinsic Value Article</a>
-          </li>
-        </ul>
-        <div style="margin-top: 16px; border-top: 1px solid rgba(var(--iv-accent-rgb), 0.12); padding-top: 16px;">
-          <ol style="margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13px; color: var(--iv-text-secondary); line-height: 1.5; list-style-type: decimal;">
-            <li style="color: var(--iv-text-secondary);">Based on the GAWP Index — Gangil Age Wealth Parity Index.</li>
-            <li style="color: var(--iv-text-secondary);">GAWP Index is the world's first wealth index based on age parity. It interprets wealth through age context because age itself can be a powerful financial edge.</li>
-            <li style="color: var(--iv-text-secondary);">GAWP Index: A New Lens on Wealth Through Age Parity, Nikhil Gangil, SSRN, June 2025</li>
-            <li style="color: var(--iv-text-secondary);">This tool is for educational illustration only. It is not investment advice. Actual wealth outcomes depend on savings, asset allocation, inflation, taxation, risk, behavior and market returns.</li>
-          </ol>
+      <!-- References Section -->
+      <div class="iv-grid" style="margin-top: 14px; margin-bottom: 24px;">
+        <div class="iv-card iv-references-card">
+          <h3 style="margin-bottom: 16px;">References</h3>
+          <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13.5px;">
+            <li>
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5283330" target="_blank" style="color: var(--iv-accent-light); text-decoration: underline;">SSRN Paper</a>
+            </li>
+            <li>
+              <a href="https://intrinsicvalueequity.in/gawp-index-a-new-lens-on-wealth-through-age-parity/" target="_blank" style="color: var(--iv-accent-light); text-decoration: underline;">Intrinsic Value Article</a>
+            </li>
+          </ul>
+          <div style="margin-top: 16px; border-top: 1px solid rgba(var(--iv-accent-rgb), 0.12); padding-top: 16px;">
+            <ol style="margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13px; color: var(--iv-text-secondary); line-height: 1.5; list-style-type: decimal;">
+              <li style="color: var(--iv-text-secondary);">Based on the GAWP Index — Gangil Age Wealth Parity Index.</li>
+              <li style="color: var(--iv-text-secondary);">GAWP Index is the world's first wealth index based on age parity. It interprets wealth through age context because age itself can be a powerful financial edge.</li>
+              <li style="color: var(--iv-text-secondary);">GAWP Index: A New Lens on Wealth Through Age Parity, Nikhil Gangil, SSRN, June 2025</li>
+              <li style="color: var(--iv-text-secondary);">This tool is for educational illustration only. It is not investment advice. Actual wealth outcomes depend on savings, asset allocation, inflation, taxation, risk, behavior and market returns.</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>

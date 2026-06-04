@@ -19,12 +19,124 @@
   }
   function tip(tooltip,canvas,mode,e){if(!tooltip||!canvas)return; var r=canvas.getBoundingClientRect(),x=e.clientX-r.left,d=null; if(mode==="line"&&canvas._pts){canvas._pts.forEach(function(p){if(!d||Math.abs(p.x-x)<Math.abs(d.x-x))d=p;});} if(mode==="bar"&&canvas._bars){canvas._bars.forEach(function(b){if(x>=b.x&&x<=b.x+b.w)d=b;});} if(!d){tooltip.style.display="none";return;} tooltip.innerHTML="<b>Year "+d.year+"</b><br>Invested: "+formatINR(d.invested)+"<br>Value: "+formatINR(d.closing)+"<br>Gain: "+formatINR(d.gain)+"<br>Multiple: "+d.multiple.toFixed(2)+"x"; tooltip.style.display="block"; tooltip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px"; tooltip.style.top=Math.max(e.clientY-18,10)+"px";}
   document.addEventListener("DOMContentLoaded", function(){
-    var amount=q("ivLumpsumAmount"),cagr=q("ivLumpsumCagr"),years=q("ivLumpsumYears"),calcBtn=q("ivLumpsumCalculate"),resetBtn=q("ivLumpsumReset"),err=q("ivLumpsumError"),invested=q("ivLumpsumInvested"),fv=q("ivLumpsumFutureValue"),gain=q("ivLumpsumGain"),mul=q("ivLumpsumMultiple"),tb=q("ivLumpsumTableBody"),line=q("ivLumpsumLineChart"),bars=q("ivLumpsumStackedChart"),tt=q("ivLumpsumTooltip");
+    var amount=q("ivLumpsumAmount"),cagr=q("ivLumpsumCagr"),years=q("ivLumpsumYears");
+    var amountSlider=q("ivLumpsumAmountSlider"),cagrSlider=q("ivLumpsumCagrSlider"),yearsSlider=q("ivLumpsumYearsSlider");
+    var calcBtn=q("ivLumpsumCalculate"),resetBtn=q("ivLumpsumReset"),err=q("ivLumpsumError");
+    var invested=q("ivLumpsumInvested"),fv=q("ivLumpsumFutureValue"),gain=q("ivLumpsumGain"),mul=q("ivLumpsumMultiple");
+    var tb=q("ivLumpsumTableBody"),line=q("ivLumpsumLineChart"),bars=q("ivLumpsumStackedChart"),tt=q("ivLumpsumTooltip");
+    
+    // Layout and reveal elements
+    var layoutWrapper=q("ivLumpsumLayoutWrapper");
+    var resultsReveal=q("ivLumpsumResultsReveal");
+    var chartsReveal=q("ivLumpsumChartsReveal");
+    var tableReveal=q("ivLumpsumTableReveal");
+    var tableCard=q("ivLumpsumTableCard");
+
     if(!calcBtn) return;
     function show(m){err.textContent=m; err.style.display=m?"block":"none";}
-    function run(){var a=Number(amount.value),c=Number(cagr.value),y=Number(years.value); if(!a||a<=0)return show("Please enter a valid initial investment amount greater than 0."); if(!isFinite(c)||c<0)return show("Please enter a valid expected CAGR. It cannot be negative."); if(!y||y<=0||y>80||Math.floor(y)!==y)return show("Please enter a valid investment period in whole years between 1 and 80."); show(""); var rows=calc(a,c,y),last=rows[rows.length-1]; invested.textContent=formatINR(a); fv.textContent=formatINR(last.closing); gain.textContent=formatINR(last.gain); mul.textContent=last.multiple.toFixed(2)+"x"; tb.innerHTML=rows.map(function(r){return "<tr><td>"+r.year+"</td><td>"+formatINR(r.opening)+"</td><td>"+formatINR(r.growth)+"</td><td>"+formatINR(r.closing)+"</td></tr>";}).join(""); drawLine(line,rows); drawBars(bars,rows);}
-    function reset(){[amount,cagr,years].forEach(function(el){el.value="";}); show(""); invested.textContent=fv.textContent=gain.textContent=mul.textContent="—"; tb.innerHTML="<tr><td colspan=\"4\">Enter investment details and click Calculate Lumpsum.</td></tr>"; [line,bars].forEach(function(cv){var d=setupCanvas(cv); if(d)d.ctx.clearRect(0,0,d.width,d.height);}); if(tt)tt.style.display="none";}
-    calcBtn.addEventListener("click",run); if(resetBtn)resetBtn.addEventListener("click",reset);
+
+    function run(){
+      var a=Number(amount.value),c=Number(cagr.value),y=Number(years.value);
+      if(!a||a<=0)return show("Please enter a valid initial investment amount greater than 0.");
+      if(!isFinite(c)||c<0)return show("Please enter a valid expected CAGR. It cannot be negative.");
+      if(!y||y<=0||y>80||Math.floor(y)!==y)return show("Please enter a valid investment period in whole years between 1 and 80.");
+      show("");
+      
+      var rows=calc(a,c,y),last=rows[rows.length-1];
+      invested.textContent=formatINR(a);
+      fv.textContent=formatINR(last.closing);
+      gain.textContent=formatINR(last.gain);
+      mul.textContent=last.multiple.toFixed(2)+"x";
+      
+      tb.innerHTML=rows.map(function(r){
+        return "<tr><td>"+r.year+"</td><td>"+formatINR(r.opening)+"</td><td>"+formatINR(r.growth)+"</td><td>"+formatINR(r.closing)+"</td></tr>";
+      }).join("");
+
+      // Adjust layout
+      if(layoutWrapper) layoutWrapper.classList.add("calculated");
+      if(resultsReveal) resultsReveal.style.display="block";
+      if(chartsReveal) chartsReveal.style.display="block";
+      if(tableReveal) tableReveal.style.display="block";
+
+      // Draw the charts
+      drawLine(line,rows);
+      drawBars(bars,rows);
+
+      // Trigger animations
+      requestAnimationFrame(function () {
+        [resultsReveal, chartsReveal, tableReveal].forEach(function (el) {
+          if (el) el.classList.add("show");
+        });
+      });
+    }
+
+    function reset(){
+      amount.value="1000000"; if(amountSlider) amountSlider.value="1000000";
+      cagr.value="12"; if(cagrSlider) cagrSlider.value="12";
+      years.value="15"; if(yearsSlider) yearsSlider.value="15";
+      
+      show("");
+      invested.textContent=fv.textContent=gain.textContent=mul.textContent="—";
+      tb.innerHTML="<tr><td colspan=\"4\">Enter investment details and click Calculate Lumpsum.</td></tr>";
+      [line,bars].forEach(function(cv){var d=setupCanvas(cv); if(d)d.ctx.clearRect(0,0,d.width,d.height);});
+      if(tt)tt.style.display="none";
+
+      // Revert layout
+      if (layoutWrapper) layoutWrapper.classList.remove("calculated");
+      [resultsReveal, chartsReveal, tableReveal].forEach(function (el) {
+        if (el) {
+          el.classList.remove("show");
+          el.style.display="none";
+        }
+      });
+      if (tableCard) tableCard.classList.add("collapsed");
+    }
+
+    // Set defaults from sliders on load
+    if (amount && amountSlider) amount.value = amountSlider.value;
+    if (cagr && cagrSlider) cagr.value = cagrSlider.value;
+    if (years && yearsSlider) years.value = yearsSlider.value;
+
+    // Bidirectional Slider Sync
+    function setupSync(inputEl, sliderEl) {
+      if (!inputEl || !sliderEl) return;
+      
+      inputEl.addEventListener("input", function () {
+        var val = Number(inputEl.value);
+        var min = Number(sliderEl.min);
+        var max = Number(sliderEl.max);
+        if (isFinite(val) && val >= min && val <= max) {
+          sliderEl.value = val;
+        }
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+
+      sliderEl.addEventListener("input", function () {
+        inputEl.value = sliderEl.value;
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          run();
+        }
+      });
+    }
+
+    setupSync(amount, amountSlider);
+    setupSync(cagr, cagrSlider);
+    setupSync(years, yearsSlider);
+
+    // Collapsible Card System for Year-wise table
+    if (tableCard) {
+      var tableHeader = tableCard.querySelector(".iv-collapse-header");
+      if (tableHeader) {
+        tableHeader.addEventListener("click", function () {
+          tableCard.classList.toggle("collapsed");
+        });
+      }
+    }
+
+    calcBtn.addEventListener("click",run);
+    if(resetBtn)resetBtn.addEventListener("click",reset);
     [amount,cagr,years].forEach(function(i){i&&i.addEventListener("keydown",function(e){if(e.key==="Enter")run();});});
     if(line){line.addEventListener("mousemove",function(e){tip(tt,line,"line",e);}); line.addEventListener("mouseleave",function(){tt.style.display="none";});}
     if(bars){bars.addEventListener("mousemove",function(e){tip(tt,bars,"bar",e);}); bars.addEventListener("mouseleave",function(){tt.style.display="none";});}

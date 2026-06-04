@@ -23,86 +23,115 @@
       <p>Estimate future value using monthly compounding with optional annual SIP step-up.</p>
     </div>
 
-    <div class="iv-grid two">
-      <div class="iv-card">
-        <h3>SIP Inputs</h3>
-        <div class="iv-form-grid">
-          <div class="iv-field">
-            <label>Monthly SIP Amount</label>
-            <input id="ivSipAmount" type="number" min="1" inputmode="decimal" placeholder="Example: 20000">
+    <!-- SIP Main Dynamic Layout Wrapper -->
+    <div class="iv-sip-layout-wrapper" id="ivSipLayoutWrapper">
+      <div class="iv-sip-inputs-area" id="ivSipInputsArea">
+        <div class="iv-card">
+          <h3>SIP Inputs</h3>
+          <div class="iv-form-grid">
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Monthly SIP Amount</label>
+                <input id="ivSipAmount" type="number" min="500" max="1000000" step="500" placeholder="20000">
+              </div>
+              <input id="ivSipAmountSlider" type="range" min="500" max="1000000" step="500" value="20000" class="iv-range-slider">
+            </div>
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Expected CAGR %</label>
+                <input id="ivSipCagr" type="number" min="1" max="30" step="0.1" placeholder="15">
+              </div>
+              <input id="ivSipCagrSlider" type="range" min="1" max="30" step="0.1" value="15" class="iv-range-slider">
+            </div>
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Investment Period</label>
+                <input id="ivSipYears" type="number" min="1" max="50" step="1" placeholder="15">
+              </div>
+              <input id="ivSipYearsSlider" type="range" min="1" max="50" step="1" value="15" class="iv-range-slider">
+            </div>
+            <div class="iv-field">
+              <div class="iv-field-header">
+                <label>Annual Step-up %</label>
+                <input id="ivSipStepup" type="number" min="0" max="30" step="0.5" placeholder="0">
+              </div>
+              <input id="ivSipStepupSlider" type="range" min="0" max="30" step="0.5" value="0" class="iv-range-slider">
+            </div>
           </div>
-          <div class="iv-field">
-            <label>Expected CAGR %</label>
-            <input id="ivSipCagr" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Example: 15">
+          <div class="iv-btn-row">
+            <button class="iv-primary-btn" id="ivSipCalculate" type="button">Calculate SIP</button>
+            <button class="iv-secondary-btn" id="ivSipReset" type="button">Reset</button>
           </div>
-          <div class="iv-field">
-            <label>Investment Period</label>
-            <input id="ivSipYears" type="number" min="1" max="60" inputmode="numeric" placeholder="Years">
-          </div>
-          <div class="iv-field">
-            <label>Annual SIP Step-up %</label>
-            <input id="ivSipStepup" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Optional, blank = 0">
-          </div>
-        </div>
-        <div class="iv-btn-row">
-          <button class="iv-primary-btn" id="ivSipCalculate" type="button">Calculate SIP</button>
-          <button class="iv-secondary-btn" id="ivSipReset" type="button">Reset</button>
-        </div>
-        <div class="iv-sip-error" id="ivSipError"></div>
-        <div class="iv-note">This calculator is for educational illustration only. Actual returns may vary.</div>
-      </div>
-
-      <div class="iv-card">
-        <h3>SIP Summary</h3>
-        <div class="iv-sip-results">
-          <div class="iv-sip-result-card"><span>Total Invested</span><strong id="ivSipInvested">—</strong></div>
-          <div class="iv-sip-result-card"><span>Future Value</span><strong id="ivSipFutureValue">—</strong></div>
-          <div class="iv-sip-result-card"><span>Wealth Gain</span><strong id="ivSipGain">—</strong></div>
-          <div class="iv-sip-result-card"><span>Wealth Multiple</span><strong id="ivSipMultiple">—</strong></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="iv-grid two">
-      <div class="iv-card iv-sip-chart-card">
-        <h3>Net Worth Growth Journey</h3>
-        <canvas id="ivSipLineChart" aria-label="SIP net worth growth line chart"></canvas>
-        <div class="iv-sip-legend">
-          <span><i class="iv-sip-dot blue"></i>Total Invested</span>
-          <span><i class="iv-sip-dot gold"></i>Portfolio Value</span>
+          <div class="iv-sip-error" id="ivSipError"></div>
+          <div class="iv-note">This calculator is for educational illustration only. Actual returns may vary.</div>
         </div>
       </div>
 
-      <div class="iv-card iv-sip-chart-card">
-        <h3>Wealth Composition</h3>
-        <canvas id="ivSipStackedChart" aria-label="SIP wealth composition stacked bar chart"></canvas>
-        <div class="iv-sip-legend">
-          <span><i class="iv-sip-dot blue"></i>Invested Amount</span>
-          <span><i class="iv-sip-dot gold"></i>Compounding Gain</span>
+      <!-- SIP Summary Reveal Card -->
+      <div class="iv-sip-reveal-section iv-sip-results-area" id="ivSipSummaryReveal" style="display: none;">
+        <div class="iv-card" style="height: 100%;">
+          <h3>SIP Summary</h3>
+          <div class="iv-sip-results">
+            <div class="iv-sip-result-card"><span>Total Invested</span><strong id="ivSipInvested">—</strong></div>
+            <div class="iv-sip-result-card"><span>Future Value</span><strong id="ivSipFutureValue">—</strong></div>
+            <div class="iv-sip-result-card"><span>Wealth Gain</span><strong id="ivSipGain">—</strong></div>
+            <div class="iv-sip-result-card"><span>Wealth Multiple</span><strong id="ivSipMultiple">—</strong></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="iv-card">
-      <h3>Year-wise Table</h3>
-      <div class="iv-table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th>Annual SIP</th>
-              <th>Total Invested</th>
-              <th>Portfolio Value</th>
-              <th>Wealth Gain</th>
-              <th>Multiple</th>
-            </tr>
-          </thead>
-          <tbody id="ivSipTableBody">
-            <tr>
-              <td colspan="6">Enter SIP details and click Calculate SIP.</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Charts Reveal Container -->
+    <div class="iv-sip-reveal-section" id="ivSipChartsReveal" style="display: none;">
+      <div class="iv-grid two">
+        <div class="iv-card iv-sip-chart-card">
+          <h3>Net Worth Growth Journey</h3>
+          <canvas id="ivSipLineChart" aria-label="SIP net worth growth line chart"></canvas>
+          <div class="iv-sip-legend">
+            <span><i class="iv-sip-dot blue"></i>Total Invested</span>
+            <span><i class="iv-sip-dot gold"></i>Portfolio Value</span>
+          </div>
+        </div>
+
+        <div class="iv-card iv-sip-chart-card">
+          <h3>Wealth Composition</h3>
+          <canvas id="ivSipStackedChart" aria-label="SIP wealth composition stacked bar chart"></canvas>
+          <div class="iv-sip-legend">
+            <span><i class="iv-sip-dot blue"></i>Invested Amount</span>
+            <span><i class="iv-sip-dot gold"></i>Compounding Gain</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Reveal Container -->
+    <div class="iv-sip-reveal-section" id="ivSipTableReveal" style="display: none;">
+      <div class="iv-card iv-collapse-card collapsed" id="ivSipTableCard">
+        <div class="iv-collapse-header">
+          <h3 style="margin: 0;">Year-wise Table</h3>
+          <span class="iv-collapse-arrow">▼</span>
+        </div>
+        <div class="iv-collapse-content">
+          <div class="iv-table-wrap" style="margin-top: 10px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Annual SIP</th>
+                  <th>Total Invested</th>
+                  <th>Portfolio Value</th>
+                  <th>Wealth Gain</th>
+                  <th>Multiple</th>
+                </tr>
+              </thead>
+              <tbody id="ivSipTableBody">
+                <tr>
+                  <td colspan="6">Enter SIP details and click Calculate SIP.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
     <div class="iv-sip-tooltip" id="ivSipTooltip"></div>

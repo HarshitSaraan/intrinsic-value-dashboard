@@ -164,8 +164,8 @@
     }
 
     var isCommodity = isCommoditySector(sectorName);
-    var padL = 55;
-    var padR = isCommodity ? 25 : 55;
+    var padL = 25;
+    var padR = 25;
     var padT = 24;
     var padB = 40;
     var plotW = width - padL - padR;
@@ -232,54 +232,7 @@
       ctx.stroke();
     }
 
-    // 2. Draw Left Y-axis ticks and labels (Valuation Ratio or P/B)
-    var leftAxisColor = '#42A5F5';
-    if (isCommodity) {
-      if (sectorName.toLowerCase().indexOf('gold') >= 0) {
-        leftAxisColor = '#D4AF37';
-      } else if (sectorName.toLowerCase().indexOf('silver') >= 0) {
-        leftAxisColor = '#C0C0C0';
-      }
-    }
-    ctx.fillStyle = leftAxisColor;
-    ctx.font = '10px Poppins, Arial';
-    ctx.textAlign = 'right';
-    for (var g = 0; g <= gridCount; g++) {
-      var gy = padT + plotH * g / gridCount;
-      var gv = minPB + (maxPB - minPB) * (1 - g / gridCount);
-      ctx.fillText(gv.toFixed(2), padL - 10, gy + 3);
-    }
-    
-    // Draw Left Y-axis title
-    ctx.save();
-    ctx.translate(14, padT + plotH / 2);
-    ctx.rotate(-Math.PI / 2);
-    ctx.textAlign = 'center';
-    ctx.fillStyle = leftAxisColor;
-    ctx.font = '9px Poppins, Arial';
-    ctx.fillText(isCommodity ? 'Valuation Ratio' : 'P/B Ratio (Left)', 0, 0);
-    ctx.restore();
-
-    // 3. Draw Right Y-axis ticks and labels (Div Yield % - Gold color)
-    if (!isCommodity) {
-      ctx.fillStyle = '#BCA374'; // Gold text matching Div Yield line
-      ctx.textAlign = 'left';
-      for (var g = 0; g <= gridCount; g++) {
-        var gy = padT + plotH * g / gridCount;
-        var gv = minDiv + (maxDiv - minDiv) * (1 - g / gridCount);
-        ctx.fillText(gv.toFixed(2) + '%', width - padR + 10, gy + 3);
-      }
-
-      // Draw Right Y-axis title
-      ctx.save();
-      ctx.translate(width - 12, padT + plotH / 2);
-      ctx.rotate(Math.PI / 2);
-      ctx.textAlign = 'center';
-      ctx.fillStyle = '#BCA374';
-      ctx.font = '9px Poppins, Arial';
-      ctx.fillText('Dividend Yield % (Right)', 0, 0);
-      ctx.restore();
-    }
+    // 2. Left and Right Y-axis values/titles hidden per requirements (P/B and Div Yield are not displayed directly)
 
     // 4. Draw Area Gradient under Valuation/PB Line
     var pbPoints = points.filter(function (p) { return p.pb !== null && isFinite(p.pb); });
@@ -390,6 +343,58 @@
       ctx.stroke();
     }
 
+    // 7.5 Draw live indicator dots at the end of the lines
+    var lastIdx = points.length - 1;
+    if (lastIdx >= 0) {
+      var endX = xAt(lastIdx);
+
+      // Valuation / PB end dot
+      if (points[lastIdx].pb !== null && points[lastIdx].pb !== undefined) {
+        var endY_PB = yAtPB(points[lastIdx].pb);
+        var dotColor = '#42A5F5';
+        if (isCommodity) {
+          if (sectorName.toLowerCase().indexOf('gold') >= 0) dotColor = '#D4AF37';
+          else dotColor = '#C0C0C0';
+        }
+
+        // Outer glow (large translucent circle)
+        ctx.beginPath();
+        ctx.arc(endX, endY_PB, 7.5, 0, Math.PI * 2);
+        ctx.fillStyle = dotColor === '#42A5F5' ? 'rgba(66, 165, 245, 0.35)' :
+                        dotColor === '#D4AF37' ? 'rgba(212, 175, 55, 0.35)' : 'rgba(192, 192, 192, 0.35)';
+        ctx.fill();
+
+        // Inner solid circle with white border
+        ctx.beginPath();
+        ctx.arc(endX, endY_PB, 4, 0, Math.PI * 2);
+        ctx.fillStyle = dotColor;
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+
+      // Div Yield end dot (if not commodity)
+      if (!isCommodity && points[lastIdx].div_yield !== null && points[lastIdx].div_yield !== undefined) {
+        var endY_Div = yAtDiv(points[lastIdx].div_yield);
+
+        // Outer glow
+        ctx.beginPath();
+        ctx.arc(endX, endY_Div, 6.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(188, 163, 116, 0.3)';
+        ctx.fill();
+
+        // Inner solid circle with white border
+        ctx.beginPath();
+        ctx.arc(endX, endY_Div, 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = '#BCA374';
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+    }
+
     // 8. Draw horizontal threshold lines for Gold and Silver
     if (isCommodity) {
       var isGold = sectorName.toLowerCase().indexOf('gold') >= 0;
@@ -410,7 +415,7 @@
       ctx.fillStyle = 'rgba(102, 187, 106, 0.8)';
       ctx.font = '9px Poppins, Arial';
       ctx.textAlign = 'right';
-      ctx.fillText('Undervalued (' + lowLimit + ')', width - padR - 5, yLow - 4);
+      ctx.fillText('Undervalued', width - padR - 5, yLow - 4);
 
       // Draw upper limit (Overvalued)
       var yHigh = yAtPB(highLimit);
@@ -426,7 +431,7 @@
       ctx.fillStyle = 'rgba(239, 83, 80, 0.8)';
       ctx.font = '9px Poppins, Arial';
       ctx.textAlign = 'right';
-      ctx.fillText('Overvalued (' + highLimit + ')', width - padR - 5, yHigh - 4);
+      ctx.fillText('Overvalued', width - padR - 5, yHigh - 4);
 
       // Reset line dash
       ctx.setLineDash([]);
@@ -541,34 +546,18 @@
         var status = getValuationStatus(closest.pb, closest.div_yield, currentSector, canvas);
         var statusHtml = '';
         if (status.text !== '—') {
-          statusHtml = '<div style="margin-top:5px;border-top:1px solid rgba(255,255,255,0.08);padding-top:5px;display:flex;align-items:center;">' +
-                       'Valuation: <b style="color:' + status.color + ';margin-left:auto;">' + status.text + '</b>' +
-                       '</div>';
-        }
+          var bg = 'rgba(255, 255, 255, 0.1)';
+          if (status.text === 'Undervalued') bg = 'rgba(46, 125, 50, 0.15)';
+          else if (status.text === 'Overvalued') bg = 'rgba(198, 40, 40, 0.15)';
+          else if (status.text === 'Fairly Valued') bg = 'rgba(239, 108, 0, 0.15)';
 
-        // Show tooltip showing both parameters + status (Blue for PB, Gold for Div Yield)
-        var isCommodity = isCommoditySector(currentSector);
-        var metricHtml = '';
-        if (isCommodity) {
-          var dotColor = currentSector.toLowerCase().indexOf('gold') >= 0 ? '#D4AF37' : '#C0C0C0';
-          metricHtml = '<div style="margin-bottom:2px;display:flex;align-items:center;gap:6px;">' +
-                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:' + dotColor + ';"></i>' +
-                       'Valuation: <b style="color:' + dotColor + ';margin-left:auto;">' + formatMetricValue(closest.pb, 'pb') + '</b>' +
-                       '</div>';
-        } else {
-          metricHtml = '<div style="margin-bottom:2px;display:flex;align-items:center;gap:6px;">' +
-                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#42A5F5;"></i>' +
-                       'P/B Ratio: <b style="color:#90CAF9;margin-left:auto;">' + formatMetricValue(closest.pb, 'pb') + '</b>' +
-                       '</div>' +
-                       '<div style="display:flex;align-items:center;gap:6px;">' +
-                       '<i style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#BCA374;"></i>' +
-                       'Div Yield: <b style="color:#E5D3B3;margin-left:auto;">' + formatMetricValue(closest.div_yield, 'div_yield') + '</b>' +
+          statusHtml = '<div style="display:flex;align-items:center;margin-top:5px;">' +
+                       '<span style="background:' + bg + ';color:' + status.color + ';padding:3px 8px;border-radius:6px;font-weight:600;font-size:11px;border:1px solid rgba(255,255,255,0.05);">' + status.text + '</span>' +
                        '</div>';
         }
 
         tooltip.style.display = 'block';
-        tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:4px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
-                            metricHtml +
+        tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:2px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
                             statusHtml;
         
         // Position tooltip near cursor
@@ -603,47 +592,18 @@
     var series = sectorValuationData[sectorName];
     if (!series || !series.length) return;
 
-    var latestIndex = null;
-    var latestPB = null;
-    var latestDiv = null;
+    var latestIndex = '—';
 
     // Reverse iterate to find latest values
     for (var i = series.length - 1; i >= 0; i--) {
       var item = series[i];
-      if (latestIndex === null && item.index !== null && item.index !== undefined) {
-        latestIndex = item.index;
-      }
-      if (latestPB === null && item.pb !== null && item.pb !== undefined) {
-        latestPB = item.pb;
-      }
-      if (latestDiv === null && item.div_yield !== null && item.div_yield !== undefined) {
-        latestDiv = item.div_yield;
-      }
-    }
-
-    var text = '—';
-    if (latestIndex !== null) {
-      var formattedIndex = formatMetricValue(latestIndex, 'index');
-      if (isCommoditySector(sectorName)) {
-        if (latestPB !== null) {
-          text = formattedIndex + ' (Valuation: ' + formatMetricValue(latestPB, 'pb') + ')';
-        } else {
-          text = formattedIndex;
-        }
-      } else {
-        var parts = [];
-        if (latestPB !== null) parts.push('P/B: ' + formatMetricValue(latestPB, 'pb'));
-        if (latestDiv !== null) parts.push('Div Yield: ' + formatMetricValue(latestDiv, 'div_yield'));
-        if (parts.length > 0) {
-          text = formattedIndex + ' (' + parts.join(', ') + ')';
-        } else {
-          text = formattedIndex;
-        }
+      if (latestIndex === '—' && item.index !== null && item.index !== undefined) {
+        latestIndex = formatMetricValue(item.index, 'index');
       }
     }
 
     var elIndex = app.querySelector('#ivSelectedSectorIndexValue');
-    if (elIndex) elIndex.textContent = text;
+    if (elIndex) elIndex.textContent = latestIndex;
   }
 
   // Update active states and redraw

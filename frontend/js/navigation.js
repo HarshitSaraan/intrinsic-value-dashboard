@@ -42,6 +42,7 @@
     else if (path.indexOf("xirr") >= 0) activeView = "xirr";
     else if (path.indexOf("gawp") >= 0) activeView = "gawp";
     else if (path.indexOf("monthly-market-analysis") >= 0) activeView = "monthly-analysis";
+    else if (path.indexOf("earnings-trends") >= 0) activeView = "earnings-trends";
     else if (path.indexOf("market-valuation-index") >= 0) activeView = "valuation";
     else if (path.indexOf("headwind-tailwind-indicator") >= 0) activeView = "headwind";
     else if (path.indexOf("portfolio-review-tool") >= 0) activeView = "portfolio";
@@ -109,6 +110,7 @@
         name: "Market Analysis",
         items: [
           { view: "monthly-analysis", label: "Monthly Market Analysis", icon: "◌", path: "/monthly-market-analysis" },
+          { view: "earnings-trends", label: "Earnings Trends", icon: "📊", path: "/earnings-trends" },
           { view: "valuation", label: "Market Valuation Index", icon: "∑", path: "/market-valuation-index" },
           { view: "headwind", label: "Headwind / Tailwind Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }
         ]

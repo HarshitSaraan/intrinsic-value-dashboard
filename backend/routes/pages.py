@@ -92,6 +92,12 @@ async def admin_page() -> FileResponse:
     return _frontend_page("admin.html")
 
 
+@router.get("/earnings-trends", response_class=HTMLResponse)
+async def earnings_trends_page() -> FileResponse:
+    return _frontend_page("earnings-trends.html")
+
+
+
 
 
 

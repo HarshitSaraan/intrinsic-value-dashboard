@@ -224,19 +224,44 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     var corpus = q("ivSwpCorpus"), withdrawal = q("ivSwpWithdrawal"), annualReturn = q("ivSwpReturn"), years = q("ivSwpYears"), increase = q("ivSwpIncrease");
+    var corpusSlider = q("ivSwpCorpusSlider"), withdrawalSlider = q("ivSwpWithdrawalSlider"), annualReturnSlider = q("ivSwpReturnSlider"), yearsSlider = q("ivSwpYearsSlider"), increaseSlider = q("ivSwpIncreaseSlider");
     var calculate = q("ivSwpCalculate"), reset = q("ivSwpReset"), error = q("ivSwpError");
     var totalWithdrawn = q("ivSwpTotalWithdrawn"), finalCorpus = q("ivSwpFinalCorpus"), lasts = q("ivSwpLasts"), status = q("ivSwpStatus");
     var tableBody = q("ivSwpTableBody"), lineCanvas = q("ivSwpLineChart"), barCanvas = q("ivSwpBarChart"), tooltip = q("ivSwpTooltip");
+    
+    // Layout and reveal elements
+    var layoutWrapper = q("ivSwpLayoutWrapper");
+    var resultsReveal = q("ivSwpResultsReveal");
+    var chartsReveal = q("ivSwpChartsReveal");
+    var tableReveal = q("ivSwpTableReveal");
+    var tableCard = q("ivSwpTableCard");
+
     if (!calculate) return;
 
     function showError(message) { error.textContent = message; error.style.display = message ? "block" : "none"; }
+    
     function resetView() {
-      [corpus, withdrawal, annualReturn, years, increase].forEach(function (el) { if (el) el.value = ""; });
+      corpus.value = "10000000"; if(corpusSlider) corpusSlider.value = "10000000";
+      withdrawal.value = "50000"; if(withdrawalSlider) withdrawalSlider.value = "50000";
+      annualReturn.value = "10"; if(annualReturnSlider) annualReturnSlider.value = "10";
+      years.value = "25"; if(yearsSlider) yearsSlider.value = "25";
+      increase.value = "0"; if(increaseSlider) increaseSlider.value = "0";
+
       showError("");
       totalWithdrawn.textContent = "—"; finalCorpus.textContent = "—"; lasts.textContent = "—"; status.textContent = "—";
       tableBody.innerHTML = "<tr><td colspan=\"5\">Enter SWP details and click Calculate SWP.</td></tr>";
       [lineCanvas, barCanvas].forEach(function (canvas) { var data = setupCanvas(canvas); if (data) data.ctx.clearRect(0, 0, data.width, data.height); });
       if (tooltip) tooltip.style.display = "none";
+
+      // Revert layout
+      if (layoutWrapper) layoutWrapper.classList.remove("calculated");
+      [resultsReveal, chartsReveal, tableReveal].forEach(function (el) {
+        if (el) {
+          el.classList.remove("show");
+          el.style.display = "none";
+        }
+      });
+      if (tableCard) tableCard.classList.add("collapsed");
     }
 
     function runCalculation() {
@@ -260,8 +285,69 @@
         return "<tr><td>" + row.year + "</td><td>" + formatINR(row.opening) + "</td><td>" + formatINR(row.withdrawal) + "</td><td>" + formatINR(row.growth) + "</td><td>" + formatINR(row.closing) + "</td></tr>";
       }).join("");
 
+      // Adjust layout
+      if (layoutWrapper) layoutWrapper.classList.add("calculated");
+      if (resultsReveal) resultsReveal.style.display = "block";
+      if (chartsReveal) chartsReveal.style.display = "block";
+      if (tableReveal) tableReveal.style.display = "block";
+
+      // Draw the charts
       drawLineChart(lineCanvas, result.rows);
       drawBarChart(barCanvas, result.rows);
+
+      // Trigger animation
+      requestAnimationFrame(function () {
+        [resultsReveal, chartsReveal, tableReveal].forEach(function (el) {
+          if (el) el.classList.add("show");
+        });
+      });
+    }
+
+    // Set defaults from sliders on load
+    if (corpus && corpusSlider) corpus.value = corpusSlider.value;
+    if (withdrawal && withdrawalSlider) withdrawal.value = withdrawalSlider.value;
+    if (annualReturn && annualReturnSlider) annualReturn.value = annualReturnSlider.value;
+    if (years && yearsSlider) years.value = yearsSlider.value;
+    if (increase && increaseSlider) increase.value = increaseSlider.value;
+
+    // Bidirectional Slider Sync
+    function setupSync(inputEl, sliderEl) {
+      if (!inputEl || !sliderEl) return;
+      
+      inputEl.addEventListener("input", function () {
+        var val = Number(inputEl.value);
+        var min = Number(sliderEl.min);
+        var max = Number(sliderEl.max);
+        if (isFinite(val) && val >= min && val <= max) {
+          sliderEl.value = val;
+        }
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          runCalculation();
+        }
+      });
+
+      sliderEl.addEventListener("input", function () {
+        inputEl.value = sliderEl.value;
+        if (layoutWrapper && layoutWrapper.classList.contains("calculated")) {
+          runCalculation();
+        }
+      });
+    }
+
+    setupSync(corpus, corpusSlider);
+    setupSync(withdrawal, withdrawalSlider);
+    setupSync(annualReturn, annualReturnSlider);
+    setupSync(years, yearsSlider);
+    setupSync(increase, increaseSlider);
+
+    // Collapsible Card System for Year-wise table
+    if (tableCard) {
+      var tableHeader = tableCard.querySelector(".iv-collapse-header");
+      if (tableHeader) {
+        tableHeader.addEventListener("click", function () {
+          tableCard.classList.toggle("collapsed");
+        });
+      }
     }
 
     calculate.addEventListener("click", runCalculation);

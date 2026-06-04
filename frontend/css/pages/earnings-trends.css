@@ -1,0 +1,157 @@
+/* Earnings Trends Search Page Styling */
+
+.iv-trends-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.iv-trends-layout-wrapper {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.iv-trends-layout-wrapper.calculated {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 16px;
+  max-width: 100%;
+  margin: 0 0 24px 0;
+}
+
+.iv-trends-search-area {
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.iv-trends-reveal-section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.iv-trends-reveal-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollable Stock List */
+.iv-search-results-list {
+  margin-top: 14px;
+  max-height: 480px;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.12);
+  background: rgba(0, 0, 0, 0.16);
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Custom Scrollbar for Stock List */
+.iv-search-results-list::-webkit-scrollbar {
+  width: 6px;
+}
+.iv-search-results-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.iv-search-results-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+.iv-search-results-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Stock Result Row Item */
+.iv-stock-item-row {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.iv-stock-item-row:hover {
+  background: rgba(var(--iv-accent-rgb), 0.08);
+  border-color: rgba(var(--iv-accent-rgb), 0.16);
+}
+
+.iv-stock-item-row.active {
+  background: rgba(var(--iv-accent-rgb), 0.16);
+  border-color: rgba(var(--iv-accent-rgb), 0.4);
+}
+
+.iv-stock-item-symbol {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--iv-info);
+}
+
+.iv-stock-item-row.active .iv-stock-item-symbol {
+  color: var(--iv-accent-light);
+}
+
+.iv-stock-item-name {
+  font-size: 11px;
+  color: var(--iv-text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Search input inner spinner positioning */
+.iv-trends-page .iv-field {
+  position: relative;
+}
+
+.iv-search-spinner {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-top-color: var(--iv-accent-light);
+  border-radius: 50%;
+  animation: ivSearchSpin 0.7s linear infinite;
+}
+
+@keyframes ivSearchSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Toggle Buttons */
+.iv-toggle-btn {
+  background: transparent;
+  color: var(--iv-text-secondary);
+}
+
+.iv-toggle-btn.active {
+  background: var(--iv-accent) !important;
+  color: var(--iv-bg) !important;
+  box-shadow: 0 2px 8px rgba(var(--iv-accent-rgb), 0.3);
+}
+
+[data-theme="light"] .iv-toggle-btn.active {
+  background: var(--iv-accent) !important;
+  color: #FFFFFF !important;
+}
+
+/* Legend items */
+.iv-financials-legend {
+  color: var(--iv-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .iv-trends-layout-wrapper.calculated {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
