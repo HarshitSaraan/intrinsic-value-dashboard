@@ -92,18 +92,35 @@ async def portfolio_evaluate_endpoint(q: str = "") -> dict[str, Any]:
     return evaluate_portfolio_stock(q)
 
 
+SECTOR_VALUATION_CACHE = {
+    'mtime': 0,
+    'data': None
+}
+
+
 @router.get("/sector-valuation")
 async def sector_valuation_endpoint() -> dict[str, Any]:
     import math
+    import time
     from backend.utils.paths import BASE_DIR
     
     sector_data_path = BASE_DIR / "sector_data.csv"
     if not sector_data_path.exists():
         raise HTTPException(status_code=404, detail="sector_data.csv not found")
         
+    try:
+        current_mtime = sector_data_path.stat().st_mtime
+    except Exception:
+        current_mtime = time.time()
+        
+    global SECTOR_VALUATION_CACHE
+    if SECTOR_VALUATION_CACHE['data'] is not None and SECTOR_VALUATION_CACHE['mtime'] == current_mtime:
+        return SECTOR_VALUATION_CACHE['data']
+        
     df = pd.read_csv(sector_data_path, header=None)
-    row0 = df.iloc[0].tolist()
-    row1 = df.iloc[1].tolist()
+    data_matrix = df.values.tolist()
+    row0 = data_matrix[0]
+    row1 = data_matrix[1]
     
     current_sector = None
     sector_columns = {}
@@ -146,16 +163,22 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
             div_col = next((c[0] for c in cols if 'div' in c[1].lower() or 'yield' in c[1].lower()), None)
         
         series = []
-        for r_idx in range(2, len(df)):
-            date = str(df.iloc[r_idx, 0]).strip()
-            if pd.isna(df.iloc[r_idx, 0]) or date == '' or date.lower() == 'nan':
+        for r_idx in range(2, len(data_matrix)):
+            row_data = data_matrix[r_idx]
+            date_val = row_data[0]
+            if date_val is None or (isinstance(date_val, float) and math.isnan(date_val)):
+                continue
+            date = str(date_val).strip()
+            if date == '' or date.lower() == 'nan':
                 continue
                 
             def get_val(col):
                 if col is None: return None
-                val = df.iloc[r_idx, col]
-                if pd.isna(val): return None
+                val = row_data[col]
+                if val is None or (isinstance(val, float) and math.isnan(val)): return None
                 val_str = str(val).replace(',', '').replace('%', '').strip()
+                if not val_str or val_str.lower() == 'nan':
+                    return None
                 try:
                     v = float(val_str)
                     return None if math.isnan(v) else v
@@ -171,7 +194,10 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
             })
         result[s] = series
         
-    return {"sectors": sectors, "data": result}
+    response_data = {"sectors": sectors, "data": result}
+    SECTOR_VALUATION_CACHE['mtime'] = current_mtime
+    SECTOR_VALUATION_CACHE['data'] = response_data
+    return response_data
 
 
 # Dynamic cache for Yahoo Finance predefined screeners
