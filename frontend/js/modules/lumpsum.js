@@ -39,7 +39,13 @@
       ctx.fillStyle="rgba(255,255,255,0.08)";
       ctx.fillRect(d.x-2,18,d.w+4,h-18-36);
     }
-    tooltip.innerHTML="<b>Year "+d.year+"</b><br>Invested: "+formatINR(d.invested)+"<br>Value: "+formatINR(d.closing)+"<br>Gain: "+formatINR(d.gain)+"<br>Multiple: "+d.multiple.toFixed(2)+"x"; tooltip.style.display="block"; tooltip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px"; tooltip.style.top=Math.max(e.clientY-18,10)+"px";}
+    tooltip.innerHTML="<b>Year "+d.year+"</b><br>Invested: "+formatINR(d.invested)+"<br>Value: "+formatINR(d.closing)+"<br>Gain: "+formatINR(d.gain)+"<br>Multiple: "+d.multiple.toFixed(2)+"x";
+    tooltip.style.display="block";
+    var ttW = tooltip.offsetWidth || 250;
+    var ttH = tooltip.offsetHeight || 100;
+    tooltip.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+    tooltip.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
+  }
   document.addEventListener("DOMContentLoaded", function(){
     var amount=q("ivLumpsumAmount"),cagr=q("ivLumpsumCagr"),years=q("ivLumpsumYears");
     var amountSlider=q("ivLumpsumAmountSlider"),cagrSlider=q("ivLumpsumCagrSlider"),yearsSlider=q("ivLumpsumYearsSlider");

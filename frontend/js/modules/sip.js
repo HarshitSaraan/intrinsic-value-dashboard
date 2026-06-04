@@ -198,8 +198,10 @@
       
       tooltip.innerHTML = "<b>Year " + data.year + "</b><br>Invested: " + formatINR(data.invested) + "<br>Value: " + formatINR(data.value) + "<br>Gain: " + formatINR(data.gain) + "<br>Multiple: " + data.multiple.toFixed(2) + "x";
       tooltip.style.display = "block";
-      tooltip.style.left = Math.min(event.clientX + 12, window.innerWidth - 230) + "px";
-      tooltip.style.top = Math.max(event.clientY - 18, 10) + "px";
+      var ttW = tooltip.offsetWidth || 230;
+      var ttH = tooltip.offsetHeight || 100;
+      tooltip.style.left = Math.max(10, Math.min(event.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+      tooltip.style.top = Math.max(10, event.clientY - ttH - 24) + "px";
     });
     canvas.addEventListener("mouseleave", function () {
       tooltip.style.display = "none";

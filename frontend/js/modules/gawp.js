@@ -164,8 +164,10 @@
         ctx.fillStyle="#D4AF37"; ctx.beginPath(); ctx.arc(d.x,d.yValue,5.5,0,Math.PI*2); ctx.fill(); ctx.strokeStyle="rgba(255,255,255,0.4)"; ctx.lineWidth=1.5; ctx.stroke();
         tip.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);
         tip.style.display="block";
-        tip.style.left=Math.min(e.clientX+12,window.innerWidth-250)+"px";
-        tip.style.top=Math.max(e.clientY-18,10)+"px";
+        var ttW = tip.offsetWidth || 250;
+        var ttH = tip.offsetHeight || 80;
+        tip.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+        tip.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
       });
       chart.addEventListener("mouseleave",function(){
         if(tip)tip.style.display="none";

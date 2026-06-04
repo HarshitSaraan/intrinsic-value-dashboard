@@ -292,7 +292,12 @@
         ctx.fillRect(d.x-2,18,d.w+4,h-18-48);
         tt.innerHTML="<b>"+d.label+"</b><br>"+formatINR(d.value);
       }
-      tt.style.display="block"; tt.style.left=Math.min(e.clientX+12,window.innerWidth-260)+"px"; tt.style.top=Math.max(e.clientY-18,10)+"px";}
+      tt.style.display="block";
+      var ttW = tt.offsetWidth || 260;
+      var ttH = tt.offsetHeight || 100;
+      tt.style.left = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+      tt.style.top = Math.max(10, e.clientY - ttH - 24) + "px";
+    }
     if(jc){jc.addEventListener("mousemove",function(e){move(jc,"journey",e);}); jc.addEventListener("mouseleave",function(){tt.style.display="none"; if(jc._ptsData) drawJourney(jc, jc._ptsData);});}
     if(sc){sc.addEventListener("mousemove",function(e){move(sc,"summary",e);}); sc.addEventListener("mouseleave",function(){tt.style.display="none"; if(sc._sData) drawSummary(sc, sc._sData);});}
   });

@@ -239,8 +239,10 @@
       
       tooltip.innerHTML = "<b>Year " + data.year + "</b><br>Opening: " + formatINR(data.opening) + "<br>Withdrawal: " + formatINR(data.withdrawal) + "<br>Growth: " + formatINR(data.growth) + "<br>Closing: " + formatINR(data.closing);
       tooltip.style.display = "block";
-      tooltip.style.left = Math.min(event.clientX + 12, window.innerWidth - 250) + "px";
-      tooltip.style.top = Math.max(event.clientY - 18, 10) + "px";
+      var ttW = tooltip.offsetWidth || 250;
+      var ttH = tooltip.offsetHeight || 100;
+      tooltip.style.left = Math.max(10, Math.min(event.clientX - ttW / 2, window.innerWidth - ttW - 10)) + "px";
+      tooltip.style.top = Math.max(10, event.clientY - ttH - 24) + "px";
     });
     canvas.addEventListener("mouseleave", function () {
       tooltip.style.display = "none";
