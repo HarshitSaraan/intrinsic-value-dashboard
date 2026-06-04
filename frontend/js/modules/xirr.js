@@ -184,10 +184,12 @@
       var wealthDifference = targetCapital - collected.currentCapital;
       
       var promoMsg = "";
-      if (wealthDifference > 0) {
-        promoMsg = "<br><br><span style='color: #F4D676; font-weight: 700;'>💡 Wealth Optimizer Opportunity:</span> By earning " + x.toFixed(2) + "% instead of our target <b>24.00% CAGR</b>, you missed out on <b>" + formatINR(wealthDifference) + "</b> in potential wealth growth. Had you partnered with us, you could have captured this additional return. Don't leave money on the table—join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a> today to optimize your equity portfolio strategy.";
-      } else {
-        promoMsg = "<br><br>To maintain this performance, join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a>.";
+      if (x <= 24) {
+        if (wealthDifference > 0) {
+          promoMsg = "<br><br><span style='color: #F4D676; font-weight: 700;'>💡 Wealth Optimizer Opportunity:</span> By earning " + x.toFixed(2) + "% instead of our target <b>24.00% CAGR</b>, you missed out on <b>" + formatINR(wealthDifference) + "</b> in potential wealth growth. Had you partnered with us, you could have captured this additional return. Don't leave money on the table—join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a> today to optimize your equity portfolio strategy.";
+        } else {
+          promoMsg = "<br><br>To maintain this performance, join our <a href='https://intrinsicvalueequity.in/#services' target='_blank' style='color: #F4D676; text-decoration: underline; font-weight: 700;'>service</a>.";
+        }
       }
       msg.innerHTML = p.message + promoMsg;
 
