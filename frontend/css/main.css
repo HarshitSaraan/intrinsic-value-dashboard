@@ -170,11 +170,15 @@
       width: 100%;
       max-width: 100%;
       min-height: 100vh;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Manrope', 'Google Sans', sans-serif;
       color: var(--iv-white);
       background: radial-gradient(circle at top left, rgba(var(--iv-accent-rgb), 0.13), transparent 26%),
         linear-gradient(135deg, var(--iv-navy-3), var(--iv-navy) 48%, var(--iv-bg-gradient-3));
       border-radius: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif;
     }
 
     #iv-dashboard-app,
@@ -1689,12 +1693,10 @@ html:not([data-theme="dark"]) :root {
   font-family: 'Manrope', 'Google Sans', sans-serif !important;
   background: #FFFFFF !important;
   color: #101828 !important;
-  font-size: 15px !important;
 }
 
 html:not([data-theme="dark"]) h1 {
   font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
-  font-size: 48px !important;
   color: #101828 !important;
   font-weight: 600 !important;
 }
@@ -1703,7 +1705,6 @@ html:not([data-theme="dark"]) h2,
 html:not([data-theme="dark"]) .iv-section-title h2,
 html:not([data-theme="dark"]) .iv-hero h2 {
   font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
-  font-size: 24px !important;
   color: #101828 !important;
   font-weight: 600 !important;
 }
@@ -1719,7 +1720,6 @@ html:not([data-theme="dark"]) h6 {
 
 html:not([data-theme="dark"]) p {
   color: #667085 !important;
-  font-size: 15px !important;
 }
 
 /* Spacing and border radius overrides (Base unit 4px, border radius 8px) */
@@ -1862,7 +1862,6 @@ html:not([data-theme="dark"]) td {
   color: #101828 !important;
   border-bottom: 1px solid #E4E7EC !important;
   padding: 14px 12px !important;
-  font-size: 14px !important;
 }
 
 html:not([data-theme="dark"]) tr:hover td {

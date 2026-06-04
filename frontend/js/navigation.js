@@ -67,7 +67,7 @@
         var origFontSet = fontDesc.set;
         Object.defineProperty(ctx, 'font', {
           set: function(val) {
-            if (!isDark() && typeof val === 'string') {
+            if (typeof val === 'string') {
               val = val.replace(/Poppins/g, 'Manrope').replace(/Inter/g, 'Manrope');
             }
             origFontSet.call(this, val);
@@ -83,11 +83,13 @@
 
 (function () {
   function getLogoSrc() {
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    var logoName = isDark ? 'logo.png' : 'logo 2.png';
     var isFile = window.location.protocol === 'file:';
     if (isFile) {
-      return '../../logo.png';
+      return '../../' + logoName;
     } else {
-      return '/static/logo.png';
+      return '/static/' + logoName;
     }
   }
 
@@ -352,7 +354,17 @@
         themeIcon.textContent = "☀️";
       }
     }
+
+    function updateLogoImages() {
+      var logoSrc = getLogoSrc();
+      var desktopLogo = document.querySelector(".iv-brand-mark img");
+      var mobileLogo = document.querySelector(".iv-mobile-logo img");
+      if (desktopLogo) desktopLogo.src = logoSrc;
+      if (mobileLogo) mobileLogo.src = logoSrc;
+    }
+
     updateToggleIcon();
+    updateLogoImages();
 
     toggleBtn.onclick = function () {
       var currentTheme = document.documentElement.getAttribute("data-theme") || "";
@@ -364,6 +376,7 @@
       }
       localStorage.setItem("iv-theme", newTheme);
       updateToggleIcon();
+      updateLogoImages();
     };
 
     // Setup navigation dropdown click logic
