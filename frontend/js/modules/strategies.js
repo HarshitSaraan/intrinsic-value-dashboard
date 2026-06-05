@@ -34,12 +34,12 @@
       note: 'Indian Market Screener: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%'
     },
     'portfolio-anchors': {
-      title: 'Core Compounders/Picks',
+      title: 'Core Compounders',
       desc: 'Mega-cap anchors with clean balance sheets, high Piotroski scores, and low debt.',
       note: 'Indian Market Screener: Market Cap > 25000 Cr | Piotroski Score >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%'
     },
     'solid-large-growth': {
-      title: 'Large Compounders/Picks',
+      title: 'Large Compounders',
       desc: 'Large cap growth leaders with top-tier efficiency and market momentum.',
       note: 'Indian Market Screener: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0'
     }

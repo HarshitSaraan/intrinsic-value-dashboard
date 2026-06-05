@@ -216,8 +216,8 @@
           { view: "aggressive-smallcaps", label: "High Growth Small Cap", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
           { view: "undervalued-largecaps", label: "Value Large Cap", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
           { view: "growth-tech", label: "Technology Leaders", icon: "💻", path: "/strategies?type=growth-tech" },
-          { view: "portfolio-anchors", label: "Core Compounders/Picks", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
-          { view: "solid-large-growth", label: "Large Compounders/Picks", icon: "🚀", path: "/strategies?type=solid-large-growth" }
+          { view: "portfolio-anchors", label: "Core Compounders", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
+          { view: "solid-large-growth", label: "Large Compounders", icon: "🚀", path: "/strategies?type=solid-large-growth" }
         ]
       }
     ];
