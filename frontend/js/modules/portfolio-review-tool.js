@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="iv-drawer-param-item">
             <div class="iv-param-meta">
               <div class="iv-param-name">${escapeHtml(param.name)}</div>
-              <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
             </div>
             <div class="iv-param-status-wrapper">
               <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
@@ -278,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="iv-drawer-param-item">
             <div class="iv-param-meta">
               <div class="iv-param-name">${escapeHtml(param.name)}</div>
-              <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
             </div>
             <div class="iv-param-status-wrapper">
               <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
@@ -314,7 +312,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="iv-drawer-param-item">
               <div class="iv-param-meta">
                 <div class="iv-param-name">${escapeHtml(param.name)}</div>
-                <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
               </div>
               <div class="iv-param-status-wrapper">
                 <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
