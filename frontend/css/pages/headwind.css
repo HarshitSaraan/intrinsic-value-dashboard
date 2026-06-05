@@ -31,8 +31,55 @@
 
              .iv-headwind-page .iv-hw-sector-table {
               width: 100%;
-              min-width: 600px;
+              min-width: 100%;
               border-collapse: collapse;
+            }
+
+            @media (min-width: 640px) {
+              .iv-headwind-page .iv-hw-sector-table {
+                min-width: 600px;
+              }
+            }
+
+            .iv-headwind-page .iv-hw-col-market {
+              min-width: 110px;
+            }
+            .iv-headwind-page .iv-hw-col-score {
+              min-width: 90px;
+            }
+            .iv-headwind-page .iv-hw-col-signal {
+              min-width: 80px;
+            }
+
+            @media (min-width: 640px) {
+              .iv-headwind-page .iv-hw-col-market {
+                min-width: 160px;
+              }
+              .iv-headwind-page .iv-hw-col-score {
+                min-width: 130px;
+              }
+              .iv-headwind-page .iv-hw-col-signal {
+                min-width: 110px;
+              }
+            }
+
+            @media (max-width: 639px) {
+              .iv-headwind-page .iv-hw-sector-table td {
+                padding: 7px 4px;
+                font-size: 11.5px;
+              }
+              .iv-headwind-page .iv-hw-sector-table th {
+                padding: 6px 4px;
+                font-size: 9px;
+              }
+              .iv-headwind-page .iv-hw-badge {
+                padding: 3px 6px;
+                font-size: 9.5px;
+                gap: 3px;
+              }
+              .iv-headwind-page .iv-hw-bar-wrap {
+                gap: 4px;
+              }
             }
 
              .iv-headwind-page .iv-hw-sector-table th {

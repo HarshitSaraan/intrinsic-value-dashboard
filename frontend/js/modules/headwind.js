@@ -387,7 +387,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       var rect = canvas.getBoundingClientRect();
       var dpr = window.devicePixelRatio || 1;
-      var width = Math.max(300, Math.floor(rect.width));
+      var width = Math.max(240, Math.floor(rect.width));
       var height = 220;
       canvas.width = width * dpr;
       canvas.height = height * dpr;
@@ -521,8 +521,17 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           (closest.score > 0 ? '+' : '') + closest.score.toFixed(4) + '</span>' +
           (closest.isCurrent ? '<br><span style="color:#4C8DFF">● Current</span>' : '');
         tooltip.style.display = 'block';
-        tooltip.style.left = Math.min(e.clientX + 14, window.innerWidth - 180) + 'px';
-        tooltip.style.top = Math.max(e.clientY - 18, 10) + 'px';
+        var tooltipRect = tooltip.getBoundingClientRect();
+        var ttW = tooltipRect.width || 120;
+        var ttH = tooltipRect.height || 48;
+        var tx = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10));
+        var ty = e.clientY - ttH - 24;
+        if (ty < 10) {
+          ty = e.clientY + 20;
+        }
+
+        tooltip.style.left = tx + 'px';
+        tooltip.style.top = ty + 'px';
       };
 
       canvas.onmouseleave = function () {
