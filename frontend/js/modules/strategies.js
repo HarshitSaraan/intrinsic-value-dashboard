@@ -223,7 +223,7 @@
     var heading = app.querySelector('#ivStratHeading');
     var sub = app.querySelector('#ivStratSubheading');
     if (kicker) kicker.textContent = 'Strategies Directory';
-    if (heading) heading.textContent = 'Investment Ideas';
+    if (heading) heading.textContent = 'Popular Themes';
     if (sub) sub.textContent = 'Target stocks based on fundamental value and growth metrics';
   }
 

@@ -222,8 +222,8 @@ document.addEventListener('DOMContentLoaded', function () {
     bseCodeEl.textContent = 'BSE: ' + cleanBse;
 
     if (type === 'quality') {
-      drawerTitle.textContent = 'Quality Parameters';
-      scoreLabelEl.textContent = 'Quality Score';
+      drawerTitle.textContent = 'Fundamental Parameters';
+      scoreLabelEl.textContent = 'Fundamental Score';
       scoreValueEl.textContent = item.quality.score;
       scoreValueEl.className = 'iv-drawer-score-value ' + getScoreClass(item.quality.total, 6) + '-text';
 
@@ -231,27 +231,23 @@ document.addEventListener('DOMContentLoaded', function () {
       var html = '';
       item.quality.parameters.forEach(function (param) {
         var badgeClass = 'neutral';
-        var badgeText = '0 Neutral';
+        var badgeText = '0';
         var scoreVal = Number(param.score);
-        if (scoreVal === 1) {
+        if (scoreVal > 0) {
           badgeClass = 'pass';
-          badgeText = '+1 Pass';
-        } else if (scoreVal === -1) {
+          badgeText = '+' + scoreVal;
+        } else if (scoreVal < 0) {
           badgeClass = 'fail';
-          badgeText = '-1 Fail';
-        } else if (scoreVal === -2) {
-          badgeClass = 'fail';
-          badgeText = '-2 Fail';
+          badgeText = scoreVal.toString();
         }
         
         html += `
           <div class="iv-drawer-param-item">
             <div class="iv-param-meta">
               <div class="iv-param-name">${escapeHtml(param.name)}</div>
-              <div class="iv-param-threshold">Target: ${escapeHtml(param.threshold)}</div>
+              <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
             </div>
             <div class="iv-param-status-wrapper">
-              <div class="iv-param-value">${escapeHtml(param.displayValue)}</div>
               <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
             </div>
           </div>
@@ -268,28 +264,23 @@ document.addEventListener('DOMContentLoaded', function () {
       var html = '';
       item.management.parameters.forEach(function (param) {
         var badgeClass = 'neutral';
-        var badgeText = '0 Neutral';
+        var badgeText = '0';
         var scoreVal = Number(param.score);
-
-        if (scoreVal === 1) {
+        if (scoreVal > 0) {
           badgeClass = 'pass';
-          badgeText = '+1 Pass';
-        } else if (scoreVal === -1) {
+          badgeText = '+' + scoreVal;
+        } else if (scoreVal < 0) {
           badgeClass = 'fail';
-          badgeText = '-1 Fail';
-        } else if (scoreVal === -2) {
-          badgeClass = 'fail';
-          badgeText = '-2 Fail';
+          badgeText = scoreVal.toString();
         }
 
         html += `
           <div class="iv-drawer-param-item">
             <div class="iv-param-meta">
               <div class="iv-param-name">${escapeHtml(param.name)}</div>
-              <div class="iv-param-threshold">Target: ${escapeHtml(param.threshold)}</div>
+              <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
             </div>
             <div class="iv-param-status-wrapper">
-              <div class="iv-param-value">${escapeHtml(param.displayValue)}</div>
               <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
             </div>
           </div>
@@ -309,31 +300,23 @@ document.addEventListener('DOMContentLoaded', function () {
       if (item.valuation && item.valuation.parameters) {
         item.valuation.parameters.forEach(function (param) {
           var badgeClass = 'neutral';
-          var badgeText = '0 Neutral';
+          var badgeText = '0';
           var scoreVal = Number(param.score);
-
-          if (scoreVal === 2) {
+          if (scoreVal > 0) {
             badgeClass = 'pass';
-            badgeText = '+2 Pass';
-          } else if (scoreVal === 1) {
-            badgeClass = 'pass';
-            badgeText = '+1 Pass';
-          } else if (scoreVal === -1) {
+            badgeText = '+' + scoreVal;
+          } else if (scoreVal < 0) {
             badgeClass = 'fail';
-            badgeText = '-1 Fail';
-          } else if (scoreVal === -2) {
-            badgeClass = 'fail';
-            badgeText = '-2 Fail';
+            badgeText = scoreVal.toString();
           }
 
           html += `
             <div class="iv-drawer-param-item">
               <div class="iv-param-meta">
                 <div class="iv-param-name">${escapeHtml(param.name)}</div>
-                <div class="iv-param-threshold">Target: ${escapeHtml(param.threshold)}</div>
+                <div class="iv-param-threshold">Formula: ${escapeHtml(param.threshold)}</div>
               </div>
               <div class="iv-param-status-wrapper">
-                <div class="iv-param-value">${escapeHtml(param.displayValue)}</div>
                 <span class="iv-param-badge ${badgeClass}">${badgeText}</span>
               </div>
             </div>

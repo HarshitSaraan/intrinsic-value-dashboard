@@ -196,7 +196,7 @@
         items: [
           { view: "monthly-analysis", label: "Market Pulse", icon: "◌", path: "/monthly-market-analysis" },
           { view: "earnings-trends", label: "Earnings Trends", icon: "\u22bf", path: "/earnings-trends" },
-          { view: "valuation", label: "M.V Tracker", icon: "∑", path: "/market-valuation-index" },
+          { view: "valuation", label: "Market Valuation Tracker", icon: "∑", path: "/market-valuation-index" },
           { view: "headwind", label: "Headwind / Tailwind Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }
         ]
       },
@@ -210,7 +210,7 @@
       },
       {
         type: "group",
-        name: "Investment Ideas",
+        name: "Popular Themes",
         items: [
           { view: "strategies-ug", label: "Growth at Value", icon: "📈", path: "/strategies?type=undervalued-growth" },
           { view: "aggressive-smallcaps", label: "High Growth Small Cap", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },

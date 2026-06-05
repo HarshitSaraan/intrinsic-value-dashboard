@@ -917,20 +917,20 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
 
     # QUALITY SCORING
     q1_score = 0
-    bv_threshold = "> 136 (1), 100-136 (0), < 100 (-1)"
+    bv_threshold = "> 136 (+1), 100-136 (0), < 100 (-1)"
     if bv_growth is not None:
         if bv_years_considered == 10:
-            bv_threshold = "> 259 (1), 220-259 (0), < 220 (-1)"
+            bv_threshold = "> 259 (+1), 220-259 (0), < 220 (-1)"
             if bv_growth > 259: q1_score = 1
             elif bv_growth >= 220: q1_score = 0
             else: q1_score = -1
         elif bv_years_considered == 5:
-            bv_threshold = "> 161 (1), 110-161 (0), < 110 (-1)"
+            bv_threshold = "> 161 (+1), 110-161 (0), < 110 (-1)"
             if bv_growth > 161: q1_score = 1
             elif bv_growth >= 110: q1_score = 0
             else: q1_score = -1
         else:
-            bv_threshold = "> 136 (1), 100-136 (0), < 100 (-1)"
+            bv_threshold = "> 136 (+1), 100-136 (0), < 100 (-1)"
             if bv_growth > 136: q1_score = 1
             elif bv_growth >= 100: q1_score = 0
             else: q1_score = -1
@@ -1149,35 +1149,35 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                     "name": "Sales Growth",
                     "value": sales_growth,
                     "displayValue": f"{sales_growth}%" if sales_growth is not None else "N/A",
-                    "threshold": "> 10 (1), 0-10 (0), < 0 (-1)",
+                    "threshold": "> 10% (+1), 0% to 10% (0), < 0% (-1)",
                     "score": q2_score
                 },
                 {
                     "name": "ROCE",
                     "value": roce,
                     "displayValue": f"{roce}%" if roce is not None else "N/A",
-                    "threshold": "> 10 (1), 0-10 (0), < 0 (-1)",
+                    "threshold": "> 10% (+1), 0% to 10% (0), < 0% (-1)",
                     "score": q3_score
                 },
                 {
                     "name": "Interest Coverage Ratio",
                     "value": icr,
                     "displayValue": f"{icr}x" if icr is not None else "N/A",
-                    "threshold": "> 5 (1), 2-5 (0), < 2 (-1)",
+                    "threshold": "> 5x (+1), 2x to 5x (0), < 2x (-1)",
                     "score": q4_score
                 },
                 {
                     "name": "Capex (Net Block)",
                     "value": net_block_ratio,
                     "displayValue": f"{net_block_ratio}x" if net_block_ratio is not None else "N/A",
-                    "threshold": "> 2 (1), < 2 (0)",
+                    "threshold": "> 2.0x (+1), <= 2.0x (0)",
                     "score": q5_score
                 },
                 {
                     "name": "Quality Turnover",
                     "value": q_turnover,
                     "displayValue": f"{q_turnover}" if q_turnover is not None else "N/A",
-                    "threshold": "> 0.1 (1), < 0.1 (0)",
+                    "threshold": "<= 0.1 (+1), > 0.1 (-1)",
                     "score": q6_score
                 }
             ]
@@ -1190,35 +1190,35 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                     "name": "Shareholder Variation",
                     "value": sh_var,
                     "displayValue": f"{sh_var}" if sh_var is not None else "N/A",
-                    "threshold": "< 1.2 (1), 1.2-2 (0), > 2 (-1)",
+                    "threshold": "< 1.2 (+1), 1.2 to 2 (0), > 2 (-1)",
                     "score": m1_score
                 },
                 {
                     "name": "Pledged Percentage",
                     "value": pledged_val,
                     "displayValue": f"{pledged_val}%" if pledged_val is not None else "0% (N/A)",
-                    "threshold": "<= 1 (1), > 1 (-1)",
+                    "threshold": "<= 1% (+1), > 1% (-1)",
                     "score": m2_score
                 },
                 {
                     "name": "Holding Investor",
                     "value": hold_inv,
                     "displayValue": f"{hold_inv}" if hold_inv is not None else "N/A",
-                    "threshold": ">= 0.02 (1), < 0.02 (-1)",
+                    "threshold": ">= 0.02 (+1), < 0.02 (-1)",
                     "score": m3_score
                 },
                 {
                     "name": "Change in Promoter Holding (3 Years)",
                     "value": chg_prom_3y,
                     "displayValue": f"{chg_prom_3y}%" if chg_prom_3y is not None else "N/A",
-                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), -5 to -0.5 (-1), < -5 (-2)",
+                    "threshold": "> 0.5% (+1), -0.5% to 0.5% (0), -5% to -0.5% (-1), < -5% (-2)",
                     "score": m4_score
                 },
                 {
                     "name": "Change in Promoter Holding (Quarterly)",
                     "value": chg_prom,
                     "displayValue": f"{chg_prom}%" if chg_prom is not None else "N/A",
-                    "threshold": "> 0.5 (1), -0.5 to 0.5 (0), -5 to -0.5 (-1), < -5 (-2)",
+                    "threshold": "> 0.5% (+1), -0.5% to 0.5% (0), -5% to -0.5% (-1), < -5% (-2)",
                     "score": m5_score
                 }
             ]
@@ -1231,28 +1231,28 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
                     "name": "Peer analysis",
                     "value": stock_pb,
                     "displayValue": f"{stock_pb}x (Sector Median: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
-                    "threshold": "P/B < Sector Median P/B (1), P/B > Sector Median P/B (0)",
+                    "threshold": "P/B < Sector Median P/B (+1), P/B >= Sector Median P/B (0)",
                     "score": v1_score
                 },
                 {
-                    "name": "Revenue analysis",
+                    "name": "Peer analysis",
                     "value": stock_ps,
                     "displayValue": f"{stock_ps}x (Sector Median: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
-                    "threshold": "P/S < Sector Median P/S (1), P/S > Sector Median P/S (0)",
+                    "threshold": "P/S < Sector Median P/S (+1), P/S >= Sector Median P/S (0)",
                     "score": v2_score
                 },
                 {
                     "name": "Graham analysis",
                     "value": cmp_val,
                     "displayValue": f"CMP: {cmp_val} (Graham: {graham_val})" if cmp_val is not None and graham_val is not None else "N/A",
-                    "threshold": "CMP < Graham (1), Graham <= CMP <= Graham * 1.5 (0), CMP > Graham * 1.5 (-1)",
+                    "threshold": "CMP < Graham Number (+1), Graham Number <= CMP <= Graham Number * 1.5 (0), CMP > Graham Number * 1.5 (-1)",
                     "score": v3_score
                 },
                 {
                     "name": "Intrinsic value analysis",
                     "value": cmp_val,
                     "displayValue": f"CMP: {cmp_val} (Intrinsic: {iv_val})" if cmp_val is not None and iv_val is not None else "N/A",
-                    "threshold": "CMP < Intrinsic (1), Intrinsic <= CMP <= Intrinsic * 1.5 (0), CMP > Intrinsic * 1.5 (-1)",
+                    "threshold": "CMP < Intrinsic Value (+1), Intrinsic Value <= CMP <= Intrinsic Value * 1.5 (0), CMP > Intrinsic Value * 1.5 (-1)",
                     "score": v4_score
                 },
                 {
