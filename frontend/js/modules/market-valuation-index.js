@@ -63,9 +63,10 @@
     if (canvas && canvas._yAtPB && canvas._yAtDiv) {
       var yPB = canvas._yAtPB(pbVal);
       var yDiv = canvas._yAtDiv(divVal);
+      var threshold = 0.10 * (canvas._plotH || 196);
 
-      // If coordinates are very close on the graph (within 10 pixels), mark as Fairly Valued
-      if (Math.abs(yPB - yDiv) <= 10) {
+      // If coordinates are within 10% of plot height (up and down), mark as Fairly Valued
+      if (Math.abs(yPB - yDiv) <= threshold) {
         return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
       } else if (yPB > yDiv) {
         // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
@@ -225,6 +226,7 @@
     // Attach scaling helpers to canvas so other functions can translate coordinates
     canvas._yAtPB = yAtPB;
     canvas._yAtDiv = yAtDiv;
+    canvas._plotH = plotH;
 
     // 1. Draw horizontal gridlines based on left Y-axis levels
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
