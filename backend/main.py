@@ -1,12 +1,31 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import Response
 
 from backend.routes.api import router as api_router
 from backend.routes.pages import router as pages_router
 from backend.utils.paths import BASE_DIR
 
 app = FastAPI(title="Intrinsic Value Dashboard API", version="1.0.0")
+
+
+# --- Middleware to allow iframe embedding from WordPress domain ---
+class IframeEmbedMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next) -> Response:
+        response = await call_next(request)
+        # Allow embedding in iframes from your WordPress domain
+        response.headers["Content-Security-Policy"] = (
+            "frame-ancestors 'self' https://intrinsicvalueequity.in https://*.intrinsicvalueequity.in"
+        )
+        # Remove X-Frame-Options if present (CSP frame-ancestors takes precedence)
+        if "X-Frame-Options" in response.headers:
+            del response.headers["X-Frame-Options"]
+        return response
+
+
+app.add_middleware(IframeEmbedMiddleware)
 
 app.add_middleware(
     CORSMiddleware,
