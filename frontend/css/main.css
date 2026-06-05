@@ -1587,7 +1587,7 @@
         pointer-events: none;
 
         position: absolute;
-        top: calc(100% + 10px);
+        top: 100%;
         left: 0;
         min-width: 230px;
         padding: 8px;

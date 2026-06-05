@@ -63,7 +63,7 @@
     var monthlyDebugEl = app.querySelector('#ivMonthlyAdminDebug');
     if (monthlyRowsEl) {
       var validCount = ivAnalysisData.validRows || 0;
-      monthlyRowsEl.innerHTML = monthlyRowsLoaded.toLocaleString('en-IN') + ' <span style="font-weight: normal; opacity: 0.8; font-size: 11px;">(' + validCount.toLocaleString('en-IN') + ' analyzed)</span>';
+      monthlyRowsEl.textContent = validCount.toLocaleString('en-IN');
     }
     if (monthlyRowsLoaded < 100) {
       if (monthlyDebugEl) monthlyDebugEl.textContent = 'Preview/sample data active. Market Pulse requires live master sheet.';
