@@ -469,15 +469,38 @@ document.addEventListener('DOMContentLoaded', function () {
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
-  // Setup Clear Portfolio trigger
+  // Setup Clear Portfolio trigger with Custom Confirmation Modal
   var clearBtn = document.getElementById('ivClearPortfolio');
+  var confirmModal = document.getElementById('ivConfirmModal');
+  var confirmOverlay = document.getElementById('ivConfirmOverlay');
+  var confirmCancel = document.getElementById('ivConfirmCancel');
+  var confirmOk = document.getElementById('ivConfirmOk');
+
+  function openConfirmModal() {
+    if (confirmModal) confirmModal.style.display = 'flex';
+  }
+
+  function closeConfirmModal() {
+    if (confirmModal) confirmModal.style.display = 'none';
+  }
+
   if (clearBtn) {
     clearBtn.addEventListener('click', function () {
-      if (portfolio.length > 0 && confirm('Are you sure you want to clear your portfolio list?')) {
-        portfolio = [];
-        savePortfolio();
-        renderTable();
+      if (portfolio.length > 0) {
+        openConfirmModal();
       }
+    });
+  }
+
+  if (confirmCancel) confirmCancel.addEventListener('click', closeConfirmModal);
+  if (confirmOverlay) confirmOverlay.addEventListener('click', closeConfirmModal);
+
+  if (confirmOk) {
+    confirmOk.addEventListener('click', function () {
+      portfolio = [];
+      savePortfolio();
+      renderTable();
+      closeConfirmModal();
     });
   }
 
