@@ -343,7 +343,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           '<canvas id="ivHeadwindHistoryCanvas" style="width:100%;height:220px;display:block;border-radius:14px;background:rgba(6,17,36,0.38);border:1px solid rgba(255,255,255,0.07);"></canvas>' +
           '<div id="ivHeadwindChartTooltip" style="position:fixed;display:none;pointer-events:none;z-index:80;padding:9px 10px;border-radius:12px;background:rgba(6,17,36,0.96);border:1px solid rgba(212,175,55,0.28);color:#fff;font-size:11px;line-height:1.5;"></div>' +
           '</div>' +
-          '<div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
+          '<div style="display:flex;gap:8px 12px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#D4AF37;margin-right:5px;"></i>Historical Score</span>' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#4C8DFF;margin-right:5px;"></i>Current Score</span>' +
           '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (0)</span>' +
@@ -492,7 +492,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       points.forEach(function (p, i) {
         if (i === 0 || i === points.length - 1 || i % step === 0) {
           var x = xAt(i);
-          var lbl = p.label.length > 8 ? p.label.slice(0, 8) : p.label;
+          var lbl = p.label;
           ctx.save();
           ctx.translate(x, height - 10);
           ctx.rotate(-0.5);
