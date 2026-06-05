@@ -155,7 +155,7 @@
     sidebar.setAttribute("aria-label", "Intrinsic Value Wealth Dashboard Navigation");
     
     var brandLink = document.createElement("a");
-    brandLink.href = getLink("/dashboard");
+    brandLink.href = "https://intrinsicvalueequity.in/";
     brandLink.className = "iv-brand-link";
     brandLink.innerHTML = `
       <div class="iv-brand">
@@ -290,7 +290,8 @@
     var mobileHeader = document.createElement("div");
     mobileHeader.className = "iv-mobile-header";
     
-    var logoWrap = document.createElement("div");
+    var logoWrap = document.createElement("a");
+    logoWrap.href = "https://intrinsicvalueequity.in/";
     logoWrap.className = "iv-mobile-logo";
     logoWrap.innerHTML = '<img src="' + getLogoSrc() + '" alt="IV" style="height:44px;width:auto;margin-left:-4px;">';
     
