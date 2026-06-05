@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (exists) {
-      alert(stockData.stock.name + ' is already in your portfolio list.');
+      showCustomAlert('Duplicate Stock', stockData.stock.name + ' is already in your portfolio list.');
       return;
     }
 
@@ -446,9 +446,9 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (res) {
         if (!res.ok) {
           if (res.status === 404) {
-            alert('Stock details not found.');
+            showCustomAlert('Search Error', 'Stock details not found.');
           } else {
-            alert('Error evaluating stock.');
+            showCustomAlert('Evaluation Error', 'Error evaluating stock.');
           }
           throw new Error('Evaluate failed');
         }
@@ -503,6 +503,26 @@ document.addEventListener('DOMContentLoaded', function () {
       closeConfirmModal();
     });
   }
+
+  // Setup Custom Alert Modal
+  var alertModal = document.getElementById('ivAlertModal');
+  var alertOverlay = document.getElementById('ivAlertOverlay');
+  var alertOkBtn = document.getElementById('ivAlertOk');
+  var alertTitleEl = document.getElementById('ivAlertTitle');
+  var alertMsgEl = document.getElementById('ivAlertMessage');
+
+  function showCustomAlert(title, message) {
+    if (alertTitleEl) alertTitleEl.textContent = title;
+    if (alertMsgEl) alertMsgEl.textContent = message;
+    if (alertModal) alertModal.style.display = 'flex';
+  }
+
+  function closeCustomAlert() {
+    if (alertModal) alertModal.style.display = 'none';
+  }
+
+  if (alertOkBtn) alertOkBtn.addEventListener('click', closeCustomAlert);
+  if (alertOverlay) alertOverlay.addEventListener('click', closeCustomAlert);
 
   // Setup Click outside autocomplete dropdown
   document.addEventListener('click', function (e) {
@@ -563,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!file) return;
 
     if (!file.name.endsWith('.csv')) {
-      alert('Please upload a valid .csv file.');
+      showCustomAlert('Invalid File Type', 'Please upload a valid .csv file.');
       return;
     }
 
@@ -573,7 +593,7 @@ document.addEventListener('DOMContentLoaded', function () {
       processCSVContent(text);
     };
     reader.onerror = function () {
-      alert('Error reading file.');
+      showCustomAlert('File Error', 'Error reading file.');
     };
     reader.readAsText(file);
   }

@@ -681,3 +681,14 @@
   background: #c0392b;
   transform: translateY(-1px);
 }
+
+.iv-modal-btn.alert-ok {
+  background: linear-gradient(135deg, var(--iv-gold), #AA8121);
+  color: var(--iv-navy-3);
+  box-shadow: 0 4px 12px rgba(var(--iv-accent-rgb), 0.17);
+}
+
+.iv-modal-btn.alert-ok:hover {
+  background: var(--iv-gold);
+  transform: translateY(-1px);
+}
