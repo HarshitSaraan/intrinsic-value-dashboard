@@ -346,7 +346,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           '<div style="display:flex;gap:8px 12px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#D4AF37;margin-right:5px;"></i>Historical Score</span>' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#4C8DFF;margin-right:5px;"></i>Current Score</span>' +
-          '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (0)</span>' +
+          '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (1.0)</span>' +
           '</div>' +
           '</td>';
 
@@ -449,7 +449,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       ctx.stroke();
       ctx.setLineDash([]);
       ctx.fillStyle = 'rgba(255,255,255,0.5)';
-      ctx.fillText('0', padL - 16, zeroY + 3);
+      ctx.fillText('1.0', padL - 22, zeroY + 3);
 
       // Line
       ctx.beginPath();
