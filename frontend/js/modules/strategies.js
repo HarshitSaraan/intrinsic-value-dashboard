@@ -485,7 +485,7 @@
     ctx.clearRect(0, 0, financialsChart.width, financialsChart.height);
     updateLegend(null);
     
-    if (modalLegendPeriod) modalLegendPeriod.textContent = "Loading financials from Yahoo Finance...";
+    if (modalLegendPeriod) modalLegendPeriod.textContent = "Loading financials...";
     
     var fetchUrl = apiEndpoint.replace("/strategies-data", "/stock-financials") + "?symbol=" + encodeURIComponent(stock.symbol);
     fetch(fetchUrl)
