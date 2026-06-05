@@ -739,15 +739,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Extracted keys
     var queries = [];
-    var maxIndex = Math.max(nseColIndex, bseColIndex, isinColIndex, nameColIndex);
     for (var r = 1; r < rows.length; r++) {
       var row = rows[r];
-      if (!row || row.length <= maxIndex) continue;
+      if (!row || row.length === 0) continue;
 
-      var isinVal = isinColIndex !== -1 ? row[isinColIndex].trim() : '';
-      var nseVal = nseColIndex !== -1 ? row[nseColIndex].trim() : '';
-      var bseVal = bseColIndex !== -1 ? row[bseColIndex].trim() : '';
-      var nameVal = nameColIndex !== -1 ? row[nameColIndex].trim() : '';
+      var isinVal = (isinColIndex !== -1 && row[isinColIndex]) ? row[isinColIndex].trim() : '';
+      var nseVal = (nseColIndex !== -1 && row[nseColIndex]) ? row[nseColIndex].trim() : '';
+      var bseVal = (bseColIndex !== -1 && row[bseColIndex]) ? row[bseColIndex].trim() : '';
+      var nameVal = (nameColIndex !== -1 && row[nameColIndex]) ? row[nameColIndex].trim() : '';
 
       // Prefer ISIN Code, then NSE Code, then BSE Code, then Name
       var key = isinVal || nseVal || bseVal || nameVal;
@@ -798,7 +797,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var isDuplicate = portfolio.some(function (item) {
         return (item.stock.name && item.stock.name.toLowerCase() === q.toLowerCase()) ||
                (item.stock.nseCode && item.stock.nseCode.toLowerCase() === q.toLowerCase()) ||
-               (item.stock.bseCode && item.stock.bseCode.toLowerCase() === q.toLowerCase());
+               (item.stock.bseCode && item.stock.bseCode.toLowerCase() === q.toLowerCase()) ||
+               (item.stock.isinCode && item.stock.isinCode.toLowerCase() === q.toLowerCase());
       });
 
       if (isDuplicate) {
