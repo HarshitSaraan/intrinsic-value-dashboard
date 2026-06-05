@@ -175,7 +175,7 @@
       {
         type: "standalone",
         view: "home",
-        label: "Dashboard Home",
+        label: "Home",
         icon: "◆",
         path: "/dashboard"
       },
