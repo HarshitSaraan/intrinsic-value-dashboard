@@ -278,7 +278,23 @@ def load_turnaround_sectors() -> dict[str, Any]:
     }
 
 
+HEADWIND_TAILWIND_CACHE = {
+    'mtime': 0,
+    'data': None
+}
+
+
 def compute_headwind_tailwind() -> dict[str, Any]:
+    global HEADWIND_TAILWIND_CACHE
+    import time
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = 0
+
+    if HEADWIND_TAILWIND_CACHE['data'] is not None and HEADWIND_TAILWIND_CACHE['mtime'] == current_mtime:
+        return HEADWIND_TAILWIND_CACHE['data'].copy()
+
     frame = get_stock_master_raw_df()
 
     change_col = pick_column(frame, "Change in promoter holding")
@@ -356,7 +372,7 @@ def compute_headwind_tailwind() -> dict[str, Any]:
             reverse=True,
         )
 
-    return {
+    result = {
         "source": CSV_PATH.name,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "column": change_col,
@@ -370,6 +386,10 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         },
         "sectorBreakdown": sector_breakdown,
     }
+
+    HEADWIND_TAILWIND_CACHE['mtime'] = current_mtime
+    HEADWIND_TAILWIND_CACHE['data'] = result
+    return result.copy()
 
 
 def load_headwind_history() -> dict[str, Any]:
@@ -580,7 +600,23 @@ def compute_ranking(
     return result
 
 
+MONTHLY_ANALYSIS_CACHE = {
+    'mtime': 0,
+    'data': None
+}
+
+
 def compute_monthly_analysis() -> dict[str, Any]:
+    global MONTHLY_ANALYSIS_CACHE
+    import time
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = 0
+
+    if MONTHLY_ANALYSIS_CACHE['data'] is not None and MONTHLY_ANALYSIS_CACHE['mtime'] == current_mtime:
+        return MONTHLY_ANALYSIS_CACHE['data'].copy()
+
     frame = get_stock_master_raw_df()
     total_rows = len(frame)
 
@@ -808,7 +844,7 @@ def compute_monthly_analysis() -> dict[str, Any]:
                 "currentPrice": round(float(row["currentPrice"]), 2) if pd.notna(row["currentPrice"]) else None
             })
 
-    return {
+    result = {
         "source": CSV_PATH.name,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "totalRows": total_rows,
@@ -830,6 +866,10 @@ def compute_monthly_analysis() -> dict[str, Any]:
         "topCompanies": top_companies,
         "missingPcCount": missing_pc_count
     }
+
+    MONTHLY_ANALYSIS_CACHE['mtime'] = current_mtime
+    MONTHLY_ANALYSIS_CACHE['data'] = result
+    return result.copy()
 
 
 def evaluate_portfolio_stock(query: str) -> dict[str, Any]:

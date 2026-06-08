@@ -64,21 +64,33 @@
             }
 
             @media (max-width: 639px) {
+              .iv-headwind-page .iv-hw-col-market {
+                min-width: 85px;
+              }
+              .iv-headwind-page .iv-hw-col-score {
+                min-width: 75px;
+              }
+              .iv-headwind-page .iv-hw-col-signal {
+                min-width: 70px;
+              }
+              .iv-headwind-page .iv-hw-bar-wrap {
+                min-width: 65px;
+                gap: 3px;
+              }
               .iv-headwind-page .iv-hw-sector-table td {
                 padding: 7px 4px;
                 font-size: 11.5px;
+                white-space: normal;
               }
               .iv-headwind-page .iv-hw-sector-table th {
                 padding: 6px 4px;
                 font-size: 9px;
+                white-space: normal;
               }
               .iv-headwind-page .iv-hw-badge {
                 padding: 3px 6px;
                 font-size: 9.5px;
                 gap: 3px;
-              }
-              .iv-headwind-page .iv-hw-bar-wrap {
-                gap: 4px;
               }
             }
 
