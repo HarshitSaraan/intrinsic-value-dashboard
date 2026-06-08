@@ -63,9 +63,10 @@
     if (canvas && canvas._yAtPB && canvas._yAtDiv) {
       var yPB = canvas._yAtPB(pbVal);
       var yDiv = canvas._yAtDiv(divVal);
+      var threshold = 0.10 * (canvas._plotH || 196);
 
-      // If coordinates are very close on the graph (within 10 pixels), mark as Fairly Valued
-      if (Math.abs(yPB - yDiv) <= 10) {
+      // If coordinates are within 10% of plot height (up and down), mark as Fairly Valued
+      if (Math.abs(yPB - yDiv) <= threshold) {
         return { text: 'Fairly Valued', color: 'var(--iv-warning)' };
       } else if (yPB > yDiv) {
         // Canvas Y goes downwards, so yPB > yDiv means P/B is visually lower (under) Dividend Yield on the graph
@@ -225,6 +226,7 @@
     // Attach scaling helpers to canvas so other functions can translate coordinates
     canvas._yAtPB = yAtPB;
     canvas._yAtDiv = yAtDiv;
+    canvas._plotH = plotH;
 
     // 1. Draw horizontal gridlines based on left Y-axis levels
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
@@ -566,17 +568,16 @@
         tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:2px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
                             statusHtml;
         
-        // Position tooltip near cursor
+        // Position tooltip centered above cursor/finger
         var tooltipRect = tooltip.getBoundingClientRect();
-        var tx = clientX + 15;
-        var ty = clientY - 25;
+        var ttW = tooltipRect.width;
+        var ttH = tooltipRect.height;
+        var tx = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10));
+        var ty = clientY - ttH - 24;
         
-        // Prevent going off screen
-        if (tx + tooltipRect.width > window.innerWidth) {
-          tx = clientX - tooltipRect.width - 15;
-        }
-        if (ty + tooltipRect.height > window.innerHeight) {
-          ty = window.innerHeight - tooltipRect.height - 10;
+        // Prevent going off top of screen - flip below if too close to top
+        if (ty < 10) {
+          ty = clientY + 20;
         }
 
         tooltip.style.left = tx + 'px';

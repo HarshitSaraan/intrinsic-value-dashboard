@@ -343,10 +343,10 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           '<canvas id="ivHeadwindHistoryCanvas" style="width:100%;height:220px;display:block;border-radius:14px;background:rgba(6,17,36,0.38);border:1px solid rgba(255,255,255,0.07);"></canvas>' +
           '<div id="ivHeadwindChartTooltip" style="position:fixed;display:none;pointer-events:none;z-index:80;padding:9px 10px;border-radius:12px;background:rgba(6,17,36,0.96);border:1px solid rgba(212,175,55,0.28);color:#fff;font-size:11px;line-height:1.5;"></div>' +
           '</div>' +
-          '<div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
+          '<div style="display:flex;gap:8px 12px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:#CBD5E8;">' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#D4AF37;margin-right:5px;"></i>Historical Score</span>' +
           '<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#4C8DFF;margin-right:5px;"></i>Current Score</span>' +
-          '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (0)</span>' +
+          '<span><i style="display:inline-block;width:22px;height:2px;background:rgba(255,255,255,0.3);margin-right:5px;vertical-align:middle;"></i>Neutral (1.0)</span>' +
           '</div>' +
           '</td>';
 
@@ -387,7 +387,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       var rect = canvas.getBoundingClientRect();
       var dpr = window.devicePixelRatio || 1;
-      var width = Math.max(300, Math.floor(rect.width));
+      var width = Math.max(240, Math.floor(rect.width));
       var height = 220;
       canvas.width = width * dpr;
       canvas.height = height * dpr;
@@ -449,7 +449,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       ctx.stroke();
       ctx.setLineDash([]);
       ctx.fillStyle = 'rgba(255,255,255,0.5)';
-      ctx.fillText('0', padL - 16, zeroY + 3);
+      ctx.fillText('1.0', padL - 22, zeroY + 3);
 
       // Line
       ctx.beginPath();
@@ -492,7 +492,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       points.forEach(function (p, i) {
         if (i === 0 || i === points.length - 1 || i % step === 0) {
           var x = xAt(i);
-          var lbl = p.label.length > 8 ? p.label.slice(0, 8) : p.label;
+          var lbl = p.label;
           ctx.save();
           ctx.translate(x, height - 10);
           ctx.rotate(-0.5);
@@ -521,8 +521,17 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           (closest.score > 0 ? '+' : '') + closest.score.toFixed(4) + '</span>' +
           (closest.isCurrent ? '<br><span style="color:#4C8DFF">● Current</span>' : '');
         tooltip.style.display = 'block';
-        tooltip.style.left = Math.min(e.clientX + 14, window.innerWidth - 180) + 'px';
-        tooltip.style.top = Math.max(e.clientY - 18, 10) + 'px';
+        var tooltipRect = tooltip.getBoundingClientRect();
+        var ttW = tooltipRect.width || 120;
+        var ttH = tooltipRect.height || 48;
+        var tx = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10));
+        var ty = e.clientY - ttH - 24;
+        if (ty < 10) {
+          ty = e.clientY + 20;
+        }
+
+        tooltip.style.left = tx + 'px';
+        tooltip.style.top = ty + 'px';
       };
 
       canvas.onmouseleave = function () {

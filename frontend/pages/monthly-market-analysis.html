@@ -20,8 +20,7 @@
     <div class="iv-section-title">
             <div class="iv-kicker">Market Research Tool</div>
             <h2>Market Pulse</h2>
-            <p>Valuation breadth, sector valuation, market-cap segments and promoter action dashboard using the cached
-              master data source.</p>
+            <p>Valuation breadth, sector valuation and market-cap segments.</p>
           </div>
 
           <div class="iv-card" id="ivMonthlyStatusCard">
@@ -59,14 +58,26 @@
             </div>
             
             <div class="iv-collapse-content" id="ivMonthlyChartsContent">
-              <div class="iv-grid two" style="margin-top: 14px;">
+              <div class="iv-grid" style="margin-top: 14px;">
                 <div class="iv-card">
-                  <h3>Valuation Distribution</h3>
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                    <h3 style="margin: 0;">Valuation Distribution</h3>
+                    <span style="font-size: 11.5px; font-weight: 500; color: var(--iv-text-muted); background: rgba(var(--iv-accent-rgb), 0.1); padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(var(--iv-accent-rgb), 0.15);">
+                      Companies Analyzed: <strong id="ivMonthlyRowsLoaded" style="color: var(--iv-text-light);">—</strong>
+                    </span>
+                  </div>
                   <div class="iv-market-chart" id="ivMonthlyDistributionChart"></div>
                 </div>
+              </div>
+
+              <div class="iv-grid two">
                 <div class="iv-card">
                   <h3>Segment Undervaluation %</h3>
                   <div class="iv-market-chart" id="ivMonthlySegmentUnderChart"></div>
+                </div>
+                <div class="iv-card">
+                  <h3>Segment Overvaluation %</h3>
+                  <div class="iv-market-chart" id="ivMonthlySegmentOverChart"></div>
                 </div>
               </div>
 
@@ -83,25 +94,12 @@
 
               <div class="iv-grid two">
                 <div class="iv-card">
-                  <h3>Segment Overvaluation %</h3>
-                  <div class="iv-market-chart" id="ivMonthlySegmentOverChart"></div>
-                </div>
-                <div class="iv-card">
                   <h3>Turnaround Sectors</h3>
                   <div class="iv-market-chart" id="ivMonthlyTurnaroundChart"></div>
                 </div>
-              </div>
-
-              <div class="iv-grid two">
                 <div class="iv-card">
                   <h3>Negative Turnaround Sectors</h3>
                   <div class="iv-market-chart" id="ivMonthlyNegativeTurnaroundChart"></div>
-                </div>
-                <div class="iv-card">
-                  <h3>Analysis Notes</h3>
-                  <div class="iv-note">This module uses cached <b>ivMasterStockData</b>. It does not fetch Google Sheet data
-                    again and does not allow user uploads.</div>
-                  <div class="iv-note" id="ivMonthlyPcNote">P/C ratio data check pending.</div>
                 </div>
               </div>
             </div>

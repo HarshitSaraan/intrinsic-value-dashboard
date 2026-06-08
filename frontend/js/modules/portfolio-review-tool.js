@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (exists) {
-      alert(stockData.stock.name + ' is already in your portfolio list.');
+      showCustomAlert('Duplicate Stock', stockData.stock.name + ' is already in your portfolio list.');
       return;
     }
 
@@ -446,9 +446,9 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (res) {
         if (!res.ok) {
           if (res.status === 404) {
-            alert('Stock details not found.');
+            showCustomAlert('Search Error', 'Stock details not found.');
           } else {
-            alert('Error evaluating stock.');
+            showCustomAlert('Evaluation Error', 'Error evaluating stock.');
           }
           throw new Error('Evaluate failed');
         }
@@ -469,17 +469,60 @@ document.addEventListener('DOMContentLoaded', function () {
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
-  // Setup Clear Portfolio trigger
+  // Setup Clear Portfolio trigger with Custom Confirmation Modal
   var clearBtn = document.getElementById('ivClearPortfolio');
+  var confirmModal = document.getElementById('ivConfirmModal');
+  var confirmOverlay = document.getElementById('ivConfirmOverlay');
+  var confirmCancel = document.getElementById('ivConfirmCancel');
+  var confirmOk = document.getElementById('ivConfirmOk');
+
+  function openConfirmModal() {
+    if (confirmModal) confirmModal.style.display = 'flex';
+  }
+
+  function closeConfirmModal() {
+    if (confirmModal) confirmModal.style.display = 'none';
+  }
+
   if (clearBtn) {
     clearBtn.addEventListener('click', function () {
-      if (portfolio.length > 0 && confirm('Are you sure you want to clear your portfolio list?')) {
-        portfolio = [];
-        savePortfolio();
-        renderTable();
+      if (portfolio.length > 0) {
+        openConfirmModal();
       }
     });
   }
+
+  if (confirmCancel) confirmCancel.addEventListener('click', closeConfirmModal);
+  if (confirmOverlay) confirmOverlay.addEventListener('click', closeConfirmModal);
+
+  if (confirmOk) {
+    confirmOk.addEventListener('click', function () {
+      portfolio = [];
+      savePortfolio();
+      renderTable();
+      closeConfirmModal();
+    });
+  }
+
+  // Setup Custom Alert Modal
+  var alertModal = document.getElementById('ivAlertModal');
+  var alertOverlay = document.getElementById('ivAlertOverlay');
+  var alertOkBtn = document.getElementById('ivAlertOk');
+  var alertTitleEl = document.getElementById('ivAlertTitle');
+  var alertMsgEl = document.getElementById('ivAlertMessage');
+
+  function showCustomAlert(title, message) {
+    if (alertTitleEl) alertTitleEl.textContent = title;
+    if (alertMsgEl) alertMsgEl.textContent = message;
+    if (alertModal) alertModal.style.display = 'flex';
+  }
+
+  function closeCustomAlert() {
+    if (alertModal) alertModal.style.display = 'none';
+  }
+
+  if (alertOkBtn) alertOkBtn.addEventListener('click', closeCustomAlert);
+  if (alertOverlay) alertOverlay.addEventListener('click', closeCustomAlert);
 
   // Setup Click outside autocomplete dropdown
   document.addEventListener('click', function (e) {
@@ -540,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!file) return;
 
     if (!file.name.endsWith('.csv')) {
-      alert('Please upload a valid .csv file.');
+      showCustomAlert('Invalid File Type', 'Please upload a valid .csv file.');
       return;
     }
 
@@ -550,7 +593,7 @@ document.addEventListener('DOMContentLoaded', function () {
       processCSVContent(text);
     };
     reader.onerror = function () {
-      alert('Error reading file.');
+      showCustomAlert('File Error', 'Error reading file.');
     };
     reader.readAsText(file);
   }
@@ -696,15 +739,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Extracted keys
     var queries = [];
-    var maxIndex = Math.max(nseColIndex, bseColIndex, isinColIndex, nameColIndex);
     for (var r = 1; r < rows.length; r++) {
       var row = rows[r];
-      if (!row || row.length <= maxIndex) continue;
+      if (!row || row.length === 0) continue;
 
-      var isinVal = isinColIndex !== -1 ? row[isinColIndex].trim() : '';
-      var nseVal = nseColIndex !== -1 ? row[nseColIndex].trim() : '';
-      var bseVal = bseColIndex !== -1 ? row[bseColIndex].trim() : '';
-      var nameVal = nameColIndex !== -1 ? row[nameColIndex].trim() : '';
+      var isinVal = (isinColIndex !== -1 && row[isinColIndex]) ? row[isinColIndex].trim() : '';
+      var nseVal = (nseColIndex !== -1 && row[nseColIndex]) ? row[nseColIndex].trim() : '';
+      var bseVal = (bseColIndex !== -1 && row[bseColIndex]) ? row[bseColIndex].trim() : '';
+      var nameVal = (nameColIndex !== -1 && row[nameColIndex]) ? row[nameColIndex].trim() : '';
 
       // Prefer ISIN Code, then NSE Code, then BSE Code, then Name
       var key = isinVal || nseVal || bseVal || nameVal;
@@ -755,7 +797,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var isDuplicate = portfolio.some(function (item) {
         return (item.stock.name && item.stock.name.toLowerCase() === q.toLowerCase()) ||
                (item.stock.nseCode && item.stock.nseCode.toLowerCase() === q.toLowerCase()) ||
-               (item.stock.bseCode && item.stock.bseCode.toLowerCase() === q.toLowerCase());
+               (item.stock.bseCode && item.stock.bseCode.toLowerCase() === q.toLowerCase()) ||
+               (item.stock.isinCode && item.stock.isinCode.toLowerCase() === q.toLowerCase());
       });
 
       if (isDuplicate) {

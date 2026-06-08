@@ -1228,14 +1228,14 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             "total": valuation_total,
             "parameters": [
                 {
-                    "name": "Peer analysis",
+                    "name": "P/B peer valuation",
                     "value": stock_pb,
                     "displayValue": f"{stock_pb}x (Sector Median: {sector_pb}x)" if stock_pb is not None and sector_pb is not None else "N/A",
                     "threshold": "P/B < Sector Median P/B (+1), P/B >= Sector Median P/B (0)",
                     "score": v1_score
                 },
                 {
-                    "name": "Peer analysis",
+                    "name": "P/S peer valuation",
                     "value": stock_ps,
                     "displayValue": f"{stock_ps}x (Sector Median: {sector_ps}x)" if stock_ps is not None and sector_ps is not None else "N/A",
                     "threshold": "P/S < Sector Median P/S (+1), P/S >= Sector Median P/S (0)",

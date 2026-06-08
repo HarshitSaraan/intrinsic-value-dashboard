@@ -362,6 +362,27 @@
       line-height: 1;
     }
 
+    .iv-mobile-back-btn {
+      border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+      background: var(--iv-card);
+      color: var(--iv-gold-2);
+      border-radius: 12px;
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+
+    .iv-mobile-back-btn:active {
+      transform: scale(0.95);
+      background: rgba(var(--iv-accent-rgb), 0.12);
+    }
+
     .iv-mobile-header {
       display: flex;
       align-items: center;
@@ -1587,7 +1608,7 @@
         pointer-events: none;
 
         position: absolute;
-        top: calc(100% + 10px);
+        top: 100%;
         left: 0;
         min-width: 230px;
         padding: 8px;

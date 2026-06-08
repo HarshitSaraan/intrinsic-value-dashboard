@@ -134,6 +134,39 @@
         </div>
       </div>
     </div>
+
+    <!-- Custom Confirmation Modal -->
+    <div class="iv-modal" id="ivConfirmModal" style="display: none;">
+      <div class="iv-modal-overlay" id="ivConfirmOverlay"></div>
+      <div class="iv-modal-content">
+        <div class="iv-modal-header">
+          <h3>Clear Portfolio</h3>
+        </div>
+        <div class="iv-modal-body">
+          <p>Are you sure you want to clear your portfolio list?</p>
+        </div>
+        <div class="iv-modal-footer">
+          <button class="iv-modal-btn cancel" id="ivConfirmCancel" type="button">Cancel</button>
+          <button class="iv-modal-btn confirm" id="ivConfirmOk" type="button">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div class="iv-modal" id="ivAlertModal" style="display: none;">
+      <div class="iv-modal-overlay" id="ivAlertOverlay"></div>
+      <div class="iv-modal-content">
+        <div class="iv-modal-header">
+          <h3 id="ivAlertTitle">Alert</h3>
+        </div>
+        <div class="iv-modal-body">
+          <p id="ivAlertMessage">Message</p>
+        </div>
+        <div class="iv-modal-footer">
+          <button class="iv-modal-btn alert-ok" id="ivAlertOk" type="button">OK</button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <script src="../js/navigation.js?v=2"></script>

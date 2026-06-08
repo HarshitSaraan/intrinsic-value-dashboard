@@ -155,7 +155,7 @@
     sidebar.setAttribute("aria-label", "Intrinsic Value Wealth Dashboard Navigation");
     
     var brandLink = document.createElement("a");
-    brandLink.href = getLink("/dashboard");
+    brandLink.href = "https://intrinsicvalueequity.in/";
     brandLink.className = "iv-brand-link";
     brandLink.innerHTML = `
       <div class="iv-brand">
@@ -175,7 +175,7 @@
       {
         type: "standalone",
         view: "home",
-        label: "Dashboard Home",
+        label: "Home",
         icon: "◆",
         path: "/dashboard"
       },
@@ -216,8 +216,8 @@
           { view: "aggressive-smallcaps", label: "High Growth Small Cap", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
           { view: "undervalued-largecaps", label: "Value Large Cap", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
           { view: "growth-tech", label: "Technology Leaders", icon: "💻", path: "/strategies?type=growth-tech" },
-          { view: "portfolio-anchors", label: "Core Compounders/Picks", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
-          { view: "solid-large-growth", label: "Large Compounders/Picks", icon: "🚀", path: "/strategies?type=solid-large-growth" }
+          { view: "portfolio-anchors", label: "Core Compounders", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
+          { view: "solid-large-growth", label: "Large Compounders", icon: "🚀", path: "/strategies?type=solid-large-growth" }
         ]
       }
     ];
@@ -290,7 +290,29 @@
     var mobileHeader = document.createElement("div");
     mobileHeader.className = "iv-mobile-header";
     
-    var logoWrap = document.createElement("div");
+    if (activeView !== "home") {
+      var backBtn = document.createElement("button");
+      backBtn.className = "iv-mobile-back-btn";
+      backBtn.id = "ivMobileBackBtn";
+      backBtn.setAttribute("aria-label", "Go Back");
+      backBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      `;
+      backBtn.addEventListener("click", function () {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = getLink("/dashboard");
+        }
+      });
+      mobileHeader.appendChild(backBtn);
+    }
+    
+    var logoWrap = document.createElement("a");
+    logoWrap.href = "https://intrinsicvalueequity.in/";
     logoWrap.className = "iv-mobile-logo";
     logoWrap.innerHTML = '<img src="' + getLogoSrc() + '" alt="IV" style="height:44px;width:auto;margin-left:-4px;">';
     

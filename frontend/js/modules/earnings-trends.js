@@ -109,7 +109,7 @@
     var ctx = financialsChart.getContext("2d");
     ctx.clearRect(0, 0, financialsChart.width, financialsChart.height);
     updateLegend(null);
-    if (modalLegendPeriod) modalLegendPeriod.textContent = "Loading financials from Yahoo Finance...";
+    if (modalLegendPeriod) modalLegendPeriod.textContent = "Loading financials...";
 
     // Fetch financials
     if (searchSpinner) searchSpinner.style.display = "block";

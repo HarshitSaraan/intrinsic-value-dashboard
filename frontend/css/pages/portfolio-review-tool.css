@@ -570,3 +570,125 @@
 .iv-upload-log-row.info {
   color: var(--iv-text-secondary);
 }
+
+/* Custom Confirmation Modal */
+.iv-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iv-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(3, 8, 16, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.iv-modal-content {
+  position: relative;
+  background: var(--iv-bg-alt);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.28);
+  border-radius: 16px;
+  width: 380px;
+  max-width: 90%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+  z-index: 10001;
+  overflow: hidden;
+  animation: ivModalScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ivModalScaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.iv-modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(var(--iv-accent-rgb), 0.14);
+}
+
+.iv-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--iv-accent-light);
+}
+
+.iv-modal-body {
+  padding: 20px;
+}
+
+.iv-modal-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--iv-text);
+}
+
+.iv-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(var(--iv-accent-rgb), 0.03);
+  border-top: 1px solid rgba(var(--iv-accent-rgb), 0.1);
+}
+
+.iv-modal-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iv-modal-btn.cancel {
+  background: transparent;
+  color: var(--iv-text-muted);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.2);
+}
+
+.iv-modal-btn.cancel:hover {
+  color: var(--iv-text);
+  background: rgba(var(--iv-accent-rgb), 0.05);
+}
+
+.iv-modal-btn.confirm {
+  background: var(--iv-danger);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.iv-modal-btn.confirm:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.iv-modal-btn.alert-ok {
+  background: linear-gradient(135deg, var(--iv-gold), #AA8121);
+  color: var(--iv-navy-3);
+  box-shadow: 0 4px 12px rgba(var(--iv-accent-rgb), 0.17);
+}
+
+.iv-modal-btn.alert-ok:hover {
+  background: var(--iv-gold);
+  transform: translateY(-1px);
+}
