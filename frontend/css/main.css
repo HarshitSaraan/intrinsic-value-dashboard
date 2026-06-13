@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 /* Shared shell styles for modular frontend pages. */
 :root {
@@ -80,42 +80,40 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --iv-bg: #0A0A0C;
-  --iv-bg-rgb: 10, 10, 12;
-  --iv-bg-alt: #141418;
-  --iv-bg-alt-rgb: 20, 20, 24;
-  --iv-bg-gradient-3: #1D1D24;
-  --iv-accent: #C5A880;
-  --iv-accent-rgb: 197, 168, 128;
-  --iv-accent-light: #E5D3B3;
-  --iv-accent-light-rgb: 229, 211, 179;
-  --iv-text: #F4F4F6;
-  --iv-text-rgb: 244, 244, 246;
-  --iv-text-secondary: #A2A2AD;
-  --iv-text-secondary-rgb: 162, 162, 173;
-  --iv-text-muted: #74747E;
-  --iv-text-muted-rgb: 116, 116, 126;
-  --iv-card-bg: rgba(255, 255, 255, 0.04);
-  --iv-border-accent: rgba(197, 168, 128, 0.16);
-  --iv-border-subtle: rgba(255, 255, 255, 0.07);
-  --iv-success: #66BB6A;
-  --iv-success-rgb: 102, 187, 106;
-  --iv-danger: #EF5350;
-  --iv-danger-rgb: 239, 83, 80;
-  --iv-warning: #FFC107;
-  --iv-warning-rgb: 255, 193, 7;
-  --iv-info: #42A5F5;
-  --iv-info-rgb: 66, 165, 245;
+  --iv-bg: #000000;
+  --iv-bg-rgb: 0, 0, 0;
+  --iv-bg-alt: #121212;
+  --iv-bg-alt-rgb: 18, 18, 18;
+  --iv-bg-gradient-3: #020202;
+  --iv-accent: #FF8C00;
+  --iv-accent-rgb: 255, 140, 0;
+  --iv-accent-light: #FFA534;
+  --iv-accent-light-rgb: 255, 165, 52;
+  --iv-text: #FAFAFA;
+  --iv-text-rgb: 250, 250, 250;
+  --iv-text-secondary: #8E8E93;
+  --iv-text-secondary-rgb: 142, 142, 147;
+  --iv-text-muted: #8E8E93;
+  --iv-text-muted-rgb: 142, 142, 147;
+  --iv-card-bg: rgba(18, 18, 18, 0.7);
+  --iv-border-accent: rgba(255, 140, 0, 0.2);
+  --iv-border-subtle: #222222;
+  --iv-success: #30D158;
+  --iv-success-rgb: 48, 209, 88;
+  --iv-danger: #FF453A;
+  --iv-danger-rgb: 255, 69, 58;
+  --iv-warning: #FF9F0A;
+  --iv-warning-rgb: 255, 159, 10;
+  --iv-info: #0A84FF;
+  --iv-info-rgb: 10, 132, 255;
   
-  --iv-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+  --iv-shadow: 0 8px 30px rgba(255, 140, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 * {
   box-sizing: border-box;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
     html {
       overflow-x: hidden;
@@ -170,15 +168,15 @@
       width: 100%;
       max-width: 100%;
       min-height: 100vh;
-      font-family: 'Manrope', 'Google Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       color: var(--iv-white);
       background: radial-gradient(circle at top left, rgba(var(--iv-accent-rgb), 0.13), transparent 26%),
-        linear-gradient(135deg, var(--iv-navy-3), var(--iv-navy) 48%, var(--iv-bg-gradient-3));
+        linear-gradient(135deg, var(--iv-bg), #080808 60%, var(--iv-bg-gradient-3));
       border-radius: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
 
     #iv-dashboard-app,
@@ -1711,13 +1709,13 @@
 html:not([data-theme="dark"]) body,
 html:not([data-theme="dark"]) #iv-dashboard-app,
 html:not([data-theme="dark"]) :root {
-  font-family: 'Manrope', 'Google Sans', sans-serif !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
   background: #FFFFFF !important;
   color: #101828 !important;
 }
 
 html:not([data-theme="dark"]) h1 {
-  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  font-family: 'Outfit', sans-serif !important;
   color: #101828 !important;
   font-weight: 600 !important;
 }
@@ -1725,7 +1723,7 @@ html:not([data-theme="dark"]) h1 {
 html:not([data-theme="dark"]) h2,
 html:not([data-theme="dark"]) .iv-section-title h2,
 html:not([data-theme="dark"]) .iv-hero h2 {
-  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  font-family: 'Outfit', sans-serif !important;
   color: #101828 !important;
   font-weight: 600 !important;
 }
@@ -1734,7 +1732,7 @@ html:not([data-theme="dark"]) h3,
 html:not([data-theme="dark"]) h4,
 html:not([data-theme="dark"]) h5,
 html:not([data-theme="dark"]) h6 {
-  font-family: 'PPMori-SemiBold', 'Google Sans', 'Manrope', sans-serif !important;
+  font-family: 'Outfit', sans-serif !important;
   color: #101828 !important;
   font-weight: 600 !important;
 }
@@ -1950,4 +1948,20 @@ html:not([data-theme="dark"]) .iv-drawer-stock-codes span {
   background: #F8FAFC !important;
   color: #101828 !important;
   border: 1px solid #E4E7EC !important;
+}
+
+/* Velvet Marigold Dark Theme - Glassmorphism & Shadow Enhancements */
+[data-theme="dark"] .iv-card {
+  background: rgba(18, 18, 18, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 140, 0, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 140, 0, 0.05) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="dark"] .iv-card:hover {
+  border-color: rgba(255, 140, 0, 0.35) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 140, 0, 0.15) !important;
+  transform: translateY(-2px);
 }

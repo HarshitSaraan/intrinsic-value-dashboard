@@ -818,4 +818,50 @@
   font-weight: 700;
 }
 
+/* Velvet Marigold Dark Theme Overrides for Dashboard Components */
+[data-theme="dark"] .iv-tab-btn.active {
+  background: var(--iv-accent) !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .iv-stacked-card {
+  background: rgba(18, 18, 18, 0.7) !important;
+  border: 1px solid rgba(255, 140, 0, 0.15) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 140, 0, 0.05) !important;
+}
+
+[data-theme="dark"] .iv-stacked-card:hover {
+  border-color: rgba(255, 140, 0, 0.35) !important;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5), 
+    0 0 35px rgba(255, 140, 0, 0.15),
+    0 -10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .iv-quick-tool {
+  background: rgba(18, 18, 18, 0.5) !important;
+  border-color: rgba(255, 140, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .iv-quick-tool:hover {
+  border-color: rgba(255, 140, 0, 0.35) !important;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.08), rgba(18, 18, 18, 0.3)) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 140, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .iv-welcome-card {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.08), rgba(18, 18, 18, 0.6)) !important;
+  border-color: rgba(255, 140, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .iv-micro-card {
+  background: rgba(18, 18, 18, 0.65) !important;
+  border-color: rgba(255, 140, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .iv-micro-card:hover {
+  border-color: rgba(255, 140, 0, 0.35) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 140, 0, 0.12) !important;
+}
+
 

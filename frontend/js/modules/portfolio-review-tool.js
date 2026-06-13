@@ -582,8 +582,19 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleCSVFile(file) {
     if (!file) return;
 
+    if (uploadLogs) {
+      uploadLogs.innerHTML = '';
+      uploadLogs.style.display = 'block';
+    }
+    if (uploadStatus) {
+      uploadStatus.style.display = 'block';
+      progressBar.style.width = '0%';
+      progressPct.textContent = '0%';
+      progressLabel.textContent = 'Invalid file type.';
+    }
+
     if (!file.name.endsWith('.csv')) {
-      showCustomAlert('Invalid File Type', 'Please upload a valid .csv file.');
+      addLog('Error: Please upload a valid .csv file.', 'error');
       return;
     }
 
@@ -671,32 +682,37 @@ document.addEventListener('DOMContentLoaded', function () {
       var h = headers[col].trim().toLowerCase();
       
       // Look for NSE
-      if (nseColIndex === -1 && (h === 'nse' || h === 'symbol' || h === 'ticker' || h === 'nse code' || h === 'instrument' || h === 'tradingsymbol')) {
+      if (nseColIndex === -1 && (h === 'nse' || h === 'symbol' || h === 'ticker' || h === 'nse code' || h === 'instrument' || h === 'tradingsymbol' || h.includes('nse') || h === 'nse symbol')) {
         nseColIndex = col;
         addLog('Found potential NSE column: "' + headers[col] + '"', 'success');
       }
       // Look for BSE
-      else if (bseColIndex === -1 && (h === 'bse' || h === 'scrip' || h === 'bse code' || h === 'scrip code' || h === 'bse symbol')) {
+      else if (bseColIndex === -1 && (h === 'bse' || h === 'scrip' || h === 'bse code' || h === 'scrip code' || h === 'bse symbol' || h.includes('bse') || h === 'bse symbol')) {
         bseColIndex = col;
         addLog('Found potential BSE column: "' + headers[col] + '"', 'success');
       }
       // Look for ISIN
-      else if (isinColIndex === -1 && (h === 'isin' || h === 'isin code' || h === 'isin_code' || h === 'isin number')) {
+      else if (isinColIndex === -1 && (h === 'isin' || h === 'isin code' || h === 'isin_code' || h === 'isin number' || h.includes('isin'))) {
         isinColIndex = col;
         addLog('Found potential ISIN column: "' + headers[col] + '"', 'success');
       }
       // Look for Name
-      else if (nameColIndex === -1 && (h === 'company' || h === 'name' || h === 'security' || h === 'company name' || h === 'holding' || h === 'security name')) {
+      else if (nameColIndex === -1 && (h === 'company' || h === 'name' || h === 'security' || h === 'company name' || h === 'holding' || h === 'security name' || h.includes('company') || h.includes('holding') || h.includes('security'))) {
         nameColIndex = col;
         addLog('Found potential Name column: "' + headers[col] + '"', 'success');
       }
     }
 
-    // Heuristics for headerless CSVs or unmatched column headers
-    if (nseColIndex === -1 && bseColIndex === -1 && isinColIndex === -1 && nameColIndex === -1) {
-      addLog('Header labels not matched. Scanning columns for codes...', 'info');
+    // Heuristics for unmatched column headers (scan any unmatched columns)
+    if (nseColIndex === -1 || bseColIndex === -1 || isinColIndex === -1 || nameColIndex === -1) {
+      addLog('Scanning unmatched columns for codes...', 'info');
       var sampleRows = rows.slice(1, Math.min(6, rows.length));
       for (var col = 0; col < headers.length; col++) {
+        // Skip columns that have already been matched to a specific type
+        if (col === nseColIndex || col === bseColIndex || col === isinColIndex || col === nameColIndex) {
+          continue;
+        }
+
         var allBseLike = true;
         var allNseLike = true;
         var allIsinLike = true;
@@ -715,16 +731,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (validSampleCount > 0) {
-          if (allIsinLike) {
+          if (isinColIndex === -1 && allIsinLike) {
             isinColIndex = col;
             addLog('Mapped column ' + col + ' to ISIN (ISIN codes detected)', 'success');
-          } else if (allBseLike) {
+          } else if (bseColIndex === -1 && allBseLike) {
             bseColIndex = col;
             addLog('Mapped column ' + col + ' to BSE (numeric codes detected)', 'success');
-          } else if (allNseLike) {
+          } else if (nseColIndex === -1 && allNseLike) {
             nseColIndex = col;
             addLog('Mapped column ' + col + ' to NSE (uppercase symbols detected)', 'success');
-          } else if (hasText && nameColIndex === -1) {
+          } else if (nameColIndex === -1 && hasText) {
             nameColIndex = col;
             addLog('Mapped column ' + col + ' to Name (text descriptions detected)', 'success');
           }
