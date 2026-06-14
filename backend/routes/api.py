@@ -701,7 +701,14 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
 
         return result_data
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch financials for {symbol}: {str(e)}")
+        print(f"Failed to fetch financials for {symbol}: {str(e)}")
+        return {
+            "symbol": clean_symbol,
+            "quarterly": [],
+            "annual": [],
+            "error": True,
+            "message": f"Yahoo Finance connection failed: {str(e)}"
+        }
 
 
 SEARCH_STOCKS_CACHE = {

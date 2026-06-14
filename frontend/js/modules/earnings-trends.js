@@ -124,6 +124,9 @@
         if (searchSpinner) searchSpinner.style.display = "none";
         activeFinancialsData = data;
         renderFinancials();
+        if (data.error && data.message) {
+          if (modalLegendPeriod) modalLegendPeriod.textContent = "Error: " + data.message;
+        }
       })
       .catch(function (err) {
         if (searchSpinner) searchSpinner.style.display = "none";
