@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "frontend/assets/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "frontend/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "frontend/js/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "frontend/assets/$1"
+    },
+    {
+      "src": "/frontend/(.*)",
+      "dest": "frontend/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "backend/main.py"
+    }
+  ]
+}
