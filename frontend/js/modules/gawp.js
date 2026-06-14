@@ -4,7 +4,55 @@
   function formatCompactINR(v){ if(!isFinite(v)) return "—"; var a=Math.abs(v); if(a>=1e7)return "₹"+(v/1e7).toFixed(v>=1e8?0:1)+" Cr"; if(a>=1e5)return "₹"+(v/1e5).toFixed(v>=1e6?0:1)+" L"; return formatINR(v);}
   function setupCanvas(c){ if(!c) return null; var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1,w=Math.max(280,Math.floor(r.width)),h=Math.max(220,Math.floor(r.height||240)); c.width=w*d; c.height=h*d; var x=c.getContext("2d"); x.setTransform(d,0,0,d,0,0); return {ctx:x,width:w,height:h};}
   function badge(fv){var cr=1e7; if(fv<1*cr)return{label:"Poor",className:"poor",icon:"🛡"}; if(fv<=5*cr)return{label:"Middle Class",className:"middle",icon:"💼"}; if(fv<=25*cr)return{label:"Upper Middle",className:"upper",icon:"🎫"}; if(fv<=100*cr)return{label:"Rich",className:"rich",icon:"◆"}; if(fv<=5000*cr)return{label:"Ultra Rich",className:"ultra",icon:"👑"}; return{label:"Top 500 in India",className:"top",icon:"🏆"};}
-  function interp(label){ if(label==="Poor"||label==="Middle Class") return "Consistent savings and disciplined investing can significantly improve outcomes."; if(label==="Upper Middle") return "You are on the right path. Stay disciplined and avoid lifestyle inflation."; if(label==="Rich") return "You are doing well. Continue focusing on long-term compounding."; if(label==="Ultra Rich") return "You are exceptionally well positioned under the GAWP framework."; if(label==="Top 500 in India") return "Extraordinary projection under this framework. Stay grounded and responsible."; return "Educational age-adjusted wealth benchmark.";}
+  function buildReadMoreHtml(shortText, detailedHtml) {
+    return shortText + 
+      '<span class="iv-readmore-dots">...</span>' +
+      '<span class="iv-readmore-more" style="display: none;"> ' + detailedHtml + '</span>' +
+      '<a href="#" class="iv-readmore-btn" style="color: var(--iv-accent-light); font-weight: 650; margin-left: 6px; text-decoration: underline; white-space: nowrap;">Read more</a>';
+  }
+  function interp(label){
+    if(label==="Poor") return "You need to come up with a disciplined approach to save and Invest.";
+    if(label==="Middle Class") {
+      var shortText = "You are sitting on the edge. Daily life may look comfortable but an emergency can derail that.";
+      var detailed = 
+        "<div style='margin-top: 10px; font-weight: 600; color: var(--iv-accent-light);'>You need:</div>" +
+        "<ul style='margin: 6px 0 12px 18px; padding: 0; line-height: 1.6; list-style-type: none;'>" +
+          "<li><b>a.</b> More savings. 10-20% more than usual every month.</li>" +
+          "<li><b>b.</b> Control on Expenses/Second income.</li>" +
+          "<li><b>c.</b> Good investments- atleast put 60-70% in Equity.</li>" +
+        "</ul>" +
+        "<div style='margin-top: 8px; line-height: 1.5;'>Little hardwork or smart investment for next 4-5 years can put you in comfortable position.</div>" +
+        "<div style='margin-top: 8px; font-weight: 700; color: #F87171;'>DONT TAKE ANY GAMBLING DECISION WHICH MIGHT PUT YOU IN POOR SECTION.</div>";
+      return buildReadMoreHtml(shortText, detailed);
+    }
+    if(label==="Upper Middle") {
+      var shortText = "You are an upper middle class, if you want to up your game, you need more saving or better returns.";
+      var detailed = 
+        "<div style='margin-top: 10px; font-weight: 600; color: var(--iv-accent-light);'>Here are 3 possibilities for you:</div>" +
+        "<ol style='margin: 6px 0 0 18px; padding: 0; line-height: 1.6;'>" +
+          "<li>Save 20% more than now for next 2 years, and with same 15% you can achieve Rich Status.</li>" +
+          "<li>Or Hire Good advisor who can get you good investment advice.</li>" +
+          "<li>Or Be content with what you have, Upper middle class is a good place to be.</li>" +
+        "</ol>";
+      return buildReadMoreHtml(shortText, detailed);
+    }
+    if(label==="Rich") {
+      var shortText = "Being Rich is awesome, Its a sweet Spot.";
+      var detailed = "Dont touch this capital, it will create a legacy. Invest more if possible. Use Monthly cashflow/dividends to enjoy life.";
+      return buildReadMoreHtml(shortText, detailed);
+    }
+    if(label==="Ultra Rich") {
+      var shortText = "Ultra rich is 2nd best category according to GAWP index, you are doing great.";
+      var detailed = "Use this investable capital to create wealth and dont withdraw much from it. Use your salary/income to enjoy life. You are creating a legacy.";
+      return buildReadMoreHtml(shortText, detailed);
+    }
+    if(label==="Top 500 in India") {
+      var shortText = "WOW ! Looks like, life has treated you very well.";
+      var detailed = "Kudos if you earned that by yourself.<br>Create a legacy! Help other people.";
+      return buildReadMoreHtml(shortText, detailed);
+    }
+    return "Educational age-adjusted wealth benchmark.";
+  }
   function calc(age,capital,cagr){ var yearsLeft=Math.max(0,80-age),future=age<80?capital*Math.pow(1+cagr/100,yearsLeft):capital,b=badge(future); return {age:age,capital:capital,cagr:cagr,yearsLeft:yearsLeft,futureValue:future,badge:b,interpretation:interp(b.label)};}
   function journey(result){ var cycle=[0.25,0.25,-0.10,-0.20,0.40,0.15,-0.08,0.32,-0.15,0.22],points=[],years=Math.max(0,result.yearsLeft); if(years===0) return [{year:result.age,value:result.futureValue}]; var raw=result.capital; points.push({year:result.age,value:result.capital}); for(var i=1;i<=years;i++){raw=raw*(1+cycle[(i-1)%cycle.length]); points.push({year:result.age+i,raw:raw});} var rawFinal=points[points.length-1].raw||result.capital||1,finalRatio=result.capital>0?result.futureValue/result.capital:1,rawRatio=result.capital>0?rawFinal/result.capital:1,scaler=rawRatio>0?finalRatio/rawRatio:1; for(var j=1;j<points.length;j++){var p=j/years,adj=Math.pow(scaler,p); points[j].value=points[j].raw*adj;} points[points.length-1].value=result.futureValue; return points;}
   function draw(canvas,result){ var d=setupCanvas(canvas); if(!d||!result) return; var c=d.ctx,w=d.width,h=d.height; c.clearRect(0,0,w,h); var pts=journey(result),pL=w<420?44:58,pR=16,pT=18,pB=36,pW=w-pL-pR,pH=h-pT-pB,max=Math.max.apply(null,pts.map(function(p){return p.value;}).concat([result.capital,result.futureValue]))*1.12; if(max<=0)max=1;
@@ -49,7 +97,23 @@
       fv.textContent=formatINR(r.futureValue);
       badgeEl.innerHTML="<span class=\"iv-gawp-badge-icon\">"+r.badge.icon+"</span>"+r.badge.label;
       badgeEl.className="iv-gawp-badge "+r.badge.className;
-      it.textContent=r.interpretation;
+      it.innerHTML=r.interpretation;
+      var btn=it.querySelector(".iv-readmore-btn");
+      if(btn){
+        btn.addEventListener("click",function(e){
+          e.preventDefault();
+          var dots=it.querySelector(".iv-readmore-dots"),more=it.querySelector(".iv-readmore-more");
+          if(more.style.display==="none"){
+            more.style.display="inline";
+            dots.style.display="none";
+            btn.textContent="Read less";
+          }else{
+            more.style.display="none";
+            dots.style.display="inline";
+            btn.textContent="Read more";
+          }
+        });
+      }
 
       // Adjust layout grid and display cards
       if(layoutWrapper) layoutWrapper.classList.add("calculated");
