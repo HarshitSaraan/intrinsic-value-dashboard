@@ -48,7 +48,7 @@
     }
     if(label==="Top 500 in India") {
       var shortText = "WOW ! Looks like, life has treated you very well.";
-      var detailed = "Kudos if you earned that by yourself.<br>Create a legacy! Help other people.";
+      var detailed = "Salute, if you are selfmade,<br>Kudos, even if its inherited.<br><br>Create a legacy! Help other people.";
       return buildReadMoreHtml(shortText, detailed);
     }
     return "Educational age-adjusted wealth benchmark.";
