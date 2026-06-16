@@ -1,0 +1,50 @@
+{
+    "symbol": "DEEM",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1033713000.0,
+            "earnings": 70794000.0,
+            "ebitda": 127825000.0,
+            "profitMargin": 6.848515980741269,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1007180000.0,
+            "earnings": 78125000.0,
+            "ebitda": 137599000.0,
+            "profitMargin": 7.7568061319724375,
+            "revenueYoY": -2.566766597692009,
+            "earningsYoY": 10.355397350057913
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 929081000.0,
+            "earnings": 28994000.0,
+            "ebitda": 71336000.0,
+            "profitMargin": 3.120718215096423,
+            "revenueYoY": -7.754224666891718,
+            "earningsYoY": -62.88768
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 908844000.0,
+            "earnings": 21651000.0,
+            "ebitda": 88579000.0,
+            "profitMargin": 2.382257021006905,
+            "revenueYoY": -2.178173915944896,
+            "earningsYoY": -25.32592950265572
+        }
+    ]
+}

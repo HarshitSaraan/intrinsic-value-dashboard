@@ -1,0 +1,39 @@
+{
+    "symbol": "PERFECT",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 37476000.0,
+            "earnings": -18886000.0,
+            "ebitda": -5286000.0,
+            "profitMargin": -50.39491941509232,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 71345000.0,
+            "earnings": 5987000.0,
+            "ebitda": 12216000.0,
+            "profitMargin": 8.391618193286146,
+            "revenueYoY": 90.3751734443377,
+            "earningsYoY": 131.70073069998944
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 57244000.0,
+            "earnings": 8208000.0,
+            "ebitda": 12431000.0,
+            "profitMargin": 14.338620641464608,
+            "revenueYoY": -19.76452449365758,
+            "earningsYoY": 37.097043594454654
+        }
+    ]
+}

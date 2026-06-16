@@ -1,0 +1,50 @@
+{
+    "symbol": "RBS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 5828773000.0,
+            "earnings": 65915000.0,
+            "ebitda": 194676000.0,
+            "profitMargin": 1.1308554990904602,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 6977526000.0,
+            "earnings": 146888000.0,
+            "ebitda": 267729000.0,
+            "profitMargin": 2.1051587625757326,
+            "revenueYoY": 19.70831596975899,
+            "earningsYoY": 122.84457255556399
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 6864404000.0,
+            "earnings": 130328000.0,
+            "ebitda": 314653000.0,
+            "profitMargin": 1.898606200917079,
+            "revenueYoY": -1.6212336578896303,
+            "earningsYoY": -11.273895757311694
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 9286882000.0,
+            "earnings": 150027000.0,
+            "ebitda": 326962000.0,
+            "profitMargin": 1.6154722327687592,
+            "revenueYoY": 35.29043453736115,
+            "earningsYoY": 15.114940764839483
+        }
+    ]
+}

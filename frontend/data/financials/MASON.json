@@ -1,0 +1,50 @@
+{
+    "symbol": "MASON",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 300939000.0,
+            "earnings": 15211000.0,
+            "ebitda": 27457000.0,
+            "profitMargin": 5.054512708555555,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 638093000.0,
+            "earnings": 33701000.0,
+            "ebitda": 60287000.0,
+            "profitMargin": 5.2815185247291545,
+            "revenueYoY": 112.034000245897,
+            "earningsYoY": 121.55676812832819
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 937946000.0,
+            "earnings": 116523000.0,
+            "ebitda": 186852000.0,
+            "profitMargin": 12.423209864960242,
+            "revenueYoY": 46.992052882573546,
+            "earningsYoY": 245.75531883326903
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1121048000.0,
+            "earnings": 170885000.0,
+            "ebitda": 274930000.0,
+            "profitMargin": 15.243325887919163,
+            "revenueYoY": 19.521592927524612,
+            "earningsYoY": 46.653450391768146
+        }
+    ]
+}

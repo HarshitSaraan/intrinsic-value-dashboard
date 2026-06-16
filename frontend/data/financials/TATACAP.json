@@ -1,0 +1,62 @@
+{
+    "symbol": "TATACAP",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 70116500000.0,
+            "earnings": 10755700000.0,
+            "ebitda": 14140900000.0,
+            "profitMargin": 15.339755977551647,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 74162600000.0,
+            "earnings": 10517000000.0,
+            "ebitda": 13864200000.0,
+            "profitMargin": 14.181002284170189,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 77886100000.0,
+            "earnings": 12568700000.0,
+            "ebitda": 16892700000.0,
+            "profitMargin": 16.13728251896038,
+            "revenueYoY": 11.080986643657342,
+            "earningsYoY": 16.856178584378515
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 80695800000.0,
+            "earnings": 15020200000.0,
+            "ebitda": 20273400000.0,
+            "profitMargin": 18.613360298801176,
+            "revenueYoY": 8.809292015112739,
+            "earningsYoY": 42.81829419035847
+        }
+    ],
+    "annual": [
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 307846800000.0,
+            "earnings": 48461000000.0,
+            "ebitda": 63411400000.0,
+            "profitMargin": 15.741920981475202,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "symbol": "HEXATRADEX",
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 0.0,
+            "earnings": -1610000.0,
+            "ebitda": -1615000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 31087000.0,
+            "earnings": -8874000.0,
+            "ebitda": -3883000.0,
+            "profitMargin": -28.545694341686236,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 201000.0,
+            "earnings": -43543000.0,
+            "ebitda": -45155000.0,
+            "profitMargin": -21663.18407960199,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 14547000.0,
+            "earnings": -33172000.0,
+            "ebitda": -30513000.0,
+            "profitMargin": -228.03327146490685,
+            "revenueYoY": -3.078153108135119,
+            "earningsYoY": 10.195462667172018
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 10635000.0,
+            "earnings": -256092000.0,
+            "ebitda": -572423000.0,
+            "profitMargin": -2408.0112834978845,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 950395000.0,
+            "earnings": 922870000.0,
+            "ebitda": 1176412000.0,
+            "profitMargin": 97.10383577354679,
+            "revenueYoY": 8836.483309826046,
+            "earningsYoY": 460.36658700779407
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 45614000.0,
+            "earnings": -249471000.0,
+            "ebitda": -94555000.0,
+            "profitMargin": -546.9176130135485,
+            "revenueYoY": -95.2005218882675,
+            "earningsYoY": -127.03208469231852
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 54012000.0,
+            "earnings": -87199000.0,
+            "ebitda": -72950000.0,
+            "profitMargin": -161.44375324002073,
+            "revenueYoY": 18.411014162318587,
+            "earningsYoY": 65.04643826336527
+        }
+    ]
+}

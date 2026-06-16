@@ -1,0 +1,50 @@
+{
+    "symbol": "FONEBOX",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 909074000.0,
+            "earnings": 1279000.0,
+            "ebitda": 8549000.0,
+            "profitMargin": 0.140692616882674,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1958260000.0,
+            "earnings": 15987000.0,
+            "ebitda": 38610000.0,
+            "profitMargin": 0.8163880179342886,
+            "revenueYoY": 115.41260667448414,
+            "earningsYoY": 1149.9609069585613
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2967266000.0,
+            "earnings": 34316000.0,
+            "ebitda": 61716000.0,
+            "profitMargin": 1.1564854650712135,
+            "revenueYoY": 51.52564010907642,
+            "earningsYoY": 114.64940263964472
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3419853000.0,
+            "earnings": 45461000.0,
+            "ebitda": 73977000.0,
+            "profitMargin": 1.3293261435506145,
+            "revenueYoY": 15.252660192918329,
+            "earningsYoY": 32.477561487352844
+        }
+    ]
+}

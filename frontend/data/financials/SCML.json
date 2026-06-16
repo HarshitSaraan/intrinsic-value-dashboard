@@ -1,0 +1,50 @@
+{
+    "symbol": "SCML",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1519078000.0,
+            "earnings": 45262000.0,
+            "ebitda": 164058000.0,
+            "profitMargin": 2.9795705026338344,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1764497000.0,
+            "earnings": 47339000.0,
+            "ebitda": 203110000.0,
+            "profitMargin": 2.682860894634562,
+            "revenueYoY": 16.155786602136295,
+            "earningsYoY": 4.588838319119792
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2016612000.0,
+            "earnings": 61047000.0,
+            "ebitda": 238912000.0,
+            "profitMargin": 3.027206026741882,
+            "revenueYoY": 14.288207914210114,
+            "earningsYoY": 28.957096685608064
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2455313000.0,
+            "earnings": 79438000.0,
+            "ebitda": 281767000.0,
+            "profitMargin": 3.2353512566422284,
+            "revenueYoY": 21.754358299960526,
+            "earningsYoY": 30.1259685160614
+        }
+    ]
+}

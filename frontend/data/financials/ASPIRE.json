@@ -1,0 +1,50 @@
+{
+    "symbol": "ASPIRE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3213177000.0,
+            "earnings": 53085000.0,
+            "ebitda": 78795000.0,
+            "profitMargin": 1.652103198796705,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3839876000.0,
+            "earnings": 93124000.0,
+            "ebitda": 139018000.0,
+            "profitMargin": 2.425182479850912,
+            "revenueYoY": 19.50402981223879,
+            "earningsYoY": 75.4243194876142
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1669533000.0,
+            "earnings": 38870000.0,
+            "ebitda": 62388000.0,
+            "profitMargin": 2.3281959685732474,
+            "revenueYoY": -56.52117412124766,
+            "earningsYoY": -58.25995446930974
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1762326000.0,
+            "earnings": 25613000.0,
+            "ebitda": 49046000.0,
+            "profitMargin": 1.4533633391324874,
+            "revenueYoY": 5.558021314942562,
+            "earningsYoY": -34.105994340108055
+        }
+    ]
+}

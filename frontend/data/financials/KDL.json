@@ -1,0 +1,50 @@
+{
+    "symbol": "KDL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 169392000.0,
+            "earnings": 21797000.0,
+            "ebitda": 31243000.0,
+            "profitMargin": 12.867785963918013,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 212745000.0,
+            "earnings": 32218000.0,
+            "ebitda": 47107000.0,
+            "profitMargin": 15.143951679240406,
+            "revenueYoY": 25.593298384811565,
+            "earningsYoY": 47.80933155938891
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1035076000.0,
+            "earnings": 114929000.0,
+            "ebitda": 169656000.0,
+            "profitMargin": 11.10343588296898,
+            "revenueYoY": 386.533643563891,
+            "earningsYoY": 256.7229499037805
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3277444000.0,
+            "earnings": 317014000.0,
+            "ebitda": 474227000.0,
+            "profitMargin": 9.6725985249481,
+            "revenueYoY": 216.63800532521282,
+            "earningsYoY": 175.83464573780333
+        }
+    ]
+}

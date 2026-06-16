@@ -1,0 +1,50 @@
+{
+    "symbol": "VR",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 137444000.0,
+            "earnings": 7974000.0,
+            "ebitda": 22279000.0,
+            "profitMargin": 5.801635575216088,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 183680000.0,
+            "earnings": 24371000.0,
+            "ebitda": 31865000.0,
+            "profitMargin": 13.268183797909408,
+            "revenueYoY": 33.63988242484211,
+            "earningsYoY": 205.63080010032607
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 186329000.0,
+            "earnings": 23931000.0,
+            "ebitda": 38908000.0,
+            "profitMargin": 12.84341138523794,
+            "revenueYoY": 1.442182055749129,
+            "earningsYoY": -1.8054244799146528
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 252314000.0,
+            "earnings": 20125000.0,
+            "ebitda": 57302000.0,
+            "profitMargin": 7.97617254690584,
+            "revenueYoY": 35.41316703250701,
+            "earningsYoY": -15.90405749864193
+        }
+    ]
+}

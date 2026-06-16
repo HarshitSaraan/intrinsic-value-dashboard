@@ -1,0 +1,50 @@
+{
+    "symbol": "VELS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 266206370.0,
+            "earnings": 33822810.0,
+            "ebitda": 589552230.0,
+            "profitMargin": 12.705484846211606,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 599212430.0,
+            "earnings": 14362690.0,
+            "ebitda": 94273610.0,
+            "profitMargin": 2.3969279141956386,
+            "revenueYoY": 125.09319743175192,
+            "earningsYoY": -57.53549158097745
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 395383830.0,
+            "earnings": -364271180.0,
+            "ebitda": -265421500.0,
+            "profitMargin": -92.13102619801118,
+            "revenueYoY": -34.0160834113538,
+            "earningsYoY": -2636.232279607789
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 687420210.0,
+            "earnings": 430378110.0,
+            "ebitda": 687694690.0,
+            "profitMargin": 62.60771850161344,
+            "revenueYoY": 73.86148796221636,
+            "earningsYoY": 218.14772445077867
+        }
+    ]
+}

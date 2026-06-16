@@ -1,0 +1,50 @@
+{
+    "symbol": "PARAGON",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 826017000.0,
+            "earnings": 44902000.0,
+            "ebitda": 74142000.0,
+            "profitMargin": 5.435965603613485,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1018884000.0,
+            "earnings": 98921000.0,
+            "ebitda": 155225000.0,
+            "profitMargin": 9.70875978030865,
+            "revenueYoY": 23.349035189348402,
+            "earningsYoY": 120.30421807491871
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1205260000.0,
+            "earnings": 143108000.0,
+            "ebitda": 210512000.0,
+            "profitMargin": 11.873620629573702,
+            "revenueYoY": 18.29217064945568,
+            "earningsYoY": 44.66897827559366
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1143061000.0,
+            "earnings": 59180000.0,
+            "ebitda": 94143000.0,
+            "profitMargin": 5.177326494386564,
+            "revenueYoY": -5.160629241823341,
+            "earningsYoY": -58.64661654135338
+        }
+    ]
+}

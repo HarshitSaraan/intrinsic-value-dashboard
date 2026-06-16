@@ -1,0 +1,95 @@
+{
+    "symbol": "WEBELSOLAR",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1729900000.0,
+            "earnings": 482700000.0,
+            "ebitda": 795400000.0,
+            "profitMargin": 27.903347014278285,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2187500000.0,
+            "earnings": 671600000.0,
+            "ebitda": 1056600000.0,
+            "profitMargin": 30.70171428571429,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2610200000.0,
+            "earnings": 649800000.0,
+            "ebitda": 1038100000.0,
+            "profitMargin": 24.89464408857559,
+            "revenueYoY": 77.19095784400244,
+            "earningsYoY": 56.352261790182865
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4014500000.0,
+            "earnings": 1245000000.0,
+            "ebitda": 1520000000.0,
+            "profitMargin": 31.01257939967617,
+            "revenueYoY": 132.06543730851493,
+            "earningsYoY": 157.9241765071473
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 172243000.0,
+            "earnings": -236859000.0,
+            "ebitda": -126862000.0,
+            "profitMargin": -137.51444180605307,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 258592000.0,
+            "earnings": -1209600000.0,
+            "ebitda": -1119271000.0,
+            "profitMargin": -467.76389060759806,
+            "revenueYoY": 50.13208083927939,
+            "earningsYoY": -410.683571238585
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 5754600000.0,
+            "earnings": 1547400000.0,
+            "ebitda": 2546400000.0,
+            "profitMargin": 26.889792513815035,
+            "revenueYoY": 2125.3588664769213,
+            "earningsYoY": 227.9265873015873
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 10494400000.0,
+            "earnings": 3030000000.0,
+            "ebitda": 4370500000.0,
+            "profitMargin": 28.872541545967373,
+            "revenueYoY": 82.36541201821152,
+            "earningsYoY": 95.81233036060488
+        }
+    ]
+}

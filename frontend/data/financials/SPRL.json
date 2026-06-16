@@ -1,0 +1,50 @@
+{
+    "symbol": "SPRL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 272360000.0,
+            "earnings": 6157000.0,
+            "ebitda": 14852000.0,
+            "profitMargin": 2.260610956087531,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 288108000.0,
+            "earnings": 15586000.0,
+            "ebitda": 29209000.0,
+            "profitMargin": 5.409776889222098,
+            "revenueYoY": 5.7820531649287705,
+            "earningsYoY": 153.1427643332792
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 302541000.0,
+            "earnings": 20906000.0,
+            "ebitda": 35373000.0,
+            "profitMargin": 6.91013779950486,
+            "revenueYoY": 5.0095797409304845,
+            "earningsYoY": 34.13319645836007
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 281516000.0,
+            "earnings": 35289000.0,
+            "ebitda": 53082000.0,
+            "profitMargin": 12.535344349877095,
+            "revenueYoY": -6.949471311326398,
+            "earningsYoY": 68.79843107241939
+        }
+    ]
+}

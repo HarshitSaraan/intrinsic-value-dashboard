@@ -1,0 +1,50 @@
+{
+    "symbol": "YUDIZ",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 187618000.0,
+            "earnings": 7389000.0,
+            "ebitda": 22205000.0,
+            "profitMargin": 3.9383214830133575,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 273145000.0,
+            "earnings": 27517000.0,
+            "ebitda": 61089000.0,
+            "profitMargin": 10.074136447674311,
+            "revenueYoY": 45.585711392297114,
+            "earningsYoY": 272.40492624171065
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 261559000.0,
+            "earnings": -28736000.0,
+            "ebitda": -11224000.0,
+            "profitMargin": -10.986431359654992,
+            "revenueYoY": -4.24170312471398,
+            "earningsYoY": -204.42998873423704
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 209979000.0,
+            "earnings": -11498000.0,
+            "ebitda": -23959000.0,
+            "profitMargin": -5.4757856738054755,
+            "revenueYoY": -19.720216088913016,
+            "earningsYoY": 59.98747216035635
+        }
+    ]
+}

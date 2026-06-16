@@ -1,0 +1,62 @@
+{
+    "symbol": "AGSTRA",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3516920000.0,
+            "earnings": 151720000.0,
+            "ebitda": 1046930000.0,
+            "profitMargin": 4.314002024498709,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2095950000.0,
+            "earnings": -1942640000.0,
+            "ebitda": -1701850000.0,
+            "profitMargin": -92.68541711395787,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 17718720000.0,
+            "earnings": -824680000.0,
+            "ebitda": 4240410000.0,
+            "profitMargin": -4.654286539885499,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 16712730000.0,
+            "earnings": 369620000.0,
+            "ebitda": 4200960000.0,
+            "profitMargin": 2.2116075590283573,
+            "revenueYoY": -5.677554586335807,
+            "earningsYoY": 144.8198088955716
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 14706340000.0,
+            "earnings": -800880000.0,
+            "ebitda": 2142130000.0,
+            "profitMargin": -5.445814526251943,
+            "revenueYoY": -12.005160138409463,
+            "earningsYoY": -316.6765867647855
+        }
+    ]
+}

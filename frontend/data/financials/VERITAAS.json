@@ -1,0 +1,50 @@
+{
+    "symbol": "VERITAAS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 33698000.0,
+            "earnings": 1258000.0,
+            "ebitda": 2376000.0,
+            "profitMargin": 3.7331592379369694,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 77484000.0,
+            "earnings": 4389000.0,
+            "ebitda": 10496000.0,
+            "profitMargin": 5.664395229982964,
+            "revenueYoY": 129.93649474746277,
+            "earningsYoY": 248.8871224165342
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 103505000.0,
+            "earnings": 16989000.0,
+            "ebitda": 30259000.0,
+            "profitMargin": 16.413699821264675,
+            "revenueYoY": 33.582417015125706,
+            "earningsYoY": 287.08133971291863
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 151561000.0,
+            "earnings": 14781000.0,
+            "ebitda": 36616000.0,
+            "profitMargin": 9.752508890809642,
+            "revenueYoY": 46.42867494323946,
+            "earningsYoY": -12.996644887868621
+        }
+    ]
+}

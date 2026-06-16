@@ -1,0 +1,50 @@
+{
+    "symbol": "INSPIRE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 381477000.0,
+            "earnings": 2592000.0,
+            "ebitda": 13050000.0,
+            "profitMargin": 0.6794642927358662,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 488316000.0,
+            "earnings": 40482000.0,
+            "ebitda": 70699141.0,
+            "profitMargin": 8.29012360848303,
+            "revenueYoY": 28.00666881620648,
+            "earningsYoY": 1461.8055555555554
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 303682000.0,
+            "earnings": 25677000.0,
+            "ebitda": 57507000.0,
+            "profitMargin": 8.455226190554594,
+            "revenueYoY": -37.810352312846604,
+            "earningsYoY": -36.571809693196975
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 77712000.0,
+            "earnings": -51012000.0,
+            "ebitda": -33600000.0,
+            "profitMargin": -65.64237183446572,
+            "revenueYoY": -74.41007369551043,
+            "earningsYoY": -298.6680686996144
+        }
+    ]
+}

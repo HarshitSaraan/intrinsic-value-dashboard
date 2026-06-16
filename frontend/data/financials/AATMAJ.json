@@ -1,0 +1,39 @@
+{
+    "symbol": "AATMAJ",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 218089000.0,
+            "earnings": 49207000.0,
+            "ebitda": 73962000.0,
+            "profitMargin": 22.562806927447053,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 271626000.0,
+            "earnings": 59065000.0,
+            "ebitda": 97451000.0,
+            "profitMargin": 21.744972867104032,
+            "revenueYoY": 24.548234894928218,
+            "earningsYoY": 20.033735037697888
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 157381000.0,
+            "earnings": 8808000.0,
+            "ebitda": 33158000.0,
+            "profitMargin": 5.596609501782299,
+            "revenueYoY": -42.05967028193177,
+            "earningsYoY": -85.08761533903328
+        }
+    ]
+}

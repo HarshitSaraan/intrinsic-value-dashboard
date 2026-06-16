@@ -1,0 +1,84 @@
+{
+    "symbol": "SEDEMAC",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1799200000.0,
+            "earnings": 86100000.0,
+            "ebitda": 285200000.0,
+            "profitMargin": 4.785460204535349,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2168290000.0,
+            "earnings": 170690000.0,
+            "ebitda": 456870000.0,
+            "profitMargin": 7.872101978978827,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2877100000.0,
+            "earnings": 320800000.0,
+            "ebitda": 611280000.0,
+            "profitMargin": 11.150116436689721,
+            "revenueYoY": 59.909959982214325,
+            "earningsYoY": 272.5900116144019
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 4221590000.0,
+            "earnings": 85730000.0,
+            "ebitda": 542400000.0,
+            "profitMargin": 2.0307514467297865,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 5294160000.0,
+            "earnings": 58780000.0,
+            "ebitda": 831240000.0,
+            "profitMargin": 1.1102800066488359,
+            "revenueYoY": 25.40677801491855,
+            "earningsYoY": -31.435903417706758
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 6583600000.0,
+            "earnings": 470500000.0,
+            "ebitda": 1250600000.0,
+            "profitMargin": 7.146545962695182,
+            "revenueYoY": 24.355894041736555,
+            "earningsYoY": 700.4423273222185
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 10583800000.0,
+            "earnings": 1035800000.0,
+            "ebitda": 2222000000.0,
+            "profitMargin": 9.786655076626543,
+            "revenueYoY": 60.76007047815784,
+            "earningsYoY": 120.14877789585547
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "AVSL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1004278000.0,
+            "earnings": 58899000.0,
+            "ebitda": 106430000.0,
+            "profitMargin": 5.8648103413596635,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1011629000.0,
+            "earnings": 5112000.0,
+            "ebitda": 44429000.0,
+            "profitMargin": 0.5053235919492225,
+            "revenueYoY": 0.7319686381659262,
+            "earningsYoY": -91.32073549635817
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1373475000.0,
+            "earnings": 22433000.0,
+            "ebitda": 81116000.0,
+            "profitMargin": 1.6333023899233696,
+            "revenueYoY": 35.76864641088778,
+            "earningsYoY": 338.8302034428795
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1391341000.0,
+            "earnings": 25277000.0,
+            "ebitda": 97791000.0,
+            "profitMargin": 1.8167365153474238,
+            "revenueYoY": 1.3007881468537832,
+            "earningsYoY": 12.6777515267686
+        }
+    ]
+}

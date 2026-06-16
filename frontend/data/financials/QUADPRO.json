@@ -1,0 +1,50 @@
+{
+    "symbol": "QUADPRO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 96842000.0,
+            "earnings": 9651000.0,
+            "ebitda": 20356000.0,
+            "profitMargin": 9.965717354040603,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 86496000.0,
+            "earnings": 7951000.0,
+            "ebitda": 21838000.0,
+            "profitMargin": 9.192332593414724,
+            "revenueYoY": -10.683381177588236,
+            "earningsYoY": -17.614754947673816
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 90268000.0,
+            "earnings": 8135000.0,
+            "ebitda": 26451000.0,
+            "profitMargin": 9.012052997740062,
+            "revenueYoY": 4.360895301516833,
+            "earningsYoY": 2.3141743176958873
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 78480000.0,
+            "earnings": 6377000.0,
+            "ebitda": 18138000.0,
+            "profitMargin": 8.125637104994903,
+            "revenueYoY": -13.058891301457882,
+            "earningsYoY": -21.610325752919486
+        }
+    ]
+}

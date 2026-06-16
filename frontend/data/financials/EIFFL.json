@@ -1,0 +1,73 @@
+{
+    "symbol": "EIFFL",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 349800000.0,
+            "earnings": 25800000.0,
+            "ebitda": 51200000.0,
+            "profitMargin": 7.375643224699828,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 600200000.0,
+            "earnings": 46500000.0,
+            "ebitda": 95400000.0,
+            "profitMargin": 7.747417527490836,
+            "revenueYoY": 71.5837621497999,
+            "earningsYoY": 80.23255813953489
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1388600000.0,
+            "earnings": 12100000.0,
+            "ebitda": 79000000.0,
+            "profitMargin": 0.8713812472994383,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1072700000.0,
+            "earnings": 21900000.0,
+            "ebitda": 94500000.0,
+            "profitMargin": 2.0415773282371585,
+            "revenueYoY": -22.74953190263575,
+            "earningsYoY": 80.99173553719008
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1437400000.0,
+            "earnings": 56000000.0,
+            "ebitda": 136700000.0,
+            "profitMargin": 3.895923194657019,
+            "revenueYoY": 33.99832199123706,
+            "earningsYoY": 155.70776255707764
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1520400000.0,
+            "earnings": 49700000.0,
+            "ebitda": 158800000.0,
+            "profitMargin": 3.268876611418048,
+            "revenueYoY": 5.774314734938082,
+            "earningsYoY": -11.25
+        }
+    ]
+}

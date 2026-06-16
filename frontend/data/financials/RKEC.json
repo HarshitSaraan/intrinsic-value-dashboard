@@ -1,0 +1,84 @@
+{
+    "symbol": "RKEC",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 768445000.0,
+            "earnings": 37474000.0,
+            "ebitda": 111199000.0,
+            "profitMargin": 4.876601448379519,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1189792000.0,
+            "earnings": 82588000.0,
+            "ebitda": 200535000.0,
+            "profitMargin": 6.941381350689868,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1414253000.0,
+            "earnings": 27167000.0,
+            "ebitda": 111851000.0,
+            "profitMargin": 1.9209434238428345,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 2104971817.94,
+            "earnings": 71189294.17,
+            "ebitda": 234053858.22,
+            "profitMargin": 3.3819594905393253,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2777084000.0,
+            "earnings": 124267000.0,
+            "ebitda": 453203000.0,
+            "profitMargin": 4.474729608467011,
+            "revenueYoY": 31.92974729313729,
+            "earningsYoY": 74.55855047986634
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3358600000.0,
+            "earnings": 199578000.0,
+            "ebitda": 518216000.0,
+            "profitMargin": 5.942297385815518,
+            "revenueYoY": 20.93980592592806,
+            "earningsYoY": 60.60418292869386
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4219225000.0,
+            "earnings": 200376000.0,
+            "ebitda": 559638000.0,
+            "profitMargin": 4.749118617755631,
+            "revenueYoY": 25.62451616745072,
+            "earningsYoY": 0.3998436701440038
+        }
+    ]
+}

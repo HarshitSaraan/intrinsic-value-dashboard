@@ -1,0 +1,62 @@
+{
+    "symbol": "MIDWESTLTD",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1171170000.0,
+            "earnings": 141460000.0,
+            "ebitda": 292130000.0,
+            "profitMargin": 12.078519770827462,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2301860000.0,
+            "earnings": 471760000.0,
+            "ebitda": 767840000.0,
+            "profitMargin": 20.494730348500777,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1288570000.0,
+            "earnings": 183090000.0,
+            "ebitda": 358080000.0,
+            "profitMargin": 14.208774067377014,
+            "revenueYoY": 10.024163870317716,
+            "earningsYoY": 29.42881379895377
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2158050000.0,
+            "earnings": 355550000.0,
+            "ebitda": 609450000.0,
+            "profitMargin": 16.475521883181578,
+            "revenueYoY": -6.24755632401623,
+            "earningsYoY": -24.633288112599626
+        }
+    ],
+    "annual": [
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 6456180000.0,
+            "earnings": 1048450000.0,
+            "ebitda": 1885260000.0,
+            "profitMargin": 16.23947907276439,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "CMNL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2276025000.0,
+            "earnings": 170963000.0,
+            "ebitda": 271144000.0,
+            "profitMargin": 7.511472852890456,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1888649000.0,
+            "earnings": 125244000.0,
+            "ebitda": 201209000.0,
+            "profitMargin": 6.631406894557962,
+            "revenueYoY": -17.01984820026142,
+            "earningsYoY": -26.74204360007721
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1721841000.0,
+            "earnings": 97762000.0,
+            "ebitda": 171664000.0,
+            "profitMargin": 5.67776002546112,
+            "revenueYoY": -8.83213344565348,
+            "earningsYoY": -21.942767717415602
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 5412653000.0,
+            "earnings": -41743000.0,
+            "ebitda": 385675000.0,
+            "profitMargin": -0.7712114558239739,
+            "revenueYoY": 214.35266090190672,
+            "earningsYoY": -142.6985945459381
+        }
+    ]
+}

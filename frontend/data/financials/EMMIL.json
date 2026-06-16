@@ -1,0 +1,50 @@
+{
+    "symbol": "EMMIL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 780312000.0,
+            "earnings": 33617000.0,
+            "ebitda": 85602000.0,
+            "profitMargin": 4.308148535457612,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 990148000.0,
+            "earnings": 73750000.0,
+            "ebitda": 139588000.0,
+            "profitMargin": 7.448381454085652,
+            "revenueYoY": 26.891294764145623,
+            "earningsYoY": 119.38305024243687
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1250696000.0,
+            "earnings": 109676000.0,
+            "ebitda": 201908000.0,
+            "profitMargin": 8.769197310937269,
+            "revenueYoY": 26.314045981004856,
+            "earningsYoY": 48.71322033898305
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1492815000.0,
+            "earnings": 125669000.0,
+            "ebitda": 217032000.0,
+            "profitMargin": 8.418256783325461,
+            "revenueYoY": 19.358741052981703,
+            "earningsYoY": 14.582041649950764
+        }
+    ]
+}

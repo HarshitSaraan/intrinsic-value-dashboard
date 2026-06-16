@@ -1,0 +1,39 @@
+{
+    "symbol": "LRRPL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 102800000.0,
+            "earnings": 5000000.0,
+            "ebitda": 12500000.0,
+            "profitMargin": 4.863813229571985,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 87300000.0,
+            "earnings": 8300000.0,
+            "ebitda": 13200000.0,
+            "profitMargin": 9.507445589919817,
+            "revenueYoY": -15.077821011673151,
+            "earningsYoY": 66.0
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 137800000.0,
+            "earnings": 3700000.0,
+            "ebitda": 17500000.0,
+            "profitMargin": 2.6850507982583456,
+            "revenueYoY": 57.846506300114555,
+            "earningsYoY": -55.42168674698795
+        }
+    ]
+}

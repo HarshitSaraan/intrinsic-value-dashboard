@@ -1,0 +1,50 @@
+{
+    "symbol": "MDL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 412216000.0,
+            "earnings": 13376000.0,
+            "ebitda": 49017000.0,
+            "profitMargin": 3.2449007316552487,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 496674000.0,
+            "earnings": 20325000.0,
+            "ebitda": 57417000.0,
+            "profitMargin": 4.0922214571328475,
+            "revenueYoY": 20.488772876356084,
+            "earningsYoY": 51.95125598086124
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 534319000.0,
+            "earnings": 28967000.0,
+            "ebitda": 66951000.0,
+            "profitMargin": 5.421293272370999,
+            "revenueYoY": 7.579418290468194,
+            "earningsYoY": 42.51906519065191
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 631072000.0,
+            "earnings": 34411000.0,
+            "ebitda": 70922000.0,
+            "profitMargin": 5.452785102175346,
+            "revenueYoY": 18.107722165972014,
+            "earningsYoY": 18.793799841198606
+        }
+    ]
+}

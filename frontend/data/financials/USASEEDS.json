@@ -1,0 +1,39 @@
+{
+    "symbol": "USASEEDS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 756440421.0,
+            "earnings": 39644271.0,
+            "ebitda": 55876042.0,
+            "profitMargin": 5.24089801383049,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 829104187.0,
+            "earnings": 47599416.0,
+            "ebitda": 81187858.0,
+            "profitMargin": 5.741065688286049,
+            "revenueYoY": 9.606013108598807,
+            "earningsYoY": 20.066316769956497
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1329484752.0,
+            "earnings": 72519544.0,
+            "ebitda": 134377158.0,
+            "profitMargin": 5.454710472677914,
+            "revenueYoY": 60.35195248628023,
+            "earningsYoY": 52.35385240860938
+        }
+    ]
+}

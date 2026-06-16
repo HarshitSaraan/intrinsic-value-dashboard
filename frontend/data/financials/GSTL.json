@@ -1,0 +1,50 @@
+{
+    "symbol": "GSTL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 263708000.0,
+            "earnings": 9993000.0,
+            "ebitda": 25917000.0,
+            "profitMargin": 3.7894185993598977,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 258297000.0,
+            "earnings": 16573000.0,
+            "ebitda": 33756000.0,
+            "profitMargin": 6.416257254246081,
+            "revenueYoY": -2.0518907276229768,
+            "earningsYoY": 65.84609226458521
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 238854000.0,
+            "earnings": 10113000.0,
+            "ebitda": 34947000.0,
+            "profitMargin": 4.233967193348238,
+            "revenueYoY": -7.52738127039803,
+            "earningsYoY": -38.979062330296266
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 169085000.0,
+            "earnings": -28706000.0,
+            "ebitda": -12933000.0,
+            "profitMargin": -16.977259958009284,
+            "revenueYoY": -29.20989391008733,
+            "earningsYoY": -383.85246712152673
+        }
+    ]
+}

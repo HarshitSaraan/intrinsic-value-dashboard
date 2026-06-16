@@ -1,0 +1,50 @@
+{
+    "symbol": "VIVIANA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 325622000.0,
+            "earnings": 29044000.0,
+            "ebitda": 51362000.0,
+            "profitMargin": 8.919544748204974,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 310517000.0,
+            "earnings": 30088000.0,
+            "ebitda": 50538000.0,
+            "profitMargin": 9.689646621602039,
+            "revenueYoY": -4.6388143307270395,
+            "earningsYoY": 3.594546205756783
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 652156000.0,
+            "earnings": 65461000.0,
+            "ebitda": 111547000.0,
+            "profitMargin": 10.037629033544121,
+            "revenueYoY": 110.0226396622407,
+            "earningsYoY": 117.56514224940176
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2186734000.0,
+            "earnings": 197841000.0,
+            "ebitda": 319805000.0,
+            "profitMargin": 9.047328115811068,
+            "revenueYoY": 235.3084231380222,
+            "earningsYoY": 202.22728036540843
+        }
+    ]
+}

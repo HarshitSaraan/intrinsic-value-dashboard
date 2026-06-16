@@ -1,0 +1,50 @@
+{
+    "symbol": "MICROPRO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 173133000.0,
+            "earnings": 26714000.0,
+            "ebitda": 42199000.0,
+            "profitMargin": 15.429756314509655,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 219364000.0,
+            "earnings": 57316000.0,
+            "ebitda": 92347000.0,
+            "profitMargin": 26.12826170201127,
+            "revenueYoY": 26.702592804375826,
+            "earningsYoY": 114.55416635472038
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 214825000.0,
+            "earnings": 31087000.0,
+            "ebitda": 60538000.0,
+            "profitMargin": 14.470848364948214,
+            "revenueYoY": -2.0691635819915755,
+            "earningsYoY": -45.76209086468002
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 231191000.0,
+            "earnings": -18474000.0,
+            "ebitda": 3874000.0,
+            "profitMargin": -7.990795489443793,
+            "revenueYoY": 7.618293960200163,
+            "earningsYoY": -159.42677003248946
+        }
+    ]
+}

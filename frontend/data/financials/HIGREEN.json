@@ -1,0 +1,50 @@
+{
+    "symbol": "HIGREEN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 778906000.0,
+            "earnings": 123506000.0,
+            "ebitda": 204086000.0,
+            "profitMargin": 15.856342100330464,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 684759000.0,
+            "earnings": 102755000.0,
+            "ebitda": 182059000.0,
+            "profitMargin": 15.00600941353089,
+            "revenueYoY": -12.087081111199554,
+            "earningsYoY": -16.801612877107186
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 967853000.0,
+            "earnings": 111291000.0,
+            "ebitda": 211852000.0,
+            "profitMargin": 11.498750326754166,
+            "revenueYoY": 41.34213643048138,
+            "earningsYoY": 8.30713833876697
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1386816000.0,
+            "earnings": 34317000.0,
+            "ebitda": 199608000.0,
+            "profitMargin": 2.474517167381974,
+            "revenueYoY": 43.287875328174835,
+            "earningsYoY": -69.16462247621101
+        }
+    ]
+}

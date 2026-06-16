@@ -1,0 +1,50 @@
+{
+    "symbol": "KNAGRI",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 22361500000.0,
+            "earnings": 270900000.0,
+            "ebitda": 521100000.0,
+            "profitMargin": 1.211457192048834,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 16996700000.0,
+            "earnings": 310300000.0,
+            "ebitda": 535100000.0,
+            "profitMargin": 1.8256485082398348,
+            "revenueYoY": -23.99123493504461,
+            "earningsYoY": 14.544112218530822
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 17248500000.0,
+            "earnings": 370500000.0,
+            "ebitda": 644400000.0,
+            "profitMargin": 2.1480128706844073,
+            "revenueYoY": 1.4814640489036108,
+            "earningsYoY": 19.40058008378988
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 18140000000.0,
+            "earnings": 316700000.0,
+            "ebitda": 581600000.0,
+            "profitMargin": 1.7458654906284454,
+            "revenueYoY": 5.168565382497029,
+            "earningsYoY": -14.520917678812415
+        }
+    ]
+}

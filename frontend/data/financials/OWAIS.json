@@ -1,0 +1,39 @@
+{
+    "symbol": "OWAIS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 0.0,
+            "earnings": -1272000.0,
+            "ebitda": -1272000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 800473000.0,
+            "earnings": 154661000.0,
+            "ebitda": 225547000.0,
+            "profitMargin": 19.321201339707898,
+            "revenueYoY": null,
+            "earningsYoY": 12258.883647798742
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2134107000.0,
+            "earnings": 470191000.0,
+            "ebitda": 626333000.0,
+            "profitMargin": 22.032213005252313,
+            "revenueYoY": 166.6057443536509,
+            "earningsYoY": 204.01394016591127
+        }
+    ]
+}

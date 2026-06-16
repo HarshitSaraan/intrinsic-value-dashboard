@@ -1,0 +1,62 @@
+{
+    "symbol": "GROWW",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 9745350000.0,
+            "earnings": 7571100000.0,
+            "ebitda": 10442400000.0,
+            "profitMargin": 77.68935954070403,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 8010060000.0,
+            "earnings": 3090890000.0,
+            "ebitda": 4362730000.0,
+            "profitMargin": 38.58760109162728,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 12160720000.0,
+            "earnings": 5469330000.0,
+            "ebitda": 7648230000.0,
+            "profitMargin": 44.97537974725181,
+            "revenueYoY": 24.784846106091624,
+            "earningsYoY": -27.760431113048302
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 15053670000.0,
+            "earnings": 6863540000.0,
+            "ebitda": 9681530000.0,
+            "profitMargin": 45.59379872150778,
+            "revenueYoY": 87.93454730676174,
+            "earningsYoY": 122.0570774113605
+        }
+    ],
+    "annual": [
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 46445790000.0,
+            "earnings": 20830000000.0,
+            "ebitda": 29152260000.0,
+            "profitMargin": 44.84798299264583,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

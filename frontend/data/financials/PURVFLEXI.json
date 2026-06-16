@@ -1,0 +1,50 @@
+{
+    "symbol": "PURVFLEXI",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 2208055000.0,
+            "earnings": 62673000.0,
+            "ebitda": 168501000.0,
+            "profitMargin": 2.8383803845465807,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3314631000.0,
+            "earnings": 93297000.0,
+            "ebitda": 268877000.0,
+            "profitMargin": 2.814702451042062,
+            "revenueYoY": 50.11541832064872,
+            "earningsYoY": 48.86314680963094
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2630801000.0,
+            "earnings": 59938000.0,
+            "ebitda": 343472000.0,
+            "profitMargin": 2.2783175162241465,
+            "revenueYoY": -20.630652401428694,
+            "earningsYoY": -35.75570489940727
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3957404000.0,
+            "earnings": 104033000.0,
+            "ebitda": 422882000.0,
+            "profitMargin": 2.6288192966904567,
+            "revenueYoY": 50.42582088116889,
+            "earningsYoY": 73.56768660949648
+        }
+    ]
+}

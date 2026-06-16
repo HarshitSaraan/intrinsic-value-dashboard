@@ -1,0 +1,50 @@
+{
+    "symbol": "DENEERS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 950512763.0,
+            "earnings": 69359534.0,
+            "ebitda": 119362860.0,
+            "profitMargin": 7.297064984281541,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1097975526.0,
+            "earnings": 86580504.0,
+            "ebitda": 164479453.0,
+            "profitMargin": 7.885467567334466,
+            "revenueYoY": 15.514022403505589,
+            "earningsYoY": 24.828554932332736
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1446989000.0,
+            "earnings": 157730000.0,
+            "ebitda": 264753000.0,
+            "profitMargin": 10.90056662490178,
+            "revenueYoY": 31.78699941258982,
+            "earningsYoY": 82.17727168693774
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1780277000.0,
+            "earnings": 252360000.0,
+            "ebitda": 389684000.0,
+            "profitMargin": 14.175322154923082,
+            "revenueYoY": 23.0332089601234,
+            "earningsYoY": 59.99492804159006
+        }
+    ]
+}

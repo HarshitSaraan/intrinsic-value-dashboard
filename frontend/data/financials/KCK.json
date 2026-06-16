@@ -1,0 +1,39 @@
+{
+    "symbol": "KCK",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 693226000.0,
+            "earnings": 12016000.0,
+            "ebitda": 24867000.0,
+            "profitMargin": 1.733345258256326,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 949237000.0,
+            "earnings": 13144000.0,
+            "ebitda": 40287000.0,
+            "profitMargin": 1.3846910729354207,
+            "revenueYoY": 36.93038056853032,
+            "earningsYoY": 9.387483355525966
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 767026000.0,
+            "earnings": 15962000.0,
+            "ebitda": 53762000.0,
+            "profitMargin": 2.0810246328025386,
+            "revenueYoY": -19.19552229843548,
+            "earningsYoY": 21.43944004869142
+        }
+    ]
+}

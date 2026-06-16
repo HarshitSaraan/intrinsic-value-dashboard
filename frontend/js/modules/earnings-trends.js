@@ -3,7 +3,6 @@
 
   var baseUrl = window.location.protocol === 'file:' ? 'http://127.0.0.1:8080' : '';
   var searchApi = baseUrl + '/search-stocks';
-  var financialsApi = baseUrl + '/stock-financials';
 
   var allStocks = [];
   var filteredStocks = [];
@@ -114,7 +113,7 @@
     // Fetch financials
     if (searchSpinner) searchSpinner.style.display = "block";
     
-    var fetchUrl = financialsApi + "?symbol=" + encodeURIComponent(stock.symbol);
+    var fetchUrl = "/frontend/data/financials/" + encodeURIComponent(stock.symbol.toUpperCase()) + ".json";
     fetch(fetchUrl)
       .then(function (res) {
         if (!res.ok) throw new Error("Failed to load financials");

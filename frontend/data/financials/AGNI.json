@@ -1,0 +1,39 @@
+{
+    "symbol": "AGNI",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 153968000.0,
+            "earnings": 2190000.0,
+            "ebitda": 16699000.0,
+            "profitMargin": 1.4223734802036787,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 220193000.0,
+            "earnings": -14124000.0,
+            "ebitda": 4409000.0,
+            "profitMargin": -6.414372845639961,
+            "revenueYoY": 43.012184349994804,
+            "earningsYoY": -744.9315068493152
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 352671000.0,
+            "earnings": 3846000.0,
+            "ebitda": 24301000.0,
+            "profitMargin": 1.0905348043927625,
+            "revenueYoY": 60.16449205923894,
+            "earningsYoY": 127.2302463891249
+        }
+    ]
+}

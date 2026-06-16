@@ -1,0 +1,39 @@
+{
+    "symbol": "MEP",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 9673714000.0,
+            "earnings": -2205830000.0,
+            "ebitda": 3662454000.0,
+            "profitMargin": -22.802307366126392,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2445570000.0,
+            "earnings": -2161122000.0,
+            "ebitda": 27189000.0,
+            "profitMargin": -88.36884652657663,
+            "revenueYoY": -74.7194304069771,
+            "earningsYoY": 2.026810769642266
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 731652000.0,
+            "earnings": -8552057000.0,
+            "ebitda": -5943709000.0,
+            "profitMargin": -1168.8694898667673,
+            "revenueYoY": -70.08255744059667,
+            "earningsYoY": -295.7230086964086
+        }
+    ]
+}

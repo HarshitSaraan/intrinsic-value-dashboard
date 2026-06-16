@@ -1,0 +1,50 @@
+{
+    "symbol": "MARC",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 194010000.0,
+            "earnings": 26738000.0,
+            "ebitda": 41721000.0,
+            "profitMargin": 13.781763826606877,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 201577000.0,
+            "earnings": 26355000.0,
+            "ebitda": 40898000.0,
+            "profitMargin": 13.074408290628394,
+            "revenueYoY": 3.9003144167826402,
+            "earningsYoY": -1.4324182810980628
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 260383000.0,
+            "earnings": 34522000.0,
+            "ebitda": 54376000.0,
+            "profitMargin": 13.258162015185324,
+            "revenueYoY": 29.17297112269753,
+            "earningsYoY": 30.988427243407322
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 477530000.0,
+            "earnings": 74768000.0,
+            "ebitda": 110031000.0,
+            "profitMargin": 15.657236194584634,
+            "revenueYoY": 83.39522933524847,
+            "earningsYoY": 116.58073112797635
+        }
+    ]
+}

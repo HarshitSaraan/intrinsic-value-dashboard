@@ -1,0 +1,50 @@
+{
+    "symbol": "GLOBALPET",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 344257000.0,
+            "earnings": 19989000.0,
+            "ebitda": 28971000.0,
+            "profitMargin": 5.806417879665482,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 388760000.0,
+            "earnings": 20595000.0,
+            "ebitda": 23946000.0,
+            "profitMargin": 5.297612923140241,
+            "revenueYoY": 12.927260738343737,
+            "earningsYoY": 3.031667417079394
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 449429000.0,
+            "earnings": 42750000.0,
+            "ebitda": 57456000.0,
+            "profitMargin": 9.512069759628329,
+            "revenueYoY": 15.605772198785884,
+            "earningsYoY": 107.57465404224327
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 555745000.0,
+            "earnings": 52986000.0,
+            "ebitda": 74339000.0,
+            "profitMargin": 9.534228827969663,
+            "revenueYoY": 23.655794352389364,
+            "earningsYoY": 23.943859649122807
+        }
+    ]
+}

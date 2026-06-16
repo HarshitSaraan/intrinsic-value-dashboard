@@ -1,0 +1,50 @@
+{
+    "symbol": "KHFM",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 964224000.0,
+            "earnings": -192136000.0,
+            "ebitda": -146221000.0,
+            "profitMargin": -19.926490110181867,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 902349000.0,
+            "earnings": 29269000.0,
+            "ebitda": 95224000.0,
+            "profitMargin": 3.2436451971465585,
+            "revenueYoY": -6.417077359617681,
+            "earningsYoY": 115.23348045134696
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1120948000.0,
+            "earnings": 31524000.0,
+            "ebitda": 105759000.0,
+            "profitMargin": 2.8122624778312644,
+            "revenueYoY": 24.225549094640765,
+            "earningsYoY": 7.704397143735693
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1042996000.0,
+            "earnings": 34402000.0,
+            "ebitda": 116102000.0,
+            "profitMargin": 3.298382735887769,
+            "revenueYoY": -6.954113839357401,
+            "earningsYoY": 9.129552087298567
+        }
+    ]
+}

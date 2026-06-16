@@ -1,0 +1,39 @@
+{
+    "symbol": "DIL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 973668000.0,
+            "earnings": 67261000.0,
+            "ebitda": 106555000.0,
+            "profitMargin": 6.908001495376246,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1462779000.0,
+            "earnings": 128659000.0,
+            "ebitda": 186253000.0,
+            "profitMargin": 8.795518666866286,
+            "revenueYoY": 50.233857947472856,
+            "earningsYoY": 91.2832101812343
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 980784000.0,
+            "earnings": 80696000.0,
+            "ebitda": 135630000.0,
+            "profitMargin": 8.227703551444558,
+            "revenueYoY": -32.950637109228396,
+            "earningsYoY": -37.27916430253616
+        }
+    ]
+}

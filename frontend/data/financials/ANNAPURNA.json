@@ -1,0 +1,39 @@
+{
+    "symbol": "ANNAPURNA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1601749000.0,
+            "earnings": 71535000.0,
+            "ebitda": 134717000.0,
+            "profitMargin": 4.46605554303452,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2649728000.0,
+            "earnings": 131323000.0,
+            "ebitda": 272626000.0,
+            "profitMargin": 4.956093606589054,
+            "revenueYoY": 65.42716742760571,
+            "earningsYoY": 83.57866778500035
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4079706000.0,
+            "earnings": 215130000.0,
+            "ebitda": 479320000.0,
+            "profitMargin": 5.273174096368709,
+            "revenueYoY": 53.96697321385441,
+            "earningsYoY": 63.817457718754525
+        }
+    ]
+}

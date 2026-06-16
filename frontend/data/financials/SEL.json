@@ -1,0 +1,50 @@
+{
+    "symbol": "SEL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 79378000.0,
+            "earnings": 5750000.0,
+            "ebitda": 9654000.0,
+            "profitMargin": 7.243820705989065,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 173180000.0,
+            "earnings": 7431000.0,
+            "ebitda": 15542000.0,
+            "profitMargin": 4.290911190668669,
+            "revenueYoY": 118.17128171533675,
+            "earningsYoY": 29.234782608695653
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 176892000.0,
+            "earnings": 10724000.0,
+            "ebitda": 20939000.0,
+            "profitMargin": 6.062456187956493,
+            "revenueYoY": 2.1434345767409635,
+            "earningsYoY": 44.31435876732607
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 334907000.0,
+            "earnings": 16562000.0,
+            "ebitda": 35449000.0,
+            "profitMargin": 4.945253458422786,
+            "revenueYoY": 89.32851683513104,
+            "earningsYoY": 54.438642297650134
+        }
+    ]
+}

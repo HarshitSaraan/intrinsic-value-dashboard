@@ -1,0 +1,84 @@
+{
+    "symbol": "RHFL",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 233000.0,
+            "earnings": 272166000.0,
+            "ebitda": -6718000.0,
+            "profitMargin": 116809.44206008583,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 203000.0,
+            "earnings": -19176000.0,
+            "ebitda": -23258000.0,
+            "profitMargin": -9446.305418719212,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 19000.0,
+            "earnings": -6882000.0,
+            "ebitda": -6881000.0,
+            "profitMargin": -36221.05263157895,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1966800000.0,
+            "earnings": -54396000000.0,
+            "ebitda": -76918300000.0,
+            "profitMargin": -2765.710799267846,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3819700000.0,
+            "earnings": 54185800000.0,
+            "ebitda": 2322606000.0,
+            "profitMargin": 1418.587847213132,
+            "revenueYoY": 94.20886719544438,
+            "earningsYoY": 199.6135745275388
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 6181000.0,
+            "earnings": -35488000.0,
+            "ebitda": -38088000.0,
+            "profitMargin": -574.1465782235883,
+            "revenueYoY": -99.83818100897976,
+            "earningsYoY": -100.06549317348825
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2226000.0,
+            "earnings": 241734000.0,
+            "ebitda": -41230000.0,
+            "profitMargin": 10859.568733153637,
+            "revenueYoY": -63.986409966024915,
+            "earningsYoY": 781.1711000901713
+        }
+    ]
+}

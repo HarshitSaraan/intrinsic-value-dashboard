@@ -1,0 +1,39 @@
+{
+    "symbol": "MAKS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 255376000.0,
+            "earnings": -36234000.0,
+            "ebitda": -12975000.0,
+            "profitMargin": -14.188490696071673,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 443296000.0,
+            "earnings": 3560000.0,
+            "ebitda": 21152000.0,
+            "profitMargin": 0.8030751461777232,
+            "revenueYoY": 73.5856149364075,
+            "earningsYoY": 109.82502621846884
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 662597000.0,
+            "earnings": 2818000.0,
+            "ebitda": 19729000.0,
+            "profitMargin": 0.42529622077974993,
+            "revenueYoY": 49.4705569190789,
+            "earningsYoY": -20.842696629213485
+        }
+    ]
+}

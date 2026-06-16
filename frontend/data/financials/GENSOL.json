@@ -1,0 +1,62 @@
+{
+    "symbol": "GENSOL",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3464900000.0,
+            "earnings": 293800000.0,
+            "ebitda": 1191200000.0,
+            "profitMargin": 8.479321192530808,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3445100000.0,
+            "earnings": 169100000.0,
+            "ebitda": 703100000.0,
+            "profitMargin": 4.908420655423646,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1556700000.0,
+            "earnings": 110900000.0,
+            "ebitda": 174800000.0,
+            "profitMargin": 7.124044453009572,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3569700000.0,
+            "earnings": 233600000.0,
+            "ebitda": 808100000.0,
+            "profitMargin": 6.5439672801636,
+            "revenueYoY": 129.31200616689148,
+            "earningsYoY": 110.64021641118124
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 8341900000.0,
+            "earnings": 595500000.0,
+            "ebitda": 2572300000.0,
+            "profitMargin": 7.1386614560232085,
+            "revenueYoY": 133.68630417121886,
+            "earningsYoY": 154.92294520547944
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "RAJMET",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 10282500000.0,
+            "earnings": 100200000.0,
+            "ebitda": 192600000.0,
+            "profitMargin": 0.9744711889132021,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 10288800000.0,
+            "earnings": 136800000.0,
+            "ebitda": 295900000.0,
+            "profitMargin": 1.3296011196641007,
+            "revenueYoY": 0.061269146608315096,
+            "earningsYoY": 36.52694610778443
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 12124300000.0,
+            "earnings": 152400000.0,
+            "ebitda": 299700000.0,
+            "profitMargin": 1.2569797843999242,
+            "revenueYoY": 17.839786952803045,
+            "earningsYoY": 11.403508771929824
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 10335800000.0,
+            "earnings": -21700000.0,
+            "ebitda": 116500000.0,
+            "profitMargin": -0.20994988293117126,
+            "revenueYoY": -14.75136708923402,
+            "earningsYoY": -114.23884514435696
+        }
+    ]
+}

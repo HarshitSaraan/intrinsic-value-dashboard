@@ -1,0 +1,39 @@
+{
+    "symbol": "AKIKO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 135192000.0,
+            "earnings": 7785000.0,
+            "ebitda": 11487000.0,
+            "profitMargin": 5.758476832948696,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 395811000.0,
+            "earnings": 45326000.0,
+            "ebitda": 62935000.0,
+            "profitMargin": 11.451425048823808,
+            "revenueYoY": 192.7769394638736,
+            "earningsYoY": 482.2222222222222
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 763022000.0,
+            "earnings": 73852000.0,
+            "ebitda": 116160000.0,
+            "profitMargin": 9.678882129217769,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "symbol": "PRLIND",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1386212000.0,
+            "earnings": 38860000.0,
+            "ebitda": 76270000.0,
+            "profitMargin": 2.803323012641645,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1919265000.0,
+            "earnings": 71850000.0,
+            "ebitda": 129339000.0,
+            "profitMargin": 3.743620604762761,
+            "revenueYoY": 38.453930567618805,
+            "earningsYoY": 84.89449305198147
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2888948000.0,
+            "earnings": 157394000.0,
+            "ebitda": 248957000.0,
+            "profitMargin": 5.448142368779223,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

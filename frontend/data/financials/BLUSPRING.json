@@ -1,0 +1,73 @@
+{
+    "symbol": "BLUSPRING",
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7972300000.0,
+            "earnings": -47710000.0,
+            "ebitda": 112700000.0,
+            "profitMargin": -0.5984471231639552,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8574760000.0,
+            "earnings": 52330000.0,
+            "ebitda": 226450000.0,
+            "profitMargin": 0.6102794713787908,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8625300000.0,
+            "earnings": -199270000.0,
+            "ebitda": -37710000.0,
+            "profitMargin": -2.3102964534566914,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8647980000.0,
+            "earnings": 41230000.0,
+            "ebitda": 262330000.0,
+            "profitMargin": 0.47675873440965405,
+            "revenueYoY": 7.896634585392998,
+            "earningsYoY": 120.88546679499518
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 34835720000.0,
+            "earnings": -1720320000.0,
+            "ebitda": -813720000.0,
+            "profitMargin": -4.938379341664246,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 33820340000.0,
+            "earnings": -153420000.0,
+            "ebitda": 563770000.0,
+            "profitMargin": -0.45363234077481185,
+            "revenueYoY": -2.9147667968395656,
+            "earningsYoY": 91.08189174107143
+        }
+    ]
+}

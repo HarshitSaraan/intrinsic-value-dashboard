@@ -1,0 +1,50 @@
+{
+    "symbol": "DYNAMIC",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 818750000.0,
+            "earnings": 101929000.0,
+            "ebitda": 161951000.0,
+            "profitMargin": 12.449343511450381,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1193459000.0,
+            "earnings": 88688000.0,
+            "ebitda": 167205000.0,
+            "profitMargin": 7.431172750802499,
+            "revenueYoY": 45.76598473282443,
+            "earningsYoY": -12.990414896643742
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2747375000.0,
+            "earnings": 169664000.0,
+            "ebitda": 385750000.0,
+            "profitMargin": 6.175494790481824,
+            "revenueYoY": 130.20271328968988,
+            "earningsYoY": 91.30434782608695
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4909248000.0,
+            "earnings": 431702000.0,
+            "ebitda": 805937000.0,
+            "profitMargin": 8.793648232886177,
+            "revenueYoY": 78.68867555393784,
+            "earningsYoY": 154.4452565069785
+        }
+    ]
+}

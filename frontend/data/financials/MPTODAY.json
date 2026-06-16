@@ -1,0 +1,50 @@
+{
+    "symbol": "MPTODAY",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 200374000.0,
+            "earnings": 30079000.0,
+            "ebitda": 57609000.0,
+            "profitMargin": 15.01142862846477,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 218137000.0,
+            "earnings": 24388000.0,
+            "ebitda": 49467000.0,
+            "profitMargin": 11.180129918354062,
+            "revenueYoY": 8.864922594747823,
+            "earningsYoY": -18.920176867582033
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 215570000.0,
+            "earnings": 25263000.0,
+            "ebitda": 49939000.0,
+            "profitMargin": 11.719163148861158,
+            "revenueYoY": -1.176783397589588,
+            "earningsYoY": 3.5878300803673935
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 216956000.0,
+            "earnings": 31885000.0,
+            "ebitda": 50352000.0,
+            "profitMargin": 14.696528328324638,
+            "revenueYoY": 0.642946606670687,
+            "earningsYoY": 26.212247159878082
+        }
+    ]
+}

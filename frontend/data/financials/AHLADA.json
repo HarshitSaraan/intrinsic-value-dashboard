@@ -1,0 +1,73 @@
+{
+    "symbol": "AHLADA",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 261178000.0,
+            "earnings": 5160000.0,
+            "ebitda": 47228000.0,
+            "profitMargin": 1.9756641064714486,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 236575000.0,
+            "earnings": 4405000.0,
+            "ebitda": 38845000.0,
+            "profitMargin": 1.8619887984782837,
+            "revenueYoY": -9.420012405332761,
+            "earningsYoY": -14.631782945736434
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1312625000.0,
+            "earnings": 51826000.0,
+            "ebitda": 264783000.0,
+            "profitMargin": 3.9482715931816017,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1630271000.0,
+            "earnings": 50941000.0,
+            "ebitda": 251144000.0,
+            "profitMargin": 3.124695219383771,
+            "revenueYoY": 24.199295305209027,
+            "earningsYoY": -1.7076370933508278
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2595169000.0,
+            "earnings": 136487000.0,
+            "ebitda": 364266000.0,
+            "profitMargin": 5.259272132180987,
+            "revenueYoY": 59.18635613342812,
+            "earningsYoY": 167.93152863116154
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1319951000.0,
+            "earnings": 37056000.0,
+            "ebitda": 208834000.0,
+            "profitMargin": 2.8073769405076403,
+            "revenueYoY": -49.13814861382823,
+            "earningsYoY": -72.85016155384761
+        }
+    ]
+}

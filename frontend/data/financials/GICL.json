@@ -1,0 +1,73 @@
+{
+    "symbol": "GICL",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 383105000.0,
+            "earnings": 15323000.0,
+            "ebitda": 26129000.0,
+            "profitMargin": 3.9996867699455763,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 375693000.0,
+            "earnings": 17157000.0,
+            "ebitda": 34603000.0,
+            "profitMargin": 4.566760626362482,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 473090000.0,
+            "earnings": 69187000.0,
+            "ebitda": 102819000.0,
+            "profitMargin": 14.624490054746452,
+            "revenueYoY": 23.488338706098848,
+            "earningsYoY": 351.52385303139073
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1077343000.0,
+            "earnings": 14377000.0,
+            "ebitda": 39914000.0,
+            "profitMargin": 1.334486788330179,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1136834000.0,
+            "earnings": 19245000.0,
+            "ebitda": 50859000.0,
+            "profitMargin": 1.692859291681987,
+            "revenueYoY": 5.522011095816282,
+            "earningsYoY": 33.85963692008068
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1144966000.0,
+            "earnings": 25558000.0,
+            "ebitda": 56216000.0,
+            "profitMargin": 2.232206021838203,
+            "revenueYoY": 0.7153199147808739,
+            "earningsYoY": 32.80332553910107
+        }
+    ]
+}

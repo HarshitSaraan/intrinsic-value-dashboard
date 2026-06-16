@@ -1,0 +1,50 @@
+{
+    "symbol": "SPECTSTM",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 7567510000.0,
+            "earnings": 278150000.0,
+            "ebitda": 243240000.0,
+            "profitMargin": 3.675581532102369,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 10022560000.0,
+            "earnings": 115900000.0,
+            "ebitda": 118400000.0,
+            "profitMargin": 1.1563911814945482,
+            "revenueYoY": 32.44197893362546,
+            "earningsYoY": -58.331835340643536
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 12701350000.0,
+            "earnings": 72380000.0,
+            "ebitda": 114680000.0,
+            "profitMargin": 0.569860684100509,
+            "revenueYoY": 26.727602528695265,
+            "earningsYoY": -37.549611734253666
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 14504190000.0,
+            "earnings": 122580000.0,
+            "ebitda": 178860000.0,
+            "profitMargin": 0.8451350954448335,
+            "revenueYoY": 14.19408173146949,
+            "earningsYoY": 69.35617573915445
+        }
+    ]
+}

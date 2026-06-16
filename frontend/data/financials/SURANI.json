@@ -1,0 +1,50 @@
+{
+    "symbol": "SURANI",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1209259000.0,
+            "earnings": -17933000.0,
+            "ebitda": 4602000.0,
+            "profitMargin": -1.4829742842517608,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1526354000.0,
+            "earnings": 5011000.0,
+            "ebitda": 11362000.0,
+            "profitMargin": 0.32829867776413596,
+            "revenueYoY": 26.222256770468526,
+            "earningsYoY": 127.94289856688785
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2250038000.0,
+            "earnings": 4856000.0,
+            "ebitda": 9806000.0,
+            "profitMargin": 0.21581857728625026,
+            "revenueYoY": 47.41259236061883,
+            "earningsYoY": -3.0931949710636597
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 922759000.0,
+            "earnings": 20464000.0,
+            "ebitda": 39278000.0,
+            "profitMargin": 2.2176971451917566,
+            "revenueYoY": -58.989181516045505,
+            "earningsYoY": 321.41680395387147
+        }
+    ]
+}

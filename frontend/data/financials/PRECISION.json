@@ -1,0 +1,50 @@
+{
+    "symbol": "PRECISION",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1255967000.0,
+            "earnings": 34598000.0,
+            "ebitda": 43760000.0,
+            "profitMargin": 2.754690210809679,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1886288000.0,
+            "earnings": 71043000.0,
+            "ebitda": 78878000.0,
+            "profitMargin": 3.7662859542127185,
+            "revenueYoY": 50.186111577772344,
+            "earningsYoY": 105.33845887045494
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1957875000.0,
+            "earnings": 67839000.0,
+            "ebitda": 81666000.0,
+            "profitMargin": 3.4649300900210687,
+            "revenueYoY": 3.7951256647977405,
+            "earningsYoY": -4.509944681390144
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1271292000.0,
+            "earnings": 7941000.0,
+            "ebitda": 45475000.0,
+            "profitMargin": 0.6246401298836145,
+            "revenueYoY": -35.067764796016085,
+            "earningsYoY": -88.29434396143812
+        }
+    ]
+}

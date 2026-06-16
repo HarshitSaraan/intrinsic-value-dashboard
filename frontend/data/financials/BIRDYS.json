@@ -1,0 +1,50 @@
+{
+    "symbol": "BIRDYS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 115049000.0,
+            "earnings": 346000.0,
+            "ebitda": 2632000.0,
+            "profitMargin": 0.3007414232196716,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 152935000.0,
+            "earnings": 19910000.0,
+            "ebitda": 28753000.0,
+            "profitMargin": 13.018602674338773,
+            "revenueYoY": 32.930316647689246,
+            "earningsYoY": 5654.335260115607
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 120325000.0,
+            "earnings": -2375000.0,
+            "ebitda": 6822000.0,
+            "profitMargin": -1.9738209017244963,
+            "revenueYoY": -21.322784189361492,
+            "earningsYoY": -111.92867905575088
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 102555000.0,
+            "earnings": -47495000.0,
+            "ebitda": -52004000.0,
+            "profitMargin": -46.31173516649603,
+            "revenueYoY": -14.768335757323914,
+            "earningsYoY": -1899.7894736842106
+        }
+    ]
+}

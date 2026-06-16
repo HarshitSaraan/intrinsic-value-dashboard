@@ -1,0 +1,39 @@
+{
+    "symbol": "ONDOOR",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1731409000.0,
+            "earnings": -53698000.0,
+            "ebitda": 15810000.0,
+            "profitMargin": -3.1014046940959648,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1801452000.0,
+            "earnings": 128077000.0,
+            "ebitda": 168289000.0,
+            "profitMargin": 7.109653768182556,
+            "revenueYoY": 4.045433516864011,
+            "earningsYoY": 338.5135386792804
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2335154000.0,
+            "earnings": 60579000.0,
+            "ebitda": 94378000.0,
+            "profitMargin": 2.5942186254097157,
+            "revenueYoY": 29.626212632920556,
+            "earningsYoY": -52.70110948882313
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "GREENCHEF",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3277600000.0,
+            "earnings": 104800000.0,
+            "ebitda": 228800000.0,
+            "profitMargin": 3.1974615572370024,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3306479290.0,
+            "earnings": 48334906.0,
+            "ebitda": 129584400.0,
+            "profitMargin": 1.461823945069984,
+            "revenueYoY": 0.8811108738101049,
+            "earningsYoY": -53.87890648854962
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3725600000.0,
+            "earnings": 59500000.0,
+            "ebitda": 160100000.0,
+            "profitMargin": 1.5970581919690787,
+            "revenueYoY": 12.675739759434574,
+            "earningsYoY": 23.09944287467943
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3870400000.0,
+            "earnings": -87400000.0,
+            "ebitda": 7800000.0,
+            "profitMargin": -2.2581645307978504,
+            "revenueYoY": 3.886622289027271,
+            "earningsYoY": -246.89075630252103
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "NIDAN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 296601000.0,
+            "earnings": 26629000.0,
+            "ebitda": 95865000.0,
+            "profitMargin": 8.978054693005081,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 242659000.0,
+            "earnings": 35396000.0,
+            "ebitda": 100046000.0,
+            "profitMargin": 14.586724580584276,
+            "revenueYoY": -18.18672222952721,
+            "earningsYoY": 32.92275338916219
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 241774000.0,
+            "earnings": -32324000.0,
+            "ebitda": 25828000.0,
+            "profitMargin": -13.369510369187754,
+            "revenueYoY": -0.36470932460778294,
+            "earningsYoY": -191.32105322635326
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 245275000.0,
+            "earnings": 19769000.0,
+            "ebitda": 72350000.0,
+            "profitMargin": 8.059932728569972,
+            "revenueYoY": 1.448046522785742,
+            "earningsYoY": 161.15889122633337
+        }
+    ]
+}

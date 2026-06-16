@@ -1,0 +1,95 @@
+{
+    "symbol": "NELCO",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 675200000.0,
+            "earnings": -40800000.0,
+            "ebitda": 90800000.0,
+            "profitMargin": -6.042654028436019,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 747900000.0,
+            "earnings": 18000000.0,
+            "ebitda": 85000000.0,
+            "profitMargin": 2.406738868832732,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 783000000.0,
+            "earnings": -11900000.0,
+            "ebitda": 47300000.0,
+            "profitMargin": -1.5197956577266922,
+            "revenueYoY": -2.9980178394449952,
+            "earningsYoY": -124.04040404040404
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 791800000.0,
+            "earnings": 10900000.0,
+            "ebitda": 74000000.0,
+            "profitMargin": 1.376610255114928,
+            "revenueYoY": 17.268957345971565,
+            "earningsYoY": 126.71568627450979
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3129000000.0,
+            "earnings": 198500000.0,
+            "ebitda": 633300000.0,
+            "profitMargin": 6.34387983381272,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3202100000.0,
+            "earnings": 236700000.0,
+            "ebitda": 622200000.0,
+            "profitMargin": 7.392023984260329,
+            "revenueYoY": 2.3362096516458934,
+            "earningsYoY": 19.24433249370277
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3048000000.0,
+            "earnings": 95300000.0,
+            "ebitda": 473400000.0,
+            "profitMargin": 3.1266404199475066,
+            "revenueYoY": -4.812466818650261,
+            "earningsYoY": -59.73806506125898
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3066000000.0,
+            "earnings": 33200000.0,
+            "ebitda": 294100000.0,
+            "profitMargin": 1.0828440965427268,
+            "revenueYoY": 0.5905511811023622,
+            "earningsYoY": -65.16264428121721
+        }
+    ]
+}

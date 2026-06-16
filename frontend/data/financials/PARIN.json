@@ -1,0 +1,50 @@
+{
+    "symbol": "PARIN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 811921000.0,
+            "earnings": 30756000.0,
+            "ebitda": 92816000.0,
+            "profitMargin": 3.788053271192641,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 819295000.0,
+            "earnings": 22688000.0,
+            "ebitda": 83057000.0,
+            "profitMargin": 2.769210113573255,
+            "revenueYoY": 0.9082164397767764,
+            "earningsYoY": -26.232279880348553
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1676554000.0,
+            "earnings": 62901000.0,
+            "ebitda": 185782000.0,
+            "profitMargin": 3.7518028050393846,
+            "revenueYoY": 104.63373998376653,
+            "earningsYoY": 177.24347672778563
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2476571000.0,
+            "earnings": 62915000.0,
+            "ebitda": 221927000.0,
+            "profitMargin": 2.5404076846575365,
+            "revenueYoY": 47.717938103991884,
+            "earningsYoY": 0.022257197818794615
+        }
+    ]
+}

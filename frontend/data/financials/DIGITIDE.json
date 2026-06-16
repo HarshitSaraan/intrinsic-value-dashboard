@@ -1,0 +1,73 @@
+{
+    "symbol": "DIGITIDE",
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7357370000.0,
+            "earnings": 57320000.0,
+            "ebitda": 772870000.0,
+            "profitMargin": 0.779082742882307,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7641890000.0,
+            "earnings": -17810000.0,
+            "ebitda": 754180000.0,
+            "profitMargin": -0.23305752896207615,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7803030000.0,
+            "earnings": -76050000.0,
+            "ebitda": 650800000.0,
+            "profitMargin": -0.9746213970726756,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7999520000.0,
+            "earnings": -126960000.0,
+            "ebitda": 769790000.0,
+            "profitMargin": -1.587095225713543,
+            "revenueYoY": 9.205184281154697,
+            "earningsYoY": -36.648369389732
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 32687270000.0,
+            "earnings": 1155770000.0,
+            "ebitda": 4641530000.0,
+            "profitMargin": 3.535841322937033,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 30801810000.0,
+            "earnings": -163500000.0,
+            "ebitda": 2947640000.0,
+            "profitMargin": -0.5308129619655468,
+            "revenueYoY": -5.768178254103202,
+            "earningsYoY": -114.14641321370169
+        }
+    ]
+}

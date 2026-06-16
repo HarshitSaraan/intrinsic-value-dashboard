@@ -1,0 +1,39 @@
+{
+    "symbol": "POWERICA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 23606800000.0,
+            "earnings": 1064500000.0,
+            "ebitda": 3512800000.0,
+            "profitMargin": 4.509293932256807,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 21993900000.0,
+            "earnings": 2262800000.0,
+            "ebitda": 4841700000.0,
+            "profitMargin": 10.288307212454361,
+            "revenueYoY": -6.832353389701272,
+            "earningsYoY": 112.56928135274778
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 26425700000.0,
+            "earnings": 1668200000.0,
+            "ebitda": 3898600000.0,
+            "profitMargin": 6.312793984643737,
+            "revenueYoY": 20.150132536748828,
+            "earningsYoY": -26.277178716634257
+        }
+    ]
+}

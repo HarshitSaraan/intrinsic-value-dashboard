@@ -1,0 +1,39 @@
+{
+    "symbol": "ANTGRAPHIC",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 10320000.0,
+            "earnings": 151000.0,
+            "ebitda": 1287000.0,
+            "profitMargin": 1.4631782945736436,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 6769000.0,
+            "earnings": -50000.0,
+            "ebitda": 1129000.0,
+            "profitMargin": -0.7386615452799528,
+            "revenueYoY": -34.40891472868217,
+            "earningsYoY": -133.11258278145695
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 8393000.0,
+            "earnings": -4297000.0,
+            "ebitda": -3042000.0,
+            "profitMargin": -51.19742642678422,
+            "revenueYoY": 23.991726990692865,
+            "earningsYoY": -8494.0
+        }
+    ]
+}

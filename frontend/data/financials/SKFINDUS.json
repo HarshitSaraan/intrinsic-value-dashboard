@@ -1,0 +1,62 @@
+{
+    "symbol": "SKFINDUS",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7206100000.0,
+            "earnings": 1213100000.0,
+            "ebitda": 1738100000.0,
+            "profitMargin": 16.834348676815473,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8609500000.0,
+            "earnings": -500900000.0,
+            "ebitda": -592800000.0,
+            "profitMargin": -5.817991753295778,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 9457200000.0,
+            "earnings": 1189700000.0,
+            "ebitda": 985600000.0,
+            "profitMargin": 12.579833354481243,
+            "revenueYoY": 31.238811562426278,
+            "earningsYoY": -1.9289423790289342
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7206100000.0,
+            "earnings": 1213100000.0,
+            "ebitda": 1738100000.0,
+            "profitMargin": 16.834348676815473,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 34403600000.0,
+            "earnings": 2176700000.0,
+            "ebitda": 2528600000.0,
+            "profitMargin": 6.326954155960422,
+            "revenueYoY": 377.4232941535643,
+            "earningsYoY": 79.4328579671915
+        }
+    ]
+}

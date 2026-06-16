@@ -1,0 +1,39 @@
+{
+    "symbol": "WALPAR",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 267574000.0,
+            "earnings": 3807000.0,
+            "ebitda": 10402000.0,
+            "profitMargin": 1.4227839775165,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 351423000.0,
+            "earnings": 5901000.0,
+            "ebitda": 37779000.0,
+            "profitMargin": 1.679172962498186,
+            "revenueYoY": 31.336751702332812,
+            "earningsYoY": 55.00394011032309
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 625217000.0,
+            "earnings": 15821000.0,
+            "ebitda": 49367000.0,
+            "profitMargin": 2.530481416852069,
+            "revenueYoY": 77.91009694869146,
+            "earningsYoY": 168.10710049144214
+        }
+    ]
+}

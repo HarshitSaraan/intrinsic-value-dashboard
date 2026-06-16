@@ -1,0 +1,62 @@
+{
+    "symbol": "LGEINDIA",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 43955310000.0,
+            "earnings": 2334530000.0,
+            "ebitda": 4189800000.0,
+            "profitMargin": 5.311144432834167,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 74484210000.0,
+            "earnings": 7545480000.0,
+            "ebitda": 11153080000.0,
+            "profitMargin": 10.130308155245253,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 41143940000.0,
+            "earnings": 896730000.0,
+            "ebitda": 2717380000.0,
+            "profitMargin": 2.179494720243127,
+            "revenueYoY": -6.395973546768296,
+            "earningsYoY": -61.588413941992606
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 80535520000.0,
+            "earnings": 6927310000.0,
+            "ebitda": 10464230000.0,
+            "profitMargin": 8.601558666287868,
+            "revenueYoY": 8.124285670748204,
+            "earningsYoY": -8.19258682018904
+        }
+    ],
+    "annual": [
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 246049120000.0,
+            "earnings": 16850930000.0,
+            "ebitda": 27362020000.0,
+            "profitMargin": 6.848604051093537,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ]
+}

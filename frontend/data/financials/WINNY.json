@@ -1,0 +1,50 @@
+{
+    "symbol": "WINNY",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 97434000.0,
+            "earnings": 12763000.0,
+            "ebitda": 19672000.0,
+            "profitMargin": 13.099123509247285,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 115162000.0,
+            "earnings": 14471000.0,
+            "ebitda": 24576000.0,
+            "profitMargin": 12.565776905576492,
+            "revenueYoY": 18.19488063714925,
+            "earningsYoY": 13.382433597116666
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 101393000.0,
+            "earnings": 3927000.0,
+            "ebitda": 9845000.0,
+            "profitMargin": 3.8730484352963224,
+            "revenueYoY": -11.95620083013494,
+            "earningsYoY": -72.86296731393821
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 80436000.0,
+            "earnings": -46313000.0,
+            "ebitda": -58518000.0,
+            "profitMargin": -57.57745288179422,
+            "revenueYoY": -20.669079719507263,
+            "earningsYoY": -1279.3481028775145
+        }
+    ]
+}

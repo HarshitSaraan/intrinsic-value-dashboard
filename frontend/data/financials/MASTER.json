@@ -1,0 +1,50 @@
+{
+    "symbol": "MASTER",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 181119000.0,
+            "earnings": 9373000.0,
+            "ebitda": 23156000.0,
+            "profitMargin": 5.175050657302657,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 207026000.0,
+            "earnings": 17103000.0,
+            "ebitda": 33454000.0,
+            "profitMargin": 8.261281191734371,
+            "revenueYoY": 14.303855476233856,
+            "earningsYoY": 82.47092713112131
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 252904000.0,
+            "earnings": 26756000.0,
+            "ebitda": 45546000.0,
+            "profitMargin": 10.579508430076235,
+            "revenueYoY": 22.160501579511752,
+            "earningsYoY": 56.44039057475296
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 424031000.0,
+            "earnings": 64930000.0,
+            "ebitda": 100388000.0,
+            "profitMargin": 15.312559694927966,
+            "revenueYoY": 67.66480561794198,
+            "earningsYoY": 142.6745402900284
+        }
+    ]
+}

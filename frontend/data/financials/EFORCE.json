@@ -1,0 +1,50 @@
+{
+    "symbol": "EFORCE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 343965000.0,
+            "earnings": 86426000.0,
+            "ebitda": 114315000.0,
+            "profitMargin": 25.12639367377495,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 302504000.0,
+            "earnings": 77176000.0,
+            "ebitda": 117368000.0,
+            "profitMargin": 25.51238991881099,
+            "revenueYoY": -12.053842687482739,
+            "earningsYoY": -10.702797769189827
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 364368000.0,
+            "earnings": 57525000.0,
+            "ebitda": 90009000.0,
+            "profitMargin": 15.787610328020024,
+            "revenueYoY": 20.450638669240735,
+            "earningsYoY": -25.462579040116097
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 523906000.0,
+            "earnings": 12803000.0,
+            "ebitda": 24731000.0,
+            "profitMargin": 2.443758994934206,
+            "revenueYoY": 43.78485487199754,
+            "earningsYoY": -77.74358974358975
+        }
+    ]
+}

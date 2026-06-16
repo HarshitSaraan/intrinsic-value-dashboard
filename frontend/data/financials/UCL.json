@@ -1,0 +1,50 @@
+{
+    "symbol": "UCL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 475123000.0,
+            "earnings": 11639000.0,
+            "ebitda": 39432000.0,
+            "profitMargin": 2.4496814509085016,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 437079000.0,
+            "earnings": 9813000.0,
+            "ebitda": 31107000.0,
+            "profitMargin": 2.2451318869128922,
+            "revenueYoY": -8.007189717189023,
+            "earningsYoY": -15.68863304407595
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 504088000.0,
+            "earnings": -25961000.0,
+            "ebitda": 30060000.0,
+            "profitMargin": -5.150092840932535,
+            "revenueYoY": 15.331095751568938,
+            "earningsYoY": -364.55722001426676
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 776108000.0,
+            "earnings": -26400000.0,
+            "ebitda": 27301000.0,
+            "profitMargin": -3.4015884387224458,
+            "revenueYoY": 53.96280014600625,
+            "earningsYoY": -1.6909980355148106
+        }
+    ]
+}

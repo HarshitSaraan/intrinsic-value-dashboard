@@ -1,0 +1,73 @@
+{
+    "symbol": "ELLEN",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 824690000.0,
+            "earnings": 182470000.0,
+            "ebitda": 359890000.0,
+            "profitMargin": 22.125889728261527,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 891730000.0,
+            "earnings": 367170000.0,
+            "ebitda": 460910000.0,
+            "profitMargin": 41.17501934442039,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 813460000.0,
+            "earnings": 260870000.0,
+            "ebitda": 409270000.0,
+            "profitMargin": 32.069185946450965,
+            "revenueYoY": 19.59305488172422,
+            "earningsYoY": 35.862715483568564
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 874330000.0,
+            "earnings": 228840000.0,
+            "ebitda": 417230000.0,
+            "profitMargin": 26.17318403806343,
+            "revenueYoY": 6.019231468794335,
+            "earningsYoY": 25.412396558338358
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3124830000.0,
+            "earnings": 832890000.0,
+            "ebitda": 1456850000.0,
+            "profitMargin": 26.653929973790575,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3415820000.0,
+            "earnings": 1044000000.0,
+            "ebitda": 1662660000.0,
+            "profitMargin": 30.563671387836592,
+            "revenueYoY": 9.312186582950112,
+            "earningsYoY": 25.346684436120015
+        }
+    ]
+}

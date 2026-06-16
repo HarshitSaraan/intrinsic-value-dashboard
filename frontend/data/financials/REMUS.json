@@ -1,0 +1,73 @@
+{
+    "symbol": "REMUS",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3477500000.0,
+            "earnings": 160100000.0,
+            "ebitda": 271500000.0,
+            "profitMargin": 4.603882099209202,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4534300000.0,
+            "earnings": 194900000.0,
+            "ebitda": 335500000.0,
+            "profitMargin": 4.298348146351145,
+            "revenueYoY": 30.389647735442125,
+            "earningsYoY": 21.73641474078701
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 247171000.0,
+            "earnings": 33857000.0,
+            "ebitda": 47810000.0,
+            "profitMargin": 13.697804354070664,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2103100000.0,
+            "earnings": 205200000.0,
+            "ebitda": 317900000.0,
+            "profitMargin": 9.757025343540487,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 6203600000.0,
+            "earnings": 290700000.0,
+            "ebitda": 506700000.0,
+            "profitMargin": 4.685988780707976,
+            "revenueYoY": 194.97408587323474,
+            "earningsYoY": 41.66666666666667
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8536300000.0,
+            "earnings": 369900000.0,
+            "ebitda": 633900000.0,
+            "profitMargin": 4.3332591403769785,
+            "revenueYoY": 37.602359920046425,
+            "earningsYoY": 27.24458204334365
+        }
+    ]
+}

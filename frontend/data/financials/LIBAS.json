@@ -1,0 +1,51 @@
+{
+    "symbol": "LIBAS",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 203306000.0,
+            "earnings": 17479000.0,
+            "ebitda": 22538000.0,
+            "profitMargin": 8.597385222275781,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 851896000.0,
+            "earnings": 87432000.0,
+            "ebitda": 124076000.0,
+            "profitMargin": 10.263224618967573,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 813533000.0,
+            "earnings": 76290000.0,
+            "ebitda": 91899000.0,
+            "profitMargin": 9.377615904947925,
+            "revenueYoY": -4.503249222909838,
+            "earningsYoY": -12.743617897337359
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 742852000.0,
+            "earnings": 52122000.0,
+            "ebitda": 63286000.0,
+            "profitMargin": 7.016471652496056,
+            "revenueYoY": -8.688154014649681,
+            "earningsYoY": -31.679119150609512
+        }
+    ]
+}

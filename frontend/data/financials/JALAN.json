@@ -1,0 +1,50 @@
+{
+    "symbol": "JALAN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 59197000.0,
+            "earnings": -141636000.0,
+            "ebitda": -118724000.0,
+            "profitMargin": -239.26212476983633,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 97010000.0,
+            "earnings": -132066000.0,
+            "ebitda": -115237000.0,
+            "profitMargin": -136.1364807751778,
+            "revenueYoY": 63.8765477980303,
+            "earningsYoY": 6.756756756756757
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 53674000.0,
+            "earnings": -156202000.0,
+            "ebitda": -147466000.0,
+            "profitMargin": -291.01986064016097,
+            "revenueYoY": -44.6716833316153,
+            "earningsYoY": -18.275710629533716
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7882000.0,
+            "earnings": -18787000.0,
+            "ebitda": 5428000.0,
+            "profitMargin": -238.35320984521692,
+            "revenueYoY": -85.31505011737526,
+            "earningsYoY": 87.97262519045852
+        }
+    ]
+}

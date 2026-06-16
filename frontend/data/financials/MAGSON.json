@@ -1,0 +1,50 @@
+{
+    "symbol": "MAGSON",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 555438000.0,
+            "earnings": 22336000.0,
+            "ebitda": 42075000.0,
+            "profitMargin": 4.0213309136213224,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 637328000.0,
+            "earnings": 25188000.0,
+            "ebitda": 45060000.0,
+            "profitMargin": 3.952125122385961,
+            "revenueYoY": 14.743319686445652,
+            "earningsYoY": 12.768624641833812
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 676754000.0,
+            "earnings": 28091000.0,
+            "ebitda": 48764000.0,
+            "profitMargin": 4.150843585704702,
+            "revenueYoY": 6.18613963296764,
+            "earningsYoY": 11.525329521994601
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 673717000.0,
+            "earnings": 4350000.0,
+            "ebitda": 17698000.0,
+            "profitMargin": 0.6456716989477778,
+            "revenueYoY": -0.4487598152356691,
+            "earningsYoY": -84.51461322131644
+        }
+    ]
+}

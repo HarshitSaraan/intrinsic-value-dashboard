@@ -1,0 +1,50 @@
+{
+    "symbol": "ARABIAN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2428367000.0,
+            "earnings": 47166000.0,
+            "ebitda": 102583000.0,
+            "profitMargin": 1.9422929071264763,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2618515000.0,
+            "earnings": 68050000.0,
+            "ebitda": 135740000.0,
+            "profitMargin": 2.598801228940831,
+            "revenueYoY": 7.830282654969369,
+            "earningsYoY": 44.27765763473689
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2852466000.0,
+            "earnings": 90844000.0,
+            "ebitda": 166437000.0,
+            "profitMargin": 3.184753122386034,
+            "revenueYoY": 8.934491496134259,
+            "earningsYoY": 33.49595885378398
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4132737000.0,
+            "earnings": 112236000.0,
+            "ebitda": 201067000.0,
+            "profitMargin": 2.715778913586807,
+            "revenueYoY": 44.88295390725078,
+            "earningsYoY": 23.54806041125446
+        }
+    ]
+}

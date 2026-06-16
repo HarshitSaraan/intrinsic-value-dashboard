@@ -1,0 +1,50 @@
+{
+    "symbol": "QFIL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1862963000.0,
+            "earnings": 31887000.0,
+            "ebitda": 88598000.0,
+            "profitMargin": 1.7116281965879085,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1546497000.0,
+            "earnings": 13358000.0,
+            "ebitda": 59081000.0,
+            "profitMargin": 0.8637585459266974,
+            "revenueYoY": -16.987240218941547,
+            "earningsYoY": -58.108320005017724
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1508219000.0,
+            "earnings": 14185000.0,
+            "ebitda": 63293000.0,
+            "profitMargin": 0.9405132808962093,
+            "revenueYoY": -2.475142208487957,
+            "earningsYoY": 6.191046563856864
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1839553000.0,
+            "earnings": 14707000.0,
+            "ebitda": 91757000.0,
+            "profitMargin": 0.7994877016318638,
+            "revenueYoY": 21.968560268767334,
+            "earningsYoY": 3.6799436023968983
+        }
+    ]
+}

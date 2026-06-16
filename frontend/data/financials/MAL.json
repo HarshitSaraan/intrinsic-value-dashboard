@@ -1,0 +1,39 @@
+{
+    "symbol": "MAL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3005278000.0,
+            "earnings": 101262000.0,
+            "ebitda": 364982000.0,
+            "profitMargin": 3.369471975637529,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3039369000.0,
+            "earnings": 114701000.0,
+            "ebitda": 333663000.0,
+            "profitMargin": 3.773842531130639,
+            "revenueYoY": 1.1343709300770177,
+            "earningsYoY": 13.27151349963461
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4307052000.0,
+            "earnings": 133554000.0,
+            "ebitda": 526055000.0,
+            "profitMargin": 3.1008216292721795,
+            "revenueYoY": 41.70875599507661,
+            "earningsYoY": 16.43664832913401
+        }
+    ]
+}

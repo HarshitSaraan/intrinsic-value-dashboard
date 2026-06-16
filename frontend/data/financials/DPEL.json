@@ -1,0 +1,50 @@
+{
+    "symbol": "DPEL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1478594000.0,
+            "earnings": 28494000.0,
+            "ebitda": 101125000.0,
+            "profitMargin": 1.9271010162356943,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2208155000.0,
+            "earnings": 64128000.0,
+            "ebitda": 148247000.0,
+            "profitMargin": 2.9041439572856076,
+            "revenueYoY": 49.34153662195302,
+            "earningsYoY": 125.05790692777427
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3398221000.0,
+            "earnings": 91530000.0,
+            "ebitda": 198661000.0,
+            "profitMargin": 2.6934681411244292,
+            "revenueYoY": 53.89413333756009,
+            "earningsYoY": 42.73016467065868
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 6259602000.0,
+            "earnings": 267069000.0,
+            "ebitda": 524316000.0,
+            "profitMargin": 4.266549215109842,
+            "revenueYoY": 84.20232233277353,
+            "earningsYoY": 191.78302196001312
+        }
+    ]
+}

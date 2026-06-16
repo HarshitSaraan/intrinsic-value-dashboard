@@ -1,0 +1,39 @@
+{
+    "symbol": "SAIFL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1053356000.0,
+            "earnings": 27417000.0,
+            "ebitda": 37833000.0,
+            "profitMargin": 2.6028237367044,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1388182720.0,
+            "earnings": 100372991.0,
+            "ebitda": 136948734.0,
+            "profitMargin": 7.230531655083561,
+            "revenueYoY": 31.786662818648203,
+            "earningsYoY": 266.0976437976438
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1821406586.0,
+            "earnings": 107207282.0,
+            "ebitda": 146189560.0,
+            "profitMargin": 5.885961038245637,
+            "revenueYoY": 31.20798579022796,
+            "earningsYoY": 6.80889443655216
+        }
+    ]
+}

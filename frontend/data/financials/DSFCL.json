@@ -1,0 +1,51 @@
+{
+    "symbol": "DSFCL",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1124900000.0,
+            "earnings": 44200000.0,
+            "ebitda": 86400000.0,
+            "profitMargin": 3.9292381545026225,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 924800000.0,
+            "earnings": -38300000.0,
+            "ebitda": -17700000.0,
+            "profitMargin": -4.14143598615917,
+            "revenueYoY": -17.788247844252822,
+            "earningsYoY": -186.65158371040724
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4269500000.0,
+            "earnings": 191800000.0,
+            "ebitda": 367700000.0,
+            "profitMargin": 4.492329312565874,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3826400000.0,
+            "earnings": -35200000.0,
+            "ebitda": 68200000.0,
+            "profitMargin": -0.9199247334309012,
+            "revenueYoY": -10.378264433774447,
+            "earningsYoY": -118.35245046923879
+        }
+    ]
+}

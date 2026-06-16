@@ -1,0 +1,50 @@
+{
+    "symbol": "APS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 981213000.0,
+            "earnings": 27048000.0,
+            "ebitda": 53160000.0,
+            "profitMargin": 2.756588019115116,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 945591883.35,
+            "earnings": 33046552.74,
+            "ebitda": 60700467.9,
+            "profitMargin": 3.49480080380176,
+            "revenueYoY": -3.630314381281126,
+            "earningsYoY": 22.177435448092275
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1496729345.7,
+            "earnings": 61528457.29,
+            "ebitda": 99254263.43,
+            "profitMargin": 4.110860621979986,
+            "revenueYoY": 58.28491890153025,
+            "earningsYoY": 86.18721829803782
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4388774000.0,
+            "earnings": 400951000.0,
+            "ebitda": 583845000.0,
+            "profitMargin": 9.135831555691864,
+            "revenueYoY": 193.22429019038375,
+            "earningsYoY": 551.6513133267931
+        }
+    ]
+}

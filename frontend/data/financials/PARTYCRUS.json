@@ -1,0 +1,50 @@
+{
+    "symbol": "PARTYCRUS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 143759000.0,
+            "earnings": 13293000.0,
+            "ebitda": 23048000.0,
+            "profitMargin": 9.246725422408336,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 334812000.0,
+            "earnings": 38172000.0,
+            "ebitda": 64096000.0,
+            "profitMargin": 11.401025052865489,
+            "revenueYoY": 132.8981142050237,
+            "earningsYoY": 187.15865493116678
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 618148000.0,
+            "earnings": 62482000.0,
+            "ebitda": 103967000.0,
+            "profitMargin": 10.10793531646143,
+            "revenueYoY": 84.62540171797905,
+            "earningsYoY": 63.68542387090014
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 80883000.0,
+            "earnings": 83033000.0,
+            "ebitda": 140777000.0,
+            "profitMargin": 102.6581605528974,
+            "revenueYoY": -86.91526948238933,
+            "earningsYoY": 32.89107262891713
+        }
+    ]
+}

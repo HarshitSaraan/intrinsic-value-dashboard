@@ -1,0 +1,50 @@
+{
+    "symbol": "TIMESCAN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1683377000.0,
+            "earnings": 29102000.0,
+            "ebitda": 47574000.0,
+            "profitMargin": 1.7287868374107525,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2031288000.0,
+            "earnings": 37227000.0,
+            "ebitda": 60706000.0,
+            "profitMargin": 1.8326795609485211,
+            "revenueYoY": 20.66744407224288,
+            "earningsYoY": 27.9190433647172
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2019228000.0,
+            "earnings": 37926000.0,
+            "ebitda": 58592000.0,
+            "profitMargin": 1.8782425758755328,
+            "revenueYoY": -0.5937119699422239,
+            "earningsYoY": 1.8776694334757031
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2579744000.0,
+            "earnings": 58551000.0,
+            "ebitda": 98694000.0,
+            "profitMargin": 2.2696438096183185,
+            "revenueYoY": 27.758925688431418,
+            "earningsYoY": 54.38221800348047
+        }
+    ]
+}

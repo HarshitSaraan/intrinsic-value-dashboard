@@ -1,0 +1,62 @@
+{
+    "symbol": "SRPL",
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 0.0,
+            "earnings": -46562000.0,
+            "ebitda": -43305000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 0.0,
+            "earnings": -3175000.0,
+            "ebitda": -1815000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": 93.18113483097805
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 2877970000.0,
+            "earnings": 61407000.0,
+            "ebitda": 133936000.0,
+            "profitMargin": 2.1336914561305367,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1626837000.0,
+            "earnings": 38453000.0,
+            "ebitda": 105573000.0,
+            "profitMargin": 2.363666427552361,
+            "revenueYoY": -43.47276031369333,
+            "earningsYoY": -37.380103245558324
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 147660000.0,
+            "earnings": -95848000.0,
+            "ebitda": -78651000.0,
+            "profitMargin": -64.91128267641881,
+            "revenueYoY": -90.92349141309178,
+            "earningsYoY": -349.26013575013656
+        }
+    ]
+}

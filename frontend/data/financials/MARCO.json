@@ -1,0 +1,50 @@
+{
+    "symbol": "MARCO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 567679000.0,
+            "earnings": 30826000.0,
+            "ebitda": 92801000.0,
+            "profitMargin": 5.430181493414412,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 716497000.0,
+            "earnings": 30365000.0,
+            "ebitda": 101198000.0,
+            "profitMargin": 4.237980061326146,
+            "revenueYoY": 26.215167374519755,
+            "earningsYoY": -1.4954908194381367
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1114065000.0,
+            "earnings": 51954000.0,
+            "ebitda": 139091000.0,
+            "profitMargin": 4.663462185779106,
+            "revenueYoY": 55.48774105125352,
+            "earningsYoY": 71.09830396838466
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1028213000.0,
+            "earnings": 42014000.0,
+            "ebitda": 127347000.0,
+            "profitMargin": 4.086118343183757,
+            "revenueYoY": -7.706193085681715,
+            "earningsYoY": -19.13230935057936
+        }
+    ]
+}

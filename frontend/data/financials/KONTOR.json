@@ -1,0 +1,50 @@
+{
+    "symbol": "KONTOR",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 91740000.0,
+            "earnings": 18788000.0,
+            "ebitda": 39524000.0,
+            "profitMargin": 20.479616306954437,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 110267000.0,
+            "earnings": 19481000.0,
+            "ebitda": 40627000.0,
+            "profitMargin": 17.667117088521497,
+            "revenueYoY": 20.195116633965554,
+            "earningsYoY": 3.6885245901639343
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 197460000.0,
+            "earnings": 41243000.0,
+            "ebitda": 64132000.0,
+            "profitMargin": 20.886761875822952,
+            "revenueYoY": 79.07442843280401,
+            "earningsYoY": 111.70884451516862
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 245548000.0,
+            "earnings": 22701000.0,
+            "ebitda": 75018000.0,
+            "profitMargin": 9.245035593855375,
+            "revenueYoY": 24.353286741618554,
+            "earningsYoY": -44.957932255170576
+        }
+    ]
+}

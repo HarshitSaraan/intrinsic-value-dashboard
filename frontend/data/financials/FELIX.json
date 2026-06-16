@@ -1,0 +1,73 @@
+{
+    "symbol": "FELIX",
+    "quarterly": [
+        {
+            "date": "2024-09-30",
+            "quarterLabel": "Q2 FY25",
+            "annualLabel": "FY25",
+            "revenue": 80062000.0,
+            "earnings": 3124000.0,
+            "ebitda": 12523000.0,
+            "profitMargin": 3.901975968624316,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 173799000.0,
+            "earnings": 47888000.0,
+            "ebitda": 86492000.0,
+            "profitMargin": 27.55366831799953,
+            "revenueYoY": 117.0805126027329,
+            "earningsYoY": 1432.9065300896286
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 123816000.0,
+            "earnings": 8290000.0,
+            "ebitda": 17585000.0,
+            "profitMargin": 6.695419008851846,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 193804000.0,
+            "earnings": 11703000.0,
+            "ebitda": 21288000.0,
+            "profitMargin": 6.038575055210419,
+            "revenueYoY": 56.525812495961745,
+            "earningsYoY": 41.17008443908323
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 338947000.0,
+            "earnings": 50103000.0,
+            "ebitda": 74277000.0,
+            "profitMargin": 14.781957061133452,
+            "revenueYoY": 74.89164310334152,
+            "earningsYoY": 328.1209946167649
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 368220000.0,
+            "earnings": 91133000.0,
+            "ebitda": 136154000.0,
+            "profitMargin": 24.749606213676607,
+            "revenueYoY": 8.636453486828325,
+            "earningsYoY": 81.89130391393729
+        }
+    ]
+}

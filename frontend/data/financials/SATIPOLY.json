@@ -1,0 +1,50 @@
+{
+    "symbol": "SATIPOLY",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1751608000.0,
+            "earnings": 2823000.0,
+            "ebitda": 50585000.0,
+            "profitMargin": 0.1611661970029824,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1909177000.0,
+            "earnings": 30889000.0,
+            "ebitda": 86857000.0,
+            "profitMargin": 1.6179222775049142,
+            "revenueYoY": 8.99567711497093,
+            "earningsYoY": 994.1905773999291
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1793548000.0,
+            "earnings": 28246000.0,
+            "ebitda": 85739000.0,
+            "profitMargin": 1.5748672463742257,
+            "revenueYoY": -6.056484024268048,
+            "earningsYoY": -8.556444041568195
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3018559000.0,
+            "earnings": -105546000.0,
+            "ebitda": -96181000.0,
+            "profitMargin": -3.4965690582824456,
+            "revenueYoY": 68.30098776280312,
+            "earningsYoY": -473.66706790342
+        }
+    ]
+}

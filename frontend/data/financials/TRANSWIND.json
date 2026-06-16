@@ -1,0 +1,50 @@
+{
+    "symbol": "TRANSWIND",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 197914000.0,
+            "earnings": 4854000.0,
+            "ebitda": 9808000.0,
+            "profitMargin": 2.452580413715048,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 241700000.0,
+            "earnings": 5017000.0,
+            "ebitda": 11394000.0,
+            "profitMargin": 2.0757136946628054,
+            "revenueYoY": 22.123750720009703,
+            "earningsYoY": 3.3580552121961267
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 147990000.0,
+            "earnings": 5459000.0,
+            "ebitda": 10506000.0,
+            "profitMargin": 3.6887627542401513,
+            "revenueYoY": -38.771203971865944,
+            "earningsYoY": 8.81004584412996
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 228813000.0,
+            "earnings": 5810000.0,
+            "ebitda": 20843000.0,
+            "profitMargin": 2.539191392097477,
+            "revenueYoY": 54.61382525846341,
+            "earningsYoY": 6.4297490382854
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "DHTL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 124229000.0,
+            "earnings": 9220000.0,
+            "ebitda": 17730000.0,
+            "profitMargin": 7.421777523766593,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 328785000.0,
+            "earnings": 19482000.0,
+            "ebitda": 37291000.0,
+            "profitMargin": 5.92545280350381,
+            "revenueYoY": 164.66042550451184,
+            "earningsYoY": 111.30151843817788
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 400074000.0,
+            "earnings": 1876000.0,
+            "ebitda": 18492000.0,
+            "profitMargin": 0.468913251048556,
+            "revenueYoY": 21.68255851088097,
+            "earningsYoY": -90.37059850118058
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 417729000.0,
+            "earnings": -20264000.0,
+            "ebitda": 2041000.0,
+            "profitMargin": -4.850991911023654,
+            "revenueYoY": 4.412933607282652,
+            "earningsYoY": -1180.1705756929637
+        }
+    ]
+}

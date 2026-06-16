@@ -1,0 +1,50 @@
+{
+    "symbol": "TBI",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1002856000.0,
+            "earnings": 4516000.0,
+            "ebitda": 29573000.0,
+            "profitMargin": 0.45031390349162786,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1154752000.0,
+            "earnings": 62333000.0,
+            "ebitda": 111607000.0,
+            "profitMargin": 5.397955578340631,
+            "revenueYoY": 15.146342047113444,
+            "earningsYoY": 1280.2701505757307
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1582348000.0,
+            "earnings": 101010000.0,
+            "ebitda": 183215000.0,
+            "profitMargin": 6.383551532279879,
+            "revenueYoY": 37.02924957047054,
+            "earningsYoY": 62.0489949144113
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2117597000.0,
+            "earnings": 136332000.0,
+            "ebitda": 251946000.0,
+            "profitMargin": 6.438052188400342,
+            "revenueYoY": 33.826250609853204,
+            "earningsYoY": 34.96881496881497
+        }
+    ]
+}

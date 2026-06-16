@@ -1,0 +1,50 @@
+{
+    "symbol": "SWASTIK",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 6063261000.0,
+            "earnings": 279356000.0,
+            "ebitda": 417716000.0,
+            "profitMargin": 4.607355678734596,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 7035883000.0,
+            "earnings": 90632000.0,
+            "ebitda": 301518000.0,
+            "profitMargin": 1.2881396691786944,
+            "revenueYoY": 16.041235895997218,
+            "earningsYoY": -67.5568092326637
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 7173431000.0,
+            "earnings": 51316000.0,
+            "ebitda": 278093000.0,
+            "profitMargin": 0.7153620073853084,
+            "revenueYoY": 1.9549500752073334,
+            "earningsYoY": -43.37982169653103
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7122452000.0,
+            "earnings": -72178000.0,
+            "ebitda": 158915000.0,
+            "profitMargin": -1.0133869628043826,
+            "revenueYoY": -0.7106641159579008,
+            "earningsYoY": -240.6539870605659
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "SABAR",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 723577779.0,
+            "earnings": 15967180.0,
+            "ebitda": 47719294.0,
+            "profitMargin": 2.206698500618273,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 952755273.0,
+            "earnings": 18250783.0,
+            "ebitda": 53329943.0,
+            "profitMargin": 1.9155793221204247,
+            "revenueYoY": 31.672820897945236,
+            "earningsYoY": 14.301855430952742
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1261679852.0,
+            "earnings": 43350325.0,
+            "ebitda": 97226925.0,
+            "profitMargin": 3.4359211594987094,
+            "revenueYoY": 32.42433684226904,
+            "earningsYoY": 137.52583656273816
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1477182437.0,
+            "earnings": 7050608.0,
+            "ebitda": 45240475.0,
+            "profitMargin": 0.4773010985913854,
+            "revenueYoY": 17.080607624698757,
+            "earningsYoY": -83.73574361899247
+        }
+    ]
+}

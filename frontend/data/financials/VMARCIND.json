@@ -1,0 +1,50 @@
+{
+    "symbol": "VMARCIND",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2472887000.0,
+            "earnings": 104455000.0,
+            "ebitda": 269924000.0,
+            "profitMargin": 4.2240102358094,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 5647292000.0,
+            "earnings": 268530000.0,
+            "ebitda": 640217000.0,
+            "profitMargin": 4.755022407199769,
+            "revenueYoY": 128.36838076305145,
+            "earningsYoY": 157.07721028193959
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 9048746000.0,
+            "earnings": 360945000.0,
+            "ebitda": 985027000.0,
+            "profitMargin": 3.988895256867637,
+            "revenueYoY": 60.23159418709002,
+            "earningsYoY": 34.41514914534689
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 17973097000.0,
+            "earnings": 1000517000.0,
+            "ebitda": 2040009000.0,
+            "profitMargin": 5.566747901043432,
+            "revenueYoY": 98.62527912707463,
+            "earningsYoY": 177.19375528127554
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "AMIABLE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 170373564.0,
+            "earnings": 4751017.0,
+            "ebitda": 6892769.0,
+            "profitMargin": 2.7885881403525725,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 294625431.0,
+            "earnings": 10822121.0,
+            "ebitda": 17681981.0,
+            "profitMargin": 3.673179522646163,
+            "revenueYoY": 72.92907660251798,
+            "earningsYoY": 127.78535627214131
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 244026000.0,
+            "earnings": 13406000.0,
+            "ebitda": 27301000.0,
+            "profitMargin": 5.493676903280798,
+            "revenueYoY": -17.174155953971265,
+            "earningsYoY": 23.875901960438252
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 225272000.0,
+            "earnings": 7812000.0,
+            "ebitda": 17488000.0,
+            "profitMargin": 3.4678078056749175,
+            "revenueYoY": -7.685246654045061,
+            "earningsYoY": -41.72758466358347
+        }
+    ]
+}

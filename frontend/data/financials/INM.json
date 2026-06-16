@@ -1,0 +1,50 @@
+{
+    "symbol": "INM",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 98730000.0,
+            "earnings": 10444000.0,
+            "ebitda": 26391000.0,
+            "profitMargin": 10.578344981262028,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 248352000.0,
+            "earnings": 60441000.0,
+            "ebitda": 99875000.0,
+            "profitMargin": 24.336828372632393,
+            "revenueYoY": 151.5466423579459,
+            "earningsYoY": 478.7150517043279
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 323975000.0,
+            "earnings": 70465000.0,
+            "ebitda": 119487000.0,
+            "profitMargin": 21.75013504128405,
+            "revenueYoY": 30.449925911609327,
+            "earningsYoY": 16.584768617329296
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 588621000.0,
+            "earnings": 119696000.0,
+            "ebitda": 176651000.0,
+            "profitMargin": 20.334986349450666,
+            "revenueYoY": 81.68716721969288,
+            "earningsYoY": 69.86589086780671
+        }
+    ]
+}

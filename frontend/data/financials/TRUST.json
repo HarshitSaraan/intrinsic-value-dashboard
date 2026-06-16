@@ -1,0 +1,50 @@
+{
+    "symbol": "TRUST",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 176325000.0,
+            "earnings": 13366000.0,
+            "ebitda": 23192000.0,
+            "profitMargin": 7.58032043102226,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 225434000.0,
+            "earnings": 40221000.0,
+            "ebitda": 59543000.0,
+            "profitMargin": 17.841585563845737,
+            "revenueYoY": 27.851410747199772,
+            "earningsYoY": 200.92024539877303
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 350437540.0,
+            "earnings": 125016960.0,
+            "ebitda": 180809230.0,
+            "profitMargin": 35.674534183752115,
+            "revenueYoY": 55.45017166886983,
+            "earningsYoY": 210.82509137017976
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 312611030.0,
+            "earnings": 80055000.0,
+            "ebitda": 132245780.0,
+            "profitMargin": 25.608501401885913,
+            "revenueYoY": -10.794080451540665,
+            "earningsYoY": -35.96468831108995
+        }
+    ]
+}

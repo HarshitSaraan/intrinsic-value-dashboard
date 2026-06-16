@@ -1,0 +1,39 @@
+{
+    "symbol": "MILTON",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 590070000.0,
+            "earnings": 32524000.0,
+            "ebitda": 66903000.0,
+            "profitMargin": 5.511888420017963,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 599092000.0,
+            "earnings": 28691000.0,
+            "ebitda": 59976000.0,
+            "profitMargin": 4.789080808957555,
+            "revenueYoY": 1.5289711390174048,
+            "earningsYoY": -11.785143278809494
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 889916000.0,
+            "earnings": 31877000.0,
+            "ebitda": 72616000.0,
+            "profitMargin": 3.582023471878245,
+            "revenueYoY": 48.54413011691025,
+            "earningsYoY": 11.10452755219407
+        }
+    ]
+}

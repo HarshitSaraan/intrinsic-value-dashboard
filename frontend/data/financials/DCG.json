@@ -1,0 +1,50 @@
+{
+    "symbol": "DCG",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 276916000.0,
+            "earnings": 3713000.0,
+            "ebitda": 8395000.0,
+            "profitMargin": 1.340839821462104,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 545247000.0,
+            "earnings": 17206000.0,
+            "ebitda": 34557000.0,
+            "profitMargin": 3.155634052090154,
+            "revenueYoY": 96.8997818833148,
+            "earningsYoY": 363.39886883921355
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1011029000.0,
+            "earnings": 88497000.0,
+            "ebitda": 158229000.0,
+            "profitMargin": 8.753161383105727,
+            "revenueYoY": 85.42587121066232,
+            "earningsYoY": 414.338021620365
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1275613000.0,
+            "earnings": 81029000.0,
+            "ebitda": 168838000.0,
+            "profitMargin": 6.352161666586967,
+            "revenueYoY": 26.16977356732596,
+            "earningsYoY": -8.438704136863397
+        }
+    ]
+}

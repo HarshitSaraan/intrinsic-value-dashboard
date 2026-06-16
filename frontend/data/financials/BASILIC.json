@@ -1,0 +1,73 @@
+{
+    "symbol": "BASILIC",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1336000000.0,
+            "earnings": 167000000.0,
+            "ebitda": 291000000.0,
+            "profitMargin": 12.5,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1134000000.0,
+            "earnings": 136000000.0,
+            "ebitda": 299000000.0,
+            "profitMargin": 11.992945326278658,
+            "revenueYoY": -15.119760479041917,
+            "earningsYoY": -18.562874251497004
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 786674000.0,
+            "earnings": 277403000.0,
+            "ebitda": 387488000.0,
+            "profitMargin": 35.262764499652974,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1026700000.0,
+            "earnings": 365400000.0,
+            "ebitda": 521600000.0,
+            "profitMargin": 35.58975357942924,
+            "revenueYoY": 30.51149523182411,
+            "earningsYoY": 31.721718943198162
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3041000000.0,
+            "earnings": 365000000.0,
+            "ebitda": 696000000.0,
+            "profitMargin": 12.002630713581059,
+            "revenueYoY": 196.19168208824388,
+            "earningsYoY": -0.10946907498631638
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4078000000.0,
+            "earnings": 488000000.0,
+            "ebitda": 926000000.0,
+            "profitMargin": 11.966650318783717,
+            "revenueYoY": 34.1006247944755,
+            "earningsYoY": 33.6986301369863
+        }
+    ]
+}

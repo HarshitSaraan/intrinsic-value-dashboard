@@ -1,0 +1,50 @@
+{
+    "symbol": "ARISTO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1655135000.0,
+            "earnings": 14338000.0,
+            "ebitda": 49613000.0,
+            "profitMargin": 0.8662737480628467,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2178555000.0,
+            "earnings": 35622000.0,
+            "ebitda": 84819000.0,
+            "profitMargin": 1.6351205271384013,
+            "revenueYoY": 31.624006500980283,
+            "earningsYoY": 148.44469242572185
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2451479000.0,
+            "earnings": 38957000.0,
+            "ebitda": 89618000.0,
+            "profitMargin": 1.5891223216678585,
+            "revenueYoY": 12.527753487977122,
+            "earningsYoY": 9.362191903879626
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3180926000.0,
+            "earnings": 40631000.0,
+            "ebitda": 100702000.0,
+            "profitMargin": 1.2773324497331908,
+            "revenueYoY": 29.7553844026402,
+            "earningsYoY": 4.297045460379393
+        }
+    ]
+}

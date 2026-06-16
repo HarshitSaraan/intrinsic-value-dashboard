@@ -1,0 +1,50 @@
+{
+    "symbol": "VINYAS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2345240000.0,
+            "earnings": 73434000.0,
+            "ebitda": 211612000.0,
+            "profitMargin": 3.1311933959850586,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 3171986000.0,
+            "earnings": 153466000.0,
+            "ebitda": 334690000.0,
+            "profitMargin": 4.838167633778964,
+            "revenueYoY": 35.25208507444867,
+            "earningsYoY": 108.9849388566604
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3966356000.0,
+            "earnings": 194232000.0,
+            "ebitda": 397929000.0,
+            "profitMargin": 4.896988570869584,
+            "revenueYoY": 25.04330094773432,
+            "earningsYoY": 26.563538503642505
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 5143237000.0,
+            "earnings": 308683000.0,
+            "ebitda": 647699000.0,
+            "profitMargin": 6.0017261502824,
+            "revenueYoY": 29.67159276676123,
+            "earningsYoY": 58.92489394126611
+        }
+    ]
+}

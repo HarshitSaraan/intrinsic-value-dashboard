@@ -1,0 +1,95 @@
+{
+    "symbol": "HUBTOWN",
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1874100000.0,
+            "earnings": 792800000.0,
+            "ebitda": 884000000.0,
+            "profitMargin": 42.302972093271435,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2085100000.0,
+            "earnings": 240600000.0,
+            "ebitda": 860900000.0,
+            "profitMargin": 11.539014915351782,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 875900000.0,
+            "earnings": 223400000.0,
+            "ebitda": 463300000.0,
+            "profitMargin": 25.505194656924306,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1600000000.0,
+            "earnings": 228100000.0,
+            "ebitda": 1212900000.0,
+            "profitMargin": 14.256250000000001,
+            "revenueYoY": 65.37467700258398,
+            "earningsYoY": 546.1756373937677
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2918089000.0,
+            "earnings": 305025000.0,
+            "ebitda": 910790000.0,
+            "profitMargin": 10.452902567399418,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2109920000.0,
+            "earnings": -861711000.0,
+            "ebitda": 22734000.0,
+            "profitMargin": -40.84093235762493,
+            "revenueYoY": -27.69514569295179,
+            "earningsYoY": -382.50504057044503
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 4084700000.0,
+            "earnings": 465400000.0,
+            "ebitda": 2341100000.0,
+            "profitMargin": 11.39373760618895,
+            "revenueYoY": 93.59501782058088,
+            "earningsYoY": 154.00882662516784
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 6435100000.0,
+            "earnings": 1484900000.0,
+            "ebitda": 3421100000.0,
+            "profitMargin": 23.075010489347488,
+            "revenueYoY": 57.541557519524076,
+            "earningsYoY": 219.05887408680704
+        }
+    ]
+}

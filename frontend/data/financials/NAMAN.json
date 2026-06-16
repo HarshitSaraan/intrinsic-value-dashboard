@@ -1,0 +1,50 @@
+{
+    "symbol": "NAMAN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 509941000.0,
+            "earnings": 2124000.0,
+            "ebitda": 28260000.0,
+            "profitMargin": 0.41651877374049157,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1498457000.0,
+            "earnings": 38171000.0,
+            "ebitda": 106291000.0,
+            "profitMargin": 2.5473537111842384,
+            "revenueYoY": 193.84909234597728,
+            "earningsYoY": 1697.1280602636537
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1447440000.0,
+            "earnings": 92720000.0,
+            "ebitda": 196903000.0,
+            "profitMargin": 6.405792295362847,
+            "revenueYoY": -3.4046355684547502,
+            "earningsYoY": 142.90691886510703
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1556286000.0,
+            "earnings": 62795000.0,
+            "ebitda": 155574000.0,
+            "profitMargin": 4.034926742256886,
+            "revenueYoY": 7.519897197811308,
+            "earningsYoY": -32.27459016393443
+        }
+    ]
+}

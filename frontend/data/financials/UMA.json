@@ -1,0 +1,50 @@
+{
+    "symbol": "UMA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1869477000.0,
+            "earnings": 48162000.0,
+            "ebitda": 166226000.0,
+            "profitMargin": 2.5762285387838415,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1776362000.0,
+            "earnings": 10748000.0,
+            "ebitda": 128157000.0,
+            "profitMargin": 0.6050568521506314,
+            "revenueYoY": -4.9808047919284375,
+            "earningsYoY": -77.68365101117062
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1808750000.0,
+            "earnings": 41882000.0,
+            "ebitda": 167301000.0,
+            "profitMargin": 2.315521769177609,
+            "revenueYoY": 1.823277012230615,
+            "earningsYoY": 289.672497208783
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2274241000.0,
+            "earnings": 27032000.0,
+            "ebitda": 144417000.0,
+            "profitMargin": 1.188616333976918,
+            "revenueYoY": 25.735507947477537,
+            "earningsYoY": -35.456759467074164
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "symbol": "VESUVIUS",
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 5235300000.0,
+            "earnings": 630000000.0,
+            "ebitda": 997700000.0,
+            "profitMargin": 12.033694344163658,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 5462400000.0,
+            "earnings": 615400000.0,
+            "ebitda": 996200000.0,
+            "profitMargin": 11.266110134739309,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 5492400000.0,
+            "earnings": 802300000.0,
+            "ebitda": 1271000000.0,
+            "profitMargin": 14.60745757774379,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4985900000.0,
+            "earnings": 558500000.0,
+            "ebitda": 927400000.0,
+            "profitMargin": 11.201588479512225,
+            "revenueYoY": 3.6698964527799727,
+            "earningsYoY": -5.833754847411904
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-12-31",
+            "quarterLabel": "Q3 FY23",
+            "annualLabel": "FY23",
+            "revenue": 13352100000.0,
+            "earnings": 1167900000.0,
+            "ebitda": 1867200000.0,
+            "profitMargin": 8.746938683802547,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-12-31",
+            "quarterLabel": "Q3 FY24",
+            "annualLabel": "FY24",
+            "revenue": 15912100000.0,
+            "earnings": 2129400000.0,
+            "ebitda": 3217500000.0,
+            "profitMargin": 13.382268839436657,
+            "revenueYoY": 19.17301398281918,
+            "earningsYoY": 82.3272540457231
+        },
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 18649700000.0,
+            "earnings": 2645200000.0,
+            "ebitda": 3958700000.0,
+            "profitMargin": 14.183606170608643,
+            "revenueYoY": 17.204517317010325,
+            "earningsYoY": 24.2227857612473
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 20999500000.0,
+            "earnings": 2640800000.0,
+            "ebitda": 4192400000.0,
+            "profitMargin": 12.575537512797924,
+            "revenueYoY": 12.599666482570765,
+            "earningsYoY": -0.16633902918493876
+        }
+    ]
+}

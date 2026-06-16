@@ -1,0 +1,50 @@
+{
+    "symbol": "SMVD",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 862413000.0,
+            "earnings": 10463000.0,
+            "ebitda": 63010000.0,
+            "profitMargin": 1.2132238266352664,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 796620000.0,
+            "earnings": 2758000.0,
+            "ebitda": 55595000.0,
+            "profitMargin": 0.3462127488639502,
+            "revenueYoY": -7.628943441251465,
+            "earningsYoY": -73.64044729045207
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 247932000.0,
+            "earnings": -537766000.0,
+            "ebitda": -517501000.0,
+            "profitMargin": -216.90060177790684,
+            "revenueYoY": -68.87700534759358,
+            "earningsYoY": -19598.404641044235
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3742000.0,
+            "earnings": 108981000.0,
+            "ebitda": 139265000.0,
+            "profitMargin": 2912.373062533404,
+            "revenueYoY": -98.49071519610216,
+            "earningsYoY": 120.26550581479678
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "TAPIFRUIT",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 206720821.0,
+            "earnings": -1890431.0,
+            "ebitda": 5746545.0,
+            "profitMargin": -0.9144850484122256,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 222852671.0,
+            "earnings": -1824753.0,
+            "ebitda": 6538012.0,
+            "profitMargin": -0.8188158534568338,
+            "revenueYoY": 7.803689014954135,
+            "earningsYoY": 3.4742341825752963
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 201886000.0,
+            "earnings": -14315000.0,
+            "ebitda": -3102000.0,
+            "profitMargin": -7.090635309035792,
+            "revenueYoY": -9.408310389961626,
+            "earningsYoY": -684.4897364191208
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 285271000.0,
+            "earnings": -16821000.0,
+            "ebitda": 17248000.0,
+            "profitMargin": -5.896498417294432,
+            "revenueYoY": 41.30301259126438,
+            "earningsYoY": -17.506112469437653
+        }
+    ]
+}

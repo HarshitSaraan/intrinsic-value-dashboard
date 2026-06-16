@@ -1,0 +1,39 @@
+{
+    "symbol": "AURIGROW",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 353286000.0,
+            "earnings": 8200000.0,
+            "ebitda": 20272000.0,
+            "profitMargin": 2.321065652191143,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 35227000.0,
+            "earnings": -14031000.0,
+            "ebitda": -11785000.0,
+            "profitMargin": -39.83024384704914,
+            "revenueYoY": -90.02875856954422,
+            "earningsYoY": -271.109756097561
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 167628000.0,
+            "earnings": 5085000.0,
+            "ebitda": 20504000.0,
+            "profitMargin": 3.0335027561027994,
+            "revenueYoY": 375.8509098134953,
+            "earningsYoY": 136.241180243746
+        }
+    ]
+}

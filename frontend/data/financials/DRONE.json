@@ -1,0 +1,50 @@
+{
+    "symbol": "DRONE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 25646240.0,
+            "earnings": 2073200.0,
+            "ebitda": 3984890.0,
+            "profitMargin": 8.08383607109658,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 120722410.0,
+            "earnings": 25624020.0,
+            "ebitda": 47225250.0,
+            "profitMargin": 21.225570298008464,
+            "revenueYoY": 370.72167304057047,
+            "earningsYoY": 1135.964692263168
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 318213960.0,
+            "earnings": 70821020.0,
+            "ebitda": 137849630.0,
+            "profitMargin": 22.25578664116433,
+            "revenueYoY": 163.5914574601352,
+            "earningsYoY": 176.3852822468918
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 248974290.0,
+            "earnings": -68138530.0,
+            "ebitda": 2721250.0,
+            "profitMargin": -27.36769728312108,
+            "revenueYoY": -21.75884112689462,
+            "earningsYoY": -196.21229685762788
+        }
+    ]
+}

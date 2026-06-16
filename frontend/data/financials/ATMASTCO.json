@@ -1,0 +1,50 @@
+{
+    "symbol": "ATMASTCO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 936123290.0,
+            "earnings": 32300400.0,
+            "ebitda": 150630510.0,
+            "profitMargin": 3.4504429432580404,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2419505000.0,
+            "earnings": 127750000.0,
+            "ebitda": 284290000.0,
+            "profitMargin": 5.280005620984458,
+            "revenueYoY": 158.4600795478553,
+            "earningsYoY": 295.50593800695964
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2240057000.0,
+            "earnings": 163456000.0,
+            "ebitda": 360531000.0,
+            "profitMargin": 7.296957175643298,
+            "revenueYoY": -7.4167236686842966,
+            "earningsYoY": 27.949902152641883
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2895704000.0,
+            "earnings": 192838000.0,
+            "ebitda": 405530000.0,
+            "profitMargin": 6.659451380389708,
+            "revenueYoY": 29.269210560266995,
+            "earningsYoY": 17.975479639780737
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "SERVICE",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 1149516000.0,
+            "earnings": 17448000.0,
+            "ebitda": 24726000.0,
+            "profitMargin": 1.5178562107878446,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1590007000.0,
+            "earnings": 45538000.0,
+            "ebitda": 45430000.0,
+            "profitMargin": 2.8640125483724286,
+            "revenueYoY": 38.319692809843446,
+            "earningsYoY": 160.99266391563503
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1928109000.0,
+            "earnings": 43579000.0,
+            "ebitda": 47079000.0,
+            "profitMargin": 2.2601937960976275,
+            "revenueYoY": 21.26418311365925,
+            "earningsYoY": -4.301901708463261
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1890102000.0,
+            "earnings": 20147000.0,
+            "ebitda": 28347000.0,
+            "profitMargin": 1.065921310066864,
+            "revenueYoY": -1.9712059847238925,
+            "earningsYoY": -53.76901718717731
+        }
+    ]
+}

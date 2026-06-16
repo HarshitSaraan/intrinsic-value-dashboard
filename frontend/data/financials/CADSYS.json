@@ -1,0 +1,50 @@
+{
+    "symbol": "CADSYS",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 670478000.0,
+            "earnings": -45505000.0,
+            "ebitda": 11086000.0,
+            "profitMargin": -6.786949012495564,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1741546000.0,
+            "earnings": 46880000.0,
+            "ebitda": 165095000.0,
+            "profitMargin": 2.691861139470333,
+            "revenueYoY": 159.74692681937364,
+            "earningsYoY": 203.02164597297
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2148526000.0,
+            "earnings": 80522000.0,
+            "ebitda": 284915000.0,
+            "profitMargin": 3.7477787096828243,
+            "revenueYoY": 23.36889177776527,
+            "earningsYoY": 71.76194539249147
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1002928000.0,
+            "earnings": -370520000.0,
+            "ebitda": -562558000.0,
+            "profitMargin": -36.94382847023914,
+            "revenueYoY": -53.32018323259761,
+            "earningsYoY": -560.1475373189936
+        }
+    ]
+}

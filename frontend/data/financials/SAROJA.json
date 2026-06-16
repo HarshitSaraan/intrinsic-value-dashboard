@@ -1,0 +1,50 @@
+{
+    "symbol": "SAROJA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 556325000.0,
+            "earnings": 11401000.0,
+            "ebitda": 22911000.0,
+            "profitMargin": 2.049341661798409,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 501932000.0,
+            "earnings": 10606000.0,
+            "ebitda": 25534000.0,
+            "profitMargin": 2.1130352318640773,
+            "revenueYoY": -9.777198579966747,
+            "earningsYoY": -6.97307253749671
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 406693000.0,
+            "earnings": 8783000.0,
+            "ebitda": 25818000.0,
+            "profitMargin": 2.1596142544867996,
+            "revenueYoY": -18.97448259923655,
+            "earningsYoY": -17.18838393362248
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 537268000.0,
+            "earnings": 10342000.0,
+            "ebitda": 27799000.0,
+            "profitMargin": 1.9249238741186896,
+            "revenueYoY": 32.10652752813547,
+            "earningsYoY": 17.75019924854833
+        }
+    ]
+}

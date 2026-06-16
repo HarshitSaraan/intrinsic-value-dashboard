@@ -1,0 +1,50 @@
+{
+    "symbol": "GRETEX",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 130636150.0,
+            "earnings": 5387600.0,
+            "ebitda": 4381860.0,
+            "profitMargin": 4.1241264382025955,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 227378880.0,
+            "earnings": 6439340.0,
+            "ebitda": 9738980.0,
+            "profitMargin": 2.831986858234151,
+            "revenueYoY": 74.05509883749636,
+            "earningsYoY": 19.52149380057911
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 347452670.0,
+            "earnings": 99494570.0,
+            "ebitda": 138259160.0,
+            "profitMargin": 28.6354311221727,
+            "revenueYoY": 52.80780255404548,
+            "earningsYoY": 1445.1050884096817
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 357646130.0,
+            "earnings": 14165720.0,
+            "ebitda": 18611890.0,
+            "profitMargin": 3.960820154827343,
+            "revenueYoY": 2.9337693677818044,
+            "earningsYoY": -85.76231848632544
+        }
+    ]
+}

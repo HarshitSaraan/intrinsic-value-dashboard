@@ -1,0 +1,50 @@
+{
+    "symbol": "VITAL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1167433000.0,
+            "earnings": 80514000.0,
+            "ebitda": 143726000.0,
+            "profitMargin": 6.896669873131906,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 982738000.0,
+            "earnings": -13023000.0,
+            "ebitda": 29588000.0,
+            "profitMargin": -1.3251751738510162,
+            "revenueYoY": -15.820608120551672,
+            "earningsYoY": -116.17482673820703
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1339037000.0,
+            "earnings": 39690000.0,
+            "ebitda": 131393000.0,
+            "profitMargin": 2.9640704476425968,
+            "revenueYoY": 36.25574669952724,
+            "earningsYoY": 404.76848652384245
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1264416000.0,
+            "earnings": 10269000.0,
+            "ebitda": 112019000.0,
+            "profitMargin": 0.8121535950193607,
+            "revenueYoY": -5.572736227602374,
+            "earningsYoY": -74.12698412698413
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "symbol": "PLADAINFO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 487785000.0,
+            "earnings": 10966000.0,
+            "ebitda": 43456000.0,
+            "profitMargin": 2.2481216109556463,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 621696000.0,
+            "earnings": 23409000.0,
+            "ebitda": 51306000.0,
+            "profitMargin": 3.7653451204447195,
+            "revenueYoY": 27.452873704603466,
+            "earningsYoY": 113.46890388473463
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 633914000.0,
+            "earnings": 26530000.0,
+            "ebitda": 53842000.0,
+            "profitMargin": 4.185110283098338,
+            "revenueYoY": 1.965269199094091,
+            "earningsYoY": 13.332478961083345
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 671461000.0,
+            "earnings": 18834000.0,
+            "ebitda": 49271000.0,
+            "profitMargin": 2.804928357715489,
+            "revenueYoY": 5.923043188823721,
+            "earningsYoY": -29.008669430833017
+        }
+    ]
+}

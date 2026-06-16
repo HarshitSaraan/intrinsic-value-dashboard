@@ -1,0 +1,50 @@
+{
+    "symbol": "NEWJAISA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 279190000.0,
+            "earnings": 18019000.0,
+            "ebitda": 30177000.0,
+            "profitMargin": 6.454027723055983,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 445298000.0,
+            "earnings": 67361000.0,
+            "ebitda": 87385000.0,
+            "profitMargin": 15.127173263746974,
+            "revenueYoY": 59.49640030087038,
+            "earningsYoY": 273.833176091903
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 617321000.0,
+            "earnings": 63177000.0,
+            "ebitda": 89379000.0,
+            "profitMargin": 10.234059751733701,
+            "revenueYoY": 38.63098419485379,
+            "earningsYoY": -6.2113092145306625
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 656551000.0,
+            "earnings": -11318000.0,
+            "ebitda": 10163000.0,
+            "profitMargin": -1.723856943329612,
+            "revenueYoY": 6.354878580187617,
+            "earningsYoY": -117.91474745556137
+        }
+    ]
+}
