@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intrinsic Themes</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/intrinsic-theme.css">
+  <link rel="stylesheet" href="../css/theme-toggle.css">
+  <script>
+    (function(){
+      var t=localStorage.getItem('iv-theme');
+      if(t===null)t='dark';
+      if(t)document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+</head>
+<body>
+  <main class="iv-page-shell iv-intrinsic-theme-page">
+    
+    <!-- Title & Header Section -->
+    <div class="iv-section-title">
+      <div class="iv-kicker" id="ivIntKicker">Themes Directory</div>
+      <h2 id="ivIntHeading">Intrinsic Themes</h2>
+      <p id="ivIntSubheading">Fundamental investment strategies executed purely on the local stock master database.</p>
+    </div>
+
+    <!-- 1. DIRECTORY GRID VIEW (Shown when no theme is selected) -->
+    <div class="iv-int-directory-grid" id="ivIntDirectoryGrid">
+      
+      <div class="iv-int-card" data-theme-type="growth-at-value">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">📈</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>Growth at Value</h4>
+          <p>Indian companies satisfying high sales growth, cheap P/E, and attractive P/B ratios.</p>
+        </div>
+      </div>
+
+      <div class="iv-int-card" data-theme-type="aggressive-smallcaps">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">⚡</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>High Growth Small Cap</h4>
+          <p>Small cap companies with high earnings growth, high ROCE, and moderate capitalization.</p>
+        </div>
+      </div>
+
+      <div class="iv-int-card" data-theme-type="undervalued-largecaps">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">🏢</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>Value Large Cap</h4>
+          <p>Discounted large-cap leaders trading at attractive P/E and P/B multiples.</p>
+        </div>
+      </div>
+
+      <div class="iv-int-card" data-theme-type="growth-tech">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">💻</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>Technology Leaders</h4>
+          <p>Technology innovators, IT providers, and software anchors with solid growth.</p>
+        </div>
+      </div>
+
+      <div class="iv-int-card" data-theme-type="portfolio-anchors">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">⚓</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>Core Compounders</h4>
+          <p>Premium compounders with clean leverage, high Piotroski health, and strong ROCE.</p>
+        </div>
+      </div>
+
+      <div class="iv-int-card" data-theme-type="solid-large-growth">
+        <div class="iv-int-icon-wrap bg-gold">
+          <span class="iv-int-icon">🚀</span>
+        </div>
+        <div class="iv-int-info">
+          <h4>Large Compounders</h4>
+          <p>Mega-cap growth anchors displaying robust capital returns and financial strength.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2. DETAILS VIEW (Shown when a theme is selected) -->
+    <div class="iv-int-details-view" id="ivIntDetailsView" style="display: none;">
+      
+      <!-- Back Button -->
+      <div style="margin-bottom: 16px;">
+        <button class="iv-secondary-btn" id="ivIntBackButton" style="min-height: 38px; padding: 6px 14px;">
+          ← Back to Themes
+        </button>
+      </div>
+
+      <!-- Strategy Info Card -->
+      <div class="iv-card" style="margin-bottom: 16px;">
+        <h3 id="ivIntDetailsCardTitle">Theme Details</h3>
+        <p id="ivIntDetailsCardDesc">Description of this screen and filters.</p>
+        <p id="ivIntDetailsCardNote" style="margin-top: 10px; font-size: 12.5px; color: #F4D676; font-weight: 500; font-family: monospace; background: rgba(244, 214, 118, 0.08); border: 1px dashed rgba(244, 214, 118, 0.3); padding: 8px 12px; border-radius: 8px; display: inline-block;">Screener criteria rule...</p>
+      </div>
+
+      <!-- Stats Summary cards -->
+      <div class="iv-grid four" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 16px;">
+        <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Stocks Found</span>
+          <strong id="ivIntCountStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+        </div>
+        <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Average P/E</span>
+          <strong id="ivIntPeStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+        </div>
+        <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Avg Sales Growth</span>
+          <strong id="ivIntSalesStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+        </div>
+        <div class="iv-stat-box" style="background: rgba(0, 0, 0, 0.12); border: 1px solid var(--iv-border-subtle); border-radius: 12px; padding: 12px;">
+          <span style="font-size: 10px; color: var(--iv-text-muted); text-transform: uppercase;">Average P/B</span>
+          <strong id="ivIntPbStat" style="font-size: 20px; color: var(--iv-accent-light); font-weight: 600;">—</strong>
+        </div>
+      </div>
+
+      <!-- Table Card -->
+      <div class="iv-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="margin: 0;">Matching Stocks</h3>
+            <span style="font-size: 11px; color: var(--iv-text-muted); display: block; margin-top: 2px;">Filtered and ranked fundamentally using composite scoring from local database.</span>
+          </div>
+          <input type="text" id="ivIntTableSearch" placeholder="Search in results..." style="max-width: 250px; min-height: 36px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--iv-border-subtle); background: rgba(0,0,0,0.2); color: var(--iv-text);">
+        </div>
+
+        <div class="iv-table-wrap">
+          <table style="min-width: 850px;">
+            <thead>
+              <tr>
+                <th style="width: 70px; text-align: center;">Rank</th>
+                <th style="text-align: left; min-width: 180px;">Company Name</th>
+                <th style="text-align: left; min-width: 140px;">Sector</th>
+                <th style="text-align: right; min-width: 120px;">Market Cap</th>
+                <th style="text-align: right; min-width: 110px;">Sales Growth</th>
+                <th style="text-align: right; min-width: 100px;">ROCE 3Y</th>
+                <th style="text-align: right; min-width: 80px;">P/B</th>
+              </tr>
+            </thead>
+            <tbody id="ivIntTableBody">
+              <tr>
+                <td colspan="7" style="text-align: center; padding: 24px; color: var(--iv-text-muted);">
+                  Loading theme results...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; flex-wrap: wrap; gap: 10px;">
+          <button class="iv-secondary-btn" id="ivIntPrevPage" style="min-height: 36px; padding: 6px 12px;">Previous</button>
+          <span id="ivIntPageInfo" style="font-size: 12px; color: var(--iv-text-muted);">Page 1 of 1</span>
+          <button class="iv-secondary-btn" id="ivIntNextPage" style="min-height: 36px; padding: 6px 12px;">Next</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  
+  <script src="../js/navigation.js?v=2"></script>
+  <script src="../js/modules/intrinsic-theme.js"></script>
+</body>
+</html>

@@ -97,14 +97,17 @@
     var isFile = window.location.protocol === 'file:';
     if (isFile) {
       if (path === '/') return 'dashboard.html';
-      if (path === '/dashboard') return 'dashboard.html';
-      if (path === '/ranking-tool') return 'ranking-tool.html';
-      if (path === '/monthly-market-analysis') return 'monthly-market-analysis.html';
-      if (path === '/market-valuation-index') return 'market-valuation-index.html';
-      if (path === '/headwind-tailwind-indicator') return 'headwind-tailwind-indicator.html';
-      if (path === '/portfolio-review-tool') return 'portfolio-review-tool.html';
-      if (path === '/turnaround') return 'turnaround.html';
-      if (path.startsWith('/')) return path.substring(1) + '.html';
+      var parts = path.split('?');
+      var base = parts[0];
+      var query = parts[1] ? '?' + parts[1] : '';
+      if (base === '/dashboard') return 'dashboard.html' + query;
+      if (base === '/ranking-tool') return 'ranking-tool.html' + query;
+      if (base === '/monthly-market-analysis') return 'monthly-market-analysis.html' + query;
+      if (base === '/market-valuation-index') return 'market-valuation-index.html' + query;
+      if (base === '/headwind-tailwind-indicator') return 'headwind-tailwind-indicator.html' + query;
+      if (base === '/portfolio-review-tool') return 'portfolio-review-tool.html' + query;
+      if (base === '/turnaround') return 'turnaround.html' + query;
+      if (base.startsWith('/')) return base.substring(1) + '.html' + query;
       return path;
     } else {
       return path;
@@ -134,15 +137,16 @@
     else if (path.indexOf("ranking-tool") >= 0) activeView = "ranking";
     else if (path.indexOf("turnaround") >= 0) activeView = "turnaround";
     else if (path.indexOf("admin") >= 0) activeView = "admin";
-    else if (path.indexOf("strategies") >= 0) {
+
+    else if (path.indexOf("intrinsic-theme") >= 0) {
       var query = window.location.search;
-      if (query.indexOf("undervalued-growth") >= 0) activeView = "strategies-ug";
-      else if (query.indexOf("aggressive-smallcaps") >= 0) activeView = "strategies-as";
-      else if (query.indexOf("undervalued-largecaps") >= 0) activeView = "strategies-ul";
-      else if (query.indexOf("growth-tech") >= 0) activeView = "strategies-gt";
-      else if (query.indexOf("portfolio-anchors") >= 0) activeView = "strategies-pa";
-      else if (query.indexOf("solid-large-growth") >= 0) activeView = "strategies-sl";
-      else activeView = "strategies-directory";
+      if (query.indexOf("growth-at-value") >= 0) activeView = "intrinsic-theme-gv";
+      else if (query.indexOf("aggressive-smallcaps") >= 0) activeView = "intrinsic-theme-as";
+      else if (query.indexOf("undervalued-largecaps") >= 0) activeView = "intrinsic-theme-ul";
+      else if (query.indexOf("growth-tech") >= 0) activeView = "intrinsic-theme-gt";
+      else if (query.indexOf("portfolio-anchors") >= 0) activeView = "intrinsic-theme-pa";
+      else if (query.indexOf("solid-large-growth") >= 0) activeView = "intrinsic-theme-sl";
+      else activeView = "intrinsic-theme-directory";
     }
 
     // Create iv-shell wrapper
@@ -210,16 +214,17 @@
       },
       {
         type: "group",
-        name: "Popular Themes",
+        name: "Intrinsic Theme",
         items: [
-          { view: "strategies-ug", label: "Growth at Value", icon: "📈", path: "/strategies?type=undervalued-growth" },
-          { view: "aggressive-smallcaps", label: "High Growth Small Cap", icon: "⚡", path: "/strategies?type=aggressive-smallcaps" },
-          { view: "undervalued-largecaps", label: "Value Large Cap", icon: "🏢", path: "/strategies?type=undervalued-largecaps" },
-          { view: "growth-tech", label: "Technology Leaders", icon: "💻", path: "/strategies?type=growth-tech" },
-          { view: "portfolio-anchors", label: "Core Compounders", icon: "⚓", path: "/strategies?type=portfolio-anchors" },
-          { view: "solid-large-growth", label: "Large Compounders", icon: "🚀", path: "/strategies?type=solid-large-growth" }
+          { view: "intrinsic-theme-gv", label: "Growth at Value", icon: "📈", path: "/intrinsic-theme?type=growth-at-value" },
+          { view: "intrinsic-theme-as", label: "High Growth Small Cap", icon: "⚡", path: "/intrinsic-theme?type=aggressive-smallcaps" },
+          { view: "intrinsic-theme-ul", label: "Value Large Cap", icon: "🏢", path: "/intrinsic-theme?type=undervalued-largecaps" },
+          { view: "intrinsic-theme-gt", label: "Technology Leaders", icon: "💻", path: "/intrinsic-theme?type=growth-tech" },
+          { view: "intrinsic-theme-pa", label: "Core Compounders", icon: "⚓", path: "/intrinsic-theme?type=portfolio-anchors" },
+          { view: "intrinsic-theme-sl", label: "Large Compounders", icon: "🚀", path: "/intrinsic-theme?type=solid-large-growth" }
         ]
-      }
+      },
+
     ];
 
     navItems.forEach(function (item) {

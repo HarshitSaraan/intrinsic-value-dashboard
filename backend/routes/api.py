@@ -199,251 +199,134 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
     return response_data
 
 
-# Dynamic cache for Yahoo Finance predefined screeners
-STRATEGIES_CACHE = {}
-CACHE_TTL = 300 # 5 minutes
 
-import threading
-import time
-from concurrent.futures import ThreadPoolExecutor
-
-def update_all_strategies_cache():
-    import urllib.request
-    import urllib.parse
-    import json
+@router.get("/intrinsic-theme-data")
+async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, Any]:
+    from backend.services.analytics import get_stock_master_clean_df
     import pandas as pd
-    from backend.services.analytics import get_stock_master_raw_df
-    from backend.utils.paths import CSV_PATH
-    
-    # 1. Load stock_master.csv
+    from typing import Any
+
     try:
-        df = get_stock_master_raw_df()
+        df, _ = get_stock_master_clean_df()
     except Exception as e:
-        print(f"Error loading stock master in strategies background cache update: {e}")
-        return
-        
-    # 2. Filter rows where NSE Code is present and valid
-    df_nse = df[df['NSE Code'].notna() & (df['NSE Code'].astype(str).str.strip() != '')].copy()
-    
-    # Helper to parse float columns
-    def clean_col(col_name):
-        if col_name not in df_nse.columns:
-            return pd.Series(float('nan'), index=df_nse.index)
-        return pd.to_numeric(df_nse[col_name].astype(str).str.replace(',', '').str.replace('%', '').str.strip(), errors='coerce')
-        
-    df_nse['clean_mcap'] = clean_col('Market Capitalization')
-    df_nse['clean_pe'] = clean_col('Price to Earning')
-    df_nse['clean_pb'] = clean_col('Price to book value')
-    df_nse['clean_sales_3y'] = clean_col('Sales growth 3Years')
-    df_nse['clean_roce_3y'] = clean_col('Average return on capital employed 3Years')
-    df_nse['clean_piotroski'] = clean_col('Piotroski score')
-    df_nse['clean_de'] = clean_col('Debt to equity')
-    
-    strategy_types = [
-        "undervalued-growth",
-        "aggressive-smallcaps",
-        "undervalued-largecaps",
-        "growth-tech",
-        "portfolio-anchors",
-        "solid-large-growth"
-    ]
-    
-    # For each strategy, get the filtered rows
-    strategy_data = {}
-    all_symbols = set()
-    
-    for stype in strategy_types:
-        if stype == 'undervalued-growth': 
-            filtered = df_nse[
-                (df_nse['clean_sales_3y'] > 20) & 
-                (df_nse['clean_pe'] > 0) & 
-                (df_nse['clean_pe'] <= 25) & 
-                (df_nse['clean_pb'] < 4.5)
-            ]
-        elif stype == 'aggressive-smallcaps':
-            filtered = df_nse[
-                (df_nse['clean_mcap'] < 2000) & 
-                (df_nse['clean_sales_3y'] > 25) & 
-                (df_nse['clean_roce_3y'] > 12)
-            ]
-        elif stype == 'undervalued-largecaps':
-            filtered = df_nse[
-                (df_nse['clean_mcap'] > 15000) & 
-                (df_nse['clean_pe'] > 0) & 
-                (df_nse['clean_pe'] < 18) & 
-                (df_nse['clean_pb'] < 3.0)
-            ]
-        elif stype == 'growth-tech':
-            tech_mask = df_nse['Industry Group'].fillna('').str.lower().str.contains('software|it -|telecom|tech')
-            filtered = df_nse[tech_mask & (df_nse['clean_sales_3y'] > 20)]
-        elif stype == 'portfolio-anchors':
-            filtered = df_nse[
-                (df_nse['clean_mcap'] > 25000) & 
-                (df_nse['clean_piotroski'] >= 7) & 
-                (df_nse['clean_de'] < 0.8) & 
-                (df_nse['clean_roce_3y'] > 15)
-            ]
-        elif stype == 'solid-large-growth':
-            filtered = df_nse[
-                (df_nse['clean_mcap'] > 20000) & 
-                (df_nse['clean_sales_3y'] > 15) & 
-                (df_nse['clean_roce_3y'] > 18) & 
-                (df_nse['clean_de'] < 1.0)
-            ]
-        else:
-            filtered = pd.DataFrame(columns=df_nse.columns)
-            
-        filtered = filtered.sort_values(by='clean_mcap', ascending=False)
-        
-        records = []
-        for _, row in filtered.iterrows():
-            nse_code = str(row['NSE Code']).strip()
-            records.append({
-                'symbol': nse_code,
-                'name': str(row['Name']).strip(),
-                'csvPrice': row.get('Current Price'),
-                'csvMcap': row.get('Market Capitalization'),
-                'pe': row['clean_pe'] if pd.notna(row['clean_pe']) else None,
-                'pb': row['clean_pb'] if pd.notna(row['clean_pb']) else None,
-                # Fallbacks
-                'price': row.get('Current Price'),
-                'change': 0.0,
-                'changePercent': 0.0,
-                'volume': 0,
-                'avgVolume': 0,
-                'prevClose': row.get('Current Price'),
-                'open': row.get('Current Price'),
-                'low': row.get('Current Price'),
-                'high': row.get('Current Price'),
-                'closePrices': []
-            })
-            all_symbols.add(nse_code)
-            
-        strategy_data[stype] = records
+        print(f"Error loading clean stock master in intrinsic-theme-data: {e}")
+        return {"type": type, "quotes": [], "summary": {}}
 
-    if not all_symbols:
-        return
-        
-    # Query Yahoo Finance spark endpoint in parallel/batches of 20
-    all_symbols_list = list(all_symbols)
-    batches = [all_symbols_list[i:i+20] for i in range(0, len(all_symbols_list), 20)]
-    
-    quotes_data = {}
-    
-    def fetch_batch(batch):
-        symbols_str = ",".join([urllib.parse.quote(s + ".NS") for s in batch])
-        url = f"https://query1.finance.yahoo.com/v7/finance/spark?symbols={symbols_str}&range=1d&interval=15m"
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        try:
-            with urllib.request.urlopen(req, timeout=5) as res:
-                raw_res = json.loads(res.read().decode())
-                spark_res = raw_res.get('spark', {}).get('result', [])
-                batch_quotes = {}
-                for item in spark_res:
-                    sym = item.get('symbol')
-                    if not sym: continue
-                    clean_sym = sym.replace('.NS', '')
-                    resp_list = item.get('response', [])
-                    if resp_list:
-                        meta = resp_list[0].get('meta', {})
-                        indicators = resp_list[0].get('indicators', {})
-                        close_prices = indicators.get('quote', [{}])[0].get('close', [])
-                        clean_closes = [c for c in close_prices if c is not None]
-                        
-                        price = meta.get('regularMarketPrice')
-                        prev_close = meta.get('previousClose')
-                        
-                        change = 0.0
-                        change_percent = 0.0
-                        if price is not None and prev_close is not None and prev_close > 0:
-                            change = price - prev_close
-                            change_percent = (change / prev_close) * 100
-                            
-                        batch_quotes[clean_sym] = {
-                            'price': price,
-                            'prevClose': prev_close,
-                            'change': change,
-                            'changePercent': change_percent,
-                            'volume': meta.get('regularMarketVolume', 0),
-                            'high': meta.get('regularMarketDayHigh', price),
-                            'low': meta.get('regularMarketDayLow', price),
-                            'open': clean_closes[0] if clean_closes else price,
-                            'closePrices': clean_closes,
-                            'name': meta.get('longName', meta.get('shortName'))
-                        }
-                return batch_quotes
-        except Exception as e:
-            print(f"Error fetching spark batch in background scheduler: {e}")
-            return {}
+    if df.empty:
+        return {"type": type, "quotes": [], "summary": {}}
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(fetch_batch, b) for b in batches]
-        for f in futures:
-            quotes_data.update(f.result())
+    # Filter stocks based on formula
+    if type == "growth-at-value":
+        # 1. Growth at Value: Sales Growth 3Years > 20% | Price to Earning between 0 and 25 | Price to Book value < 4.5
+        filtered = df[
+            (df["sales3Y"] > 20) &
+            (df["pe"] > 0) &
+            (df["pe"] <= 25) &
+            (df["pb"] < 4.5)
+        ].copy()
+    elif type == "aggressive-smallcaps":
+        # 2. High Growth Small Cap: Market Cap < 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%
+        filtered = df[
+            (df["mcap"] < 2000) &
+            (df["sales3Y"] > 25) &
+            (df["roce3Y"] > 12)
+        ].copy()
+    elif type == "undervalued-largecaps":
+        # 3. Value Large Cap: Market Cap > 15000 Cr | Price to Earning between 0 and 18 | Price to Book value < 3.0
+        filtered = df[
+            (df["mcap"] > 15000) &
+            (df["pe"] > 0) &
+            (df["pe"] < 18) &
+            (df["pb"] < 3.0)
+        ].copy()
+    elif type == "growth-tech":
+        # 4. Technology Leader: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%
+        tech_mask = df["industryGroup"].fillna("").str.lower().str.contains("software|it -|telecom|tech")
+        filtered = df[tech_mask & (df["sales3Y"] > 20)].copy()
+    elif type == "portfolio-anchors":
+        # 5. Core Compounders: Market Cap > 25000 Cr | Piotroski Score >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%
+        filtered = df[
+            (df["mcap"] > 25000) &
+            (df["piotroski"] >= 7) &
+            (df["de"] < 0.8) &
+            (df["roce3Y"] > 15)
+        ].copy()
+    elif type == "solid-large-growth":
+        # 6. Large Compounders: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0
+        filtered = df[
+            (df["mcap"] > 20000) &
+            (df["sales3Y"] > 15) &
+            (df["roce3Y"] > 18) &
+            (df["de"] < 1.0)
+        ].copy()
+    else:
+        filtered = pd.DataFrame(columns=df.columns)
 
-    # Merge Yahoo Finance data back into records and update global cache
-    now = time.time()
-    for stype, records in strategy_data.items():
-        for r in records:
-            sym = r['symbol']
-            if sym in quotes_data:
-                yd = quotes_data[sym]
-                if yd.get('price') is not None:
-                    r['price'] = yd['price']
-                    r['prevClose'] = yd['prevClose']
-                    r['change'] = yd['change']
-                    r['changePercent'] = yd['changePercent']
-                    r['volume'] = yd['volume']
-                    r['high'] = yd['high']
-                    r['low'] = yd['low']
-                    r['open'] = yd['open']
-                r['closePrices'] = yd['closePrices']
-                if yd.get('name'):
-                    r['name'] = yd['name']
-            
-            # Format market cap
-            if r['csvMcap'] is not None and not pd.isna(r['csvMcap']):
-                r['marketCap'] = float(r['csvMcap']) * 10000000
-            else:
-                r['marketCap'] = None
-                
-        STRATEGIES_CACHE[stype] = {
-            'timestamp': now,
-            'quotes': records
+    if filtered.empty:
+        return {
+            "type": type,
+            "quotes": [],
+            "summary": {
+                "count": 0,
+                "avgPe": 0.0,
+                "avgSalesGrowth": 0.0,
+                "avgPb": 0.0,
+                "avgMcap": 0.0
+            }
         }
 
-def start_strategies_cache_scheduler():
-    def loop():
-        # wait a couple seconds on startup
-        time.sleep(2)
-        while True:
-            try:
-                update_all_strategies_cache()
-            except Exception as e:
-                print(f"Error in strategies cache scheduler: {e}")
-            time.sleep(300) # every 5 minutes
-            
-    t = threading.Thread(target=loop, daemon=True)
-    t.start()
+    # Universal Intrinsic Value Ranking — same formula as the Ranking Tool
+    # Higher Sales 3Y = better | Higher ROCE 3Y = better | Lower P/B = better
+    # Missing values are scored worst (fillna with missing_rank)
+    missing_rank = len(filtered) + 1
 
-start_strategies_cache_scheduler()
+    def assign_rank(series: pd.Series, ascending: bool) -> pd.Series:
+        ranked = series.rank(method="min", ascending=ascending, na_option="keep")
+        return ranked.fillna(missing_rank).astype(int)
 
-@router.get("/strategies-data")
-async def strategies_endpoint(type: str = "undervalued-growth") -> dict[str, Any]:
-    # 1. Check cache first
-    if type in STRATEGIES_CACHE:
-        return {"type": type, "quotes": STRATEGIES_CACHE[type]['quotes']}
-        
-    # 2. Cold cache/startup fallback: populate synchronously
-    try:
-        update_all_strategies_cache()
-    except Exception as e:
-        print(f"Failed to populate strategies cache synchronously: {e}")
-        
-    if type in STRATEGIES_CACHE:
-        return {"type": type, "quotes": STRATEGIES_CACHE[type]['quotes']}
-        
-    return {"type": type, "quotes": []}
+    filtered["salesRank"] = assign_rank(filtered["sales3Y"], ascending=False)
+    filtered["roceRank"]  = assign_rank(filtered["roce3Y"],  ascending=False)
+    filtered["pbRank"]    = assign_rank(filtered["pb"],      ascending=True)
+    filtered["totalScore"] = filtered["salesRank"] + filtered["roceRank"] + filtered["pbRank"]
+
+    filtered = filtered.sort_values(["totalScore", "name"], ascending=[True, True]).reset_index(drop=True)
+    filtered["rank"] = filtered.index + 1
+
+    def fmt(value: Any) -> float | None:
+        if pd.isna(value) or value is None:
+            return None
+        return round(float(value), 2)
+
+    records = [
+        {
+            "rank": int(row["rank"]),
+            "name": str(row["name"]).strip(),
+            "industry": str(row["industry"]).strip(),
+            "marketCap": fmt(row["mcap"]),
+            "sales3Y": fmt(row["sales3Y"]),
+            "roce3Y": fmt(row["roce3Y"]),
+            "pb": fmt(row["pb"])
+        }
+        for _, row in filtered.iterrows()
+    ]
+
+    # Summary averages
+    avg_pe = filtered["pe"].dropna().mean() if not filtered["pe"].dropna().empty else 0.0
+    avg_sales = filtered["sales3Y"].dropna().mean() if not filtered["sales3Y"].dropna().empty else 0.0
+    avg_pb = filtered["pb"].dropna().mean() if not filtered["pb"].dropna().empty else 0.0
+    avg_mcap = filtered["mcap"].dropna().mean() if not filtered["mcap"].dropna().empty else 0.0
+
+    return {
+        "type": type,
+        "quotes": records,
+        "summary": {
+            "count": len(records),
+            "avgPe": round(float(avg_pe), 2),
+            "avgSalesGrowth": round(float(avg_sales), 2),
+            "avgPb": round(float(avg_pb), 2),
+            "avgMcap": round(float(avg_mcap), 2)
+        }
+    }
 
 
 # --- Admin Page Endpoints ---
@@ -499,10 +382,8 @@ async def admin_upload_csv(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
         
-    # 6. Post-processing (clear cache if stock_master was updated)
-    if file_type == 'stock_master':
-        STRATEGIES_CACHE.clear()
         
+
     return {"status": "success", "message": f"Successfully updated {file_type} CSV dataset"}
 
 
@@ -513,202 +394,248 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
     import datetime
     import json
     import time
+    import threading
     from backend.utils.paths import BASE_DIR
 
     clean_symbol = symbol.upper().strip()
-    cache_dir = BASE_DIR / "backend" / "cache"
-    cache_dir.mkdir(parents=True, exist_ok=True)
-    cache_file = cache_dir / f"{clean_symbol}.json"
 
-    # Check Cache (TTL 24 hours = 86400 seconds)
-    if cache_file.exists():
+    # ── In-memory daily cache ──────────────────────────────────────────
+    # FINANCIALS_MEMORY_CACHE stores { symbol: { "timestamp": epoch, "data": {...} } }
+    # FINANCIALS_LOCKS stores a threading.Lock per symbol to prevent thundering-herd
+    # (multiple concurrent users triggering yfinance for the same symbol)
+    if not hasattr(stock_financials_endpoint, "_cache"):
+        stock_financials_endpoint._cache = {}
+    if not hasattr(stock_financials_endpoint, "_locks"):
+        stock_financials_endpoint._locks = {}
+    if not hasattr(stock_financials_endpoint, "_global_lock"):
+        stock_financials_endpoint._global_lock = threading.Lock()
+
+    CACHE_TTL = 86400  # 24 hours in seconds
+    now = time.time()
+
+    # 1. Fast path — check in-memory cache (no I/O, no lock contention)
+    cached = stock_financials_endpoint._cache.get(clean_symbol)
+    if cached and (now - cached["timestamp"] < CACHE_TTL):
+        return cached["data"]
+
+    # 2. Get or create a per-symbol lock to prevent duplicate yfinance calls
+    with stock_financials_endpoint._global_lock:
+        if clean_symbol not in stock_financials_endpoint._locks:
+            stock_financials_endpoint._locks[clean_symbol] = threading.Lock()
+        symbol_lock = stock_financials_endpoint._locks[clean_symbol]
+
+    # 3. Acquire the per-symbol lock — only one thread will fetch from yfinance
+    with symbol_lock:
+        # Double-check: another thread may have populated the cache while we waited
+        cached = stock_financials_endpoint._cache.get(clean_symbol)
+        if cached and (now - cached["timestamp"] < CACHE_TTL):
+            return cached["data"]
+
+        # 4. Check file-based cache (survives server restarts within same day)
+        cache_dir = BASE_DIR / "backend" / "cache"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        cache_file = cache_dir / f"{clean_symbol}.json"
+
+        if cache_file.exists():
+            try:
+                with open(cache_file, "r") as f:
+                    cached_obj = json.load(f)
+                if time.time() - cached_obj.get("timestamp", 0) < CACHE_TTL:
+                    # Populate memory cache from file and return
+                    stock_financials_endpoint._cache[clean_symbol] = {
+                        "timestamp": cached_obj["timestamp"],
+                        "data": cached_obj["data"]
+                    }
+                    return cached_obj["data"]
+            except Exception as cache_err:
+                print(f"Failed to read financials cache for {clean_symbol}: {cache_err}")
+
+        # 5. Cache miss — fetch from yfinance (this happens at most ONCE per symbol per day)
+        if not clean_symbol.endswith(".NS"):
+            yahoo_symbol = clean_symbol + ".NS"
+        else:
+            yahoo_symbol = clean_symbol
+
+        # Use custom requests session with browser-like headers to bypass bot restrictions on cloud hosts
+        import requests
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Referer": "https://finance.yahoo.com/"
+        })
+
         try:
-            with open(cache_file, "r") as f:
-                cached_obj = json.load(f)
-            if time.time() - cached_obj.get("timestamp", 0) < 86400:
-                # Cache Hit! Return instantly
-                return cached_obj.get("data")
-        except Exception as cache_err:
-            print(f"Failed to read financials cache for {clean_symbol}: {cache_err}")
-
-    if not clean_symbol.endswith(".NS"):
-        yahoo_symbol = clean_symbol + ".NS"
-    else:
-        yahoo_symbol = clean_symbol
-
-    # Use custom requests session with browser-like headers to bypass bot restrictions on cloud hosts
-    import requests
-    session = requests.Session()
-    session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer": "https://finance.yahoo.com/"
-    })
-
-    try:
-        ticker = yf.Ticker(yahoo_symbol, session=session)
-        q_fin = ticker.quarterly_financials
-        a_fin = ticker.financials
-        
-        def extract_financials(df, is_quarterly=False):
-            if df is None or df.empty:
-                return []
-            rev_row = None
-            net_row = None
-            ebitda_row = None
+            ticker = yf.Ticker(yahoo_symbol, session=session)
+            q_fin = ticker.quarterly_financials
+            a_fin = ticker.financials
             
-            # Find rows
-            for idx in df.index:
-                clean_idx = str(idx).lower().strip()
-                if clean_idx == "total revenue":
-                    rev_row = idx
-                elif clean_idx == "net income":
-                    net_row = idx
-                elif clean_idx == "ebitda":
-                    ebitda_row = idx
-                    
-            if not rev_row:
+            def extract_financials(df, is_quarterly=False):
+                if df is None or df.empty:
+                    return []
+                rev_row = None
+                net_row = None
+                ebitda_row = None
+                
+                # Find rows
                 for idx in df.index:
                     clean_idx = str(idx).lower().strip()
-                    if clean_idx in ["revenue", "operating revenue", "gross sales"]:
+                    if clean_idx == "total revenue":
                         rev_row = idx
-                        break
-            if not net_row:
-                for idx in df.index:
-                    clean_idx = str(idx).lower().strip()
-                    if clean_idx in ["netincome", "net income continuous operations"]:
+                    elif clean_idx == "net income":
                         net_row = idx
-                        break
+                    elif clean_idx == "ebitda":
+                        ebitda_row = idx
                         
-            if rev_row is None or net_row is None:
-                return []
+                if not rev_row:
+                    for idx in df.index:
+                        clean_idx = str(idx).lower().strip()
+                        if clean_idx in ["revenue", "operating revenue", "gross sales"]:
+                            rev_row = idx
+                            break
+                if not net_row:
+                    for idx in df.index:
+                        clean_idx = str(idx).lower().strip()
+                        if clean_idx in ["netincome", "net income continuous operations"]:
+                            net_row = idx
+                            break
+                        
+                if rev_row is None or net_row is None:
+                    return []
+                    
+                items = []
+                cols = sorted(df.columns)
                 
-            items = []
-            cols = sorted(df.columns)
+                # Indian FY Quarter mapping (FY starts in April)
+                # Month -> (Quarter, FY offset)
+                quarter_map = {
+                    4: (1, 1), 5: (1, 1), 6: (1, 1),
+                    7: (2, 1), 8: (2, 1), 9: (2, 1),
+                    10: (3, 1), 11: (3, 1), 12: (3, 1),
+                    1: (4, 0), 2: (4, 0), 3: (4, 0)
+                }
+                
+                for col in cols:
+                    date_str = str(col).split(" ")[0]
+                    try:
+                        dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+                    except:
+                        dt = None
+                        
+                    label = date_str
+                    annual_label = date_str
+                    if dt:
+                        q, fy_offset = quarter_map.get(dt.month, (1, 1))
+                        fy = dt.year + fy_offset
+                        label = f"Q{q} FY{str(fy)[2:]}"
+                        annual_label = f"FY{str(fy)[2:]}"
+                    
+                    rev = df.loc[rev_row, col]
+                    net = df.loc[net_row, col]
+                    
+                    if isinstance(rev, pd.Series):
+                        rev = rev.iloc[0]
+                    if isinstance(net, pd.Series):
+                        net = net.iloc[0]
+                        
+                    if pd.isna(rev) or pd.isna(net):
+                        continue
+                    
+                    ebitda = None
+                    if ebitda_row is not None:
+                        ebitda_val = df.loc[ebitda_row, col]
+                        if isinstance(ebitda_val, pd.Series):
+                            ebitda_val = ebitda_val.iloc[0]
+                        if not pd.isna(ebitda_val):
+                            ebitda = float(ebitda_val)
+                        
+                    profit_margin = None
+                    if rev != 0:
+                        profit_margin = (float(net) / float(rev)) * 100.0
+                        
+                    items.append({
+                        "date": date_str,
+                        "quarterLabel": label,
+                        "annualLabel": annual_label,
+                        "revenue": float(rev),
+                        "earnings": float(net),
+                        "ebitda": ebitda,
+                        "profitMargin": profit_margin
+                    })
+                    
+                # Calculate YoY changes using labels
+                for item in items:
+                    item["revenueYoY"] = None
+                    item["earningsYoY"] = None
+                    
+                    if is_quarterly:
+                        label = item.get("quarterLabel")
+                        if label and len(label) >= 7:
+                            q_part = label[:2]
+                            try:
+                                fy_part = int(label[5:])
+                                prev_label = f"{q_part} FY{str(fy_part - 1).zfill(2)}"
+                                prev_item = next((x for x in items if x.get("quarterLabel") == prev_label), None)
+                                if prev_item:
+                                    if prev_item["revenue"] > 0:
+                                        item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
+                                    if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
+                                        item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
+                            except:
+                                pass
+                    else:
+                        label = item.get("annualLabel")
+                        if label and label.startswith("FY") and len(label) >= 4:
+                            try:
+                                fy_val = int(label[2:])
+                                prev_label = f"FY{str(fy_val - 1).zfill(2)}"
+                                prev_item = next((x for x in items if x.get("annualLabel") == prev_label), None)
+                                if prev_item:
+                                    if prev_item["revenue"] > 0:
+                                        item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
+                                    if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
+                                        item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
+                            except:
+                                pass
+                return items
+                
+            quarterly_data = extract_financials(q_fin, is_quarterly=True)
+            annual_data = extract_financials(a_fin, is_quarterly=False)
             
-            # Indian FY Quarter mapping (FY starts in April)
-            # Month -> (Quarter, FY offset)
-            quarter_map = {
-                4: (1, 1), 5: (1, 1), 6: (1, 1),
-                7: (2, 1), 8: (2, 1), 9: (2, 1),
-                10: (3, 1), 11: (3, 1), 12: (3, 1),
-                1: (4, 0), 2: (4, 0), 3: (4, 0)
+            result_data = {
+                "symbol": clean_symbol,
+                "quarterly": quarterly_data[-4:],
+                "annual": annual_data[-4:]
             }
-            
-            for col in cols:
-                date_str = str(col).split(" ")[0]
-                try:
-                    dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-                except:
-                    dt = None
-                    
-                label = date_str
-                annual_label = date_str
-                if dt:
-                    q, fy_offset = quarter_map.get(dt.month, (1, 1))
-                    fy = dt.year + fy_offset
-                    label = f"Q{q} FY{str(fy)[2:]}"
-                    annual_label = f"FY{str(fy)[2:]}"
-                
-                rev = df.loc[rev_row, col]
-                net = df.loc[net_row, col]
-                
-                if isinstance(rev, pd.Series):
-                    rev = rev.iloc[0]
-                if isinstance(net, pd.Series):
-                    net = net.iloc[0]
-                    
-                if pd.isna(rev) or pd.isna(net):
-                    continue
-                
-                ebitda = None
-                if ebitda_row is not None:
-                    ebitda_val = df.loc[ebitda_row, col]
-                    if isinstance(ebitda_val, pd.Series):
-                        ebitda_val = ebitda_val.iloc[0]
-                    if not pd.isna(ebitda_val):
-                        ebitda = float(ebitda_val)
-                        
-                profit_margin = None
-                if rev != 0:
-                    profit_margin = (float(net) / float(rev)) * 100.0
-                    
-                items.append({
-                    "date": date_str,
-                    "quarterLabel": label,
-                    "annualLabel": annual_label,
-                    "revenue": float(rev),
-                    "earnings": float(net),
-                    "ebitda": ebitda,
-                    "profitMargin": profit_margin
-                })
-                
-            # Calculate YoY changes using labels
-            for item in items:
-                item["revenueYoY"] = None
-                item["earningsYoY"] = None
-                
-                if is_quarterly:
-                    label = item.get("quarterLabel")
-                    if label and len(label) >= 7:
-                        q_part = label[:2]
-                        try:
-                            fy_part = int(label[5:])
-                            prev_label = f"{q_part} FY{str(fy_part - 1).zfill(2)}"
-                            prev_item = next((x for x in items if x.get("quarterLabel") == prev_label), None)
-                            if prev_item:
-                                if prev_item["revenue"] > 0:
-                                    item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
-                                if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
-                                    item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
-                        except:
-                            pass
-                else:
-                    label = item.get("annualLabel")
-                    if label and label.startswith("FY") and len(label) >= 4:
-                        try:
-                            fy_val = int(label[2:])
-                            prev_label = f"FY{str(fy_val - 1).zfill(2)}"
-                            prev_item = next((x for x in items if x.get("annualLabel") == prev_label), None)
-                            if prev_item:
-                                if prev_item["revenue"] > 0:
-                                    item["revenueYoY"] = ((item["revenue"] - prev_item["revenue"]) / prev_item["revenue"]) * 100.0
-                                if prev_item["earnings"] != 0 and not pd.isna(prev_item["earnings"]):
-                                    item["earningsYoY"] = ((item["earnings"] - prev_item["earnings"]) / abs(prev_item["earnings"])) * 100.0
-                        except:
-                            pass
-            return items
-            
-        quarterly_data = extract_financials(q_fin, is_quarterly=True)
-        annual_data = extract_financials(a_fin, is_quarterly=False)
-        
-        result_data = {
-            "symbol": clean_symbol,
-            "quarterly": quarterly_data[-4:],
-            "annual": annual_data[-4:]
-        }
 
-        # Save to Cache
-        try:
-            with open(cache_file, "w") as f:
-                json.dump({
-                    "timestamp": time.time(),
-                    "data": result_data
-                }, f, indent=2)
-        except Exception as cache_err:
-            print(f"Failed to write financials cache for {clean_symbol}: {cache_err}")
+            # 6. Save to BOTH memory cache and file cache
+            fetch_time = time.time()
+            stock_financials_endpoint._cache[clean_symbol] = {
+                "timestamp": fetch_time,
+                "data": result_data
+            }
 
-        return result_data
-    except Exception as e:
-        print(f"Failed to fetch financials for {symbol}: {str(e)}")
-        return {
-            "symbol": clean_symbol,
-            "quarterly": [],
-            "annual": [],
-            "error": True,
-            "message": f"Yahoo Finance connection failed: {str(e)}"
-        }
+            try:
+                with open(cache_file, "w") as f:
+                    json.dump({
+                        "timestamp": fetch_time,
+                        "data": result_data
+                    }, f, indent=2)
+            except Exception as cache_err:
+                print(f"Failed to write financials cache for {clean_symbol}: {cache_err}")
+
+            return result_data
+        except Exception as e:
+            print(f"Failed to fetch financials for {symbol}: {str(e)}")
+            return {
+                "symbol": clean_symbol,
+                "quarterly": [],
+                "annual": [],
+                "error": True,
+                "message": f"Yahoo Finance connection failed: {str(e)}"
+            }
+
 
 
 SEARCH_STOCKS_CACHE = {

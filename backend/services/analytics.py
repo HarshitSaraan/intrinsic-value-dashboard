@@ -466,6 +466,11 @@ def get_stock_master_clean_df() -> tuple[pd.DataFrame, list[str]]:
     sales_col = pick_column(frame, "Sales growth 3Years", "Sales Growth 3Years")
     roce_col = pick_column(frame, "Average return on capital employed 3Years", "Average ROCE 3Years")
     pb_col = pick_column(frame, "Price to book value", "Price to Book Value")
+    pe_col = pick_column(frame, "Price to Earning", "PE", "P/E", "Price to earnings", "Price to Earnings")
+    isin_col = pick_column(frame, "ISIN Code", "isinCode", "ISIN")
+    piotroski_col = pick_column(frame, "Piotroski score", "Piotroski Score")
+    de_col = pick_column(frame, "Debt to equity", "Debt to Equity", "D/E", "Debt/Equity")
+    ind_grp_col = pick_column(frame, "Industry Group", "IndustryGroup")
 
     def to_num(series: pd.Series) -> pd.Series:
         return pd.to_numeric(
@@ -483,6 +488,11 @@ def get_stock_master_clean_df() -> tuple[pd.DataFrame, list[str]]:
     df["sales3Y"] = to_num(frame[sales_col]) if sales_col else float("nan")
     df["roce3Y"] = to_num(frame[roce_col]) if roce_col else float("nan")
     df["pb"] = to_num(frame[pb_col]) if pb_col else float("nan")
+    df["pe"] = to_num(frame[pe_col]) if pe_col else float("nan")
+    df["isin"] = frame[isin_col].apply(clean_text) if isin_col else ""
+    df["piotroski"] = to_num(frame[piotroski_col]) if piotroski_col else float("nan")
+    df["de"] = to_num(frame[de_col]) if de_col else float("nan")
+    df["industryGroup"] = frame[ind_grp_col].apply(clean_text) if ind_grp_col else ""
     
     # Store clean frame in cache
     STOCK_MASTER_CACHE['clean_df'] = df

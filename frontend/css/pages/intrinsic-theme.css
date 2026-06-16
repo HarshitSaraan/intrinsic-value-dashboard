@@ -1,0 +1,134 @@
+/* Intrinsic Theme page specific styling */
+
+.iv-int-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .iv-int-directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.iv-int-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--iv-card);
+  border: 1px solid rgba(var(--iv-accent-rgb), 0.16);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: var(--iv-shadow);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.iv-int-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.iv-int-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--iv-accent-rgb), 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.iv-int-card:hover::before {
+  background-color: var(--iv-accent);
+}
+
+.iv-int-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+/* Gold/Marigold theme highlight matching the system theme */
+.iv-int-icon-wrap.bg-gold {
+  background: rgba(255, 140, 0, 0.08);
+  border: 1px solid rgba(255, 140, 0, 0.15);
+}
+
+.iv-int-card:hover .iv-int-icon-wrap.bg-gold {
+  background: rgba(255, 140, 0, 0.16);
+  border-color: rgba(255, 140, 0, 0.4);
+}
+
+.iv-int-icon {
+  font-size: 20px;
+}
+
+.iv-int-info {
+  flex-grow: 1;
+}
+
+.iv-int-info h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--iv-text);
+  transition: color 0.2s;
+}
+
+.iv-int-card:hover h4 {
+  color: var(--iv-accent-light);
+}
+
+.iv-int-info p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--iv-text-muted);
+}
+
+.iv-int-details-view {
+  animation: ivIntFade 0.28s ease;
+}
+
+@keyframes ivIntFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.iv-int-table-row {
+  transition: background-color 0.15s ease;
+}
+
+.iv-int-table-row:hover {
+  background: rgba(var(--iv-accent-rgb), 0.04) !important;
+}
+
+/* Star styles for follow button */
+.iv-strat-star-active {
+  color: #F4D676 !important;
+  text-shadow: 0 0 4px rgba(244, 214, 118, 0.4);
+  transform: scale(1.15);
+}
+
+.iv-strat-star-inactive {
+  color: var(--iv-text-muted);
+  opacity: 0.4;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.iv-strat-star-inactive:hover {
+  color: #F4D676;
+  opacity: 1;
+}

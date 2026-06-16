@@ -82,9 +82,11 @@ async def ranking_tool_page() -> FileResponse:
     return _frontend_page("ranking-tool.html")
 
 
-@router.get("/strategies", response_class=HTMLResponse)
-async def strategies_page() -> FileResponse:
-    return _frontend_page("strategies.html")
+
+
+@router.get("/intrinsic-theme", response_class=HTMLResponse)
+async def intrinsic_theme_page() -> FileResponse:
+    return _frontend_page("intrinsic-theme.html")
 
 
 @router.get("/admin", response_class=HTMLResponse)
