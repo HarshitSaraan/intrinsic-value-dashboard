@@ -432,11 +432,19 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
             return cached["data"]
 
         # 4. Check file-based cache (survives server restarts within same day)
-        cache_dir = BASE_DIR / "backend" / "cache"
-        cache_dir.mkdir(parents=True, exist_ok=True)
-        cache_file = cache_dir / f"{clean_symbol}.json"
+        import tempfile
+        from pathlib import Path
+        cache_dir = Path(tempfile.gettempdir()) / "intrinsic_value_cache"
+        try:
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            cache_file = cache_dir / f"{clean_symbol}.json"
+            cache_file_exists = cache_file.exists()
+        except Exception as cache_dir_err:
+            print(f"Failed to resolve cache directory: {cache_dir_err}")
+            cache_file = None
+            cache_file_exists = False
 
-        if cache_file.exists():
+        if cache_file_exists and cache_file:
             try:
                 with open(cache_file, "r") as f:
                     cached_obj = json.load(f)
@@ -616,14 +624,15 @@ async def stock_financials_endpoint(symbol: str) -> dict[str, Any]:
                 "data": result_data
             }
 
-            try:
-                with open(cache_file, "w") as f:
-                    json.dump({
-                        "timestamp": fetch_time,
-                        "data": result_data
-                    }, f, indent=2)
-            except Exception as cache_err:
-                print(f"Failed to write financials cache for {clean_symbol}: {cache_err}")
+            if cache_file:
+                try:
+                    with open(cache_file, "w") as f:
+                        json.dump({
+                            "timestamp": fetch_time,
+                            "data": result_data
+                        }, f, indent=2)
+                except Exception as cache_err:
+                    print(f"Failed to write financials cache for {clean_symbol}: {cache_err}")
 
             return result_data
         except Exception as e:
