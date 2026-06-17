@@ -101,9 +101,9 @@ SECTOR_VALUATION_CACHE = {
 async def sector_valuation_endpoint() -> dict[str, Any]:
     import math
     import time
-    from backend.utils.paths import BASE_DIR
+    from backend.utils.paths import SECTOR_DATA_PATH
     
-    sector_data_path = BASE_DIR / "sector_data.csv"
+    sector_data_path = SECTOR_DATA_PATH
     if not sector_data_path.exists():
         raise HTTPException(status_code=404, detail="sector_data.csv not found")
         
@@ -363,15 +363,15 @@ async def admin_upload_csv(
         raise HTTPException(status_code=400, detail="Only CSV files are allowed")
         
     # 4. Determine file path
-    from backend.utils.paths import BASE_DIR, CSV_PATH, HW_HISTORY_PATH
+    from backend.utils.paths import CSV_PATH, HW_HISTORY_PATH, SECTOR_DATA_PATH, get_writable_path
     import shutil
     
     if file_type == 'sector_data':
-        target_path = BASE_DIR / "sector_data.csv"
+        target_path = get_writable_path(SECTOR_DATA_PATH)
     elif file_type == 'headwind_tailwind_history':
-        target_path = HW_HISTORY_PATH
+        target_path = get_writable_path(HW_HISTORY_PATH)
     elif file_type == 'stock_master':
-        target_path = CSV_PATH
+        target_path = get_writable_path(CSV_PATH)
     else:
         raise HTTPException(status_code=400, detail="Invalid file type")
         
