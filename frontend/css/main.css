@@ -1965,3 +1965,29 @@ html:not([data-theme="dark"]) .iv-drawer-stock-codes span {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 140, 0, 0.15) !important;
   transform: translateY(-2px);
 }
+
+/* Bharat Footer */
+.iv-bharat-footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.9;
+  width: 100%;
+}
+.iv-bharat-footer .made-green {
+  color: #138808 !important;
+}
+.iv-bharat-footer .made-in {
+  color: #FFFFFF !important;
+}
+html:not([data-theme="dark"]) .iv-bharat-footer .made-in {
+  color: #101828 !important;
+}
+.iv-bharat-footer .made-bharat {
+  color: #FF9933 !important;
+}
