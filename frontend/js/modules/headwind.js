@@ -507,8 +507,11 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       });
 
       canvas.onmousemove = function (e) {
-        var tooltip = app.querySelector('#ivHeadwindChartTooltip');
+        var tooltip = app.querySelector('#ivHeadwindChartTooltip') || document.getElementById('ivHeadwindChartTooltip');
         if (!tooltip || !canvas._ivHwPoints) return;
+        // Move to body to escape transform stacking context
+        if (tooltip.parentNode !== document.body) document.body.appendChild(tooltip);
+
         var cr = canvas.getBoundingClientRect();
         var mx = e.clientX - cr.left;
         var closest = null;
@@ -521,13 +524,12 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           (closest.score > 0 ? '+' : '') + closest.score.toFixed(4) + '</span>' +
           (closest.isCurrent ? '<br><span style="color:#4C8DFF">● Current</span>' : '');
         tooltip.style.display = 'block';
-        var tooltipRect = tooltip.getBoundingClientRect();
-        var ttW = tooltipRect.width || 120;
-        var ttH = tooltipRect.height || 48;
+        var ttW = tooltip.offsetWidth || 120;
+        var ttH = tooltip.offsetHeight || 48;
         var tx = Math.max(10, Math.min(e.clientX - ttW / 2, window.innerWidth - ttW - 10));
-        var ty = e.clientY - ttH - 24;
+        var ty = e.clientY - ttH - 12;
         if (ty < 10) {
-          ty = e.clientY + 20;
+          ty = e.clientY + 16;
         }
 
         tooltip.style.left = tx + 'px';

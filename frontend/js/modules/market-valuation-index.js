@@ -524,6 +524,13 @@
     var tooltip = app.querySelector('#ivSectorValuationTooltip');
     if (!canvas || !tooltip) return;
 
+    // IMPORTANT: Move tooltip to <body> to escape any CSS transform stacking context.
+    // The .iv-view animation (ivFade) uses transform:translateY which breaks position:fixed
+    // for all descendants. Appending to body ensures fixed positioning works correctly.
+    if (tooltip.parentNode !== document.body) {
+      document.body.appendChild(tooltip);
+    }
+
     function handleHover(clientX, clientY) {
       var points = canvas._chartPoints;
       if (!points || !points.length) return;
@@ -564,20 +571,20 @@
                        '</div>';
         }
 
-        tooltip.style.display = 'block';
         tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:2px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
                             statusHtml;
-        
+        tooltip.style.display = 'block';
+
         // Position tooltip centered above cursor/finger
-        var tooltipRect = tooltip.getBoundingClientRect();
-        var ttW = tooltipRect.width;
-        var ttH = tooltipRect.height;
+        // Use offsetWidth/offsetHeight (synchronously available) with safe fallbacks
+        var ttW = tooltip.offsetWidth || 180;
+        var ttH = tooltip.offsetHeight || 60;
         var tx = Math.max(10, Math.min(clientX - ttW / 2, window.innerWidth - ttW - 10));
-        var ty = clientY - ttH - 24;
-        
+        var ty = clientY - ttH - 12;
+
         // Prevent going off top of screen - flip below if too close to top
         if (ty < 10) {
-          ty = clientY + 20;
+          ty = clientY + 16;
         }
 
         tooltip.style.left = tx + 'px';
