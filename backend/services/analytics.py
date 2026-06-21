@@ -326,9 +326,9 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         score_display = str(score)
 
     signal = (
-        "Tailwind"
+        "Upcycle"
         if (score is not None and score > 1)
-        else "Headwind"
+        else "Downcycle"
         if (score is not None and score < 1)
         else "Neutral"
     )
@@ -353,7 +353,7 @@ def compute_headwind_tailwind() -> dict[str, Any]:
             else:
                 s_score = round((s_inc - s_dec) / s_total_companies, 4)
                 s_score_display = str(s_score)
-                s_signal = "Tailwind" if s_score > 0 else ("Headwind" if s_score < 0 else "Neutral")
+                s_signal = "Upcycle" if s_score > 0 else ("Downcycle" if s_score < 0 else "Neutral")
 
             sector_breakdown.append(
                 {

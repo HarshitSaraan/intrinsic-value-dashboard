@@ -87,8 +87,8 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
     function ivHeadwindScoreLabel(score) {
       if (!isFinite(score)) return 'Neutral';
-      if (score < 1) return 'Headwind';
-      if (score > 1) return 'Tailwind';
+      if (score < 1) return 'Downcycle';
+      if (score > 1) return 'Upcycle';
       return 'Neutral';
     }
 
@@ -216,19 +216,19 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       // ── helpers ──────────────────────────────────────────────────────────────
       // New formula: score = (inc − dec) / total  →  range [−1, +1], neutral = 0
-      // Positive = Tailwind (green), Negative = Headwind (red), 0 = Neutral (gold)
+      // Positive = Upcycle (green), Negative = Downcycle (red), 0 = Neutral (gold)
 
       function colorFor(signal) {
-        if (signal === 'Tailwind') return '#34D399';   // green
-        if (signal === 'Headwind') return '#F87171';   // red
+        if (signal === 'Upcycle') return '#34D399';   // green
+        if (signal === 'Downcycle') return '#F87171';   // red
         return '#F4D676';                               // gold / neutral
       }
 
       function badgeHtml(signal) {
-        if (signal === 'Tailwind')
-          return '<span class="iv-hw-badge tailwind">▲ Tailwind</span>';
-        if (signal === 'Headwind')
-          return '<span class="iv-hw-badge headwind">▼ Headwind</span>';
+        if (signal === 'Upcycle')
+          return '<span class="iv-hw-badge tailwind">▲ Upcycle</span>';
+        if (signal === 'Downcycle')
+          return '<span class="iv-hw-badge headwind">▼ Downcycle</span>';
         return '<span class="iv-hw-badge neutral">● Neutral</span>';
       }
 
@@ -251,7 +251,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
         // Two-sided bar: negative side (left) | centre | positive side (right)
         if (clamped >= 0) {
-          // Tailwind — bar grows right from centre
+          // Upcycle — bar grows right from centre
           return '<div class="iv-hw-bar-wrap">' +
             '<div class="iv-hw-bar-bg" style="display:flex;align-items:center;">' +
             '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:99px 0 0 99px;overflow:hidden;">' +
@@ -265,7 +265,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
             '<span class="iv-hw-score-val" style="color:' + color + '">' + label + '</span>' +
             '</div>';
         } else {
-          // Headwind — bar grows left from centre
+          // Downcycle — bar grows left from centre
           return '<div class="iv-hw-bar-wrap">' +
             '<div class="iv-hw-bar-bg" style="display:flex;align-items:center;">' +
             '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:99px 0 0 99px;overflow:hidden;direction:rtl;">' +

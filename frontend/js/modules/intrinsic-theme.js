@@ -136,8 +136,8 @@
     var kicker = app.querySelector('#ivIntKicker');
     var heading = app.querySelector('#ivIntHeading');
     var sub = app.querySelector('#ivIntSubheading');
-    if (kicker) kicker.textContent = 'Themes Directory';
-    if (heading) heading.textContent = 'Intrinsic Themes';
+    if (kicker) kicker.textContent = 'Portfolios Directory';
+    if (heading) heading.textContent = 'Thematic portfolios';
     if (sub) sub.textContent = 'Fundamental investment strategies executed purely on the local stock master database.';
   }
 
