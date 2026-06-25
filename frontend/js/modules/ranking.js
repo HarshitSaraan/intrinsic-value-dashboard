@@ -3,6 +3,7 @@
   if (!app) app = document.body;
 
   var baseUrl = window.location.protocol === 'file:' ? 'http://127.0.0.1:8080' : '';
+  var ivRankingRequestCounter = 0;
 
 function ivFormatINR(value) {
       if (!isFinite(value)) return '—';
@@ -254,9 +255,13 @@ function ivRankNumber(value) {
       if (filters.maxMcap !== null) params.set('max_mcap', filters.maxMcap);
       if (filters.count > 0) params.set('top_n', filters.count);
 
+      var currentRequestId = ++ivRankingRequestCounter;
+
       fetch(baseUrl + '/ranking?' + params.toString(), { cache: 'no-store' })
         .then(function (res) { if (!res.ok) throw new Error('API error ' + res.status); return res.json(); })
         .then(function (data) {
+          if (currentRequestId !== ivRankingRequestCounter) return;
+
           ivRankingState.rows = data.data || [];
           ivRankingState.page = 1;
 
@@ -283,6 +288,7 @@ function ivRankNumber(value) {
           ivRenderRankingPage();
         })
         .catch(function (err) {
+          if (currentRequestId !== ivRankingRequestCounter) return;
           if (elements.body) elements.body.innerHTML = '<tr><td colspan="8" style="color:#F87171;text-align:center;padding:20px">Failed to load: ' + err.message + '</td></tr>';
         });
     }
