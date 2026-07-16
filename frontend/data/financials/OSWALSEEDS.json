@@ -2,29 +2,51 @@
     "symbol": "OSWALSEEDS",
     "quarterly": [
         {
-            "date": "2024-09-30",
-            "quarterLabel": "Q2 FY25",
-            "annualLabel": "FY25",
-            "revenue": 676902000.0,
-            "earnings": 3212000.0,
-            "ebitda": 15305000.0,
-            "profitMargin": 0.47451477466457476,
-            "revenueYoY": null,
-            "earningsYoY": null
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 2405170000.0,
-            "earnings": 54356000.0,
-            "ebitda": 104196000.0,
-            "profitMargin": 2.259964992079562,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 979498000.0,
+            "earnings": 72803000.0,
+            "ebitda": 112997000.0,
+            "profitMargin": 7.432684905941615,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 394421000.0,
+            "earnings": -32011000.0,
+            "ebitda": -35049000.0,
+            "profitMargin": -8.115947173198181,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 547531000.0,
+            "earnings": 10340000.0,
+            "ebitda": 27850000.0,
+            "profitMargin": 1.888477547390011,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 560841000.0,
+            "earnings": 21093000.0,
+            "ebitda": 43202000.0,
+            "profitMargin": 3.7609589883763848,
+            "revenueYoY": 116.9673218796786,
+            "earningsYoY": 280.53400685549343
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -33,8 +55,8 @@
             "earnings": 57065000.0,
             "ebitda": 119219000.0,
             "profitMargin": 2.0954295290874185,
-            "revenueYoY": 13.227256285418495,
-            "earningsYoY": 4.983810434910589
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -53,10 +75,21 @@
             "annualLabel": "FY25",
             "revenue": 2459128000.0,
             "earnings": 35289000.0,
-            "ebitda": 96569000.0,
+            "ebitda": 98737000.0,
             "profitMargin": 1.4350208691861506,
             "revenueYoY": -8.593577797164134,
             "earningsYoY": 184.8069020211002
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2482292000.0,
+            "earnings": 72226000.0,
+            "ebitda": 149004000.0,
+            "profitMargin": 2.909649630261065,
+            "revenueYoY": 0.9419599142460254,
+            "earningsYoY": 104.67001048485362
         }
     ]
 }

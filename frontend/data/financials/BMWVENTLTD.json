@@ -2,17 +2,6 @@
     "symbol": "BMWVENTLTD",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4848991000.0,
-            "earnings": 79418000.0,
-            "ebitda": 215665000.0,
-            "profitMargin": 1.6378252712780865,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -20,6 +9,17 @@
             "earnings": 109567000.0,
             "ebitda": 242918000.0,
             "profitMargin": 1.8734013158794645,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4845908000.0,
+            "earnings": 80258000.0,
+            "ebitda": 198583000.0,
+            "profitMargin": 1.6562014796814135,
             "revenueYoY": null,
             "earningsYoY": null
         },

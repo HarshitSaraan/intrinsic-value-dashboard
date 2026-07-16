@@ -2,23 +2,12 @@
     "symbol": "ANANDRATHI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2219597000.0,
-            "earnings": 734507000.0,
-            "ebitda": 1101448000.0,
-            "profitMargin": 33.091908125664254,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 2740165000.0,
             "earnings": 936236000.0,
-            "ebitda": 1380222000.0,
+            "ebitda": 1378966000.0,
             "profitMargin": 34.16713957006239,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 998514000.0,
             "ebitda": 1475356000.0,
             "profitMargin": 34.476229344332424,
-            "revenueYoY": 22.183607063620936,
-            "earningsYoY": 29.638924628713355
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 35.81628958835821,
             "revenueYoY": 29.671377281551557,
             "earningsYoY": 40.346926577963174
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3219850000.0,
+            "earnings": 1627348000.0,
+            "ebitda": 2189283000.0,
+            "profitMargin": 50.5411121636101,
+            "revenueYoY": 17.505697649594094,
+            "earningsYoY": 73.81813987071637
         }
     ],
     "annual": [

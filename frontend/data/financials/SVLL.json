@@ -2,13 +2,13 @@
     "symbol": "SVLL",
     "quarterly": [
         {
-            "date": "2024-09-30",
-            "quarterLabel": "Q2 FY25",
-            "annualLabel": "FY25",
-            "revenue": 345975000.0,
-            "earnings": -462000.0,
-            "ebitda": 28152000.0,
-            "profitMargin": -0.13353566009104706,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 497467000.0,
+            "earnings": 18667000.0,
+            "ebitda": 65289000.0,
+            "profitMargin": 3.752409707578593,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -20,8 +20,19 @@
             "earnings": 10372000.0,
             "ebitda": 53213000.0,
             "profitMargin": 1.853125675581514,
-            "revenueYoY": 61.77556181805044,
-            "earningsYoY": 2345.0216450216453
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 558187000.0,
+            "earnings": -11294000.0,
+            "ebitda": 32450000.0,
+            "profitMargin": -2.023336265445093,
+            "revenueYoY": null,
+            "earningsYoY": null
         }
     ],
     "annual": [

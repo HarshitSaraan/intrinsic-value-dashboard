@@ -1,0 +1,39 @@
+{
+    "symbol": "HEXAGON",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2782810000.0,
+            "earnings": 58240000.0,
+            "ebitda": 191410000.0,
+            "profitMargin": 2.0928485954844205,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2974520000.0,
+            "earnings": 122140000.0,
+            "ebitda": 305170000.0,
+            "profitMargin": 4.106208732837567,
+            "revenueYoY": 6.889079743137333,
+            "earningsYoY": 109.7184065934066
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3246340000.0,
+            "earnings": 243770000.0,
+            "ebitda": 452150000.0,
+            "profitMargin": 7.509071754652933,
+            "revenueYoY": 9.138281134435136,
+            "earningsYoY": 99.58244637301458
+        }
+    ]
+}

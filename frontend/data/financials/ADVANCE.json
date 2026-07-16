@@ -2,17 +2,6 @@
     "symbol": "ADVANCE",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1131650000.0,
-            "earnings": 27750000.0,
-            "ebitda": 65410000.0,
-            "profitMargin": 2.4521716078292757,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -20,6 +9,17 @@
             "earnings": 14280000.0,
             "ebitda": 61400000.0,
             "profitMargin": 1.5896339834357467,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2126290000.0,
+            "earnings": 158750000.0,
+            "ebitda": 260070000.0,
+            "profitMargin": 7.4660559001829485,
             "revenueYoY": null,
             "earningsYoY": null
         },

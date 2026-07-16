@@ -2,17 +2,6 @@
     "symbol": "EIMCOELECO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 642881000.0,
-            "earnings": 148727000.0,
-            "ebitda": 223059000.0,
-            "profitMargin": 23.134452565871445,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 125153000.0,
             "ebitda": 184559000.0,
             "profitMargin": 19.84747230301281,
-            "revenueYoY": 37.567575822363395,
-            "earningsYoY": 102.17271904884984
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.51545090815576,
             "revenueYoY": 4.036050217691922,
             "earningsYoY": -57.20884573749218
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 775231000.0,
+            "earnings": 153785000.0,
+            "ebitda": 220065000.0,
+            "profitMargin": 19.83731300734878,
+            "revenueYoY": 14.730227512546268,
+            "earningsYoY": 6.186043942386036
         }
     ],
     "annual": [

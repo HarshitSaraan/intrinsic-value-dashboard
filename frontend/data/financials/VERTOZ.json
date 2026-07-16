@@ -2,17 +2,6 @@
     "symbol": "VERTOZ",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 651798000.0,
-            "earnings": 63727000.0,
-            "ebitda": 136630000.0,
-            "profitMargin": 9.777108858879592,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,22 +31,22 @@
             "earnings": 61614000.0,
             "ebitda": 142555000.0,
             "profitMargin": 8.16978687800745,
-            "revenueYoY": 13.92384221005024,
-            "earningsYoY": -16.18397246670566
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 416064000.0,
-            "earnings": 61035000.0,
-            "ebitda": 116886000.0,
-            "profitMargin": 14.669618135671437,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 736893000.0,
+            "earnings": 67108000.0,
+            "ebitda": 157972000.0,
+            "profitMargin": 9.106885260139531,
+            "revenueYoY": 13.05542514705476,
+            "earningsYoY": -2.318743540850934
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": 110368000.0,
             "ebitda": 175848000.0,
             "profitMargin": 13.327215205158549,
-            "revenueYoY": 99.04149361636672,
-            "earningsYoY": 80.82739411812895
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -86,10 +75,21 @@
             "annualLabel": "FY25",
             "revenue": 2551992000.0,
             "earnings": 260084000.0,
-            "ebitda": 428451000.0,
+            "ebitda": 434156000.0,
             "profitMargin": 10.191411258342503,
             "revenueYoY": 64.25636431043006,
             "earningsYoY": 64.8427844362613
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2918582000.0,
+            "earnings": 260742000.0,
+            "ebitda": 533961000.0,
+            "profitMargin": 8.933858976722258,
+            "revenueYoY": 14.364856943125215,
+            "earningsYoY": 0.2529951861706218
         }
     ]
 }

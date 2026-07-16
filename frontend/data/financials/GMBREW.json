@@ -2,17 +2,6 @@
     "symbol": "GMBREW",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1693300000.0,
-            "earnings": 604600000.0,
-            "ebitda": 691400000.0,
-            "profitMargin": 35.7054272721904,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 420100000.0,
             "ebitda": 573300000.0,
             "profitMargin": 20.782625902839616,
-            "revenueYoY": 21.888567293777133,
-            "earningsYoY": 91.21529358215749
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 26.723669253200217,
             "revenueYoY": 19.48857260969704,
             "earningsYoY": -10.568971220641748
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1995800000.0,
+            "earnings": 377400000.0,
+            "ebitda": 520000000.0,
+            "profitMargin": 18.909710391822827,
+            "revenueYoY": 22.546972860125262,
+            "earningsYoY": 45.93967517401392
         }
     ],
     "annual": [

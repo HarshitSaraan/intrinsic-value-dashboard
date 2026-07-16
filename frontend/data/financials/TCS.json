@@ -2,17 +2,6 @@
     "symbol": "TCS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 644790000000.0,
-            "earnings": 122240000000.0,
-            "ebitda": 180080000000.0,
-            "profitMargin": 18.9581103925309,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 106570000000.0,
             "ebitda": 159960000000.0,
             "profitMargin": 15.88534291293395,
-            "revenueYoY": 4.867678551889078,
-            "earningsYoY": -13.917609046849758
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 19.40366064103652,
             "revenueYoY": 9.645000697901644,
             "earningsYoY": 12.221858638743456
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 722750000000.0,
+            "earnings": 133490000000.0,
+            "ebitda": 194560000000.0,
+            "profitMargin": 18.469733656174334,
+            "revenueYoY": 13.931932468433248,
+            "earningsYoY": 4.615987460815047
         }
     ],
     "annual": [

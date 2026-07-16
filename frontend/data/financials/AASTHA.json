@@ -1,0 +1,39 @@
+{
+    "symbol": "AASTHA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 2349283000.0,
+            "earnings": 10583000.0,
+            "ebitda": 143724000.0,
+            "profitMargin": 0.4504778692052001,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 2960237000.0,
+            "earnings": 162876000.0,
+            "ebitda": 379085000.0,
+            "profitMargin": 5.502127025640177,
+            "revenueYoY": 26.005977142813357,
+            "earningsYoY": 1439.0343002929226
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 3436950000.0,
+            "earnings": 229162000.0,
+            "ebitda": 505512000.0,
+            "profitMargin": 6.667597724726865,
+            "revenueYoY": 16.103879520457316,
+            "earningsYoY": 40.697217515164915
+        }
+    ]
+}

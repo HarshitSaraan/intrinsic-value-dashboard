@@ -2,17 +2,6 @@
     "symbol": "INDBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 36959000.0,
-            "earnings": 11379000.0,
-            "ebitda": 16531000.0,
-            "profitMargin": 30.788170675613518,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 19166000.0,
             "ebitda": 26567000.0,
             "profitMargin": 31.21701739527005,
-            "revenueYoY": 5.593010456796918,
-            "earningsYoY": 63.26774001192605
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 26.578924316748427,
             "revenueYoY": 23.55312643740361,
             "earningsYoY": 6.661393795588364
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 65152000.0,
+            "earnings": 23753000.0,
+            "ebitda": 31595000.0,
+            "profitMargin": 36.45782170923379,
+            "revenueYoY": 2.857503710018629,
+            "earningsYoY": 11.052410117350039
         }
     ],
     "annual": [

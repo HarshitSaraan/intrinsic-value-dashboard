@@ -1,0 +1,50 @@
+{
+    "symbol": "VEDPOWER",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 57456900000.0,
+            "earnings": -702800000.0,
+            "ebitda": 10500100000.0,
+            "profitMargin": -1.2231777210395967,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 52669300000.0,
+            "earnings": 6021500000.0,
+            "ebitda": 18475900000.0,
+            "profitMargin": 11.432656215290502,
+            "revenueYoY": -8.332506626706278,
+            "earningsYoY": 956.7871371656231
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 60210000000.0,
+            "earnings": -5060000000.0,
+            "ebitda": 6630000000.0,
+            "profitMargin": -8.403919614681946,
+            "revenueYoY": 14.31706895667875,
+            "earningsYoY": -184.03221788590884
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 88910000000.0,
+            "earnings": -16850000000.0,
+            "ebitda": -7340000000.0,
+            "profitMargin": -18.95174895962209,
+            "revenueYoY": 47.666500581298784,
+            "earningsYoY": -233.00395256916997
+        }
+    ]
+}

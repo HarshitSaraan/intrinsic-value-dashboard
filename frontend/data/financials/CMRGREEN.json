@@ -1,0 +1,39 @@
+{
+    "symbol": "CMRGREEN",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 44541670000.0,
+            "earnings": 976600000.0,
+            "ebitda": 2339250000.0,
+            "profitMargin": 2.192553624504874,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 47031770000.0,
+            "earnings": -8443270000.0,
+            "ebitda": -10085640000.0,
+            "profitMargin": -17.9522692852087,
+            "revenueYoY": 5.590495372086409,
+            "earningsYoY": -964.5576489862789
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 53881780000.0,
+            "earnings": 1424600000.0,
+            "ebitda": 3269650000.0,
+            "profitMargin": 2.643936410415543,
+            "revenueYoY": 14.564644281939634,
+            "earningsYoY": 116.87260978270267
+        }
+    ]
+}

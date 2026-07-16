@@ -1,0 +1,39 @@
+{
+    "symbol": "CSM",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1604387000.0,
+            "earnings": 158240000.0,
+            "ebitda": 283139000.0,
+            "profitMargin": 9.862957004762567,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1967105000.0,
+            "earnings": 125493000.0,
+            "ebitda": 250382000.0,
+            "profitMargin": 6.37957811098035,
+            "revenueYoY": 22.607886999832335,
+            "earningsYoY": -20.694514661274013
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1992442000.0,
+            "earnings": 140864000.0,
+            "ebitda": 299718000.0,
+            "profitMargin": 7.0699172171636615,
+            "revenueYoY": 1.2880349549210641,
+            "earningsYoY": 12.248491947758042
+        }
+    ]
+}

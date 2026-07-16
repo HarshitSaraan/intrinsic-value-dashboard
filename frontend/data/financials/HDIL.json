@@ -2,17 +2,6 @@
     "symbol": "HDIL",
     "quarterly": [
         {
-            "date": "2024-09-30",
-            "quarterLabel": "Q2 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4168000.0,
-            "earnings": -24071000.0,
-            "ebitda": -17506000.0,
-            "profitMargin": -577.5191938579654,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2024-12-31",
             "quarterLabel": "Q3 FY25",
             "annualLabel": "FY25",
@@ -42,8 +31,8 @@
             "earnings": -24656000.0,
             "ebitda": -18798000.0,
             "profitMargin": -607.4402562207441,
-            "revenueYoY": -2.6151631477927064,
-            "earningsYoY": -2.430310331934693
+            "revenueYoY": null,
+            "earningsYoY": null
         }
     ],
     "annual": [

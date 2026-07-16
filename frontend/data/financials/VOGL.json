@@ -1,0 +1,50 @@
+{
+    "symbol": "VOGL",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 5337200000.0,
+            "earnings": -2668700000.0,
+            "ebitda": -2123800000.0,
+            "profitMargin": -50.001873641609826,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 6157500000.0,
+            "earnings": -1174200000.0,
+            "ebitda": -376700000.0,
+            "profitMargin": -19.0694275274056,
+            "revenueYoY": 15.369482125459042,
+            "earningsYoY": 56.00104919998501
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 110430000000.0,
+            "earnings": 19400000000.0,
+            "ebitda": 37600700000.0,
+            "profitMargin": 17.567689939328083,
+            "revenueYoY": 1693.4226552984164,
+            "earningsYoY": 1752.188724237779
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 95820000000.0,
+            "earnings": 540000000.0,
+            "ebitda": 9704300000.0,
+            "profitMargin": 0.5635566687539135,
+            "revenueYoY": -13.230100516164086,
+            "earningsYoY": -97.21649484536083
+        }
+    ]
+}

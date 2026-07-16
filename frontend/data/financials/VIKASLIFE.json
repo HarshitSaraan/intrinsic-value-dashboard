@@ -2,23 +2,12 @@
     "symbol": "VIKASLIFE",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1178491000.0,
-            "earnings": -68116000.0,
-            "ebitda": -39241000.0,
-            "profitMargin": -5.779933830635957,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
             "revenue": 1352046000.0,
             "earnings": -28965000.0,
-            "ebitda": -17667000.0,
+            "ebitda": -16612000.0,
             "profitMargin": -2.142308767601102,
             "revenueYoY": null,
             "earningsYoY": null
@@ -42,22 +31,22 @@
             "earnings": -1189522000.0,
             "ebitda": -1167409000.0,
             "profitMargin": -84.16830235780101,
-            "revenueYoY": 4.782382078986449,
-            "earningsYoY": -5077.704314349082
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 3009218000.0,
-            "earnings": 286993000.0,
-            "ebitda": 419746000.0,
-            "profitMargin": 9.537128915219835,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1686238000.0,
+            "earnings": 415747000.0,
+            "ebitda": 382661000.0,
+            "profitMargin": 24.65529776935403,
+            "revenueYoY": 24.717502215161318,
+            "earningsYoY": 1535.3426549283618
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": -152991000.0,
             "ebitda": -160559000.0,
             "profitMargin": -3.2137718856560924,
-            "revenueYoY": 58.19661453573652,
-            "earningsYoY": -153.30826884279406
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -86,10 +75,21 @@
             "annualLabel": "FY25",
             "revenue": 4800224000.0,
             "earnings": -106139000.0,
-            "ebitda": -16683000.0,
+            "ebitda": -16322000.0,
             "profitMargin": -2.211125980787563,
             "revenueYoY": 7.689815755810379,
             "earningsYoY": -175.65631437512027
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4993633000.0,
+            "earnings": 184088000.0,
+            "ebitda": 195835000.0,
+            "profitMargin": 3.6864543309450255,
+            "revenueYoY": 4.029166138913517,
+            "earningsYoY": 273.4404884161336
         }
     ]
 }

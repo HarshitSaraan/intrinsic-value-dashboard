@@ -2,17 +2,6 @@
     "symbol": "BELLACASA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 870479000.0,
-            "earnings": 43389000.0,
-            "ebitda": 64040000.0,
-            "profitMargin": 4.9844970412841665,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,22 +31,22 @@
             "earnings": 44544000.0,
             "ebitda": 87508000.0,
             "profitMargin": 4.9597598507083775,
-            "revenueYoY": 11.15583213279668,
-            "earningsYoY": 26.905982905982906
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 2058123000.0,
-            "earnings": 111619000.0,
-            "ebitda": 217361000.0,
-            "profitMargin": 5.423339615756687,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1106471000.0,
+            "earnings": 45651000.0,
+            "ebitda": 87309000.0,
+            "profitMargin": 4.12581983621803,
+            "revenueYoY": 27.071030720643126,
+            "earningsYoY": 5.2133029108760285
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": 77603000.0,
             "ebitda": 158845000.0,
             "profitMargin": 3.8487938762898666,
-            "revenueYoY": -2.0323858195064144,
-            "earningsYoY": -30.475098325553894
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -84,12 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 3485205000.0,
+            "revenue": 3485476000.0,
             "earnings": 157953000.0,
-            "ebitda": 293023000.0,
-            "profitMargin": 4.532100694220283,
-            "revenueYoY": 51.51945291000231,
+            "ebitda": 295587000.0,
+            "profitMargin": 4.531748317876812,
+            "revenueYoY": 51.53123464787386,
             "earningsYoY": 55.1265934670307
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4163967000.0,
+            "earnings": 201272000.0,
+            "ebitda": 367846000.0,
+            "profitMargin": 4.833659824873733,
+            "revenueYoY": 19.46623646239423,
+            "earningsYoY": 27.42524675061569
         }
     ]
 }

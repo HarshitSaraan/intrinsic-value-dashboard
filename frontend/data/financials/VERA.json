@@ -1,0 +1,50 @@
+{
+    "symbol": "VERA",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 349840000.0,
+            "earnings": 19673000.0,
+            "ebitda": 32976000.0,
+            "profitMargin": 5.623427852732678,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 407060177.86,
+            "earnings": 18194505.34,
+            "ebitda": 30860473.17,
+            "profitMargin": 4.469733550368964,
+            "revenueYoY": 16.356099319689005,
+            "earningsYoY": -7.515349260407667
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 393807470.0,
+            "earnings": 17959910.0,
+            "ebitda": 37282990.0,
+            "profitMargin": 4.560581341943565,
+            "revenueYoY": -3.255712197069302,
+            "earningsYoY": -1.2893746524905516
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 421638520.0,
+            "earnings": 20268490.0,
+            "ebitda": 37585530.0,
+            "profitMargin": 4.807077398905584,
+            "revenueYoY": 7.067171681634175,
+            "earningsYoY": 12.854073322193708
+        }
+    ]
+}

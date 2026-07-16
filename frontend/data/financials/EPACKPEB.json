@@ -2,17 +2,6 @@
     "symbol": "EPACKPEB",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2663329000.0,
-            "earnings": 116248000.0,
-            "ebitda": 270013000.0,
-            "profitMargin": 4.364763046548136,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -20,6 +9,17 @@
             "earnings": 200210000.0,
             "ebitda": 388397000.0,
             "profitMargin": 6.056015649269549,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 4339374000.0,
+            "earnings": 294670000.0,
+            "ebitda": 527787000.0,
+            "profitMargin": 6.790610811605545,
             "revenueYoY": null,
             "earningsYoY": null
         },

@@ -2,17 +2,6 @@
     "symbol": "ACEINTEG",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14400000.0,
-            "earnings": -13900000.0,
-            "ebitda": -18000000.0,
-            "profitMargin": -96.52777777777779,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,22 +31,22 @@
             "earnings": -2700000.0,
             "ebitda": -3300000.0,
             "profitMargin": -245.45454545454547,
-            "revenueYoY": -92.3076923076923,
-            "earningsYoY": -28.57142857142857
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 87400000.0,
-            "earnings": 9900000.0,
-            "ebitda": 16800000.0,
-            "profitMargin": 11.327231121281464,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 900000.0,
+            "earnings": -3400000.0,
+            "ebitda": -3300000.0,
+            "profitMargin": -377.77777777777777,
+            "revenueYoY": -93.75,
+            "earningsYoY": 75.36231884057972
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": 4700000.0,
             "ebitda": 8500000.0,
             "profitMargin": 6.801736613603474,
-            "revenueYoY": -20.938215102974826,
-            "earningsYoY": -52.52525252525253
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -90,6 +79,17 @@
             "profitMargin": -18.24561403508772,
             "revenueYoY": -6.455142231947483,
             "earningsYoY": -480.4878048780488
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8100000.0,
+            "earnings": -9500000.0,
+            "ebitda": -10600000.0,
+            "profitMargin": -117.28395061728396,
+            "revenueYoY": -90.52631578947368,
+            "earningsYoY": 39.1025641025641
         }
     ]
 }

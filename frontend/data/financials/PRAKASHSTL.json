@@ -2,17 +2,6 @@
     "symbol": "PRAKASHSTL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 211896000.0,
-            "earnings": 2577000.0,
-            "ebitda": 7330000.0,
-            "profitMargin": 1.2161626458262544,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,22 +31,22 @@
             "earnings": 3346000.0,
             "ebitda": 6973000.0,
             "profitMargin": 1.3684399947650832,
-            "revenueYoY": 27.072029934518245,
-            "earningsYoY": -50.48831015093222
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 462217000.0,
-            "earnings": 1635041000.0,
-            "ebitda": 1671286000.0,
-            "profitMargin": 353.738828299262,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 248066000.0,
+            "earnings": 364000.0,
+            "ebitda": 4270000.0,
+            "profitMargin": 0.1467351430667645,
+            "revenueYoY": 16.42683487745581,
+            "earningsYoY": -85.87504850601475
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": 41461000.0,
             "ebitda": 40347000.0,
             "profitMargin": 4.369356647247772,
-            "revenueYoY": 105.29405019720176,
-            "earningsYoY": -97.46422260970826
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -90,6 +79,17 @@
             "profitMargin": 1.6922080330579377,
             "revenueYoY": -27.611543792176953,
             "earningsYoY": -97.76168520556323
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 907467000.0,
+            "earnings": 8387000.0,
+            "ebitda": 20936000.0,
+            "profitMargin": 0.9242209358577227,
+            "revenueYoY": 18.516859391447667,
+            "earningsYoY": -35.27051014895423
         }
     ]
 }

@@ -1,0 +1,51 @@
+{
+    "symbol": "TURTLEMINT",
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2891980000.0,
+            "earnings": -478990000.0,
+            "ebitda": -416520000.0,
+            "profitMargin": -16.562700986867128,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 5379750000.0,
+            "earnings": -2837560000.0,
+            "ebitda": -2593930000.0,
+            "profitMargin": -52.74520191458711,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 5641680000.0,
+            "earnings": -1869900000.0,
+            "ebitda": -1533570000.0,
+            "profitMargin": -33.14438252435445,
+            "revenueYoY": 4.868813606580232,
+            "earningsYoY": 34.10183397003059
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7002650000.0,
+            "earnings": -2025620000.0,
+            "ebitda": -1674740000.0,
+            "profitMargin": -28.926477833391644,
+            "revenueYoY": 24.123488039023837,
+            "earningsYoY": -8.327718059789294
+        }
+    ]
+}

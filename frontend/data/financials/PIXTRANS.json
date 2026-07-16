@@ -2,6 +2,17 @@
     "symbol": "PIXTRANS",
     "quarterly": [
         {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1627711000.0,
+            "earnings": 226490000.0,
+            "ebitda": 369589000.0,
+            "profitMargin": 13.914632265801485,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -20,17 +31,6 @@
             "earnings": 235434000.0,
             "ebitda": 391527000.0,
             "profitMargin": 16.96366811925019,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-12-31",
-            "quarterLabel": "Q3 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1512207000.0,
-            "earnings": 352636000.0,
-            "ebitda": 525358000.0,
-            "profitMargin": 23.31929425005968,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 5934051000.0,
-            "earnings": 1128762000.0,
-            "ebitda": 1796921000.0,
-            "profitMargin": 19.02177787147431,
-            "revenueYoY": 21.223538246473893,
-            "earningsYoY": 36.01557821219289
+            "revenue": 5816592000.0,
+            "earnings": 1128763000.0,
+            "ebitda": 1793904000.0,
+            "profitMargin": 19.405916729246268,
+            "revenueYoY": 18.824031471272168,
+            "earningsYoY": 36.0156987119778
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 5823147000.0,
+            "revenue": 5733114000.0,
             "earnings": 1068872000.0,
-            "ebitda": 1705419000.0,
-            "profitMargin": 18.355573026063055,
-            "revenueYoY": -1.8689424812830222,
-            "earningsYoY": -5.30581291716057
+            "ebitda": 1703809000.0,
+            "profitMargin": 18.643829513943032,
+            "revenueYoY": -1.4351702852804529,
+            "earningsYoY": -5.305896809161887
         }
     ]
 }

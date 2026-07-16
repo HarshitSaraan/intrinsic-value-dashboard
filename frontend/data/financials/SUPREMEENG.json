@@ -1,6 +1,51 @@
 {
     "symbol": "SUPREMEENG",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 43364000.0,
+            "earnings": -88569000.0,
+            "ebitda": -54123000.0,
+            "profitMargin": -204.2454570611567,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 83991000.0,
+            "earnings": 732000.0,
+            "ebitda": 8112000.0,
+            "profitMargin": 0.8715219487802265,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 51363000.0,
+            "earnings": -6490000.0,
+            "ebitda": -1949000.0,
+            "profitMargin": -12.635554776784847,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 68751000.0,
+            "earnings": 677000.0,
+            "ebitda": 7126000.0,
+            "profitMargin": 0.9847129496298237,
+            "revenueYoY": 44.89451832493835,
+            "earningsYoY": 111.43001857166976
+        }
+    ],
     "annual": [
         {
             "date": "2024-03-31",
