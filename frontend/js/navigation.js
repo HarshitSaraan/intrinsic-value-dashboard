@@ -401,7 +401,9 @@
       } else {
         document.documentElement.removeAttribute("data-theme");
       }
-      localStorage.setItem("iv-theme", newTheme);
+      try {
+        localStorage.setItem("iv-theme", newTheme);
+      } catch (e) {}
       updateToggleIcon();
       updateLogoImages();
     };
