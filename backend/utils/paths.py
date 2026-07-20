@@ -30,6 +30,7 @@ class DynamicPathProxy:
 CSV_PATH = DynamicPathProxy("stock_master.csv")
 HW_HISTORY_PATH = DynamicPathProxy("headwind_tailwind_history.csv")
 SECTOR_DATA_PATH = DynamicPathProxy("sector_data.csv")
+TRAFFIC_DB_PATH = DynamicPathProxy("traffic.db")
 
 def get_writable_path(proxy: DynamicPathProxy) -> Path:
     filename = proxy.filename

@@ -5,8 +5,11 @@
   var baseUrl = window.location.protocol === 'file:' ? 'http://127.0.0.1:8080' : '';
   var loginEndpoint = baseUrl + '/admin/login';
   var uploadEndpoint = baseUrl + '/admin/upload-csv';
+  var statsEndpoint = baseUrl + '/api/admin/traffic/stats';
+  var liveEndpoint = baseUrl + '/api/admin/traffic/live';
 
   var SESSION_TIMEOUT = 15 * 60 * 1000; // 15 minutes of inactivity in milliseconds
+  var livePollInterval = null;
 
   // Check if session has expired
   function checkSessionTimeout() {
@@ -37,6 +40,7 @@
   function logoutAdmin(isExpired) {
     sessionStorage.removeItem('admin_token');
     sessionStorage.removeItem('admin_last_activity');
+    if (livePollInterval) clearInterval(livePollInterval);
     
     // Reset status bars and file inputs
     var types = ['stock_master', 'sector_data', 'headwind_tailwind_history'];
@@ -68,9 +72,12 @@
     if (token === 'admin-session-token') {
       if (loginSection) loginSection.style.display = 'none';
       if (dashSection) dashSection.style.display = 'block';
+      loadTrafficStats(30);
+      startLivePolling();
     } else {
       if (loginSection) loginSection.style.display = 'block';
       if (dashSection) dashSection.style.display = 'none';
+      if (livePollInterval) clearInterval(livePollInterval);
     }
   }
 
@@ -296,6 +303,7 @@
     bindLoginEvents();
     bindLogoutEvents();
     bindUploadEvents();
+    bindTabEvents();
 
     // Listen to user interactions for inactivity resets
     var activityEvents = ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'];
@@ -306,4 +314,235 @@
     // Run background check every 10 seconds
     setInterval(checkSessionTimeout, 10000);
   });
+
+  // --- TRAFFIC ANALYTICS & TAB LOGIC ---
+  function bindTabEvents() {
+    var tabTraffic = app.querySelector('#tabBtnTraffic');
+    var tabDatasets = app.querySelector('#tabBtnDatasets');
+    var secTraffic = app.querySelector('#adminTrafficSection');
+    var secDatasets = app.querySelector('#adminDatasetsSection');
+    var tabTitle = app.querySelector('#adminTabTitle');
+    var tabDesc = app.querySelector('#adminTabDesc');
+
+    if (tabTraffic && tabDatasets) {
+      tabTraffic.addEventListener('click', function () {
+        tabTraffic.classList.add('active');
+        tabDatasets.classList.remove('active');
+        if (secTraffic) secTraffic.classList.add('active');
+        if (secDatasets) secDatasets.classList.remove('active');
+        if (tabTitle) tabTitle.textContent = 'Traffic Analytics & Live Pulse';
+        if (tabDesc) tabDesc.textContent = 'Real-time visitor monitoring, iframe embed insights, and traffic analytics.';
+      });
+
+      tabDatasets.addEventListener('click', function () {
+        tabDatasets.classList.add('active');
+        tabTraffic.classList.remove('active');
+        if (secDatasets) secDatasets.classList.add('active');
+        if (secTraffic) secTraffic.classList.remove('active');
+        if (tabTitle) tabTitle.textContent = 'Upload CSV Datasets';
+        if (tabDesc) tabDesc.textContent = 'Overwrites the active datasets on disk to update calculations globally.';
+      });
+    }
+
+    var rangeSelect = app.querySelector('#trafficRangeSelect');
+    if (rangeSelect) {
+      rangeSelect.addEventListener('change', function () {
+        var days = parseInt(rangeSelect.value, 10) || 30;
+        loadTrafficStats(days);
+      });
+    }
+
+    var refreshBtn = app.querySelector('#refreshTrafficBtn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', function () {
+        var days = parseInt(app.querySelector('#trafficRangeSelect').value, 10) || 30;
+        loadTrafficStats(days);
+        pollLiveUsers();
+      });
+    }
+  }
+
+  function startLivePolling() {
+    pollLiveUsers();
+    if (livePollInterval) clearInterval(livePollInterval);
+    livePollInterval = setInterval(pollLiveUsers, 5000);
+  }
+
+  function pollLiveUsers() {
+    var token = sessionStorage.getItem('admin_token');
+    if (!token) return;
+
+    fetch(liveEndpoint, {
+      headers: { 'Authorization': 'Bearer ' + token }
+    })
+    .then(function (res) {
+      if (!res.ok) return null;
+      return res.json();
+    })
+    .then(function (data) {
+      if (!data) return;
+      var liveText = app.querySelector('#ivLiveCountText');
+      if (liveText) {
+        var count = data.total_live || 0;
+        liveText.textContent = count + ' LIVE';
+      }
+    })
+    .catch(function () {});
+  }
+
+  function loadTrafficStats(days) {
+    var token = sessionStorage.getItem('admin_token');
+    if (!token) return;
+
+    fetch(statsEndpoint + '?days=' + days, {
+      headers: { 'Authorization': 'Bearer ' + token }
+    })
+    .then(function (res) {
+      if (!res.ok) throw new Error('Failed to fetch stats');
+      return res.json();
+    })
+    .then(function (data) {
+      renderTrafficDashboard(data, days);
+    })
+    .catch(function (err) {
+      console.error('Traffic stats error:', err);
+    });
+  }
+
+  function renderTrafficDashboard(data, days) {
+    var summary = data.summary || {};
+    var keyMap = { 1: 'today', 7: 'seven_days', 30: 'thirty_days' };
+    var activeKey = keyMap[days] || 'thirty_days';
+    var periodData = summary[activeKey] || { views: 0, uniques: 0 };
+
+    // Update KPI Cards
+    var elUniques = app.querySelector('#kpiUniqueVisitors');
+    var elViews = app.querySelector('#kpiTotalViews');
+    var elTopEmbed = app.querySelector('#kpiTopEmbed');
+    var elTopTool = app.querySelector('#kpiTopTool');
+
+    if (elUniques) elUniques.textContent = Number(periodData.uniques || 0).toLocaleString();
+    if (elViews) elViews.textContent = Number(periodData.views || 0).toLocaleString();
+
+    var topEmbedHost = (data.top_embeds && data.top_embeds.length > 0) ? data.top_embeds[0].host : 'Direct / Main Site';
+    if (elTopEmbed) elTopEmbed.textContent = topEmbedHost;
+
+    var topToolName = (data.top_pages && data.top_pages.length > 0) ? data.top_pages[0].page : 'dashboard.html';
+    if (elTopTool) elTopTool.textContent = topToolName;
+
+    // Render SVG Chart
+    renderTrafficChart(data.daily_trends || []);
+
+    // Render Top Pages Table
+    var pagesTbody = app.querySelector('#topPagesTableBody');
+    if (pagesTbody) {
+      var pages = data.top_pages || [];
+      if (pages.length === 0) {
+        pagesTbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color: var(--iv-text-muted);">No traffic recorded yet</td></tr>';
+      } else {
+        pagesTbody.innerHTML = pages.map(function (p) {
+          return '<tr><td><code>' + escapeHtml(p.page) + '</code></td><td><strong>' + p.views + '</strong></td><td>' + p.uniques + '</td></tr>';
+        }).join('');
+      }
+    }
+
+    // Render Top Embed Hosts Table
+    var embedsTbody = app.querySelector('#topEmbedsTableBody');
+    if (embedsTbody) {
+      var embeds = data.top_embeds || [];
+      if (embeds.length === 0) {
+        embedsTbody.innerHTML = '<tr><td colspan="2" style="text-align:center; color: var(--iv-text-muted);">No external iframe hosts yet</td></tr>';
+      } else {
+        embedsTbody.innerHTML = embeds.map(function (e) {
+          return '<tr><td><code>' + escapeHtml(e.host) + '</code></td><td><strong>' + e.views + '</strong></td></tr>';
+        }).join('');
+      }
+    }
+
+    // Render Device Breakdown
+    var devs = data.devices || { Desktop: 0, Mobile: 0, Tablet: 0 };
+    setDeviceBar('Desktop', devs.Desktop || 0);
+    setDeviceBar('Mobile', devs.Mobile || 0);
+    setDeviceBar('Tablet', devs.Tablet || 0);
+  }
+
+  function setDeviceBar(type, val) {
+    var pctEl = app.querySelector('#pct' + type);
+    var barEl = app.querySelector('#bar' + type);
+    if (pctEl) pctEl.textContent = val + '%';
+    if (barEl) barEl.style.width = val + '%';
+  }
+
+  function escapeHtml(str) {
+    return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // Render SVG Line Chart for daily trends
+  function renderTrafficChart(trends) {
+    var container = app.querySelector('#trafficChartContainer');
+    if (!container) return;
+
+    if (!trends || trends.length === 0) {
+      container.innerHTML = '<div class="iv-chart-placeholder">No traffic trend data yet</div>';
+      return;
+    }
+
+    var w = container.clientWidth || 700;
+    var h = 240;
+    var padding = { top: 20, right: 20, bottom: 40, left: 40 };
+
+    var maxViews = Math.max.apply(null, trends.map(function (t) { return t.views; }).concat([10]));
+    var maxVal = Math.ceil(maxViews * 1.15);
+
+    var pointsViews = [];
+    var pointsUniques = [];
+
+    var stepX = (w - padding.left - padding.right) / Math.max(1, trends.length - 1);
+
+    trends.forEach(function (t, i) {
+      var x = padding.left + i * stepX;
+      var yViews = h - padding.bottom - ((t.views / maxVal) * (h - padding.top - padding.bottom));
+      var yUniques = h - padding.bottom - ((t.uniques / maxVal) * (h - padding.top - padding.bottom));
+
+      pointsViews.push(x.toFixed(1) + ',' + yViews.toFixed(1));
+      pointsUniques.push(x.toFixed(1) + ',' + yUniques.toFixed(1));
+    });
+
+    var svgHtml = '<svg width="100%" height="100%" viewBox="0 0 ' + w + ' ' + h + '" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">';
+
+    // Horizontal Grid Lines
+    for (var g = 0; g <= 4; g++) {
+      var gy = padding.top + (g * (h - padding.top - padding.bottom) / 4);
+      var gVal = Math.round(maxVal - (g * maxVal / 4));
+      svgHtml += '<line x1="' + padding.left + '" y1="' + gy + '" x2="' + (w - padding.right) + '" y2="' + gy + '" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>';
+      svgHtml += '<text x="' + (padding.left - 8) + '" y="' + (gy + 4) + '" fill="var(--iv-text-muted)" font-size="10" text-anchor="end">' + gVal + '</text>';
+    }
+
+    // X Axis Labels
+    var stepLabel = Math.max(1, Math.floor(trends.length / 7));
+    trends.forEach(function (t, i) {
+      if (i % stepLabel === 0 || i === trends.length - 1) {
+        var lx = padding.left + i * stepX;
+        svgHtml += '<text x="' + lx + '" y="' + (h - 10) + '" fill="var(--iv-text-muted)" font-size="10" text-anchor="middle">' + escapeHtml(t.label) + '</text>';
+      }
+    });
+
+    // Draw Line 1: Page Views (Blue)
+    svgHtml += '<polyline fill="none" stroke="#3b82f6" stroke-width="2.5" points="' + pointsViews.join(' ') + '"/>';
+
+    // Draw Line 2: Unique Visitors (Green)
+    svgHtml += '<polyline fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="3 3" points="' + pointsUniques.join(' ') + '"/>';
+
+    // Draw Dots
+    trends.forEach(function (t, i) {
+      var pV = pointsViews[i].split(',');
+      var pU = pointsUniques[i].split(',');
+      svgHtml += '<circle cx="' + pV[0] + '" cy="' + pV[1] + '" r="3.5" fill="#3b82f6"><title>' + escapeHtml(t.label) + ': ' + t.views + ' Views</title></circle>';
+      svgHtml += '<circle cx="' + pU[0] + '" cy="' + pU[1] + '" r="3" fill="#10b981"><title>' + escapeHtml(t.label) + ': ' + t.uniques + ' Uniques</title></circle>';
+    });
+
+    svgHtml += '</svg>';
+    container.innerHTML = svgHtml;
+  }
+
 })();

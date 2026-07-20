@@ -55,90 +55,252 @@
       <!-- Admin Header -->
       <div class="iv-admin-header">
         <div class="iv-admin-header-title">
-          <div class="iv-kicker">Administration Panel</div>
-          <h2>Upload CSV Datasets</h2>
-          <p>Overwrites the active datasets on disk to update calculations globally.</p>
+          <div class="iv-kicker">Administration & Control</div>
+          <h2 id="adminTabTitle">Traffic Analytics & Live Pulse</h2>
+          <p id="adminTabDesc">Real-time visitor monitoring, iframe embed insights, and traffic analytics.</p>
         </div>
-        <button id="adminLogoutButton" class="iv-admin-logout-btn">
-          Sign Out
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <!-- Live User Pill -->
+          <div class="iv-live-badge" title="Active users in last 60 seconds">
+            <span class="iv-live-dot"></span>
+            <span id="ivLiveCountText">0 LIVE</span>
+          </div>
+          <button id="adminLogoutButton" class="iv-admin-logout-btn">
+            Sign Out
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="iv-admin-tabs">
+        <button type="button" class="iv-admin-tab-btn active" id="tabBtnTraffic">
+          <span class="tab-icon">📊</span> Traffic Analytics
+        </button>
+        <button type="button" class="iv-admin-tab-btn" id="tabBtnDatasets">
+          <span class="tab-icon">📁</span> Update CSV Datasets
         </button>
       </div>
 
-      <!-- CSV Upload Grid -->
-      <div class="iv-admin-grid">
-        
-        <!-- 1. Stock Master -->
-        <div class="iv-admin-card" id="card-stock_master">
-          <div class="iv-admin-card-head">
-            <span class="iv-admin-card-icon">📂</span>
-            <h4>Stock Master Dataset</h4>
-            <p>File: <code>stock_master.csv</code></p>
-            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
-              Updates ticker codes, sector groups, prices, Graham values, market caps, and fundamentals used across search, ranking, and strategies.
-            </p>
+      <!-- TAB 1: TRAFFIC ANALYTICS PANEL -->
+      <div id="adminTrafficSection" class="iv-admin-tab-content active">
+        <!-- Filter Subbar -->
+        <div class="iv-analytics-filter-bar">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 13px; color: var(--iv-text-muted);">Time Period:</span>
+            <select id="trafficRangeSelect" class="iv-analytics-select">
+              <option value="30">Last 30 Days</option>
+              <option value="7">Last 7 Days</option>
+              <option value="1">Today</option>
+            </select>
           </div>
-          
-          <div>
-            <input type="file" id="file-stock_master" accept=".csv" style="display: none;">
-            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-stock_master').click()">
-              <p class="zone-prompt">Drag & drop or click to choose file</p>
-              <p class="iv-admin-file-name"></p>
+          <button type="button" id="refreshTrafficBtn" class="iv-analytics-refresh-btn">
+            🔄 Refresh Stats
+          </button>
+        </div>
+
+        <!-- 4 KPI Summary Cards -->
+        <div class="iv-analytics-kpi-grid">
+          <div class="iv-analytics-kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-icon">👥</span>
+              <span class="kpi-title">Unique Visitors</span>
             </div>
-            <button class="iv-admin-upload-btn" id="btn-stock_master" disabled>
-              Update stock_master.csv
-            </button>
-            <div class="iv-admin-status-bar" id="status-stock_master"></div>
+            <div class="kpi-value" id="kpiUniqueVisitors">—</div>
+            <div class="kpi-sub" id="kpiUniqueSub">Selected period</div>
+          </div>
+
+          <div class="iv-analytics-kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-icon">📊</span>
+              <span class="kpi-title">Total Page Views</span>
+            </div>
+            <div class="kpi-value" id="kpiTotalViews">—</div>
+            <div class="kpi-sub" id="kpiViewsSub">Selected period</div>
+          </div>
+
+          <div class="iv-analytics-kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-icon">🖼️</span>
+              <span class="kpi-title">Top Embed Host</span>
+            </div>
+            <div class="kpi-value text-sm" id="kpiTopEmbed">—</div>
+            <div class="kpi-sub">Primary iframe referrer</div>
+          </div>
+
+          <div class="iv-analytics-kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-icon">⚡</span>
+              <span class="kpi-title">Top Tool / Page</span>
+            </div>
+            <div class="kpi-value text-sm" id="kpiTopTool">—</div>
+            <div class="kpi-sub">Most viewed feature</div>
           </div>
         </div>
 
-        <!-- 2. Sector Valuation Data -->
-        <div class="iv-admin-card" id="card-sector_data">
-          <div class="iv-admin-card-head">
-            <span class="iv-admin-card-icon">📊</span>
-            <h4>Sector Valuation Data</h4>
-            <p>File: <code>sector_data.csv</code></p>
-            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
-              Updates sector index history, P/E ratios, P/B ratios, and dividend yields mapped in the Market Valuation Tracker graphs.
-            </p>
-          </div>
-          
-          <div>
-            <input type="file" id="file-sector_data" accept=".csv" style="display: none;">
-            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-sector_data').click()">
-              <p class="zone-prompt">Drag & drop or click to choose file</p>
-              <p class="iv-admin-file-name"></p>
+        <!-- Traffic Trend Chart -->
+        <div class="iv-analytics-chart-card">
+          <div class="iv-analytics-card-header">
+            <div>
+              <h3>Traffic Overview Trend</h3>
+              <p style="font-size: 12px; color: var(--iv-text-muted); margin-top: 2px;">Daily breakdown of Page Views vs Unique Visitors</p>
             </div>
-            <button class="iv-admin-upload-btn" id="btn-sector_data" disabled>
-              Update sector_data.csv
-            </button>
-            <div class="iv-admin-status-bar" id="status-sector_data"></div>
+            <div class="iv-chart-legend">
+              <span class="legend-item"><span class="legend-dot views"></span> Page Views</span>
+              <span class="legend-item"><span class="legend-dot uniques"></span> Unique Visitors</span>
+            </div>
+          </div>
+          <div class="iv-chart-container" id="trafficChartContainer">
+            <!-- SVG / Canvas Chart injected by JS -->
+            <div class="iv-chart-placeholder">Loading chart...</div>
           </div>
         </div>
 
-        <!-- 3. Headwind History -->
-        <div class="iv-admin-card" id="card-headwind_tailwind_history">
-          <div class="iv-admin-card-head">
-            <span class="iv-admin-card-icon">📈</span>
-            <h4>Headwind / Tailwind History</h4>
-            <p>File: <code>headwind_tailwind_history.csv</code></p>
-            <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
-              Updates monthly historical promoter holding increases and decreases rendered in the Monthly Indicator timelines.
-            </p>
-          </div>
+        <!-- 3 Data Breakdown Cards -->
+        <div class="iv-analytics-breakdown-grid">
           
-          <div>
-            <input type="file" id="file-headwind_tailwind_history" accept=".csv" style="display: none;">
-            <div class="iv-admin-upload-zone" onclick="document.getElementById('file-headwind_tailwind_history').click()">
-              <p class="zone-prompt">Drag & drop or click to choose file</p>
-              <p class="iv-admin-file-name"></p>
+          <!-- Top Pages Table -->
+          <div class="iv-analytics-table-card">
+            <div class="card-title-head">
+              <h4>📄 Top Pages & Tools</h4>
             </div>
-            <button class="iv-admin-upload-btn" id="btn-headwind_tailwind_history" disabled>
-              Update headwind_tailwind_history.csv
-            </button>
-            <div class="iv-admin-status-bar" id="status-headwind_tailwind_history"></div>
+            <div class="table-scroll-box">
+              <table class="iv-analytics-table">
+                <thead>
+                  <tr>
+                    <th>Page / Tool</th>
+                    <th>Views</th>
+                    <th>Uniques</th>
+                  </tr>
+                </thead>
+                <tbody id="topPagesTableBody">
+                  <tr><td colspan="3" style="text-align:center; color: var(--iv-text-muted);">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
 
+          <!-- Top Embed Domains Table -->
+          <div class="iv-analytics-table-card">
+            <div class="card-title-head">
+              <h4>🌐 Top Iframe Embed Hosts</h4>
+            </div>
+            <div class="table-scroll-box">
+              <table class="iv-analytics-table">
+                <thead>
+                  <tr>
+                    <th>Embedding Host Domain</th>
+                    <th>Views</th>
+                  </tr>
+                </thead>
+                <tbody id="topEmbedsTableBody">
+                  <tr><td colspan="2" style="text-align:center; color: var(--iv-text-muted);">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Device Breakdown Card -->
+          <div class="iv-analytics-table-card">
+            <div class="card-title-head">
+              <h4>📱 Device Breakdown</h4>
+            </div>
+            <div class="device-breakdown-box" id="deviceBreakdownBox">
+              <div class="device-bar-row">
+                <div class="device-label"><span>🖥️ Desktop</span> <strong id="pctDesktop">0%</strong></div>
+                <div class="device-track"><div class="device-fill desktop" id="barDesktop" style="width: 0%;"></div></div>
+              </div>
+              <div class="device-bar-row">
+                <div class="device-label"><span>📱 Mobile</span> <strong id="pctMobile">0%</strong></div>
+                <div class="device-track"><div class="device-fill mobile" id="barMobile" style="width: 0%;"></div></div>
+              </div>
+              <div class="device-bar-row">
+                <div class="device-label"><span>📱 Tablet</span> <strong id="pctTablet">0%</strong></div>
+                <div class="device-track"><div class="device-fill tablet" id="barTablet" style="width: 0%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: DATASETS UPLOAD PANEL (Existing) -->
+      <div id="adminDatasetsSection" class="iv-admin-tab-content">
+        <!-- CSV Upload Grid -->
+        <div class="iv-admin-grid">
+          
+          <!-- 1. Stock Master -->
+          <div class="iv-admin-card" id="card-stock_master">
+            <div class="iv-admin-card-head">
+              <span class="iv-admin-card-icon">📂</span>
+              <h4>Stock Master Dataset</h4>
+              <p>File: <code>stock_master.csv</code></p>
+              <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+                Updates ticker codes, sector groups, prices, Graham values, market caps, and fundamentals used across search, ranking, and strategies.
+              </p>
+            </div>
+            
+            <div>
+              <input type="file" id="file-stock_master" accept=".csv" style="display: none;">
+              <div class="iv-admin-upload-zone" onclick="document.getElementById('file-stock_master').click()">
+                <p class="zone-prompt">Drag & drop or click to choose file</p>
+                <p class="iv-admin-file-name"></p>
+              </div>
+              <button class="iv-admin-upload-btn" id="btn-stock_master" disabled>
+                Update stock_master.csv
+              </button>
+              <div class="iv-admin-status-bar" id="status-stock_master"></div>
+            </div>
+          </div>
+
+          <!-- 2. Sector Valuation Data -->
+          <div class="iv-admin-card" id="card-sector_data">
+            <div class="iv-admin-card-head">
+              <span class="iv-admin-card-icon">📊</span>
+              <h4>Sector Valuation Data</h4>
+              <p>File: <code>sector_data.csv</code></p>
+              <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+                Updates sector index history, P/E ratios, P/B ratios, and dividend yields mapped in the Market Valuation Tracker graphs.
+              </p>
+            </div>
+            
+            <div>
+              <input type="file" id="file-sector_data" accept=".csv" style="display: none;">
+              <div class="iv-admin-upload-zone" onclick="document.getElementById('file-sector_data').click()">
+                <p class="zone-prompt">Drag & drop or click to choose file</p>
+                <p class="iv-admin-file-name"></p>
+              </div>
+              <button class="iv-admin-upload-btn" id="btn-sector_data" disabled>
+                Update sector_data.csv
+              </button>
+              <div class="iv-admin-status-bar" id="status-sector_data"></div>
+            </div>
+          </div>
+
+          <!-- 3. Headwind History -->
+          <div class="iv-admin-card" id="card-headwind_tailwind_history">
+            <div class="iv-admin-card-head">
+              <span class="iv-admin-card-icon">📈</span>
+              <h4>Headwind / Tailwind History</h4>
+              <p>File: <code>headwind_tailwind_history.csv</code></p>
+              <p style="margin-top: 6px; font-size: 11.5px; color: var(--iv-text-muted);">
+                Updates monthly historical promoter holding increases and decreases rendered in the Monthly Indicator timelines.
+              </p>
+            </div>
+            
+            <div>
+              <input type="file" id="file-headwind_tailwind_history" accept=".csv" style="display: none;">
+              <div class="iv-admin-upload-zone" onclick="document.getElementById('file-headwind_tailwind_history').click()">
+                <p class="zone-prompt">Drag & drop or click to choose file</p>
+                <p class="iv-admin-file-name"></p>
+              </div>
+              <button class="iv-admin-upload-btn" id="btn-headwind_tailwind_history" disabled>
+                Update headwind_tailwind_history.csv
+              </button>
+              <div class="iv-admin-status-bar" id="status-headwind_tailwind_history"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -148,5 +310,6 @@
   
   <script src="../js/navigation.js?v=2"></script>
   <script src="../js/modules/admin.js"></script>
+  <script src="../js/traffic-tracker.js"></script>
 </body>
 </html>

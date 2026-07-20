@@ -434,6 +434,74 @@ async def search_stocks_endpoint() -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# --- TRAFFIC ANALYTICS ENDPOINTS ---
+from pydantic import BaseModel
+from backend.services.analytics_db import record_pageview, record_heartbeat, get_analytics_summary, get_live_users
+
+
+class TrackPayload(BaseModel):
+    visitor_id: str
+    page_path: str
+    page_title: str = ""
+    referrer: str = ""
+    parent_host: str = ""
+    device_type: str = "Desktop"
+    browser: str = "Unknown"
+    is_heartbeat: bool = False
+
+
+@router.post("/traffic/track")
+async def track_traffic(payload: TrackPayload) -> dict[str, str]:
+    try:
+        if payload.is_heartbeat:
+            record_heartbeat(
+                visitor_id=payload.visitor_id,
+                current_page=payload.page_path,
+                parent_host=payload.parent_host,
+                device_type=payload.device_type,
+            )
+        else:
+            record_pageview(
+                visitor_id=payload.visitor_id,
+                page_path=payload.page_path,
+                page_title=payload.page_title,
+                referrer=payload.referrer,
+                parent_host=payload.parent_host,
+                device_type=payload.device_type,
+                browser=payload.browser,
+            )
+        return {"status": "ok"}
+    except Exception as e:
+        # Silently log error to avoid breaking frontend user flow
+        return {"status": "error", "message": str(e)}
+
+
+@router.get("/admin/traffic/stats")
+async def admin_traffic_stats(
+    days: int = 30,
+    authorization: str = Header(None)
+) -> dict[str, Any]:
+    if not authorization or authorization != "Bearer admin-session-token":
+        raise HTTPException(status_code=401, detail="Unauthorized admin session")
+    try:
+        return get_analytics_summary(days=days)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/admin/traffic/live")
+async def admin_traffic_live(
+    authorization: str = Header(None)
+) -> dict[str, Any]:
+    if not authorization or authorization != "Bearer admin-session-token":
+        raise HTTPException(status_code=401, detail="Unauthorized admin session")
+    try:
+        return get_live_users()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
 
 
 
