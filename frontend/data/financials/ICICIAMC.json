@@ -2,24 +2,13 @@
     "symbol": "ICICIAMC",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 12266600000.0,
-            "earnings": 6318400000.0,
-            "ebitda": 8541400000.0,
-            "profitMargin": 51.50897559225866,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 12691900000.0,
-            "earnings": 6917100000.0,
-            "ebitda": 9453000000.0,
-            "profitMargin": 54.500114246093965,
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 14022800000.0,
+            "earnings": 8341000000.0,
+            "ebitda": 11176600000.0,
+            "profitMargin": 59.48170122942636,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 9170900000.0,
             "ebitda": 12492400000.0,
             "profitMargin": 60.547181894406044,
-            "revenueYoY": 23.47920369132441,
-            "earningsYoY": 45.145923018485696
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 7634200000.0,
             "ebitda": 10707900000.0,
             "profitMargin": 50.32399259068826,
-            "revenueYoY": 19.525839314838596,
-            "earningsYoY": 10.36706134073528
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15642200000.0,
+            "earnings": 9646300000.0,
+            "ebitda": 13134500000.0,
+            "profitMargin": 61.668435386326735,
+            "revenueYoY": 17.551308739206565,
+            "earningsYoY": 23.096064519422182
         }
     ],
     "annual": [

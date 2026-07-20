@@ -2,17 +2,6 @@
     "symbol": "JUSTDIAL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2892000000.0,
-            "earnings": 1576000000.0,
-            "ebitda": 1947300000.0,
-            "profitMargin": 54.49515905947441,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1179300000.0,
             "ebitda": 1587900000.0,
             "profitMargin": 38.578298276031276,
-            "revenueYoY": 6.389865311662549,
-            "earningsYoY": -10.189627598811972
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 32.54784533263898,
             "revenueYoY": 6.2378976486860305,
             "earningsYoY": -36.54822335025381
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3274700000.0,
+            "earnings": 1662200000.0,
+            "ebitda": 2188600000.0,
+            "profitMargin": 50.758848138760804,
+            "revenueYoY": 9.940911837776136,
+            "earningsYoY": 4.115252113999373
         }
     ],
     "annual": [

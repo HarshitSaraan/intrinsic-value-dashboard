@@ -2,17 +2,6 @@
     "symbol": "360ONE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7211200000.0,
-            "earnings": 2496000000.0,
-            "ebitda": 5621400000.0,
-            "profitMargin": 34.612824495229646,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3272800000.0,
             "ebitda": 7638900000.0,
             "profitMargin": 40.548610508839964,
-            "revenueYoY": 37.641541609822646,
-            "earningsYoY": 18.378124208774913
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 35.61701287807767,
             "revenueYoY": 12.41956955846461,
             "earningsYoY": 15.681089743589743
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8983200000.0,
+            "earnings": 3305300000.0,
+            "ebitda": 8196100000.0,
+            "profitMargin": 36.794238133404576,
+            "revenueYoY": 35.53818763390567,
+            "earningsYoY": 16.109881617311274
         }
     ],
     "annual": [

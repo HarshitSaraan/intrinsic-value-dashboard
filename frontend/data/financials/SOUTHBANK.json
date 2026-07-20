@@ -2,17 +2,6 @@
     "symbol": "SOUTHBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14406600000.0,
-            "earnings": 3424100000.0,
-            "ebitda": null,
-            "profitMargin": 23.767578748629102,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3744800000.0,
             "ebitda": null,
             "profitMargin": 27.406122613271272,
-            "revenueYoY": 6.887731155543039,
-            "earningsYoY": 9.497076023391813
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.31028228440557,
             "revenueYoY": -9.682367803645551,
             "earningsYoY": 18.980169971671387
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14043100000.0,
+            "earnings": 3776600000.0,
+            "ebitda": null,
+            "profitMargin": 26.892922502866178,
+            "revenueYoY": -3.4347365670512837,
+            "earningsYoY": 17.22382593040941
         }
     ],
     "annual": [

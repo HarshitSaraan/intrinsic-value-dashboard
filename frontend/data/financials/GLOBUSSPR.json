@@ -2,17 +2,6 @@
     "symbol": "GLOBUSSPR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6998335000.0,
-            "earnings": 178391000.0,
-            "ebitda": 597096000.0,
-            "profitMargin": 2.5490491666946493,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 213421000.0,
             "ebitda": 715460000.0,
             "profitMargin": 3.3752514979170076,
-            "revenueYoY": -3.4302785443297124,
-            "earningsYoY": 284.5492711580389
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7887841000.0,
+            "earnings": 265881000.0,
+            "ebitda": 792823000.0,
+            "profitMargin": 3.370770277950583,
+            "revenueYoY": 12.71025179560567,
+            "earningsYoY": 49.043954011132854
         }
     ],
     "annual": [

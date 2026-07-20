@@ -2,17 +2,6 @@
     "symbol": "POLYCAB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 69857980000.0,
-            "earnings": 7266680000.0,
-            "ebitda": 10734580000.0,
-            "profitMargin": 10.402075754266011,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6216900000.0,
             "ebitda": 10055650000.0,
             "profitMargin": 8.317055482221054,
-            "revenueYoY": 45.435405514414676,
-            "earningsYoY": 35.87159632570368
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.717558858802386,
             "revenueYoY": 26.89283314518971,
             "earningsYoY": 6.343749827981967
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 82097320000.0,
+            "earnings": 7843370000.0,
+            "ebitda": 12411140000.0,
+            "profitMargin": 9.553746699648661,
+            "revenueYoY": 39.007202196554815,
+            "earningsYoY": 32.46228389129924
         }
     ],
     "annual": [

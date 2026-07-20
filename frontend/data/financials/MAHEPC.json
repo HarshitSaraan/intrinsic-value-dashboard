@@ -2,24 +2,13 @@
     "symbol": "MAHEPC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 958900000.0,
-            "earnings": 62500000.0,
-            "ebitda": 111300000.0,
-            "profitMargin": 6.5178850766503285,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 621700000.0,
+            "revenue": 620400000.0,
             "earnings": 9800000.0,
             "ebitda": 28700000.0,
-            "profitMargin": 1.5763229853627152,
+            "profitMargin": 1.5796260477111541,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 64900000.0,
             "ebitda": 102100000.0,
             "profitMargin": 6.943404300845191,
-            "revenueYoY": 14.757519950890115,
-            "earningsYoY": 2.204724409448819
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.4766355140186915,
             "revenueYoY": 11.586192512253623,
             "earningsYoY": -23.36
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 541600000.0,
+            "earnings": -21400000.0,
+            "ebitda": -10600000.0,
+            "profitMargin": -3.9512555391432795,
+            "revenueYoY": -12.70148291424887,
+            "earningsYoY": -318.3673469387755
         }
     ],
     "annual": [

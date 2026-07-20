@@ -2,17 +2,6 @@
     "symbol": "DMART",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 148718600000.0,
-            "earnings": 5509000000.0,
-            "ebitda": 9801200000.0,
-            "profitMargin": 3.70431136387782,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 8559200000.0,
             "ebitda": 14803000000.0,
             "profitMargin": 4.728609879740653,
-            "revenueYoY": 13.324923071143932,
-            "earningsYoY": 18.26673299065937
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.7129337146980355,
             "revenueYoY": 18.908193057223507,
             "earningsYoY": 19.184970049010712
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 187945300000.0,
+            "earnings": 8606100000.0,
+            "ebitda": 15251200000.0,
+            "profitMargin": 4.579045073220772,
+            "revenueYoY": 14.883096878304613,
+            "earningsYoY": 11.338085566063366
         }
     ],
     "annual": [

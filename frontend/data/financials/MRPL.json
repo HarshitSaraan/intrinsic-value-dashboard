@@ -2,17 +2,6 @@
     "symbol": "MRPL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 245963300000.0,
-            "earnings": 3706300000.0,
-            "ebitda": 8373000000.0,
-            "profitMargin": 1.5068508188010163,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 14508900000.0,
             "ebitda": 24389700000.0,
             "profitMargin": 5.871279335859807,
-            "revenueYoY": 12.988926818607041,
-            "earningsYoY": 369.0882638215325
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.48835705180317573,
             "revenueYoY": -2.6290101002873194,
             "earningsYoY": -68.44292151202008
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 382541900000.0,
+            "earnings": 9456800000.0,
+            "ebitda": 14899800000.0,
+            "profitMargin": 2.472095213622351,
+            "revenueYoY": 120.40610201639413,
+            "earningsYoY": 449.3977684179414
         }
     ],
     "annual": [

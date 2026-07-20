@@ -2,17 +2,6 @@
     "symbol": "ANGELONE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10487970000.0,
-            "earnings": 1745210000.0,
-            "ebitda": 3445490000.0,
-            "profitMargin": 16.640112433578665,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2686640000.0,
             "ebitda": 5320310000.0,
             "profitMargin": 20.193529087238417,
-            "revenueYoY": 6.04120671103495,
-            "earningsYoY": -4.548329105469222
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.009945256415104,
             "revenueYoY": 38.72703678595572,
             "earningsYoY": 83.49482297259355
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14243880000.0,
+            "earnings": 2313980000.0,
+            "ebitda": 4889150000.0,
+            "profitMargin": 16.245433126367253,
+            "revenueYoY": 25.568651650725084,
+            "earningsYoY": 102.15081944298842
         }
     ],
     "annual": [

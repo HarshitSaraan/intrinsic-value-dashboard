@@ -2,17 +2,6 @@
     "symbol": "NELCO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 675200000.0,
-            "earnings": -40800000.0,
-            "ebitda": 90800000.0,
-            "profitMargin": -6.042654028436019,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -11900000.0,
             "ebitda": 47300000.0,
             "profitMargin": -1.5197956577266922,
-            "revenueYoY": -2.9980178394449952,
-            "earningsYoY": -124.04040404040404
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.376610255114928,
             "revenueYoY": 17.268957345971565,
             "earningsYoY": 126.71568627450979
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 800300000.0,
+            "earnings": 23400000.0,
+            "ebitda": 95200000.0,
+            "profitMargin": 2.9239035361739347,
+            "revenueYoY": 7.006284262601953,
+            "earningsYoY": 30.0
         }
     ],
     "annual": [

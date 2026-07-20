@@ -2,17 +2,6 @@
     "symbol": "ITCHOTELS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10522400000.0,
-            "earnings": 2569000000.0,
-            "ebitda": 4550000000.0,
-            "profitMargin": 24.414582224587548,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3158900000.0,
             "ebitda": 5263100000.0,
             "profitMargin": 25.39553654693379,
-            "revenueYoY": 18.21257507792899,
-            "earningsYoY": 22.96224211755547
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9288000000.0,
+            "earnings": 1802500000.0,
+            "ebitda": 3545000000.0,
+            "profitMargin": 19.406761412575367,
+            "revenueYoY": 14.818340276661763,
+            "earningsYoY": 35.424492862509396
         }
     ],
     "annual": [
@@ -53,7 +53,7 @@
             "annualLabel": "FY25",
             "revenue": 35258600000.0,
             "earnings": 6345700000.0,
-            "ebitda": 12930500000.0,
+            "ebitda": 12939800000.0,
             "profitMargin": 17.99759491301413,
             "revenueYoY": null,
             "earningsYoY": null
@@ -64,7 +64,7 @@
             "annualLabel": "FY26",
             "revenue": 41091200000.0,
             "earnings": 8168900000.0,
-            "ebitda": 15474200000.0,
+            "ebitda": 15482500000.0,
             "profitMargin": 19.879925628845104,
             "revenueYoY": 16.54234711531371,
             "earningsYoY": 28.731266842113556

@@ -2,17 +2,6 @@
     "symbol": "AVANTEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 492613000.0,
-            "earnings": 60843000.0,
-            "ebitda": 120858000.0,
-            "profitMargin": 12.351074778781722,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 27435000.0,
             "ebitda": 129518000.0,
             "profitMargin": 5.304955158771594,
-            "revenueYoY": -26.83189777138912,
-            "earningsYoY": -86.3376276723421
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.480865798152776,
             "revenueYoY": 29.56519620878864,
             "earningsYoY": -21.52425094094637
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 704216000.0,
+            "earnings": 53946000.0,
+            "ebitda": 175510000.0,
+            "profitMargin": 7.660433730559942,
+            "revenueYoY": 35.65363455640998,
+            "earningsYoY": 67.16556660779027
         }
     ],
     "annual": [

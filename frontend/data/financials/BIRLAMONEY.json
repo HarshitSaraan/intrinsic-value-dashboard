@@ -2,17 +2,6 @@
     "symbol": "BIRLAMONEY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 942910000.0,
-            "earnings": 93259000.0,
-            "ebitda": 501431000.0,
-            "profitMargin": 9.890551590289636,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 142217000.0,
             "ebitda": 566493000.0,
             "profitMargin": 12.854135653670356,
-            "revenueYoY": 9.17430830546557,
-            "earningsYoY": -34.807402280092965
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.828074883480411,
             "revenueYoY": 25.514842349747056,
             "earningsYoY": 100.86425974972926
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1169471000.0,
+            "earnings": 111274000.0,
+            "ebitda": 626574000.0,
+            "profitMargin": 9.514900326728922,
+            "revenueYoY": 17.4318587127663,
+            "earningsYoY": -27.632314876237302
         }
     ],
     "annual": [

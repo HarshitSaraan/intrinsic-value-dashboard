@@ -2,17 +2,6 @@
     "symbol": "LTM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 97717000000.0,
-            "earnings": 11285000000.0,
-            "ebitda": 23237000000.0,
-            "profitMargin": 11.54865581219235,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 9706000000.0,
             "ebitda": 16396000000.0,
             "profitMargin": 9.002875428995456,
-            "revenueYoY": 11.594157894192053,
-            "earningsYoY": -10.576745900128985
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.330295703924122,
             "revenueYoY": 15.555123468792534,
             "earningsYoY": 23.376163048294195
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 116080000000.0,
+            "earnings": 14663000000.0,
+            "ebitda": 23160000000.0,
+            "profitMargin": 12.631805651274982,
+            "revenueYoY": 17.96028697437148,
+            "earningsYoY": 16.92050075751535
         }
     ],
     "annual": [

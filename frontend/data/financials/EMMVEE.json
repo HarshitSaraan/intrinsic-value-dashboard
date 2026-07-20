@@ -2,17 +2,6 @@
     "symbol": "EMMVEE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 10220690000.0,
-            "earnings": 1876750000.0,
-            "ebitda": 3600690000.0,
-            "profitMargin": 18.362263213149014,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3923799000.0,
             "ebitda": 5761396000.0,
             "profitMargin": 22.56605135178377,
-            "revenueYoY": 62.25104891737841,
-            "earningsYoY": 89.43086722649156
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15555163000.0,
+            "earnings": 3802865000.0,
+            "ebitda": 5645788000.0,
+            "profitMargin": 24.447606238520294,
+            "revenueYoY": 51.34076982268457,
+            "earningsYoY": 102.63272035159063
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "GOACARBON",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1992176000.0,
-            "earnings": -79525000.0,
-            "ebitda": -60768000.0,
-            "profitMargin": -3.9918661804981084,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 44931000.0,
             "ebitda": 108872000.0,
             "profitMargin": 2.2347460712516485,
-            "revenueYoY": 52.23080499176973,
-            "earningsYoY": 168.70813836131754
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 656400000.0,
+            "earnings": -65836000.0,
+            "ebitda": -543000.0,
+            "profitMargin": -10.029859841560024,
+            "revenueYoY": -67.0511039185293,
+            "earningsYoY": 17.213454888399873
         }
     ],
     "annual": [

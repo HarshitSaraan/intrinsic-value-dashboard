@@ -2,24 +2,13 @@
     "symbol": "JSFB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8153504000.0,
-            "earnings": 1234785000.0,
-            "ebitda": null,
-            "profitMargin": 15.144225108615878,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 8610885000.0,
+            "revenue": 8515811000.0,
             "earnings": 1019250000.0,
             "ebitda": null,
-            "profitMargin": 11.836762423374601,
+            "profitMargin": 11.968912884515639,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 96942000.0,
             "ebitda": null,
             "profitMargin": 1.0542898019087537,
-            "revenueYoY": 19.417138187696885,
-            "earningsYoY": -91.23966090759001
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 13.96526998285433,
             "revenueYoY": 22.79209036998081,
             "earningsYoY": 13.232910992601951
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10093829000.0,
+            "earnings": 1552316000.0,
+            "ebitda": null,
+            "profitMargin": 15.378861678754415,
+            "revenueYoY": 18.530448832178166,
+            "earningsYoY": 52.29982830512632
         }
     ],
     "annual": [

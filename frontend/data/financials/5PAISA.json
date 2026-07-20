@@ -2,17 +2,6 @@
     "symbol": "5PAISA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 426755000.0,
-            "earnings": 100666000.0,
-            "ebitda": 213084000.0,
-            "profitMargin": 23.58871014985179,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 122996000.0,
             "ebitda": 269082000.0,
             "profitMargin": 27.607662161009532,
-            "revenueYoY": -17.57876022370512,
-            "earningsYoY": -23.970477332575076
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.914290559364325,
             "revenueYoY": 16.07315672927089,
             "earningsYoY": 7.833826714084199
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 461551000.0,
+            "earnings": 115694000.0,
+            "ebitda": 261130000.0,
+            "profitMargin": 25.066352364094108,
+            "revenueYoY": 4.061677067926842,
+            "earningsYoY": 0.18097588431398018
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "FEDFINA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5317800000.0,
-            "earnings": 716500000.0,
-            "ebitda": 1387400000.0,
-            "profitMargin": 13.473616909248184,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 879100000.0,
             "ebitda": 1583800000.0,
             "profitMargin": 15.960710978775941,
-            "revenueYoY": 5.194904409939075,
-            "earningsYoY": 368.60341151385927
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.389246645690346,
             "revenueYoY": 15.346571890631463,
             "earningsYoY": 40.307048150732726
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6686800000.0,
+            "earnings": 1143800000.0,
+            "ebitda": 2002200000.0,
+            "profitMargin": 17.10534186755997,
+            "revenueYoY": 30.78292162960355,
+            "earningsYoY": 52.486335155312624
         }
     ],
     "annual": [

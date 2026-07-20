@@ -2,17 +2,6 @@
     "symbol": "SWSOLAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25191100000.0,
-            "earnings": 553800000.0,
-            "ebitda": 1209100000.0,
-            "profitMargin": 2.198395465065043,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -27700000.0,
             "ebitda": 546900000.0,
             "profitMargin": -0.13239588760210497,
-            "revenueYoY": 13.880361419551491,
-            "earningsYoY": -118.67835468644638
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.916596851373091,
             "revenueYoY": -22.765976872784435,
             "earningsYoY": 142.99386059949438
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15901300000.0,
+            "earnings": 542200000.0,
+            "ebitda": 988800000.0,
+            "profitMargin": 3.4097841057020495,
+            "revenueYoY": -9.735301964657731,
+            "earningsYoY": 69.59649671567094
         }
     ],
     "annual": [

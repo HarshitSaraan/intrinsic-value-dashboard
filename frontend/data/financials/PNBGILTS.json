@@ -2,17 +2,6 @@
     "symbol": "PNBGILTS",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3161759000.0,
-            "earnings": -101145000.0,
-            "ebitda": 3045188000.0,
-            "profitMargin": -3.1990104242606723,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -44,6 +33,17 @@
             "profitMargin": 13.152798459710754,
             "revenueYoY": 29.625660905843866,
             "earningsYoY": 632.9586237579713
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4545599000.0,
+            "earnings": 806980000.0,
+            "ebitda": 4395960000.0,
+            "profitMargin": 17.752995809793166,
+            "revenueYoY": -19.299118656561536,
+            "earningsYoY": -49.58602667446323
         }
     ],
     "annual": [

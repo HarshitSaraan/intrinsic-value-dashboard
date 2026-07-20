@@ -2,24 +2,13 @@
     "symbol": "ARSSBL",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1159590000.0,
-            "earnings": 215430000.0,
-            "ebitda": 771500000.0,
-            "profitMargin": 18.57811812795902,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1166130000.0,
-            "earnings": 184090000.0,
-            "ebitda": 732620000.0,
-            "profitMargin": 15.786404603260356,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1159400000.0,
+            "earnings": 228150000.0,
+            "ebitda": 752910000.0,
+            "profitMargin": 19.678281869932725,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 370040000.0,
             "ebitda": 1019280000.0,
             "profitMargin": 27.328990709147575,
-            "revenueYoY": 16.76713321087626,
-            "earningsYoY": 71.76809172352968
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 415550000.0,
             "ebitda": 1106390000.0,
             "profitMargin": 30.50960698369346,
-            "revenueYoY": 16.799156183272874,
-            "earningsYoY": 125.7319789233527
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1377450000.0,
+            "earnings": 233510000.0,
+            "ebitda": 767520000.0,
+            "profitMargin": 16.95233946785727,
+            "revenueYoY": 18.80714162497844,
+            "earningsYoY": 2.349331580100811
         }
     ],
     "annual": [

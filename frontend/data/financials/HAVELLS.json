@@ -2,17 +2,6 @@
     "symbol": "HAVELLS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 65435600000.0,
-            "earnings": 5178300000.0,
-            "ebitda": 8257700000.0,
-            "profitMargin": 7.913582209072738,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3007800000.0,
             "ebitda": 5251700000.0,
             "profitMargin": 5.382711542281612,
-            "revenueYoY": 14.295619945264656,
-            "earningsYoY": 8.077614085519222
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.783570959852055,
             "revenueYoY": 2.4702149900054406,
             "earningsYoY": 39.632697989687735
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 65181900000.0,
+            "earnings": 2903800000.0,
+            "ebitda": 5203200000.0,
+            "profitMargin": 4.454917699545426,
+            "revenueYoY": 19.482526327366713,
+            "earningsYoY": -16.490279535258253
         }
     ],
     "annual": [

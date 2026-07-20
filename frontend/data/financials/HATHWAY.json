@@ -2,17 +2,6 @@
     "symbol": "HATHWAY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5131500000.0,
-            "earnings": 346800000.0,
-            "ebitda": 1284900000.0,
-            "profitMargin": 6.758257819351067,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 217000000.0,
             "ebitda": 1024300000.0,
             "profitMargin": 4.044282093335321,
-            "revenueYoY": 4.97114349995109,
-            "earningsYoY": 58.74177029992684
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.075661811853073,
             "revenueYoY": 6.3724057293189125,
             "earningsYoY": -67.32987312572088
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5651000000.0,
+            "earnings": 245000000.0,
+            "ebitda": 1082200000.0,
+            "profitMargin": 4.335515837904795,
+            "revenueYoY": 6.522148916116871,
+            "earningsYoY": -21.04415082178537
         }
     ],
     "annual": [

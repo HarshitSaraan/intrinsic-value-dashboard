@@ -2,17 +2,6 @@
     "symbol": "UMIYA-MRO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 128023000.0,
-            "earnings": 3291000.0,
-            "ebitda": 42314000.0,
-            "profitMargin": 2.5706318395913237,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 11423000.0,
             "ebitda": 52334000.0,
             "profitMargin": 7.743094390781223,
-            "revenueYoY": 21.48474492526866,
-            "earningsYoY": -44.8377438671045
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.6793369191936125,
             "revenueYoY": 63.08241487857651,
             "earningsYoY": 69.97872986934063
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 163257000.0,
+            "earnings": 2384000.0,
+            "ebitda": 48206000.0,
+            "profitMargin": 1.4602742914545779,
+            "revenueYoY": 27.285981599875253,
+            "earningsYoY": -99.24159519507292
         }
     ],
     "annual": [

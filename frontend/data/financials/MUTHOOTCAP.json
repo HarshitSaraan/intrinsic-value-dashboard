@@ -2,23 +2,12 @@
     "symbol": "MUTHOOTCAP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1371241000.0,
-            "earnings": 64216000.0,
-            "ebitda": 224304000.0,
-            "profitMargin": 4.683057172298669,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1451568000.0,
             "earnings": -46699000.0,
-            "ebitda": 194694000.0,
+            "ebitda": 193548000.0,
             "profitMargin": -3.2171417391400197,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 76506000.0,
             "ebitda": 169872000.0,
             "profitMargin": 4.936915682802554,
-            "revenueYoY": 23.46636263611064,
-            "earningsYoY": -39.06623339386409
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.46162878621697,
             "revenueYoY": 13.033668042306203,
             "earningsYoY": -16.447614301731655
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1555195000.0,
+            "earnings": 81221000.0,
+            "ebitda": 147718000.0,
+            "profitMargin": 5.22256051491935,
+            "revenueYoY": 7.138969721018926,
+            "earningsYoY": 273.9244951712028
         }
     ],
     "annual": [
