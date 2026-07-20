@@ -11,15 +11,13 @@ from backend.utils.paths import BASE_DIR
 app = FastAPI(title="Intrinsic Value Dashboard API", version="1.0.0")
 
 
-# --- Middleware to allow iframe embedding from WordPress domain ---
+# --- Middleware to allow iframe embedding from any domain ---
 class IframeEmbedMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next) -> Response:
         response = await call_next(request)
-        # Allow embedding in iframes from your WordPress domain
-        response.headers["Content-Security-Policy"] = (
-            "frame-ancestors 'self' https://intrinsicvalueequity.in https://*.intrinsicvalueequity.in"
-        )
-        # Remove X-Frame-Options if present (CSP frame-ancestors takes precedence)
+        # Allow embedding in iframes from any domain
+        response.headers["Content-Security-Policy"] = "frame-ancestors *"
+        # Remove X-Frame-Options if present
         if "X-Frame-Options" in response.headers:
             del response.headers["X-Frame-Options"]
         return response
