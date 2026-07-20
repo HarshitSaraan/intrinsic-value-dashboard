@@ -2,17 +2,6 @@
     "symbol": "INDIANB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 93273000000.0,
-            "earnings": 29816400000.0,
-            "ebitda": null,
-            "profitMargin": 31.96680711459908,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 31468800000.0,
             "ebitda": null,
             "profitMargin": 32.46924229354883,
-            "revenueYoY": 9.855866230804455,
-            "earningsYoY": 8.150240743986556
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 32.08578590735211,
             "revenueYoY": 6.025001876212838,
             "earningsYoY": 6.4196214164017125
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 103405200000.0,
+            "earnings": 33566300000.0,
+            "ebitda": null,
+            "profitMargin": 32.46094006877797,
+            "revenueYoY": 15.131197315373473,
+            "earningsYoY": 47.45537851930925
         }
     ],
     "annual": [

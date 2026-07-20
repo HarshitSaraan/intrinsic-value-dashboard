@@ -2,17 +2,6 @@
     "symbol": "AGRITECH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1153000.0,
-            "earnings": -1018000.0,
-            "ebitda": -863000.0,
-            "profitMargin": -88.29141370338249,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -2675000.0,
             "ebitda": -2510000.0,
             "profitMargin": -336.90176322418137,
-            "revenueYoY": 35.034013605442176,
-            "earningsYoY": -3.32174584781769
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2040000.0,
+            "earnings": -285000.0,
+            "ebitda": -128000.0,
+            "profitMargin": -13.970588235294118,
+            "revenueYoY": 156.92695214105794,
+            "earningsYoY": 89.34579439252337
         }
     ],
     "annual": [

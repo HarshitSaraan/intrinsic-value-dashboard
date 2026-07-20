@@ -2,17 +2,6 @@
     "symbol": "INFOMEDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 0.0,
-            "earnings": -9085000.0,
-            "ebitda": 0.0,
-            "profitMargin": null,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -32,7 +21,7 @@
             "ebitda": 76000.0,
             "profitMargin": null,
             "revenueYoY": null,
-            "earningsYoY": -3.2862789384528517
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": null,
             "revenueYoY": null,
             "earningsYoY": 10.522839845899835
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 0.0,
+            "earnings": -9278000.0,
+            "ebitda": 24000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": 9.75586032487112
         }
     ],
     "annual": [

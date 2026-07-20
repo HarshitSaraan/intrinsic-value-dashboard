@@ -2,17 +2,6 @@
     "symbol": "KHAICHEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1606814000.0,
-            "earnings": 86252000.0,
-            "ebitda": 108412000.0,
-            "profitMargin": 5.367889500589365,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 204396000.0,
             "ebitda": 329469000.0,
             "profitMargin": 7.691783742246444,
-            "revenueYoY": 33.69522671037763,
-            "earningsYoY": 62.84457758373434
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.6544387989086641,
             "revenueYoY": 20.097596859375138,
             "earningsYoY": -85.35802068357835
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2209377000.0,
+            "earnings": 109136000.0,
+            "ebitda": 242603000.0,
+            "profitMargin": 4.93967303905128,
+            "revenueYoY": -5.710276508964958,
+            "earningsYoY": -49.035448606292114
         }
     ],
     "annual": [

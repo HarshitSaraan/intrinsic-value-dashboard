@@ -2,17 +2,6 @@
     "symbol": "HSCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11346400000.0,
-            "earnings": 1555800000.0,
-            "ebitda": 2468300000.0,
-            "profitMargin": 13.71183811605443,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1922000000.0,
             "ebitda": 2892000000.0,
             "profitMargin": 16.238319730994743,
-            "revenueYoY": 3.7662405975487876,
-            "earningsYoY": 35.294945797550334
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.592191091507734,
             "revenueYoY": 13.495029260382147,
             "earningsYoY": 29.05900501349788
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14318800000.0,
+            "earnings": 2295200000.0,
+            "ebitda": 3442200000.0,
+            "profitMargin": 16.0292761963293,
+            "revenueYoY": 28.04192114746622,
+            "earningsYoY": 26.325059166712535
         }
     ],
     "annual": [

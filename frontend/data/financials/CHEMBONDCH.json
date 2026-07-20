@@ -2,17 +2,6 @@
     "symbol": "CHEMBONDCH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 780148000.0,
-            "earnings": 88075000.0,
-            "ebitda": 141824000.0,
-            "profitMargin": 11.289524551751718,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 97370000.0,
             "ebitda": 134019000.0,
             "profitMargin": 11.276763058264628,
-            "revenueYoY": 15.314871351074144,
-            "earningsYoY": -2.350723067974407
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.572820590210892,
             "revenueYoY": 29.954957264519038,
             "earningsYoY": 33.216009083167755
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 864822000.0,
+            "earnings": 95275000.0,
+            "ebitda": 141129000.0,
+            "profitMargin": 11.016717891080477,
+            "revenueYoY": 32.27420810327159,
+            "earningsYoY": 52.07744736548069
         }
     ],
     "annual": [

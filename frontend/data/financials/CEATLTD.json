@@ -2,24 +2,13 @@
     "symbol": "CEATLTD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 34206200000.0,
-            "earnings": 994900000.0,
-            "ebitda": 3555600000.0,
-            "profitMargin": 2.9085370488390994,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 35294100000.0,
-            "earnings": 1124500000.0,
-            "ebitda": 3891700000.0,
-            "profitMargin": 3.186084926375796,
+            "revenue": 35290000000.0,
+            "earnings": 1120000000.0,
+            "ebitda": 3890000000.0,
+            "profitMargin": 3.173703598753188,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 1557700000.0,
             "ebitda": 5114400000.0,
             "profitMargin": 3.7471283722832296,
-            "revenueYoY": 25.975029546349887,
-            "earningsYoY": 60.405725465966434
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.779956339226669,
             "revenueYoY": 23.336997386438714,
             "earningsYoY": 145.10001005126142
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 43180000000.0,
+            "earnings": 40000000.0,
+            "ebitda": 3640000000.0,
+            "profitMargin": 0.09263547938860583,
+            "revenueYoY": 22.357608387645225,
+            "earningsYoY": -96.42857142857143
         }
     ],
     "annual": [

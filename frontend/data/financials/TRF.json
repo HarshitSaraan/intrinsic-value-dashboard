@@ -2,17 +2,6 @@
     "symbol": "TRF",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 269148000.0,
-            "earnings": 35169000.0,
-            "ebitda": 125641000.0,
-            "profitMargin": 13.066788532703196,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 57403000.0,
             "ebitda": 103505000.0,
             "profitMargin": 28.861827451493046,
-            "revenueYoY": -13.737676903926477,
-            "earningsYoY": -49.0457676466411
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -35.635213766919776,
             "revenueYoY": -27.974200068363874,
             "earningsYoY": -296.4258295658108
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 260320000.0,
+            "earnings": 18765000.0,
+            "ebitda": 72277000.0,
+            "profitMargin": 7.208435771358328,
+            "revenueYoY": 11.166626098022386,
+            "earningsYoY": -46.47594055734619
         }
     ],
     "annual": [

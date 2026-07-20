@@ -2,17 +2,6 @@
     "symbol": "HDFCAMC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9013600000.0,
-            "earnings": 6384600000.0,
-            "ebitda": 8543100000.0,
-            "profitMargin": 70.8329635217893,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 7694200000.0,
             "ebitda": 10356900000.0,
             "profitMargin": 71.56729606548228,
-            "revenueYoY": 15.029476905299424,
-            "earningsYoY": 19.966945241362104
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 59.21579442896407,
             "revenueYoY": 16.65816100115381,
             "earningsYoY": -2.4747047583247186
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10997200000.0,
+            "earnings": 8371300000.0,
+            "ebitda": 11132600000.0,
+            "profitMargin": 76.1221038082421,
+            "revenueYoY": 13.58983628569953,
+            "earningsYoY": 11.983144940137784
         }
     ],
     "annual": [

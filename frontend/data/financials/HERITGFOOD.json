@@ -2,17 +2,6 @@
     "symbol": "HERITGFOOD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10484660000.0,
-            "earnings": 381660000.0,
-            "ebitda": 761720000.0,
-            "profitMargin": 3.6401752655784736,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 345980000.0,
             "ebitda": 706620000.0,
             "profitMargin": 3.0914312366975887,
-            "revenueYoY": 8.242587783564732,
-            "earningsYoY": -19.640451525990617
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.068487103487419,
             "revenueYoY": 10.40520150391143,
             "earningsYoY": -37.26353298747576
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13380940000.0,
+            "earnings": 252190000.0,
+            "ebitda": 682720000.0,
+            "profitMargin": 1.8846956940244857,
+            "revenueYoY": 17.71173207947183,
+            "earningsYoY": -37.841368431430546
         }
     ],
     "annual": [

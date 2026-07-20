@@ -2,17 +2,6 @@
     "symbol": "TATVA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1168640000.0,
-            "earnings": 66510000.0,
-            "ebitda": 184850000.0,
-            "profitMargin": 5.691230832420591,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 103210000.0,
             "ebitda": 277800000.0,
             "profitMargin": 7.693970658396947,
-            "revenueYoY": 24.364013943484387,
-            "earningsYoY": 902.0388349514564
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1670550000.0,
+            "earnings": 159810000.0,
+            "ebitda": 337580000.0,
+            "profitMargin": 9.566310496543055,
+            "revenueYoY": 42.94821330777656,
+            "earningsYoY": 140.27965719440684
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "TATAELXSI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9083356000.0,
-            "earnings": 1724185000.0,
-            "ebitda": 2507277000.0,
-            "profitMargin": 18.98180584356707,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1088922000.0,
             "ebitda": 1725950000.0,
             "profitMargin": 11.420570014315016,
-            "revenueYoY": 1.522949170502673,
-            "earningsYoY": -45.28206128044123
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.17368894749511,
             "revenueYoY": 9.403528827891366,
             "earningsYoY": 27.80026505276406
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10211075000.0,
+            "earnings": 1705987000.0,
+            "ebitda": 2574439000.0,
+            "profitMargin": 16.707222305193138,
+            "revenueYoY": 14.46162906925141,
+            "earningsYoY": 18.169576712796562
         }
     ],
     "annual": [

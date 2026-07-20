@@ -2,17 +2,6 @@
     "symbol": "KSOLVES",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 333416000.0,
-            "earnings": 58599000.0,
-            "ebitda": 87132000.0,
-            "profitMargin": 17.575341315353793,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 97995000.0,
             "ebitda": 138584000.0,
             "profitMargin": 23.164147634063433,
-            "revenueYoY": 12.211709596904036,
-            "earningsYoY": -5.022437171074949
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.518232398588818,
             "revenueYoY": 29.051395253977013,
             "earningsYoY": 65.34582501407874
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 414410000.0,
+            "earnings": 92066000.0,
+            "ebitda": 132297000.0,
+            "profitMargin": 22.21616273738568,
+            "revenueYoY": 10.02522235497146,
+            "earningsYoY": 43.28669478467931
         }
     ],
     "annual": [

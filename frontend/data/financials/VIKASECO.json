@@ -2,17 +2,6 @@
     "symbol": "VIKASECO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1026146000.0,
-            "earnings": 43035000.0,
-            "ebitda": 59716000.0,
-            "profitMargin": 4.19384765910504,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,22 +31,22 @@
             "earnings": -16564000.0,
             "ebitda": 44778000.0,
             "profitMargin": -2.4103503622655897,
-            "revenueYoY": -18.926058103524554,
-            "earningsYoY": -198.88127029953085
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 2289749000.0,
-            "earnings": 13924000.0,
-            "ebitda": 237217000.0,
-            "profitMargin": 0.6081015866804614,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1161872000.0,
+            "earnings": -7994000.0,
+            "ebitda": 5186000.0,
+            "profitMargin": -0.6880275968437143,
+            "revenueYoY": 13.2267727984127,
+            "earningsYoY": -118.5755780178924
+        }
+    ],
+    "annual": [
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -66,8 +55,8 @@
             "earnings": 95272000.0,
             "ebitda": 238906000.0,
             "profitMargin": 2.420903030982182,
-            "revenueYoY": 71.8699735211152,
-            "earningsYoY": 584.2286699224361
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -84,12 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 3776711000.0,
+            "revenue": 3776710000.0,
             "earnings": 169837000.0,
-            "ebitda": 305429000.0,
-            "profitMargin": 4.496955154895358,
-            "revenueYoY": 46.02660849385439,
+            "ebitda": 309926000.0,
+            "profitMargin": 4.496956345602389,
+            "revenueYoY": 46.02656982883382,
             "earningsYoY": 148.0639742934346
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3531805000.0,
+            "earnings": 16684000.0,
+            "ebitda": 154933000.0,
+            "profitMargin": 0.4723930115054484,
+            "revenueYoY": -6.4846122683499665,
+            "earningsYoY": -90.1764633148254
         }
     ]
 }

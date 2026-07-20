@@ -2,17 +2,6 @@
     "symbol": "ORIENTHOT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1325300000.0,
-            "earnings": 194100000.0,
-            "ebitda": 401200000.0,
-            "profitMargin": 14.645740587036899,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 209400000.0,
             "ebitda": 430100000.0,
             "profitMargin": 15.03770197486535,
-            "revenueYoY": 14.232977850697292,
-            "earningsYoY": 35.62176165803109
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.750549611607795,
             "revenueYoY": 2.965366332151211,
             "earningsYoY": 66.97578567748583
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1114800000.0,
+            "earnings": 53000000.0,
+            "ebitda": 247100000.0,
+            "profitMargin": 4.75421600287047,
+            "revenueYoY": 3.5578262888992103,
+            "earningsYoY": -20.060331825037707
         }
     ],
     "annual": [

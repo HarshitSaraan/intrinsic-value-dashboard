@@ -2,17 +2,6 @@
     "symbol": "MAHABANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 40977500000.0,
-            "earnings": 15023200000.0,
-            "ebitda": null,
-            "profitMargin": 36.66207064852663,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 17989900000.0,
             "ebitda": null,
             "profitMargin": 41.30254107318328,
-            "revenueYoY": 16.7221830674531,
-            "earningsYoY": 27.443326721450834
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 44.059484872381596,
             "revenueYoY": 13.26166798853029,
             "earningsYoY": 36.11480909526599
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 47992400000.0,
+            "earnings": 20233200000.0,
+            "ebitda": null,
+            "profitMargin": 42.159175202740435,
+            "revenueYoY": 16.563645328093614,
+            "earningsYoY": 34.4961678310522
         }
     ],
     "annual": [

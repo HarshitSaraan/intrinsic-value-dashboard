@@ -2,17 +2,6 @@
     "symbol": "LTF",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23326000000.0,
-            "earnings": 6361700000.0,
-            "ebitda": null,
-            "profitMargin": 27.273000085741234,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 7386100000.0,
             "ebitda": null,
             "profitMargin": 27.182461550917665,
-            "revenueYoY": 4.0829068734103515,
-            "earningsYoY": 17.913473818646235
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 28.589808569534874,
             "revenueYoY": 20.954728628997685,
             "earningsYoY": 26.79472468050993
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 30857400000.0,
+            "earnings": 9024700000.0,
+            "ebitda": null,
+            "profitMargin": 29.246469242385942,
+            "revenueYoY": 21.767714236105633,
+            "earningsYoY": 28.722008272714305
         }
     ],
     "annual": [

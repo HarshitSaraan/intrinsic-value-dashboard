@@ -2,17 +2,6 @@
     "symbol": "RPEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 506532000.0,
-            "earnings": 101262000.0,
-            "ebitda": 148317000.0,
-            "profitMargin": 19.99123451233091,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 141185000.0,
             "ebitda": 199975000.0,
             "profitMargin": 21.89342414177033,
-            "revenueYoY": 17.161840290836153,
-            "earningsYoY": 43.859345227784516
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.488603605008123,
             "revenueYoY": 39.295049473675896,
             "earningsYoY": 49.72842724812862
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 869131000.0,
+            "earnings": 195743000.0,
+            "ebitda": 267273000.0,
+            "profitMargin": 22.52169120650397,
+            "revenueYoY": 48.71786535618464,
+            "earningsYoY": 67.60253446356708
         }
     ],
     "annual": [

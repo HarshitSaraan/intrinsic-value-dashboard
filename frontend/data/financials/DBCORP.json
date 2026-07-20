@@ -2,24 +2,13 @@
     "symbol": "DBCORP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5476570000.0,
-            "earnings": 523340000.0,
-            "ebitda": 1017110000.0,
-            "profitMargin": 9.555981207215465,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 5594490000.0,
-            "earnings": 808050000.0,
-            "ebitda": 1383720000.0,
-            "profitMargin": 14.4436758310409,
+            "revenue": 5594500000.0,
+            "earnings": 808430000.0,
+            "ebitda": 1384120000.0,
+            "profitMargin": 14.45044239878452,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 955090000.0,
             "ebitda": 1592250000.0,
             "profitMargin": 15.779569448345365,
-            "revenueYoY": -5.816980547822853,
-            "earningsYoY": -19.203959055917437
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.789897829771803,
             "revenueYoY": 5.24671464073316,
             "earningsYoY": 18.83670271716284
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6037390000.0,
+            "earnings": 1007250000.0,
+            "ebitda": 1647260000.0,
+            "profitMargin": 16.68353377866926,
+            "revenueYoY": 7.916525158637948,
+            "earningsYoY": 24.593347599668494
         }
     ],
     "annual": [

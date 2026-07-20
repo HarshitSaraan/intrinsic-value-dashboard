@@ -2,17 +2,6 @@
     "symbol": "UNIONBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 158476700000.0,
-            "earnings": 50112200000.0,
-            "ebitda": null,
-            "profitMargin": 31.62117838142768,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 50726900000.0,
             "ebitda": null,
             "profitMargin": 34.66849006867829,
-            "revenueYoY": 4.629456158139894,
-            "earningsYoY": 9.726521350715872
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 35.12392527468039,
             "revenueYoY": -1.1266640458818236,
             "earningsYoY": 9.825751014722963
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 154545600000.0,
+            "earnings": 56415200000.0,
+            "ebitda": null,
+            "profitMargin": 36.503918584547215,
+            "revenueYoY": 9.507087163179062,
+            "earningsYoY": 27.407327109220088
         }
     ],
     "annual": [

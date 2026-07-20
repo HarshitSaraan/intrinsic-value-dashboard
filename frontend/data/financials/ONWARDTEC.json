@@ -2,17 +2,6 @@
     "symbol": "ONWARDTEC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1272877000.0,
-            "earnings": 104123000.0,
-            "ebitda": 165395000.0,
-            "profitMargin": 8.180130523216304,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 101020000.0,
             "ebitda": 178935000.0,
             "profitMargin": 7.504236082583739,
-            "revenueYoY": 9.098770324733792,
-            "earningsYoY": 67.37358340512957
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.966248867742062,
             "revenueYoY": 7.720855982156956,
             "earningsYoY": -8.26426437962794
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1494297000.0,
+            "earnings": 111694000.0,
+            "ebitda": 200982000.0,
+            "profitMargin": 7.474685420635925,
+            "revenueYoY": 12.225912273902974,
+            "earningsYoY": -12.265432923045504
         }
     ],
     "annual": [

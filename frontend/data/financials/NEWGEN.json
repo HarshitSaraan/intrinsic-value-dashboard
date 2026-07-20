@@ -2,17 +2,6 @@
     "symbol": "NEWGEN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4298898000.0,
-            "earnings": 1083392000.0,
-            "ebitda": 1512237000.0,
-            "profitMargin": 25.20162143879664,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 628151000.0,
             "ebitda": 911967000.0,
             "profitMargin": 15.692888058909132,
-            "revenueYoY": 5.028671316561038,
-            "earningsYoY": -29.422584063001047
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.482603045099466,
             "revenueYoY": 5.298683523079636,
             "earningsYoY": -1.883805676984877
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3566837000.0,
+            "earnings": 628211000.0,
+            "ebitda": 921832000.0,
+            "profitMargin": 17.612551400582646,
+            "revenueYoY": 11.235519152438297,
+            "earningsYoY": 26.348233931207588
         }
     ],
     "annual": [

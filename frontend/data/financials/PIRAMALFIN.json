@@ -2,24 +2,13 @@
     "symbol": "PIRAMALFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23981400000.0,
-            "earnings": 1024400000.0,
-            "ebitda": 6607500000.0,
-            "profitMargin": 4.271643857322759,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 20887500000.0,
-            "earnings": 939800000.0,
-            "ebitda": 1753700000.0,
-            "profitMargin": 4.49934171154997,
+            "revenue": 25105800000.0,
+            "earnings": 2763700000.0,
+            "ebitda": 3457900000.0,
+            "profitMargin": 11.00821324156171,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 4001700000.0,
             "ebitda": 4636300000.0,
             "profitMargin": 14.004591554619203,
-            "revenueYoY": 24.327546447374147,
-            "earningsYoY": 937.7852697095436
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.74566933871755,
             "revenueYoY": 24.74084081830085,
             "earningsYoY": 389.0081999219055
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 32144500000.0,
+            "earnings": 4591200000.0,
+            "ebitda": 7468300000.0,
+            "profitMargin": 14.283003313163995,
+            "revenueYoY": 28.036151008930204,
+            "earningsYoY": 66.12512211889859
         }
     ],
     "annual": [

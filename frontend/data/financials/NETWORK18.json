@@ -2,17 +2,6 @@
     "symbol": "NETWORK18",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5613200000.0,
-            "earnings": -303100000.0,
-            "ebitda": 587000000.0,
-            "profitMargin": -5.399771966079955,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -59800000.0,
             "ebitda": 782100000.0,
             "profitMargin": -1.108700891781152,
-            "revenueYoY": -60.35501653803749,
-            "earningsYoY": 99.58340590058866
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -4.956315567248043,
             "revenueYoY": 9.702130691940427,
             "earningsYoY": -0.6928406466512702
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5162600000.0,
+            "earnings": -387100000.0,
+            "ebitda": 493700000.0,
+            "profitMargin": -7.498159841940108,
+            "revenueYoY": 10.344974992519129,
+            "earningsYoY": -126.15010470850503
         }
     ],
     "annual": [

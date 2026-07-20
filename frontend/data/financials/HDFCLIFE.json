@@ -2,17 +2,6 @@
     "symbol": "HDFCLIFE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 241499000000.0,
-            "earnings": 4753600000.0,
-            "ebitda": null,
-            "profitMargin": 1.9683725398448857,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4181900000.0,
             "ebitda": null,
             "profitMargin": 1.421406927400126,
-            "revenueYoY": 70.58789081298843,
-            "earningsYoY": -0.7405473404381572
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.51062558477304,
             "revenueYoY": -17.948397301852182,
             "earningsYoY": 4.655419050824639
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 337267900000.0,
+            "earnings": 6111900000.0,
+            "ebitda": null,
+            "profitMargin": 1.8121795759394832,
+            "revenueYoY": 14.446116978932174,
+            "earningsYoY": 11.459834047597338
         }
     ],
     "annual": [

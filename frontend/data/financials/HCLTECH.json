@@ -2,17 +2,6 @@
     "symbol": "HCLTECH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 302460000000.0,
-            "earnings": 43070000000.0,
-            "ebitda": 69310000000.0,
-            "profitMargin": 14.239899490841765,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 40760000000.0,
             "ebitda": 68410000000.0,
             "profitMargin": 12.033538025507793,
-            "revenueYoY": 13.322181331549013,
-            "earningsYoY": -11.21759965149205
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 13.207380595038403,
             "revenueYoY": 12.348740329299742,
             "earningsYoY": 4.202461109821221
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 345790000000.0,
+            "earnings": 46240000000.0,
+            "ebitda": 72310000000.0,
+            "profitMargin": 13.372277972179647,
+            "revenueYoY": 13.937856272035324,
+            "earningsYoY": 20.322664584959668
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "ALOKINDS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9529600000.0,
-            "earnings": -744700000.0,
-            "ebitda": 1560300000.0,
-            "profitMargin": -7.814598723975823,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -2176300000.0,
             "ebitda": 6600000.0,
             "profitMargin": -25.35770879940343,
-            "revenueYoY": -0.650568379135508,
-            "earningsYoY": 20.27913110370343
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -19.587576426544047,
             "revenueYoY": 3.149135325721961,
             "earningsYoY": -158.54706593259033
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9931100000.0,
+            "earnings": -1382500000.0,
+            "ebitda": 794400000.0,
+            "profitMargin": -13.920915105073957,
+            "revenueYoY": 6.500874004010766,
+            "earningsYoY": 19.415947773373745
         }
     ],
     "annual": [

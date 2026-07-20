@@ -2,17 +2,6 @@
     "symbol": "ICICIGI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 60536900000.0,
-            "earnings": 5095900000.0,
-            "ebitda": null,
-            "profitMargin": 8.41784101927915,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6587600000.0,
             "ebitda": null,
             "profitMargin": 9.54069233598948,
-            "revenueYoY": 11.975414754390803,
-            "earningsYoY": -9.058781302631216
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.066365693151647,
             "revenueYoY": 11.92826193610839,
             "earningsYoY": 7.2548519397947375
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 71241900000.0,
+            "earnings": 4031700000.0,
+            "ebitda": null,
+            "profitMargin": 5.659169674026099,
+            "revenueYoY": 10.899077370435691,
+            "earningsYoY": -46.03389195266906
         }
     ],
     "annual": [

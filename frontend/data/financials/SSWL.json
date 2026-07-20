@@ -2,17 +2,6 @@
     "symbol": "SSWL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 11867846000.0,
-            "earnings": 472421000.0,
-            "ebitda": 1223591000.0,
-            "profitMargin": 3.980680234644096,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 608474000.0,
             "ebitda": 1510057000.0,
             "profitMargin": 4.126270772778768,
-            "revenueYoY": 19.506964567565984,
-            "earningsYoY": 0.3105887007698775
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15098183000.0,
+            "earnings": 694514000.0,
+            "ebitda": 1639962000.0,
+            "profitMargin": 4.599983984827843,
+            "revenueYoY": 27.219235908521227,
+            "earningsYoY": 47.01166967598815
         }
     ],
     "annual": [

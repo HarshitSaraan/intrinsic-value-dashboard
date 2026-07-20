@@ -2,24 +2,13 @@
     "symbol": "LTTS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 26378000000.0,
-            "earnings": 3111000000.0,
-            "ebitda": 4818000000.0,
-            "profitMargin": 11.793919175070135,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 28660000000.0,
+            "revenue": 26375000000.0,
             "earnings": 3157000000.0,
-            "ebitda": 5301000000.0,
-            "profitMargin": 11.015352407536637,
+            "ebitda": 5077000000.0,
+            "profitMargin": 11.969668246445497,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 3026000000.0,
             "ebitda": 5117000000.0,
             "profitMargin": 10.350607148965281,
-            "revenueYoY": 10.196004523181305,
-            "earningsYoY": -6.141439205955335
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.620420588544036,
             "revenueYoY": 8.344074607627569,
             "earningsYoY": 6.750241080038573
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 29401000000.0,
+            "earnings": 3566000000.0,
+            "ebitda": 5774000000.0,
+            "profitMargin": 12.128839155130777,
+            "revenueYoY": 11.472985781990522,
+            "earningsYoY": 12.955337345581247
         }
     ],
     "annual": [
