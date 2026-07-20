@@ -17,6 +17,7 @@ class IframeEmbedMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
         # Allow embedding in iframes from any domain
         response.headers["Content-Security-Policy"] = "frame-ancestors *"
+        response.headers["Cross-Origin-Resource-Policy"] = "cross-origin"
         # Remove X-Frame-Options if present
         if "X-Frame-Options" in response.headers:
             del response.headers["X-Frame-Options"]
