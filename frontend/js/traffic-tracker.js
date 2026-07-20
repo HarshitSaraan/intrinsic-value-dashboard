@@ -4,8 +4,8 @@
   window.__IV_TRACKER_INITIALIZED__ = true;
 
   var API_ENDPOINT = (function () {
-    if (window.location.protocol === 'file:') return 'http://127.0.0.1:8080/api/traffic/track';
-    return '/api/traffic/track';
+    if (window.location.protocol === 'file:') return 'http://127.0.0.1:8080/traffic/track';
+    return '/traffic/track';
   })();
 
   // 1. Get or generate persistent Visitor ID

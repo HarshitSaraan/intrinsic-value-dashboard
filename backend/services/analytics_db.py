@@ -125,7 +125,7 @@ def record_heartbeat(
         conn.commit()
 
 
-def get_live_users(timeout_seconds: int = 60) -> Dict[str, Any]:
+def get_live_users(timeout_seconds: int = 180) -> Dict[str, Any]:
     init_db()
     now_ts = int(time.time())
     threshold_ts = now_ts - timeout_seconds

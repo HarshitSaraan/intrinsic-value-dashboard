@@ -5,8 +5,8 @@
   var baseUrl = window.location.protocol === 'file:' ? 'http://127.0.0.1:8080' : '';
   var loginEndpoint = baseUrl + '/admin/login';
   var uploadEndpoint = baseUrl + '/admin/upload-csv';
-  var statsEndpoint = baseUrl + '/api/admin/traffic/stats';
-  var liveEndpoint = baseUrl + '/api/admin/traffic/live';
+  var statsEndpoint = baseUrl + '/admin/traffic/stats';
+  var liveEndpoint = baseUrl + '/admin/traffic/live';
 
   var SESSION_TIMEOUT = 15 * 60 * 1000; // 15 minutes of inactivity in milliseconds
   var livePollInterval = null;

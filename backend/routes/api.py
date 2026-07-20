@@ -451,6 +451,7 @@ class TrackPayload(BaseModel):
 
 
 @router.post("/traffic/track")
+@router.post("/api/traffic/track")
 async def track_traffic(payload: TrackPayload) -> dict[str, str]:
     try:
         if payload.is_heartbeat:
@@ -477,6 +478,7 @@ async def track_traffic(payload: TrackPayload) -> dict[str, str]:
 
 
 @router.get("/admin/traffic/stats")
+@router.get("/api/admin/traffic/stats")
 async def admin_traffic_stats(
     days: int = 30,
     authorization: str = Header(None)
@@ -490,6 +492,7 @@ async def admin_traffic_stats(
 
 
 @router.get("/admin/traffic/live")
+@router.get("/api/admin/traffic/live")
 async def admin_traffic_live(
     authorization: str = Header(None)
 ) -> dict[str, Any]:
