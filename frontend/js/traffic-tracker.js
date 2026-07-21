@@ -70,13 +70,21 @@
     return parentHost;
   }
 
-  // Clean page path name
+  // Clean & normalize page path name
   function getPagePath() {
-    var path = window.location.pathname;
-    if (!path || path === '/') return 'dashboard.html';
+    var path = (window.location.pathname || '').split('?')[0].split('#')[0];
+    if (!path || path === '/' || path === '/dashboard' || path === '/dashboard.html') {
+      return 'dashboard.html';
+    }
     var parts = path.split('/');
-    var filename = parts[parts.length - 1];
-    return filename || path;
+    var filename = parts[parts.length - 1] || parts[parts.length - 2] || '';
+    if (!filename || filename === 'dashboard' || filename === 'index') {
+      return 'dashboard.html';
+    }
+    if (filename.indexOf('.') === -1) {
+      filename += '.html';
+    }
+    return filename;
   }
 
   var visitorId = getVisitorId();

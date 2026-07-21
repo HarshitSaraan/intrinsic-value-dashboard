@@ -11,6 +11,23 @@ def get_db_path() -> Path:
     return get_writable_path(TRAFFIC_DB_PATH)
 
 
+def normalize_page_path(path: str) -> str:
+    if not path:
+        return "dashboard.html"
+
+    clean_path = path.strip().split("?")[0].split("#")[0]
+    parts = clean_path.split("/")
+    filename = parts[-1] if parts[-1] else (parts[-2] if len(parts) > 1 else "")
+
+    if not filename or filename in ("dashboard", "index", "home", "dashboard.html"):
+        return "dashboard.html"
+
+    if not filename.endswith(".html") and "." not in filename:
+        filename += ".html"
+
+    return filename
+
+
 def init_db() -> None:
     db_path = get_db_path()
     db_path.parent.mkdir(parents=True, exist_ok=True)
@@ -52,6 +69,10 @@ def init_db() -> None:
 
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_as_last_seen ON active_sessions(last_seen)")
 
+        # Normalize any legacy dashboard paths
+        cursor.execute("UPDATE page_views SET page_path = 'dashboard.html' WHERE page_path IN ('/', '/dashboard', '/dashboard.html', 'dashboard', 'index', 'index.html', '')")
+        cursor.execute("UPDATE active_sessions SET current_page = 'dashboard.html' WHERE current_page IN ('/', '/dashboard', '/dashboard.html', 'dashboard', 'index', 'index.html', '')")
+
         conn.commit()
 
 
@@ -65,6 +86,7 @@ def record_pageview(
     browser: str = "Unknown",
 ) -> None:
     init_db()
+    norm_path = normalize_page_path(page_path)
     now_ts = int(time.time())
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -78,7 +100,7 @@ def record_pageview(
             (timestamp, date_str, visitor_id, page_path, page_title, referrer, parent_host, device_type, browser)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
-            (now_ts, date_str, visitor_id, page_path, page_title, referrer, parent_host, device_type, browser),
+            (now_ts, date_str, visitor_id, norm_path, page_title, referrer, parent_host, device_type, browser),
         )
 
         # Update active session
@@ -92,7 +114,7 @@ def record_pageview(
                 parent_host = excluded.parent_host,
                 device_type = excluded.device_type
             """,
-            (visitor_id, now_ts, page_path, parent_host, device_type),
+            (visitor_id, now_ts, norm_path, parent_host, device_type),
         )
 
         conn.commit()
@@ -105,6 +127,7 @@ def record_heartbeat(
     device_type: str = "Desktop",
 ) -> None:
     init_db()
+    norm_path = normalize_page_path(current_page)
     now_ts = int(time.time())
 
     db_path = get_db_path()
@@ -120,7 +143,7 @@ def record_heartbeat(
                 parent_host = excluded.parent_host,
                 device_type = excluded.device_type
             """,
-            (visitor_id, now_ts, current_page, parent_host, device_type),
+            (visitor_id, now_ts, norm_path, parent_host, device_type),
         )
         conn.commit()
 
