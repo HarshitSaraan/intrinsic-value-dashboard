@@ -664,3 +664,101 @@
   background: linear-gradient(90deg, #a855f7, #c084fc);
 }
 
+/* Card Title Header with View Toggle */
+.card-title-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-title-head h4 {
+  margin: 0;
+}
+
+.iv-card-view-btn {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--iv-border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--iv-accent-light);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.iv-card-view-btn:hover {
+  background: rgba(var(--iv-accent-rgb), 0.12);
+  border-color: var(--iv-border-accent);
+  transform: translateY(-1px);
+}
+
+/* Pie Chart Container inside Cards */
+.pie-chart-box {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ivFade 0.3s ease-out forwards;
+}
+
+.pie-chart-svg {
+  width: 100%;
+  max-height: 150px;
+}
+
+.pie-slice {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.pie-slice:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+  transform-origin: center;
+}
+
+.pie-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 10px;
+  max-height: 70px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.pie-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--iv-text-secondary);
+}
+
+.pie-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Pie Modal */
+.pie-modal-content {
+  max-width: 500px;
+  width: 90%;
+  background: var(--iv-card);
+  border: 1px solid var(--iv-border-accent);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  padding: 24px;
+}
+

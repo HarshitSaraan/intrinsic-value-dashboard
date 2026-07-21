@@ -379,6 +379,58 @@
         downloadTrafficCSV(lastLoadedStats, currentDaysFilter);
       });
     }
+
+    // Bind Pie Chart View Toggles
+    bindCardToggle('#togglePagesViewBtn', '#topPagesTableContainer', '#topPagesPieContainer');
+    bindCardToggle('#toggleEmbedsViewBtn', '#topEmbedsTableContainer', '#topEmbedsPieContainer');
+    bindCardToggle('#toggleDevicesViewBtn', '#deviceBreakdownBox', '#devicePieContainer');
+
+    // Bind Modal Close
+    var modalClose = app.querySelector('#ivPieModalClose');
+    var modalOverlay = app.querySelector('#ivPieOverlay');
+    if (modalClose) modalClose.addEventListener('click', closePieModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', closePieModal);
+  }
+
+  function bindCardToggle(btnId, containerA, containerB) {
+    var btn = app.querySelector(btnId);
+    var boxA = app.querySelector(containerA);
+    var boxB = app.querySelector(containerB);
+
+    if (!btn || !boxA || !boxB) return;
+
+    btn.addEventListener('click', function () {
+      var isShowingB = boxB.style.display !== 'none';
+      if (isShowingB) {
+        boxB.style.display = 'none';
+        boxA.style.display = 'block';
+        btn.querySelector('.btn-lbl').textContent = 'Pie Chart';
+        btn.querySelector('.btn-icon').textContent = '📊';
+      } else {
+        boxA.style.display = 'none';
+        boxB.style.display = 'flex';
+        btn.querySelector('.btn-lbl').textContent = 'List View';
+        btn.querySelector('.btn-icon').textContent = '📋';
+      }
+    });
+  }
+
+  function openPieModal(title, items) {
+    var modal = app.querySelector('#ivPieModal');
+    var modalTitle = app.querySelector('#ivPieModalTitle');
+    var modalBody = app.querySelector('#ivPieModalBody');
+
+    if (!modal || !modalBody) return;
+    if (modalTitle) modalTitle.textContent = title;
+
+    modalBody.innerHTML = '';
+    renderPieChartSVG(items, modalBody, true);
+    modal.style.display = 'flex';
+  }
+
+  function closePieModal() {
+    var modal = app.querySelector('#ivPieModal');
+    if (modal) modal.style.display = 'none';
   }
 
   function startLivePolling() {
@@ -487,6 +539,29 @@
     setDeviceBar('Desktop', devs.Desktop || 0);
     setDeviceBar('Mobile', devs.Mobile || 0);
     setDeviceBar('Tablet', devs.Tablet || 0);
+
+    // Render Pie Charts for all 3 breakdown cards
+    var COLOR_PALETTE = ['#3b82f6', '#10b981', '#f59e0b', '#ec4899', '#8b5cf6', '#06b6d4', '#f97316', '#a855f7'];
+
+    // 1. Pages Pie Chart
+    var pagesItems = (data.top_pages || []).map(function (p, idx) {
+      return { label: p.page, value: p.views, color: COLOR_PALETTE[idx % COLOR_PALETTE.length] };
+    });
+    renderPieChartSVG(pagesItems, app.querySelector('#topPagesPieContainer'));
+
+    // 2. Embed Hosts Pie Chart
+    var embedsItems = (data.top_embeds || []).map(function (e, idx) {
+      return { label: e.host, value: e.views, color: COLOR_PALETTE[idx % COLOR_PALETTE.length] };
+    });
+    renderPieChartSVG(embedsItems, app.querySelector('#topEmbedsPieContainer'));
+
+    // 3. Devices Pie Chart
+    var deviceItems = [
+      { label: 'Desktop', value: devs.Desktop || 0, color: '#3b82f6' },
+      { label: 'Mobile', value: devs.Mobile || 0, color: '#10b981' },
+      { label: 'Tablet', value: devs.Tablet || 0, color: '#a855f7' }
+    ].filter(function (d) { return d.value > 0; });
+    renderPieChartSVG(deviceItems, app.querySelector('#devicePieContainer'));
   }
 
   function setDeviceBar(type, val) {
@@ -634,6 +709,71 @@
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
+
+  function renderPieChartSVG(items, containerEl, isLarge) {
+    if (!containerEl) return;
+    if (!items || items.length === 0) {
+      containerEl.innerHTML = '<div style="color:var(--iv-text-muted); font-size:12px; padding:20px; text-align:center;">No data recorded for this period</div>';
+      return;
+    }
+
+    var total = items.reduce(function (sum, it) { return sum + (it.value || 0); }, 0);
+    if (total === 0) {
+      containerEl.innerHTML = '<div style="color:var(--iv-text-muted); font-size:12px; padding:20px; text-align:center;">No views recorded yet</div>';
+      return;
+    }
+
+    var cx = isLarge ? 120 : 80;
+    var cy = isLarge ? 110 : 75;
+    var r = isLarge ? 85 : 55;
+    var innerR = isLarge ? 45 : 30;
+    var viewBoxWidth = isLarge ? 240 : 160;
+    var viewBoxHeight = isLarge ? 220 : 150;
+
+    var currentAngle = -Math.PI / 2;
+    var pathsHtml = '';
+    var legendHtml = '<div class="pie-legend">';
+
+    items.forEach(function (it) {
+      var val = it.value || 0;
+      var pct = ((val / total) * 100).toFixed(1);
+      var sliceAngle = (val / total) * (2 * Math.PI);
+      var nextAngle = currentAngle + sliceAngle;
+
+      if (items.length === 1) {
+        // Full donut ring
+        pathsHtml += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + it.color + '" class="pie-slice"><title>' + escapeHtml(it.label) + ': ' + val + ' (' + pct + '%)</title></circle>';
+      } else if (sliceAngle > 0) {
+        var x1 = cx + r * Math.cos(currentAngle);
+        var y1 = cy + r * Math.sin(currentAngle);
+        var x2 = cx + r * Math.cos(nextAngle);
+        var y2 = cy + r * Math.sin(nextAngle);
+
+        var ix1 = cx + innerR * Math.cos(nextAngle);
+        var iy1 = cy + innerR * Math.sin(nextAngle);
+        var ix2 = cx + innerR * Math.cos(currentAngle);
+        var iy2 = cy + innerR * Math.sin(currentAngle);
+
+        var largeArc = sliceAngle > Math.PI ? 1 : 0;
+
+        var d = 'M ' + x1.toFixed(2) + ' ' + y1.toFixed(2) +
+                ' A ' + r + ' ' + r + ' 0 ' + largeArc + ' 1 ' + x2.toFixed(2) + ' ' + y2.toFixed(2) +
+                ' L ' + ix1.toFixed(2) + ' ' + iy1.toFixed(2) +
+                ' A ' + innerR + ' ' + innerR + ' 0 ' + largeArc + ' 0 ' + ix2.toFixed(2) + ' ' + iy2.toFixed(2) +
+                ' Z';
+
+        pathsHtml += '<path d="' + d + '" fill="' + it.color + '" class="pie-slice"><title>' + escapeHtml(it.label) + ': ' + val + ' (' + pct + '%)</title></path>';
+      }
+
+      legendHtml += '<div class="pie-legend-item"><span class="pie-legend-dot" style="background:' + it.color + '"></span>' + escapeHtml(it.label) + ' <strong>' + pct + '%</strong></div>';
+      currentAngle = nextAngle;
+    });
+
+    legendHtml += '</div>';
+
+    var svgHtml = '<svg viewBox="0 0 ' + viewBoxWidth + ' ' + viewBoxHeight + '" class="pie-chart-svg">' + pathsHtml + '</svg>' + legendHtml;
+    containerEl.innerHTML = svgHtml;
   }
 
 })();

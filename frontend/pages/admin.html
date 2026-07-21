@@ -166,12 +166,15 @@
         <!-- 3 Data Breakdown Cards -->
         <div class="iv-analytics-breakdown-grid">
           
-          <!-- Top Pages Table -->
+          <!-- Top Pages Table / Pie -->
           <div class="iv-analytics-table-card">
             <div class="card-title-head">
               <h4>📄 Top Pages & Tools</h4>
+              <button type="button" class="iv-card-view-btn" id="togglePagesViewBtn" data-view="table">
+                <span class="btn-icon">📊</span> <span class="btn-lbl">Pie Chart</span>
+              </button>
             </div>
-            <div class="table-scroll-box">
+            <div class="table-scroll-box" id="topPagesTableContainer">
               <table class="iv-analytics-table">
                 <thead>
                   <tr>
@@ -185,14 +188,18 @@
                 </tbody>
               </table>
             </div>
+            <div class="pie-chart-box" id="topPagesPieContainer" style="display: none;"></div>
           </div>
 
-          <!-- Top Embed Domains Table -->
+          <!-- Top Embed Domains Table / Pie -->
           <div class="iv-analytics-table-card">
             <div class="card-title-head">
               <h4>🌐 Top Iframe Embed Hosts</h4>
+              <button type="button" class="iv-card-view-btn" id="toggleEmbedsViewBtn" data-view="table">
+                <span class="btn-icon">📊</span> <span class="btn-lbl">Pie Chart</span>
+              </button>
             </div>
-            <div class="table-scroll-box">
+            <div class="table-scroll-box" id="topEmbedsTableContainer">
               <table class="iv-analytics-table">
                 <thead>
                   <tr>
@@ -205,12 +212,16 @@
                 </tbody>
               </table>
             </div>
+            <div class="pie-chart-box" id="topEmbedsPieContainer" style="display: none;"></div>
           </div>
 
-          <!-- Device Breakdown Card -->
+          <!-- Device Breakdown Card / Pie -->
           <div class="iv-analytics-table-card">
             <div class="card-title-head">
               <h4>📱 Device Breakdown</h4>
+              <button type="button" class="iv-card-view-btn" id="toggleDevicesViewBtn" data-view="bars">
+                <span class="btn-icon">📊</span> <span class="btn-lbl">Pie Chart</span>
+              </button>
             </div>
             <div class="device-breakdown-box" id="deviceBreakdownBox">
               <div class="device-bar-row">
@@ -226,8 +237,21 @@
                 <div class="device-track"><div class="device-fill tablet" id="barTablet" style="width: 0%;"></div></div>
               </div>
             </div>
+            <div class="pie-chart-box" id="devicePieContainer" style="display: none;"></div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- Pie Chart Detailed View Modal -->
+      <div class="iv-modal" id="ivPieModal" style="display: none;">
+        <div class="iv-modal-overlay" id="ivPieOverlay"></div>
+        <div class="iv-modal-content pie-modal-content">
+          <div class="iv-modal-header">
+            <h3 id="ivPieModalTitle">Distribution Breakdown</h3>
+            <button class="iv-drawer-close" id="ivPieModalClose" type="button">&times;</button>
+          </div>
+          <div class="iv-modal-body" id="ivPieModalBody"></div>
         </div>
       </div>
 
