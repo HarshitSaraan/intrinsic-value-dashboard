@@ -104,7 +104,7 @@
       if (base === '/ranking-tool') return 'ranking-tool.html' + query;
       if (base === '/monthly-market-analysis') return 'monthly-market-analysis.html' + query;
       if (base === '/market-valuation-index') return 'market-valuation-index.html' + query;
-      if (base === '/headwind-tailwind-indicator') return 'headwind-tailwind-indicator.html' + query;
+      if (base === '/upcycle-downcycle' || base === '/headwind-tailwind-indicator') return 'headwind-tailwind-indicator.html' + query;
       if (base === '/portfolio-review-tool') return 'portfolio-review-tool.html' + query;
       if (base === '/turnaround') return 'turnaround.html' + query;
       if (base.startsWith('/')) return base.substring(1) + '.html' + query;
@@ -201,7 +201,7 @@
           { view: "monthly-analysis", label: "Market Pulse", icon: "◌", path: "/monthly-market-analysis" },
           { view: "earnings-trends", label: "Earnings Trends", icon: "\u22bf", path: "/earnings-trends" },
           { view: "valuation", label: "Market Valuation Tracker", icon: "∑", path: "/market-valuation-index" },
-          { view: "headwind", label: "Upcycle / Down cycle Indicator", icon: "⇄", path: "/headwind-tailwind-indicator" }
+          { view: "headwind", label: "Upcycle / Down cycle Indicator", icon: "⇄", path: "/upcycle-downcycle" }
         ]
       },
       {

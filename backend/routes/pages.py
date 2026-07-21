@@ -67,6 +67,11 @@ async def market_valuation_index_page() -> FileResponse:
     return _frontend_page("market-valuation-index.html")
 
 
+@router.get("/upcycle-downcycle", response_class=HTMLResponse)
+async def upcycle_downcycle_page() -> FileResponse:
+    return _frontend_page("headwind-tailwind-indicator.html")
+
+
 @router.get("/headwind-tailwind-indicator", response_class=HTMLResponse)
 async def headwind_tailwind_indicator_page() -> FileResponse:
     return _frontend_page("headwind-tailwind-indicator.html")
