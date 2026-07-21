@@ -81,6 +81,12 @@
 
   var visitorId = getVisitorId();
   var pagePath = getPagePath();
+
+  // Exclude admin page from tracking
+  if (pagePath === 'admin.html' || pagePath === 'admin' || window.location.pathname.indexOf('/admin') !== -1) {
+    return;
+  }
+
   var pageTitle = document.title || 'Intrinsic Value';
   var referrer = document.referrer || '';
   var parentHost = getParentHost();

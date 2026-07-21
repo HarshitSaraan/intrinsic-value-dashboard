@@ -315,6 +315,9 @@
     setInterval(checkSessionTimeout, 10000);
   });
 
+  var lastLoadedStats = null;
+  var currentDaysFilter = 30;
+
   // --- TRAFFIC ANALYTICS & TAB LOGIC ---
   function bindTabEvents() {
     var tabTraffic = app.querySelector('#tabBtnTraffic');
@@ -347,7 +350,9 @@
     var rangeSelect = app.querySelector('#trafficRangeSelect');
     if (rangeSelect) {
       rangeSelect.addEventListener('change', function () {
-        var days = parseInt(rangeSelect.value, 10) || 30;
+        var days = parseInt(rangeSelect.value, 10);
+        if (isNaN(days)) days = 30;
+        currentDaysFilter = days;
         loadTrafficStats(days);
       });
     }
@@ -355,9 +360,23 @@
     var refreshBtn = app.querySelector('#refreshTrafficBtn');
     if (refreshBtn) {
       refreshBtn.addEventListener('click', function () {
-        var days = parseInt(app.querySelector('#trafficRangeSelect').value, 10) || 30;
+        var rangeVal = app.querySelector('#trafficRangeSelect').value;
+        var days = parseInt(rangeVal, 10);
+        if (isNaN(days)) days = 30;
+        currentDaysFilter = days;
         loadTrafficStats(days);
         pollLiveUsers();
+      });
+    }
+
+    var downloadBtn = app.querySelector('#downloadStatsBtn');
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', function () {
+        if (!lastLoadedStats) {
+          alert('No traffic stats loaded to download.');
+          return;
+        }
+        downloadTrafficCSV(lastLoadedStats, currentDaysFilter);
       });
     }
   }
@@ -402,6 +421,7 @@
       return res.json();
     })
     .then(function (data) {
+      lastLoadedStats = data;
       renderTrafficDashboard(data, days);
     })
     .catch(function (err) {
@@ -410,19 +430,22 @@
   }
 
   function renderTrafficDashboard(data, days) {
-    var summary = data.summary || {};
-    var keyMap = { 1: 'today', 7: 'seven_days', 30: 'thirty_days' };
-    var activeKey = keyMap[days] || 'thirty_days';
-    var periodData = summary[activeKey] || { views: 0, uniques: 0 };
+    var periodData = data.selected_period || { views: 0, uniques: 0 };
+    var labelMap = { 1: 'Today', 7: 'Last 7 Days', 30: 'Last 30 Days', 90: 'Last 3 Months', 365: 'Last 1 Year', 0: 'All Time' };
+    var periodLabel = labelMap[days] || (days + ' Days');
 
     // Update KPI Cards
     var elUniques = app.querySelector('#kpiUniqueVisitors');
     var elViews = app.querySelector('#kpiTotalViews');
+    var elUniqueSub = app.querySelector('#kpiUniqueSub');
+    var elViewsSub = app.querySelector('#kpiViewsSub');
     var elTopEmbed = app.querySelector('#kpiTopEmbed');
     var elTopTool = app.querySelector('#kpiTopTool');
 
     if (elUniques) elUniques.textContent = Number(periodData.uniques || 0).toLocaleString();
     if (elViews) elViews.textContent = Number(periodData.views || 0).toLocaleString();
+    if (elUniqueSub) elUniqueSub.textContent = periodLabel;
+    if (elViewsSub) elViewsSub.textContent = periodLabel;
 
     var topEmbedHost = (data.top_embeds && data.top_embeds.length > 0) ? data.top_embeds[0].host : 'Direct / Main Site';
     if (elTopEmbed) elTopEmbed.textContent = topEmbedHost;
@@ -543,6 +566,74 @@
 
     svgHtml += '</svg>';
     container.innerHTML = svgHtml;
+  }
+
+  function downloadTrafficCSV(stats, days) {
+    var labelMap = { 1: 'Today', 7: 'Last 7 Days', 30: 'Last 30 Days', 90: 'Last 3 Months', 365: 'Last 1 Year', 0: 'All Time' };
+    var label = labelMap[days] || (days + ' Days');
+    var exportDate = new Date().toISOString().split('T')[0];
+
+    var lines = [];
+    lines.push('Intrinsic Value Traffic Analytics Report');
+    lines.push('Export Date,' + exportDate);
+    lines.push('Selected Time Period,' + label);
+    lines.push('');
+
+    // Summary KPIs
+    var periodData = stats.selected_period || {};
+    lines.push('--- SUMMARY KPIS ---');
+    lines.push('Metric,Value');
+    lines.push('Total Page Views,' + (periodData.views || 0));
+    lines.push('Unique Visitors,' + (periodData.uniques || 0));
+    lines.push('Top Embed Host,' + ((stats.top_embeds && stats.top_embeds.length > 0) ? '"' + stats.top_embeds[0].host + '"' : 'Direct / Main Site'));
+    lines.push('Top Tool / Page,' + ((stats.top_pages && stats.top_pages.length > 0) ? '"' + stats.top_pages[0].page + '"' : 'None'));
+    lines.push('');
+
+    // Daily Trends
+    lines.push('--- DAILY TRENDS ---');
+    lines.push('Date,Page Views,Unique Visitors');
+    var trends = stats.daily_trends || [];
+    trends.forEach(function (t) {
+      lines.push(t.date + ',' + t.views + ',' + t.uniques);
+    });
+    lines.push('');
+
+    // Top Pages
+    lines.push('--- TOP PAGES AND TOOLS ---');
+    lines.push('Page / Tool,Views,Unique Visitors');
+    var pages = stats.top_pages || [];
+    pages.forEach(function (p) {
+      lines.push('"' + (p.page || '') + '",' + p.views + ',' + p.uniques);
+    });
+    lines.push('');
+
+    // Top Embed Hosts
+    lines.push('--- TOP IFRAME EMBED HOSTS ---');
+    lines.push('Host Domain,Views');
+    var embeds = stats.top_embeds || [];
+    embeds.forEach(function (e) {
+      lines.push('"' + (e.host || '') + '",' + e.views);
+    });
+    lines.push('');
+
+    // Devices
+    lines.push('--- DEVICE BREAKDOWN ---');
+    lines.push('Device Type,Percentage');
+    var devs = stats.devices || {};
+    lines.push('Desktop,' + (devs.Desktop || 0) + '%');
+    lines.push('Mobile,' + (devs.Mobile || 0) + '%');
+    lines.push('Tablet,' + (devs.Tablet || 0) + '%');
+
+    var csvContent = lines.join('\n');
+    var blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+
+    var link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'traffic_analytics_' + label.toLowerCase().replace(/\s+/g, '_') + '_' + exportDate + '.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
 })();

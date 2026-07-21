@@ -88,14 +88,22 @@
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-size: 13px; color: var(--iv-text-muted);">Time Period:</span>
             <select id="trafficRangeSelect" class="iv-analytics-select">
-              <option value="30">Last 30 Days</option>
-              <option value="7">Last 7 Days</option>
               <option value="1">Today</option>
+              <option value="7">Last 7 Days</option>
+              <option value="30" selected>Last 30 Days</option>
+              <option value="90">Last 3 Months</option>
+              <option value="365">Last 1 Year</option>
+              <option value="0">All Time</option>
             </select>
           </div>
-          <button type="button" id="refreshTrafficBtn" class="iv-analytics-refresh-btn">
-            🔄 Refresh Stats
-          </button>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <button type="button" id="downloadStatsBtn" class="iv-analytics-refresh-btn">
+              📥 Download CSV Stats
+            </button>
+            <button type="button" id="refreshTrafficBtn" class="iv-analytics-refresh-btn">
+              🔄 Refresh Stats
+            </button>
+          </div>
         </div>
 
         <!-- 4 KPI Summary Cards -->
