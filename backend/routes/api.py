@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any
+import re
 
 import pandas as pd
 from fastapi import APIRouter, HTTPException, File, UploadFile, Header, Form
@@ -19,6 +20,39 @@ from backend.services.analytics import (
 from backend.utils.paths import CSV_PATH
 
 router = APIRouter()
+
+
+def format_yy_mm_to_mm_yy(date_str: str) -> str:
+    if not date_str:
+        return date_str
+    
+    # 1. Match YY-MMM or YYYY-MMM (e.g., "05-Oct" or "2005-Oct")
+    match = re.match(r"^(\d{2}|\d{4})([-\/])([a-zA-Z]{3})$", date_str)
+    if match:
+        year, sep, month = match.groups()
+        return f"{month}{sep}{year}"
+        
+    # 2. Match YYYY-MM (e.g., "2025-06")
+    match = re.match(r"^(\d{4})([-\/])(\d{2})$", date_str)
+    if match:
+        year, sep, month = match.groups()
+        return f"{month}{sep}{year}"
+
+    # 3. Match YY-MM (e.g., "25-02")
+    match = re.match(r"^(\d{2})([-\/])(\d{2})$", date_str)
+    if match:
+        part1, sep, part2 = match.groups()
+        val1 = int(part1)
+        val2 = int(part2)
+        if val1 > 12 and val2 <= 12:
+            return f"{part2}{sep}{part1}"
+        elif val1 <= 12 and val2 > 12:
+            return date_str
+        elif val1 <= 12 and val2 <= 12:
+            return f"{part2}{sep}{part1}"
+            
+    return date_str
+
 
 
 @router.get("/health")
@@ -185,7 +219,7 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
                     return None
             
             series.append({
-                'date': date,
+                'date': format_yy_mm_to_mm_yy(date),
                 'index': get_val(idx_col),
                 'pe': get_val(pe_col),
                 'pb': get_val(pb_col),

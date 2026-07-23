@@ -22,6 +22,42 @@
     }
   }
 
+  function formatYYMMtoMMYY(dateStr) {
+    if (!dateStr || typeof dateStr !== 'string') return dateStr;
+    
+    // 1. Match YY-MMM or YYYY-MMM (e.g., "05-Oct" or "2005-Oct")
+    var m1 = dateStr.match(/^(\d{2}|\d{4})([-\/])([a-zA-Z]{3})$/);
+    if (m1) {
+      return m1[3] + m1[2] + m1[1];
+    }
+    
+    // 2. Match YYYY-MM (e.g., "2025-06")
+    var m2 = dateStr.match(/^(\d{4})([-\/])(\d{2})$/);
+    if (m2) {
+      return m2[3] + m2[2] + m2[1];
+    }
+
+    // 3. Match YY-MM (e.g., "25-02")
+    var m3 = dateStr.match(/^(\d{2})([-\/])(\d{2})$/);
+    if (m3) {
+      var part1 = m3[1];
+      var sep = m3[2];
+      var part2 = m3[3];
+      var val1 = parseInt(part1, 10);
+      var val2 = parseInt(part2, 10);
+      if (val1 > 12 && val2 <= 12) {
+        return part2 + sep + part1;
+      } else if (val1 <= 12 && val2 > 12) {
+        return dateStr;
+      } else if (val1 <= 12 && val2 <= 12) {
+        return part2 + sep + part1;
+      }
+    }
+    
+    return dateStr;
+  }
+
+
   // Check if a sector is a commodity valuation (e.g. Gold Valuation or Silver Valuation)
   function isCommoditySector(sectorName) {
     if (!sectorName) return false;
@@ -141,7 +177,7 @@
     // Map and filter out points where both pb and div_yield are invalid/null
     var points = activeSeries.map(function (item) {
       return {
-        date: item.date,
+        date: formatYYMMtoMMYY(item.date),
         pb: item.pb,
         div_yield: item.div_yield
       };

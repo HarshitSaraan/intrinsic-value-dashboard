@@ -3,11 +3,45 @@ from __future__ import annotations
 import csv as csv_module
 from datetime import datetime, timezone
 from typing import Any
+import re
 
 import pandas as pd
 from fastapi import HTTPException
 
 from backend.utils.paths import CSV_PATH, HW_HISTORY_PATH
+
+
+def format_yy_mm_to_mm_yy(date_str: str) -> str:
+    if not date_str:
+        return date_str
+    
+    # 1. Match YY-MMM or YYYY-MMM (e.g., "05-Oct" or "2005-Oct")
+    match = re.match(r"^(\d{2}|\d{4})([-\/])([a-zA-Z]{3})$", date_str)
+    if match:
+        year, sep, month = match.groups()
+        return f"{month}{sep}{year}"
+        
+    # 2. Match YYYY-MM (e.g., "2025-06")
+    match = re.match(r"^(\d{4})([-\/])(\d{2})$", date_str)
+    if match:
+        year, sep, month = match.groups()
+        return f"{month}{sep}{year}"
+
+    # 3. Match YY-MM (e.g., "25-02")
+    match = re.match(r"^(\d{2})([-\/])(\d{2})$", date_str)
+    if match:
+        part1, sep, part2 = match.groups()
+        val1 = int(part1)
+        val2 = int(part2)
+        if val1 > 12 and val2 <= 12:
+            return f"{part2}{sep}{part1}"
+        elif val1 <= 12 and val2 > 12:
+            return date_str
+        elif val1 <= 12 and val2 <= 12:
+            return f"{part2}{sep}{part1}"
+            
+    return date_str
+
 
 
 def pick_column(frame: pd.DataFrame, *candidates: str) -> str | None:
@@ -400,7 +434,11 @@ def load_headwind_history() -> dict[str, Any]:
     with open(HW_HISTORY_PATH, newline="", encoding="utf-8") as file_obj:
         reader = csv_module.DictReader(file_obj)
         for row in reader:
-            rows.append(dict(row))
+            row_dict = dict(row)
+            for k, v in list(row_dict.items()):
+                if k.lower() == 'date' and isinstance(v, str):
+                    row_dict[k] = format_yy_mm_to_mm_yy(v)
+            rows.append(row_dict)
 
     return {
         "source": HW_HISTORY_PATH.name,
