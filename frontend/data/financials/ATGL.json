@@ -2,17 +2,6 @@
     "symbol": "ATGL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 13412600000.0,
-            "earnings": 1545900000.0,
-            "ebitda": 2806700000.0,
-            "profitMargin": 11.525729537897202,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1586500000.0,
             "ebitda": 3168200000.0,
             "profitMargin": 10.525093707499918,
-            "revenueYoY": 16.446240131019884,
-            "earningsYoY": 11.42716673690125
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.810290132415458,
             "revenueYoY": 16.10127790286745,
             "earningsYoY": 8.89449511611359
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17535300000.0,
+            "earnings": 1417200000.0,
+            "ebitda": 2926600000.0,
+            "profitMargin": 8.081983199603087,
+            "revenueYoY": 27.19827648740008,
+            "earningsYoY": -14.233841684822076
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "INFOBEAN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1032200000.0,
-            "earnings": 105000000.0,
-            "ebitda": 220500000.0,
-            "profitMargin": 10.172447200155009,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 192900000.0,
             "ebitda": 333500000.0,
             "profitMargin": 14.346273984828201,
-            "revenueYoY": 39.58268452195578,
-            "earningsYoY": 173.22946175637395
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.117754900578198,
             "revenueYoY": 37.39585351676032,
             "earningsYoY": 104.19047619047619
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1527700000.0,
+            "earnings": 216200000.0,
+            "ebitda": 354300000.0,
+            "profitMargin": 14.151993192380703,
+            "revenueYoY": 36.58471166741171,
+            "earningsYoY": -7.289879931389365
         }
     ],
     "annual": [

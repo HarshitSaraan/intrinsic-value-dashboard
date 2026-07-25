@@ -2,17 +2,6 @@
     "symbol": "MAHLOG",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15695100000.0,
-            "earnings": -67500000.0,
-            "ebitda": 215000000.0,
-            "profitMargin": -0.430070531567177,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 32500000.0,
             "ebitda": 289600000.0,
             "profitMargin": 0.1712301702291323,
-            "revenueYoY": 19.058461924476227,
-            "earningsYoY": 135.99114064230344
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.1270451767043836,
             "revenueYoY": 14.13817051181579,
             "earningsYoY": 399.1111111111111
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20028800000.0,
+            "earnings": 253900000.0,
+            "ebitda": 528900000.0,
+            "profitMargin": 1.267674548649944,
+            "revenueYoY": 23.285259665515607,
+            "earningsYoY": 335.0925925925926
         }
     ],
     "annual": [

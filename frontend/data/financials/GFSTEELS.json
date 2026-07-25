@@ -2,17 +2,6 @@
     "symbol": "GFSTEELS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 0.0,
-            "earnings": -1469000.0,
-            "ebitda": -424000.0,
-            "profitMargin": null,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -43,7 +32,18 @@
             "ebitda": 10783000.0,
             "profitMargin": 8.43087329938436,
             "revenueYoY": null,
-            "earningsYoY": 662.3574144486691
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 196491000.0,
+            "earnings": 21108000.0,
+            "ebitda": 22463000.0,
+            "profitMargin": 10.742476754660519,
+            "revenueYoY": null,
+            "earningsYoY": 1536.8958475153165
         }
     ],
     "annual": [

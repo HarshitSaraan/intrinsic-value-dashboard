@@ -2,17 +2,6 @@
     "symbol": "RADIOCITY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 493245000.0,
-            "earnings": -21742000.0,
-            "ebitda": 79553000.0,
-            "profitMargin": -4.407951423734655,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -479559000.0,
             "ebitda": -429290000.0,
             "profitMargin": -117.56375118284737,
-            "revenueYoY": -25.38681738780512,
-            "earningsYoY": -26.115438627864535
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 445432000.0,
+            "earnings": 92225000.0,
+            "ebitda": 171223000.0,
+            "profitMargin": 20.704619335835773,
+            "revenueYoY": -9.693559995539742,
+            "earningsYoY": 524.1790083708951
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "CSBBANK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6241200000.0,
-            "earnings": 1186000000.0,
-            "ebitda": null,
-            "profitMargin": 19.002755880279434,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2015800000.0,
             "ebitda": null,
             "profitMargin": 26.16664719550346,
-            "revenueYoY": 2.3421101575577223,
-            "earningsYoY": 5.849611426170973
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7074100000.0,
+            "earnings": 1500400000.0,
+            "ebitda": null,
+            "profitMargin": 21.209765199813404,
+            "revenueYoY": 13.345190027558804,
+            "earningsYoY": 26.50927487352445
         }
     ],
     "annual": [

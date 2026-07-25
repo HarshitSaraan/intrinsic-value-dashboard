@@ -2,24 +2,13 @@
     "symbol": "KOTAKBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 200736600000.0,
-            "earnings": 49327600000.0,
-            "ebitda": null,
-            "profitMargin": 24.57329654881073,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 191661800000.0,
+            "revenue": 191768300000.0,
             "earnings": 44721800000.0,
             "ebitda": null,
-            "profitMargin": 23.333705516696597,
+            "profitMargin": 23.320746963914267,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 49242900000.0,
             "ebitda": null,
             "profitMargin": 24.069112017424153,
-            "revenueYoY": 21.95301649370235,
-            "earningsYoY": 4.749394812189696
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 26.128950973075348,
             "revenueYoY": 3.395843109826509,
             "earningsYoY": 9.941493200561148
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 223660600000.0,
+            "earnings": 54804600000.0,
+            "ebitda": null,
+            "profitMargin": 24.503466412948903,
+            "revenueYoY": 16.63064229072271,
+            "earningsYoY": 22.54560415725664
         }
     ],
     "annual": [

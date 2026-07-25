@@ -2,17 +2,6 @@
     "symbol": "511441",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 0.0,
-            "earnings": -2425000.0,
-            "ebitda": -2318000.0,
-            "profitMargin": null,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -43,21 +32,21 @@
             "ebitda": -696000.0,
             "profitMargin": null,
             "revenueYoY": null,
-            "earningsYoY": -123.418095801301
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 0.0,
+            "earnings": 5009000.0,
+            "ebitda": 2632000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": 306.55670103092785
         }
     ],
     "annual": [
-        {
-            "date": "2022-03-31",
-            "quarterLabel": "Q4 FY22",
-            "annualLabel": "FY22",
-            "revenue": 0.0,
-            "earnings": 14956000.0,
-            "ebitda": 716000.0,
-            "profitMargin": null,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
         {
             "date": "2023-03-31",
             "quarterLabel": "Q4 FY23",
@@ -67,7 +56,7 @@
             "ebitda": 419000.0,
             "profitMargin": null,
             "revenueYoY": null,
-            "earningsYoY": -98.06766515110992
+            "earningsYoY": null
         },
         {
             "date": "2024-03-31",
@@ -90,6 +79,17 @@
             "profitMargin": null,
             "revenueYoY": null,
             "earningsYoY": -696.709323583181
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 0.0,
+            "earnings": 824000.0,
+            "ebitda": 187000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": 109.45387792565397
         }
     ]
 }

@@ -2,17 +2,6 @@
     "symbol": "COROMANDEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 49883900000.0,
-            "earnings": 5796700000.0,
-            "ebitda": 8820900000.0,
-            "profitMargin": 11.62038252823055,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 5058800000.0,
             "ebitda": 8828300000.0,
             "profitMargin": 5.76209215839261,
-            "revenueYoY": 26.59278260581181,
-            "earningsYoY": -1.1509076342888407
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.3307449122701818,
             "revenueYoY": 20.35265887390521,
             "earningsYoY": -75.8604033329308
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 81647700000.0,
+            "earnings": 3808200000.0,
+            "ebitda": 8054600000.0,
+            "profitMargin": 4.664185274049361,
+            "revenueYoY": 15.938968802805901,
+            "earningsYoY": -24.591592245698106
         }
     ],
     "annual": [

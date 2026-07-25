@@ -2,17 +2,6 @@
     "symbol": "ADOR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3100200000.0,
-            "earnings": 180900000.0,
-            "ebitda": 347200000.0,
-            "profitMargin": 5.835107412425005,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 267200000.0,
             "ebitda": 413400000.0,
             "profitMargin": 9.273913647091488,
-            "revenueYoY": 5.168637757336837,
-            "earningsYoY": 73.39390006489293
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.722011474433332,
             "revenueYoY": 2.8869105219018127,
             "earningsYoY": 89.05472636815921
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3094600000.0,
+            "earnings": 276000000.0,
+            "ebitda": 427300000.0,
+            "profitMargin": 8.918761713953337,
+            "revenueYoY": 22.879606099110546,
+            "earningsYoY": 798.7341772151899
         }
     ],
     "annual": [

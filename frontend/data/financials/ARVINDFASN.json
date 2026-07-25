@@ -2,17 +2,6 @@
     "symbol": "ARVINDFASN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11890600000.0,
-            "earnings": -931500000.0,
-            "ebitda": 1700000000.0,
-            "profitMargin": -7.8339192303163845,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 255700000.0,
             "ebitda": 1717100000.0,
             "profitMargin": 1.8575019250606575,
-            "revenueYoY": 14.451760949815423,
-            "earningsYoY": -4.088522130532633
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.4415551110427245,
             "revenueYoY": 14.77890098060653,
             "earningsYoY": 150.42404723564144
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12785000000.0,
+            "earnings": 95700000.0,
+            "ebitda": 1663300000.0,
+            "profitMargin": 0.7485334376222136,
+            "revenueYoY": 15.45998862107269,
+            "earningsYoY": -23.86634844868735
         }
     ],
     "annual": [

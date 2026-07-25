@@ -2,17 +2,6 @@
     "symbol": "M&MFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23927000000.0,
-            "earnings": 4572200000.0,
-            "ebitda": null,
-            "profitMargin": 19.10895640907761,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 8241600000.0,
             "ebitda": null,
             "profitMargin": 29.04119243102294,
-            "revenueYoY": 21.828086699321293,
-            "earningsYoY": -10.180149743343831
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.659275159811806,
             "revenueYoY": 23.829146988757472,
             "earningsYoY": 105.15725471326714
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 29690300000.0,
+            "earnings": 9260300000.0,
+            "ebitda": null,
+            "profitMargin": 31.189647797428787,
+            "revenueYoY": 20.906073748294748,
+            "earningsYoY": 75.42766211377801
         }
     ],
     "annual": [

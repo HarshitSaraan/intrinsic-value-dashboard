@@ -2,17 +2,6 @@
     "symbol": "BPCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1112302100000.0,
-            "earnings": 43918300000.0,
-            "ebitda": 68152900000.0,
-            "profitMargin": 3.948414733731061,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 71884000000.0,
             "ebitda": 103946100000.0,
             "profitMargin": 6.0391787140373605,
-            "revenueYoY": 5.181385518442972,
-            "earningsYoY": 88.87318244638644
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.73841474469271,
             "revenueYoY": 6.716403753980146,
             "earningsYoY": 28.068254008010328
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1512770300000.0,
+            "earnings": -18727000000.0,
+            "ebitda": -25887700000.0,
+            "profitMargin": -1.2379275293810303,
+            "revenueYoY": 34.40700230872192,
+            "earningsYoY": -127.38257820564935
         }
     ],
     "annual": [

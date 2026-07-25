@@ -2,17 +2,6 @@
     "symbol": "IOB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 47054600000.0,
-            "earnings": 10919400000.0,
-            "ebitda": null,
-            "profitMargin": 23.205807721242984,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 14271600000.0,
             "ebitda": null,
             "profitMargin": 29.746567647616683,
-            "revenueYoY": 17.30333836998352,
-            "earningsYoY": 63.05368629108732
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 32.68796921409397,
             "revenueYoY": 1.172255209905089,
             "earningsYoY": 42.512409106727475
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 58478500000.0,
+            "earnings": 17162900000.0,
+            "ebitda": null,
+            "profitMargin": 29.349077011209246,
+            "revenueYoY": 38.29346967539931,
+            "earningsYoY": 45.63961135389707
         }
     ],
     "annual": [

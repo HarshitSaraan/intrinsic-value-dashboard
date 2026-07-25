@@ -2,17 +2,6 @@
     "symbol": "INDIAMART",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3551000000.0,
-            "earnings": 1806000000.0,
-            "ebitda": 2281850000.0,
-            "profitMargin": 50.858912982258516,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1883100000.0,
             "ebitda": 2550050000.0,
             "profitMargin": 46.89064079642624,
-            "revenueYoY": 13.357213222571293,
-            "earningsYoY": 55.62424072130443
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.416522384368044,
             "revenueYoY": 13.855252041678401,
             "earningsYoY": -72.20376522702104
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4143700000.0,
+            "earnings": 1722380000.0,
+            "ebitda": 2386080000.0,
+            "profitMargin": 41.56623307671887,
+            "revenueYoY": 11.365835304235649,
+            "earningsYoY": 12.177203483108746
         }
     ],
     "annual": [

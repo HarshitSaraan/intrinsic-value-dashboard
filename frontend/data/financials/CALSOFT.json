@@ -2,17 +2,6 @@
     "symbol": "CALSOFT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 15459000.0,
-            "earnings": 1932000.0,
-            "ebitda": 4016000.0,
-            "profitMargin": 12.497574228604696,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 91974000.0,
             "ebitda": 126284000.0,
             "profitMargin": 65.57206410768266,
-            "revenueYoY": 605.0213621512943,
-            "earningsYoY": 3011.4343707713124
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 66288000.0,
+            "earnings": 41939000.0,
+            "ebitda": 56392000.0,
+            "profitMargin": 63.26786145305334,
+            "revenueYoY": 328.7987580050456,
+            "earningsYoY": 2070.7556935817806
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "NIITLTD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 862850000.0,
-            "earnings": 131390000.0,
-            "ebitda": 227230000.0,
-            "profitMargin": 15.227443935794172,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 39500000.0,
             "ebitda": 144060000.0,
             "profitMargin": 3.896693236524347,
-            "revenueYoY": 3.319709308844064,
-            "earningsYoY": -70.51138484509146
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -4.430474930068878,
             "revenueYoY": 15.594831083038768,
             "earningsYoY": -133.63269655224903
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 956530000.0,
+            "earnings": 80880000.0,
+            "ebitda": 168290000.0,
+            "profitMargin": 8.455563338316624,
+            "revenueYoY": 13.714231368213323,
+            "earningsYoY": 84.69970312856817
         }
     ],
     "annual": [

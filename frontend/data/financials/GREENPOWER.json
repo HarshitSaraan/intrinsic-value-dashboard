@@ -2,17 +2,6 @@
     "symbol": "GREENPOWER",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 873800000.0,
-            "earnings": 289000000.0,
-            "ebitda": 659700000.0,
-            "profitMargin": 33.07392996108949,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -175800000.0,
             "ebitda": 186100000.0,
             "profitMargin": -45.55584348276756,
-            "revenueYoY": -7.590996168582375,
-            "earningsYoY": -9.669369931378665
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 814300000.0,
+            "earnings": 234200000.0,
+            "ebitda": 602200000.0,
+            "profitMargin": 28.76089893159769,
+            "revenueYoY": -6.809338521400778,
+            "earningsYoY": -18.961937716262973
         }
     ],
     "annual": [

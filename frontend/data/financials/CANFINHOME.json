@@ -2,17 +2,6 @@
     "symbol": "CANFINHOME",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3552080000.0,
-            "earnings": 2339151000.0,
-            "ebitda": null,
-            "profitMargin": 65.85299317582938,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2647794000.0,
             "ebitda": null,
             "profitMargin": 61.89636414724813,
-            "revenueYoY": 24.124685683047804,
-            "earningsYoY": 24.825169880096283
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 79.00072836607629,
             "revenueYoY": 23.182670435350555,
             "earningsYoY": 47.77643683541592
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4335423000.0,
+            "earnings": 2678209000.0,
+            "ebitda": null,
+            "profitMargin": 61.77503325511721,
+            "revenueYoY": 16.66151361012378,
+            "earningsYoY": 19.630567825640664
         }
     ],
     "annual": [

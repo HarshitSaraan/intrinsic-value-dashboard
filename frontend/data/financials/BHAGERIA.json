@@ -2,17 +2,6 @@
     "symbol": "BHAGERIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1826265000.0,
-            "earnings": 157617000.0,
-            "ebitda": 303929000.0,
-            "profitMargin": 8.63056566270503,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 111879000.0,
             "ebitda": 227073000.0,
             "profitMargin": 4.631961148809499,
-            "revenueYoY": 41.785923724400995,
-            "earningsYoY": -7.8866768759571215
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.373941082025672,
             "revenueYoY": 48.14892690819788,
             "earningsYoY": -24.918631873465426
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2864182000.0,
+            "earnings": 341518000.0,
+            "ebitda": 576427000.0,
+            "profitMargin": 11.923753448628615,
+            "revenueYoY": 81.87164766893335,
+            "earningsYoY": 203.06241070557022
         }
     ],
     "annual": [

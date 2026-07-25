@@ -2,17 +2,6 @@
     "symbol": "BAJAJHCARE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1544725000.0,
-            "earnings": 111778000.0,
-            "ebitda": 253288000.0,
-            "profitMargin": 7.236109987214552,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 156738000.0,
             "ebitda": 323292000.0,
             "profitMargin": 9.721831975273954,
-            "revenueYoY": 31.295258725996383,
-            "earningsYoY": 33.721803228338395
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -14.929421949267432,
             "revenueYoY": -0.916020650924922,
             "earningsYoY": -304.42842061944214
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1656317000.0,
+            "earnings": 136980000.0,
+            "ebitda": 295631000.0,
+            "profitMargin": 8.270156014820834,
+            "revenueYoY": 11.284478316109713,
+            "earningsYoY": 15.754159730261879
         }
     ],
     "annual": [

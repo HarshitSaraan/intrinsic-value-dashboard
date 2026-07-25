@@ -2,17 +2,6 @@
     "symbol": "MAHLIFE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 92400000.0,
-            "earnings": 850800000.0,
-            "ebitda": 941800000.0,
-            "profitMargin": 920.7792207792207,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1088800000.0,
             "ebitda": 1368800000.0,
             "profitMargin": 23.712866974475126,
-            "revenueYoY": 174.48589191774272,
-            "earningsYoY": 584.1262783459316
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 13.456885995041965,
             "revenueYoY": 7146.969696969697,
             "earningsYoY": 5.912082745651151
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9621300000.0,
+            "earnings": 855300000.0,
+            "ebitda": 1184400000.0,
+            "profitMargin": 8.889651086651492,
+            "revenueYoY": 2909.4776352830777,
+            "earningsYoY": 66.92037470725995
         }
     ],
     "annual": [

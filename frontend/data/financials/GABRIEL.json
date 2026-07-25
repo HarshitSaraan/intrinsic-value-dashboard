@@ -2,17 +2,6 @@
     "symbol": "GABRIEL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 10983810000.0,
-            "earnings": 619720000.0,
-            "ebitda": 1092770000.0,
-            "profitMargin": 5.642122360091808,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 666100000.0,
             "ebitda": 1216580000.0,
             "profitMargin": 5.506810968648132,
-            "revenueYoY": 12.713937341646531,
-            "earningsYoY": 3.4943521697922657
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14256830000.0,
+            "earnings": 1073510000.0,
+            "ebitda": 1715380000.0,
+            "profitMargin": 7.529794491482328,
+            "revenueYoY": 15.50005387420333,
+            "earningsYoY": 1.990385346203542
         }
     ],
     "annual": [

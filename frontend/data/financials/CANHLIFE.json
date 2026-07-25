@@ -2,24 +2,13 @@
     "symbol": "CANHLIFE",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15164300000.0,
-            "earnings": 293200000.0,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 36316100000.0,
+            "earnings": 234200000.0,
             "ebitda": null,
-            "profitMargin": 1.9334885223848117,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 27764700000.0,
-            "earnings": 320900000.0,
-            "ebitda": null,
-            "profitMargin": 1.1557841431746065,
+            "profitMargin": 0.6448930364218625,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 276500000.0,
             "ebitda": null,
             "profitMargin": 0.6579808435956928,
-            "revenueYoY": 177.1146706409132,
-            "earningsYoY": -5.695770804911323
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.691058989438775,
             "revenueYoY": -53.517596084236466,
             "earningsYoY": 8.226861950763478
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 43508600000.0,
+            "earnings": 281400000.0,
+            "ebitda": null,
+            "profitMargin": 0.6467686848117384,
+            "revenueYoY": 19.8052654332376,
+            "earningsYoY": 20.153714773697693
         }
     ],
     "annual": [

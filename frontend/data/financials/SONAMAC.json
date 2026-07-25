@@ -1,50 +1,5 @@
 {
     "symbol": "SONAMAC",
     "quarterly": [],
-    "annual": [
-        {
-            "date": "2023-03-31",
-            "quarterLabel": "Q4 FY23",
-            "annualLabel": "FY23",
-            "revenue": 809663000.0,
-            "earnings": 76785000.0,
-            "ebitda": 118161000.0,
-            "profitMargin": 9.483575265264685,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2024-03-31",
-            "quarterLabel": "Q4 FY24",
-            "annualLabel": "FY24",
-            "revenue": 952971000.0,
-            "earnings": 104675000.0,
-            "ebitda": 154167000.0,
-            "profitMargin": 10.984069819543302,
-            "revenueYoY": 17.69970963227911,
-            "earningsYoY": 36.32219834603113
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 949162000.0,
-            "earnings": 38512000.0,
-            "ebitda": 73151000.0,
-            "profitMargin": 4.057473855885507,
-            "revenueYoY": -0.39969736749596785,
-            "earningsYoY": -63.20802483878673
-        },
-        {
-            "date": "2026-03-31",
-            "quarterLabel": "Q4 FY26",
-            "annualLabel": "FY26",
-            "revenue": 845144000.0,
-            "earnings": -34629000.0,
-            "ebitda": -22542000.0,
-            "profitMargin": -4.097408252321498,
-            "revenueYoY": -10.958930087803768,
-            "earningsYoY": -189.91742833402577
-        }
-    ]
+    "annual": []
 }

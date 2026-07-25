@@ -2,17 +2,6 @@
     "symbol": "JAYNECOIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16752700000.0,
-            "earnings": 1016400000.0,
-            "ebitda": 3441700000.0,
-            "profitMargin": 6.06708172413999,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 740900000.0,
             "ebitda": 3002700000.0,
             "profitMargin": 4.289527161987691,
-            "revenueYoY": 4.2484488544458126,
-            "earningsYoY": -3.691667749902509
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.668024151065726,
             "revenueYoY": 17.846078542563287,
             "earningsYoY": 87.79024006296734
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 21065600000.0,
+            "earnings": 1939200000.0,
+            "ebitda": 4073500000.0,
+            "profitMargin": 9.205529393893363,
+            "revenueYoY": 27.720617212841418,
+            "earningsYoY": 108.47129649537735
         }
     ],
     "annual": [
@@ -64,7 +64,7 @@
             "annualLabel": "FY24",
             "revenue": 59260652000.0,
             "earnings": 2099828000.0,
-            "ebitda": 10224051000.0,
+            "ebitda": 10263700000.0,
             "profitMargin": 3.543376471794472,
             "revenueYoY": -6.410660261263312,
             "earningsYoY": -7.445067453830038

@@ -2,17 +2,6 @@
     "symbol": "BANSALWIRE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9401990000.0,
-            "earnings": 331150000.0,
-            "ebitda": 723880000.0,
-            "profitMargin": 3.522126698709529,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 432700000.0,
             "ebitda": 854590000.0,
             "profitMargin": 4.2049594615475065,
-            "revenueYoY": 11.293254957522402,
-            "earningsYoY": 3.8197610250011995
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.526180592894663,
             "revenueYoY": 20.86345550250532,
             "earningsYoY": 21.00256681262268
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11678910000.0,
+            "earnings": 204610000.0,
+            "ebitda": 567070000.0,
+            "profitMargin": 1.7519614416071365,
+            "revenueYoY": 24.37511115465593,
+            "earningsYoY": -47.90855164337178
         }
     ],
     "annual": [

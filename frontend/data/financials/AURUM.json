@@ -2,24 +2,13 @@
     "symbol": "AURUM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 677500000.0,
-            "earnings": -69000000.0,
-            "ebitda": 215600000.0,
-            "profitMargin": -10.184501845018449,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 684000000.0,
-            "earnings": -94200000.0,
-            "ebitda": 218700000.0,
-            "profitMargin": -13.771929824561404,
+            "revenue": 654400000.0,
+            "earnings": -94500000.0,
+            "ebitda": 198200000.0,
+            "profitMargin": -14.440709046454767,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 32600000.0,
             "ebitda": 382900000.0,
             "profitMargin": 2.8392266155722,
-            "revenueYoY": 77.7949829668628,
-            "earningsYoY": 149.39393939393938
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.8986677432377874,
             "revenueYoY": 82.80442804428044,
             "earningsYoY": 152.02898550724638
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1118400000.0,
+            "earnings": 500000.0,
+            "ebitda": 364900000.0,
+            "profitMargin": 0.044706723891273246,
+            "revenueYoY": 70.90464547677261,
+            "earningsYoY": 100.52910052910053
         }
     ],
     "annual": [

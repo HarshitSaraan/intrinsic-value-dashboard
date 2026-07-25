@@ -2,17 +2,6 @@
     "symbol": "AAVAS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5721881000.0,
-            "earnings": 1392334000.0,
-            "ebitda": 1439852000.0,
-            "profitMargin": 24.333501518119654,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1816680000.0,
             "ebitda": 1615389000.0,
             "profitMargin": 28.973691337078726,
-            "revenueYoY": 10.73240968347117,
-            "earningsYoY": 18.212484187840644
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6420377000.0,
+            "earnings": 1712681000.0,
+            "ebitda": 1768942000.0,
+            "profitMargin": 26.675707672617975,
+            "revenueYoY": 12.20745415712071,
+            "earningsYoY": 23.007913331140372
         }
     ],
     "annual": [

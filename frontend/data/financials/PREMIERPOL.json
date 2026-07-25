@@ -2,17 +2,6 @@
     "symbol": "PREMIERPOL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 744400000.0,
-            "earnings": 60000000.0,
-            "ebitda": 96500000.0,
-            "profitMargin": 8.060182697474476,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 85800000.0,
             "ebitda": 130800000.0,
             "profitMargin": 9.307875894988067,
-            "revenueYoY": 11.341949510810483,
-            "earningsYoY": 53.48837209302325
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1000600000.0,
+            "earnings": 90800000.0,
+            "ebitda": 135200000.0,
+            "profitMargin": 9.074555266839896,
+            "revenueYoY": 34.41698011821601,
+            "earningsYoY": 51.33333333333333
         }
     ],
     "annual": [

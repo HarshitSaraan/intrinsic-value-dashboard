@@ -2,17 +2,6 @@
     "symbol": "DYCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3311787000.0,
-            "earnings": 235646000.0,
-            "ebitda": 356203000.0,
-            "profitMargin": 7.11537305992203,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 224227000.0,
             "ebitda": 361079000.0,
             "profitMargin": 7.505061624800807,
-            "revenueYoY": 18.79341667001323,
-            "earningsYoY": 41.89067760143772
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.800137850516588,
             "revenueYoY": 7.331027025590715,
             "earningsYoY": 2.5758977449224685
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3491011000.0,
+            "earnings": 249527000.0,
+            "ebitda": 391826000.0,
+            "profitMargin": 7.147700193439666,
+            "revenueYoY": 33.2267446408938,
+            "earningsYoY": 37.0492829720274
         }
     ],
     "annual": [

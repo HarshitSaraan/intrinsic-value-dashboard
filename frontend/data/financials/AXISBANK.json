@@ -2,17 +2,6 @@
     "symbol": "AXISBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 218373300000.0,
-            "earnings": 74751300000.0,
-            "ebitda": null,
-            "profitMargin": 34.2309705444759,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 70106500000.0,
             "ebitda": null,
             "profitMargin": 31.703333153954027,
-            "revenueYoY": 5.7066400758335885,
-            "earningsYoY": 3.980250033742245
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 34.45876305014101,
             "revenueYoY": 1.033322297185599,
             "earningsYoY": 1.7056559551472683
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 229981200000.0,
+            "earnings": 76323100000.0,
+            "ebitda": null,
+            "profitMargin": 33.186669171219215,
+            "revenueYoY": 3.7713126474631933,
+            "earningsYoY": 22.23978653751289
         }
     ],
     "annual": [

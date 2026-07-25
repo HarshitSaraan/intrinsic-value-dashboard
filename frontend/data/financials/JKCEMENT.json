@@ -2,17 +2,6 @@
     "symbol": "JKCEMENT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 35811800000.0,
-            "earnings": 3603600000.0,
-            "ebitda": 8106700000.0,
-            "profitMargin": 10.062605063135614,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1746300000.0,
             "ebitda": 5556200000.0,
             "profitMargin": 5.042635580568686,
-            "revenueYoY": 18.18222149419168,
-            "earningsYoY": -7.9052842527159575
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.563601286173633,
             "revenueYoY": 8.553605236262909,
             "earningsYoY": -7.617382617382617
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 40317200000.0,
+            "earnings": 2774700000.0,
+            "ebitda": 6869900000.0,
+            "profitMargin": 6.882174357346245,
+            "revenueYoY": 20.25902825627213,
+            "earningsYoY": -14.471980765674125
         }
     ],
     "annual": [

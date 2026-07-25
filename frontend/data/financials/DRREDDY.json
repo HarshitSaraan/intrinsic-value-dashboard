@@ -2,17 +2,6 @@
     "symbol": "DRREDDY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 85452000000.0,
-            "earnings": 14178000000.0,
-            "ebitda": 24642000000.0,
-            "profitMargin": 16.591770818705236,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2209000000.0,
             "ebitda": 8630000000.0,
             "profitMargin": 2.938985125462335,
-            "revenueYoY": -11.636491888079004,
-            "earningsYoY": -86.13569321533923
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 80705000000.0,
+            "earnings": 4435000000.0,
+            "ebitda": 12153000000.0,
+            "profitMargin": 5.4953224707267205,
+            "revenueYoY": -5.55516547301409,
+            "earningsYoY": -68.71914233319228
         }
     ],
     "annual": [
