@@ -2,17 +2,6 @@
     "symbol": "ZFCVINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10101175000.0,
-            "earnings": 1267163000.0,
-            "ebitda": 2022275000.0,
-            "profitMargin": 12.544708907627083,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1401743000.0,
             "ebitda": 2212099000.0,
             "profitMargin": 13.040550616799958,
-            "revenueYoY": 11.688999217904389,
-            "earningsYoY": 11.727656549022921
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.74651823979515,
             "revenueYoY": 13.643442470801665,
             "earningsYoY": 15.471648083158993
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10661765000.0,
+            "earnings": 1044781000.0,
+            "ebitda": 1735291000.0,
+            "profitMargin": 9.799324971053105,
+            "revenueYoY": 9.289225107759174,
+            "earningsYoY": -14.625125739832336
         }
     ],
     "annual": [

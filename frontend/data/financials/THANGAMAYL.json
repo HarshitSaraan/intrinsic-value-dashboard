@@ -2,17 +2,6 @@
     "symbol": "THANGAMAYL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 13805000000.0,
-            "earnings": 314000000.0,
-            "ebitda": 573700000.0,
-            "profitMargin": 2.2745382107931906,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1047800000.0,
             "ebitda": 1697300000.0,
             "profitMargin": 4.363633334860341,
-            "revenueYoY": 112.18850517832526,
-            "earningsYoY": 117.43100228263125
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.026407489227365,
             "revenueYoY": 105.5929011227816,
             "earningsYoY": 354.3312101910828
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 26624500000.0,
+            "earnings": 850900000.0,
+            "ebitda": 1446500000.0,
+            "profitMargin": 3.195928562038724,
+            "revenueYoY": 71.18342206105496,
+            "earningsYoY": 86.15182673375628
         }
     ],
     "annual": [

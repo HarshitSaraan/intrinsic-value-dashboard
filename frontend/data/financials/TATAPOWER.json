@@ -2,17 +2,6 @@
     "symbol": "TATAPOWER",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 180350700000.0,
-            "earnings": 10598600000.0,
-            "ebitda": 40595900000.0,
-            "profitMargin": 5.876661415786021,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 9959100000.0,
             "ebitda": 43724900000.0,
             "profitMargin": 6.683870015167582,
-            "revenueYoY": -12.843328334078151,
-            "earningsYoY": -4.499295187135008
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 190512600000.0,
+            "earnings": 11759300000.0,
+            "ebitda": 44899800000.0,
+            "profitMargin": 6.17245263567869,
+            "revenueYoY": 5.634522072828107,
+            "earningsYoY": 10.951446417451361
         }
     ],
     "annual": [

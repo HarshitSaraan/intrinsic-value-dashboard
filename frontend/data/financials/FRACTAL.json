@@ -2,13 +2,24 @@
     "symbol": "FRACTAL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7575000000.0,
-            "earnings": 548000000.0,
-            "ebitda": 1310000000.0,
-            "profitMargin": 7.234323432343234,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7605000000.0,
+            "earnings": 375000000.0,
+            "ebitda": 948000000.0,
+            "profitMargin": 4.930966469428008,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 7985000000.0,
+            "earnings": 343000000.0,
+            "ebitda": 895000000.0,
+            "profitMargin": 4.295554164057608,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -22,6 +33,17 @@
             "profitMargin": 13.291210651021098,
             "revenueYoY": 17.003300330033003,
             "earningsYoY": 114.96350364963503
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9125000000.0,
+            "earnings": 742000000.0,
+            "ebitda": 1460000000.0,
+            "profitMargin": 8.13150684931507,
+            "revenueYoY": 19.986850756081527,
+            "earningsYoY": 97.86666666666667
         }
     ],
     "annual": [

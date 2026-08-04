@@ -2,17 +2,6 @@
     "symbol": "VINATIORGA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6484600000.0,
-            "earnings": 1230400000.0,
-            "ebitda": 1865800000.0,
-            "profitMargin": 18.974184992135214,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1008300000.0,
             "ebitda": 1654200000.0,
             "profitMargin": 18.99657108406496,
-            "revenueYoY": 1.7443643612942799,
-            "earningsYoY": 7.6093916755603
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 20.509338985296065,
             "revenueYoY": -6.868580945625019,
             "earningsYoY": 0.6664499349804942
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6959100000.0,
+            "earnings": 1088600000.0,
+            "ebitda": 1794900000.0,
+            "profitMargin": 15.64282737710336,
+            "revenueYoY": 28.40378618742735,
+            "earningsYoY": 4.482195988098666
         }
     ],
     "annual": [

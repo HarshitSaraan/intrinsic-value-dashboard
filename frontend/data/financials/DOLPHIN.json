@@ -2,17 +2,6 @@
     "symbol": "DOLPHIN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 164430000.0,
-            "earnings": 113326000.0,
-            "ebitda": 132806000.0,
-            "profitMargin": 68.92051328832937,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 283269000.0,
             "ebitda": 190133000.0,
             "profitMargin": 62.45499463132528,
-            "revenueYoY": 121.85118517721408,
-            "earningsYoY": 171.12789295354045
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 428465000.0,
+            "earnings": 148141000.0,
+            "ebitda": 204518000.0,
+            "profitMargin": 34.57481941348768,
+            "revenueYoY": 160.57592896673356,
+            "earningsYoY": 30.72110548329598
         }
     ],
     "annual": [

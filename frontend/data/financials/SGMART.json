@@ -2,17 +2,6 @@
     "symbol": "SGMART",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15950300000.0,
-            "earnings": 331400000.0,
-            "ebitda": 568700000.0,
-            "profitMargin": 2.0777038676388533,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 107400000.0,
             "ebitda": 346800000.0,
             "profitMargin": 0.653113844918908,
-            "revenueYoY": 23.20504079537877,
-            "earningsYoY": -61.697574893009985
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.2750213951855347,
             "revenueYoY": 14.282489984514399,
             "earningsYoY": 25.135787567893786
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13085700000.0,
+            "earnings": 455800000.0,
+            "ebitda": 685100000.0,
+            "profitMargin": 3.4831915755366545,
+            "revenueYoY": 14.40849121763991,
+            "earningsYoY": 41.070875889817394
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SRF",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 42151700000.0,
-            "earnings": 5260600000.0,
-            "ebitda": 9919000000.0,
-            "profitMargin": 12.48016094250054,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4326600000.0,
             "ebitda": 7340600000.0,
             "profitMargin": 11.98006368544926,
-            "revenueYoY": 6.011994047007506,
-            "earningsYoY": 59.606020362992474
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.842935414611759,
             "revenueYoY": 7.512389773128961,
             "earningsYoY": 10.63756985895145
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 49392000000.0,
+            "earnings": 7588700000.0,
+            "ebitda": 12706300000.0,
+            "profitMargin": 15.36422902494331,
+            "revenueYoY": 32.1143321795976,
+            "earningsYoY": 75.53432642487047
         }
     ],
     "annual": [

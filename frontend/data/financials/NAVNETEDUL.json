@@ -2,17 +2,6 @@
     "symbol": "NAVNETEDUL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 7940000000.0,
-            "earnings": 1570000000.0,
-            "ebitda": 2350000000.0,
-            "profitMargin": 19.77329974811083,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 380000000.0,
             "ebitda": 730000000.0,
             "profitMargin": 8.837209302325581,
-            "revenueYoY": -0.9216589861751152,
-            "earningsYoY": -20.833333333333336
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7880000000.0,
+            "earnings": 1410000000.0,
+            "ebitda": 2170000000.0,
+            "profitMargin": 17.893401015228427,
+            "revenueYoY": -0.7556675062972292,
+            "earningsYoY": -10.191082802547772
         }
     ],
     "annual": [

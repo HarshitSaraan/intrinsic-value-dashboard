@@ -2,17 +2,6 @@
     "symbol": "BANDHANBNK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 34555140000.0,
-            "earnings": 3179043000.0,
-            "ebitda": null,
-            "profitMargin": 9.199913529506754,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2055909000.0,
             "ebitda": null,
             "profitMargin": 6.083817288488328,
-            "revenueYoY": -13.92779522823372,
-            "earningsYoY": -51.794186768747466
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.97744109761693,
             "revenueYoY": 3.205662023073846,
             "earningsYoY": 68.01861440691428
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 35244137000.0,
+            "earnings": 5016687000.0,
+            "ebitda": null,
+            "profitMargin": 14.23410367517298,
+            "revenueYoY": 1.185581254269701,
+            "earningsYoY": 34.8709545598744
         }
     ],
     "annual": [

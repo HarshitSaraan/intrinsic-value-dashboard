@@ -2,17 +2,6 @@
     "symbol": "NETWEB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4146510000.0,
-            "earnings": 426130000.0,
-            "ebitda": 617540000.0,
-            "profitMargin": 10.276835218050842,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 733110000.0,
             "ebitda": 1045800000.0,
             "profitMargin": 9.107805075006988,
-            "revenueYoY": 141.00128146781958,
-            "earningsYoY": 146.6971767002053
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.12405551491401,
             "revenueYoY": 86.591133266289,
             "earningsYoY": 65.66071386666042
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8196860000.0,
+            "earnings": 853230000.0,
+            "ebitda": 1289870000.0,
+            "profitMargin": 10.409229875830501,
+            "revenueYoY": 172.12926443833578,
+            "earningsYoY": 179.9402867548148
         }
     ],
     "annual": [

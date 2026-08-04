@@ -2,17 +2,6 @@
     "symbol": "TARIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5293300000.0,
-            "earnings": 673500000.0,
-            "ebitda": 1085000000.0,
-            "profitMargin": 12.723631760905295,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 892800000.0,
             "ebitda": 1408500000.0,
             "profitMargin": 11.407106443328606,
-            "revenueYoY": 15.697433774834439,
-            "earningsYoY": -5.182667799490229
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5723400000.0,
+            "earnings": 615200000.0,
+            "ebitda": 1096500000.0,
+            "profitMargin": 10.748855575357306,
+            "revenueYoY": 8.12536602875333,
+            "earningsYoY": -8.656273199703044
         }
     ],
     "annual": [

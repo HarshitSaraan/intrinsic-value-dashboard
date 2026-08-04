@@ -2,17 +2,6 @@
     "symbol": "SPLPETRO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15338330000.0,
-            "earnings": 1068874000.0,
-            "ebitda": 1633249000.0,
-            "profitMargin": 6.968646521492236,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 305690000.0,
             "ebitda": 725005000.0,
             "profitMargin": 2.3960045532629954,
-            "revenueYoY": -8.684762486548737,
-            "earningsYoY": -57.15645204014559
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.513020621196983,
             "revenueYoY": 4.524664679922782,
             "earningsYoY": 57.687716232221945
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17122416000.0,
+            "earnings": 2373214000.0,
+            "ebitda": 3498695000.0,
+            "profitMargin": 13.860275325631616,
+            "revenueYoY": 22.469424872605423,
+            "earningsYoY": 190.03567373745645
         }
     ],
     "annual": [

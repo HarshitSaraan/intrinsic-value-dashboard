@@ -2,17 +2,6 @@
     "symbol": "DPABHUSHAN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5403712000.0,
-            "earnings": 364236000.0,
-            "ebitda": 552465000.0,
-            "profitMargin": 6.740477656840335,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 506013000.0,
             "ebitda": 729919000.0,
             "profitMargin": 3.791136804601812,
-            "revenueYoY": 86.09288761895307,
-            "earningsYoY": 101.17481483248451
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8523997000.0,
+            "earnings": 644495000.0,
+            "ebitda": 939924000.0,
+            "profitMargin": 7.560948226518615,
+            "revenueYoY": 57.74336234055405,
+            "earningsYoY": 76.94434377711154
         }
     ],
     "annual": [

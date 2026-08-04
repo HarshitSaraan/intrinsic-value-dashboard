@@ -2,17 +2,6 @@
     "symbol": "IEX",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1422482000.0,
-            "earnings": 1171127000.0,
-            "ebitda": 1578916000.0,
-            "profitMargin": 82.32982912964803,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1191052000.0,
             "ebitda": 1635042000.0,
             "profitMargin": 81.76483510448416,
-            "revenueYoY": 10.310254216110199,
-            "earningsYoY": 11.009809632546544
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 74.45243246375415,
             "revenueYoY": 22.534204299245967,
             "earningsYoY": 10.810014626936276
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1578767000.0,
+            "earnings": 1347567000.0,
+            "ebitda": 1835776000.0,
+            "profitMargin": 85.3556604616134,
+            "revenueYoY": 11.375760662681285,
+            "earningsYoY": 11.649034314939845
         }
     ],
     "annual": [

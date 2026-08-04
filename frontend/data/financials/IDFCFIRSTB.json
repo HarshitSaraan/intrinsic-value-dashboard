@@ -2,17 +2,6 @@
     "symbol": "IDFCFIRSTB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 68030900000.0,
-            "earnings": 2956000000.0,
-            "ebitda": null,
-            "profitMargin": 4.345084366074828,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4786500000.0,
             "ebitda": null,
             "profitMargin": 6.283524602430705,
-            "revenueYoY": 13.994585753258201,
-            "earningsYoY": 40.70905723608784
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.524685014102008,
             "revenueYoY": 7.4139839396509535,
             "earningsYoY": 11.853856562922868
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 82837200000.0,
+            "earnings": 11478200000.0,
+            "ebitda": null,
+            "profitMargin": 13.85633507651152,
+            "revenueYoY": 15.694090239971398,
+            "earningsYoY": 153.11928021699342
         }
     ],
     "annual": [

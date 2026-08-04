@@ -2,17 +2,6 @@
     "symbol": "DCBBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7767800000.0,
-            "earnings": 1770700000.0,
-            "ebitda": null,
-            "profitMargin": 22.795386081001055,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1847400000.0,
             "ebitda": null,
             "profitMargin": 21.834556607453106,
-            "revenueYoY": 16.393826005612723,
-            "earningsYoY": 21.98890649762282
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.72711224948946,
             "revenueYoY": 11.579855300084967,
             "earningsYoY": 16.14050940306094
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8802800000.0,
+            "earnings": 2132000000.0,
+            "ebitda": null,
+            "profitMargin": 24.219566501567684,
+            "revenueYoY": 7.803468208092486,
+            "earningsYoY": 35.57166475899784
         }
     ],
     "annual": [

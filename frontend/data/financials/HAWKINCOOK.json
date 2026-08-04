@@ -2,17 +2,6 @@
     "symbol": "HAWKINCOOK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3066600000.0,
-            "earnings": 343600000.0,
-            "ebitda": 502000000.0,
-            "profitMargin": 11.20459140416096,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 335200000.0,
             "ebitda": 497500000.0,
             "profitMargin": 10.097906311191444,
-            "revenueYoY": 16.188309415470773,
-            "earningsYoY": 58.11320754716981
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.88580576307364,
             "revenueYoY": 19.16454705537077,
             "earningsYoY": 15.774155995343422
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3181300000.0,
+            "earnings": 303800000.0,
+            "ebitda": 455800000.0,
+            "profitMargin": 9.549555213277591,
+            "revenueYoY": 33.064246277396684,
+            "earningsYoY": 17.116422513492676
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 10944088000.0,
+            "revenue": 10930616000.0,
             "earnings": 1146927000.0,
             "ebitda": 1679790000.0,
-            "profitMargin": 10.479877354787352,
-            "revenueYoY": 8.634680310479867,
+            "profitMargin": 10.492793818756416,
+            "revenueYoY": 8.50095272960307,
             "earningsYoY": 4.421774281656288
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 12248630000.0,
+            "revenue": 12234186000.0,
             "earnings": 1311883000.0,
             "ebitda": 1935182000.0,
-            "profitMargin": 10.710446800989173,
-            "revenueYoY": 11.920061315296442,
+            "profitMargin": 10.723091834634523,
+            "revenueYoY": 11.925860354073366,
             "earningsYoY": 14.382432360560001
         }
     ]

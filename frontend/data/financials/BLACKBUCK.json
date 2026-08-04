@@ -2,17 +2,6 @@
     "symbol": "BLACKBUCK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1436100000.0,
-            "earnings": 336960000.0,
-            "ebitda": 563470000.0,
-            "profitMargin": 23.46354710674744,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 657320000.0,
             "ebitda": 592050000.0,
             "profitMargin": 35.4478436955666,
-            "revenueYoY": 52.23134389623184,
-            "earningsYoY": -76.53853017810614
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2041680000.0,
+            "earnings": 421670000.0,
+            "ebitda": 660240000.0,
+            "profitMargin": 20.653089612476,
+            "revenueYoY": 42.168372675997496,
+            "earningsYoY": 25.139482431149098
         }
     ],
     "annual": [

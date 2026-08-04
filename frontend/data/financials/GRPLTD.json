@@ -2,17 +2,6 @@
     "symbol": "GRPLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1237467000.0,
-            "earnings": 17480000.0,
-            "ebitda": 108528000.0,
-            "profitMargin": 1.4125629208698092,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -13384000.0,
             "ebitda": 94371000.0,
             "profitMargin": -0.9261251860519346,
-            "revenueYoY": -9.871607854827756,
-            "earningsYoY": -106.88268478188203
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1568308000.0,
+            "earnings": 41981000.0,
+            "ebitda": 173616000.0,
+            "profitMargin": 2.676833887221133,
+            "revenueYoY": 26.735339205005065,
+            "earningsYoY": 140.20712937002918
         }
     ],
     "annual": [

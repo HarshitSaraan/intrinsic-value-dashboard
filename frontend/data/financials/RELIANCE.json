@@ -2,17 +2,6 @@
     "symbol": "RELIANCE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2613880000000.0,
-            "earnings": 194070000000.0,
-            "ebitda": 352580000000.0,
-            "profitMargin": 7.424594855157849,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 186450000000.0,
             "ebitda": 363100000000.0,
             "profitMargin": 7.03837224665446,
-            "revenueYoY": 10.383522372138374,
-            "earningsYoY": 0.5663430420711975
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.7712907953845995,
             "revenueYoY": 12.49904356741702,
             "earningsYoY": -12.55217189673829
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3094680000000.0,
+            "earnings": 209460000000.0,
+            "ebitda": 389670000000.0,
+            "profitMargin": 6.76838962348288,
+            "revenueYoY": 27.022722795035136,
+            "earningsYoY": -22.40497888419649
         }
     ],
     "annual": [

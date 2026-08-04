@@ -2,17 +2,6 @@
     "symbol": "LXCHEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7096870000.0,
-            "earnings": 217590000.0,
-            "ebitda": 600910000.0,
-            "profitMargin": 3.065999518097415,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 254050000.0,
             "ebitda": 530760000.0,
             "profitMargin": 3.534943132011098,
-            "revenueYoY": -8.603584986042845,
-            "earningsYoY": -13.31718302170056
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.9308726931498277,
             "revenueYoY": 3.610464895087553,
             "earningsYoY": -0.9559262833769934
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9683380000.0,
+            "earnings": 677160000.0,
+            "ebitda": 1177670000.0,
+            "profitMargin": 6.9930127703343254,
+            "revenueYoY": 39.74542883119507,
+            "earningsYoY": 216.56304053106447
         }
     ],
     "annual": [

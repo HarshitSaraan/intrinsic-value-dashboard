@@ -2,17 +2,6 @@
     "symbol": "HEG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6169300000.0,
-            "earnings": 1048300000.0,
-            "ebitda": 1886900000.0,
-            "profitMargin": 16.99220332938907,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -1137700000.0,
             "ebitda": -816300000.0,
             "profitMargin": -18.860761592148673,
-            "revenueYoY": 12.417533266241755,
-            "earningsYoY": -54.43192615718746
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6807900000.0,
+            "earnings": 1223400000.0,
+            "ebitda": 2246400000.0,
+            "profitMargin": 17.970299211210506,
+            "revenueYoY": 11.09859982375404,
+            "earningsYoY": 16.71436748712078
         }
     ],
     "annual": [

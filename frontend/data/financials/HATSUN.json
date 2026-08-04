@@ -2,17 +2,6 @@
     "symbol": "HATSUN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 22428500000.0,
-            "earnings": 430100000.0,
-            "ebitda": 2329700000.0,
-            "profitMargin": 1.9176494192656663,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 605800000.0,
             "ebitda": 2584900000.0,
             "profitMargin": 2.5629093124397135,
-            "revenueYoY": 17.612638387859185,
-            "earningsYoY": 47.97264289203713
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.9742942160046244,
             "revenueYoY": 14.926544352052076,
             "earningsYoY": 18.321320623110903
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 30904900000.0,
+            "earnings": 1336900000.0,
+            "ebitda": 3535900000.0,
+            "profitMargin": 4.325851240418186,
+            "revenueYoY": 19.31103973315626,
+            "earningsYoY": -1.1095495228937051
         }
     ],
     "annual": [

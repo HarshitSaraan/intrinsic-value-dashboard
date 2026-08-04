@@ -2,17 +2,6 @@
     "symbol": "SOUTHWEST",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 402162000.0,
-            "earnings": 24032000.0,
-            "ebitda": 50520000.0,
-            "profitMargin": 5.975701334288173,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 130489000.0,
             "ebitda": 189035000.0,
             "profitMargin": 16.79501023874092,
-            "revenueYoY": 5.218745556360583,
-            "earningsYoY": 30.5686468745935
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 616821000.0,
+            "earnings": 93362000.0,
+            "ebitda": 136217000.0,
+            "profitMargin": 15.135995694050624,
+            "revenueYoY": 53.37625136139168,
+            "earningsYoY": 288.4903462050599
         }
     ],
     "annual": [

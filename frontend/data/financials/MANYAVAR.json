@@ -2,17 +2,6 @@
     "symbol": "MANYAVAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3674360000.0,
-            "earnings": 1011050000.0,
-            "ebitda": 1877880000.0,
-            "profitMargin": 27.51635658999118,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1349020000.0,
             "ebitda": 2395330000.0,
             "profitMargin": 27.435834858653653,
-            "revenueYoY": -3.82960413080895,
-            "earningsYoY": -14.605475549928787
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 28.616743485042324,
             "revenueYoY": 8.706550256371177,
             "earningsYoY": 13.05375599624153
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3013650000.0,
+            "earnings": 806110000.0,
+            "ebitda": 1606810000.0,
+            "profitMargin": 26.74862708011879,
+            "revenueYoY": 7.174863970980476,
+            "earningsYoY": 14.737321548030803
         }
     ],
     "annual": [

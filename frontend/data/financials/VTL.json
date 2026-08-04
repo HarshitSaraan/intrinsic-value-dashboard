@@ -2,17 +2,6 @@
     "symbol": "VTL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25085700000.0,
-            "earnings": 2373100000.0,
-            "ebitda": 4195300000.0,
-            "profitMargin": 9.459971218662425,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1663400000.0,
             "ebitda": 3581600000.0,
             "profitMargin": 6.639497706870606,
-            "revenueYoY": 1.622926215876364,
-            "earningsYoY": -21.01989459189972
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.394374654721014,
             "revenueYoY": -0.42215285999593394,
             "earningsYoY": -22.165100501453793
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27030800000.0,
+            "earnings": 3098300000.0,
+            "ebitda": 5674900000.0,
+            "profitMargin": 11.462109889459432,
+            "revenueYoY": 13.305332696193087,
+            "earningsYoY": 49.55350678186996
         }
     ],
     "annual": [

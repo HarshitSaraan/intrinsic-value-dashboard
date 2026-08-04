@@ -2,17 +2,6 @@
     "symbol": "NILAINFRA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 925967000.0,
-            "earnings": 67137000.0,
-            "ebitda": 125428000.0,
-            "profitMargin": 7.250474368956993,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 58495000.0,
             "ebitda": 119846000.0,
             "profitMargin": 7.218120635594423,
-            "revenueYoY": -28.548920374893093,
-            "earningsYoY": 9.122283369088704
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 742043000.0,
+            "earnings": 84409000.0,
+            "ebitda": 115249000.0,
+            "profitMargin": 11.375216800104576,
+            "revenueYoY": -19.862910881273308,
+            "earningsYoY": 25.72649954570505
         }
     ],
     "annual": [

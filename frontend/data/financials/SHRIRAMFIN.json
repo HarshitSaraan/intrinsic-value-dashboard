@@ -2,17 +2,6 @@
     "symbol": "SHRIRAMFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 60661900000.0,
-            "earnings": 21437700000.0,
-            "ebitda": null,
-            "profitMargin": 35.339644818246704,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 25296500000.0,
             "ebitda": null,
             "profitMargin": 37.56600949229865,
-            "revenueYoY": 16.10278055079975,
-            "earningsYoY": -22.089101744768005
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 42.47534525084994,
             "revenueYoY": 17.24360760213577,
             "earningsYoY": 40.91716928588421
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 79228200000.0,
+            "earnings": 34527700000.0,
+            "ebitda": null,
+            "profitMargin": 43.580063664200374,
+            "revenueYoY": 32.06086639097106,
+            "earningsYoY": 59.89487820690933
         }
     ],
     "annual": [

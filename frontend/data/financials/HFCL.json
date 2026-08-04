@@ -2,17 +2,6 @@
     "symbol": "HFCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8007200000.0,
-            "earnings": -814300000.0,
-            "ebitda": -234400000.0,
-            "profitMargin": -10.169597362373864,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 976200000.0,
             "ebitda": 2446400000.0,
             "profitMargin": 8.06250464572717,
-            "revenueYoY": 19.649192153762538,
-            "earningsYoY": 32.54582484725051
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.785540424972043,
             "revenueYoY": 127.80997102607654,
             "earningsYoY": 319.2066805845511
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19149800000.0,
+            "earnings": 2286000000.0,
+            "ebitda": 4452500000.0,
+            "profitMargin": 11.937461487848438,
+            "revenueYoY": 119.85488278110721,
+            "earningsYoY": 809.0570719602978
         }
     ],
     "annual": [

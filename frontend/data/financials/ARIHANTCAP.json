@@ -2,17 +2,6 @@
     "symbol": "ARIHANTCAP",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 256129000.0,
-            "earnings": 127025000.0,
-            "ebitda": 210128000.0,
-            "profitMargin": 49.594149822940786,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4983000.0,
             "ebitda": 76229000.0,
             "profitMargin": 1.3592285975368585,
-            "revenueYoY": 46.966502036496586,
-            "earningsYoY": -93.52966382299093
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 401045000.0,
+            "earnings": 214894000.0,
+            "ebitda": 364591000.0,
+            "profitMargin": 53.583513072099144,
+            "revenueYoY": 56.579301836184115,
+            "earningsYoY": 69.17457193465853
         }
     ],
     "annual": [

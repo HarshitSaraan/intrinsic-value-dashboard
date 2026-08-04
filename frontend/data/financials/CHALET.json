@@ -2,17 +2,6 @@
     "symbol": "CHALET",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5219740000.0,
-            "earnings": 1238460000.0,
-            "ebitda": 2568490000.0,
-            "profitMargin": 23.726469134477963,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1240910000.0,
             "ebitda": 2716120000.0,
             "profitMargin": 21.333353963374798,
-            "revenueYoY": 27.061475651552787,
-            "earningsYoY": 28.537098227696006
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 29.204592479268815,
             "revenueYoY": 6.943449290577691,
             "earningsYoY": 31.63525668975986
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5122730000.0,
+            "earnings": 861250000.0,
+            "ebitda": 2332090000.0,
+            "profitMargin": 16.812324678442938,
+            "revenueYoY": -42.73406435183684,
+            "earningsYoY": -57.60521781934531
         }
     ],
     "annual": [

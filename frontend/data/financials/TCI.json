@@ -2,17 +2,6 @@
     "symbol": "TCI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11788000000.0,
-            "earnings": 1142000000.0,
-            "ebitda": 1327000000.0,
-            "profitMargin": 9.687818120122158,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1147000000.0,
             "ebitda": 1294000000.0,
             "profitMargin": 9.184817424727738,
-            "revenueYoY": 8.865835585389242,
-            "earningsYoY": 13.676907829534194
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.336757818401571,
             "revenueYoY": 12.300644723447574,
             "earningsYoY": 8.231173380035026
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12485000000.0,
+            "earnings": 1057000000.0,
+            "ebitda": 1238000000.0,
+            "profitMargin": 8.466159391269523,
+            "revenueYoY": 9.584832792065304,
+            "earningsYoY": -0.7511737089201878
         }
     ],
     "annual": [

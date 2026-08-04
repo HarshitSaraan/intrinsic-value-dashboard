@@ -2,17 +2,6 @@
     "symbol": "MWL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2757318000.0,
-            "earnings": 101175000.0,
-            "ebitda": 197174000.0,
-            "profitMargin": 3.669326497705379,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 153682000.0,
             "ebitda": 292941000.0,
             "profitMargin": 5.800393280266918,
-            "revenueYoY": -18.236280365023713,
-            "earningsYoY": 81.29077160821507
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3162165000.0,
+            "earnings": 119147000.0,
+            "ebitda": 297227000.0,
+            "profitMargin": 3.767893199753966,
+            "revenueYoY": 14.682637258379339,
+            "earningsYoY": 17.763281443044228
         }
     ],
     "annual": [

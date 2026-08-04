@@ -2,17 +2,6 @@
     "symbol": "DABUR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 28301400000.0,
-            "earnings": 3201300000.0,
-            "ebitda": 5680300000.0,
-            "profitMargin": 11.311454557018381,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 5599700000.0,
             "ebitda": 8594200000.0,
             "profitMargin": 15.73546148117966,
-            "revenueYoY": 6.062141420162432,
-            "earningsYoY": 7.1959110226272065
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.132902350873266,
             "revenueYoY": 7.345219671111676,
             "earningsYoY": 15.140724080842158
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 37643900000.0,
+            "earnings": 5908800000.0,
+            "ebitda": 9134500000.0,
+            "profitMargin": 15.696567040078207,
+            "revenueYoY": 10.568410787821112,
+            "earningsYoY": 14.977330661010683
         }
     ],
     "annual": [

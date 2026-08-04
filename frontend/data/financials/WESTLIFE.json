@@ -2,17 +2,6 @@
     "symbol": "WESTLIFE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5948897000.0,
-            "earnings": 15225000.0,
-            "ebitda": 869949000.0,
-            "profitMargin": 0.25592979673374744,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 10201000.0,
             "ebitda": 952350000.0,
             "profitMargin": 0.15288842367404026,
-            "revenueYoY": 2.611743642040176,
-            "earningsYoY": -85.45166718959469
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.36970844091848964,
             "revenueYoY": 7.98608548778034,
             "earningsYoY": 55.993431855500816
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7278617000.0,
+            "earnings": 5868000.0,
+            "ebitda": 995136000.0,
+            "profitMargin": 0.08061971113468397,
+            "revenueYoY": 11.421171534564118,
+            "earningsYoY": -52.19551934826884
         }
     ],
     "annual": [

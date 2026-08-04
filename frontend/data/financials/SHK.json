@@ -2,17 +2,6 @@
     "symbol": "SHK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5785600000.0,
-            "earnings": 255700000.0,
-            "ebitda": 760500000.0,
-            "profitMargin": 4.419593473451328,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 18500000.0,
             "ebitda": 682600000.0,
             "profitMargin": 0.2857893192034974,
-            "revenueYoY": 14.685351853164196,
-            "earningsYoY": -98.19547405384316
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6597700000.0,
+            "earnings": 454000000.0,
+            "ebitda": 1186400000.0,
+            "profitMargin": 6.881185867802415,
+            "revenueYoY": 14.062202859464412,
+            "earningsYoY": 77.55181853734847
         }
     ],
     "annual": [

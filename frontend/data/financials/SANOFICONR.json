@@ -2,17 +2,6 @@
     "symbol": "SANOFICONR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2209000000.0,
-            "earnings": 607000000.0,
-            "ebitda": 824000000.0,
-            "profitMargin": 27.478497057492078,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 678000000.0,
             "ebitda": 944000000.0,
             "profitMargin": 29.581151832460733,
-            "revenueYoY": 32.79258400926999,
-            "earningsYoY": 35.6
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2357000000.0,
+            "earnings": 688000000.0,
+            "ebitda": 956000000.0,
+            "profitMargin": 29.189647857445905,
+            "revenueYoY": 6.699864191942055,
+            "earningsYoY": 13.344316309719934
         }
     ],
     "annual": [

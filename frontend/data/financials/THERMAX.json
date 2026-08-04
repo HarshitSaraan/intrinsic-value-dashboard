@@ -2,17 +2,6 @@
     "symbol": "THERMAX",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 20943600000.0,
-            "earnings": 1523800000.0,
-            "ebitda": 2905500000.0,
-            "profitMargin": 7.27573101090548,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2442800000.0,
             "ebitda": 4304900000.0,
             "profitMargin": 7.125937853700656,
-            "revenueYoY": 12.527573529411764,
-            "earningsYoY": 18.73815194672629
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 23002600000.0,
+            "earnings": 252400000.0,
+            "ebitda": 1368100000.0,
+            "profitMargin": 1.097267265439559,
+            "revenueYoY": 9.447069291196216,
+            "earningsYoY": -83.43614647591548
         }
     ],
     "annual": [

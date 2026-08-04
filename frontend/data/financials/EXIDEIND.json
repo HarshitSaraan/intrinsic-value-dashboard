@@ -2,17 +2,6 @@
     "symbol": "EXIDEIND",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 46951200000.0,
-            "earnings": 2729900000.0,
-            "ebitda": 5662500000.0,
-            "profitMargin": 5.814334883879432,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2152500000.0,
             "ebitda": 4924500000.0,
             "profitMargin": 4.54580972433703,
-            "revenueYoY": 9.219637313109226,
-            "earningsYoY": 15.187028415476
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 55283800000.0,
+            "earnings": 3504700000.0,
+            "ebitda": 6489100000.0,
+            "profitMargin": 6.339470152196484,
+            "revenueYoY": 17.747363219683415,
+            "earningsYoY": 28.381992014359504
         }
     ],
     "annual": [

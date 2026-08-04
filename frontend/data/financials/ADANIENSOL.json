@@ -2,17 +2,6 @@
     "symbol": "ADANIENSOL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 63745800000.0,
-            "earnings": 6471500000.0,
-            "ebitda": 22617700000.0,
-            "profitMargin": 10.152041389393498,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 5523100000.0,
             "ebitda": 22101900000.0,
             "profitMargin": 8.207113297125408,
-            "revenueYoY": 15.42624171134735,
-            "earningsYoY": -1.6857132685392857
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.186553759302027,
             "revenueYoY": 16.764869214912984,
             "earningsYoY": 5.660202426021788
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 97110800000.0,
+            "earnings": 11490600000.0,
+            "ebitda": 31781200000.0,
+            "profitMargin": 11.832463536496455,
+            "revenueYoY": 42.40623643551812,
+            "earningsYoY": 124.215579144552
         }
     ],
     "annual": [

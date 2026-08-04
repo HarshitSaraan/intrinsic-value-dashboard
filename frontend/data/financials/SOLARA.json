@@ -2,17 +2,6 @@
     "symbol": "SOLARA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3191500000.0,
-            "earnings": 105200000.0,
-            "ebitda": 580000000.0,
-            "profitMargin": 3.2962556791477358,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 96000000.0,
             "ebitda": 632100000.0,
             "profitMargin": 2.478762684293424,
-            "revenueYoY": 41.859272554118895,
-            "earningsYoY": 557.1428571428571
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3816000000.0,
+            "earnings": 163100000.0,
+            "ebitda": 646600000.0,
+            "profitMargin": 4.274109014675052,
+            "revenueYoY": 19.567601441328527,
+            "earningsYoY": 55.038022813688215
         }
     ],
     "annual": [

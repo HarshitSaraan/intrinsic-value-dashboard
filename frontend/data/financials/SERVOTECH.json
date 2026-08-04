@@ -2,17 +2,6 @@
     "symbol": "SERVOTECH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1374354000.0,
-            "earnings": 52374000.0,
-            "ebitda": 108318000.0,
-            "profitMargin": 3.8108085689713134,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 122809000.0,
             "ebitda": 241985000.0,
             "profitMargin": 5.6508881321180215,
-            "revenueYoY": 48.568504641080224,
-            "earningsYoY": 57.65157447464024
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2157885000.0,
+            "earnings": 91474000.0,
+            "ebitda": 209433000.0,
+            "profitMargin": 4.239058151847758,
+            "revenueYoY": 57.01085746467067,
+            "earningsYoY": 74.65536334822622
         }
     ],
     "annual": [

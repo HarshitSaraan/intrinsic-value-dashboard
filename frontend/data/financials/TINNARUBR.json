@@ -2,17 +2,6 @@
     "symbol": "TINNARUBR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1302733000.0,
-            "earnings": 117409000.0,
-            "ebitda": 215172000.0,
-            "profitMargin": 9.012514459985276,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 165299000.0,
             "ebitda": 292028000.0,
             "profitMargin": 10.531865616914292,
-            "revenueYoY": 21.635615419191844,
-            "earningsYoY": 41.53402231336319
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1561812000.0,
+            "earnings": 205664000.0,
+            "ebitda": 347039000.0,
+            "profitMargin": 13.16829426333003,
+            "revenueYoY": 19.887344528771436,
+            "earningsYoY": 75.16885417642601
         }
     ],
     "annual": [

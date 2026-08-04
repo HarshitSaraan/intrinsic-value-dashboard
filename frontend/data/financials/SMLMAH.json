@@ -2,17 +2,6 @@
     "symbol": "SMLMAH",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3318000000.0,
-            "earnings": 5300000.0,
-            "ebitda": 199600000.0,
-            "profitMargin": 0.15973477998794455,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -44,6 +33,17 @@
             "profitMargin": 3.252545107274649,
             "revenueYoY": 62.52863170584689,
             "earningsYoY": 3209.4339622641505
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9575400000.0,
+            "earnings": 636200000.0,
+            "ebitda": 1012900000.0,
+            "profitMargin": 6.644108862292959,
+            "revenueYoY": 13.199115724266749,
+            "earningsYoY": -4.9880525686977295
         }
     ],
     "annual": [

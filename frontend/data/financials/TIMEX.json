@@ -2,17 +2,6 @@
     "symbol": "TIMEX",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1689400000.0,
-            "earnings": 146700000.0,
-            "ebitda": 219500000.0,
-            "profitMargin": 8.683556292174737,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 273400000.0,
             "ebitda": 389000000.0,
             "profitMargin": 11.624149659863946,
-            "revenueYoY": 73.69470497009084,
-            "earningsYoY": 195.8874458874459
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2189000000.0,
+            "earnings": 250200000.0,
+            "ebitda": 357800000.0,
+            "profitMargin": 11.429876656007309,
+            "revenueYoY": 29.572629335858885,
+            "earningsYoY": 70.5521472392638
         }
     ],
     "annual": [
@@ -75,7 +75,7 @@
             "annualLabel": "FY25",
             "revenue": 5381000000.0,
             "earnings": 314200000.0,
-            "ebitda": 496800000.0,
+            "ebitda": 487300000.0,
             "profitMargin": 5.83906337112061,
             "revenueYoY": 28.45241221264711,
             "earningsYoY": 50.76775431861804
@@ -86,7 +86,7 @@
             "annualLabel": "FY26",
             "revenue": 7985900000.0,
             "earnings": 754400000.0,
-            "ebitda": 1108300000.0,
+            "ebitda": 1101700000.0,
             "profitMargin": 9.446649720131733,
             "revenueYoY": 48.40921761754321,
             "earningsYoY": 140.10184595798853

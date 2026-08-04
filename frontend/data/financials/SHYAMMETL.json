@@ -2,17 +2,6 @@
     "symbol": "SHYAMMETL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 44188400000.0,
-            "earnings": 2921500000.0,
-            "ebitda": 6332600000.0,
-            "profitMargin": 6.6114636420418025,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3190900000.0,
             "ebitda": 7561200000.0,
             "profitMargin": 6.089085482676762,
-            "revenueYoY": 26.339187771978256,
-            "earningsYoY": 45.86971428571429
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 54550900000.0,
+            "earnings": 3450700000.0,
+            "ebitda": 8124000000.0,
+            "profitMargin": 6.325651822426394,
+            "revenueYoY": 23.334893363991327,
+            "earningsYoY": 18.113982543214103
         }
     ],
     "annual": [

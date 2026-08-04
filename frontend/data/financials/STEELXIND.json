@@ -2,17 +2,6 @@
     "symbol": "STEELXIND",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2999989000.0,
-            "earnings": 102288000.0,
-            "ebitda": 363481000.0,
-            "profitMargin": 3.4096125019125068,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 123704000.0,
             "ebitda": 500956000.0,
             "profitMargin": 4.305331024701778,
-            "revenueYoY": -1.4044658507091472,
-            "earningsYoY": 159.66414777497903
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2697139000.0,
+            "earnings": 150256000.0,
+            "ebitda": 352393000.0,
+            "profitMargin": 5.570940170306388,
+            "revenueYoY": -10.095037015135722,
+            "earningsYoY": 46.89504145158768
         }
     ],
     "annual": [

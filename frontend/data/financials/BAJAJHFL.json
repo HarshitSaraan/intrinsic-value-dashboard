@@ -2,23 +2,12 @@
     "symbol": "BAJAJHFL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 24715900000.0,
-            "earnings": 5866800000.0,
-            "ebitda": 7293800000.0,
-            "profitMargin": 23.73694666186544,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 25688500000.0,
             "earnings": 5833000000.0,
-            "ebitda": 7683700000.0,
+            "ebitda": 7654900000.0,
             "profitMargin": 22.706658621562177,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 6648900000.0,
             "ebitda": 9328400000.0,
             "profitMargin": 23.210651437029384,
-            "revenueYoY": 19.660558161683923,
-            "earningsYoY": 21.32586401956133
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.206272584146536,
             "revenueYoY": 16.67226360359121,
             "earningsYoY": 14.063884911706554
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 30298200000.0,
+            "earnings": 7152800000.0,
+            "ebitda": 9351000000.0,
+            "profitMargin": 23.60800311569664,
+            "revenueYoY": 17.944605562800476,
+            "earningsYoY": 22.62643579633122
         }
     ],
     "annual": [

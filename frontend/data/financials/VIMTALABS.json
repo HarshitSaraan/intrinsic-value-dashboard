@@ -2,17 +2,6 @@
     "symbol": "VIMTALABS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 975640000.0,
-            "earnings": 188940000.0,
-            "ebitda": 354390000.0,
-            "profitMargin": 19.365749661760486,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 211130000.0,
             "ebitda": 421190000.0,
             "profitMargin": 19.32628495583322,
-            "revenueYoY": 15.67539522029627,
-            "earningsYoY": 15.251924231672035
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1090740000.0,
+            "earnings": 210420000.0,
+            "ebitda": 411230000.0,
+            "profitMargin": 19.29149018097805,
+            "revenueYoY": 11.797384281087286,
+            "earningsYoY": 11.368688472530962
         }
     ],
     "annual": [

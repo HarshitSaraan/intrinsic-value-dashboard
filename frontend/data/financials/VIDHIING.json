@@ -2,17 +2,6 @@
     "symbol": "VIDHIING",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 879024000.0,
-            "earnings": 127029000.0,
-            "ebitda": 210194000.0,
-            "profitMargin": 14.451141265767486,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 131495000.0,
             "ebitda": 210120000.0,
             "profitMargin": 10.718623399277789,
-            "revenueYoY": 12.007998027883536,
-            "earningsYoY": 10.54087225528767
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1462809000.0,
+            "earnings": 171160000.0,
+            "ebitda": 262128000.0,
+            "profitMargin": 11.700775699356512,
+            "revenueYoY": 66.41286244744171,
+            "earningsYoY": 34.74088593943115
         }
     ],
     "annual": [

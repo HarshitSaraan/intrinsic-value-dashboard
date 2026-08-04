@@ -2,17 +2,6 @@
     "symbol": "TIPSMUSIC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 784895000.0,
-            "earnings": 306113000.0,
-            "ebitda": 419359000.0,
-            "profitMargin": 39.00050325202734,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 586576000.0,
             "ebitda": 793194000.0,
             "profitMargin": 62.210240186320185,
-            "revenueYoY": 21.39747830240544,
-            "earningsYoY": 32.629684398077174
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 56.82208730624537,
             "revenueYoY": 32.416437867485456,
             "earningsYoY": 92.92516162332211
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1065122000.0,
+            "earnings": 436995000.0,
+            "ebitda": 593715000.0,
+            "profitMargin": 41.02769448006895,
+            "revenueYoY": 20.94258553578809,
+            "earningsYoY": -4.667006989711773
         }
     ],
     "annual": [

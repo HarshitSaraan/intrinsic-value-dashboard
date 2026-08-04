@@ -2,17 +2,6 @@
     "symbol": "538838",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 19098000.0,
-            "earnings": 37000.0,
-            "ebitda": 1216000.0,
-            "profitMargin": 0.19373756414284218,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -284000.0,
             "ebitda": 1163000.0,
             "profitMargin": -0.47604680009386835,
-            "revenueYoY": -6.050393700787401,
-            "earningsYoY": -234.11764705882354
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20015000.0,
+            "earnings": 44000.0,
+            "ebitda": 1107000.0,
+            "profitMargin": 0.21983512365725705,
+            "revenueYoY": 4.801549900513143,
+            "earningsYoY": 18.91891891891892
         }
     ],
     "annual": [
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 249382000.0,
-            "earnings": 4005000.0,
-            "ebitda": 11221000.0,
-            "profitMargin": 1.6059699577355222,
-            "revenueYoY": 50.005541402547784,
-            "earningsYoY": 502.7872521317748
+            "revenue": 249382775.0,
+            "earnings": 4005309.54,
+            "ebitda": 11219619.87,
+            "profitMargin": 1.606089089352703,
+            "revenueYoY": 50.00600757209725,
+            "earningsYoY": 502.8338405877111
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 246123000.0,
-            "earnings": -87000.0,
-            "ebitda": 5539000.0,
-            "profitMargin": -0.03534817956875221,
-            "revenueYoY": -1.3068304849588182,
-            "earningsYoY": -102.17228464419476
+            "revenue": 246123484.63,
+            "earnings": -87133.59,
+            "ebitda": 5868700.86,
+            "profitMargin": -0.03540238759864335,
+            "revenueYoY": -1.3069428592251429,
+            "earningsYoY": -102.17545208753079
         }
     ]
 }

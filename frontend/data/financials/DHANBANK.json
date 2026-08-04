@@ -2,17 +2,6 @@
     "symbol": "DHANBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1773200000.0,
-            "earnings": 289800000.0,
-            "ebitda": null,
-            "profitMargin": 16.34333408526957,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 238800000.0,
             "ebitda": null,
             "profitMargin": 11.736373912616111,
-            "revenueYoY": 19.30925296118213,
-            "earningsYoY": 20.302267002518892
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.965748615120543,
             "revenueYoY": 44.56350101511392,
             "earningsYoY": 50.069013112491376
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2125100000.0,
+            "earnings": 249100000.0,
+            "ebitda": null,
+            "profitMargin": 11.721801326996378,
+            "revenueYoY": 19.11995515695067,
+            "earningsYoY": 104.51559934318556
         }
     ],
     "annual": [

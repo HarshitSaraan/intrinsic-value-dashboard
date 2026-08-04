@@ -2,24 +2,13 @@
     "symbol": "SMARTWORKS",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3518270000.0,
-            "earnings": -160250000.0,
-            "ebitda": 2300710000.0,
-            "profitMargin": -4.55479539660117,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 979340000.0,
-            "earnings": -570830000.0,
-            "ebitda": 348460000.0,
-            "profitMargin": -58.287213837890825,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3792110000.0,
+            "earnings": -41970000.0,
+            "ebitda": 2498000000.0,
+            "profitMargin": -1.1067716917494481,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -42,8 +31,19 @@
             "earnings": 12400000.0,
             "ebitda": 3216300000.0,
             "profitMargin": 0.2626406398264877,
-            "revenueYoY": 34.1932256478326,
-            "earningsYoY": 107.73790951638065
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5462480000.0,
+            "earnings": 131480000.0,
+            "ebitda": 3593740000.0,
+            "profitMargin": 2.406965334426854,
+            "revenueYoY": 44.048563992078286,
+            "earningsYoY": 413.27138432213485
         }
     ],
     "annual": [

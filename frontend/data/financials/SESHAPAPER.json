@@ -2,17 +2,6 @@
     "symbol": "SESHAPAPER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5023500000.0,
-            "earnings": 270700000.0,
-            "ebitda": 448300000.0,
-            "profitMargin": 5.388673235791779,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 186400000.0,
             "ebitda": 380400000.0,
             "profitMargin": 4.818031430934656,
-            "revenueYoY": -10.305334662555351,
-            "earningsYoY": 12.086590499098016
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.401527439848608,
             "revenueYoY": 17.814272917288744,
             "earningsYoY": -3.768008865903214
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4920800000.0,
+            "earnings": 319100000.0,
+            "ebitda": 554600000.0,
+            "profitMargin": 6.484717932043569,
+            "revenueYoY": 27.68033212247016,
+            "earningsYoY": 106.8049254698639
         }
     ],
     "annual": [

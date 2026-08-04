@@ -2,17 +2,6 @@
     "symbol": "HLVLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 407400000.0,
-            "earnings": -34700000.0,
-            "ebitda": 15200000.0,
-            "profitMargin": -8.517427589592538,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 86000000.0,
             "ebitda": 148600000.0,
             "profitMargin": 13.55397951142632,
-            "revenueYoY": 7.070536618292271,
-            "earningsYoY": -19.925512104283055
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 466800000.0,
+            "earnings": -7800000.0,
+            "ebitda": 44300000.0,
+            "profitMargin": -1.6709511568123392,
+            "revenueYoY": 14.580265095729015,
+            "earningsYoY": 77.52161383285303
         }
     ],
     "annual": [

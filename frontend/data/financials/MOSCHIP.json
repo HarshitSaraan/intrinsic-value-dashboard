@@ -2,24 +2,13 @@
     "symbol": "MOSCHIP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1347072000.0,
-            "earnings": 87082000.0,
-            "ebitda": 145642000.0,
-            "profitMargin": 6.464539386164956,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1355868000.0,
-            "earnings": 108980000.0,
-            "ebitda": 171531000.0,
-            "profitMargin": 8.037655582991855,
+            "earnings": 109248000.0,
+            "ebitda": 171799000.0,
+            "profitMargin": 8.05742151890892,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 43360000.0,
             "ebitda": 105960000.0,
             "profitMargin": 2.9024583876093946,
-            "revenueYoY": 18.415479002520648,
-            "earningsYoY": -60.79495108410641
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.18535825138552,
             "revenueYoY": 13.748634074496389,
             "earningsYoY": -8.759559954984956
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1162130000.0,
+            "earnings": 24467000.0,
+            "ebitda": 117899000.0,
+            "profitMargin": 2.1053582645659263,
+            "revenueYoY": -14.288854077240556,
+            "earningsYoY": -77.60416666666666
         }
     ],
     "annual": [

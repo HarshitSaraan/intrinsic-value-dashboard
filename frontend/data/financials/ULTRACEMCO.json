@@ -2,17 +2,6 @@
     "symbol": "ULTRACEMCO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 230633200000.0,
-            "earnings": 24820400000.0,
-            "ebitda": 47004500000.0,
-            "profitMargin": 10.76185041876018,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 17254000000.0,
             "ebitda": 39571200000.0,
             "profitMargin": 7.903917968563901,
-            "revenueYoY": 22.784682681593782,
-            "earningsYoY": 26.920841823411283
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.561322771359258,
             "revenueYoY": 11.863643222224727,
             "earningsYoY": 20.173728062400283
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 246482000000.0,
+            "earnings": 25992800000.0,
+            "ebitda": 51338700000.0,
+            "profitMargin": 10.545516508304866,
+            "revenueYoY": 15.852778672131496,
+            "earningsYoY": 16.77433846983243
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 759551300000.0,
+            "revenue": 749364500000.0,
             "earnings": 60391100000.0,
-            "ebitda": 131936200000.0,
-            "profitMargin": 7.9508915329353,
-            "revenueYoY": 8.803382575416279,
+            "ebitda": 131690300000.0,
+            "profitMargin": 8.058975305075167,
+            "revenueYoY": 7.3441548739835385,
             "earningsYoY": -13.788579586009995
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 885115300000.0,
+            "revenue": 873835200000.0,
             "earnings": 81656400000.0,
-            "ebitda": 174433600000.0,
-            "profitMargin": 9.22550994203806,
-            "revenueYoY": 16.531338962885062,
+            "ebitda": 173827000000.0,
+            "profitMargin": 9.344599530895529,
+            "revenueYoY": 16.61016768208262,
             "earningsYoY": 35.21263894845433
         }
     ]

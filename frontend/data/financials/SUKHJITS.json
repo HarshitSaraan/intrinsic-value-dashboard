@@ -2,17 +2,6 @@
     "symbol": "SUKHJITS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3691300000.0,
-            "earnings": 50100000.0,
-            "ebitda": 223400000.0,
-            "profitMargin": 1.3572454148944817,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 145900000.0,
             "ebitda": 348200000.0,
             "profitMargin": 3.632154148721651,
-            "revenueYoY": 11.658095899930506,
-            "earningsYoY": 421.07142857142856
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3956500000.0,
+            "earnings": 121500000.0,
+            "ebitda": 311500000.0,
+            "profitMargin": 3.0708959939340326,
+            "revenueYoY": 7.184460759082166,
+            "earningsYoY": 142.51497005988023
         }
     ],
     "annual": [

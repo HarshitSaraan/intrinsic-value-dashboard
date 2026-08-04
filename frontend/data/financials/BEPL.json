@@ -2,17 +2,6 @@
     "symbol": "BEPL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3449420000.0,
-            "earnings": 394986000.0,
-            "ebitda": 561246000.0,
-            "profitMargin": 11.45079462634298,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 422218000.0,
             "ebitda": 604775000.0,
             "profitMargin": 14.00901090711944,
-            "revenueYoY": -12.851694776803232,
-            "earningsYoY": 3.3837007436355133
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.104068326408715,
             "revenueYoY": -0.9667422349264513,
             "earningsYoY": 30.6289336837255
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4721528000.0,
+            "earnings": 655977000.0,
+            "ebitda": 928009000.0,
+            "profitMargin": 13.893320128568549,
+            "revenueYoY": 53.3417687315205,
+            "earningsYoY": 42.940538137698404
         }
     ],
     "annual": [

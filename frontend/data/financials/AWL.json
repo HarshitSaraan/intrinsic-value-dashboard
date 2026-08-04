@@ -2,17 +2,6 @@
     "symbol": "AWL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 182295900000.0,
-            "earnings": 1902800000.0,
-            "ebitda": 5103000000.0,
-            "profitMargin": 1.043797474326082,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2688200000.0,
             "ebitda": 6593200000.0,
             "profitMargin": 1.4450613809738064,
-            "revenueYoY": 10.47464020723493,
-            "earningsYoY": -34.52517232140683
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.360740711062494,
             "revenueYoY": 17.746915865908118,
             "earningsYoY": 53.50010510826151
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 200481400000.0,
+            "earnings": 3502800000.0,
+            "ebitda": 7620600000.0,
+            "profitMargin": 1.7471945028316842,
+            "revenueYoY": 17.524774820985247,
+            "earningsYoY": 48.15378759040731
         }
     ],
     "annual": [

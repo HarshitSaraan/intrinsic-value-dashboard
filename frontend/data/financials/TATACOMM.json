@@ -2,17 +2,6 @@
     "symbol": "TATACOMM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 59903500000.0,
-            "earnings": 10403400000.0,
-            "ebitda": 17686700000.0,
-            "profitMargin": 17.366931815336333,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3652800000.0,
             "ebitda": 14106100000.0,
             "profitMargin": 5.90211295255915,
-            "revenueYoY": 6.741898597291858,
-            "earningsYoY": 54.80589930496694
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.01653913932394,
             "revenueYoY": 9.411803984742127,
             "earningsYoY": -74.69577253590172
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 65828200000.0,
+            "earnings": 1342300000.0,
+            "ebitda": 11367200000.0,
+            "profitMargin": 2.0390957067032063,
+            "revenueYoY": 10.452779851841909,
+            "earningsYoY": -29.345194230971682
         }
     ],
     "annual": [

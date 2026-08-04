@@ -2,17 +2,6 @@
     "symbol": "APCOTEXIND",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3757641000.0,
-            "earnings": 191594000.0,
-            "ebitda": 412491000.0,
-            "profitMargin": 5.0987840509511155,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 347406000.0,
             "ebitda": 613930000.0,
             "profitMargin": 8.737931475075191,
-            "revenueYoY": 13.79167832964411,
-            "earningsYoY": 107.34467323187108
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5256335000.0,
+            "earnings": 789393000.0,
+            "ebitda": 1199085000.0,
+            "profitMargin": 15.017935500686313,
+            "revenueYoY": 39.88390588669859,
+            "earningsYoY": 312.01342421996515
         }
     ],
     "annual": [

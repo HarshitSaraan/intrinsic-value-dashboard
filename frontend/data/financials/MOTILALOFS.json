@@ -2,24 +2,13 @@
     "symbol": "MOTILALOFS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16091500000.0,
-            "earnings": -647700000.0,
-            "ebitda": 2980500000.0,
-            "profitMargin": -4.0251064226454965,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 16620400000.0,
+            "revenue": 16674000000.0,
             "earnings": 11620600000.0,
             "ebitda": 17266500000.0,
-            "profitMargin": 69.9176915116363,
+            "profitMargin": 69.69293510855223,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 5659700000.0,
             "ebitda": 11139200000.0,
             "profitMargin": 29.87595016891892,
-            "revenueYoY": 8.071104214681789,
-            "earningsYoY": 0.25685538156309784
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -6.574092229808018,
             "revenueYoY": 109.17503029549762,
             "earningsYoY": -241.63964798517833
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 23107600000.0,
+            "earnings": 12731100000.0,
+            "ebitda": 19759800000.0,
+            "profitMargin": 55.09486056535512,
+            "revenueYoY": 38.58462276598297,
+            "earningsYoY": 9.556305182176478
         }
     ],
     "annual": [

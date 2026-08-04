@@ -2,17 +2,6 @@
     "symbol": "HEIDELBERG",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6124600000.0,
-            "earnings": 504500000.0,
-            "ebitda": 1018500000.0,
-            "profitMargin": 8.237272638213108,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 156000000.0,
             "ebitda": 544300000.0,
             "profitMargin": 2.716965358691677,
-            "revenueYoY": 5.775395158616116,
-            "earningsYoY": 200.5780346820809
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.996069450032497,
             "revenueYoY": 5.512196714887503,
             "earningsYoY": -10.386521308225968
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6281100000.0,
+            "earnings": 305500000.0,
+            "ebitda": 731000000.0,
+            "profitMargin": 4.8637977424336505,
+            "revenueYoY": 5.1159754995481475,
+            "earningsYoY": -36.65768194070081
         }
     ],
     "annual": [

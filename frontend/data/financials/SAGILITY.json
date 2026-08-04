@@ -2,17 +2,6 @@
     "symbol": "SAGILITY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15684760000.0,
-            "earnings": 1825720000.0,
-            "ebitda": 3831560000.0,
-            "profitMargin": 11.640088850578522,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2676560000.0,
             "ebitda": 4867020000.0,
             "profitMargin": 13.57865168254316,
-            "revenueYoY": 35.65446651191375,
-            "earningsYoY": 23.392680970338475
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.731930777564312,
             "revenueYoY": 29.058844381425025,
             "earningsYoY": 41.164581644501894
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19634830000.0,
+            "earnings": 2168110000.0,
+            "ebitda": 4373960000.0,
+            "profitMargin": 11.042163339331177,
+            "revenueYoY": 27.586549720522278,
+            "earningsYoY": 45.94268943652017
         }
     ],
     "annual": [

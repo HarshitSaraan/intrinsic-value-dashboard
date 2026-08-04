@@ -2,24 +2,13 @@
     "symbol": "ACC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 60397000000.0,
-            "earnings": 7510300000.0,
-            "ebitda": 11606900000.0,
-            "profitMargin": 12.43488915012335,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 60361100000.0,
-            "earnings": 3753800000.0,
-            "ebitda": 8479800000.0,
-            "profitMargin": 6.218905884750278,
+            "revenue": 62770000000.0,
+            "earnings": 3750000000.0,
+            "ebitda": 8480000000.0,
+            "profitMargin": 5.974191492751315,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 4042100000.0,
             "ebitda": 7914300000.0,
             "profitMargin": 6.324507093380398,
-            "revenueYoY": 21.697164727612012,
-            "earningsYoY": -62.975277770144636
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.3441084038531987,
             "revenueYoY": 17.960660297696908,
             "earningsYoY": -68.27689972437851
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 57900000000.0,
+            "earnings": 1470000000.0,
+            "ebitda": 4880000000.0,
+            "profitMargin": 2.5388601036269427,
+            "revenueYoY": -7.758483351919707,
+            "earningsYoY": -60.8
         }
     ],
     "annual": [

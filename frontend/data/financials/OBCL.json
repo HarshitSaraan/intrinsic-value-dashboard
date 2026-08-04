@@ -2,17 +2,6 @@
     "symbol": "OBCL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 852228000.0,
-            "earnings": 18696000.0,
-            "ebitda": 39644000.0,
-            "profitMargin": 2.1937791295287177,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -51612000.0,
             "ebitda": -37495000.0,
             "profitMargin": -5.256248746075279,
-            "revenueYoY": 7.72492495918833,
-            "earningsYoY": -669.9835894375653
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 823682000.0,
+            "earnings": 12100000.0,
+            "ebitda": 30478000.0,
+            "profitMargin": 1.4690135270650566,
+            "revenueYoY": -3.3495731189306146,
+            "earningsYoY": -35.28027385537013
         }
     ],
     "annual": [

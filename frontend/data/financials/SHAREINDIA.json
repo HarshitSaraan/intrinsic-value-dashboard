@@ -2,17 +2,6 @@
     "symbol": "SHAREINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1133550000.0,
-            "earnings": 187647000.0,
-            "ebitda": 555428000.0,
-            "profitMargin": 16.553923514622205,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 885454000.0,
             "ebitda": 1612073000.0,
             "profitMargin": 60.753561695342285,
-            "revenueYoY": 21.471845524396436,
-            "earningsYoY": 8.039904241533891
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 28.992897404672462,
             "revenueYoY": 75.96250716774733,
             "earningsYoY": 208.18451667226228
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1792241000.0,
+            "earnings": 1241467000.0,
+            "ebitda": 2040405000.0,
+            "profitMargin": 69.26897666106288,
+            "revenueYoY": 44.72300414892191,
+            "earningsYoY": 47.47206093377301
         }
     ],
     "annual": [

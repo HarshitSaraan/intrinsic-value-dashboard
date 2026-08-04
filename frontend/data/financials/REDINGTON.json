@@ -2,17 +2,6 @@
     "symbol": "REDINGTON",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 264396800000.0,
-            "earnings": 6656200000.0,
-            "ebitda": 12927800000.0,
-            "profitMargin": 2.5175039939969017,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4358000000.0,
             "ebitda": 6631400000.0,
             "profitMargin": 1.409364870594239,
-            "revenueYoY": 15.74201754149561,
-            "earningsYoY": 8.8656291374185
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.178212285961263,
             "revenueYoY": 25.61812397124322,
             "earningsYoY": -41.209699227787624
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 349224700000.0,
+            "earnings": 4859800000.0,
+            "ebitda": 7509100000.0,
+            "profitMargin": 1.3915968715843983,
+            "revenueYoY": 34.565672998486825,
+            "earningsYoY": 76.54666327605624
         }
     ],
     "annual": [

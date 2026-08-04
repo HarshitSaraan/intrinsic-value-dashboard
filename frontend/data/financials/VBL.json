@@ -2,17 +2,6 @@
     "symbol": "VBL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 55669350000.0,
-            "earnings": 7264880000.0,
-            "ebitda": 12914450000.0,
-            "profitMargin": 13.050053575261792,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2517870000.0,
             "ebitda": 7357180000.0,
             "profitMargin": 5.988621982136431,
-            "revenueYoY": 13.978315936490862,
-            "earningsYoY": 35.9937562788286
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 13.269391362281894,
             "revenueYoY": 18.09352902449912,
             "earningsYoY": 20.078377068857296
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 84512320000.0,
+            "earnings": 15207970000.0,
+            "ebitda": 24431350000.0,
+            "profitMargin": 17.994973987224586,
+            "revenueYoY": 20.43302256642837,
+            "earningsYoY": 15.472231333673495
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "MAHSCOOTER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 66500000.0,
-            "earnings": 516300000.0,
-            "ebitda": 47500000.0,
-            "profitMargin": 776.390977443609,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 41200000.0,
             "ebitda": 55600000.0,
             "profitMargin": 63.975155279503106,
-            "revenueYoY": 11.226252158894647,
-            "earningsYoY": 24.848484848484848
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 66.50082918739635,
             "revenueYoY": -9.323308270676693,
             "earningsYoY": -92.23319775324424
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 54100000.0,
+            "earnings": 33200000.0,
+            "ebitda": 45500000.0,
+            "profitMargin": 61.367837338262476,
+            "revenueYoY": -81.51691151349505,
+            "earningsYoY": -90.61085972850678
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "517372",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 130264000.0,
-            "earnings": 19475000.0,
-            "ebitda": 29177000.0,
-            "profitMargin": 14.950408401400233,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 19787000.0,
             "ebitda": 34886000.0,
             "profitMargin": 10.462503238633058,
-            "revenueYoY": 11.906438423441282,
-            "earningsYoY": -23.31511839708561
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 140679000.0,
+            "earnings": 21355000.0,
+            "ebitda": 31858000.0,
+            "profitMargin": 15.179948677485624,
+            "revenueYoY": 7.995301848553707,
+            "earningsYoY": 9.653401797175865
         }
     ],
     "annual": [
@@ -62,11 +62,11 @@
             "date": "2024-03-31",
             "quarterLabel": "Q4 FY24",
             "annualLabel": "FY24",
-            "revenue": 572018000.0,
+            "revenue": 568424000.0,
             "earnings": 74148000.0,
-            "ebitda": 116101000.0,
-            "profitMargin": 12.962529151180558,
-            "revenueYoY": 12.007754138967485,
+            "ebitda": 115767000.0,
+            "profitMargin": 13.044487917470057,
+            "revenueYoY": 11.304007284191151,
             "earningsYoY": 29.21596988655177
         },
         {
@@ -77,7 +77,7 @@
             "earnings": 105932000.0,
             "ebitda": 154331000.0,
             "profitMargin": 16.211509296229018,
-            "revenueYoY": 14.233642997248339,
+            "revenueYoY": 14.95591319156123,
             "earningsYoY": 42.8656201111291
         },
         {

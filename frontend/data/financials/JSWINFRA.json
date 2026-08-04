@@ -2,17 +2,6 @@
     "symbol": "JSWINFRA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 12831800000.0,
-            "earnings": 5093700000.0,
-            "ebitda": 6753600000.0,
-            "profitMargin": 39.69591171932231,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3591000000.0,
             "ebitda": 5180800000.0,
             "profitMargin": 26.60670094690515,
-            "revenueYoY": 14.200857991420085,
-            "earningsYoY": 8.897379912663755
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 27.47677916891102,
             "revenueYoY": 18.6380710422544,
             "earningsYoY": -17.88091171447082
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14448300000.0,
+            "earnings": 3466300000.0,
+            "ebitda": 5575800000.0,
+            "profitMargin": 23.99105777150253,
+            "revenueYoY": 18.056134330187522,
+            "earningsYoY": -9.89133825517313
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 44761400000.0,
+            "revenue": 44713200000.0,
             "earnings": 15030800000.0,
-            "ebitda": 26894900000.0,
-            "profitMargin": 33.5798254746277,
-            "revenueYoY": 18.95452975098993,
+            "ebitda": 26423600000.0,
+            "profitMargin": 33.616023903455805,
+            "revenueYoY": 18.826437056525553,
             "earningsYoY": 30.034345234490573
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 53614400000.0,
+            "revenue": 53210400000.0,
             "earnings": 15233100000.0,
-            "ebitda": 28435200000.0,
-            "profitMargin": 28.41232952341162,
-            "revenueYoY": 19.778201754189993,
+            "ebitda": 28240500000.0,
+            "profitMargin": 28.628050155608676,
+            "revenueYoY": 19.00378411744183,
             "earningsYoY": 1.345903079011097
         }
     ]

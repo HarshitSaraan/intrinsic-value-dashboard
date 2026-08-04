@@ -2,17 +2,6 @@
     "symbol": "CARTRADE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1695138000.0,
-            "earnings": 418208000.0,
-            "ebitda": 661128000.0,
-            "profitMargin": 24.671029733272455,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 558570000.0,
             "ebitda": 904438000.0,
             "profitMargin": 26.64020626522022,
-            "revenueYoY": 18.98608180669794,
-            "earningsYoY": 30.83348167858113
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.80354144443006,
             "revenueYoY": 19.838679800700593,
             "earningsYoY": 54.48461052873211
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2011632000.0,
+            "earnings": 512416000.0,
+            "ebitda": 884766000.0,
+            "profitMargin": 25.472651061426742,
+            "revenueYoY": 16.2526287320193,
+            "earningsYoY": 19.523692896213102
         }
     ],
     "annual": [

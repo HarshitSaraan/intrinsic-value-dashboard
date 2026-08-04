@@ -2,17 +2,6 @@
     "symbol": "MASTEK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9054200000.0,
-            "earnings": 810700000.0,
-            "ebitda": 1342000000.0,
-            "profitMargin": 8.953855669192198,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1083500000.0,
             "ebitda": 1664800000.0,
             "profitMargin": 11.963386626623091,
-            "revenueYoY": 4.157418375444206,
-            "earningsYoY": 14.40185830429733
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.316631130063966,
             "revenueYoY": 3.598330056769234,
             "earningsYoY": 30.936227951153324
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9852500000.0,
+            "earnings": 1058800000.0,
+            "ebitda": 1633900000.0,
+            "profitMargin": 10.746511037807663,
+            "revenueYoY": 7.712911337050398,
+            "earningsYoY": 15.024443237370994
         }
     ],
     "annual": [

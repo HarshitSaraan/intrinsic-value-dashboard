@@ -2,17 +2,6 @@
     "symbol": "WELCORP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 39249700000.0,
-            "earnings": 6983100000.0,
-            "ebitda": 10297600000.0,
-            "profitMargin": 17.79147356540305,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4525900000.0,
             "ebitda": 7361600000.0,
             "profitMargin": 9.985482561423327,
-            "revenueYoY": 25.43150565516631,
-            "earningsYoY": -32.9198162146139
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.58793848665294,
             "revenueYoY": 9.874979936152378,
             "earningsYoY": -46.96338302473114
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 40811200000.0,
+            "earnings": 10464900000.0,
+            "ebitda": 13768900000.0,
+            "profitMargin": 25.64222566354334,
+            "revenueYoY": 14.912895714193198,
+            "earningsYoY": 198.63877632555221
         }
     ],
     "annual": [

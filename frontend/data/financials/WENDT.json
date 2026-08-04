@@ -2,17 +2,6 @@
     "symbol": "WENDT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 749400000.0,
-            "earnings": 128900000.0,
-            "ebitda": 204600000.0,
-            "profitMargin": 17.200427008273287,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 29800000.0,
             "ebitda": 86700000.0,
             "profitMargin": 4.940318302387268,
-            "revenueYoY": 14.524397190051264,
-            "earningsYoY": -63.74695863746959
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.733211789729566,
             "revenueYoY": -12.169735788630904,
             "earningsYoY": -60.51202482544609
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 709300000.0,
+            "earnings": 61800000.0,
+            "ebitda": 125100000.0,
+            "profitMargin": 8.71281545185394,
+            "revenueYoY": 37.38136742204145,
+            "earningsYoY": 63.49206349206349
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "JAGSNPHARM",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 756120000.0,
-            "earnings": 107950000.0,
-            "ebitda": 170380000.0,
-            "profitMargin": 14.276834364915622,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 87621000.0,
             "ebitda": 143270000.0,
             "profitMargin": 13.6474931077987,
-            "revenueYoY": 9.636270491803279,
-            "earningsYoY": 33.099907338487945
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 822320000.0,
+            "earnings": 131890000.0,
+            "ebitda": 200730000.0,
+            "profitMargin": 16.038768362681193,
+            "revenueYoY": 8.755224038512406,
+            "earningsYoY": 22.17693376563224
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "PHOENIXLTD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10163355000.0,
-            "earnings": 2688219000.0,
-            "ebitda": 6020684000.0,
-            "profitMargin": 26.45011416013708,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2757906000.0,
             "ebitda": 6785793000.0,
             "profitMargin": 24.597952913204175,
-            "revenueYoY": 14.978806937000424,
-            "earningsYoY": 4.165201518189685
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 32.70726488882366,
             "revenueYoY": 21.337737390851743,
             "earningsYoY": 50.041905068002265
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10749440000.0,
+            "earnings": 2968633000.0,
+            "ebitda": 6817486000.0,
+            "profitMargin": 27.616629331388427,
+            "revenueYoY": 12.797542627362668,
+            "earningsYoY": 23.340288441723338
         }
     ],
     "annual": [

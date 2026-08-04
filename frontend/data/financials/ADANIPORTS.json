@@ -2,17 +2,6 @@
     "symbol": "ADANIPORTS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 84884400000.0,
-            "earnings": 30142200000.0,
-            "ebitda": 42072900000.0,
-            "profitMargin": 35.50970496345619,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 30536100000.0,
             "ebitda": 44463300000.0,
             "profitMargin": 31.465626059421364,
-            "revenueYoY": 21.86261152375511,
-            "earningsYoY": 21.162499107234968
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.002888919104677,
             "revenueYoY": 26.49650583617249,
             "earningsYoY": 10.441839016395619
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 108208000000.0,
+            "earnings": 36204000000.0,
+            "ebitda": 53020400000.0,
+            "profitMargin": 33.45778500665385,
+            "revenueYoY": 18.569296548157272,
+            "earningsYoY": 9.226178803411583
         }
     ],
     "annual": [

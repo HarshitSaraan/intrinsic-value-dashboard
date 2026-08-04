@@ -2,17 +2,6 @@
     "symbol": "TGBHOTELS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 88713000.0,
-            "earnings": 1839000.0,
-            "ebitda": 18864000.0,
-            "profitMargin": 2.072976903046904,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3824000.0,
             "ebitda": 20059000.0,
             "profitMargin": 3.666593155820621,
-            "revenueYoY": -9.997583665579317,
-            "earningsYoY": -58.33514926999346
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 83286000.0,
+            "earnings": 1940000.0,
+            "ebitda": 18121000.0,
+            "profitMargin": 2.3293230554955215,
+            "revenueYoY": -6.117479963477732,
+            "earningsYoY": 5.492115280043501
         }
     ],
     "annual": [

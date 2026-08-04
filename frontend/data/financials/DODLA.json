@@ -2,24 +2,13 @@
     "symbol": "DODLA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9096230000.0,
-            "earnings": 679650000.0,
-            "ebitda": 1093190000.0,
-            "profitMargin": 7.471776769057071,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 10068660000.0,
-            "earnings": 628710000.0,
-            "ebitda": 994310000.0,
-            "profitMargin": 6.244227136480922,
+            "revenue": 10068700000.0,
+            "earnings": 628700000.0,
+            "ebitda": 994400000.0,
+            "profitMargin": 6.2441030123054615,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 687370000.0,
             "ebitda": 855750000.0,
             "profitMargin": 6.7057805492658344,
-            "revenueYoY": 13.738885936111261,
-            "earningsYoY": 8.136553134586643
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.489326850769494,
             "revenueYoY": 18.12278273526505,
             "earningsYoY": 2.5910395056278968
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11979400000.0,
+            "earnings": 406400000.0,
+            "ebitda": 784800000.0,
+            "profitMargin": 3.392490441925305,
+            "revenueYoY": 18.976630548134317,
+            "earningsYoY": -35.3586766343248
         }
     ],
     "annual": [

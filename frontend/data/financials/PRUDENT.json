@@ -2,17 +2,6 @@
     "symbol": "PRUDENT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2810144000.0,
-            "earnings": 517371000.0,
-            "ebitda": 772345000.0,
-            "profitMargin": 18.410835885990185,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 576257000.0,
             "ebitda": 873081000.0,
             "profitMargin": 16.913306890683693,
-            "revenueYoY": 20.516373121177402,
-            "earningsYoY": 19.57449634070173
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.514562699931552,
             "revenueYoY": 27.37247628591275,
             "earningsYoY": 14.25340809593116
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3443186000.0,
+            "earnings": 747570000.0,
+            "ebitda": 1099042000.0,
+            "profitMargin": 21.711577591219296,
+            "revenueYoY": 18.319046241245104,
+            "earningsYoY": 44.37873707955441
         }
     ],
     "annual": [

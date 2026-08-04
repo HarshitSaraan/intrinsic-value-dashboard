@@ -2,17 +2,6 @@
     "symbol": "PRIVISCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6135503000.0,
-            "earnings": 665246000.0,
-            "ebitda": 1474191000.0,
-            "profitMargin": 10.842566615972643,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 779932000.0,
             "ebitda": 1578470000.0,
             "profitMargin": 12.899092188587938,
-            "revenueYoY": 23.17711855981773,
-            "earningsYoY": 75.51409861151743
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.986471019841783,
             "revenueYoY": 17.597171739627544,
             "earningsYoY": 40.84970071221773
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6662202000.0,
+            "earnings": 842055000.0,
+            "ebitda": 1674696000.0,
+            "profitMargin": 12.639289532199713,
+            "revenueYoY": 19.220725953826364,
+            "earningsYoY": 35.967298932516506
         }
     ],
     "annual": [

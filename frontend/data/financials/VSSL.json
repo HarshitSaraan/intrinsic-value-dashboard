@@ -2,17 +2,6 @@
     "symbol": "VSSL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4280388000.0,
-            "earnings": 197321000.0,
-            "ebitda": 386202000.0,
-            "profitMargin": 4.609885832779645,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 335859000.0,
             "ebitda": 564713000.0,
             "profitMargin": 7.800789185982692,
-            "revenueYoY": 0.883795159535594,
-            "earningsYoY": 56.52872995381396
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.420453647114729,
             "revenueYoY": 6.979881263100447,
             "earningsYoY": 72.20366813466383
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4860070000.0,
+            "earnings": 411857000.0,
+            "ebitda": 682875000.0,
+            "profitMargin": 8.47430181046775,
+            "revenueYoY": 12.061028571692086,
+            "earningsYoY": 107.01428995079189
         }
     ],
     "annual": [

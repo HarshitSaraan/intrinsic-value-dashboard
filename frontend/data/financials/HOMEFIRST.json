@@ -2,17 +2,6 @@
     "symbol": "HOMEFIRST",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3802200000.0,
-            "earnings": 1046920000.0,
-            "ebitda": 1152810000.0,
-            "profitMargin": 27.534585240124137,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1402000000.0,
             "ebitda": 1685890000.0,
             "profitMargin": 31.230647913427394,
-            "revenueYoY": 20.951298106456584,
-            "earningsYoY": 43.9676329544171
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 32.93350492972335,
             "revenueYoY": 19.34616800799537,
             "earningsYoY": 42.74729683261376
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4853880000.0,
+            "earnings": 1598510000.0,
+            "ebitda": 1764040000.0,
+            "profitMargin": 32.93262297378592,
+            "revenueYoY": 17.347220006092343,
+            "earningsYoY": 34.45172468900085
         }
     ],
     "annual": [

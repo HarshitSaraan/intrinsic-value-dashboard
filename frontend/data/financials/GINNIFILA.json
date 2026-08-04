@@ -2,17 +2,6 @@
     "symbol": "GINNIFILA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1015449000.0,
-            "earnings": 106102000.0,
-            "ebitda": 175700000.0,
-            "profitMargin": 10.448776846498445,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 71282000.0,
             "ebitda": 135878000.0,
             "profitMargin": 7.911115649097261,
-            "revenueYoY": 0.11566730926282924,
-            "earningsYoY": 48.885686237650646
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1028885000.0,
+            "earnings": 90530000.0,
+            "ebitda": 153542000.0,
+            "profitMargin": 8.79884535200727,
+            "revenueYoY": 1.323158523963291,
+            "earningsYoY": -14.676443422367155
         }
     ],
     "annual": [

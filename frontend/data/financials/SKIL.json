@@ -1,6 +1,18 @@
 {
     "symbol": "SKIL",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2024-12-31",
+            "quarterLabel": "Q3 FY25",
+            "annualLabel": "FY25",
+            "revenue": 0.0,
+            "earnings": -995000.0,
+            "ebitda": -987000.0,
+            "profitMargin": null,
+            "revenueYoY": null,
+            "earningsYoY": null
+        }
+    ],
     "annual": [
         {
             "date": "2022-03-31",

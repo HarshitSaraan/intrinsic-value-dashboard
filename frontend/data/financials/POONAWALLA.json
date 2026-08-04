@@ -2,17 +2,6 @@
     "symbol": "POONAWALLA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11355300000.0,
-            "earnings": 623300000.0,
-            "ebitda": 3132400000.0,
-            "profitMargin": 5.48906677938936,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1502200000.0,
             "ebitda": 5087300000.0,
             "profitMargin": 8.461287161058477,
-            "revenueYoY": 68.54286717867416,
-            "earningsYoY": 702.028830752803
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.536780263144944,
             "revenueYoY": 78.9772176868951,
             "earningsYoY": 308.7758703673993
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22772100000.0,
+            "earnings": 3077100000.0,
+            "ebitda": 7552800000.0,
+            "profitMargin": 13.512587771878746,
+            "revenueYoY": 82.445359569286,
+            "earningsYoY": 391.5495207667732
         }
     ],
     "annual": [

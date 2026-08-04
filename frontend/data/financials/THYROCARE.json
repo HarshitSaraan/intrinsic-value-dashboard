@@ -2,24 +2,13 @@
     "symbol": "THYROCARE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1871600000.0,
-            "earnings": 217000000.0,
-            "ebitda": 616600000.0,
-            "profitMargin": 11.594357768754007,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1930300000.0,
-            "earnings": 389800000.0,
+            "earnings": 389300000.0,
             "ebitda": 626700000.0,
-            "profitMargin": 20.193752266487074,
+            "profitMargin": 20.16784955706367,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 290100000.0,
             "ebitda": 578300000.0,
             "profitMargin": 14.836597964506726,
-            "revenueYoY": 17.84594985535198,
-            "earningsYoY": 51.80533751962323
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.040410805983477,
             "revenueYoY": 19.656977986749304,
             "earningsYoY": 117.14285714285715
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2400200000.0,
+            "earnings": 521900000.0,
+            "ebitda": 821300000.0,
+            "profitMargin": 21.744021331555704,
+            "revenueYoY": 24.343366316116665,
+            "earningsYoY": 34.06113537117904
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "PGHH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9351600000.0,
-            "earnings": 1920600000.0,
-            "ebitda": 2738600000.0,
-            "profitMargin": 20.53766200436289,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1531300000.0,
             "ebitda": 2307800000.0,
             "profitMargin": 16.330905329166978,
-            "revenueYoY": -5.202551737385379,
-            "earningsYoY": -1.9026265214606022
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8899200000.0,
+            "earnings": 1262700000.0,
+            "ebitda": 1794900000.0,
+            "profitMargin": 14.188915857605178,
+            "revenueYoY": -4.837674836391633,
+            "earningsYoY": -34.25492033739456
         }
     ],
     "annual": [

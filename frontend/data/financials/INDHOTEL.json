@@ -2,17 +2,6 @@
     "symbol": "INDHOTEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 24251400000.0,
-            "earnings": 5223000000.0,
-            "ebitda": 9158600000.0,
-            "profitMargin": 21.536900962418663,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 9032300000.0,
             "ebitda": 14096000000.0,
             "profitMargin": 31.78193922504187,
-            "revenueYoY": 12.195179724048085,
-            "earningsYoY": 55.1088748454458
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.692480716308236,
             "revenueYoY": 14.02599437558244,
             "earningsYoY": 14.849703235688303
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 23391900000.0,
+            "earnings": 3579000000.0,
+            "ebitda": 7528900000.0,
+            "profitMargin": 15.300168006874173,
+            "revenueYoY": 14.605502969016404,
+            "earningsYoY": 20.761210648851097
         }
     ],
     "annual": [

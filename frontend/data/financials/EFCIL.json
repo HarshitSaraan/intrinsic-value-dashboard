@@ -2,17 +2,6 @@
     "symbol": "EFCIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2196218000.0,
-            "earnings": 344144000.0,
-            "ebitda": 1057994000.0,
-            "profitMargin": 15.669846982403385,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 694009000.0,
             "ebitda": 1479210000.0,
             "profitMargin": 23.695986484585514,
-            "revenueYoY": 38.7982461627702,
-            "earningsYoY": 58.148411472219564
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2828799000.0,
+            "earnings": 690010000.0,
+            "ebitda": 1343762000.0,
+            "profitMargin": 24.392330455433562,
+            "revenueYoY": 28.803197132525092,
+            "earningsYoY": 58.9185404580012
         }
     ],
     "annual": [

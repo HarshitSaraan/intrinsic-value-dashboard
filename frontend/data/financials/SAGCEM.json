@@ -2,17 +2,6 @@
     "symbol": "SAGCEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6580400000.0,
-            "earnings": -707700000.0,
-            "ebitda": 131300000.0,
-            "profitMargin": -10.754665369886329,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -575800000.0,
             "ebitda": 395000000.0,
             "profitMargin": -9.75039794086768,
-            "revenueYoY": 4.727956302759452,
-            "earningsYoY": -4.557835482113673
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.13144251296127,
             "revenueYoY": 19.591514193666036,
             "earningsYoY": 223.78126324713864
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7060700000.0,
+            "earnings": -231100000.0,
+            "ebitda": 748000000.0,
+            "profitMargin": -3.273046581783676,
+            "revenueYoY": 5.279873557391227,
+            "earningsYoY": -1994.2622950819673
         }
     ],
     "annual": [

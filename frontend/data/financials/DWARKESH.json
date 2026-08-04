@@ -2,17 +2,6 @@
     "symbol": "DWARKESH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 4054652000.0,
-            "earnings": -93841000.0,
-            "ebitda": 44275000.0,
-            "profitMargin": -2.31440330760815,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 574095000.0,
             "ebitda": 878941000.0,
             "profitMargin": 13.49460716388651,
-            "revenueYoY": -7.284527905161288,
-            "earningsYoY": 23.914310382041872
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3581314000.0,
+            "earnings": -257313000.0,
+            "ebitda": -237612000.0,
+            "profitMargin": -7.184876835708905,
+            "revenueYoY": -11.673948837039529,
+            "earningsYoY": -174.20104218838247
         }
     ],
     "annual": [

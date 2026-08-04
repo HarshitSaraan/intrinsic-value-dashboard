@@ -2,17 +2,6 @@
     "symbol": "ATLANTAELE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4114908000.0,
-            "earnings": 446506000.0,
-            "ebitda": 715706000.0,
-            "profitMargin": 10.850935184942166,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 433405000.0,
             "ebitda": 942922000.0,
             "profitMargin": 9.185816279859386,
-            "revenueYoY": 79.70808374395682,
-            "earningsYoY": 94.63655388594987
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 1021883000.0,
             "ebitda": 1570038000.0,
             "profitMargin": 13.668411840286518,
-            "revenueYoY": 81.68663795156537,
-            "earningsYoY": 128.86209815769553
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4663300000.0,
+            "earnings": 468400000.0,
+            "ebitda": 794200000.0,
+            "profitMargin": 10.044389166470097,
+            "revenueYoY": 47.98959093649837,
+            "earningsYoY": 50.417469492613996
         }
     ],
     "annual": [

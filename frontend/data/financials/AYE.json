@@ -2,13 +2,24 @@
     "symbol": "AYE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3649000000.0,
-            "earnings": 407000000.0,
-            "ebitda": 969200000.0,
-            "profitMargin": 11.153740750890655,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3738700000.0,
+            "earnings": 305900000.0,
+            "ebitda": 1040300000.0,
+            "profitMargin": 8.18198839168695,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 3795380000.0,
+            "earnings": 340070000.0,
+            "ebitda": 710060000.0,
+            "profitMargin": 8.960104126596018,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -22,6 +33,17 @@
             "profitMargin": 18.68990123134491,
             "revenueYoY": 25.968758563990136,
             "earningsYoY": 111.08108108108108
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4722300000.0,
+            "earnings": 745000000.0,
+            "ebitda": 1673000000.0,
+            "profitMargin": 15.776210744764205,
+            "revenueYoY": 26.30860994463316,
+            "earningsYoY": 143.5436417129781
         }
     ],
     "annual": [

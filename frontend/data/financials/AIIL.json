@@ -2,17 +2,6 @@
     "symbol": "AIIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 12151300000.0,
-            "earnings": 9429900000.0,
-            "ebitda": 11374700000.0,
-            "profitMargin": 77.6040423658374,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 597500000.0,
             "ebitda": 1382400000.0,
             "profitMargin": 19.23015030092369,
-            "revenueYoY": -78.59843918970112,
-            "earningsYoY": -96.61008294658966
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14695400000.0,
+            "earnings": 11105200000.0,
+            "ebitda": 12442400000.0,
+            "profitMargin": 75.5692257441104,
+            "revenueYoY": 20.936854492934913,
+            "earningsYoY": 17.765829966383524
         }
     ],
     "annual": [

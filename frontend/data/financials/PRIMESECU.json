@@ -2,17 +2,6 @@
     "symbol": "PRIMESECU",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 107900000.0,
-            "earnings": 7700000.0,
-            "ebitda": 11700000.0,
-            "profitMargin": 7.136237256719184,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 21000000.0,
             "ebitda": 40100000.0,
             "profitMargin": 7.147719537100068,
-            "revenueYoY": 50.28132992327365,
-            "earningsYoY": -74.39024390243902
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -45.05794137695978,
             "revenueYoY": 171.91844300278035,
             "earningsYoY": -1816.8831168831168
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 265300000.0,
+            "earnings": 34900000.0,
+            "ebitda": 64000000.0,
+            "profitMargin": 13.154918959668299,
+            "revenueYoY": -33.021964150467056,
+            "earningsYoY": -66.69847328244275
         }
     ],
     "annual": [

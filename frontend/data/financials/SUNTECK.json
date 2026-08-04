@@ -2,23 +2,12 @@
     "symbol": "SUNTECK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2060485000.0,
-            "earnings": 503882000.0,
-            "ebitda": 821287000.0,
-            "profitMargin": 24.454533762682086,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1883189000.0,
             "earnings": 334308000.0,
-            "ebitda": 609946000.0,
+            "ebitda": 615346000.0,
             "profitMargin": 17.752227737099144,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 582178000.0,
             "ebitda": 934133000.0,
             "profitMargin": 16.91805447226578,
-            "revenueYoY": 112.73650430182045,
-            "earningsYoY": 36.916694496314726
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.803987024532223,
             "revenueYoY": 64.54368752987767,
             "earningsYoY": 26.52367022437793
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1915628000.0,
+            "earnings": 419600000.0,
+            "ebitda": 779397000.0,
+            "profitMargin": 21.904044000192105,
+            "revenueYoY": 1.7225567906354593,
+            "earningsYoY": 25.512999988034984
         }
     ],
     "annual": [

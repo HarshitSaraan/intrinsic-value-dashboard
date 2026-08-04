@@ -2,17 +2,6 @@
     "symbol": "ZENTEC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3249733000.0,
-            "earnings": 1010461000.0,
-            "ebitda": 1626927000.0,
-            "profitMargin": 31.093662156244832,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 547671000.0,
             "ebitda": 821287000.0,
             "profitMargin": 30.798728620546544,
-            "revenueYoY": 16.827914249485904,
-            "earningsYoY": 37.887096286896885
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.707703919009678,
             "revenueYoY": -45.20300590848541,
             "earningsYoY": -68.79335273701805
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1416384000.0,
+            "earnings": 344610000.0,
+            "ebitda": 542073000.0,
+            "profitMargin": 24.33026636844246,
+            "revenueYoY": -10.47935547441611,
+            "earningsYoY": -27.83429593362456
         }
     ],
     "annual": [

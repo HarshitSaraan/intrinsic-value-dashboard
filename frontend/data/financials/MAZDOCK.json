@@ -2,23 +2,12 @@
     "symbol": "MAZDOCK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 31744100000.0,
-            "earnings": 3252900000.0,
-            "ebitda": 4061300000.0,
-            "profitMargin": 10.247258545682504,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 26255900000.0,
             "earnings": 4521500000.0,
-            "ebitda": 5910000000.0,
+            "ebitda": 6252700000.0,
             "profitMargin": 17.220891304430623,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 8797800000.0,
             "ebitda": 11487900000.0,
             "profitMargin": 24.430936188765067,
-            "revenueYoY": 14.552331388653844,
-            "earningsYoY": 9.013183980967487
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.639252127706545,
             "revenueYoY": 21.29466578041274,
             "earningsYoY": 108.7921546927357
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 29427000000.0,
+            "earnings": 5494100000.0,
+            "ebitda": 7597600000.0,
+            "profitMargin": 18.670268800761207,
+            "revenueYoY": 12.077666353086354,
+            "earningsYoY": 21.510560654650003
         }
     ],
     "annual": [

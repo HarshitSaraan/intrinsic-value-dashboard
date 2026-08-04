@@ -2,17 +2,6 @@
     "symbol": "EQUITASBNK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10548705000.0,
-            "earnings": 421077000.0,
-            "ebitda": null,
-            "profitMargin": 3.9917411663327393,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 900278000.0,
             "ebitda": null,
             "profitMargin": 7.88967194533059,
-            "revenueYoY": 7.975242659053254,
-            "earningsYoY": 35.78362170901808
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.102541801265193,
             "revenueYoY": 17.888859343398074,
             "earningsYoY": 405.09265526257667
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12846947000.0,
+            "earnings": 1836069000.0,
+            "ebitda": null,
+            "profitMargin": 14.291870278596154,
+            "revenueYoY": 19.236476878450965,
+            "earningsYoY": 182.05407231659524
         }
     ],
     "annual": [

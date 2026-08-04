@@ -2,17 +2,6 @@
     "symbol": "SHREDIGCEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2164206000.0,
-            "earnings": 183568000.0,
-            "ebitda": 329431000.0,
-            "profitMargin": 8.482002175393655,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -69801000.0,
             "ebitda": 38279000.0,
             "profitMargin": -3.8072864309273773,
-            "revenueYoY": -1.835741187532059,
-            "earningsYoY": -44.18417301852885
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.810015368999902,
             "revenueYoY": -3.672940561111096,
             "earningsYoY": -56.73102065719515
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3372673000.0,
+            "earnings": 68216000.0,
+            "ebitda": 302791000.0,
+            "profitMargin": 2.0226093665172993,
+            "revenueYoY": 72.12248674507939,
+            "earningsYoY": -50.520788000116056
         }
     ],
     "annual": [

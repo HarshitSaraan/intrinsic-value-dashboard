@@ -2,17 +2,6 @@
     "symbol": "NELCAST",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3297509000.0,
-            "earnings": 135433000.0,
-            "ebitda": 342924000.0,
-            "profitMargin": 4.1071305643138505,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 159020000.0,
             "ebitda": 358641000.0,
             "profitMargin": 4.824341719452181,
-            "revenueYoY": 13.11241611026141,
-            "earningsYoY": 166.05765530626243
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.147330762515895,
             "revenueYoY": 11.655131191453913,
             "earningsYoY": 12.748000856512077
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3410496000.0,
+            "earnings": 51366000.0,
+            "ebitda": 200992000.0,
+            "profitMargin": 1.50611523954287,
+            "revenueYoY": 2.768871767921972,
+            "earningsYoY": -58.92330206559029
         }
     ],
     "annual": [

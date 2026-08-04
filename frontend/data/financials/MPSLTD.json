@@ -2,17 +2,6 @@
     "symbol": "MPSLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1862800000.0,
-            "earnings": 352400000.0,
-            "ebitda": 567900000.0,
-            "profitMargin": 18.91775821344213,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 470400000.0,
             "ebitda": 744300000.0,
             "profitMargin": 22.928446090855918,
-            "revenueYoY": 12.65718521772555,
-            "earningsYoY": -0.06373486297004462
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2242400000.0,
+            "earnings": 503900000.0,
+            "ebitda": 798700000.0,
+            "profitMargin": 22.47145915090974,
+            "revenueYoY": 20.37792570324243,
+            "earningsYoY": 42.99091940976164
         }
     ],
     "annual": [

@@ -2,24 +2,13 @@
     "symbol": "SATIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5919416000.0,
-            "earnings": 218934000.0,
-            "ebitda": 1156762000.0,
-            "profitMargin": 3.6985743188179376,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 6256612000.0,
+            "revenue": 6202319000.0,
             "earnings": 450998000.0,
             "ebitda": 1203612000.0,
-            "profitMargin": 7.20834215067196,
+            "profitMargin": 7.271441536625253,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 719086000.0,
             "ebitda": 1190291000.0,
             "profitMargin": 11.580573760881862,
-            "revenueYoY": 8.490086550384406,
-            "earningsYoY": 404.28910052316365
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 25.325646267201414,
             "revenueYoY": 8.077992829022323,
             "earningsYoY": 640.0540802250907
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7228138000.0,
+            "earnings": 1226704000.0,
+            "ebitda": 2351693000.0,
+            "profitMargin": 16.971231041798042,
+            "revenueYoY": 16.53928151712287,
+            "earningsYoY": 171.9976585262019
         }
     ],
     "annual": [

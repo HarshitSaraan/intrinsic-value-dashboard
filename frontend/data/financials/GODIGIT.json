@@ -2,17 +2,6 @@
     "symbol": "GODIGIT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25943500000.0,
-            "earnings": 1156100000.0,
-            "ebitda": null,
-            "profitMargin": 4.4562221751113,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1400900000.0,
             "ebitda": null,
             "profitMargin": 5.450124494242141,
-            "revenueYoY": 5.500783949958545,
-            "earningsYoY": 18.199460006749916
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.511883638831814,
             "revenueYoY": 4.49129839844277,
             "earningsYoY": 29.244875010812216
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24270200000.0,
+            "earnings": 863900000.0,
+            "ebitda": null,
+            "profitMargin": 3.559509192342873,
+            "revenueYoY": 8.544390130457922,
+            "earningsYoY": -37.547892720306514
         }
     ],
     "annual": [

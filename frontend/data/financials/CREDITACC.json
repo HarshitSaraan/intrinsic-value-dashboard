@@ -2,17 +2,6 @@
     "symbol": "CREDITACC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 13865900000.0,
-            "earnings": 472100000.0,
-            "ebitda": 6280300000.0,
-            "profitMargin": 3.4047555513886585,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2520900000.0,
             "ebitda": 6740800000.0,
             "profitMargin": 17.166262631765314,
-            "revenueYoY": 7.690389762769039,
-            "earningsYoY": 353.30586816720256
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.582162220569636,
             "revenueYoY": 13.464686749507784,
             "earningsYoY": 619.2332133022664
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17486100000.0,
+            "earnings": 4933900000.0,
+            "ebitda": 8529400000.0,
+            "profitMargin": 28.216125951470023,
+            "revenueYoY": 23.632597075709157,
+            "earningsYoY": 719.7208838677521
         }
     ],
     "annual": [

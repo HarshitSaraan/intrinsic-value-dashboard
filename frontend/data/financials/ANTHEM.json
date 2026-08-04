@@ -2,17 +2,6 @@
     "symbol": "ANTHEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4831970000.0,
-            "earnings": 826220000.0,
-            "ebitda": 2092540000.0,
-            "profitMargin": 17.09903000225581,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 928170000.0,
             "ebitda": 1653590000.0,
             "profitMargin": 21.934619392985518,
-            "revenueYoY": -14.99640422172493,
-            "earningsYoY": -25.346856375320716
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 1897580000.0,
             "ebitda": 3194070000.0,
             "profitMargin": 31.059853374210032,
-            "revenueYoY": 26.437664141126703,
-            "earningsYoY": 129.67006366343105
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4182180000.0,
+            "earnings": 1199410000.0,
+            "ebitda": 1754550000.0,
+            "profitMargin": 28.67906211592997,
+            "revenueYoY": -22.582185783650402,
+            "earningsYoY": -11.672349419328231
         }
     ],
     "annual": [

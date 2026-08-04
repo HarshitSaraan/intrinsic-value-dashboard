@@ -2,17 +2,6 @@
     "symbol": "CRAFTSMAN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 17840000000.0,
-            "earnings": 696000000.0,
-            "ebitda": 2618800000.0,
-            "profitMargin": 3.901345291479821,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1164200000.0,
             "ebitda": 3774000000.0,
             "profitMargin": 5.229069349622709,
-            "revenueYoY": 27.277404601972272,
-            "earningsYoY": 74.3858597962852
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24315800000.0,
+            "earnings": 1505500000.0,
+            "ebitda": 4075700000.0,
+            "profitMargin": 6.191447536169898,
+            "revenueYoY": 36.29932735426009,
+            "earningsYoY": 116.30747126436782
         }
     ],
     "annual": [

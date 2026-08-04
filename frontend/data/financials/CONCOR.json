@@ -2,17 +2,6 @@
     "symbol": "CONCOR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 21536300000.0,
-            "earnings": 2665400000.0,
-            "ebitda": 3663000000.0,
-            "profitMargin": 12.37631348003139,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2626500000.0,
             "ebitda": 3631800000.0,
             "profitMargin": 11.604736446781247,
-            "revenueYoY": -1.0721950494573462,
-            "earningsYoY": -12.388672070449315
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 21597600000.0,
+            "earnings": 2667400000.0,
+            "ebitda": 3800500000.0,
+            "profitMargin": 12.350446345890283,
+            "revenueYoY": 0.28463570808356126,
+            "earningsYoY": 0.07503564192991671
         }
     ],
     "annual": [

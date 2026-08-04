@@ -2,17 +2,6 @@
     "symbol": "MHRIL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7788254000.0,
-            "earnings": 730820000.0,
-            "ebitda": 2326601000.0,
-            "profitMargin": 9.383617945691036,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 22314000.0,
             "ebitda": 1631940000.0,
             "profitMargin": 0.29645123401114304,
-            "revenueYoY": 10.948694122800863,
-            "earningsYoY": -93.59499862220999
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.065999517485541,
             "revenueYoY": 5.323516670103466,
             "earningsYoY": -43.138255658027965
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7328139000.0,
+            "earnings": -86645000.0,
+            "ebitda": 1532726000.0,
+            "profitMargin": -1.1823602145101233,
+            "revenueYoY": 4.4784446009563705,
+            "earningsYoY": -210.08270972823948
         }
     ],
     "annual": [

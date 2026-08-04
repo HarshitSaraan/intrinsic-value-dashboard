@@ -2,17 +2,6 @@
     "symbol": "STLTECH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10520000000.0,
-            "earnings": -400000000.0,
-            "ebitda": 1460000000.0,
-            "profitMargin": -3.802281368821293,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -170000000.0,
             "ebitda": 1140000000.0,
             "profitMargin": -1.352426412092283,
-            "revenueYoY": 25.951903807615228,
-            "earningsYoY": 29.166666666666668
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.094378903539209,
             "revenueYoY": 36.97718631178707,
             "earningsYoY": 247.5
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19100000000.0,
+            "earnings": 1970000000.0,
+            "ebitda": 3970000000.0,
+            "profitMargin": 10.314136125654452,
+            "revenueYoY": 87.43866535819431,
+            "earningsYoY": 1870.0
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 39960000000.0,
+            "revenue": 39090000000.0,
             "earnings": -1230000000.0,
-            "ebitda": 4670000000.0,
-            "profitMargin": -3.078078078078078,
-            "revenueYoY": -0.1,
+            "ebitda": 4230000000.0,
+            "profitMargin": -3.1465848042977744,
+            "revenueYoY": -2.275,
             "earningsYoY": -141.1764705882353
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 47450000000.0,
+            "revenue": 46630000000.0,
             "earnings": 560000000.0,
-            "ebitda": 6440000000.0,
-            "profitMargin": 1.1801896733403583,
-            "revenueYoY": 18.743743743743742,
+            "ebitda": 6030000000.0,
+            "profitMargin": 1.2009435985417114,
+            "revenueYoY": 19.288820670248143,
             "earningsYoY": 145.52845528455285
         }
     ]

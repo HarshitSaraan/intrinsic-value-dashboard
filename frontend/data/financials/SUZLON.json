@@ -2,17 +2,6 @@
     "symbol": "SUZLON",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 37735400000.0,
-            "earnings": 11822200000.0,
-            "ebitda": 7287100000.0,
-            "profitMargin": 31.32920281751353,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4452800000.0,
             "ebitda": 7610100000.0,
             "profitMargin": 10.531245122014674,
-            "revenueYoY": 42.42002687945675,
-            "earningsYoY": 15.083221337744238
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 20.379256994253904,
             "revenueYoY": 44.90531437324104,
             "earningsYoY": -5.740894249801221
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 38193600000.0,
+            "earnings": 3052200000.0,
+            "ebitda": 6285900000.0,
+            "profitMargin": 7.991391227849692,
+            "revenueYoY": 22.520233661498782,
+            "earningsYoY": -5.889245189935865
         }
     ],
     "annual": [

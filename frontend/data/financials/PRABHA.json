@@ -2,17 +2,6 @@
     "symbol": "PRABHA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 11336000.0,
-            "earnings": -2332000.0,
-            "ebitda": -2849000.0,
-            "profitMargin": -20.57163020465773,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 955000.0,
             "ebitda": 1474000.0,
             "profitMargin": 6.614489541487741,
-            "revenueYoY": 41.72965544321194,
-            "earningsYoY": 110.71588868940754
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16927000.0,
+            "earnings": 2944000.0,
+            "ebitda": 4067000.0,
+            "profitMargin": 17.392331777633366,
+            "revenueYoY": 49.32074805928017,
+            "earningsYoY": 226.24356775300168
         }
     ],
     "annual": [

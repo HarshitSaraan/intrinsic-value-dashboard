@@ -2,24 +2,13 @@
     "symbol": "MEESHO",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 26786410000.0,
-            "earnings": -374330000.0,
-            "ebitda": 288170000.0,
-            "profitMargin": -1.397462369910712,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23999750000.0,
-            "earnings": -13913810000.0,
-            "ebitda": -13889190000.0,
-            "profitMargin": -57.97481223762747,
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 30736720000.0,
+            "earnings": -4113600000.0,
+            "ebitda": -3199640000.0,
+            "profitMargin": -13.383340837929355,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": -4906750000.0,
             "ebitda": -4637850000.0,
             "profitMargin": -13.949149391147028,
-            "revenueYoY": 31.320247842096048,
-            "earningsYoY": -1210.8086447786714
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": -1663450000.0,
             "ebitda": -1390740000.0,
             "profitMargin": -4.710705559450976,
-            "revenueYoY": 47.135365993395766,
-            "earningsYoY": 88.04461179216908
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 37128110000.0,
+            "earnings": -1328350000.0,
+            "ebitda": -1110530000.0,
+            "profitMargin": -3.5777474264108786,
+            "revenueYoY": 48.283134960097705,
+            "earningsYoY": 54.09319942769856
         }
     ],
     "annual": [

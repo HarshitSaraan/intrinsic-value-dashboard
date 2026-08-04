@@ -2,17 +2,6 @@
     "symbol": "PSB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 17987800000.0,
-            "earnings": 3127800000.0,
-            "ebitda": null,
-            "profitMargin": 17.388452173139573,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3364200000.0,
             "ebitda": null,
             "profitMargin": 22.52621429432325,
-            "revenueYoY": 16.951581453261184,
-            "earningsYoY": 19.314796425024827
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 30.08408395558313,
             "revenueYoY": -22.048833097988638,
             "earningsYoY": 34.86476117398811
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13710500000.0,
+            "earnings": 3315100000.0,
+            "ebitda": null,
+            "profitMargin": 24.1792786550454,
+            "revenueYoY": 0.1395036300159224,
+            "earningsYoY": 23.164660425026007
         }
     ],
     "annual": [

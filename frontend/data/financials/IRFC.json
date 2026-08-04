@@ -2,17 +2,6 @@
     "symbol": "IRFC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 67187300000.0,
-            "earnings": 16818700000.0,
-            "ebitda": 16855700000.0,
-            "profitMargin": 25.032558236452424,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 18021900000.0,
             "ebitda": 18050600000.0,
             "profitMargin": 27.071616554906626,
-            "revenueYoY": -1.5718355922956253,
-            "earningsYoY": 10.51905363472459
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.96029717479467,
             "revenueYoY": 9.183580825542922,
             "earningsYoY": 0.14507661115306178
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 82420300000.0,
+            "earnings": 19272100000.0,
+            "ebitda": 17970400000.0,
+            "profitMargin": 23.382710327431468,
+            "revenueYoY": 19.43118965609681,
+            "earningsYoY": 10.398180662087771
         }
     ],
     "annual": [

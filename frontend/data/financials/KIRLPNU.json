@@ -2,17 +2,6 @@
     "symbol": "KIRLPNU",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5916000000.0,
-            "earnings": 801000000.0,
-            "ebitda": 1115000000.0,
-            "profitMargin": 13.539553752535497,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 422000000.0,
             "ebitda": 672000000.0,
             "profitMargin": 10.371098550012288,
-            "revenueYoY": 18.76824284880327,
-            "earningsYoY": 15.934065934065933
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 20.1882551278449,
             "revenueYoY": 20.317782285327922,
             "earningsYoY": 79.40074906367042
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3031000000.0,
+            "earnings": 334000000.0,
+            "ebitda": 537000000.0,
+            "profitMargin": 11.019465522929726,
+            "revenueYoY": 7.596734114305999,
+            "earningsYoY": 25.563909774436087
         }
     ],
     "annual": [

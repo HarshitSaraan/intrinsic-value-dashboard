@@ -2,17 +2,6 @@
     "symbol": "FIVESTAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7456370000.0,
-            "earnings": 2791239000.0,
-            "ebitda": 3913269000.0,
-            "profitMargin": 37.43428772982028,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2770278000.0,
             "ebitda": 4207154000.0,
             "profitMargin": 34.31038768457476,
-            "revenueYoY": 12.25936131111328,
-            "earningsYoY": 1.1570917881099398
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 33.259995311175636,
             "revenueYoY": 8.576237498943856,
             "earningsYoY": -3.5310842246041987
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8211972000.0,
+            "earnings": 2714086000.0,
+            "ebitda": 4154297000.0,
+            "profitMargin": 33.050356235993014,
+            "revenueYoY": 6.055023786265078,
+            "earningsYoY": 1.9139233889924434
         }
     ],
     "annual": [

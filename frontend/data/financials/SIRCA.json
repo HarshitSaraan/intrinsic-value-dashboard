@@ -2,17 +2,6 @@
     "symbol": "SIRCA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1142356000.0,
-            "earnings": 142048000.0,
-            "ebitda": 227665000.0,
-            "profitMargin": 12.434652595162978,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 176834000.0,
             "ebitda": 269193000.0,
             "profitMargin": 13.167912214911432,
-            "revenueYoY": 33.061051396683474,
-            "earningsYoY": 25.32174849756208
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1300053000.0,
+            "earnings": 162058000.0,
+            "ebitda": 258156000.0,
+            "profitMargin": 12.4654917914885,
+            "revenueYoY": 13.804540791136914,
+            "earningsYoY": 14.086787564766839
         }
     ],
     "annual": [
@@ -73,11 +73,11 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 3736793000.0,
+            "revenue": 3736792000.0,
             "earnings": 490567000.0,
-            "ebitda": 726044000.0,
-            "profitMargin": 13.128021809075321,
-            "revenueYoY": 19.876472594181386,
+            "ebitda": 725820000.0,
+            "profitMargin": 13.128025322255024,
+            "revenueYoY": 19.876440514140402,
             "earningsYoY": -4.621298139737448
         },
         {
@@ -86,9 +86,9 @@
             "annualLabel": "FY26",
             "revenue": 4924841000.0,
             "earnings": 650184000.0,
-            "ebitda": 1027072000.0,
+            "ebitda": 1026677000.0,
             "profitMargin": 13.202131804864358,
-            "revenueYoY": 31.793251593010368,
+            "revenueYoY": 31.793286862099894,
             "earningsYoY": 32.537247715398706
         }
     ]

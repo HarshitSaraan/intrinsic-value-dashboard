@@ -2,17 +2,6 @@
     "symbol": "SUPREMEIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 30270700000.0,
-            "earnings": 2939400000.0,
-            "ebitda": 4614800000.0,
-            "profitMargin": 9.710380004426723,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1533700000.0,
             "ebitda": 3269800000.0,
             "profitMargin": 5.707980081430922,
-            "revenueYoY": 7.0545205348462865,
-            "earningsYoY": -17.970797454137028
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.290583559640101,
             "revenueYoY": 16.537113446335898,
             "earningsYoY": 47.50289174661496
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27176600000.0,
+            "earnings": 2807200000.0,
+            "ebitda": 4801300000.0,
+            "profitMargin": 10.329474621549421,
+            "revenueYoY": 4.156430490454966,
+            "earningsYoY": 38.76421156697973
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "ADANIPOWER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 142374000000.0,
-            "earnings": 26369700000.0,
-            "ebitda": 51108300000.0,
-            "profitMargin": 18.5214294744827,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 24795800000.0,
             "ebitda": 47813300000.0,
             "profitMargin": 19.914001914637986,
-            "revenueYoY": -8.92198039964363,
-            "earningsYoY": -18.894024290120733
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 28.243370463099087,
             "revenueYoY": -0.10050992456487842,
             "earningsYoY": 52.33696249862532
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 189018900000.0,
+            "earnings": 48056900000.0,
+            "ebitda": 84867800000.0,
+            "profitMargin": 25.424388778053412,
+            "revenueYoY": 33.969020103975076,
+            "earningsYoY": 41.97603445932771
         }
     ],
     "annual": [

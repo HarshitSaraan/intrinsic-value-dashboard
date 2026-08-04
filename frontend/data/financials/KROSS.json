@@ -2,17 +2,6 @@
     "symbol": "KROSS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1393550000.0,
-            "earnings": 107000000.0,
-            "ebitda": 182550000.0,
-            "profitMargin": 7.678231853898317,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 224500000.0,
             "ebitda": 344160000.0,
             "profitMargin": 9.957950392108158,
-            "revenueYoY": 21.887502432905862,
-            "earningsYoY": 30.91905761604852
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1843390000.0,
+            "earnings": 133120000.0,
+            "ebitda": 229450000.0,
+            "profitMargin": 7.221477820754155,
+            "revenueYoY": 32.28014782390298,
+            "earningsYoY": 24.411214953271028
         }
     ],
     "annual": [

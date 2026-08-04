@@ -2,17 +2,6 @@
     "symbol": "IRB",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 18659040000.0,
-            "earnings": 2024820000.0,
-            "ebitda": 10175950000.0,
-            "profitMargin": 10.851683687906773,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2962590000.0,
             "ebitda": 11326850000.0,
             "profitMargin": 19.408442104656313,
-            "revenueYoY": -17.160349040973077,
-            "earningsYoY": 37.97328638891217
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17005440000.0,
+            "earnings": 3062700000.0,
+            "ebitda": 11879490000.0,
+            "profitMargin": 18.010119114824434,
+            "revenueYoY": -8.862192267126282,
+            "earningsYoY": 51.25788959018579
         }
     ],
     "annual": [

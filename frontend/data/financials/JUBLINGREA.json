@@ -2,17 +2,6 @@
     "symbol": "JUBLINGREA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10381600000.0,
-            "earnings": 740500000.0,
-            "ebitda": 1550800000.0,
-            "profitMargin": 7.132811897973338,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 469000000.0,
             "ebitda": 1229100000.0,
             "profitMargin": 4.510829838802755,
-            "revenueYoY": -0.6060837810450643,
-            "earningsYoY": -32.4012683770539
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.413061189485871,
             "revenueYoY": 12.318910379902904,
             "earningsYoY": 16.73193787981094
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12887300000.0,
+            "earnings": 1058200000.0,
+            "ebitda": 2093000000.0,
+            "profitMargin": 8.211184654660014,
+            "revenueYoY": 25.189912766412153,
+            "earningsYoY": 40.905459387483354
         }
     ],
     "annual": [

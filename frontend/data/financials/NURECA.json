@@ -2,17 +2,6 @@
     "symbol": "NURECA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 317400000.0,
-            "earnings": 24670000.0,
-            "ebitda": 31930000.0,
-            "profitMargin": 7.772526780088216,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 37340000.0,
             "ebitda": 54400000.0,
             "profitMargin": 9.41930275969931,
-            "revenueYoY": 49.801609794807845,
-            "earningsYoY": 233.3095323098893
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -17.20660923598362,
             "revenueYoY": 11.546943919344676,
             "earningsYoY": -346.9396027563843
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 403430000.0,
+            "earnings": 30670000.0,
+            "ebitda": 52420000.0,
+            "profitMargin": 7.602310190119724,
+            "revenueYoY": 18.04482677902622,
+            "earningsYoY": 277.2447724477245
         }
     ],
     "annual": [

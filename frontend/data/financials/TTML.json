@@ -2,17 +2,6 @@
     "symbol": "TTML",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3082700000.0,
-            "earnings": -3064200000.0,
-            "ebitda": 1549600000.0,
-            "profitMargin": -99.39987673143673,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -1504300000.0,
             "ebitda": 1730600000.0,
             "profitMargin": -51.1127722469505,
-            "revenueYoY": -11.557532229467801,
-            "earningsYoY": 52.26111516613246
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 196.56560871624822,
             "revenueYoY": -4.129496869627275,
             "earningsYoY": 289.5861888910646
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3015700000.0,
+            "earnings": -721500000.0,
+            "ebitda": 1672100000.0,
+            "profitMargin": -23.92479358026329,
+            "revenueYoY": 6.0932277924362355,
+            "earningsYoY": 77.79863376207766
         }
     ],
     "annual": [

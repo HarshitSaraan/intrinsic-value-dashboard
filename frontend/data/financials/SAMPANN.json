@@ -2,17 +2,6 @@
     "symbol": "SAMPANN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 323764000.0,
-            "earnings": 54544000.0,
-            "ebitda": 90592000.0,
-            "profitMargin": 16.846839055608406,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 18984000.0,
             "ebitda": 42984000.0,
             "profitMargin": 5.219370838167611,
-            "revenueYoY": 52.557074369696785,
-            "earningsYoY": 59.70387818625389
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.0903436439420338,
             "revenueYoY": 19.67513373939042,
             "earningsYoY": -78.04708125550015
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 417047000.0,
+            "earnings": 20541000.0,
+            "ebitda": 49056000.0,
+            "profitMargin": 4.925344145863655,
+            "revenueYoY": 27.616923095753926,
+            "earningsYoY": 12.245901639344263
         }
     ],
     "annual": [

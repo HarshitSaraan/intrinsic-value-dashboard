@@ -2,17 +2,6 @@
     "symbol": "VENUSREM",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1319000000.0,
-            "earnings": 96000000.0,
-            "ebitda": 187900000.0,
-            "profitMargin": 7.278241091736164,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 474900000.0,
             "ebitda": 683800000.0,
             "profitMargin": 18.30763299922899,
-            "revenueYoY": 31.235454821410503,
-            "earningsYoY": 126.14285714285714
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1788600000.0,
+            "earnings": 229700000.0,
+            "ebitda": 368100000.0,
+            "profitMargin": 12.842446606284245,
+            "revenueYoY": 30.38343781892404,
+            "earningsYoY": 139.27083333333334
         }
     ],
     "annual": [
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 6528900000.0,
-            "earnings": 453100000.0,
-            "ebitda": 944000000.0,
-            "profitMargin": 6.939913308520578,
-            "revenueYoY": 10.388104075140129,
-            "earningsYoY": 59.03379336487568
+            "revenue": 6472892000.0,
+            "earnings": 453147000.0,
+            "ebitda": 943979000.0,
+            "profitMargin": 7.000688409446658,
+            "revenueYoY": 9.441142575800203,
+            "earningsYoY": 59.05028991814901
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 7696000000.0,
-            "earnings": 1027800000.0,
-            "ebitda": 1598700000.0,
-            "profitMargin": 13.354989604989607,
-            "revenueYoY": 17.875905588996616,
-            "earningsYoY": 126.83734274994482
+            "revenue": 7345425000.0,
+            "earnings": 1027890000.0,
+            "ebitda": 1598610000.0,
+            "profitMargin": 13.993608266369883,
+            "revenueYoY": 13.479801609543307,
+            "earningsYoY": 126.83367648908632
         }
     ]
 }

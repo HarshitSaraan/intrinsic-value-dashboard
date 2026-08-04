@@ -2,17 +2,6 @@
     "symbol": "ERIS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 7715600000.0,
-            "earnings": 1179900000.0,
-            "ebitda": 2802900000.0,
-            "profitMargin": 15.292394629063196,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2816100000.0,
             "ebitda": 2746000000.0,
             "profitMargin": 37.433702428584716,
-            "revenueYoY": 7.072302875035582,
-            "earningsYoY": 200.09590792838873
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8690300000.0,
+            "earnings": 1423900000.0,
+            "ebitda": 2982100000.0,
+            "profitMargin": 16.384934927447844,
+            "revenueYoY": 12.632847737052206,
+            "earningsYoY": 20.679718620222054
         }
     ],
     "annual": [

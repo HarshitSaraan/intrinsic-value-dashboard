@@ -2,17 +2,6 @@
     "symbol": "USHAMART",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8960800000.0,
-            "earnings": 1009900000.0,
-            "ebitda": 1674200000.0,
-            "profitMargin": 11.27019908936702,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -44,6 +33,17 @@
             "profitMargin": 15.09302943038621,
             "revenueYoY": 9.282653334523703,
             "earningsYoY": 46.351123873650856
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10330000000.0,
+            "earnings": 1419800000.0,
+            "ebitda": 2215400000.0,
+            "profitMargin": 13.744433688286545,
+            "revenueYoY": 16.43503646344075,
+            "earningsYoY": 40.67175269989101
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 34741600000.0,
+            "revenue": 33832700000.0,
             "earnings": 4073900000.0,
-            "ebitda": 6542600000.0,
-            "profitMargin": 11.726287793308309,
-            "revenueYoY": 10.712908581607971,
+            "ebitda": 6514800000.0,
+            "profitMargin": 12.041309147658922,
+            "revenueYoY": 7.816468503723721,
             "earningsYoY": -3.9083875837343145
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 36910600000.0,
+            "revenue": 35956300000.0,
             "earnings": 4659900000.0,
-            "ebitda": 7756000000.0,
-            "profitMargin": 12.624828640011271,
-            "revenueYoY": 6.243235774978699,
+            "ebitda": 7739500000.0,
+            "profitMargin": 12.959898543509759,
+            "revenueYoY": 6.276767742450351,
             "earningsYoY": 14.384250963450256
         }
     ]

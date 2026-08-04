@@ -2,17 +2,6 @@
     "symbol": "TANLA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10243648000.0,
-            "earnings": 1173335000.0,
-            "ebitda": 1744125000.0,
-            "profitMargin": 11.454269026034474,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1313715000.0,
             "ebitda": 1985081000.0,
             "profitMargin": 11.718762544204662,
-            "revenueYoY": 12.055488195564102,
-            "earningsYoY": 10.848180986678457
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.40711627932651,
             "revenueYoY": 14.953139740842325,
             "earningsYoY": 14.479922613746288
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12263914000.0,
+            "earnings": 1421671000.0,
+            "ebitda": 2152470000.0,
+            "profitMargin": 11.592310578824998,
+            "revenueYoY": 17.84794913437749,
+            "earningsYoY": 20.067682495283172
         }
     ],
     "annual": [

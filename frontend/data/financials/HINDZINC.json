@@ -2,17 +2,6 @@
     "symbol": "HINDZINC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 88290000000.0,
-            "earnings": 30030000000.0,
-            "ebitda": 40330000000.0,
-            "profitMargin": 34.012911994563375,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 39160000000.0,
             "ebitda": 54250000000.0,
             "profitMargin": 36.84953420532606,
-            "revenueYoY": 27.805171377029463,
-            "earningsYoY": 46.2285287528006
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 39.65490072486606,
             "revenueYoY": 43.75353947219391,
             "earningsYoY": 67.5990675990676
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 130330000000.0,
+            "earnings": 54690000000.0,
+            "ebitda": 74460000000.0,
+            "profitMargin": 41.962710043735136,
+            "revenueYoY": 71.69015939928863,
+            "earningsYoY": 144.80752014324082
         }
     ],
     "annual": [

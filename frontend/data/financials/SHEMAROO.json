@@ -2,17 +2,6 @@
     "symbol": "SHEMAROO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1395164000.0,
-            "earnings": -458094000.0,
-            "ebitda": -518242000.0,
-            "profitMargin": -32.83441946609861,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -721199000.0,
             "ebitda": -859987000.0,
             "profitMargin": -51.70493161920111,
-            "revenueYoY": -31.716931198800037,
-            "earningsYoY": -1309.33500087937
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1316841000.0,
+            "earnings": -80531000.0,
+            "ebitda": -12091000.0,
+            "profitMargin": -6.1154687619841726,
+            "revenueYoY": -5.613891986891863,
+            "earningsYoY": 82.42042026309011
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 6851019000.0,
+            "revenue": 6813348000.0,
             "earnings": -849591000.0,
-            "ebitda": -713169000.0,
-            "profitMargin": -12.400943567664898,
-            "revenueYoY": -3.1242244904279053,
+            "ebitda": -736931000.0,
+            "profitMargin": -12.469508382662973,
+            "revenueYoY": -3.656905444782446,
             "earningsYoY": -108.91359354367536
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 5830624000.0,
+            "revenue": 5785018000.0,
             "earnings": -2186158000.0,
-            "ebitda": -2586845000.0,
-            "profitMargin": -37.494408831713386,
-            "revenueYoY": -14.89406174468353,
+            "ebitda": -2596915000.0,
+            "profitMargin": -37.78999477616146,
+            "revenueYoY": -15.092873576984472,
             "earningsYoY": -157.3188746114307
         }
     ]

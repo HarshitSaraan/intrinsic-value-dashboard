@@ -2,17 +2,6 @@
     "symbol": "ZENSARTECH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 13589000000.0,
-            "earnings": 1764000000.0,
-            "ebitda": 2585000000.0,
-            "profitMargin": 12.98108764441828,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1998000000.0,
             "ebitda": 2876000000.0,
             "profitMargin": 13.965191864122458,
-            "revenueYoY": 7.928485214242607,
-            "earningsYoY": 25.03128911138924
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.520132377275235,
             "revenueYoY": 6.733387298550298,
             "earningsYoY": 19.387755102040817
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15083000000.0,
+            "earnings": 1838000000.0,
+            "ebitda": 2782000000.0,
+            "profitMargin": 12.185904660876483,
+            "revenueYoY": 8.902527075812275,
+            "earningsYoY": 0.9890109890109889
         }
     ],
     "annual": [

@@ -2,24 +2,13 @@
     "symbol": "ADANIGREEN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 30730000000.0,
-            "earnings": 2300000000.0,
-            "ebitda": 24410000000.0,
-            "profitMargin": 7.484542792059877,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 38000000000.0,
+            "revenue": 37410000000.0,
             "earnings": 7130000000.0,
             "ebitda": 32310000000.0,
-            "profitMargin": 18.763157894736842,
+            "profitMargin": 19.05907511360599,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -27,23 +16,34 @@
             "date": "2025-12-31",
             "quarterLabel": "Q3 FY26",
             "annualLabel": "FY26",
-            "revenue": 26180000000.0,
+            "revenue": 24330000000.0,
             "earnings": -410000000.0,
             "ebitda": 24490000000.0,
-            "profitMargin": -1.566080977845684,
-            "revenueYoY": 11.880341880341879,
-            "earningsYoY": -108.33333333333333
+            "profitMargin": -1.685162351006987,
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 35020000000.0,
+            "revenue": 33280000000.0,
             "earnings": 3970000000.0,
             "ebitda": 29990000000.0,
-            "profitMargin": 11.336379211878926,
-            "revenueYoY": 13.960299381711682,
-            "earningsYoY": 72.60869565217392
+            "profitMargin": 11.929086538461538,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 43230000000.0,
+            "earnings": 8450000000.0,
+            "ebitda": 42150000000.0,
+            "profitMargin": 19.546611149664585,
+            "revenueYoY": 15.557337610264636,
+            "earningsYoY": 18.513323983169705
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "RKFORGE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 10152559000.0,
-            "earnings": 117863000.0,
-            "ebitda": 1455723000.0,
-            "profitMargin": 1.160919133786861,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 559387000.0,
             "ebitda": 2046170000.0,
             "profitMargin": 4.597290510639843,
-            "revenueYoY": 28.458382728205894,
-            "earningsYoY": -72.00731809963604
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12166700000.0,
+            "earnings": 468800000.0,
+            "ebitda": 2213000000.0,
+            "profitMargin": 3.8531401283832096,
+            "revenueYoY": 19.83826802986427,
+            "earningsYoY": 297.6251060220526
         }
     ],
     "annual": [

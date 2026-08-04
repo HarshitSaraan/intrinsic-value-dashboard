@@ -2,17 +2,6 @@
     "symbol": "RBLBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25653200000.0,
-            "earnings": 869900000.0,
-            "ebitda": null,
-            "profitMargin": 3.3909999532222104,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2279500000.0,
             "ebitda": null,
             "profitMargin": 8.413488155787018,
-            "revenueYoY": 1.887062079754509,
-            "earningsYoY": 381.72020287404905
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.912111312058807,
             "revenueYoY": 6.909079569020629,
             "earningsYoY": 180.9748246924934
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 25772900000.0,
+            "earnings": 2342300000.0,
+            "ebitda": null,
+            "profitMargin": 9.088228332861261,
+            "revenueYoY": 0.9854475067982165,
+            "earningsYoY": 9.340864531789748
         }
     ],
     "annual": [

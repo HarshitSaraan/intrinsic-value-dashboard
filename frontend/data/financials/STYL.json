@@ -2,17 +2,6 @@
     "symbol": "STYL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3688270000.0,
-            "earnings": 629750000.0,
-            "ebitda": 1014250000.0,
-            "profitMargin": 17.074400735304085,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 640860000.0,
             "ebitda": 1004510000.0,
             "profitMargin": 17.146985243949754,
-            "revenueYoY": 10.112515136069955,
-            "earningsYoY": 19.345227010316957
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 817870000.0,
             "ebitda": 1245180000.0,
             "profitMargin": 20.235491469062982,
-            "revenueYoY": 9.584168187253102,
-            "earningsYoY": 29.872171496625644
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3764700000.0,
+            "earnings": 602360000.0,
+            "ebitda": 944110000.0,
+            "profitMargin": 16.00021250033203,
+            "revenueYoY": 21.100899724324723,
+            "earningsYoY": 63.51149596894595
         }
     ],
     "annual": [

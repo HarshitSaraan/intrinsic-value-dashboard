@@ -2,17 +2,6 @@
     "symbol": "RPGLIFE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1430900000.0,
-            "earnings": 1173500000.0,
-            "ebitda": 1404500000.0,
-            "profitMargin": 82.01132154588021,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 221300000.0,
             "ebitda": 347500000.0,
             "profitMargin": 12.292395711825806,
-            "revenueYoY": 4.2383185686989755,
-            "earningsYoY": -36.64471800744346
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.90316015602917,
             "revenueYoY": 23.621496959955273,
             "earningsYoY": -74.52066467831274
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1956900000.0,
+            "earnings": 307600000.0,
+            "ebitda": 479900000.0,
+            "profitMargin": 15.718738821605601,
+            "revenueYoY": 15.847738574473125,
+            "earningsYoY": 17.00266260935717
         }
     ],
     "annual": [

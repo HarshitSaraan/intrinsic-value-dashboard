@@ -2,17 +2,6 @@
     "symbol": "TBOTEK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4461290000.0,
-            "earnings": 589080000.0,
-            "ebitda": 901210000.0,
-            "profitMargin": 13.204252581652392,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 536920000.0,
             "ebitda": 1074010000.0,
             "profitMargin": 6.845570498207391,
-            "revenueYoY": 85.77789989293869,
-            "earningsYoY": 7.435569073155114
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.379905692813988,
             "revenueYoY": 82.5391310585055,
             "earningsYoY": 2.021796699938888
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9257800000.0,
+            "earnings": 833580000.0,
+            "ebitda": 1509100000.0,
+            "profitMargin": 9.004083043487654,
+            "revenueYoY": 81.07174570390276,
+            "earningsYoY": 32.381527124888834
         }
     ],
     "annual": [

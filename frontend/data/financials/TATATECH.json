@@ -2,17 +2,6 @@
     "symbol": "TATATECH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 12856500000.0,
-            "earnings": 1888700000.0,
-            "ebitda": 2940500000.0,
-            "profitMargin": 14.690623420059893,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 66400000.0,
             "ebitda": 680800000.0,
             "profitMargin": 0.486186874418809,
-            "revenueYoY": 3.67016350635352,
-            "earningsYoY": -96.06261859582543
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.98609609342204,
             "revenueYoY": 22.2898922723914,
             "earningsYoY": 8.1008100810081
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16644300000.0,
+            "earnings": 1807500000.0,
+            "ebitda": 3138900000.0,
+            "profitMargin": 10.859573547701014,
+            "revenueYoY": 33.76544053235178,
+            "earningsYoY": 6.148696264975335
         }
     ],
     "annual": [

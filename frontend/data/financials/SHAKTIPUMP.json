@@ -2,17 +2,6 @@
     "symbol": "SHAKTIPUMP",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6225000000.0,
-            "earnings": 968300000.0,
-            "ebitda": 1454700000.0,
-            "profitMargin": 15.555020080321286,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 383300000.0,
             "ebitda": 928500000.0,
             "profitMargin": 4.468563834128029,
-            "revenueYoY": 28.92593037936632,
-            "earningsYoY": -65.22725210922616
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8586700000.0,
+            "earnings": 515900000.0,
+            "ebitda": 932000000.0,
+            "profitMargin": 6.008128850431482,
+            "revenueYoY": 37.93895582329318,
+            "earningsYoY": -46.721057523494785
         }
     ],
     "annual": [

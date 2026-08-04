@@ -2,17 +2,6 @@
     "symbol": "SCHAEFFLER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 21744100000.0,
-            "earnings": 2516200000.0,
-            "ebitda": 4263900000.0,
-            "profitMargin": 11.571874669450564,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3223600000.0,
             "ebitda": 5274300000.0,
             "profitMargin": 11.833198737243961,
-            "revenueYoY": 27.533870771420276,
-            "earningsYoY": 35.85637221847606
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.224052845717114,
             "revenueYoY": 18.91225665812795,
             "earningsYoY": 25.614021142993405
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27605500000.0,
+            "earnings": 3257800000.0,
+            "ebitda": 5356900000.0,
+            "profitMargin": 11.80127148575465,
+            "revenueYoY": 17.340888127553036,
+            "earningsYoY": 13.468705374246802
         }
     ],
     "annual": [

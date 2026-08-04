@@ -2,17 +2,6 @@
     "symbol": "STYLAMIND",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2829844000.0,
-            "earnings": 282719000.0,
-            "ebitda": 537214000.0,
-            "profitMargin": 9.990621391143822,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 382454000.0,
             "ebitda": 595104000.0,
             "profitMargin": 13.516721046351849,
-            "revenueYoY": 6.66192192819336,
-            "earningsYoY": 29.28561528762326
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3264674000.0,
+            "earnings": 481610000.0,
+            "ebitda": 700743000.0,
+            "profitMargin": 14.75216208417747,
+            "revenueYoY": 15.365864690774474,
+            "earningsYoY": 70.34935748923843
         }
     ],
     "annual": [

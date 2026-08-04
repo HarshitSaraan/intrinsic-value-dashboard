@@ -2,17 +2,6 @@
     "symbol": "JINDALSTEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 132946200000.0,
-            "earnings": -3394000000.0,
-            "ebitda": 11039600000.0,
-            "profitMargin": -2.5529123810985195,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1904300000.0,
             "ebitda": 15839700000.0,
             "profitMargin": 1.454770191687726,
-            "revenueYoY": 10.742309608832961,
-            "earningsYoY": -79.96485986028112
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.419149741452193,
             "revenueYoY": 22.421851846837292,
             "earningsYoY": 407.82262816735414
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 155528300000.0,
+            "earnings": 8447900000.0,
+            "ebitda": 26792100000.0,
+            "profitMargin": 5.431744576388992,
+            "revenueYoY": 26.010983241563256,
+            "earningsYoY": -43.45334913016995
         }
     ],
     "annual": [

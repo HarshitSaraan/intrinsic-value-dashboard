@@ -2,17 +2,6 @@
     "symbol": "SKMEGGPROD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1174400000.0,
-            "earnings": 63500000.0,
-            "ebitda": 172200000.0,
-            "profitMargin": 5.407016348773841,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 300400000.0,
             "ebitda": 476000000.0,
             "profitMargin": 14.74645329144372,
-            "revenueYoY": 50.79576578577245,
-            "earningsYoY": 298.937583001328
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.50870613447629,
             "revenueYoY": 58.93222070844687,
             "earningsYoY": 414.6456692913386
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1842600000.0,
+            "earnings": 238500000.0,
+            "ebitda": 385000000.0,
+            "profitMargin": 12.94366655812439,
+            "revenueYoY": 4.871940808195788,
+            "earningsYoY": 46.4987714987715
         }
     ],
     "annual": [

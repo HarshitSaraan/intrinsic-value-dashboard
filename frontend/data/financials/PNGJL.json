@@ -2,17 +2,6 @@
     "symbol": "PNGJL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 17145620000.0,
-            "earnings": 693420000.0,
-            "ebitda": 1228550000.0,
-            "profitMargin": 4.044298193941077,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 902560000.0,
             "ebitda": 1663320000.0,
             "profitMargin": 2.546506988956371,
-            "revenueYoY": 123.16159433430045,
-            "earningsYoY": 45.59532835411592
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24129810000.0,
+            "earnings": 1053350000.0,
+            "ebitda": 1924070000.0,
+            "profitMargin": 4.365347261333595,
+            "revenueYoY": 40.73454328277426,
+            "earningsYoY": 51.90649245767356
         }
     ],
     "annual": [

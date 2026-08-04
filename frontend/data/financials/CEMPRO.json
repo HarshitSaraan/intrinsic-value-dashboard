@@ -2,24 +2,13 @@
     "symbol": "CEMPRO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25323400000.0,
-            "earnings": 1133600000.0,
-            "ebitda": 2705500000.0,
-            "profitMargin": 4.476492098217459,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 25423651000.0,
-            "earnings": 1372160000.0,
-            "ebitda": 2544261000.0,
-            "profitMargin": 5.397179185633094,
+            "revenue": 25764000000.0,
+            "earnings": 1372300000.0,
+            "ebitda": 2605100000.0,
+            "profitMargin": 5.326424468250272,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 1108900000.0,
             "ebitda": 2449200000.0,
             "profitMargin": 4.789071812324011,
-            "revenueYoY": 1.9837564524937896,
-            "earningsYoY": 27.401194852941174
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.144301813693673,
             "revenueYoY": 17.42064651666048,
             "earningsYoY": 113.62914608327452
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27209200000.0,
+            "earnings": 1408300000.0,
+            "ebitda": 2850900000.0,
+            "profitMargin": 5.175822883436484,
+            "revenueYoY": 5.609377425865548,
+            "earningsYoY": 2.6233330904321215
         }
     ],
     "annual": [

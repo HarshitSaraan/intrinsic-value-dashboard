@@ -2,17 +2,6 @@
     "symbol": "PONNIERODE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 944500000.0,
-            "earnings": 45300000.0,
-            "ebitda": 136500000.0,
-            "profitMargin": 4.796188459502383,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 94700000.0,
             "ebitda": 129900000.0,
             "profitMargin": 6.2570201519656425,
-            "revenueYoY": 30.767236910316225,
-            "earningsYoY": 292.94605809128626
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 29.796738887647976,
             "revenueYoY": -5.198517734250927,
             "earningsYoY": 488.962472406181
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 918700000.0,
+            "earnings": -12300000.0,
+            "ebitda": 13500000.0,
+            "profitMargin": -1.3388483727005551,
+            "revenueYoY": 52.17823422229584,
+            "earningsYoY": 54.1044776119403
         }
     ],
     "annual": [

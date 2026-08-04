@@ -2,23 +2,12 @@
     "symbol": "SHANTIGEAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1532100000.0,
-            "earnings": 224600000.0,
-            "ebitda": 309700000.0,
-            "profitMargin": 14.659617518438745,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1348900000.0,
             "earnings": 226900000.0,
-            "ebitda": 305100000.0,
+            "ebitda": 342800000.0,
             "profitMargin": 16.8211134998888,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 161900000.0,
             "ebitda": 229900000.0,
             "profitMargin": 13.858928265707926,
-            "revenueYoY": -25.833280426639575,
-            "earningsYoY": -38.39421613394216
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.042931162102146,
             "revenueYoY": -11.820377259969977,
             "earningsYoY": -27.560106856634015
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1154900000.0,
+            "earnings": 98500000.0,
+            "ebitda": 193400000.0,
+            "profitMargin": 8.528876959044073,
+            "revenueYoY": -14.382089109644896,
+            "earningsYoY": -56.588805641251646
         }
     ],
     "annual": [

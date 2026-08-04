@@ -2,17 +2,6 @@
     "symbol": "SAIL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 293161400000.0,
-            "earnings": 12509800000.0,
-            "ebitda": 38454900000.0,
-            "profitMargin": 4.26720570989223,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3740300000.0,
             "ebitda": 25425100000.0,
             "profitMargin": 1.3664983402395638,
-            "revenueYoY": 11.766111022866152,
-            "earningsYoY": 163.60560997956165
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.956709220539445,
             "revenueYoY": 5.107596020485643,
             "earningsYoY": 46.722569505507686
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 262456700000.0,
+            "earnings": 16440500000.0,
+            "ebitda": 42400400000.0,
+            "profitMargin": 6.26408089410558,
+            "revenueYoY": 1.2495679305726153,
+            "earningsYoY": 120.80233151575386
         }
     ],
     "annual": [

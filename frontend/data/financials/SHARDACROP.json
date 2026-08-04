@@ -2,17 +2,6 @@
     "symbol": "SHARDACROP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 18285252000.0,
-            "earnings": 2035672000.0,
-            "ebitda": 3284090000.0,
-            "profitMargin": 11.132862702685202,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1451242000.0,
             "ebitda": 2622505000.0,
             "profitMargin": 11.260785001118132,
-            "revenueYoY": 38.676597593653376,
-            "earningsYoY": 365.91221378947233
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.43131012850256,
             "revenueYoY": 12.927101032022966,
             "earningsYoY": 56.528753158662106
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10737681000.0,
+            "earnings": 880375000.0,
+            "ebitda": 2205030000.0,
+            "profitMargin": 8.198930476701626,
+            "revenueYoY": 9.032512312469779,
+            "earningsYoY": -38.340842507646336
         }
     ],
     "annual": [

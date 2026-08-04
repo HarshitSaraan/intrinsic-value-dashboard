@@ -2,17 +2,6 @@
     "symbol": "SURYODAY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3047600000.0,
-            "earnings": -337800000.0,
-            "ebitda": null,
-            "profitMargin": -11.084131775823598,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 365600000.0,
             "ebitda": null,
             "profitMargin": 10.221141211663731,
-            "revenueYoY": 16.201026573971802,
-            "earningsYoY": 9.78978978978979
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.220720167137767,
             "revenueYoY": 33.49849061556635,
             "earningsYoY": 247.1876850207223
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4635900000.0,
+            "earnings": 751800000.0,
+            "ebitda": null,
+            "profitMargin": 16.21691580922798,
+            "revenueYoY": 30.29877174737907,
+            "earningsYoY": 113.09523809523809
         }
     ],
     "annual": [

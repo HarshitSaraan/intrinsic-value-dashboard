@@ -2,17 +2,6 @@
     "symbol": "ROUTE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11750000000.0,
-            "earnings": 565800000.0,
-            "ebitda": 1092700000.0,
-            "profitMargin": 4.815319148936171,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 977000000.0,
             "ebitda": 1592600000.0,
             "profitMargin": 8.825176593861219,
-            "revenueYoY": -6.481723954417591,
-            "earningsYoY": 18.452958292919497
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.666637191617296,
             "revenueYoY": -3.753191489361702,
             "earningsYoY": 93.21314952279958
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11515100000.0,
+            "earnings": 626100000.0,
+            "ebitda": 1165400000.0,
+            "profitMargin": 5.437208534880288,
+            "revenueYoY": 9.58099787786797,
+            "earningsYoY": 17.665852283405375
         }
     ],
     "annual": [

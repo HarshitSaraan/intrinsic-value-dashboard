@@ -2,17 +2,6 @@
     "symbol": "PSPPROJECT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6728873000.0,
-            "earnings": 64632000.0,
-            "ebitda": 375325000.0,
-            "profitMargin": 0.9605174596102498,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 178338000.0,
             "ebitda": 584104000.0,
             "profitMargin": 2.194136371152529,
-            "revenueYoY": 28.97184605578362,
-            "earningsYoY": 252.9279056420811
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.8913771319060118,
             "revenueYoY": 65.73953766106152,
             "earningsYoY": 226.36155464785244
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8534732000.0,
+            "earnings": 183427000.0,
+            "ebitda": 588502000.0,
+            "profitMargin": 2.1491828917416504,
+            "revenueYoY": 64.83874363245697,
+            "earningsYoY": 4232.239017477563
         }
     ],
     "annual": [

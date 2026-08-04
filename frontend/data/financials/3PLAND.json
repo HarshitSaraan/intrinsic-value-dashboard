@@ -2,17 +2,6 @@
     "symbol": "3PLAND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9100000.0,
-            "earnings": 3700000.0,
-            "ebitda": 4500000.0,
-            "profitMargin": 40.65934065934066,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4000000.0,
             "ebitda": 5500000.0,
             "profitMargin": 41.23711340206185,
-            "revenueYoY": 4.301075268817205,
-            "earningsYoY": 5.263157894736842
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 41.584158415841586,
             "revenueYoY": 10.989010989010989,
             "earningsYoY": 13.513513513513514
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10500000.0,
+            "earnings": 4600000.0,
+            "ebitda": 6400000.0,
+            "profitMargin": 43.80952380952381,
+            "revenueYoY": 15.384615384615385,
+            "earningsYoY": 24.324324324324326
         }
     ],
     "annual": [

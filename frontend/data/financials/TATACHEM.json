@@ -2,17 +2,6 @@
     "symbol": "TATACHEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 35090000000.0,
-            "earnings": -560000000.0,
-            "ebitda": 3380000000.0,
-            "profitMargin": -1.5958962667426617,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -930000000.0,
             "ebitda": 3660000000.0,
             "profitMargin": -2.619718309859155,
-            "revenueYoY": -1.1142061281337048,
-            "earningsYoY": -75.47169811320755
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -62.01279813845259,
             "revenueYoY": -2.023368481048732,
             "earningsYoY": -3707.142857142857
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 42550000000.0,
+            "earnings": -170000000.0,
+            "ebitda": 5940000000.0,
+            "profitMargin": -0.3995299647473561,
+            "revenueYoY": 14.412476472169939,
+            "earningsYoY": -106.74603174603175
         }
     ],
     "annual": [

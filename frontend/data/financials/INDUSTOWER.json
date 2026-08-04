@@ -2,17 +2,6 @@
     "symbol": "INDUSTOWER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 77271000000.0,
-            "earnings": 17791000000.0,
-            "ebitda": 45351000000.0,
-            "profitMargin": 23.024161716556016,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 17759000000.0,
             "ebitda": 47052000000.0,
             "profitMargin": 21.800081018376442,
-            "revenueYoY": 7.935182976919204,
-            "earningsYoY": -55.637989608313354
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.131835575854833,
             "revenueYoY": 4.838814044078632,
             "earningsYoY": 0.7756730931369794
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 84311000000.0,
+            "earnings": 17458000000.0,
+            "ebitda": 47265000000.0,
+            "profitMargin": 20.706669355125666,
+            "revenueYoY": 4.635375297855441,
+            "earningsYoY": 0.5181943804698296
         }
     ],
     "annual": [
@@ -75,7 +75,7 @@
             "annualLabel": "FY25",
             "revenue": 301228000000.0,
             "earnings": 99317000000.0,
-            "ebitda": 214137000000.0,
+            "ebitda": 214777000000.0,
             "profitMargin": 32.97070657442203,
             "revenueYoY": 5.322265966448256,
             "earningsYoY": 64.53563500215367
@@ -86,7 +86,7 @@
             "annualLabel": "FY26",
             "revenue": 324931000000.0,
             "earnings": 71449000000.0,
-            "ebitda": 186316000000.0,
+            "ebitda": 186809000000.0,
             "profitMargin": 21.98897612108417,
             "revenueYoY": 7.868790417889439,
             "earningsYoY": -28.05964739168521

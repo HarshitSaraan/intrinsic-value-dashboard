@@ -2,17 +2,6 @@
     "symbol": "LORDSCHLO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1001969000.0,
-            "earnings": 104501000.0,
-            "ebitda": 206823000.0,
-            "profitMargin": 10.429564188113606,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 43893000.0,
             "ebitda": 137164000.0,
             "profitMargin": 4.495230097241496,
-            "revenueYoY": 22.39447865756972,
-            "earningsYoY": 68.63762102351313
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1063464000.0,
+            "earnings": 149536000.0,
+            "ebitda": 228291000.0,
+            "profitMargin": 14.06121880947545,
+            "revenueYoY": 6.137415429020259,
+            "earningsYoY": 43.09528138486713
         }
     ],
     "annual": [

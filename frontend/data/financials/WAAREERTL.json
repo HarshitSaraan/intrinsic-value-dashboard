@@ -2,17 +2,6 @@
     "symbol": "WAAREERTL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4765799000.0,
-            "earnings": 938135000.0,
-            "ebitda": 1271709000.0,
-            "profitMargin": 19.684737018913303,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1202180000.0,
             "ebitda": 1639208000.0,
             "profitMargin": 14.125666947140198,
-            "revenueYoY": 136.17796946944503,
-            "earningsYoY": 124.68092423106899
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.127212849460244,
             "revenueYoY": 131.31409864327054,
             "earningsYoY": 66.00798392555443
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9242506000.0,
+            "earnings": 1159001000.0,
+            "ebitda": 1787588000.0,
+            "profitMargin": 12.539899892951112,
+            "revenueYoY": 53.22817612748841,
+            "earningsYoY": 34.075355143214104
         }
     ],
     "annual": [

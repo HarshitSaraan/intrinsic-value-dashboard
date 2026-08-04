@@ -2,17 +2,6 @@
     "symbol": "RAINBOW",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3529290000.0,
-            "earnings": 534990000.0,
-            "ebitda": 1236390000.0,
-            "profitMargin": 15.158572970767493,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 770430000.0,
             "ebitda": 1482280000.0,
             "profitMargin": 16.752083600600997,
-            "revenueYoY": 24.26163244683294,
-            "earningsYoY": 36.75867577882311
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4699850000.0,
+            "earnings": 605720000.0,
+            "ebitda": 1473550000.0,
+            "profitMargin": 12.888070895879656,
+            "revenueYoY": 33.1670109285437,
+            "earningsYoY": 13.22080786556758
         }
     ],
     "annual": [

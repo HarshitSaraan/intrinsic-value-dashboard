@@ -2,24 +2,13 @@
     "symbol": "TRIVENI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16292900000.0,
-            "earnings": 1830000000.0,
-            "ebitda": 3173900000.0,
-            "profitMargin": 11.23188628175463,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 15982200000.0,
-            "earnings": 44100000.0,
-            "ebitda": 763800000.0,
-            "profitMargin": 0.2759319743214326,
+            "revenue": 15479300000.0,
+            "earnings": 21000000.0,
+            "ebitda": 599800000.0,
+            "profitMargin": 0.13566504945314065,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 841200000.0,
             "ebitda": 1516300000.0,
             "profitMargin": 5.690935905935839,
-            "revenueYoY": 16.54314368613599,
-            "earningsYoY": 74.81296758104739
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.104258677170785,
             "revenueYoY": -7.4455744526757055,
             "earningsYoY": -8.497267759562842
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15805200000.0,
+            "earnings": 36500000.0,
+            "ebitda": 678300000.0,
+            "profitMargin": 0.23093665375952221,
+            "revenueYoY": 2.10539236270374,
+            "earningsYoY": 73.80952380952381
         }
     ],
     "annual": [

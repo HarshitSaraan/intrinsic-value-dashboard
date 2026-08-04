@@ -1,6 +1,29 @@
 {
     "symbol": "VOGL",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 23030000000.0,
+            "earnings": -1030000000.0,
+            "ebitda": 1610000000.0,
+            "profitMargin": -4.472427268779852,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 25070000000.0,
+            "earnings": 9450000000.0,
+            "ebitda": -2170000000.0,
+            "profitMargin": 37.694455524531314,
+            "revenueYoY": 8.858011289622231,
+            "earningsYoY": 1017.4757281553399
+        }
+    ],
     "annual": [
         {
             "date": "2023-03-31",

@@ -2,17 +2,6 @@
     "symbol": "WIPRO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 221346000000.0,
-            "earnings": 33304000000.0,
-            "ebitda": 51701000000.0,
-            "profitMargin": 15.046126878281063,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 35018000000.0,
             "ebitda": 55805000000.0,
             "profitMargin": 14.44857507127738,
-            "revenueYoY": 7.696785488930955,
-            "earningsYoY": -1.8993724787090989
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 244786000000.0,
+            "earnings": 33520000000.0,
+            "ebitda": 53835000000.0,
+            "profitMargin": 13.693593587868587,
+            "revenueYoY": 10.58975540556414,
+            "earningsYoY": 0.6485707422531828
         }
     ],
     "annual": [

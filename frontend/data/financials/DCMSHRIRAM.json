@@ -2,17 +2,6 @@
     "symbol": "DCMSHRIRAM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 28403600000.0,
-            "earnings": 1789100000.0,
-            "ebitda": 4265100000.0,
-            "profitMargin": 6.298849441620076,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2121100000.0,
             "ebitda": 5053700000.0,
             "profitMargin": 5.603030407092082,
-            "revenueYoY": 13.005567247272348,
-            "earningsYoY": -19.08522163729305
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.665132002169553,
             "revenueYoY": 11.646411018321622,
             "earningsYoY": 106.76317701637694
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 35481200000.0,
+            "earnings": 6927500000.0,
+            "ebitda": 4436000000.0,
+            "profitMargin": 19.524424202112666,
+            "revenueYoY": 9.218963070586678,
+            "earningsYoY": 510.99841241841597
         }
     ],
     "annual": [
@@ -75,7 +75,7 @@
             "annualLabel": "FY25",
             "revenue": 119954900000.0,
             "earnings": 6042700000.0,
-            "ebitda": 14724000000.0,
+            "ebitda": 14625600000.0,
             "profitMargin": 5.037476584949844,
             "revenueYoY": 10.403658680253876,
             "earningsYoY": 35.15320957280251
@@ -86,7 +86,7 @@
             "annualLabel": "FY26",
             "revenue": 134605300000.0,
             "earnings": 8534400000.0,
-            "ebitda": 16702800000.0,
+            "ebitda": 16611700000.0,
             "profitMargin": 6.340314980167943,
             "revenueYoY": 12.213256815686563,
             "earningsYoY": 41.23487844837573

@@ -2,17 +2,6 @@
     "symbol": "CIPLA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 65977200000.0,
-            "earnings": 12218400000.0,
-            "ebitda": 18270500000.0,
-            "profitMargin": 18.51912478856332,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6758000000.0,
             "ebitda": 11854900000.0,
             "profitMargin": 9.705628488992485,
-            "revenueYoY": 0.01967938404964376,
-            "earningsYoY": -56.969392108296034
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.580100429128779,
             "revenueYoY": -2.022820004486398,
             "earningsYoY": -54.60616774700452
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 70770200000.0,
+            "earnings": 7890500000.0,
+            "ebitda": 14032000000.0,
+            "profitMargin": 11.14946686599727,
+            "revenueYoY": 3.5099984788738983,
+            "earningsYoY": -39.19252169356206
         }
     ],
     "annual": [

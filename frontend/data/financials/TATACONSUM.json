@@ -2,17 +2,6 @@
     "symbol": "TATACONSUM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 46092200000.0,
-            "earnings": 3448500000.0,
-            "ebitda": 7227800000.0,
-            "profitMargin": 7.4817431148871165,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3846100000.0,
             "ebitda": 7308200000.0,
             "profitMargin": 7.5236697965571215,
-            "revenueYoY": 15.042893535813626,
-            "earningsYoY": 37.912363740676994
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.712721905470018,
             "revenueYoY": 17.8858895865244,
             "earningsYoY": 21.525300855444396
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 53488800000.0,
+            "earnings": 4269800000.0,
+            "ebitda": 7960800000.0,
+            "profitMargin": 7.982605704371756,
+            "revenueYoY": 11.926778282076874,
+            "earningsYoY": 27.780936705072573
         }
     ],
     "annual": [

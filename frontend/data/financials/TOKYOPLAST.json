@@ -2,17 +2,6 @@
     "symbol": "TOKYOPLAST",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 171561000.0,
-            "earnings": 4650000.0,
-            "ebitda": 24777000.0,
-            "profitMargin": 2.7104062112018465,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -1331000.0,
             "ebitda": 15391000.0,
             "profitMargin": -0.7763649090060663,
-            "revenueYoY": -10.022253012554058,
-            "earningsYoY": -263.9162561576355
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.19191089039658668,
             "revenueYoY": 33.33566486555802,
             "earningsYoY": -90.55913978494624
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 198283000.0,
+            "earnings": -2036000.0,
+            "ebitda": 10984000.0,
+            "profitMargin": -1.026815208565535,
+            "revenueYoY": 8.903022414086657,
+            "earningsYoY": -345.30120481927713
         }
     ],
     "annual": [

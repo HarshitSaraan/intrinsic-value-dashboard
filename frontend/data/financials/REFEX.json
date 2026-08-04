@@ -2,24 +2,13 @@
     "symbol": "REFEX",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5944746000.0,
-            "earnings": 483167000.0,
-            "ebitda": 731169000.0,
-            "profitMargin": 8.1276306843051,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 3832494000.0,
-            "earnings": 211721000.0,
-            "ebitda": 484927000.0,
-            "profitMargin": 5.524366117729082,
+            "revenue": 3518634000.0,
+            "earnings": 211722000.0,
+            "ebitda": 425860000.0,
+            "profitMargin": 6.0171646155866165,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 539199000.0,
             "ebitda": 955610000.0,
             "profitMargin": 9.360895481033214,
-            "revenueYoY": -16.0383107907289,
-            "earningsYoY": 7.72496518711054
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.722029090972152,
             "revenueYoY": 57.141465758166966,
             "earningsYoY": 87.96792827324714
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9163051000.0,
+            "earnings": 637973000.0,
+            "ebitda": 1134699000.0,
+            "profitMargin": 6.9624516986754745,
+            "revenueYoY": 160.41500764217022,
+            "earningsYoY": 201.32579514646568
         }
     ],
     "annual": [

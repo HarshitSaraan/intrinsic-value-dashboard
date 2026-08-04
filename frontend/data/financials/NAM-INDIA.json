@@ -2,17 +2,6 @@
     "symbol": "NAM-INDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5665400000.0,
-            "earnings": 2986000000.0,
-            "ebitda": 3882100000.0,
-            "profitMargin": 52.705898965651144,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4039000000.0,
             "ebitda": 5453900000.0,
             "profitMargin": 57.268035390199636,
-            "revenueYoY": 19.968021228461108,
-            "earningsYoY": 36.74837486457205
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 52.078567270856745,
             "revenueYoY": 30.393264376743033,
             "earningsYoY": 28.84125920964501
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7668700000.0,
+            "earnings": 5037000000.0,
+            "ebitda": 6780200000.0,
+            "profitMargin": 65.68257983752135,
+            "revenueYoY": 26.418951220718416,
+            "earningsYoY": 27.158436837322025
         }
     ],
     "annual": [

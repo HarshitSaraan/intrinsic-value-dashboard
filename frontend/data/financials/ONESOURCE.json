@@ -2,17 +2,6 @@
     "symbol": "ONESOURCE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3272700000.0,
-            "earnings": -1860000.0,
-            "ebitda": 908820000.0,
-            "profitMargin": -0.05683380694839124,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 45970000.0,
             "ebitda": 940470000.0,
             "profitMargin": 1.0735211353122367,
-            "revenueYoY": 0.5315140402814394,
-            "earningsYoY": -95.33308968345821
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4490230000.0,
+            "earnings": 249970000.0,
+            "ebitda": 1228490000.0,
+            "profitMargin": 5.566975411059122,
+            "revenueYoY": 37.202615577352034,
+            "earningsYoY": 13539.247311827958
         }
     ],
     "annual": [

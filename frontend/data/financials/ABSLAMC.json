@@ -2,17 +2,6 @@
     "symbol": "ABSLAMC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4288400000.0,
-            "earnings": 2280800000.0,
-            "ebitda": 3158900000.0,
-            "profitMargin": 53.18533718869508,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2695200000.0,
             "ebitda": 3712000000.0,
             "profitMargin": 56.37550200803213,
-            "revenueYoY": 7.407157781222619,
-            "earningsYoY": 20.06949703746603
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 40.83320603190537,
             "revenueYoY": 6.853371886950844,
             "earningsYoY": -17.962995440196423
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4629600000.0,
+            "earnings": 3094900000.0,
+            "ebitda": 4200200000.0,
+            "profitMargin": 66.85026784171419,
+            "revenueYoY": 3.48018507342587,
+            "earningsYoY": 11.684890476706002
         }
     ],
     "annual": [

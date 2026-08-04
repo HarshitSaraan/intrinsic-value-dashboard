@@ -2,17 +2,6 @@
     "symbol": "FEDERALBNK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 36988200000.0,
-            "earnings": 10909400000.0,
-            "ebitda": null,
-            "profitMargin": 29.494271145933027,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 10940700000.0,
             "ebitda": null,
             "profitMargin": 26.669348056601706,
-            "revenueYoY": 13.130825657713308,
-            "earningsYoY": 15.878832812582747
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 28.345463039099013,
             "revenueYoY": 27.90051962517776,
             "earningsYoY": 22.91876730159312
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 44055300000.0,
+            "earnings": 12560900000.0,
+            "ebitda": null,
+            "profitMargin": 28.511666019752447,
+            "revenueYoY": 16.680836187101235,
+            "earningsYoY": 36.78129628016378
         }
     ],
     "annual": [
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 143989800000.0,
-            "earnings": 41588500000.0,
+            "revenue": 142328950000.0,
+            "earnings": 41588458000.0,
             "ebitda": null,
-            "profitMargin": 28.882948653307388,
-            "revenueYoY": 18.704800306286675,
-            "earningsYoY": 7.17504431728091
+            "profitMargin": 29.21995700804369,
+            "revenueYoY": 17.335600074126507,
+            "earningsYoY": 7.174936081786451
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 165008600000.0,
-            "earnings": 43453000000.0,
+            "revenue": 162893302000.0,
+            "earnings": 43453023000.0,
             "ebitda": null,
-            "profitMargin": 26.33377896667204,
-            "revenueYoY": 14.59742287300906,
-            "earningsYoY": 4.483210502903447
+            "profitMargin": 26.675757975610313,
+            "revenueYoY": 14.448467441093326,
+            "earningsYoY": 4.483371323841822
         }
     ]
 }

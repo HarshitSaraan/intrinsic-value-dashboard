@@ -2,17 +2,6 @@
     "symbol": "TI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3705175000.0,
-            "earnings": 885075000.0,
-            "ebitda": 987193000.0,
-            "profitMargin": 23.88753567645253,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -149065000.0,
             "ebitda": 990387000.0,
             "profitMargin": -1.569942951665473,
-            "revenueYoY": 147.52263108432385,
-            "earningsYoY": -119.27201643483534
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10460250000.0,
+            "earnings": 315913000.0,
+            "ebitda": 1433446000.0,
+            "profitMargin": 3.020128582012858,
+            "revenueYoY": 165.54283298998905,
+            "earningsYoY": -64.30664068016834
         }
     ],
     "annual": [

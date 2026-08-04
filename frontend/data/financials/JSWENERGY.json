@@ -2,17 +2,6 @@
     "symbol": "JSWENERGY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 31893900000.0,
-            "earnings": 4080500000.0,
-            "ebitda": 15178500000.0,
-            "profitMargin": 12.793982548386996,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4199400000.0,
             "ebitda": 21407000000.0,
             "profitMargin": 10.288209007878955,
-            "revenueYoY": 67.3620678344158,
-            "earningsYoY": 150.21748197580885
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.259717510858982,
             "revenueYoY": 41.048288230664795,
             "earningsYoY": -8.940080872442103
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 52071300000.0,
+            "earnings": 4709700000.0,
+            "ebitda": 31047300000.0,
+            "profitMargin": 9.044713690651088,
+            "revenueYoY": 1.2396541567104835,
+            "earningsYoY": -36.62261815050059
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "VMM",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 31403190000.0,
-            "earnings": 2060730000.0,
-            "ebitda": 4761830000.0,
-            "profitMargin": 6.562167728819906,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1679190000.0,
             "ebitda": 4492710000.0,
             "profitMargin": 5.392210854939608,
-            "revenueYoY": 22.2226277859283,
-            "earningsYoY": 45.874452706928906
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 37270100000.0,
+            "earnings": 2587700000.0,
+            "ebitda": 5777700000.0,
+            "profitMargin": 6.943099159916394,
+            "revenueYoY": 18.68249095633566,
+            "earningsYoY": 25.573834134032126
         }
     ],
     "annual": [

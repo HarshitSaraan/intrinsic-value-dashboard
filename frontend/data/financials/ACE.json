@@ -2,17 +2,6 @@
     "symbol": "ACE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9609900000.0,
-            "earnings": 1185600000.0,
-            "ebitda": 1720700000.0,
-            "profitMargin": 12.33727718290513,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1164100000.0,
             "ebitda": 1654700000.0,
             "profitMargin": 13.621099189122779,
-            "revenueYoY": -2.340277222292055,
-            "earningsYoY": 4.235315186246418
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.773295515255127,
             "revenueYoY": 7.128065848760133,
             "earningsYoY": -6.452429149797571
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7856800000.0,
+            "earnings": 1194900000.0,
+            "ebitda": 1725000000.0,
+            "profitMargin": 15.20848182466144,
+            "revenueYoY": 20.48828364617838,
+            "earningsYoY": 22.277936962750715
         }
     ],
     "annual": [

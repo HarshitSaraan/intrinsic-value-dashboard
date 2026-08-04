@@ -2,17 +2,6 @@
     "symbol": "MOIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3480598000.0,
-            "earnings": 515058000.0,
-            "ebitda": 413595000.0,
-            "profitMargin": 14.797974371070719,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 926130000.0,
             "ebitda": 909607000.0,
             "profitMargin": 20.835751831084018,
-            "revenueYoY": 2.5613407963539556,
-            "earningsYoY": -19.920208143646093
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3708833000.0,
+            "earnings": 876161000.0,
+            "ebitda": 913733000.0,
+            "profitMargin": 23.623630398025472,
+            "revenueYoY": 6.5573502024652095,
+            "earningsYoY": 70.10919158619029
         }
     ],
     "annual": [

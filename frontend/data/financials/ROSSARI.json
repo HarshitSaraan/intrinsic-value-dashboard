@@ -2,17 +2,6 @@
     "symbol": "ROSSARI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5795620000.0,
-            "earnings": 344440000.0,
-            "ebitda": 714270000.0,
-            "profitMargin": 5.943108761443987,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 327740000.0,
             "ebitda": 697800000.0,
             "profitMargin": 5.634369412735524,
-            "revenueYoY": 13.447402244061701,
-            "earningsYoY": 3.38149012680588
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.711863119869404,
             "revenueYoY": 18.16889306062164,
             "earningsYoY": 33.45430263616305
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6972000000.0,
+            "earnings": 350950000.0,
+            "ebitda": 842640000.0,
+            "profitMargin": 5.0337062535857715,
+            "revenueYoY": 28.228707634132526,
+            "earningsYoY": 4.461840695320872
         }
     ],
     "annual": [

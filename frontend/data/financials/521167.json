@@ -2,13 +2,13 @@
     "symbol": "521167",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 0.0,
-            "earnings": -207672000.0,
-            "ebitda": -207553000.0,
-            "profitMargin": null,
+            "revenue": 27577186000.0,
+            "earnings": 505156000.0,
+            "ebitda": 757133000.0,
+            "profitMargin": 1.8317895089078342,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -32,7 +32,7 @@
             "ebitda": 948313000.0,
             "profitMargin": 1.78195261139579,
             "revenueYoY": null,
-            "earningsYoY": 157913.3555926544
+            "earningsYoY": null
         },
         {
             "date": "2025-12-31",
@@ -53,7 +53,7 @@
             "annualLabel": "FY22",
             "revenue": 0.0,
             "earnings": -2316000.0,
-            "ebitda": -2296000.0,
+            "ebitda": -2339000.0,
             "profitMargin": null,
             "revenueYoY": null,
             "earningsYoY": null
@@ -64,7 +64,7 @@
             "annualLabel": "FY23",
             "revenue": 0.0,
             "earnings": -913000.0,
-            "ebitda": -911000.0,
+            "ebitda": -995000.0,
             "profitMargin": null,
             "revenueYoY": null,
             "earningsYoY": 60.578583765112256
@@ -75,10 +75,21 @@
             "annualLabel": "FY24",
             "revenue": 0.0,
             "earnings": -1172000.0,
-            "ebitda": -1172000.0,
+            "ebitda": -1246000.0,
             "profitMargin": null,
             "revenueYoY": null,
             "earningsYoY": -28.368017524644028
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 27577186000.0,
+            "earnings": 296912000.0,
+            "ebitda": 548889000.0,
+            "profitMargin": 1.0766580752655475,
+            "revenueYoY": null,
+            "earningsYoY": 25433.788395904437
         }
     ]
 }

@@ -2,17 +2,6 @@
     "symbol": "BEL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 91495900000.0,
-            "earnings": 21270400000.0,
-            "ebitda": 30107000000.0,
-            "profitMargin": 23.247380483715663,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 15791000000.0,
             "ebitda": 22657800000.0,
             "profitMargin": 22.073428992780112,
-            "revenueYoY": 23.968710847402996,
-            "earningsYoY": 20.454632136999887
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.76375602356317,
             "revenueYoY": 11.747411632652392,
             "earningsYoY": 4.615804122160373
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 55469800000.0,
+            "earnings": 10543400000.0,
+            "ebitda": 15579600000.0,
+            "profitMargin": 19.007459915124986,
+            "revenueYoY": 24.939298247194657,
+            "earningsYoY": 8.704931385386274
         }
     ],
     "annual": [

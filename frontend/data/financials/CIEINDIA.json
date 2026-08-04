@@ -2,17 +2,6 @@
     "symbol": "CIEINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 22726280000.0,
-            "earnings": 2063960000.0,
-            "ebitda": 3720980000.0,
-            "profitMargin": 9.081820693927911,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2043050000.0,
             "ebitda": 3593640000.0,
             "profitMargin": 8.53761683043613,
-            "revenueYoY": 13.414861292987373,
-            "earningsYoY": 10.445881220875544
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.547112657506723,
             "revenueYoY": 14.930908182069395,
             "earningsYoY": 20.819201922517877
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 26205510000.0,
+            "earnings": 2356150000.0,
+            "ebitda": 4192630000.0,
+            "profitMargin": 8.991048065845694,
+            "revenueYoY": 10.618259825648249,
+            "earningsYoY": 15.76255447519567
         }
     ],
     "annual": [

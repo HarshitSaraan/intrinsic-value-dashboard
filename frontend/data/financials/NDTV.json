@@ -2,17 +2,6 @@
     "symbol": "NDTV",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1270510000.0,
-            "earnings": -608900000.0,
-            "ebitda": -483720000.0,
-            "profitMargin": -47.92563616185626,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -802500000.0,
             "ebitda": -649800000.0,
             "profitMargin": -53.35416528156372,
-            "revenueYoY": 13.31173723067651,
-            "earningsYoY": -44.10127491470641
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -66.13092904743237,
             "revenueYoY": 16.45559657145556,
             "earningsYoY": -60.69305304647725
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1172300000.0,
+            "earnings": -816400000.0,
+            "ebitda": -652900000.0,
+            "profitMargin": -69.64087690864113,
+            "revenueYoY": 8.89921040408732,
+            "earningsYoY": -15.99886331344132
         }
     ],
     "annual": [

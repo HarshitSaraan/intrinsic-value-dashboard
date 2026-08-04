@@ -2,17 +2,6 @@
     "symbol": "CYIENT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 19092000000.0,
-            "earnings": 1704000000.0,
-            "ebitda": 3395000000.0,
-            "profitMargin": 8.925204274041484,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 918000000.0,
             "ebitda": 2235000000.0,
             "profitMargin": 4.966188801731134,
-            "revenueYoY": -4.043812292358804,
-            "earningsYoY": -24.938675388389207
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.8439462348850486,
             "revenueYoY": 0.9270898805782527,
             "earningsYoY": -67.84037558685446
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20757000000.0,
+            "earnings": 1041000000.0,
+            "ebitda": 2695000000.0,
+            "profitMargin": 5.015175603410897,
+            "revenueYoY": 21.25832457062741,
+            "earningsYoY": -32.314694408322495
         }
     ],
     "annual": [

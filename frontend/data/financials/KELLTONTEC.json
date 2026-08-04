@@ -2,17 +2,6 @@
     "symbol": "KELLTONTEC",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2954744000.0,
-            "earnings": 226510000.0,
-            "ebitda": 357594000.0,
-            "profitMargin": 7.665977154027558,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 195155000.0,
             "ebitda": 306822000.0,
             "profitMargin": 6.217261849768805,
-            "revenueYoY": 9.624953899797719,
-            "earningsYoY": 1.6654684878983943
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3156196000.0,
+            "earnings": 223181000.0,
+            "ebitda": 350851000.0,
+            "profitMargin": 7.071202168686609,
+            "revenueYoY": 6.817917220578162,
+            "earningsYoY": -1.4696922873162332
         }
     ],
     "annual": [

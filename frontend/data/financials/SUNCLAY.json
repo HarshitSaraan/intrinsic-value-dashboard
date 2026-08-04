@@ -2,17 +2,6 @@
     "symbol": "SUNCLAY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5116400000.0,
-            "earnings": -577600000.0,
-            "ebitda": 199900000.0,
-            "profitMargin": -11.289187710108669,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4264100000.0,
             "ebitda": 5693600000.0,
             "profitMargin": 82.30105576035976,
-            "revenueYoY": -11.723914673209295,
-            "earningsYoY": 197.04632532218739
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5916500000.0,
+            "earnings": -593300000.0,
+            "ebitda": 157700000.0,
+            "profitMargin": -10.027888109524213,
+            "revenueYoY": 15.637948557579548,
+            "earningsYoY": -2.71814404432133
         }
     ],
     "annual": [

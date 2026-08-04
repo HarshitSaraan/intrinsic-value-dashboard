@@ -2,17 +2,6 @@
     "symbol": "HUHTAMAKI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5930400000.0,
-            "earnings": 261500000.0,
-            "ebitda": 504200000.0,
-            "profitMargin": 4.409483340078241,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 303000000.0,
             "ebitda": 621400000.0,
             "profitMargin": 5.057333133042912,
-            "revenueYoY": -0.34928396786587496,
-            "earningsYoY": 159.19589392643286
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.312450516314876,
             "revenueYoY": 0.09948738702279779,
             "earningsYoY": -2.1032504780114722
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7286000000.0,
+            "earnings": 437300000.0,
+            "ebitda": 764400000.0,
+            "profitMargin": 6.001921493274773,
+            "revenueYoY": 23.08679933777072,
+            "earningsYoY": 75.34081796311148
         }
     ],
     "annual": [

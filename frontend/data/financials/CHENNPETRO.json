@@ -2,17 +2,6 @@
     "symbol": "CHENNPETRO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 172491200000.0,
-            "earnings": 4699300000.0,
-            "ebitda": 6674900000.0,
-            "profitMargin": 2.724370866455796,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 10015900000.0,
             "ebitda": 13640500000.0,
             "profitMargin": 6.386400198429272,
-            "revenueYoY": 21.336426993135973,
-            "earningsYoY": 4719.971126082772
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.454676488287076,
             "revenueYoY": -2.503316111198716,
             "earningsYoY": 202.56633966761007
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 273692700000.0,
+            "earnings": 10313500000.0,
+            "ebitda": 14323800000.0,
+            "profitMargin": 3.768277341704766,
+            "revenueYoY": 84.77481108516407,
+            "earningsYoY": 2671.945137157107
         }
     ],
     "annual": [

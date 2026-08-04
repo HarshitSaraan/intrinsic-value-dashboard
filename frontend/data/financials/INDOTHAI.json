@@ -2,17 +2,6 @@
     "symbol": "INDOTHAI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 28744000.0,
-            "earnings": -25766000.0,
-            "ebitda": -19090000.0,
-            "profitMargin": -89.63957695519065,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 170023000.0,
             "ebitda": 233755000.0,
             "profitMargin": 623.5257444623735,
-            "revenueYoY": 6.035153212008089,
-            "earningsYoY": 1679.4139194139195
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 883.8492961074912,
             "revenueYoY": 3.0510715279710547,
             "earningsYoY": 1116.0870915159512
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 31450000.0,
+            "earnings": 110261000.0,
+            "ebitda": 159833000.0,
+            "profitMargin": 350.59141494435613,
+            "revenueYoY": 14.131223689940484,
+            "earningsYoY": 28.626256970206015
         }
     ],
     "annual": [

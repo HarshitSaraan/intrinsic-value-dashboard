@@ -2,17 +2,6 @@
     "symbol": "SYNGENE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10180000000.0,
-            "earnings": 1833000000.0,
-            "ebitda": 3625000000.0,
-            "profitMargin": 18.005893909626717,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 150000000.0,
             "ebitda": 1540000000.0,
             "profitMargin": 1.6355904481517827,
-            "revenueYoY": -2.818692381053301,
-            "earningsYoY": -88.558352402746
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.26917510853835,
             "revenueYoY": 1.8172888015717092,
             "earningsYoY": -19.312602291325696
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7360000000.0,
+            "earnings": -90000000.0,
+            "ebitda": 1026000000.0,
+            "profitMargin": -1.2228260869565217,
+            "revenueYoY": -15.837621497998859,
+            "earningsYoY": -110.38062283737024
         }
     ],
     "annual": [
