@@ -1,5 +1,95 @@
 {
     "symbol": "SHRENIK",
-    "quarterly": [],
-    "annual": []
+    "quarterly": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 51545071.0,
+            "earnings": 776701.0,
+            "ebitda": 1392894.0,
+            "profitMargin": 1.5068385491214087,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 58263000.0,
+            "earnings": -716000.0,
+            "ebitda": -716000.0,
+            "profitMargin": -1.2289102861164032,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 85115000.0,
+            "earnings": 2221000.0,
+            "ebitda": 2221000.0,
+            "profitMargin": 2.609410797156788,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 91852000.0,
+            "earnings": 10705000.0,
+            "ebitda": 10705000.0,
+            "profitMargin": 11.654618299002744,
+            "revenueYoY": 97.63318702125828,
+            "earningsYoY": 1726.8996960486322
+        }
+    ],
+    "annual": [
+        {
+            "date": "2022-03-31",
+            "quarterLabel": "Q4 FY22",
+            "annualLabel": "FY22",
+            "revenue": 636161344.0,
+            "earnings": -143885228.0,
+            "ebitda": 36659812.0,
+            "profitMargin": -22.617725732168974,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 479193140.0,
+            "earnings": 2294140.0,
+            "ebitda": 41030344.0,
+            "profitMargin": 0.4787505931324476,
+            "revenueYoY": -24.674275713300805,
+            "earningsYoY": 101.59442357765872
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 330210858.0,
+            "earnings": -2355138230.0,
+            "ebitda": -2344020966.0,
+            "profitMargin": -713.2225282549612,
+            "revenueYoY": -31.090236809316597,
+            "earningsYoY": -102758.87129817708
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 178895071.0,
+            "earnings": -894299.0,
+            "ebitda": -278106.0,
+            "profitMargin": -0.4999014198663975,
+            "revenueYoY": -45.82398892528241,
+            "earningsYoY": 99.96202774900394
+        }
+    ]
 }

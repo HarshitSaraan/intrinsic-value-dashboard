@@ -2,24 +2,13 @@
     "symbol": "ORIENTCEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8251878000.0,
-            "earnings": 420700000.0,
-            "ebitda": 1106790000.0,
-            "profitMargin": 5.098233396082685,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 8664757000.0,
-            "earnings": 2053704000.0,
-            "ebitda": 1847784000.0,
-            "profitMargin": 23.70180721744418,
+            "revenue": 8660000000.0,
+            "earnings": 2050000000.0,
+            "ebitda": 1840000000.0,
+            "profitMargin": 23.67205542725173,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 277994000.0,
             "ebitda": 860915000.0,
             "profitMargin": 4.370298683348362,
-            "revenueYoY": -1.1275620864825915,
-            "earningsYoY": 174.1260809971305
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.563840142392303,
             "revenueYoY": -21.56621801728043,
             "earningsYoY": 31.750415973377706
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6040000000.0,
+            "earnings": 770000000.0,
+            "ebitda": 1490000000.0,
+            "profitMargin": 12.748344370860929,
+            "revenueYoY": -30.2540415704388,
+            "earningsYoY": -62.4390243902439
         }
     ],
     "annual": [

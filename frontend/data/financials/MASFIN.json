@@ -2,23 +2,12 @@
     "symbol": "MASFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3979000000.0,
-            "earnings": 824700000.0,
-            "ebitda": 1162400000.0,
-            "profitMargin": 20.72631314400603,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 4192400000.0,
             "earnings": 855500000.0,
-            "ebitda": 1130600000.0,
+            "ebitda": 1139400000.0,
             "profitMargin": 20.405972712527433,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 922000000.0,
             "ebitda": 1103500000.0,
             "profitMargin": 20.76670120275688,
-            "revenueYoY": 19.13808833789513,
-            "earningsYoY": 16.018623379891782
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.905004673294247,
             "revenueYoY": 18.31113345061573,
             "earningsYoY": 25.039408269673817
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5041300000.0,
+            "earnings": 1084600000.0,
+            "ebitda": 1541300000.0,
+            "profitMargin": 21.514291948505345,
+            "revenueYoY": 20.24854498616544,
+            "earningsYoY": 26.779661016949152
         }
     ],
     "annual": [

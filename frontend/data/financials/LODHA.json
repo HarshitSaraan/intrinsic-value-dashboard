@@ -2,17 +2,6 @@
     "symbol": "LODHA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 42243000000.0,
-            "earnings": 9217000000.0,
-            "ebitda": 14160000000.0,
-            "profitMargin": 21.81899959756646,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 9569000000.0,
             "ebitda": 15256000000.0,
             "profitMargin": 20.47940074906367,
-            "revenueYoY": 14.43791329904482,
-            "earningsYoY": 1.3235916984328675
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.38326084650472,
             "revenueYoY": 11.580616906943163,
             "earningsYoY": 9.35228382336986
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 49967000000.0,
+            "earnings": 13721000000.0,
+            "ebitda": 20242000000.0,
+            "profitMargin": 27.460123681629877,
+            "revenueYoY": 43.10221382134777,
+            "earningsYoY": 103.36445827775307
         }
     ],
     "annual": [

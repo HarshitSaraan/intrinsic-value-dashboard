@@ -1,51 +1,6 @@
 {
     "symbol": "INDRAMEDCO",
-    "quarterly": [
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3337500000.0,
-            "earnings": 410100000.0,
-            "ebitda": 676700000.0,
-            "profitMargin": 12.287640449438202,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3650600000.0,
-            "earnings": 514600000.0,
-            "ebitda": 800500000.0,
-            "profitMargin": 14.096312934860023,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-12-31",
-            "quarterLabel": "Q3 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3716100000.0,
-            "earnings": 410000000.0,
-            "ebitda": 691000000.0,
-            "profitMargin": 11.033072306988508,
-            "revenueYoY": 14.36617117533007,
-            "earningsYoY": 24.961901859189272
-        },
-        {
-            "date": "2026-03-31",
-            "quarterLabel": "Q4 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3648100000.0,
-            "earnings": 417000000.0,
-            "ebitda": 678400000.0,
-            "profitMargin": 11.430607713604342,
-            "revenueYoY": 9.306367041198502,
-            "earningsYoY": 1.6825164594001463
-        }
-    ],
+    "quarterly": [],
     "annual": [
         {
             "date": "2023-03-31",

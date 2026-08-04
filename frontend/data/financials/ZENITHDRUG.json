@@ -1,5 +1,50 @@
 {
     "symbol": "ZENITHDRUG",
     "quarterly": [],
-    "annual": []
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1145190000.0,
+            "earnings": 48808000.0,
+            "ebitda": 91096000.0,
+            "profitMargin": 4.26200019210786,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1316197000.0,
+            "earnings": 95369000.0,
+            "ebitda": 165954000.0,
+            "profitMargin": 7.245799830876382,
+            "revenueYoY": 14.932631266427403,
+            "earningsYoY": 95.39624651696444
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1333200000.0,
+            "earnings": 71606000.0,
+            "ebitda": 159378000.0,
+            "profitMargin": 5.370987098709871,
+            "revenueYoY": 1.2918278950643407,
+            "earningsYoY": -24.9169017185878
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1712198000.0,
+            "earnings": 39426000.0,
+            "ebitda": 170465000.0,
+            "profitMargin": 2.302654249099695,
+            "revenueYoY": 28.42769276927693,
+            "earningsYoY": -44.94036812557607
+        }
+    ]
 }

@@ -2,24 +2,13 @@
     "symbol": "LICHSGFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 22952800000.0,
-            "earnings": 13733900000.0,
-            "ebitda": null,
-            "profitMargin": 59.83540134536963,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 21894000000.0,
+            "revenue": 21154700000.0,
             "earnings": 13638900000.0,
             "ebitda": null,
-            "profitMargin": 62.295149355987945,
+            "profitMargin": 64.47219766765778,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 13980200000.0,
             "ebitda": null,
             "profitMargin": 62.136155347055244,
-            "revenueYoY": 7.339891607190566,
-            "earningsYoY": -2.5661397786512783
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 63.184854668145526,
             "revenueYoY": 2.914677076435119,
             "earningsYoY": 8.67561289946774
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20642900000.0,
+            "earnings": 14988500000.0,
+            "ebitda": null,
+            "profitMargin": 72.60849977474095,
+            "revenueYoY": -2.4193205292440925,
+            "earningsYoY": 9.895226154601911
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "EICHERMOT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 49456200000.0,
-            "earnings": 12052200000.0,
-            "ebitda": 18059500000.0,
-            "profitMargin": 24.369442051754888,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 15199500000.0,
             "ebitda": 21887100000.0,
             "profitMargin": 25.498537979811875,
-            "revenueYoY": 15.737673725045532,
-            "earningsYoY": 11.584627243695628
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 64887400000.0,
+            "earnings": 14625100000.0,
+            "ebitda": 22244300000.0,
+            "profitMargin": 22.539198673394218,
+            "revenueYoY": 31.20175023556197,
+            "earningsYoY": 21.347969665289323
         }
     ],
     "annual": [

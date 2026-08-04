@@ -1,6 +1,51 @@
 {
     "symbol": "QUADFUTURE",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 287330000.0,
+            "earnings": -134970000.0,
+            "ebitda": -119740000.0,
+            "profitMargin": -46.973862805833015,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 343990000.0,
+            "earnings": -158870000.0,
+            "ebitda": -149910000.0,
+            "profitMargin": -46.184482107037994,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 332790000.0,
+            "earnings": -146970000.0,
+            "ebitda": -148470000.0,
+            "profitMargin": -44.162985666636615,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 565570000.0,
+            "earnings": 11410000.0,
+            "ebitda": -108910000.0,
+            "profitMargin": 2.017433739413335,
+            "revenueYoY": -3.271763297417479,
+            "earningsYoY": -27.784810126582276
+        }
+    ],
     "annual": [
         {
             "date": "2023-03-31",

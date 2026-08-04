@@ -2,17 +2,6 @@
     "symbol": "BHAGYANGR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4538987000.0,
-            "earnings": 45781000.0,
-            "ebitda": 130246000.0,
-            "profitMargin": 1.0086171209567245,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 128413000.0,
             "ebitda": 291388000.0,
             "profitMargin": 2.224279222017581,
-            "revenueYoY": 46.35036736895687,
-            "earningsYoY": 222.20856124855723
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.516709310680862,
             "revenueYoY": 61.82698914978167,
             "earningsYoY": 303.7919660994736
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7050754000.0,
+            "earnings": 202452000.0,
+            "ebitda": 390821000.0,
+            "profitMargin": 2.871352482301893,
+            "revenueYoY": 45.195879184411794,
+            "earningsYoY": 167.3798486469353
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "BALAMINES",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3583412000.0,
-            "earnings": 379998000.0,
-            "ebitda": 637147000.0,
-            "profitMargin": 10.60436254608736,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 632080000.0,
             "ebitda": 1019888000.0,
             "profitMargin": 16.010683245420815,
-            "revenueYoY": 11.923907265523669,
-            "earningsYoY": 57.77347893915756
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4559256000.0,
+            "earnings": 749366000.0,
+            "ebitda": 1213982000.0,
+            "profitMargin": 16.43614659935744,
+            "revenueYoY": 27.23225797089478,
+            "earningsYoY": 97.20261685587819
         }
     ],
     "annual": [

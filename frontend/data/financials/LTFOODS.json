@@ -2,17 +2,6 @@
     "symbol": "LTFOODS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 22283612000.0,
-            "earnings": 1605188000.0,
-            "ebitda": 2947564000.0,
-            "profitMargin": 7.203446191757422,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1573521000.0,
             "ebitda": 3181949000.0,
             "profitMargin": 5.601311347913113,
-            "revenueYoY": 23.49157747943907,
-            "earningsYoY": 9.83742045007961
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.6676208976939,
             "revenueYoY": 30.441308168532107,
             "earningsYoY": -15.477875488727799
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 31518314000.0,
+            "earnings": 1834458000.0,
+            "ebitda": 3642331000.0,
+            "profitMargin": 5.8202922910153125,
+            "revenueYoY": 27.919559942915278,
+            "earningsYoY": 8.866938944100042
         }
     ],
     "annual": [

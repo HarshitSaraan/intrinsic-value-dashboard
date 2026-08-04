@@ -2,17 +2,6 @@
     "symbol": "ANTELOPUS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 506300000.0,
-            "earnings": 112200000.0,
-            "ebitda": 152000000.0,
-            "profitMargin": 22.16077424451906,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 380800000.0,
             "ebitda": 506800000.0,
             "profitMargin": 37.32967356141555,
-            "revenueYoY": 65.27867790019442,
-            "earningsYoY": 157.64546684709066
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1310400000.0,
+            "earnings": 543200000.0,
+            "ebitda": 728200000.0,
+            "profitMargin": 41.452991452991455,
+            "revenueYoY": 158.81888208571993,
+            "earningsYoY": 384.1354723707665
         }
     ],
     "annual": [

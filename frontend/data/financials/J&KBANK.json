@@ -2,24 +2,13 @@
     "symbol": "J&KBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 18849200000.0,
-            "earnings": 5819100000.0,
-            "ebitda": null,
-            "profitMargin": 30.871867241050015,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 17200100000.0,
+            "revenue": 17185000000.0,
             "earnings": 4845300000.0,
             "ebitda": null,
-            "profitMargin": 28.170185057063623,
+            "profitMargin": 28.194937445446612,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 5814900000.0,
             "ebitda": null,
             "profitMargin": 32.80602084050302,
-            "revenueYoY": 1.0259274669280882,
-            "earningsYoY": 10.005675368898977
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 45.5853726759486,
             "revenueYoY": -7.062899221187107,
             "earningsYoY": 37.230843257548415
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17162600000.0,
+            "earnings": 4288000000.0,
+            "ebitda": null,
+            "profitMargin": 24.98455944903453,
+            "revenueYoY": -0.13034623217922606,
+            "earningsYoY": -11.501867789404164
         }
     ],
     "annual": [

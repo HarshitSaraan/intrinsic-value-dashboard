@@ -2,17 +2,6 @@
     "symbol": "AJANTPHARM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11704100000.0,
-            "earnings": 2252600000.0,
-            "ebitda": 3152600000.0,
-            "profitMargin": 19.24624704163498,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2737700000.0,
             "ebitda": 4072100000.0,
             "profitMargin": 19.91286258764656,
-            "revenueYoY": 19.954978929091812,
-            "earningsYoY": 17.55839917554105
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.760023634675445,
             "revenueYoY": 21.46512760485642,
             "earningsYoY": 18.39651957737725
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16259600000.0,
+            "earnings": 3342200000.0,
+            "ebitda": 4944800000.0,
+            "profitMargin": 20.555241211345912,
+            "revenueYoY": 24.819406594250182,
+            "earningsYoY": 30.892143808255657
         }
     ],
     "annual": [

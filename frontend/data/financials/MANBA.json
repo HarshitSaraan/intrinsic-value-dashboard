@@ -2,17 +2,6 @@
     "symbol": "MANBA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 630415000.0,
-            "earnings": 97508000.0,
-            "ebitda": 156589000.0,
-            "profitMargin": 15.467271559210996,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 111263000.0,
             "ebitda": 267103000.0,
             "profitMargin": 12.045439290500967,
-            "revenueYoY": 39.81445742647092,
-            "earningsYoY": 38.65239388879196
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 851246000.0,
+            "earnings": 132628000.0,
+            "ebitda": 252193000.0,
+            "profitMargin": 15.580455003606478,
+            "revenueYoY": 35.02946471768597,
+            "earningsYoY": 36.01755753374082
         }
     ],
     "annual": [

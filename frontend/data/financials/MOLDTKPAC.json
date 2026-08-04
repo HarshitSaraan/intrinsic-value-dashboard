@@ -2,17 +2,6 @@
     "symbol": "MOLDTKPAC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2026082000.0,
-            "earnings": 162680000.0,
-            "ebitda": 390801000.0,
-            "profitMargin": 8.029290028735263,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 140818000.0,
             "ebitda": 386732000.0,
             "profitMargin": 7.096365190327601,
-            "revenueYoY": 4.064965610914307,
-            "earningsYoY": 3.2208409077581655
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.677786018071469,
             "revenueYoY": 17.396827966489017,
             "earningsYoY": 26.87853454634866
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3004520000.0,
+            "earnings": 255711000.0,
+            "ebitda": 564309000.0,
+            "profitMargin": 8.510876945402261,
+            "revenueYoY": 24.897737929750114,
+            "earningsYoY": 14.173516634146996
         }
     ],
     "annual": [

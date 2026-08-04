@@ -2,17 +2,6 @@
     "symbol": "COLPAL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14520200000.0,
-            "earnings": 3550000000.0,
-            "ebitda": 5170700000.0,
-            "profitMargin": 24.448699053732042,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3238600000.0,
             "ebitda": 4729200000.0,
             "profitMargin": 21.987616435380062,
-            "revenueYoY": 1.4261022854821273,
-            "earningsYoY": 0.33459322138918146
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.322889617569196,
             "revenueYoY": 9.004696905001309,
             "earningsYoY": -0.4732394366197183
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15905600000.0,
+            "earnings": 3430800000.0,
+            "ebitda": 5024300000.0,
+            "profitMargin": 21.569761593401065,
+            "revenueYoY": 11.960806397116793,
+            "earningsYoY": 7.005177468654482
         }
     ],
     "annual": [

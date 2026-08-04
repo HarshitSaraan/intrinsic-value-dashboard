@@ -2,17 +2,6 @@
     "symbol": "DEEPAKFERT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 26673500000.0,
-            "earnings": 2772400000.0,
-            "ebitda": 5296300000.0,
-            "profitMargin": 10.393836579376535,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1414900000.0,
             "ebitda": 3993000000.0,
             "profitMargin": 4.999522979996962,
-            "revenueYoY": 9.734317686563113,
-            "earningsYoY": -43.564277452036215
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.62877484741215,
             "revenueYoY": 12.897819933642005,
             "earningsYoY": -49.722262299812435
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 32562600000.0,
+            "earnings": 4900400000.0,
+            "ebitda": 8513500000.0,
+            "profitMargin": 15.049166835572098,
+            "revenueYoY": 22.473342736248235,
+            "earningsYoY": 101.5215692725254
         }
     ],
     "annual": [

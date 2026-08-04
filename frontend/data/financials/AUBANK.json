@@ -2,17 +2,6 @@
     "symbol": "AUBANK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 28545920000.0,
-            "earnings": 5036986000.0,
-            "ebitda": null,
-            "profitMargin": 17.645204638701433,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6676564000.0,
             "ebitda": null,
             "profitMargin": 21.782771876745375,
-            "revenueYoY": 16.051915922678912,
-            "earningsYoY": 26.343282184017564
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 25.107130248790632,
             "revenueYoY": 16.068422387507567,
             "earningsYoY": 65.15223588074296
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 33847133000.0,
+            "earnings": 7959529000.0,
+            "ebitda": null,
+            "profitMargin": 23.51610991690197,
+            "revenueYoY": 18.542371297609915,
+            "earningsYoY": 37.030500731503835
         }
     ],
     "annual": [

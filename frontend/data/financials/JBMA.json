@@ -2,17 +2,6 @@
     "symbol": "JBMA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16457000000.0,
-            "earnings": 663400000.0,
-            "ebitda": 2016300000.0,
-            "profitMargin": 4.031111381175183,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 551100000.0,
             "ebitda": 1937000000.0,
             "profitMargin": 3.414540452793715,
-            "revenueYoY": 15.602191741575044,
-            "earningsYoY": 4.692249240121581
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.008054981185248,
             "revenueYoY": 12.552105487026797,
             "earningsYoY": 11.908350919505576
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14424500000.0,
+            "earnings": 422000000.0,
+            "ebitda": 1869400000.0,
+            "profitMargin": 2.9255780096363826,
+            "revenueYoY": 15.03891919481928,
+            "earningsYoY": 14.673913043478262
         }
     ],
     "annual": [

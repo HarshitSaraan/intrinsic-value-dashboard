@@ -2,17 +2,6 @@
     "symbol": "CANBK",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 187002300000.0,
-            "earnings": 50701900000.0,
-            "ebitda": null,
-            "profitMargin": 27.11298203284131,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 52536700000.0,
             "ebitda": null,
             "profitMargin": 50.61061194134812,
-            "revenueYoY": -36.18436664310085,
-            "earningsYoY": 24.667074814435143
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.51542000763387,
             "revenueYoY": -22.3845909916616,
             "earningsYoY": -9.781881941307919
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 169583100000.0,
+            "earnings": 51807100000.0,
+            "ebitda": null,
+            "profitMargin": 30.549683311603577,
+            "revenueYoY": -12.807831624193097,
+            "earningsYoY": 62.15308533779872
         }
     ],
     "annual": [

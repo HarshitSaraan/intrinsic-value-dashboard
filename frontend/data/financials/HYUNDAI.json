@@ -2,17 +2,6 @@
     "symbol": "HYUNDAI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 175272470000.0,
-            "earnings": 16143450000.0,
-            "ebitda": 27422440000.0,
-            "profitMargin": 9.210488104606503,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 12343990000.0,
             "ebitda": 22620000000.0,
             "profitMargin": 7.006542131296031,
-            "revenueYoY": 7.931820253618678,
-            "earningsYoY": 6.346415285500381
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.81005638979995,
             "revenueYoY": 5.195693311105845,
             "earningsYoY": -22.22034323518207
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 160965010000.0,
+            "earnings": 8886240000.0,
+            "ebitda": 17860770000.0,
+            "profitMargin": 5.520603515012362,
+            "revenueYoY": -0.5137019321101317,
+            "earningsYoY": -35.10064751532609
         }
     ],
     "annual": [

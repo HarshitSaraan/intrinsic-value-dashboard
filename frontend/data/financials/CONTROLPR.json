@@ -2,17 +2,6 @@
     "symbol": "CONTROLPR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1112850000.0,
-            "earnings": 85646000.0,
-            "ebitda": 228508000.0,
-            "profitMargin": 7.696095610369771,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 111894000.0,
             "ebitda": 270232000.0,
             "profitMargin": 7.999862729579417,
-            "revenueYoY": 14.58199700662818,
-            "earningsYoY": -83.20845294888282
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1155629000.0,
+            "earnings": 39198000.0,
+            "ebitda": 154677000.0,
+            "profitMargin": 3.3919190328383935,
+            "revenueYoY": 3.8440939929011098,
+            "earningsYoY": -54.232538589075965
         }
     ],
     "annual": [

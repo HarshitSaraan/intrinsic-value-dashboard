@@ -2,17 +2,6 @@
     "symbol": "EXXARO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 649253000.0,
-            "earnings": 8094000.0,
-            "ebitda": 61543000.0,
-            "profitMargin": 1.246663473253108,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1973000.0,
             "ebitda": 60059000.0,
             "profitMargin": 0.19748840393735623,
-            "revenueYoY": 5.181005121942232,
-            "earningsYoY": -94.37250427837992
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 852224000.0,
+            "earnings": 20728000.0,
+            "ebitda": 77275000.0,
+            "profitMargin": 2.4322243917092217,
+            "revenueYoY": 31.26223521493162,
+            "earningsYoY": 156.0909315542377
         }
     ],
     "annual": [

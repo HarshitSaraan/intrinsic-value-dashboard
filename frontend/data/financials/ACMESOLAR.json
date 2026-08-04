@@ -2,17 +2,6 @@
     "symbol": "ACMESOLAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4868870000.0,
-            "earnings": 1233620000.0,
-            "ebitda": 4740330000.0,
-            "profitMargin": 25.33688514994239,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1137140000.0,
             "ebitda": 5644970000.0,
             "profitMargin": 22.897495479459227,
-            "revenueYoY": 42.293674716055605,
-            "earningsYoY": 1.4778061361080868
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 25.433577719034332,
             "revenueYoY": 12.504133402617034,
             "earningsYoY": 12.933480326194452
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8574780000.0,
+            "earnings": 2353300000.0,
+            "ebitda": 8305340000.0,
+            "profitMargin": 27.444435892232804,
+            "revenueYoY": 67.80916819313325,
+            "earningsYoY": 79.8746464878086
         }
     ],
     "annual": [

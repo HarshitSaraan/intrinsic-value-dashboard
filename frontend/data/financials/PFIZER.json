@@ -2,17 +2,6 @@
     "symbol": "PFIZER",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6030500000.0,
-            "earnings": 1917500000.0,
-            "ebitda": 2771900000.0,
-            "profitMargin": 31.796700107785426,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1998200000.0,
             "ebitda": 2857100000.0,
             "profitMargin": 31.7562735406767,
-            "revenueYoY": 6.3050125863729285,
-            "earningsYoY": -39.62047501057594
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6531700000.0,
+            "earnings": 2044700000.0,
+            "ebitda": 2924000000.0,
+            "profitMargin": 31.304254635087343,
+            "revenueYoY": 8.311085316308764,
+            "earningsYoY": 6.6336375488917865
         }
     ],
     "annual": [

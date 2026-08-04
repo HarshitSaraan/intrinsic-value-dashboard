@@ -2,17 +2,6 @@
     "symbol": "INDORAMA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 13057100000.0,
-            "earnings": 527500000.0,
-            "ebitda": 937100000.0,
-            "profitMargin": 4.039947614707707,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 641300000.0,
             "ebitda": 1076000000.0,
             "profitMargin": 5.336695293256108,
-            "revenueYoY": 0.267841497909835,
-            "earningsYoY": 25.572743293518702
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9366400000.0,
+            "earnings": 637400000.0,
+            "ebitda": 1051300000.0,
+            "profitMargin": 6.805175948069696,
+            "revenueYoY": -28.265847699718925,
+            "earningsYoY": 20.834123222748815
         }
     ],
     "annual": [

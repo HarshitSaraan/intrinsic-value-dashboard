@@ -2,17 +2,6 @@
     "symbol": "AEROFLEX",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 916917000.0,
-            "earnings": 112319000.0,
-            "ebitda": 190116000.0,
-            "profitMargin": 12.249636553799307,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 164914000.0,
             "ebitda": 285767000.0,
             "profitMargin": 13.641635136677746,
-            "revenueYoY": 21.138048447122813,
-            "earningsYoY": 8.430423690923915
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.014060946662333,
             "revenueYoY": 37.24023003172588,
             "earningsYoY": 57.008164246476554
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1453763000.0,
+            "earnings": 187931000.0,
+            "ebitda": 340906000.0,
+            "profitMargin": 12.927210281180631,
+            "revenueYoY": 72.38282815586707,
+            "earningsYoY": 162.22076490532865
         }
     ],
     "annual": [

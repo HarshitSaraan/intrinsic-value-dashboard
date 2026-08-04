@@ -2,17 +2,6 @@
     "symbol": "ASAL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1730684000.0,
-            "earnings": 25385000.0,
-            "ebitda": 112779000.0,
-            "profitMargin": 1.4667611187253131,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 132764000.0,
             "ebitda": 187477000.0,
             "profitMargin": 5.195215818399886,
-            "revenueYoY": 35.87806675478829,
-            "earningsYoY": 169.02532928064844
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2533244000.0,
+            "earnings": 46864000.0,
+            "ebitda": 146885000.0,
+            "profitMargin": 1.8499599722727065,
+            "revenueYoY": 46.37241691724197,
+            "earningsYoY": 84.61296040969076
         }
     ],
     "annual": [

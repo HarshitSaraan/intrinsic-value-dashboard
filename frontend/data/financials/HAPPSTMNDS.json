@@ -2,17 +2,6 @@
     "symbol": "HAPPSTMNDS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5445700000.0,
-            "earnings": 340000000.0,
-            "ebitda": 976700000.0,
-            "profitMargin": 6.243458141285785,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 403000000.0,
             "ebitda": 1007900000.0,
             "profitMargin": 6.858873987337463,
-            "revenueYoY": 10.691207776793958,
-            "earningsYoY": -19.560878243512974
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.126142232816845,
             "revenueYoY": 10.927888058468149,
             "earningsYoY": 79.91176470588235
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6285100000.0,
+            "earnings": 676000000.0,
+            "ebitda": 1412900000.0,
+            "profitMargin": 10.755596569664764,
+            "revenueYoY": 14.295326422985996,
+            "earningsYoY": 18.326623490285314
         }
     ],
     "annual": [

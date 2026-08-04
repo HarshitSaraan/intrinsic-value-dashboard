@@ -2,17 +2,6 @@
     "symbol": "CHOLAFIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 37722000000.0,
-            "earnings": 12595400000.0,
-            "ebitda": null,
-            "profitMargin": 33.39006415354435,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 12899700000.0,
             "ebitda": null,
             "profitMargin": 29.56653082554424,
-            "revenueYoY": 22.497030887196175,
-            "earningsYoY": 18.540539050367116
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 34.20004490159068,
             "revenueYoY": 27.5255818885531,
             "earningsYoY": 30.61911491496896
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 49493100000.0,
+            "earnings": 16562200000.0,
+            "ebitda": null,
+            "profitMargin": 33.4636545296213,
+            "revenueYoY": 27.394383054957107,
+            "earningsYoY": 45.55952998251057
         }
     ],
     "annual": [

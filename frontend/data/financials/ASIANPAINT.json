@@ -2,17 +2,6 @@
     "symbol": "ASIANPAINT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 89244900000.0,
-            "earnings": 10997700000.0,
-            "ebitda": 18540800000.0,
-            "profitMargin": 12.323057115868806,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 11721200000.0,
             "ebitda": 19832000000.0,
             "profitMargin": 12.701144069541398,
-            "revenueYoY": 10.791287446320888,
-            "earningsYoY": 69.34968864230709
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 105214400000.0,
+            "earnings": 15392500000.0,
+            "ebitda": 24477700000.0,
+            "profitMargin": 14.629651454553748,
+            "revenueYoY": 17.894019714291797,
+            "earningsYoY": 39.9610827718523
         }
     ],
     "annual": [

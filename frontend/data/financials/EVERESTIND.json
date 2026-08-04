@@ -2,17 +2,6 @@
     "symbol": "EVERESTIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4526289000.0,
-            "earnings": 76389000.0,
-            "ebitda": 246227000.0,
-            "profitMargin": 1.6876739421632159,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -379785000.0,
             "ebitda": -311453000.0,
             "profitMargin": -13.42217481747878,
-            "revenueYoY": -23.738198361853115,
-            "earningsYoY": -145.41207335513138
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -14.417996897613609,
             "revenueYoY": -27.71838033320453,
             "earningsYoY": -717.5103745303643
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4358821000.0,
+            "earnings": 1020934000.0,
+            "ebitda": 1382169000.0,
+            "profitMargin": 23.422251108728716,
+            "revenueYoY": -12.948881380141424,
+            "earningsYoY": 6145.7726660956805
         }
     ],
     "annual": [

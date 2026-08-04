@@ -2,17 +2,6 @@
     "symbol": "KANPRPLA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1787959000.0,
-            "earnings": 60460000.0,
-            "ebitda": 159126000.0,
-            "profitMargin": 3.3815093075400497,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 149794000.0,
             "ebitda": 255641000.0,
             "profitMargin": 8.20630310959031,
-            "revenueYoY": 9.457388234137145,
-            "earningsYoY": 399.97997329773034
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2036115000.0,
+            "earnings": 117378000.0,
+            "ebitda": 217344000.0,
+            "profitMargin": 5.764802086326165,
+            "revenueYoY": 13.87928917833127,
+            "earningsYoY": 94.12231667383323
         }
     ],
     "annual": [

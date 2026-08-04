@@ -2,17 +2,6 @@
     "symbol": "BALKRISIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 27523800000.0,
-            "earnings": 3685500000.0,
-            "ebitda": 7128800000.0,
-            "profitMargin": 13.39022954679223,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3821500000.0,
             "ebitda": 7204500000.0,
             "profitMargin": 13.963438919317886,
-            "revenueYoY": 6.892080317771537,
-            "earningsYoY": -14.979531903532973
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.21065050020117,
             "revenueYoY": 6.55578081514907,
             "earningsYoY": -18.746438746438745
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 34552700000.0,
+            "earnings": 4507700000.0,
+            "ebitda": 8440700000.0,
+            "profitMargin": 13.04586906377794,
+            "revenueYoY": 25.190034854819892,
+            "earningsYoY": 56.35449184876864
         }
     ],
     "annual": [

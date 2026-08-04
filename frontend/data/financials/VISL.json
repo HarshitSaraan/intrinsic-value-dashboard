@@ -1,5 +1,51 @@
 {
     "symbol": "VISL",
-    "quarterly": [],
-    "annual": []
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 30330000000.0,
+            "earnings": -1420000000.0,
+            "ebitda": 5720000000.0,
+            "profitMargin": -4.681833168480052,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 36120000000.0,
+            "earnings": 1220000000.0,
+            "ebitda": 5970000000.0,
+            "profitMargin": 3.3776301218161686,
+            "revenueYoY": 19.090009891196836,
+            "earningsYoY": 185.91549295774647
+        }
+    ],
+    "annual": [
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 137170000000.0,
+            "earnings": -8610000000.0,
+            "ebitda": 19280000000.0,
+            "profitMargin": -6.276882700298899,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 133410000000.0,
+            "earnings": -29050000000.0,
+            "ebitda": 3620000000.0,
+            "profitMargin": -21.77497938685256,
+            "revenueYoY": -2.7411241525114822,
+            "earningsYoY": -237.39837398373984
+        }
+    ]
 }

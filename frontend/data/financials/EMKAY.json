@@ -2,17 +2,6 @@
     "symbol": "EMKAY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 669102000.0,
-            "earnings": 47830000.0,
-            "ebitda": 106034000.0,
-            "profitMargin": 7.148386942499051,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 56569000.0,
             "ebitda": 175751000.0,
             "profitMargin": 3.838637310558509,
-            "revenueYoY": 109.53793347618432,
-            "earningsYoY": -33.3305833824396
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 840459000.0,
+            "earnings": 91069000.0,
+            "ebitda": 160288000.0,
+            "profitMargin": 10.835626723016828,
+            "revenueYoY": 25.60999668212022,
+            "earningsYoY": 90.40142170186076
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "CCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8358476000.0,
-            "earnings": 1018684000.0,
-            "ebitda": 1670861000.0,
-            "profitMargin": 12.187437039958002,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1002678000.0,
             "ebitda": 1875645000.0,
             "profitMargin": 9.54418224257699,
-            "revenueYoY": 38.521804140499015,
-            "earningsYoY": 59.04340281357712
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.35322633835869,
             "revenueYoY": 46.49127424664496,
             "earningsYoY": 12.424461363877317
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12004462000.0,
+            "earnings": 1168805000.0,
+            "ebitda": 1966927000.0,
+            "profitMargin": 9.73642134066483,
+            "revenueYoY": 13.717503210614918,
+            "earningsYoY": 61.32885935684057
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "CGPOWER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 27527700000.0,
-            "earnings": 2719700000.0,
-            "ebitda": 4182400000.0,
-            "profitMargin": 9.879866461782132,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2848300000.0,
             "ebitda": 4381600000.0,
             "profitMargin": 8.970034799313462,
-            "revenueYoY": 26.222333524136616,
-            "earningsYoY": 18.41766099862803
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.61927618427781,
             "revenueYoY": 25.02897081848465,
             "earningsYoY": 34.38614553075707
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 32808100000.0,
+            "earnings": 3130100000.0,
+            "ebitda": 4808600000.0,
+            "profitMargin": 9.540631734236364,
+            "revenueYoY": 13.994197460085822,
+            "earningsYoY": 16.261189317683762
         }
     ],
     "annual": [

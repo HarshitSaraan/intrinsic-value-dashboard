@@ -2,17 +2,6 @@
     "symbol": "ACI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2923591000.0,
-            "earnings": 401897000.0,
-            "ebitda": 863224000.0,
-            "profitMargin": 13.74669028602154,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 134189000.0,
             "ebitda": 490838000.0,
             "profitMargin": 4.458944771674673,
-            "revenueYoY": -12.915674364902758,
-            "earningsYoY": -74.9360742789795
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3271981000.0,
+            "earnings": 306768000.0,
+            "ebitda": 728709000.0,
+            "profitMargin": 9.375604564940932,
+            "revenueYoY": 11.916509525443196,
+            "earningsYoY": -23.669995048482573
         }
     ],
     "annual": [

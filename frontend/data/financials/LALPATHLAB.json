@@ -2,17 +2,6 @@
     "symbol": "LALPATHLAB",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6026000000.0,
-            "earnings": 1548000000.0,
-            "ebitda": 1948000000.0,
-            "profitMargin": 25.688682376369066,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 905000000.0,
             "ebitda": 1736000000.0,
             "profitMargin": 13.716277659896939,
-            "revenueYoY": 10.574828221887046,
-            "earningsYoY": -6.41158221302999
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.685071865661023,
             "revenueYoY": 16.611350813143048,
             "earningsYoY": -15.180878552971578
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7977000000.0,
+            "earnings": 1695000000.0,
+            "ebitda": 2794000000.0,
+            "profitMargin": 21.2485896953742,
+            "revenueYoY": 19.09525231412362,
+            "earningsYoY": 28.02114803625378
         }
     ],
     "annual": [

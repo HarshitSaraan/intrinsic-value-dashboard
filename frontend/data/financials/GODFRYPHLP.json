@@ -2,17 +2,6 @@
     "symbol": "GODFRYPHLP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15658200000.0,
-            "earnings": 2792900000.0,
-            "ebitda": 4189700000.0,
-            "profitMargin": 17.83666066342236,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3432900000.0,
             "ebitda": 4741900000.0,
             "profitMargin": 18.894270460674775,
-            "revenueYoY": 14.76196792551747,
-            "earningsYoY": 8.687668196928922
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 29.27474230276898,
             "revenueYoY": 13.752538605970036,
             "earningsYoY": 86.69841383508181
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11918500000.0,
+            "earnings": 1983900000.0,
+            "ebitda": 2879800000.0,
+            "profitMargin": 16.64555103410664,
+            "revenueYoY": -19.1555027980329,
+            "earningsYoY": -44.32095647048918
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "KABRAEXTRU",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 859668000.0,
-            "earnings": -76118000.0,
-            "ebitda": 10849000.0,
-            "profitMargin": -8.85434842287953,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 68952000.0,
             "ebitda": 197694000.0,
             "profitMargin": 5.739065296100545,
-            "revenueYoY": -13.896525331169968,
-            "earningsYoY": -36.3118274603981
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1244901000.0,
+            "earnings": -17388000.0,
+            "ebitda": 66378000.0,
+            "profitMargin": -1.396737571903308,
+            "revenueYoY": 44.811834336046005,
+            "earningsYoY": 77.1559199117137
         }
     ],
     "annual": [

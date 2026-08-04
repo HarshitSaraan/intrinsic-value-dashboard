@@ -2,17 +2,6 @@
     "symbol": "DIGITIDE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 7357370000.0,
-            "earnings": 57320000.0,
-            "ebitda": 772870000.0,
-            "profitMargin": 0.779082742882307,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -126960000.0,
             "ebitda": 769790000.0,
             "profitMargin": -1.587095225713543,
-            "revenueYoY": 9.205184281154697,
-            "earningsYoY": -36.648369389732
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7750720000.0,
+            "earnings": -18910000.0,
+            "ebitda": 812170000.0,
+            "profitMargin": -0.24397733371867386,
+            "revenueYoY": 5.346339792616112,
+            "earningsYoY": -132.99023028611305
         }
     ],
     "annual": [

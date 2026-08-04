@@ -2,17 +2,6 @@
     "symbol": "DALBHARAT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 40910000000.0,
-            "earnings": 4350000000.0,
-            "ebitda": 8860000000.0,
-            "profitMargin": 10.633097042287948,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1220000000.0,
             "ebitda": 6320000000.0,
             "profitMargin": 3.479749001711352,
-            "revenueYoY": 10.216912920465262,
-            "earningsYoY": 100.0
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.11660777385159,
             "revenueYoY": 3.7643607919824005,
             "earningsYoY": -11.03448275862069
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 38900000000.0,
+            "earnings": 1880000000.0,
+            "ebitda": 7620000000.0,
+            "profitMargin": 4.832904884318766,
+            "revenueYoY": 6.985698569856985,
+            "earningsYoY": -52.16284987277354
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "NGIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 69209000.0,
-            "earnings": 1573000.0,
-            "ebitda": 8348000.0,
-            "profitMargin": 2.272825788553512,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 7433000.0,
             "ebitda": 18370000.0,
             "profitMargin": 6.694406167535778,
-            "revenueYoY": -20.55054274326848,
-            "earningsYoY": 130.4207252189572
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 83123000.0,
+            "earnings": 2926000.0,
+            "ebitda": 10098000.0,
+            "profitMargin": 3.520084693767068,
+            "revenueYoY": 20.104321692265454,
+            "earningsYoY": 86.01398601398601
         }
     ],
     "annual": [

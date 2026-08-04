@@ -2,24 +2,13 @@
     "symbol": "HINDUNILVR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 149850000000.0,
-            "earnings": 24640000000.0,
-            "ebitda": 37930000000.0,
-            "profitMargin": 16.44310977644311,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 163230000000.0,
+            "revenue": 155790000000.0,
             "earnings": 27560000000.0,
-            "ebitda": 37910000000.0,
-            "profitMargin": 16.8841511976965,
+            "ebitda": 37150000000.0,
+            "profitMargin": 17.690480775402786,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 66070000000.0,
             "ebitda": 33440000000.0,
             "profitMargin": 40.69602710194025,
-            "revenueYoY": 5.744805575457565,
-            "earningsYoY": 121.4142091152815
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.461158758561115,
             "revenueYoY": 8.154821488154822,
             "earningsYoY": 21.428571428571427
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 171840000000.0,
+            "earnings": 26730000000.0,
+            "ebitda": 40600000000.0,
+            "profitMargin": 15.555167597765362,
+            "revenueYoY": 10.302330059695745,
+            "earningsYoY": -3.0116110304789547
         }
     ],
     "annual": [

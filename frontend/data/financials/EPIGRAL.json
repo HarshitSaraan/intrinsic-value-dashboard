@@ -2,17 +2,6 @@
     "symbol": "EPIGRAL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6065400000.0,
-            "earnings": 1606900000.0,
-            "ebitda": 1719200000.0,
-            "profitMargin": 26.49289412075049,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 809500000.0,
             "ebitda": 1670300000.0,
             "profitMargin": 10.996250815040208,
-            "revenueYoY": 17.2920351162309,
-            "earningsYoY": -6.836229715732535
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7053600000.0,
+            "earnings": 997400000.0,
+            "ebitda": 1838600000.0,
+            "profitMargin": 14.140297153226722,
+            "revenueYoY": 16.292412701553072,
+            "earningsYoY": -37.930176115501894
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "BIRLACORPN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 24542200000.0,
-            "earnings": 1195700000.0,
-            "ebitda": 3786700000.0,
-            "profitMargin": 4.872016363651181,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2947800000.0,
             "ebitda": 5768100000.0,
             "profitMargin": 10.393777414213785,
-            "revenueYoY": 0.7534876781140427,
-            "earningsYoY": 14.874712598885468
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 26464500000.0,
+            "earnings": 1157300000.0,
+            "ebitda": 3652200000.0,
+            "profitMargin": 4.373028018666515,
+            "revenueYoY": 7.8326311414624605,
+            "earningsYoY": -3.2115079033202307
         }
     ],
     "annual": [

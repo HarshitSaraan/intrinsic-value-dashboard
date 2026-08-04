@@ -1,5 +1,50 @@
 {
     "symbol": "VINSYS",
     "quarterly": [],
-    "annual": []
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 948502000.0,
+            "earnings": 150084000.0,
+            "ebitda": 201399000.0,
+            "profitMargin": 15.823266582463717,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1704938000.0,
+            "earnings": 229096000.0,
+            "ebitda": 296755000.0,
+            "profitMargin": 13.437204168128108,
+            "revenueYoY": 79.75059620327633,
+            "earningsYoY": 52.645185362863465
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 2116831000.0,
+            "earnings": 300328000.0,
+            "ebitda": 423966000.0,
+            "profitMargin": 14.1876229136856,
+            "revenueYoY": 24.158825716829586,
+            "earningsYoY": 31.092642385724762
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2683699000.0,
+            "earnings": 297432000.0,
+            "ebitda": 443549000.0,
+            "profitMargin": 11.082912055338545,
+            "revenueYoY": 26.779086285112037,
+            "earningsYoY": -0.964279054899976
+        }
+    ]
 }

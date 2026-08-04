@@ -2,17 +2,6 @@
     "symbol": "PCBL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 20874900000.0,
-            "earnings": 1001600000.0,
-            "ebitda": 3174300000.0,
-            "profitMargin": 4.798106817278167,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 20300000.0,
             "ebitda": 2098800000.0,
             "profitMargin": 0.10999013881514072,
-            "revenueYoY": -8.178109452736319,
-            "earningsYoY": -97.81837721655025
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.9481525221919982,
             "revenueYoY": -1.0265917441520678,
             "earningsYoY": -59.814297124600635
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24733700000.0,
+            "earnings": 1549700000.0,
+            "ebitda": 3999300000.0,
+            "profitMargin": 6.265540537808739,
+            "revenueYoY": 16.99675977389371,
+            "earningsYoY": 64.77405635300372
         }
     ],
     "annual": [

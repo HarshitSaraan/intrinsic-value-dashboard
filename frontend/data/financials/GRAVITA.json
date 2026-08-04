@@ -2,17 +2,6 @@
     "symbol": "GRAVITA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10370700000.0,
-            "earnings": 951300000.0,
-            "ebitda": 1279400000.0,
-            "profitMargin": 9.17295843096416,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 976700000.0,
             "ebitda": 1314700000.0,
             "profitMargin": 9.603075501194608,
-            "revenueYoY": 2.072419260954216,
-            "earningsYoY": 25.330424740151418
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.834510044680925,
             "revenueYoY": 13.083976973589055,
             "earningsYoY": -3.4163775885630185
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14750600000.0,
+            "earnings": 1063900000.0,
+            "ebitda": 1572500000.0,
+            "profitMargin": 7.212587962523559,
+            "revenueYoY": 41.840875435121255,
+            "earningsYoY": 14.078919150761312
         }
     ],
     "annual": [

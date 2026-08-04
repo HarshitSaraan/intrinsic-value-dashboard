@@ -2,17 +2,6 @@
     "symbol": "PPLPHARMA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 27540700000.0,
-            "earnings": 1535000000.0,
-            "ebitda": 6192400000.0,
-            "profitMargin": 5.5735692992552845,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -1361900000.0,
             "ebitda": 2081200000.0,
             "profitMargin": -6.364405314341526,
-            "revenueYoY": -2.9194000598851293,
-            "earningsYoY": -3800.8152173913045
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -0.3205209737732441,
             "revenueYoY": -0.08351276474454171,
             "earningsYoY": -105.74592833876221
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22699200000.0,
+            "earnings": -693900000.0,
+            "ebitda": 3041700000.0,
+            "profitMargin": -3.0569359272573484,
+            "revenueYoY": 17.386784988441907,
+            "earningsYoY": 15.06731946144431
         }
     ],
     "annual": [

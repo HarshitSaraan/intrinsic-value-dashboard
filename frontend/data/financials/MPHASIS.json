@@ -2,17 +2,6 @@
     "symbol": "MPHASIS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 37100410000.0,
-            "earnings": 4464920000.0,
-            "ebitda": 7625140000.0,
-            "profitMargin": 12.034691799901942,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4421850000.0,
             "ebitda": 7770730000.0,
             "profitMargin": 11.047502123006192,
-            "revenueYoY": 12.389753513988282,
-            "earningsYoY": 3.3608613229797553
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.01225266742531,
             "revenueYoY": 14.356364255812807,
             "earningsYoY": 14.143142542307588
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 43840540000.0,
+            "earnings": 4895060000.0,
+            "ebitda": 8783570000.0,
+            "profitMargin": 11.165601518594434,
+            "revenueYoY": 17.456581921607807,
+            "earningsYoY": 10.82243045666432
         }
     ],
     "annual": [

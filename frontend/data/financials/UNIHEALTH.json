@@ -1,5 +1,50 @@
 {
     "symbol": "UNIHEALTH",
     "quarterly": [],
-    "annual": []
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 439284000.0,
+            "earnings": 76800000.0,
+            "ebitda": 156868000.0,
+            "profitMargin": 17.48299505559046,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 487500000.0,
+            "earnings": 103066000.0,
+            "ebitda": 181288000.0,
+            "profitMargin": 21.14174358974359,
+            "revenueYoY": 10.976042833337885,
+            "earningsYoY": 34.20052083333333
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 990706000.0,
+            "earnings": 141251000.0,
+            "ebitda": 394987000.0,
+            "profitMargin": 14.25761022947272,
+            "revenueYoY": 103.22174358974358,
+            "earningsYoY": 37.049075349775876
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1319883000.0,
+            "earnings": 258303000.0,
+            "ebitda": 584653000.0,
+            "profitMargin": 19.570143717284033,
+            "revenueYoY": 33.226507157522015,
+            "earningsYoY": 82.86808588965742
+        }
+    ]
 }

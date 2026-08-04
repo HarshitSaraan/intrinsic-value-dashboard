@@ -2,24 +2,13 @@
     "symbol": "PARADEEP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 41939600000.0,
-            "earnings": 1721900000.0,
-            "ebitda": 4432700000.0,
-            "profitMargin": 4.1056662438363745,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 37540600000.0,
-            "earnings": 2558500000.0,
-            "ebitda": 4926900000.0,
-            "profitMargin": 6.815287981545313,
+            "revenue": 45035000000.0,
+            "earnings": 3167500000.0,
+            "ebitda": 6142400000.0,
+            "profitMargin": 7.033418452314866,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 1820600000.0,
             "ebitda": 4621800000.0,
             "profitMargin": 3.1669934089102347,
-            "revenueYoY": 15.214197673136857,
-            "earningsYoY": -13.031432119996179
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.309251228740294,
             "revenueYoY": 12.11289568808477,
             "earningsYoY": -9.634705848190952
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 61242500000.0,
+            "earnings": 3925400000.0,
+            "ebitda": 7635400000.0,
+            "profitMargin": 6.409601175654162,
+            "revenueYoY": 35.988675474630845,
+            "earningsYoY": 23.927387529597475
         }
     ],
     "annual": [

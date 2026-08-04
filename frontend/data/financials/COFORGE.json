@@ -2,24 +2,13 @@
     "symbol": "COFORGE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 34222000000.0,
-            "earnings": 2612000000.0,
-            "ebitda": 5584000000.0,
-            "profitMargin": 7.632517094266846,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 36886000000.0,
+            "revenue": 37044000000.0,
             "earnings": 3174000000.0,
             "ebitda": 5708000000.0,
-            "profitMargin": 8.604890744455892,
+            "profitMargin": 8.568189180434079,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 2502000000.0,
             "ebitda": 5965000000.0,
             "profitMargin": 5.974069387072897,
-            "revenueYoY": 28.5442435775452,
-            "earningsYoY": 16.102088167053363
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 13.758313859428368,
             "revenueYoY": 30.04500029220969,
             "earningsYoY": 134.41807044410413
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 55277000000.0,
+            "earnings": 5186000000.0,
+            "ebitda": 10298000000.0,
+            "profitMargin": 9.38184054851023,
+            "revenueYoY": 49.219846668826264,
+            "earningsYoY": 63.39004410838059
         }
     ],
     "annual": [

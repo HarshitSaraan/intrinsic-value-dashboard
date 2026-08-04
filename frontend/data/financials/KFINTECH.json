@@ -2,17 +2,6 @@
     "symbol": "KFINTECH",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2826980000.0,
-            "earnings": 850530000.0,
-            "ebitda": 1322560000.0,
-            "profitMargin": 30.08616969345379,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 919930000.0,
             "ebitda": 1496550000.0,
             "profitMargin": 24.804581646987767,
-            "revenueYoY": 27.87861443082843,
-            "earningsYoY": 2.012686020980727
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.363659919960845,
             "revenueYoY": 22.86256004640995,
             "earningsYoY": -4.590079127132494
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3565360000.0,
+            "earnings": 752140000.0,
+            "ebitda": 1320880000.0,
+            "profitMargin": 21.09576592546054,
+            "revenueYoY": 30.095089360646288,
+            "earningsYoY": -2.644420570304309
         }
     ],
     "annual": [

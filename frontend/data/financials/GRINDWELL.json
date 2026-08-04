@@ -2,17 +2,6 @@
     "symbol": "GRINDWELL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7058984000.0,
-            "earnings": 925398000.0,
-            "ebitda": 1502839000.0,
-            "profitMargin": 13.109506977208053,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 951676000.0,
             "ebitda": 1575478000.0,
             "profitMargin": 12.69192401457401,
-            "revenueYoY": 7.240739318481804,
-            "earningsYoY": 9.612815244132797
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.156719908256585,
             "revenueYoY": 18.823629576154303,
             "earningsYoY": 28.315492361124615
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8006153000.0,
+            "earnings": 1155133000.0,
+            "ebitda": 1820315000.0,
+            "profitMargin": 14.42806551411146,
+            "revenueYoY": 14.364448792032524,
+            "earningsYoY": 22.299581476552415
         }
     ],
     "annual": [

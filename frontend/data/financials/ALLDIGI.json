@@ -2,17 +2,6 @@
     "symbol": "ALLDIGI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1461000000.0,
-            "earnings": 192900000.0,
-            "ebitda": 389600000.0,
-            "profitMargin": 13.203285420944558,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 208400000.0,
             "ebitda": 442000000.0,
             "profitMargin": 13.649462929001835,
-            "revenueYoY": 9.479420622400689,
-            "earningsYoY": 4.618473895582329
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.672011379065108,
             "revenueYoY": 5.865845311430527,
             "earningsYoY": 49.71487817522032
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1502800000.0,
+            "earnings": 181200000.0,
+            "ebitda": 444000000.0,
+            "profitMargin": 12.05749268033005,
+            "revenueYoY": 4.426377597109305,
+            "earningsYoY": 21.692411014103424
         }
     ],
     "annual": [

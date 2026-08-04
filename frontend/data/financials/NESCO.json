@@ -2,17 +2,6 @@
     "symbol": "NESCO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1933400000.0,
-            "earnings": 961400000.0,
-            "ebitda": 1384500000.0,
-            "profitMargin": 49.725871521671664,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 930500000.0,
             "ebitda": 1384300000.0,
             "profitMargin": 36.98036722041173,
-            "revenueYoY": 31.045258059476065,
-            "earningsYoY": 4.998871586549312
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2118000000.0,
+            "earnings": 999600000.0,
+            "ebitda": 1459700000.0,
+            "profitMargin": 47.195467422096314,
+            "revenueYoY": 9.547946622530258,
+            "earningsYoY": 3.973372165591845
         }
     ],
     "annual": [

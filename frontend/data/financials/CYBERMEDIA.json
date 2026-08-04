@@ -2,17 +2,6 @@
     "symbol": "CYBERMEDIA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 258453000.0,
-            "earnings": 2810000.0,
-            "ebitda": 15847000.0,
-            "profitMargin": 1.0872382986461755,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 16554000.0,
             "ebitda": 23467000.0,
             "profitMargin": 5.869505095130374,
-            "revenueYoY": 30.399844648702633,
-            "earningsYoY": 413.10762247021
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 504057000.0,
+            "earnings": 7274000.0,
+            "ebitda": 24374000.0,
+            "profitMargin": 1.4430907615606965,
+            "revenueYoY": 95.02849647711577,
+            "earningsYoY": 158.8612099644128
         }
     ],
     "annual": [

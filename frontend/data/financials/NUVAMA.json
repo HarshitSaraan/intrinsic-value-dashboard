@@ -2,17 +2,6 @@
     "symbol": "NUVAMA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5747600000.0,
-            "earnings": 2554100000.0,
-            "ebitda": 5834700000.0,
-            "profitMargin": 44.43767833530517,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2538000000.0,
             "ebitda": 6090200000.0,
             "profitMargin": 46.286839801575724,
-            "revenueYoY": 6.484376517196512,
-            "earningsYoY": 0.6743355811186037
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 41.816854142066994,
             "revenueYoY": 11.984132507481384,
             "earningsYoY": 5.37958576406562
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5775300000.0,
+            "earnings": 3057900000.0,
+            "ebitda": 7324100000.0,
+            "profitMargin": 52.94789881045141,
+            "revenueYoY": 9.39311285373338,
+            "earningsYoY": 15.847098045158356
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "MALUPAPER",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 943334000.0,
-            "earnings": -61516000.0,
-            "ebitda": -47686000.0,
-            "profitMargin": -6.521126133479764,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -26902000.0,
             "ebitda": 46904000.0,
             "profitMargin": -2.543024972728321,
-            "revenueYoY": 13.703677430033814,
-            "earningsYoY": 4.555453061803733
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1234175000.0,
+            "earnings": 12769000.0,
+            "ebitda": 58434000.0,
+            "profitMargin": 1.0346182672635567,
+            "revenueYoY": 30.83117962460804,
+            "earningsYoY": 120.75720137850314
         }
     ],
     "annual": [

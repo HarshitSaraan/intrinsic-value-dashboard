@@ -2,17 +2,6 @@
     "symbol": "MANORG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1465539000.0,
-            "earnings": 122295000.0,
-            "ebitda": 256477000.0,
-            "profitMargin": 8.34471139969663,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 59818000.0,
             "ebitda": 268144000.0,
             "profitMargin": 3.8939447200197894,
-            "revenueYoY": 2.5551670131503577,
-            "earningsYoY": 16.452196935775888
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1790924000.0,
+            "earnings": 72687000.0,
+            "ebitda": 222780000.0,
+            "profitMargin": 4.058631187029712,
+            "revenueYoY": 22.20241153596049,
+            "earningsYoY": -40.564209493438
         }
     ],
     "annual": [

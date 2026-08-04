@@ -2,24 +2,13 @@
     "symbol": "AMBUJACEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 98944100000.0,
-            "earnings": 10254900000.0,
-            "ebitda": 25802000000.0,
-            "profitMargin": 10.364337034749925,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 102441100000.0,
-            "earnings": 7878800000.0,
-            "ebitda": 22613400000.0,
-            "profitMargin": 7.691053688412171,
+            "earnings": 8690000000.0,
+            "ebitda": 22611400000.0,
+            "profitMargin": 8.482923357910058,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 2037000000.0,
             "ebitda": 14302900000.0,
             "profitMargin": 2.000880112214307,
-            "revenueYoY": 19.797601816876714,
-            "earningsYoY": -90.56162282632366
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.803192895861795,
             "revenueYoY": 10.079125486006745,
             "earningsYoY": 78.46590410437938
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 94740000000.0,
+            "earnings": 5770000000.0,
+            "ebitda": 17390000000.0,
+            "profitMargin": 6.090352543804095,
+            "revenueYoY": -7.517588155535229,
+            "earningsYoY": -33.601841196777904
         }
     ],
     "annual": [

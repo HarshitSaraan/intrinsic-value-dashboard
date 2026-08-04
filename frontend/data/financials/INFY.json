@@ -2,17 +2,6 @@
     "symbol": "INFY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 4941000000.0,
-            "earnings": 809000000.0,
-            "ebitda": 1028000000.0,
-            "profitMargin": 16.37320380489779,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 919000000.0,
             "ebitda": 1334000000.0,
             "profitMargin": 18.234126984126984,
-            "revenueYoY": 6.553911205073996,
-            "earningsYoY": 13.038130381303814
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5082000000.0,
+            "earnings": 819000000.0,
+            "ebitda": 1307000000.0,
+            "profitMargin": 16.115702479338843,
+            "revenueYoY": 2.853673345476624,
+            "earningsYoY": 1.2360939431396787
         }
     ],
     "annual": [

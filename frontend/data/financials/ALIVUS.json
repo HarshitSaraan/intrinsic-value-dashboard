@@ -2,17 +2,6 @@
     "symbol": "ALIVUS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6495450000.0,
-            "earnings": 1418680000.0,
-            "ebitda": 2085200000.0,
-            "profitMargin": 21.84113494830997,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1502610000.0,
             "ebitda": 2195440000.0,
             "profitMargin": 22.330726167317344,
-            "revenueYoY": 4.836845090084195,
-            "earningsYoY": 9.711594626168225
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.604264587871146,
             "revenueYoY": 6.092264585209647,
             "earningsYoY": 14.656582174979556
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6404140000.0,
+            "earnings": 1600760000.0,
+            "ebitda": 2341150000.0,
+            "profitMargin": 24.995705902744163,
+            "revenueYoY": 6.408283846698325,
+            "earningsYoY": 31.711852552762576
         }
     ],
     "annual": [

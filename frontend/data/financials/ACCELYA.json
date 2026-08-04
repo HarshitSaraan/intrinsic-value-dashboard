@@ -2,24 +2,13 @@
     "symbol": "ACCELYA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1366326000.0,
-            "earnings": 302451000.0,
-            "ebitda": 489157000.0,
-            "profitMargin": 22.136078798178474,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 1317231000.0,
-            "earnings": 339464000.0,
-            "ebitda": 540772000.0,
-            "profitMargin": 25.771030290055425,
+            "revenue": 1317563000.0,
+            "earnings": 339455000.0,
+            "ebitda": 540761000.0,
+            "profitMargin": 25.763853417255948,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -42,22 +31,22 @@
             "earnings": 139399000.0,
             "ebitda": 357183000.0,
             "profitMargin": 10.486718107622785,
-            "revenueYoY": -0.18719251770557388,
-            "earningsYoY": -56.92483112805839
-        }
-    ],
-    "annual": [
-        {
-            "date": "2022-06-30",
-            "quarterLabel": "Q1 FY23",
-            "annualLabel": "FY23",
-            "revenue": 3683981000.0,
-            "earnings": 761877000.0,
-            "ebitda": 1420901000.0,
-            "profitMargin": 20.680806985703782,
             "revenueYoY": null,
             "earningsYoY": null
         },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1271219000.0,
+            "earnings": 304528000.0,
+            "ebitda": 488926000.0,
+            "profitMargin": 23.955589084178257,
+            "revenueYoY": -3.517402962894374,
+            "earningsYoY": -10.289139944911696
+        }
+    ],
+    "annual": [
         {
             "date": "2023-06-30",
             "quarterLabel": "Q1 FY24",
@@ -66,8 +55,8 @@
             "earnings": 1267236000.0,
             "ebitda": 2062982000.0,
             "profitMargin": 26.999077685551065,
-            "revenueYoY": 27.406384560615273,
-            "earningsYoY": 66.33078567800314
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2024-06-30",
@@ -84,12 +73,23 @@
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 5284914000.0,
+            "revenue": 5287177000.0,
             "earnings": 1290159000.0,
             "ebitda": 2060560000.0,
-            "profitMargin": 24.412109638870188,
-            "revenueYoY": 3.464583115127512,
+            "profitMargin": 24.40166084850195,
+            "revenueYoY": 3.5088866461952897,
             "earningsYoY": 37.47325462449919
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5322666000.0,
+            "earnings": 953792000.0,
+            "ebitda": 1820918000.0,
+            "profitMargin": 17.91944112217449,
+            "revenueYoY": 0.6712277648355635,
+            "earningsYoY": -26.071747745820478
         }
     ]
 }

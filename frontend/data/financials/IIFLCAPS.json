@@ -2,17 +2,6 @@
     "symbol": "IIFLCAPS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5174568000.0,
-            "earnings": 1753350000.0,
-            "ebitda": 2840893000.0,
-            "profitMargin": 33.883987996679146,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1147353000.0,
             "ebitda": 2341787000.0,
             "profitMargin": 21.810232181846313,
-            "revenueYoY": 19.526765965229977,
-            "earningsYoY": -10.330541696364932
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5130834000.0,
+            "earnings": 1840941000.0,
+            "ebitda": 3156743000.0,
+            "profitMargin": 35.87995635797221,
+            "revenueYoY": -0.8451720027642887,
+            "earningsYoY": 4.995636923603388
         }
     ],
     "annual": [

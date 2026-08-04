@@ -2,17 +2,6 @@
     "symbol": "NUCLEUS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2177200000.0,
-            "earnings": 352000000.0,
-            "ebitda": 519400000.0,
-            "profitMargin": 16.167554657358075,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 345500000.0,
             "ebitda": 467800000.0,
             "profitMargin": 15.371268407705655,
-            "revenueYoY": -1.8300139762403915,
-            "earningsYoY": -46.65740311872781
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2104300000.0,
+            "earnings": 238700000.0,
+            "ebitda": 356100000.0,
+            "profitMargin": 11.34343962362781,
+            "revenueYoY": -3.3483373139812604,
+            "earningsYoY": -32.1875
         }
     ],
     "annual": [

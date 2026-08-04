@@ -2,17 +2,6 @@
     "symbol": "BANKINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 96009300000.0,
-            "earnings": 26019800000.0,
-            "ebitda": null,
-            "profitMargin": 27.10133289170945,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 28122900000.0,
             "ebitda": null,
             "profitMargin": 31.68788176185384,
-            "revenueYoY": 11.889726156061165,
-            "earningsYoY": 6.659460689498236
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 30.668136626838695,
             "revenueYoY": 4.867965915801907,
             "earningsYoY": 18.669628513670357
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 95564400000.0,
+            "earnings": 33025800000.0,
+            "ebitda": null,
+            "profitMargin": 34.558685033338776,
+            "revenueYoY": 14.355392441356072,
+            "earningsYoY": 80.5122543125123
         }
     ],
     "annual": [

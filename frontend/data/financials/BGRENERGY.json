@@ -2,17 +2,6 @@
     "symbol": "BGRENERGY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 886100000.0,
-            "earnings": -2651200000.0,
-            "ebitda": -807700000.0,
-            "profitMargin": -299.1987360343076,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -7679400000.0,
             "ebitda": -1642600000.0,
             "profitMargin": -1532.2027134876298,
-            "revenueYoY": -61.46690243714923,
-            "earningsYoY": -132.48365221603294
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 157900000.0,
+            "earnings": -2241400000.0,
+            "ebitda": -186000000.0,
+            "profitMargin": -1419.506016466118,
+            "revenueYoY": -82.18034081932062,
+            "earningsYoY": 15.45715147857574
         }
     ],
     "annual": [

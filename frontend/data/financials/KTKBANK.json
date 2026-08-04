@@ -2,17 +2,6 @@
     "symbol": "KTKBANK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 11139900000.0,
-            "earnings": 2925000000.0,
-            "ebitda": null,
-            "profitMargin": 26.256968195405705,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4082500000.0,
             "ebitda": null,
             "profitMargin": 32.874870151308954,
-            "revenueYoY": 3.2852877329851204,
-            "earningsYoY": 61.606365291742534
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12937900000.0,
+            "earnings": 4191200000.0,
+            "ebitda": null,
+            "profitMargin": 32.394747215545024,
+            "revenueYoY": 16.140180791569044,
+            "earningsYoY": 43.28888888888889
         }
     ],
     "annual": [

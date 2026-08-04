@@ -2,24 +2,13 @@
     "symbol": "COALINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 439615600000.0,
-            "earnings": 97516400000.0,
-            "ebitda": 133115800000.0,
-            "profitMargin": 22.18219735605379,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 318804300000.0,
-            "earnings": 87433800000.0,
-            "ebitda": 119742600000.0,
-            "profitMargin": 27.42553974334725,
+            "revenue": 429192000000.0,
+            "earnings": 87970500000.0,
+            "ebitda": 120412600000.0,
+            "profitMargin": 20.496770676061065,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 71574500000.0,
             "ebitda": 97933400000.0,
             "profitMargin": 23.224772918054512,
-            "revenueYoY": -4.761614859306443,
-            "earningsYoY": -15.849848981314599
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 23.31506346629589,
             "revenueYoY": 5.751547488305692,
             "earningsYoY": 11.152380522660804
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 462548000000.0,
+            "earnings": 88521100000.0,
+            "ebitda": 120466400000.0,
+            "profitMargin": 19.137711113225006,
+            "revenueYoY": 7.771813081324908,
+            "earningsYoY": 0.6258916341273495
         }
     ],
     "annual": [

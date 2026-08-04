@@ -2,17 +2,6 @@
     "symbol": "APARINDS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 51887200000.0,
-            "earnings": 2499900000.0,
-            "ebitda": 4753200000.0,
-            "profitMargin": 4.817951248092015,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2089300000.0,
             "ebitda": 4347400000.0,
             "profitMargin": 3.82582804740489,
-            "revenueYoY": 16.278931118918344,
-            "earningsYoY": 19.443174022410243
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.8568356720776604,
             "revenueYoY": 26.643757998118993,
             "earningsYoY": 1.3800552022080883
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 65666200000.0,
+            "earnings": 4674500000.0,
+            "ebitda": 7914800000.0,
+            "profitMargin": 7.118578507664522,
+            "revenueYoY": 29.157389559812753,
+            "earningsYoY": 77.79848617397589
         }
     ],
     "annual": [

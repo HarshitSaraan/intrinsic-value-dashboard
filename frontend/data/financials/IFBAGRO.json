@@ -2,17 +2,6 @@
     "symbol": "IFBAGRO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2927800000.0,
-            "earnings": 171800000.0,
-            "ebitda": 294800000.0,
-            "profitMargin": 5.867887150761664,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 93000000.0,
             "ebitda": 266000000.0,
             "profitMargin": 2.527242588113807,
-            "revenueYoY": 58.45928605262025,
-            "earningsYoY": 1376.1904761904764
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3975300000.0,
+            "earnings": 203500000.0,
+            "ebitda": 366000000.0,
+            "profitMargin": 5.119110507383091,
+            "revenueYoY": 35.777717057176034,
+            "earningsYoY": 18.451688009313155
         }
     ],
     "annual": [

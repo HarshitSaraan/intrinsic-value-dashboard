@@ -2,17 +2,6 @@
     "symbol": "HESTERBIO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 841050000.0,
-            "earnings": 164420000.0,
-            "ebitda": 261790000.0,
-            "profitMargin": 19.549372807799774,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 159820000.0,
             "ebitda": 360970000.0,
             "profitMargin": 15.964439116971333,
-            "revenueYoY": 22.19713152273421,
-            "earningsYoY": 1137.9550735863672
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 772440000.0,
+            "earnings": 969810000.0,
+            "ebitda": 264570000.0,
+            "profitMargin": 125.55149914556469,
+            "revenueYoY": -8.157660067772428,
+            "earningsYoY": 489.8370027977132
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "AARTIIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 19490000000.0,
-            "earnings": 960000000.0,
-            "ebitda": 2650000000.0,
-            "profitMargin": 4.925602873268343,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1330000000.0,
             "ebitda": 3080000000.0,
             "profitMargin": 5.737704918032787,
-            "revenueYoY": 25.773195876288657,
-            "earningsYoY": 189.1304347826087
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.213151927437642,
             "revenueYoY": 13.134940995382246,
             "earningsYoY": 42.70833333333333
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 23870000000.0,
+            "earnings": 1550000000.0,
+            "ebitda": 3870000000.0,
+            "profitMargin": 6.493506493506493,
+            "revenueYoY": 42.507462686567166,
+            "earningsYoY": 260.4651162790698
         }
     ],
     "annual": [

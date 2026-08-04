@@ -2,17 +2,6 @@
     "symbol": "ASAHISONG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1498778000.0,
-            "earnings": 31631000.0,
-            "ebitda": 120038000.0,
-            "profitMargin": 2.110452648757855,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 108707000.0,
             "ebitda": 230187000.0,
             "profitMargin": 7.546429768921957,
-            "revenueYoY": -5.696350036202425,
-            "earningsYoY": 42.22707766380574
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1889051000.0,
+            "earnings": 192320000.0,
+            "ebitda": 325981000.0,
+            "profitMargin": 10.180773308926018,
+            "revenueYoY": 26.03941344215087,
+            "earningsYoY": 508.01112832348014
         }
     ],
     "annual": [

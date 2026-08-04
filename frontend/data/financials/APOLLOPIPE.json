@@ -2,17 +2,6 @@
     "symbol": "APOLLOPIPE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3147783000.0,
-            "earnings": 97766000.0,
-            "ebitda": 273950000.0,
-            "profitMargin": 3.10586847949811,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -32643000.0,
             "ebitda": 125791000.0,
             "profitMargin": -1.3206144176480012,
-            "revenueYoY": -19.72746743135131,
-            "earningsYoY": -152.5974025974026
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.2862367745527352,
             "revenueYoY": 10.242796279159014,
             "earningsYoY": -89.84002618497227
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2954349000.0,
+            "earnings": -85691000.0,
+            "ebitda": 52641000.0,
+            "profitMargin": -2.900503630410625,
+            "revenueYoY": 7.4302476785589615,
+            "earningsYoY": -205.3193712129592
         }
     ],
     "annual": [

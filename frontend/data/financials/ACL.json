@@ -2,17 +2,6 @@
     "symbol": "ACL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 894700000.0,
-            "earnings": -499100000.0,
-            "ebitda": -118700000.0,
-            "profitMargin": -55.78406169665809,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -441400000.0,
             "ebitda": 56400000.0,
             "profitMargin": -40.0326500997642,
-            "revenueYoY": 66.2294587667722,
-            "earningsYoY": -0.9375714612394238
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.333548595414918,
             "revenueYoY": 73.074773667151,
             "earningsYoY": 197.21498697655778
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1421700000.0,
+            "earnings": -359300000.0,
+            "ebitda": 49300000.0,
+            "profitMargin": -25.27256101849898,
+            "revenueYoY": 42.84135436551794,
+            "earningsYoY": -21.303173531397704
         }
     ],
     "annual": [

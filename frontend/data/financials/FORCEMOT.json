@@ -2,17 +2,6 @@
     "symbol": "FORCEMOT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 22972500000.0,
-            "earnings": 1763300000.0,
-            "ebitda": 3481300000.0,
-            "profitMargin": 7.67569920557188,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2785200000.0,
             "ebitda": 4529700000.0,
             "profitMargin": 10.92303830828601,
-            "revenueYoY": 8.227044876719539,
-            "earningsYoY": -35.92970025994341
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24400100000.0,
+            "earnings": 2165600000.0,
+            "ebitda": 3707300000.0,
+            "profitMargin": 8.875373461584173,
+            "revenueYoY": 6.214386766786375,
+            "earningsYoY": 22.81517609028526
         }
     ],
     "annual": [

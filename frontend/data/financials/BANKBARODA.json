@@ -2,17 +2,6 @@
     "symbol": "BANKBARODA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 196225200000.0,
-            "earnings": 54197000000.0,
-            "ebitda": null,
-            "profitMargin": 27.619796030275417,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 54429200000.0,
             "ebitda": null,
             "profitMargin": 28.03724067875536,
-            "revenueYoY": 10.3694468275261,
-            "earningsYoY": 4.3960933843781405
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 30.19358774430095,
             "revenueYoY": -2.0922898791796363,
             "earningsYoY": 7.031385501042493
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 200155800000.0,
+            "earnings": 17832900000.0,
+            "ebitda": null,
+            "profitMargin": 8.909509492105649,
+            "revenueYoY": 10.597857618847119,
+            "earningsYoY": -48.59591370821755
         }
     ],
     "annual": [
