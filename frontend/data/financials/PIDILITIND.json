@@ -2,17 +2,6 @@
     "symbol": "PIDILITIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 31411400000.0,
-            "earnings": 4223400000.0,
-            "ebitda": 6872400000.0,
-            "profitMargin": 13.445437006946523,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6180100000.0,
             "ebitda": 9540100000.0,
             "profitMargin": 16.65835559353192,
-            "revenueYoY": 10.12196823304867,
-            "earningsYoY": 11.87321241084682
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.16546389163304,
             "revenueYoY": 14.078964961765475,
             "earningsYoY": 37.15726665719563
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 45515500000.0,
+            "earnings": 8724100000.0,
+            "ebitda": 13026200000.0,
+            "profitMargin": 19.167316628401313,
+            "revenueYoY": 21.274413151794516,
+            "earningsYoY": 29.743757528888626
         }
     ],
     "annual": [

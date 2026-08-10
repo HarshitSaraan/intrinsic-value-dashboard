@@ -2,17 +2,6 @@
     "symbol": "DOMS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5622772000.0,
-            "earnings": 572783000.0,
-            "ebitda": 1032267000.0,
-            "profitMargin": 10.186843784524786,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 567356000.0,
             "ebitda": 1050865000.0,
             "profitMargin": 9.393572536454656,
-            "revenueYoY": 18.72353708483937,
-            "earningsYoY": 17.132286754808288
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6705082000.0,
+            "earnings": 444891000.0,
+            "ebitda": 865449000.0,
+            "profitMargin": 6.635131382434994,
+            "revenueYoY": 19.24869085924167,
+            "earningsYoY": -22.328176639320652
         }
     ],
     "annual": [

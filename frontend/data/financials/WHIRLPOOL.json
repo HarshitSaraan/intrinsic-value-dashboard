@@ -2,17 +2,6 @@
     "symbol": "WHIRLPOOL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 20046700000.0,
-            "earnings": 1192000000.0,
-            "ebitda": 2297100000.0,
-            "profitMargin": 5.946115819561324,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 264900000.0,
             "ebitda": 943000000.0,
             "profitMargin": 1.493370315248275,
-            "revenueYoY": 4.046690324661994,
-            "earningsYoY": -39.74067333939945
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.6776001137213,
             "revenueYoY": 8.784488220006285,
             "earningsYoY": -32.718120805369125
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27267500000.0,
+            "earnings": 1028800000.0,
+            "ebitda": 2080000000.0,
+            "profitMargin": 3.772989823049418,
+            "revenueYoY": 12.104903960005263,
+            "earningsYoY": -29.403691758731902
         }
     ],
     "annual": [

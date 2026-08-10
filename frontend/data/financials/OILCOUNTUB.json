@@ -2,17 +2,6 @@
     "symbol": "OILCOUNTUB",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 245690000.0,
-            "earnings": -88053000.0,
-            "ebitda": -80600000.0,
-            "profitMargin": -35.839065489030894,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -136364000.0,
             "ebitda": -149158000.0,
             "profitMargin": -45.67359543411419,
-            "revenueYoY": -13.042389221242958,
-            "earningsYoY": -29.35797222433027
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 174364000.0,
+            "earnings": -151064000.0,
+            "ebitda": -150812000.0,
+            "profitMargin": -86.63714987038608,
+            "revenueYoY": -29.03089258822093,
+            "earningsYoY": -71.5603102676797
         }
     ],
     "annual": [

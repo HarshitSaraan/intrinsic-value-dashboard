@@ -2,17 +2,6 @@
     "symbol": "GREAVESCOT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8228300000.0,
-            "earnings": 240500000.0,
-            "ebitda": 580200000.0,
-            "profitMargin": 2.922839468663029,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 255000000.0,
             "ebitda": 512800000.0,
             "profitMargin": 2.9127211669160564,
-            "revenueYoY": 16.651565622918056,
-            "earningsYoY": 22.537241710716003
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.25343664083979,
             "revenueYoY": 21.562169585455077,
             "earningsYoY": -6.278586278586279
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9741200000.0,
+            "earnings": 257700000.0,
+            "ebitda": 672700000.0,
+            "profitMargin": 2.6454646244815834,
+            "revenueYoY": 30.678936989388678,
+            "earningsYoY": -22.12148685403445
         }
     ],
     "annual": [

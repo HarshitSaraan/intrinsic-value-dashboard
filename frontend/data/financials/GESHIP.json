@@ -2,17 +2,6 @@
     "symbol": "GESHIP",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 12014700000.0,
-            "earnings": 5045000000.0,
-            "ebitda": 5808300000.0,
-            "profitMargin": 41.99022863658685,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 10440900000.0,
             "ebitda": 10655100000.0,
             "profitMargin": 69.08098451766574,
-            "revenueYoY": 23.57731554160126,
-            "earningsYoY": 187.5568040981575
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20053600000.0,
+            "earnings": 13088400000.0,
+            "ebitda": 13847200000.0,
+            "profitMargin": 65.26708421430565,
+            "revenueYoY": 66.90886996762299,
+            "earningsYoY": 159.43310208126857
         }
     ],
     "annual": [

@@ -2,24 +2,13 @@
     "symbol": "KESORAMIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 672803000.0,
-            "earnings": 57656235000.0,
-            "ebitda": -85558000.0,
-            "profitMargin": 8569.556764758778,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 610500000.0,
-            "earnings": -993400000.0,
-            "ebitda": -880200000.0,
-            "profitMargin": -162.7190827190827,
+            "revenue": 610499000.0,
+            "earnings": -993440000.0,
+            "ebitda": -880223000.0,
+            "profitMargin": -162.72590127092755,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 60200000.0,
             "ebitda": 179700000.0,
             "profitMargin": 9.29155733909554,
-            "revenueYoY": -1.0688654756451368,
-            "earningsYoY": 108.7031950267457
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 46.63220135189297,
             "revenueYoY": -0.984835085455921,
             "earningsYoY": -99.46119790860433
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 776607000.0,
+            "earnings": -201893000.0,
+            "ebitda": -92933000.0,
+            "profitMargin": -25.99680404631944,
+            "revenueYoY": 27.208562176187023,
+            "earningsYoY": 79.67738363665646
         }
     ],
     "annual": [

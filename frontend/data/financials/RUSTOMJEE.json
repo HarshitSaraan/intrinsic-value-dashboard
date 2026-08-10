@@ -2,17 +2,6 @@
     "symbol": "RUSTOMJEE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2731200000.0,
-            "earnings": 145100000.0,
-            "ebitda": 271900000.0,
-            "profitMargin": 5.312683069712946,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 524200000.0,
             "ebitda": 1060200000.0,
             "profitMargin": 3.2845228920343112,
-            "revenueYoY": 172.88535521928702,
-            "earningsYoY": -19.104938271604937
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4702900000.0,
+            "earnings": 531400000.0,
+            "ebitda": 1062500000.0,
+            "profitMargin": 11.29941100172234,
+            "revenueYoY": 72.19171060339778,
+            "earningsYoY": 266.23018607856653
         }
     ],
     "annual": [

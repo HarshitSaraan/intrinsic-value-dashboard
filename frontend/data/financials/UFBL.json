@@ -2,17 +2,6 @@
     "symbol": "UFBL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2969810000.0,
-            "earnings": -164090000.0,
-            "ebitda": 479730000.0,
-            "profitMargin": -5.525269293321795,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -134080000.0,
             "ebitda": 574630000.0,
             "profitMargin": -3.7203520571815445,
-            "revenueYoY": 23.09825768262567,
-            "earningsYoY": 33.72219476025705
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4258990000.0,
+            "earnings": 30930000.0,
+            "ebitda": 710950000.0,
+            "profitMargin": 0.7262285189681121,
+            "revenueYoY": 43.40951104616121,
+            "earningsYoY": 118.84941190809921
         }
     ],
     "annual": [

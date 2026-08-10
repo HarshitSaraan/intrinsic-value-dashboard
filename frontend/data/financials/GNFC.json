@@ -2,17 +2,6 @@
     "symbol": "GNFC",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 16010000000.0,
-            "earnings": 830000000.0,
-            "ebitda": 1810000000.0,
-            "profitMargin": 5.184259837601499,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3960000000.0,
             "ebitda": 6070000000.0,
             "profitMargin": 17.934782608695652,
-            "revenueYoY": 7.445255474452554,
-            "earningsYoY": 87.67772511848341
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22380000000.0,
+            "earnings": 3120000000.0,
+            "ebitda": 4940000000.0,
+            "profitMargin": 13.941018766756033,
+            "revenueYoY": 39.787632729544036,
+            "earningsYoY": 275.90361445783134
         }
     ],
     "annual": [

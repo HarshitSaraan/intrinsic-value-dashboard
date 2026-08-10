@@ -2,17 +2,6 @@
     "symbol": "STAR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11903930000.0,
-            "earnings": 821940000.0,
-            "ebitda": 2055590000.0,
-            "profitMargin": 6.9047785059219935,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2021070000.0,
             "ebitda": 3394770000.0,
             "profitMargin": 16.917731277717415,
-            "revenueYoY": 3.5520648506024703,
-            "earningsYoY": 129.80806403929682
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.591755007669233,
             "revenueYoY": 11.17924920593451,
             "earningsYoY": 54.44436333552327
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12654070000.0,
+            "earnings": 1569140000.0,
+            "ebitda": 2965760000.0,
+            "profitMargin": 12.400279119682441,
+            "revenueYoY": 13.009405788507292,
+            "earningsYoY": 57.53152357240382
         }
     ],
     "annual": [

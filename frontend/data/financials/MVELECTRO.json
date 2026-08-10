@@ -1,0 +1,39 @@
+{
+    "symbol": "MVELECTRO",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 679450000.0,
+            "earnings": 11910000.0,
+            "ebitda": 60120000.0,
+            "profitMargin": 1.7528883655898153,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 498810000.0,
+            "earnings": 5570000.0,
+            "ebitda": 65000000.0,
+            "profitMargin": 1.1166576451955654,
+            "revenueYoY": -26.58620943410111,
+            "earningsYoY": -53.232577665827044
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 626350000.0,
+            "earnings": 14030000.0,
+            "ebitda": 91200000.0,
+            "profitMargin": 2.239961682765227,
+            "revenueYoY": 25.568853872215875,
+            "earningsYoY": 151.8850987432675
+        }
+    ]
+}

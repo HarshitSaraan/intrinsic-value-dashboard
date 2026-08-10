@@ -2,17 +2,6 @@
     "symbol": "MSUMI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 25003100000.0,
-            "earnings": 1649300000.0,
-            "ebitda": 2728300000.0,
-            "profitMargin": 6.596382048625971,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1494400000.0,
             "ebitda": 2632700000.0,
             "profitMargin": 5.214526979873265,
-            "revenueYoY": 25.570818271442658,
-            "earningsYoY": 6.758108301185883
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.026771388566724,
             "revenueYoY": 33.110694273910035,
             "earningsYoY": 1.4369732613836173
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 33838500000.0,
+            "earnings": 1453200000.0,
+            "ebitda": 2636300000.0,
+            "profitMargin": 4.294516600913161,
+            "revenueYoY": 36.399364731300686,
+            "earningsYoY": 1.551362683438155
         }
     ],
     "annual": [

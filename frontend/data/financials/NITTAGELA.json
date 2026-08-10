@@ -2,17 +2,6 @@
     "symbol": "NITTAGELA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1387933000.0,
-            "earnings": 191729000.0,
-            "ebitda": 299514000.0,
-            "profitMargin": 13.81399534415566,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 340802000.0,
             "ebitda": 502447000.0,
             "profitMargin": 21.07164254591928,
-            "revenueYoY": 25.243851443439475,
-            "earningsYoY": 73.63318167691578
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1408693000.0,
+            "earnings": 251810000.0,
+            "ebitda": 381270000.0,
+            "profitMargin": 17.875434888936056,
+            "revenueYoY": 1.4957494345908628,
+            "earningsYoY": 31.33641754768449
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SJVN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9174500000.0,
-            "earnings": 2275800000.0,
-            "ebitda": 7871600000.0,
-            "profitMargin": 24.8057114829146,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -1179800000.0,
             "ebitda": 9634700000.0,
             "profitMargin": -7.883886746810828,
-            "revenueYoY": 196.68318794607453,
-            "earningsYoY": 7.539184952978056
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13943800000.0,
+            "earnings": 2249300000.0,
+            "ebitda": 9190300000.0,
+            "profitMargin": 16.131183751918414,
+            "revenueYoY": 51.9843043217614,
+            "earningsYoY": -1.246871844404443
         }
     ],
     "annual": [

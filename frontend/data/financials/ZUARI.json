@@ -2,17 +2,6 @@
     "symbol": "ZUARI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 12460500000.0,
-            "earnings": 989900000.0,
-            "ebitda": 2131500000.0,
-            "profitMargin": 7.9443040006420285,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -250300000.0,
             "ebitda": -31300000.0,
             "profitMargin": -13.36144771259275,
-            "revenueYoY": -80.32041180796303,
-            "earningsYoY": -226.1592741935484
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6152100000.0,
+            "earnings": 1184900000.0,
+            "ebitda": 1560300000.0,
+            "profitMargin": 19.260090050551845,
+            "revenueYoY": -50.62718189478753,
+            "earningsYoY": 19.69895949085766
         }
     ],
     "annual": [

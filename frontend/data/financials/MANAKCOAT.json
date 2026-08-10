@@ -2,17 +2,6 @@
     "symbol": "MANAKCOAT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2078854000.0,
-            "earnings": 50334000.0,
-            "ebitda": 171310000.0,
-            "profitMargin": 2.4212378550874667,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 73479000.0,
             "ebitda": 185021000.0,
             "profitMargin": 3.9315595416257123,
-            "revenueYoY": -8.853925110082745,
-            "earningsYoY": 46.68516559199888
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.3619357462383084,
             "revenueYoY": 9.414850682154686,
             "earningsYoY": 6.735010132316129
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2621409000.0,
+            "earnings": 140997000.0,
+            "ebitda": 290847000.0,
+            "profitMargin": 5.378672309433591,
+            "revenueYoY": 4.93938804382027,
+            "earningsYoY": 0.6697177618003841
         }
     ],
     "annual": [

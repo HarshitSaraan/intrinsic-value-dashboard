@@ -2,17 +2,6 @@
     "symbol": "UBL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23229800000.0,
-            "earnings": 975700000.0,
-            "ebitda": 1947200000.0,
-            "profitMargin": 4.200208353063737,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 810000000.0,
             "ebitda": 2181100000.0,
             "profitMargin": 3.9079084488015745,
-            "revenueYoY": 3.622529071220741,
-            "earningsYoY": 110.9375
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.523414827094268,
             "revenueYoY": -3.1386408836924984,
             "earningsYoY": 4.314850876293943
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 30668600000.0,
+            "earnings": 1663300000.0,
+            "ebitda": 3333100000.0,
+            "profitMargin": 5.4234624338900375,
+            "revenueYoY": 7.071137303094627,
+            "earningsYoY": -9.539348452711154
         }
     ],
     "annual": [

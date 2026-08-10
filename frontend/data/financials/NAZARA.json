@@ -2,17 +2,6 @@
     "symbol": "NAZARA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 4987700000.0,
-            "earnings": 683900000.0,
-            "ebitda": 1002900000.0,
-            "profitMargin": 13.711730857910458,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 469600000.0,
             "ebitda": 942100000.0,
             "profitMargin": 11.8055206395495,
-            "revenueYoY": -23.533256439830836,
-            "earningsYoY": 608.2956259426848
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4287700000.0,
+            "earnings": -799200000.0,
+            "ebitda": -289600000.0,
+            "profitMargin": -18.639363761457194,
+            "revenueYoY": -14.034524931331074,
+            "earningsYoY": -249.49494949494948
         }
     ],
     "annual": [

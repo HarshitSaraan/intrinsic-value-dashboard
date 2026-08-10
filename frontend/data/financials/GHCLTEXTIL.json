@@ -2,17 +2,6 @@
     "symbol": "GHCLTEXTIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2677500000.0,
-            "earnings": 135200000.0,
-            "ebitda": 323200000.0,
-            "profitMargin": 5.049486461251167,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 276600000.0,
             "ebitda": 509400000.0,
             "profitMargin": 7.8408027893528365,
-            "revenueYoY": 28.992979376919703,
-            "earningsYoY": 94.78873239436619
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4089400000.0,
+            "earnings": 393500000.0,
+            "ebitda": 697800000.0,
+            "profitMargin": 9.622438499535384,
+            "revenueYoY": 52.73202614379085,
+            "earningsYoY": 191.05029585798817
         }
     ],
     "annual": [

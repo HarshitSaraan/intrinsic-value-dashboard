@@ -2,17 +2,6 @@
     "symbol": "HYBRIDFIN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 13645000.0,
-            "earnings": 7371000.0,
-            "ebitda": 7692000.0,
-            "profitMargin": 54.01978746793697,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4408000.0,
             "ebitda": 4847000.0,
             "profitMargin": 37.9607302790217,
-            "revenueYoY": 1.273329844758416,
-            "earningsYoY": -58.83836025772714
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10716000.0,
+            "earnings": 5822000.0,
+            "ebitda": 6179000.0,
+            "profitMargin": 54.329973870847326,
+            "revenueYoY": 10.326366725007722,
+            "earningsYoY": -21.014787681454347
         }
     ],
     "annual": [

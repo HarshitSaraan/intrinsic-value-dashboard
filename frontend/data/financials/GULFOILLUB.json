@@ -2,17 +2,6 @@
     "symbol": "GULFOILLUB",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 10164515000.0,
-            "earnings": 958846000.0,
-            "ebitda": 1499432000.0,
-            "profitMargin": 9.43326858192447,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 897513000.0,
             "ebitda": 1617457000.0,
             "profitMargin": 8.505119249521043,
-            "revenueYoY": 10.760705564631712,
-            "earningsYoY": -2.649310474240133
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13272124000.0,
+            "earnings": 1231607000.0,
+            "ebitda": 1926657000.0,
+            "profitMargin": 9.279652601196311,
+            "revenueYoY": 30.5731163759412,
+            "earningsYoY": 28.446799590340888
         }
     ],
     "annual": [

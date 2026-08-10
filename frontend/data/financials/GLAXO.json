@@ -2,17 +2,6 @@
     "symbol": "GLAXO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9743700000.0,
-            "earnings": 2628700000.0,
-            "ebitda": 3738700000.0,
-            "profitMargin": 26.978457875345097,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2956200000.0,
             "ebitda": 4214400000.0,
             "profitMargin": 28.390603691681232,
-            "revenueYoY": 9.67327420951739,
-            "earningsYoY": 28.597529145641204
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 27.91721089118859,
             "revenueYoY": 2.148054640434332,
             "earningsYoY": 5.7024384676836455
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9384400000.0,
+            "earnings": 2371800000.0,
+            "ebitda": 3392600000.0,
+            "profitMargin": 25.273858744299048,
+            "revenueYoY": 16.551784095284226,
+            "earningsYoY": 15.691917467440614
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "INTELLECT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7259060000.0,
-            "earnings": 1353190000.0,
-            "ebitda": 2245740000.0,
-            "profitMargin": 18.641394340314037,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 284480000.0,
             "ebitda": 916350000.0,
             "profitMargin": 3.8896120232326656,
-            "revenueYoY": 19.972573348249583,
-            "earningsYoY": -59.47058739724466
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 14.194250660256735,
             "revenueYoY": 16.6843916429951,
             "earningsYoY": -11.152166362447254
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8451690000.0,
+            "earnings": 1020720000.0,
+            "ebitda": 1939900000.0,
+            "profitMargin": 12.077111204977939,
+            "revenueYoY": 20.44780522425177,
+            "earningsYoY": 8.027559346788447
         }
     ],
     "annual": [

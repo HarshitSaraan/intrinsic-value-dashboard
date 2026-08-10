@@ -2,17 +2,6 @@
     "symbol": "MCX",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2913300000.0,
-            "earnings": 1354600000.0,
-            "ebitda": 1901100000.0,
-            "profitMargin": 46.4970995091477,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4011200000.0,
             "ebitda": 5251900000.0,
             "profitMargin": 60.262612301313055,
-            "revenueYoY": 120.85738934235847,
-            "earningsYoY": 150.63734066483377
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 59.59569824735078,
             "revenueYoY": 205.13163766175813,
             "earningsYoY": 291.0896205521925
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7020000000.0,
+            "earnings": 4134400000.0,
+            "ebitda": 5439900000.0,
+            "profitMargin": 58.8945868945869,
+            "revenueYoY": 88.09785375525844,
+            "earningsYoY": 103.47458044195088
         }
     ],
     "annual": [

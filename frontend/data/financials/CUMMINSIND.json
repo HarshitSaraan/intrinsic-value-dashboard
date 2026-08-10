@@ -2,17 +2,6 @@
     "symbol": "CUMMINSIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 24281300000.0,
-            "earnings": 5295000000.0,
-            "ebitda": 7420900000.0,
-            "profitMargin": 21.806904902126327,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4860600000.0,
             "ebitda": 6806600000.0,
             "profitMargin": 16.16836979083506,
-            "revenueYoY": -1.5041855741035008,
-            "earningsYoY": -12.964223041936753
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.91752159827214,
             "revenueYoY": 22.03629953915153,
             "earningsYoY": 22.65533522190746
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 33749300000.0,
+            "earnings": 6093000000.0,
+            "ebitda": 8433300000.0,
+            "profitMargin": 18.05370778060582,
+            "revenueYoY": 18.057795299278347,
+            "earningsYoY": 0.8941877794336811
         }
     ],
     "annual": [

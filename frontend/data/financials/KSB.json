@@ -2,17 +2,6 @@
     "symbol": "KSB",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6667000000.0,
-            "earnings": 704000000.0,
-            "ebitda": 1069000000.0,
-            "profitMargin": 10.55947202639868,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 398000000.0,
             "ebitda": 684000000.0,
             "profitMargin": 6.618992183602196,
-            "revenueYoY": 0.9909304669129997,
-            "earningsYoY": -22.868217054263564
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6907000000.0,
+            "earnings": 572000000.0,
+            "ebitda": 909000000.0,
+            "profitMargin": 8.281453597799333,
+            "revenueYoY": 3.59982000899955,
+            "earningsYoY": -18.75
         }
     ],
     "annual": [

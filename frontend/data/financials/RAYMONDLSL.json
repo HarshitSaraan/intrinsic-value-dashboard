@@ -2,17 +2,6 @@
     "symbol": "RAYMONDLSL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14941500000.0,
-            "earnings": -449500000.0,
-            "ebitda": 971900000.0,
-            "profitMargin": -3.008399424421912,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 428600000.0,
             "ebitda": 2142100000.0,
             "profitMargin": 2.3183608118049244,
-            "revenueYoY": 5.387610377320845,
-            "earningsYoY": -33.20866448496182
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -2.930563764811844,
             "revenueYoY": 18.893685372954522,
             "earningsYoY": -15.817575083426028
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 15155100000.0,
+            "earnings": -225900000.0,
+            "ebitda": 1345600000.0,
+            "profitMargin": -1.4905873270384227,
+            "revenueYoY": 5.947861831756884,
+            "earningsYoY": -13.975782038345105
         }
     ],
     "annual": [

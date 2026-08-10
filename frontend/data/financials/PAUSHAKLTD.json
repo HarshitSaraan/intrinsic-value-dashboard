@@ -2,17 +2,6 @@
     "symbol": "PAUSHAKLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 558800000.0,
-            "earnings": 120300000.0,
-            "ebitda": 197300000.0,
-            "profitMargin": 21.52827487473157,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 125100000.0,
             "ebitda": 249400000.0,
             "profitMargin": 22.687704026115345,
-            "revenueYoY": 5.309396485867074,
-            "earningsYoY": 30.312499999999996
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 835500000.0,
+            "earnings": 151000000.0,
+            "ebitda": 288000000.0,
+            "profitMargin": 18.073010173548774,
+            "revenueYoY": 49.516821760916244,
+            "earningsYoY": 25.519534497090607
         }
     ],
     "annual": [

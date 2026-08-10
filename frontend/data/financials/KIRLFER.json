@@ -2,24 +2,13 @@
     "symbol": "KIRLFER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 17369500000.0,
-            "earnings": 923300000.0,
-            "ebitda": 2256600000.0,
-            "profitMargin": 5.315639483001814,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 16980900000.0,
-            "earnings": 951200000.0,
-            "ebitda": 2278400000.0,
-            "profitMargin": 5.6015876661425485,
+            "revenue": 16980700000.0,
+            "earnings": 2379700000.0,
+            "ebitda": 2278200000.0,
+            "profitMargin": 14.014145471034764,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 533200000.0,
             "ebitda": 1733500000.0,
             "profitMargin": 3.295406085252872,
-            "revenueYoY": 0.6475491415775069,
-            "earningsYoY": -1.8228687166267723
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.7743071606242715,
             "revenueYoY": 4.617864647802182,
             "earningsYoY": 33.32611285605979
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17715100000.0,
+            "earnings": 823400000.0,
+            "ebitda": 2038400000.0,
+            "profitMargin": 4.648012147828688,
+            "revenueYoY": 4.3249100449333655,
+            "earningsYoY": -65.39899987393369
         }
     ],
     "annual": [
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 65642300000.0,
-            "earnings": 2940300000.0,
-            "ebitda": 8087600000.0,
-            "profitMargin": 4.4792763202995625,
-            "revenueYoY": 8.923119300155316,
-            "earningsYoY": -1.2626347426038484
+            "revenue": 64687500000.0,
+            "earnings": 2940200000.0,
+            "ebitda": 8055200000.0,
+            "profitMargin": 4.545236714975846,
+            "revenueYoY": 7.3387781922448925,
+            "earningsYoY": -1.2659928137277947
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 68885700000.0,
-            "earnings": 3578100000.0,
-            "ebitda": 8889300000.0,
-            "profitMargin": 5.194256572844582,
-            "revenueYoY": 4.941021262204401,
-            "earningsYoY": 21.69166411590654
+            "revenue": 66491200000.0,
+            "earnings": 5072200000.0,
+            "ebitda": 8864600000.0,
+            "profitMargin": 7.62837789060808,
+            "revenueYoY": 2.788328502415459,
+            "earningsYoY": 72.51207400857085
         }
     ]
 }

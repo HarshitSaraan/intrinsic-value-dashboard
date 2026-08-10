@@ -2,17 +2,6 @@
     "symbol": "XPROINDIA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1449020000.0,
-            "earnings": -54840000.0,
-            "ebitda": 9208000.0,
-            "profitMargin": -3.7846268512511902,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 129679000.0,
             "ebitda": 228078000.0,
             "profitMargin": 9.651097627320974,
-            "revenueYoY": -15.072828343799083,
-            "earningsYoY": 97.24241778967541
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1744208000.0,
+            "earnings": 79430000.0,
+            "ebitda": 198337000.0,
+            "profitMargin": 4.5539293478759415,
+            "revenueYoY": 20.37156146913086,
+            "earningsYoY": 244.8395331874544
         }
     ],
     "annual": [

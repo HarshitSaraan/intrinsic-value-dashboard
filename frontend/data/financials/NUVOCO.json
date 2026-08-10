@@ -2,17 +2,6 @@
     "symbol": "NUVOCO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 30422500000.0,
-            "earnings": 1655400000.0,
-            "ebitda": 5559400000.0,
-            "profitMargin": 5.4413674089900566,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 490500000.0,
             "ebitda": 3864700000.0,
             "profitMargin": 1.815812562239243,
-            "revenueYoY": 12.115665570940001,
-            "earningsYoY": 179.92504481016783
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.258259620473274,
             "revenueYoY": 8.694223025721094,
             "earningsYoY": -14.938987555877734
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 31287100000.0,
+            "earnings": 1597600000.0,
+            "ebitda": 5718500000.0,
+            "profitMargin": 5.106257850679674,
+            "revenueYoY": 8.911825112263724,
+            "earningsYoY": 19.975968759387204
         }
     ],
     "annual": [

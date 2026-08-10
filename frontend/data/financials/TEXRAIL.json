@@ -2,17 +2,6 @@
     "symbol": "TEXRAIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9105998000.0,
-            "earnings": 299923000.0,
-            "ebitda": 852414000.0,
-            "profitMargin": 3.2936862055098186,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 576819000.0,
             "ebitda": 1160866000.0,
             "profitMargin": 4.942880673896048,
-            "revenueYoY": -13.323823213679184,
-            "earningsYoY": 45.04565216844657
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7566800000.0,
+            "earnings": 500377000.0,
+            "ebitda": 799198000.0,
+            "profitMargin": 6.612795369244595,
+            "revenueYoY": -16.903122535278396,
+            "earningsYoY": 66.83515435628478
         }
     ],
     "annual": [

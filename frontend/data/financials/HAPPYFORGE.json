@@ -2,24 +2,13 @@
     "symbol": "HAPPYFORGE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3519723000.0,
-            "earnings": 676301000.0,
-            "ebitda": 1122968000.0,
-            "profitMargin": 19.21460864960112,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 3538034000.0,
-            "earnings": 656851000.0,
+            "earnings": 656881000.0,
             "ebitda": 1115006000.0,
-            "profitMargin": 18.565423622271577,
+            "profitMargin": 18.566271550810423,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 789407000.0,
             "ebitda": 1285615000.0,
             "profitMargin": 20.173597712282174,
-            "revenueYoY": 10.437435052491416,
-            "earningsYoY": 22.298806768359373
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 19.713537924833375,
             "revenueYoY": 20.41848179530037,
             "earningsYoY": 23.5452853093519
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4494223000.0,
+            "earnings": 914613000.0,
+            "ebitda": 1519358000.0,
+            "profitMargin": 20.35085931427969,
+            "revenueYoY": 27.02599805428665,
+            "earningsYoY": 39.23572153860441
         }
     ],
     "annual": [

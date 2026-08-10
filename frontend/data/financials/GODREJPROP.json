@@ -2,17 +2,6 @@
     "symbol": "GODREJPROP",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 21217300000.0,
-            "earnings": 3819900000.0,
-            "ebitda": 6339300000.0,
-            "profitMargin": 18.00370452413832,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1951600000.0,
             "ebitda": 3173100000.0,
             "profitMargin": 39.16044626374509,
-            "revenueYoY": -48.563289571463955,
-            "earningsYoY": 19.99508116084604
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.792815770373007,
             "revenueYoY": 62.98633662153055,
             "earningsYoY": 70.13010811801355
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5061700000.0,
+            "earnings": 3501000000.0,
+            "ebitda": 5453700000.0,
+            "profitMargin": 69.16648556808977,
+            "revenueYoY": 16.47873711340206,
+            "earningsYoY": -41.661667666466705
         }
     ],
     "annual": [

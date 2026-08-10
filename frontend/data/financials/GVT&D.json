@@ -2,17 +2,6 @@
     "symbol": "GVT&D",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11525400000.0,
-            "earnings": 1864900000.0,
-            "ebitda": 2732500000.0,
-            "profitMargin": 16.180783313377407,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2908000000.0,
             "ebitda": 4040800000.0,
             "profitMargin": 17.09944491485558,
-            "revenueYoY": 58.39798817119173,
-            "earningsYoY": 103.81272778245022
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.487648740440296,
             "revenueYoY": 42.041057143352944,
             "earningsYoY": 88.62673601801706
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 18361400000.0,
+            "earnings": 3629900000.0,
+            "ebitda": 5026300000.0,
+            "profitMargin": 19.7691897132027,
+            "revenueYoY": 38.04214625638095,
+            "earningsYoY": 24.653159340659343
         }
     ],
     "annual": [

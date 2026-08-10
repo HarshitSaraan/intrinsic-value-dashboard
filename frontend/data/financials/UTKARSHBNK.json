@@ -2,17 +2,6 @@
     "symbol": "UTKARSHBNK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5395581000.0,
-            "earnings": -2394805000.0,
-            "ebitda": null,
-            "profitMargin": -44.38456210739863,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -1880156000.0,
             "ebitda": null,
             "profitMargin": -38.25952333810249,
-            "revenueYoY": -29.647934526507413,
-            "earningsYoY": -6436.251811411047
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5408845000.0,
+            "earnings": -339197000.0,
+            "ebitda": null,
+            "profitMargin": -6.271154007925907,
+            "revenueYoY": 0.2458308011685859,
+            "earningsYoY": 85.83613279578087
         }
     ],
     "annual": [

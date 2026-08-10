@@ -2,17 +2,6 @@
     "symbol": "SUNDRMFAST",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15305900000.0,
-            "earnings": 1244300000.0,
-            "ebitda": 2319000000.0,
-            "profitMargin": 8.129544816051325,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1305700000.0,
             "ebitda": 2395500000.0,
             "profitMargin": 8.472464652101408,
-            "revenueYoY": 6.938353502831131,
-            "earningsYoY": 0.16109235961951518
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 9.531683694560916,
             "revenueYoY": 10.630541163864915,
             "earningsYoY": 29.71148436872137
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 18460700000.0,
+            "earnings": 1683900000.0,
+            "ebitda": 2951500000.0,
+            "profitMargin": 9.121539269908508,
+            "revenueYoY": 20.391420317075237,
+            "earningsYoY": 13.508594539939335
         }
     ],
     "annual": [

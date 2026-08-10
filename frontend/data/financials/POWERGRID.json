@@ -2,17 +2,6 @@
     "symbol": "POWERGRID",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 122753500000.0,
-            "earnings": 41428700000.0,
-            "ebitda": 105094700000.0,
-            "profitMargin": 33.74950612406163,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 41849600000.0,
             "ebitda": 108107500000.0,
             "profitMargin": 33.763046496636974,
-            "revenueYoY": 10.345027120910387,
-            "earningsYoY": 8.372889168563534
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 38.972072613433845,
             "revenueYoY": -4.9671903448781505,
             "earningsYoY": 9.73865943174659
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 114967200000.0,
+            "earnings": 35984200000.0,
+            "ebitda": 97387300000.0,
+            "profitMargin": 31.299535867621376,
+            "revenueYoY": 2.6839415445570025,
+            "earningsYoY": -0.8858088790220845
         }
     ],
     "annual": [

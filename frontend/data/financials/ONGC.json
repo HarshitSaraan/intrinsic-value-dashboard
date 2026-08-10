@@ -2,17 +2,6 @@
     "symbol": "ONGC",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1631081200000.0,
-            "earnings": 98040700000.0,
-            "ebitda": 188499900000.0,
-            "profitMargin": 6.010779843455985,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 108196500000.0,
             "ebitda": 217096900000.0,
             "profitMargin": 6.225159329246727,
-            "revenueYoY": 3.610268913674597,
-            "earningsYoY": 45.59879103340806
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2049873500000.0,
+            "earnings": 118989300000.0,
+            "ebitda": 98662300000.0,
+            "profitMargin": 5.804714290906244,
+            "revenueYoY": 25.677127307076308,
+            "earningsYoY": 21.367248499857713
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "LATENTVIEW",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2321770000.0,
-            "earnings": 534760000.0,
-            "ebitda": 760420000.0,
-            "profitMargin": 23.032427845996803,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 501420000.0,
             "ebitda": 797570000.0,
             "profitMargin": 18.036106744745673,
-            "revenueYoY": 22.02154181077617,
-            "earningsYoY": 19.684926602219836
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.277446313119764,
             "revenueYoY": 24.309470791680486,
             "earningsYoY": -1.3538783753459496
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2868760000.0,
+            "earnings": 481250000.0,
+            "ebitda": 779740000.0,
+            "profitMargin": 16.77554065171015,
+            "revenueYoY": 21.545781555187418,
+            "earningsYoY": -4.819825165143784
         }
     ],
     "annual": [

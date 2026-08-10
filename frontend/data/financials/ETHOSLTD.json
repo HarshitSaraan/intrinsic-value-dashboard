@@ -2,17 +2,6 @@
     "symbol": "ETHOSLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3463180000.0,
-            "earnings": 190191000.0,
-            "ebitda": 508439000.0,
-            "profitMargin": 5.491802331960799,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 220030000.0,
             "ebitda": 629575000.0,
             "profitMargin": 5.314603360013835,
-            "revenueYoY": 32.986442141401575,
-            "earningsYoY": -3.2805405001472576
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4617052000.0,
+            "earnings": 281299000.0,
+            "ebitda": 732308000.0,
+            "profitMargin": 6.09261060954046,
+            "revenueYoY": 33.31827973134518,
+            "earningsYoY": 47.90342340068668
         }
     ],
     "annual": [

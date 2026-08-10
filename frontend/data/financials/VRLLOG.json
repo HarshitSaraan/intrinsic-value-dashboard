@@ -2,24 +2,13 @@
     "symbol": "VRLLOG",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8090300000.0,
-            "earnings": 742700000.0,
-            "ebitda": 1253700000.0,
-            "profitMargin": 9.180129290631992,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 7443357000.0,
-            "earnings": 500429000.0,
-            "ebitda": 934421000.0,
-            "profitMargin": 6.723162680494836,
+            "revenue": 7443400000.0,
+            "earnings": 500400000.0,
+            "ebitda": 934500000.0,
+            "profitMargin": 6.7227342343552685,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 647523000.0,
             "ebitda": 1057035000.0,
             "profitMargin": 7.830139294137109,
-            "revenueYoY": 0.21065798021603593,
-            "earningsYoY": 8.967679399024627
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.45869730902269,
             "revenueYoY": 5.4163628048403645,
             "earningsYoY": -2.8679143665006057
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8788400000.0,
+            "earnings": 805300000.0,
+            "ebitda": 1302100000.0,
+            "profitMargin": 9.163215147239544,
+            "revenueYoY": 18.069699330950908,
+            "earningsYoY": 60.93125499600319
         }
     ],
     "annual": [

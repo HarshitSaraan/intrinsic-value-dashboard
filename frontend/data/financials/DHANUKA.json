@@ -2,17 +2,6 @@
     "symbol": "DHANUKA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4420232000.0,
-            "earnings": 755023000.0,
-            "ebitda": 1209044000.0,
-            "profitMargin": 17.081071762749104,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 399954000.0,
             "ebitda": 667862000.0,
             "profitMargin": 9.756957938039607,
-            "revenueYoY": -7.940178600904931,
-            "earningsYoY": -27.340143556055352
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 20.228259099712478,
             "revenueYoY": 9.34645511819289,
             "earningsYoY": 29.493538607433152
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4619281000.0,
+            "earnings": 363044000.0,
+            "ebitda": 638775000.0,
+            "profitMargin": 7.859318365780302,
+            "revenueYoY": -12.561327805793846,
+            "earningsYoY": -34.590673724492554
         }
     ],
     "annual": [

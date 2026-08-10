@@ -2,17 +2,6 @@
     "symbol": "DENORA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 419693000.0,
-            "earnings": 32492000.0,
-            "ebitda": 24468000.0,
-            "profitMargin": 7.741849399441973,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -6375000.0,
             "ebitda": -22649000.0,
             "profitMargin": -2.9019086592954393,
-            "revenueYoY": 9.126177903840327,
-            "earningsYoY": -119.08282695243513
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 352710000.0,
+            "earnings": 63896000.0,
+            "ebitda": 56922000.0,
+            "profitMargin": 18.115732471435457,
+            "revenueYoY": -15.959999332845676,
+            "earningsYoY": 96.65148344207805
         }
     ],
     "annual": [

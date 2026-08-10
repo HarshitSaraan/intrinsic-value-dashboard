@@ -2,17 +2,6 @@
     "symbol": "530709",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 21496000.0,
-            "earnings": 15252000.0,
-            "ebitda": 14291000.0,
-            "profitMargin": 70.95273539263118,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 13755000.0,
             "ebitda": 17952000.0,
             "profitMargin": 47.99706888128969,
-            "revenueYoY": 88.48987108655618,
-            "earningsYoY": -23.447239536954587
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 64.00381817583359,
             "revenueYoY": 41.33327130628955,
             "earningsYoY": 27.491476527668503
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 39564000.0,
+            "earnings": 28832000.0,
+            "ebitda": 32119000.0,
+            "profitMargin": 72.87433019917097,
+            "revenueYoY": 51.23853211009174,
+            "earningsYoY": 123.3480517468433
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "TAJGVK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1063900000.0,
-            "earnings": 411000000.0,
-            "ebitda": 537600000.0,
-            "profitMargin": 38.631450324278596,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3197500000.0,
             "ebitda": 3327000000.0,
             "profitMargin": 201.7095634620237,
-            "revenueYoY": 27.05995511381853,
-            "earningsYoY": 818.8218390804599
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1650000000.0,
+            "earnings": 316600000.0,
+            "ebitda": 511800000.0,
+            "profitMargin": 19.187878787878788,
+            "revenueYoY": 55.08976407557101,
+            "earningsYoY": 51.55576831019627
         }
     ],
     "annual": [

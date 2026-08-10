@@ -2,17 +2,6 @@
     "symbol": "CONCORDBIO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2039876000.0,
-            "earnings": 440578000.0,
-            "ebitda": 765667000.0,
-            "profitMargin": 21.598273620553407,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 887905000.0,
             "ebitda": 1337033000.0,
             "profitMargin": 27.229700968720522,
-            "revenueYoY": -24.1470369434717,
-            "earningsYoY": -36.75313703813453
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2574890000.0,
+            "earnings": 576969000.0,
+            "ebitda": 964790000.0,
+            "profitMargin": 22.40752032125644,
+            "revenueYoY": 26.227770707631247,
+            "earningsYoY": 30.957287926314976
         }
     ],
     "annual": [

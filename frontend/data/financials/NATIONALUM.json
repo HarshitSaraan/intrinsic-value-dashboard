@@ -2,17 +2,6 @@
     "symbol": "NATIONALUM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 51423900000.0,
-            "earnings": 20672300000.0,
-            "ebitda": 27638300000.0,
-            "profitMargin": 40.199790369847484,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 15951500000.0,
             "ebitda": 21853800000.0,
             "profitMargin": 33.71732950041746,
-            "revenueYoY": 1.474190407145094,
-            "earningsYoY": 1.840620052096634
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 53023800000.0,
+            "earnings": 20031400000.0,
+            "ebitda": 26992100000.0,
+            "profitMargin": 37.77812982094833,
+            "revenueYoY": 39.281942977824706,
+            "earningsYoY": 90.86976407363647
         }
     ],
     "annual": [

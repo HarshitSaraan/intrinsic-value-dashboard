@@ -2,17 +2,6 @@
     "symbol": "DIXON",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 102925400000.0,
-            "earnings": 4008200000.0,
-            "ebitda": 7082000000.0,
-            "profitMargin": 3.8942768257398077,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2872600000.0,
             "ebitda": 5535900000.0,
             "profitMargin": 2.691820056805031,
-            "revenueYoY": 2.084529084494647,
-            "earningsYoY": 67.80185758513932
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.439558118492823,
             "revenueYoY": 2.117747417061289,
             "earningsYoY": -36.028641285365005
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 155476600000.0,
+            "earnings": 6634200000.0,
+            "ebitda": 10000500000.0,
+            "profitMargin": 4.267008668828621,
+            "revenueYoY": 21.128636938030457,
+            "earningsYoY": 194.89265235364715
         }
     ],
     "annual": [

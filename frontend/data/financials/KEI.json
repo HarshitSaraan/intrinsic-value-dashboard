@@ -2,17 +2,6 @@
     "symbol": "KEI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 29147880000.0,
-            "earnings": 2265480000.0,
-            "ebitda": 3383750000.0,
-            "profitMargin": 7.772366292162586,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2348610000.0,
             "ebitda": 3538980000.0,
             "profitMargin": 7.9487149981859435,
-            "revenueYoY": 19.51472564881155,
-            "earningsYoY": 42.508419040684444
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.17835482493939,
             "revenueYoY": 19.267541927577582,
             "earningsYoY": 25.49746632060314
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 31853420000.0,
+            "earnings": 2741400000.0,
+            "ebitda": 4154090000.0,
+            "profitMargin": 8.606297220204299,
+            "revenueYoY": 22.971174173344103,
+            "earningsYoY": 40.048123342886484
         }
     ],
     "annual": [

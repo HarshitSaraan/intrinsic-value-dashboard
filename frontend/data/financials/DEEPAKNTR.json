@@ -2,17 +2,6 @@
     "symbol": "DEEPAKNTR",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 18898800000.0,
-            "earnings": 1122000000.0,
-            "ebitda": 2141200000.0,
-            "profitMargin": 5.936884881579783,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2197400000.0,
             "ebitda": 3828500000.0,
             "profitMargin": 10.363481156235114,
-            "revenueYoY": -2.7233230413499165,
-            "earningsYoY": 8.561829949113186
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 25561000000.0,
+            "earnings": 3450200000.0,
+            "ebitda": 5542000000.0,
+            "profitMargin": 13.497906967646022,
+            "revenueYoY": 36.496408832403276,
+            "earningsYoY": 207.50445632798576
         }
     ],
     "annual": [
