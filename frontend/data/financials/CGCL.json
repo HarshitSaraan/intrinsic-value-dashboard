@@ -1,6 +1,51 @@
 {
     "symbol": "CGCL",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 9224500000.0,
+            "earnings": 1749040000.0,
+            "ebitda": 2536260000.0,
+            "profitMargin": 18.960810884058755,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 10553360000.0,
+            "earnings": 2554390000.0,
+            "ebitda": 2559090000.0,
+            "profitMargin": 24.204518750426406,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 12969560000.0,
+            "earnings": 2828150000.0,
+            "ebitda": 3667780000.0,
+            "profitMargin": 21.806059727546657,
+            "revenueYoY": 46.76245967290211,
+            "earningsYoY": 59.1163546958777
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14917080000.0,
+            "earnings": 3533810000.0,
+            "ebitda": 4714410000.0,
+            "profitMargin": 23.68968993931788,
+            "revenueYoY": 61.71152908016695,
+            "earningsYoY": 102.0428349265883
+        }
+    ],
     "annual": [
         {
             "date": "2023-03-31",

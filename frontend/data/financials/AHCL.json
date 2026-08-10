@@ -2,17 +2,6 @@
     "symbol": "AHCL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 489271000.0,
-            "earnings": 166478000.0,
-            "ebitda": 172316000.0,
-            "profitMargin": 34.02572398527605,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 51520000.0,
             "ebitda": 125449000.0,
             "profitMargin": 14.4808589577829,
-            "revenueYoY": 280.0784129392033,
-            "earningsYoY": 307.2655589974655
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 104976000.0,
             "ebitda": 14451626000.0,
             "profitMargin": 20.62838603944656,
-            "revenueYoY": 4.010047601431518,
-            "earningsYoY": -36.94301949807182
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 875627000.0,
+            "earnings": 66621000.0,
+            "ebitda": 156505000.0,
+            "profitMargin": 7.608376626120483,
+            "revenueYoY": 162.9731629085929,
+            "earningsYoY": 87.828808255096
         }
     ],
     "annual": [

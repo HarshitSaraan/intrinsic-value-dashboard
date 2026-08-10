@@ -2,17 +2,6 @@
     "symbol": "BANSWRAS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3059747000.0,
-            "earnings": -13691000.0,
-            "ebitda": 219767000.0,
-            "profitMargin": -0.4474552961404979,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 114872000.0,
             "ebitda": 389988000.0,
             "profitMargin": 3.1415851998278135,
-            "revenueYoY": 7.518317673357025,
-            "earningsYoY": 95.7767362590541
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3158273000.0,
+            "earnings": 46121000.0,
+            "ebitda": 296999000.0,
+            "profitMargin": 1.4603234109274277,
+            "revenueYoY": 3.2200701561272873,
+            "earningsYoY": 436.87093711197133
         }
     ],
     "annual": [

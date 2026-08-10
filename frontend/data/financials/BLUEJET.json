@@ -2,17 +2,6 @@
     "symbol": "BLUEJET",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3404450000.0,
-            "earnings": 1100950000.0,
-            "ebitda": 1521930000.0,
-            "profitMargin": 32.33855688877792,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 401660000.0,
             "ebitda": 600990000.0,
             "profitMargin": 20.87478042138306,
-            "revenueYoY": -39.56505078804706,
-            "earningsYoY": -59.421314771223344
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 27.419162391122775,
             "revenueYoY": -31.070216921969774,
             "earningsYoY": -41.55592897043462
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2931130000.0,
+            "earnings": 782640000.0,
+            "ebitda": 1133120000.0,
+            "profitMargin": 26.700965156782537,
+            "revenueYoY": -17.376634212618182,
+            "earningsYoY": -14.155972359328729
         }
     ],
     "annual": [

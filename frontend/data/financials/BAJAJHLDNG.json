@@ -2,17 +2,6 @@
     "symbol": "BAJAJHLDNG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 37525900000.0,
-            "earnings": 34865100000.0,
-            "ebitda": null,
-            "profitMargin": 92.90943055329785,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 25750000000.0,
             "ebitda": null,
             "profitMargin": 110.13168755961011,
-            "revenueYoY": 27.078792753914637,
-            "earningsYoY": 49.23297150374676
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27780100000.0,
+            "earnings": 27064500000.0,
+            "ebitda": null,
+            "profitMargin": 97.42405534897283,
+            "revenueYoY": -25.970862790765842,
+            "earningsYoY": -22.373663061342146
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "BHARTIHEXA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 22890000000.0,
-            "earnings": 4684000000.0,
-            "ebitda": 12156000000.0,
-            "profitMargin": 20.463084316295323,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 4737000000.0,
             "ebitda": 12828000000.0,
             "profitMargin": 20.073735062293416,
-            "revenueYoY": 4.8473808148576,
-            "earningsYoY": 81.56381755461862
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.506856693043876,
             "revenueYoY": 5.44779379641765,
             "earningsYoY": -4.632792485055508
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 25099000000.0,
+            "earnings": 4824000000.0,
+            "ebitda": 13943000000.0,
+            "profitMargin": 19.219889238615085,
+            "revenueYoY": 10.910296067167478,
+            "earningsYoY": 23.186925434116446
         }
     ],
     "annual": [

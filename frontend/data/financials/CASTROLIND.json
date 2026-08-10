@@ -2,17 +2,6 @@
     "symbol": "CASTROLIND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14220000000.0,
-            "earnings": 2334600000.0,
-            "ebitda": 3150500000.0,
-            "profitMargin": 16.417721518987342,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2446700000.0,
             "ebitda": 3344600000.0,
             "profitMargin": 16.991916217567642,
-            "revenueYoY": 6.354282844248795,
-            "earningsYoY": -9.845609639264527
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 15.672646320312703,
             "revenueYoY": 8.666666666666668,
             "earningsYoY": 3.735115223164568
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 18714700000.0,
+            "earnings": 3477000000.0,
+            "ebitda": 4777300000.0,
+            "profitMargin": 18.578978022623925,
+            "revenueYoY": 25.02889439682529,
+            "earningsYoY": 42.5
         }
     ],
     "annual": [

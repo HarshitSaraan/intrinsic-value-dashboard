@@ -2,24 +2,13 @@
     "symbol": "ABCAPITAL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 118375200000.0,
-            "earnings": 8646000000.0,
-            "ebitda": null,
-            "profitMargin": 7.303894734707946,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 90730400000.0,
-            "earnings": 8350800000.0,
+            "earnings": 8386300000.0,
             "ebitda": null,
-            "profitMargin": 9.203971326038461,
+            "profitMargin": 9.243098233888531,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 9450200000.0,
             "ebitda": null,
             "profitMargin": 8.217215092574316,
-            "revenueYoY": 27.889370399653934,
-            "earningsYoY": 33.4774011299435
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.634345603225071,
             "revenueYoY": 10.475336050118605,
             "earningsYoY": 30.59912098080037
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 117485400000.0,
+            "earnings": 11747000000.0,
+            "ebitda": null,
+            "profitMargin": 9.998689198828108,
+            "revenueYoY": 29.488462521933112,
+            "earningsYoY": 40.07369161608814
         }
     ],
     "annual": [

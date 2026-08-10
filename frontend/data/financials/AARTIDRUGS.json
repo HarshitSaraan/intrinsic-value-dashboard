@@ -2,17 +2,6 @@
     "symbol": "AARTIDRUGS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5905100000.0,
-            "earnings": 539100000.0,
-            "ebitda": 743900000.0,
-            "profitMargin": 9.129396623257861,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 551900000.0,
             "ebitda": 965600000.0,
             "profitMargin": 7.6620852422601695,
-            "revenueYoY": 6.433595366156392,
-            "earningsYoY": -12.201718103722559
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7027800000.0,
+            "earnings": 501700000.0,
+            "ebitda": 969200000.0,
+            "profitMargin": 7.138791655994764,
+            "revenueYoY": 19.01237912990466,
+            "earningsYoY": -6.937488406603598
         }
     ],
     "annual": [

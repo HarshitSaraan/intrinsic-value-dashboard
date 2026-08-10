@@ -2,17 +2,6 @@
     "symbol": "ASTERDM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10003400000.0,
-            "earnings": 790200000.0,
-            "ebitda": 1869200000.0,
-            "profitMargin": 7.899314233160726,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 524500000.0,
             "ebitda": 2021800000.0,
             "profitMargin": 4.423323438132506,
-            "revenueYoY": 12.949962374143892,
-            "earningsYoY": -7.642190526501144
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.85490282311947,
             "revenueYoY": 18.197812743667154,
             "earningsYoY": 77.38547203239686
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13106800000.0,
+            "earnings": 160600000.0,
+            "ebitda": 1785800000.0,
+            "profitMargin": 1.2253181554612873,
+            "revenueYoY": 21.599079666379062,
+            "earningsYoY": -81.22076707202993
         }
     ],
     "annual": [

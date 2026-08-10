@@ -2,17 +2,6 @@
     "symbol": "AEGISVOPAK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1640110000.0,
-            "earnings": 477177000.0,
-            "ebitda": 928932000.0,
-            "profitMargin": 29.09420709586552,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 686430000.0,
             "ebitda": 1281555000.0,
             "profitMargin": 28.195736567048,
-            "revenueYoY": 22.233608409332366,
-            "earningsYoY": 17.551058153035747
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2337740000.0,
+            "earnings": 660764000.0,
+            "ebitda": 1283220000.0,
+            "profitMargin": 28.26507652690205,
+            "revenueYoY": 12.397614482346132,
+            "earningsYoY": -6.959153011812382
         }
     ],
     "annual": [

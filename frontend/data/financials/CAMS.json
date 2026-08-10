@@ -2,17 +2,6 @@
     "symbol": "CAMS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3561658000.0,
-            "earnings": 1140215000.0,
-            "ebitda": 1727995000.0,
-            "profitMargin": 32.01360153052315,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1255387000.0,
             "ebitda": 1917263000.0,
             "profitMargin": 32.17794170795537,
-            "revenueYoY": 5.516292537327965,
-            "earningsYoY": 0.0365758035520763
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 31.990596634483765,
             "revenueYoY": 10.965230238276668,
             "earningsYoY": 10.885490894261169
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3950295000.0,
+            "earnings": 1280159000.0,
+            "ebitda": 1990757000.0,
+            "profitMargin": 32.40666836274253,
+            "revenueYoY": 11.542391838078519,
+            "earningsYoY": 17.348348389639796
         }
     ],
     "annual": [

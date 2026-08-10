@@ -2,17 +2,6 @@
     "symbol": "ALKYLAMINE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3860500000.0,
-            "earnings": 460200000.0,
-            "ebitda": 771300000.0,
-            "profitMargin": 11.920735656003108,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 422600000.0,
             "ebitda": 751700000.0,
             "profitMargin": 11.937853107344633,
-            "revenueYoY": -4.633620689655173,
-            "earningsYoY": -3.4277879341864717
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.726241244733918,
             "revenueYoY": 0.222769071363813,
             "earningsYoY": -1.4124293785310735
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5280100000.0,
+            "earnings": 946300000.0,
+            "ebitda": 1429000000.0,
+            "profitMargin": 17.922009052858847,
+            "revenueYoY": 30.202451113357824,
+            "earningsYoY": 91.40372168284789
         }
     ],
     "annual": [
