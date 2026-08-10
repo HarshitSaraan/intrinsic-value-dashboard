@@ -2,17 +2,6 @@
     "symbol": "BIKAJI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6370570000.0,
-            "earnings": 598964000.0,
-            "ebitda": 1062654000.0,
-            "profitMargin": 9.402047226543306,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 564111000.0,
             "ebitda": 1055031000.0,
             "profitMargin": 7.979003508231962,
-            "revenueYoY": 18.96965391162587,
-            "earningsYoY": 26.146838228388187
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7203282000.0,
+            "earnings": 601427000.0,
+            "ebitda": 1121519000.0,
+            "profitMargin": 8.349346867164162,
+            "revenueYoY": 13.071232244524431,
+            "earningsYoY": 0.4112100226390901
         }
     ],
     "annual": [

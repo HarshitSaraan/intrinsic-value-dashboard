@@ -2,17 +2,6 @@
     "symbol": "APLAPOLLO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 53243500000.0,
-            "earnings": 2931100000.0,
-            "ebitda": 4486100000.0,
-            "profitMargin": 5.505085127762074,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3100400000.0,
             "ebitda": 4965100000.0,
             "profitMargin": 5.488871421186435,
-            "revenueYoY": 7.243184950883041,
-            "earningsYoY": 42.89533115177214
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.831981013762389,
             "revenueYoY": 14.116840553306975,
             "earningsYoY": 20.893180034799222
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 54382100000.0,
+            "earnings": 2631100000.0,
+            "ebitda": 4508000000.0,
+            "profitMargin": 4.83817285467093,
+            "revenueYoY": 8.703108852824712,
+            "earningsYoY": 10.937302356959142
         }
     ],
     "annual": [

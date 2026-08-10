@@ -2,17 +2,6 @@
     "symbol": "BERGEPAINT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 27040300000.0,
-            "earnings": 2620500000.0,
-            "ebitda": 4542200000.0,
-            "profitMargin": 9.6910907053546,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2711600000.0,
             "ebitda": 4663500000.0,
             "profitMargin": 9.087222726770042,
-            "revenueYoY": 0.29948975818975077,
-            "earningsYoY": -8.121844610849456
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.672472045271492,
             "revenueYoY": 6.065021467957086,
             "earningsYoY": 27.75042930738409
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 35837500000.0,
+            "earnings": 4043400000.0,
+            "ebitda": 6581100000.0,
+            "profitMargin": 11.282595047087549,
+            "revenueYoY": 11.965595671028131,
+            "earningsYoY": 28.51285637097543
         }
     ],
     "annual": [

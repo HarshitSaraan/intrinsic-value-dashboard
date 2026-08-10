@@ -2,17 +2,6 @@
     "symbol": "ASTEC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1195270000.0,
-            "earnings": -160876000.0,
-            "ebitda": 63153000.0,
-            "profitMargin": -13.459385745480102,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -156954000.0,
             "ebitda": 27096000.0,
             "profitMargin": -12.58447903027815,
-            "revenueYoY": 32.88134040213769,
-            "earningsYoY": 61.13181661717982
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -4.890412841549691,
             "revenueYoY": 32.70859303755637,
             "earningsYoY": 51.780874710957505
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 835643000.0,
+            "earnings": -187174000.0,
+            "ebitda": 613000.0,
+            "profitMargin": -22.398799487340888,
+            "revenueYoY": -8.253872056090055,
+            "earningsYoY": 43.3455012137612
         }
     ],
     "annual": [

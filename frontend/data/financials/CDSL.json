@@ -2,24 +2,13 @@
     "symbol": "CDSL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2244895000.0,
-            "earnings": 1003059000.0,
-            "ebitda": 1415384000.0,
-            "profitMargin": 44.68177798961644,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 2588074000.0,
-            "earnings": 1023681000.0,
-            "ebitda": 1664316000.0,
-            "profitMargin": 39.55377628305837,
+            "revenue": 2588400000.0,
+            "earnings": 1023600000.0,
+            "ebitda": 1664300000.0,
+            "profitMargin": 39.54566527584608,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 1333274000.0,
             "ebitda": 1890520000.0,
             "profitMargin": 43.80654170294557,
-            "revenueYoY": 9.429122661433619,
-            "earningsYoY": 2.476847528417454
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 30.519387630874117,
             "revenueYoY": 17.086990705578657,
             "earningsYoY": -20.02504339226307
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2927600000.0,
+            "earnings": 1175100000.0,
+            "ebitda": 1858900000.0,
+            "profitMargin": 40.13868014756114,
+            "revenueYoY": 13.10462061505177,
+            "earningsYoY": 14.800703399765533
         }
     ],
     "annual": [

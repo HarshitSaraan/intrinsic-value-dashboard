@@ -2,17 +2,6 @@
     "symbol": "ASKAUTOLTD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8496700000.0,
-            "earnings": 576100000.0,
-            "ebitda": 1095900000.0,
-            "profitMargin": 6.780279402591595,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 799200000.0,
             "ebitda": 1461800000.0,
             "profitMargin": 7.371197727398498,
-            "revenueYoY": 18.48104032346192,
-            "earningsYoY": 21.2930641979056
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.236487900132506,
             "revenueYoY": 35.007708875210376,
             "earningsYoY": 24.179829890643987
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13581100000.0,
+            "earnings": 851200000.0,
+            "ebitda": 1612800000.0,
+            "profitMargin": 6.267533557664695,
+            "revenueYoY": 52.375769951418725,
+            "earningsYoY": 28.833055849856216
         }
     ],
     "annual": [

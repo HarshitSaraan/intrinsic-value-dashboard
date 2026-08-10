@@ -2,17 +2,6 @@
     "symbol": "BAJAJFINSV",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 302309100000.0,
-            "earnings": 27890500000.0,
-            "ebitda": null,
-            "profitMargin": 9.225822180013768,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 25386700000.0,
             "ebitda": null,
             "profitMargin": 7.582068868709222,
-            "revenueYoY": 7.590669887285826,
-            "earningsYoY": 5.093060224205594
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 368592800000.0,
+            "earnings": 31323500000.0,
+            "ebitda": null,
+            "profitMargin": 8.498131271147999,
+            "revenueYoY": 21.925803755163177,
+            "earningsYoY": 12.308850683924634
         }
     ],
     "annual": [

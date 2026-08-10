@@ -2,17 +2,6 @@
     "symbol": "BESTAGRO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3812400000.0,
-            "earnings": 199200000.0,
-            "ebitda": 499000000.0,
-            "profitMargin": 5.225055083412024,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -372400000.0,
             "ebitda": -257800000.0,
             "profitMargin": -23.919326867493098,
-            "revenueYoY": -43.24925275205948,
-            "earningsYoY": -70.12334399269072
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3962000000.0,
+            "earnings": 406500000.0,
+            "ebitda": 795300000.0,
+            "profitMargin": 10.259969712266532,
+            "revenueYoY": 3.924037351799391,
+            "earningsYoY": 104.06626506024097
         }
     ],
     "annual": [

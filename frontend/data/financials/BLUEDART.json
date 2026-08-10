@@ -2,17 +2,6 @@
     "symbol": "BLUEDART",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14173200000.0,
-            "earnings": 551500000.0,
-            "ebitda": 1010700000.0,
-            "profitMargin": 3.8911466711822316,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 683300000.0,
             "ebitda": 1027700000.0,
             "profitMargin": 4.227922977922978,
-            "revenueYoY": 6.910808432945909,
-            "earningsYoY": -15.65238859400074
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.185585632584922,
             "revenueYoY": 8.195044167866113,
             "earningsYoY": -11.423390752493201
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16577200000.0,
+            "earnings": 884900000.0,
+            "ebitda": 1396400000.0,
+            "profitMargin": 5.338054677508867,
+            "revenueYoY": 14.966156236129605,
+            "earningsYoY": 81.2205611304526
         }
     ],
     "annual": [

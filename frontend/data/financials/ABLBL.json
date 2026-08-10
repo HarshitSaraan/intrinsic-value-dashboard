@@ -2,17 +2,6 @@
     "symbol": "ABLBL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 19421600000.0,
-            "earnings": 383700000.0,
-            "ebitda": 3298400000.0,
-            "profitMargin": 1.97563537504634,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 690100000.0,
             "ebitda": 3895500000.0,
             "profitMargin": 2.9451554944797005,
-            "revenueYoY": 9.575851103628882,
-            "earningsYoY": 14.425468413198475
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.507635132648931,
             "revenueYoY": 11.945462783704741,
             "earningsYoY": 42.09017461558509
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20457400000.0,
+            "earnings": 290200000.0,
+            "ebitda": 3265400000.0,
+            "profitMargin": 1.4185575879632797,
+            "revenueYoY": 11.146486433624183,
+            "earningsYoY": 20.61512884455528
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "AVONMORE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 335100000.0,
-            "earnings": 38400000.0,
-            "ebitda": 114700000.0,
-            "profitMargin": 11.459265890778871,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -95200000.0,
             "ebitda": -46300000.0,
             "profitMargin": -15.459564793764208,
-            "revenueYoY": 7.48821783906441,
-            "earningsYoY": -270.304114490161
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 391800000.0,
+            "earnings": 113900000.0,
+            "ebitda": 198300000.0,
+            "profitMargin": 29.07095456865748,
+            "revenueYoY": 16.92032229185318,
+            "earningsYoY": 196.61458333333331
         }
     ],
     "annual": [
