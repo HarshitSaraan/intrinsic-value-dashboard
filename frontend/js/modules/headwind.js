@@ -434,14 +434,28 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       historyRows.forEach(function (row) {
         var keys = Object.keys(row);
         var dateStr = row[keys[0]] || '';
+        var inc = parseFloat(row[keys[1]]);
+        var dec = parseFloat(row[keys[2]]);
         var scoreRaw = row[keys[3]];
-        var score = parseFloat(scoreRaw);
+        // Use exact inc/dec ratio if valid, otherwise fallback to column 4
+        var score = (isFinite(inc) && isFinite(dec) && dec > 0) ? (inc / dec) : parseFloat(scoreRaw);
         if (dateStr && isFinite(score)) {
-          points.push({ label: formatYYMMtoMMYY(dateStr), score: score });
+          points.push({ label: formatYYMMtoMMYY(dateStr), score: score, rawDate: dateStr });
         }
       });
 
-      points.push({ label: 'Current', score: currentScore, isCurrent: true });
+      if (currentScore !== undefined && isFinite(currentScore)) {
+        var lastPoint = points.length > 0 ? points[points.length - 1] : null;
+        var todayFormatted = formatYYMMtoMMYY(new Date().toISOString().split('T')[0]);
+        // If the last history entry is from today or matches current score within small margin, update it to Current instead of adding duplicate node
+        if (lastPoint && (lastPoint.label === 'Current' || lastPoint.label === todayFormatted || Math.abs(lastPoint.score - currentScore) < 0.005)) {
+          lastPoint.score = currentScore;
+          lastPoint.isCurrent = true;
+          lastPoint.label = 'Current';
+        } else {
+          points.push({ label: 'Current', score: currentScore, isCurrent: true });
+        }
+      }
 
       if (points.length < 2) return;
 

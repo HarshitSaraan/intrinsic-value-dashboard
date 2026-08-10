@@ -265,8 +265,19 @@
               logoutAdmin(false);
               throw new Error('Unauthorized admin session. Please log in again.');
             }
-            return res.json().then(function (err) {
-              throw new Error(err.detail || 'Upload failed');
+            return res.text().then(function (text) {
+              var msg = 'Upload failed (HTTP ' + res.status + ')';
+              try {
+                var errObj = JSON.parse(text);
+                if (errObj && errObj.detail) msg = errObj.detail;
+              } catch (e) {
+                if (res.status === 413) {
+                  msg = 'File size too large (HTTP 413). Please increase client_max_body_size in Nginx.';
+                } else if (text && text.indexOf('<html') !== -1) {
+                  msg = 'Server/Nginx error (HTTP ' + res.status + '). Check client_max_body_size or server logs.';
+                }
+              }
+              throw new Error(msg);
             });
           }
           return res.json();

@@ -380,6 +380,7 @@ async def admin_login(req: LoginRequest) -> dict[str, str]:
 
 
 @router.post("/admin/upload-csv")
+@router.post("/api/admin/upload-csv")
 async def admin_upload_csv(
     file: UploadFile = File(...),
     file_type: str = Form(...),
