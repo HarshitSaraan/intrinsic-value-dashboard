@@ -2,17 +2,6 @@
     "symbol": "BLUESTARCO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 40189600000.0,
-            "earnings": 1936400000.0,
-            "ebitda": 3029900000.0,
-            "profitMargin": 4.8181619125345865,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 806600000.0,
             "ebitda": 1755700000.0,
             "profitMargin": 2.757314609391825,
-            "revenueYoY": 4.201456172346973,
-            "earningsYoY": -39.156671946895976
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.575801928262353,
             "revenueYoY": 1.3212373350319486,
             "earningsYoY": 17.25366659781037
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 33779200000.0,
+            "earnings": 1025000000.0,
+            "ebitda": 2046800000.0,
+            "profitMargin": 3.0344117089806746,
+            "revenueYoY": 13.267499371280072,
+            "earningsYoY": -15.261243386243386
         }
     ],
     "annual": [

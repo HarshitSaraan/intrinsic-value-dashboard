@@ -2,17 +2,6 @@
     "symbol": "MOTHERSON",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 299428300000.0,
-            "earnings": 5118400000.0,
-            "ebitda": 25266000000.0,
-            "profitMargin": 1.709390862520343,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 14971400000.0,
             "ebitda": 38266200000.0,
             "profitMargin": 4.400925959948558,
-            "revenueYoY": 16.825398678746165,
-            "earningsYoY": 42.5168967158496
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 349124000000.0,
+            "earnings": 10320500000.0,
+            "ebitda": 33500700000.0,
+            "profitMargin": 2.956113014287187,
+            "revenueYoY": 16.59686141891064,
+            "earningsYoY": 101.6352766489528
         }
     ],
     "annual": [

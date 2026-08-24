@@ -2,17 +2,6 @@
     "symbol": "GPIL",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 13232500000.0,
-            "earnings": 2159600000.0,
-            "ebitda": 3496500000.0,
-            "profitMargin": 16.32042320045343,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2800900000.0,
             "ebitda": 4574700000.0,
             "profitMargin": 17.39397740751551,
-            "revenueYoY": 9.685439485586617,
-            "earningsYoY": 26.588628762541806
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 17504700000.0,
+            "earnings": 2217400000.0,
+            "ebitda": 3722000000.0,
+            "profitMargin": 12.667455026364346,
+            "revenueYoY": 32.285660306064614,
+            "earningsYoY": 2.6764215595480643
         }
     ],
     "annual": [

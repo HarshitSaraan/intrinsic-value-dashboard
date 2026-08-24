@@ -2,17 +2,6 @@
     "symbol": "TSFINV",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1716791000.0,
-            "earnings": 1571626000.0,
-            "ebitda": 490361000.0,
-            "profitMargin": 91.54439882315319,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1610715000.0,
             "ebitda": 667752000.0,
             "profitMargin": 60.41143302070855,
-            "revenueYoY": 756.1150801932988,
-            "earningsYoY": 50.336426773392375
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2655011000.0,
+            "earnings": 1222362000.0,
+            "ebitda": 719608000.0,
+            "profitMargin": 46.039809251261104,
+            "revenueYoY": 79.62250339285545,
+            "earningsYoY": -22.223098879758922
         }
     ],
     "annual": [

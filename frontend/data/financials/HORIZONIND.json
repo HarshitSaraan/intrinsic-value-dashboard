@@ -1,0 +1,50 @@
+{
+    "symbol": "HORIZONIND",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 3697390000.0,
+            "earnings": -2798660000.0,
+            "ebitda": 1746770000.0,
+            "profitMargin": -75.69285360754479,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 4472610000.0,
+            "earnings": -2713880000.0,
+            "ebitda": 3545250000.0,
+            "profitMargin": -60.67776980331395,
+            "revenueYoY": 20.96668190263943,
+            "earningsYoY": 3.02930688257952
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 5601810000.0,
+            "earnings": -2271110000.0,
+            "ebitda": 4467730000.0,
+            "profitMargin": -40.54243182114352,
+            "revenueYoY": 25.24700342752889,
+            "earningsYoY": 16.315017613159018
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 6707670000.0,
+            "earnings": -1843010000.0,
+            "ebitda": 6014820000.0,
+            "profitMargin": -27.47615789089207,
+            "revenueYoY": 19.741119388197742,
+            "earningsYoY": 18.84981352730603
+        }
+    ]
+}

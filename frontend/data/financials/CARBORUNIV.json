@@ -2,17 +2,6 @@
     "symbol": "CARBORUNIV",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 11989300000.0,
-            "earnings": 291400000.0,
-            "ebitda": 1639200000.0,
-            "profitMargin": 2.4305005296389277,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 759200000.0,
             "ebitda": 1788900000.0,
             "profitMargin": 5.964661423756511,
-            "revenueYoY": 2.545861766151318,
-            "earningsYoY": 118.28637147786083
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -1.2716980313622859,
             "revenueYoY": 15.368703760853428,
             "earningsYoY": -160.3637611530542
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14105700000.0,
+            "earnings": 764000000.0,
+            "ebitda": 1905200000.0,
+            "profitMargin": 5.416250168371651,
+            "revenueYoY": 16.899680934819543,
+            "earningsYoY": 23.444821457424464
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "TITAN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 138970000000.0,
-            "earnings": 8710000000.0,
-            "ebitda": 16530000000.0,
-            "profitMargin": 6.26753975678204,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 16840000000.0,
             "ebitda": 27120000000.0,
             "profitMargin": 6.75898053381497,
-            "revenueYoY": 41.965811965811966,
-            "earningsYoY": 60.84049665711557
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.721356820497888,
             "revenueYoY": 48.28380225948046,
             "earningsYoY": 35.36165327210104
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 207870000000.0,
+            "earnings": 17770000000.0,
+            "ebitda": 30380000000.0,
+            "profitMargin": 8.548612113340068,
+            "revenueYoY": 40.31996759821791,
+            "earningsYoY": 62.87809349220899
         }
     ],
     "annual": [

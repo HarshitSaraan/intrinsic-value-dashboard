@@ -2,17 +2,6 @@
     "symbol": "AFFLE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6022510000.0,
-            "earnings": 1030650000.0,
-            "ebitda": 1528780000.0,
-            "profitMargin": 17.113296615530736,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1193240000.0,
             "ebitda": 1805770000.0,
             "profitMargin": 16.631125309070434,
-            "revenueYoY": 19.246699198234253,
-            "earningsYoY": 19.058499546012392
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 16.498867302523408,
             "revenueYoY": 20.278256075955042,
             "earningsYoY": 15.959831174501529
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7471640000.0,
+            "earnings": 1284390000.0,
+            "ebitda": 1926650000.0,
+            "profitMargin": 17.190201883388387,
+            "revenueYoY": 20.366659148757936,
+            "earningsYoY": 21.743127962085307
         }
     ],
     "annual": [

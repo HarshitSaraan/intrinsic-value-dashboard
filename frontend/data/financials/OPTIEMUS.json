@@ -2,17 +2,6 @@
     "symbol": "OPTIEMUS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 4353539000.0,
-            "earnings": 145314000.0,
-            "ebitda": 299598000.0,
-            "profitMargin": 3.337836183390111,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 224749000.0,
             "ebitda": 392384000.0,
             "profitMargin": 4.634214033802799,
-            "revenueYoY": 7.951183333170101,
-            "earningsYoY": 0.07525158072847093
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8829933000.0,
+            "earnings": 211812000.0,
+            "ebitda": 411055000.0,
+            "profitMargin": 2.3987950984452544,
+            "revenueYoY": 102.82195703311719,
+            "earningsYoY": 45.761592138403735
         }
     ],
     "annual": [

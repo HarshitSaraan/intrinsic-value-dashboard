@@ -2,24 +2,13 @@
     "symbol": "VIJAYA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1732425000.0,
-            "earnings": 348647000.0,
-            "ebitda": 733831000.0,
-            "profitMargin": 20.124796167222247,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 1880531000.0,
-            "earnings": 383387000.0,
+            "earnings": 385890000.0,
             "ebitda": 805821000.0,
-            "profitMargin": 20.387167241592934,
+            "profitMargin": 20.520267945596217,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 431753000.0,
             "ebitda": 911562000.0,
             "profitMargin": 21.039538463712592,
-            "revenueYoY": 21.43871617551156,
-            "earningsYoY": 22.313443195113727
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 21.847944654104104,
             "revenueYoY": 26.629839675599232,
             "earningsYoY": 37.472285721661166
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2309819000.0,
+            "earnings": 531011000.0,
+            "ebitda": 1070700000.0,
+            "profitMargin": 22.989290502848924,
+            "revenueYoY": 22.828020383604418,
+            "earningsYoY": 37.606830962191296
         }
     ],
     "annual": [

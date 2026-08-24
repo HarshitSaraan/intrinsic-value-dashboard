@@ -2,17 +2,6 @@
     "symbol": "LEMONTREE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3157705000.0,
-            "earnings": 383315000.0,
-            "ebitda": 1450534000.0,
-            "profitMargin": 12.139037687181037,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 914941000.0,
             "ebitda": 2191488000.0,
             "profitMargin": 21.972440700003048,
-            "revenueYoY": 10.009822591008234,
-            "earningsYoY": 8.097305663364466
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3446061000.0,
+            "earnings": 460315000.0,
+            "ebitda": 1556676000.0,
+            "profitMargin": 13.3577147937892,
+            "revenueYoY": 9.13182200363872,
+            "earningsYoY": 20.08791724821622
         }
     ],
     "annual": [

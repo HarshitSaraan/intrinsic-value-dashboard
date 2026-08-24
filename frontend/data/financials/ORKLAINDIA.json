@@ -2,17 +2,6 @@
     "symbol": "ORKLAINDIA",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6152700000.0,
-            "earnings": 658500000.0,
-            "ebitda": 1057200000.0,
-            "profitMargin": 10.702618362670046,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
@@ -31,8 +20,8 @@
             "earnings": 566400000.0,
             "ebitda": 952600000.0,
             "profitMargin": 8.904820299971702,
-            "revenueYoY": 3.3790043395582425,
-            "earningsYoY": -13.98633257403189
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.733780760626399,
             "revenueYoY": 4.96829816498373,
             "earningsYoY": 108.37116912599318
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6591000000.0,
+            "earnings": 877000000.0,
+            "ebitda": 1314900000.0,
+            "profitMargin": 13.306023365194964,
+            "revenueYoY": null,
+            "earningsYoY": null
         }
     ],
     "annual": [

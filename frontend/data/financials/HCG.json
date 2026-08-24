@@ -2,17 +2,6 @@
     "symbol": "HCG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6118000000.0,
-            "earnings": 47500000.0,
-            "ebitda": 1153000000.0,
-            "profitMargin": 0.7763975155279503,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 21700000.0,
             "ebitda": 1067600000.0,
             "profitMargin": 0.33369727352412,
-            "revenueYoY": 11.459815230618926,
-            "earningsYoY": -70.5163043478261
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6933900000.0,
+            "earnings": 137700000.0,
+            "ebitda": 1353200000.0,
+            "profitMargin": 1.9858953835503828,
+            "revenueYoY": 13.336057535142205,
+            "earningsYoY": 189.89473684210526
         }
     ],
     "annual": [

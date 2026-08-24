@@ -2,17 +2,6 @@
     "symbol": "MAHSEAMLES",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 14177700000.0,
-            "earnings": 2420400000.0,
-            "ebitda": 3247600000.0,
-            "profitMargin": 17.071880488372585,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2428600000.0,
             "ebitda": 3490400000.0,
             "profitMargin": 22.27480761999101,
-            "revenueYoY": -22.5706798474551,
-            "earningsYoY": 30.52077175256624
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.032903422362141,
             "revenueYoY": -9.709614394436333,
             "earningsYoY": -57.51528672946621
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10912000000.0,
+            "earnings": 2664000000.0,
+            "ebitda": 3534700000.0,
+            "profitMargin": 24.41348973607038,
+            "revenueYoY": -4.721157456320343,
+            "earningsYoY": 15.665161514414727
         }
     ],
     "annual": [

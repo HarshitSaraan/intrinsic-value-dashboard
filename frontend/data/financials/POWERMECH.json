@@ -2,17 +2,6 @@
     "symbol": "POWERMECH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 12934100000.0,
-            "earnings": 525200000.0,
-            "ebitda": 1814500000.0,
-            "profitMargin": 4.060584037544166,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1425500000.0,
             "ebitda": 2359500000.0,
             "profitMargin": 6.753587621344274,
-            "revenueYoY": 13.891586808253475,
-            "earningsYoY": 21.58819515523712
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16236800000.0,
+            "earnings": 797800000.0,
+            "ebitda": 1760000000.0,
+            "profitMargin": 4.913529759558534,
+            "revenueYoY": 25.534826543787354,
+            "earningsYoY": 51.90403655750191
         }
     ],
     "annual": [

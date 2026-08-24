@@ -2,17 +2,6 @@
     "symbol": "BANCOINDIA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9631400000.0,
-            "earnings": 1095200000.0,
-            "ebitda": 1956800000.0,
-            "profitMargin": 11.371140228834854,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1474300000.0,
             "ebitda": 2454600000.0,
             "profitMargin": 13.512052057556595,
-            "revenueYoY": 25.644864117918008,
-            "earningsYoY": -3.954397394136808
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11734100000.0,
+            "earnings": 1223800000.0,
+            "ebitda": 2188600000.0,
+            "profitMargin": 10.42943216778449,
+            "revenueYoY": 21.831717092011544,
+            "earningsYoY": 11.742147552958365
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "DGCONTENT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 1104500000.0,
-            "earnings": -23300000.0,
-            "ebitda": 28100000.0,
-            "profitMargin": -2.1095518334087826,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 9000000.0,
             "ebitda": 75400000.0,
             "profitMargin": 0.7604562737642585,
-            "revenueYoY": 3.344393992315753,
-            "earningsYoY": -85.53054662379421
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1233000000.0,
+            "earnings": -19300000.0,
+            "ebitda": 24900000.0,
+            "profitMargin": -1.5652879156528792,
+            "revenueYoY": 11.634223630602083,
+            "earningsYoY": 17.167381974248926
         }
     ],
     "annual": [

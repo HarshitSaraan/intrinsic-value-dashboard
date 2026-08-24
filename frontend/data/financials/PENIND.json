@@ -1,6 +1,51 @@
 {
     "symbol": "PENIND",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8456700000.0,
+            "earnings": 319400000.0,
+            "ebitda": 941200000.0,
+            "profitMargin": 3.7768869653647403,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 9065600000.0,
+            "earnings": 322800000.0,
+            "ebitda": 944300000.0,
+            "profitMargin": 3.560713025061772,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 9430600000.0,
+            "earnings": 335500000.0,
+            "ebitda": 985400000.0,
+            "profitMargin": 3.5575679172056924,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 9248000000.0,
+            "earnings": 410400000.0,
+            "ebitda": 1140600000.0,
+            "profitMargin": 4.437716262975779,
+            "revenueYoY": 2.0975932877014793,
+            "earningsYoY": 15.378127635648017
+        }
+    ],
     "annual": [
         {
             "date": "2023-03-31",

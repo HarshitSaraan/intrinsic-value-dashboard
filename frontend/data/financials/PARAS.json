@@ -2,17 +2,6 @@
     "symbol": "PARAS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 931900000.0,
-            "earnings": 148700000.0,
-            "ebitda": 242600000.0,
-            "profitMargin": 15.95664770898165,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 343800000.0,
             "ebitda": 545600000.0,
             "profitMargin": 20.068880976008405,
-            "revenueYoY": 58.28328559549109,
-            "earningsYoY": 74.34077079107504
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1279100000.0,
+            "earnings": 212200000.0,
+            "ebitda": 338500000.0,
+            "profitMargin": 16.589789695879915,
+            "revenueYoY": 37.25721643953214,
+            "earningsYoY": 42.70342972427707
         }
     ],
     "annual": [
@@ -73,23 +73,23 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 3646600000.0,
-            "earnings": 634700000.0,
-            "ebitda": 1051600000.0,
-            "profitMargin": 17.405254209400535,
-            "revenueYoY": 43.875127783571024,
-            "earningsYoY": 97.9719339615285
+            "revenue": 3646055000.0,
+            "earnings": 634713000.0,
+            "ebitda": 1026026000.0,
+            "profitMargin": 17.408212437826638,
+            "revenueYoY": 43.85362502904845,
+            "earningsYoY": 97.9759888459487
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 4765700000.0,
-            "earnings": 881000000.0,
-            "ebitda": 1392800000.0,
-            "profitMargin": 18.486266445642823,
-            "revenueYoY": 30.68886085668842,
-            "earningsYoY": 38.80573499291003
+            "revenue": 4762996000.0,
+            "earnings": 880968000.0,
+            "ebitda": 1370934000.0,
+            "profitMargin": 18.496089436144814,
+            "revenueYoY": 30.634233438606934,
+            "earningsYoY": 38.797850367016274
         }
     ]
 }

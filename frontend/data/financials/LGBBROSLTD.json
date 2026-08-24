@@ -2,17 +2,6 @@
     "symbol": "LGBBROSLTD",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6691736000.0,
-            "earnings": 840371000.0,
-            "ebitda": 1300634000.0,
-            "profitMargin": 12.558340615947792,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 884335000.0,
             "ebitda": 1435094000.0,
             "profitMargin": 10.830014325963305,
-            "revenueYoY": 20.632900677075845,
-            "earningsYoY": 17.443282703997003
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.555531969977876,
             "revenueYoY": 21.791863875084132,
             "earningsYoY": -17.027717520000095
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7987637000.0,
+            "earnings": 670188000.0,
+            "ebitda": 1270999000.0,
+            "profitMargin": 8.3903161848742,
+            "revenueYoY": 21.56908254851912,
+            "earningsYoY": 0.07361560113185854
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SBIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1013352700000.0,
-            "earnings": 196004600000.0,
-            "ebitda": null,
-            "profitMargin": 19.34218954565375,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 213171100000.0,
             "ebitda": null,
             "profitMargin": 19.947554773848093,
-            "revenueYoY": 18.140089587486095,
-            "earningsYoY": 13.069161880554772
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 19.424232778271058,
             "revenueYoY": -0.20691709806467187,
             "earningsYoY": 0.21637247289094233
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 978142900000.0,
+            "earnings": 241130000000.0,
+            "ebitda": null,
+            "profitMargin": 24.651817234475658,
+            "revenueYoY": 10.243891937998335,
+            "earningsYoY": 13.732679856632583
         }
     ],
     "annual": [

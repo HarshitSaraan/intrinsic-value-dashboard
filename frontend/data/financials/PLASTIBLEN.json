@@ -1,6 +1,51 @@
 {
     "symbol": "PLASTIBLEN",
-    "quarterly": [],
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1996284000.0,
+            "earnings": 89234000.0,
+            "ebitda": 159986000.0,
+            "profitMargin": 4.470005269791272,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1858016000.0,
+            "earnings": 64665000.0,
+            "ebitda": 130199000.0,
+            "profitMargin": 3.48032525015931,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 2106211000.0,
+            "earnings": 138629000.0,
+            "ebitda": 226579000.0,
+            "profitMargin": 6.58191415769835,
+            "revenueYoY": 5.755622537448853,
+            "earningsYoY": 44.84729434628606
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2216089000.0,
+            "earnings": 149506000.0,
+            "ebitda": 243434000.0,
+            "profitMargin": 6.746389698247679,
+            "revenueYoY": 11.01070789526941,
+            "earningsYoY": 67.54376134657194
+        }
+    ],
     "annual": [
         {
             "date": "2023-03-31",

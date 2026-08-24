@@ -2,17 +2,6 @@
     "symbol": "INOXGREEN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 562000000.0,
-            "earnings": 220300000.0,
-            "ebitda": 477000000.0,
-            "profitMargin": 39.19928825622776,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 277900000.0,
             "ebitda": 480100000.0,
             "profitMargin": 40.46890927624872,
-            "revenueYoY": 6.399132321041215,
-            "earningsYoY": 399.82014388489205
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 432900000.0,
+            "earnings": 407400000.0,
+            "ebitda": 569500000.0,
+            "profitMargin": 94.10949410949411,
+            "revenueYoY": -17.322383498854087,
+            "earningsYoY": 85.01362397820164
         }
     ],
     "annual": [

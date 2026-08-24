@@ -2,17 +2,6 @@
     "symbol": "APOLLO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1617667000.0,
-            "earnings": 140036000.0,
-            "ebitda": 325743000.0,
-            "profitMargin": 8.656664196030455,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 256777000.0,
             "ebitda": 451914000.0,
             "profitMargin": 10.180671564240914,
-            "revenueYoY": 69.9670807683625,
-            "earningsYoY": 40.62267250821468
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.828202779685476,
             "revenueYoY": 81.28341617897874,
             "earningsYoY": 168.64163500814075
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2512930000.0,
+            "earnings": 269130000.0,
+            "ebitda": 483866000.0,
+            "profitMargin": 10.709808868531953,
+            "revenueYoY": 88.11735915695922,
+            "earningsYoY": 45.38530102909002
         }
     ],
     "annual": [

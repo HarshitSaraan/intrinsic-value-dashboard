@@ -2,17 +2,6 @@
     "symbol": "KAYNES",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9844830000.0,
-            "earnings": 1162020000.0,
-            "ebitda": 1883270000.0,
-            "profitMargin": 11.803352622645592,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 766420000.0,
             "ebitda": 1615800000.0,
             "profitMargin": 9.532207673326434,
-            "revenueYoY": 21.606533822361705,
-            "earningsYoY": 15.317023261412535
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.341076001216766,
             "revenueYoY": 26.222392870166374,
             "earningsYoY": -21.49618767318979
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9460170000.0,
+            "earnings": 564260000.0,
+            "ebitda": 1620000000.0,
+            "profitMargin": 5.964586260077779,
+            "revenueYoY": 40.469897515242046,
+            "earningsYoY": -24.374095319787703
         }
     ],
     "annual": [
@@ -74,11 +74,11 @@
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
             "revenue": 27217520000.0,
-            "earnings": 2934330000.0,
-            "ebitda": 5176620000.0,
-            "profitMargin": 10.781033687125058,
+            "earnings": 2931860000.0,
+            "ebitda": 5152690000.0,
+            "profitMargin": 10.77195865016357,
             "revenueYoY": 50.82141992298651,
-            "earningsYoY": 60.09307705317831
+            "earningsYoY": 59.95831719306669
         },
         {
             "date": "2026-03-31",
@@ -86,10 +86,10 @@
             "annualLabel": "FY26",
             "revenue": 36263540000.0,
             "earnings": 3638900000.0,
-            "ebitda": 7283090000.0,
+            "ebitda": 7258650000.0,
             "profitMargin": 10.034596732696256,
             "revenueYoY": 33.23601856451286,
-            "earningsYoY": 24.01127344231903
+            "earningsYoY": 24.115749046680264
         }
     ]
 }

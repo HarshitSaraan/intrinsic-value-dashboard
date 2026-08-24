@@ -2,17 +2,6 @@
     "symbol": "KIRLOSENG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 17638000000.0,
-            "earnings": 1418800000.0,
-            "ebitda": 3613700000.0,
-            "profitMargin": 8.043995917904525,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1586000000.0,
             "ebitda": 3790400000.0,
             "profitMargin": 7.494459486917774,
-            "revenueYoY": 20.974435780760526,
-            "earningsYoY": 21.03174603174603
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19995300000.0,
+            "earnings": 1137100000.0,
+            "ebitda": 3155400000.0,
+            "profitMargin": 5.686836406555541,
+            "revenueYoY": 13.494230299865478,
+            "earningsYoY": -19.85480687905272
         }
     ],
     "annual": [

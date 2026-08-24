@@ -2,17 +2,6 @@
     "symbol": "POWERINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 18404500000.0,
-            "earnings": 1838900000.0,
-            "ebitda": 2761400000.0,
-            "profitMargin": 9.991578146648918,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2614200000.0,
             "ebitda": 3768700000.0,
             "profitMargin": 12.9331967882215,
-            "revenueYoY": 27.714383198119645,
-            "earningsYoY": 90.28970738098704
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.206031728442943,
             "revenueYoY": 47.10261077453883,
             "earningsYoY": 79.70525857849802
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24414200000.0,
+            "earnings": 2941500000.0,
+            "ebitda": 4212500000.0,
+            "profitMargin": 12.048316143883477,
+            "revenueYoY": 70.8063105607444,
+            "earningsYoY": 123.51823708206686
         }
     ],
     "annual": [

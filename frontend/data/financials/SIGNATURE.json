@@ -2,17 +2,6 @@
     "symbol": "SIGNATURE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 8656690000.0,
-            "earnings": 344190000.0,
-            "ebitda": 658670000.0,
-            "profitMargin": 3.9760000646898526,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 11524080000.0,
             "ebitda": 14116450000.0,
             "profitMargin": 104.07688848027483,
-            "revenueYoY": 112.75860677551192,
-            "earningsYoY": 1786.2558310827399
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5519890000.0,
+            "earnings": -165290000.0,
+            "ebitda": 150040000.0,
+            "profitMargin": -2.9944437298569353,
+            "revenueYoY": -36.235558856791684,
+            "earningsYoY": -148.02289433161917
         }
     ],
     "annual": [

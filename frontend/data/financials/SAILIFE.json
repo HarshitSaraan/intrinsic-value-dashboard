@@ -2,17 +2,6 @@
     "symbol": "SAILIFE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5795070000.0,
-            "earnings": 882690000.0,
-            "ebitda": 1671720000.0,
-            "profitMargin": 15.231740082518415,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1003750000.0,
             "ebitda": 1879400000.0,
             "profitMargin": 18.038004255441503,
-            "revenueYoY": 26.532932525046725,
-            "earningsYoY": 86.39393883121947
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.31095311879815,
             "revenueYoY": 3.9053885457811557,
             "earningsYoY": 18.08902332642264
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5542850000.0,
+            "earnings": 732850000.0,
+            "ebitda": 1515470000.0,
+            "profitMargin": 13.221537656620692,
+            "revenueYoY": 11.656685179253817,
+            "earningsYoY": 21.22239682408403
         }
     ],
     "annual": [

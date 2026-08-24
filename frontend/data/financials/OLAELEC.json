@@ -2,17 +2,6 @@
     "symbol": "OLAELEC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6110000000.0,
-            "earnings": -8700000000.0,
-            "ebitda": -5780000000.0,
-            "profitMargin": -142.38952536824877,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -4870000000.0,
             "ebitda": -2370000000.0,
             "profitMargin": -103.61702127659575,
-            "revenueYoY": -55.02392344497608,
-            "earningsYoY": 13.652482269503546
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -188.67924528301887,
             "revenueYoY": -56.62847790507365,
             "earningsYoY": 42.5287356321839
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4550000000.0,
+            "earnings": -3360000000.0,
+            "ebitda": -1360000000.0,
+            "profitMargin": -73.84615384615385,
+            "revenueYoY": -45.04830917874396,
+            "earningsYoY": 21.49532710280374
         }
     ],
     "annual": [

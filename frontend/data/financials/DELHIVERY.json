@@ -2,17 +2,6 @@
     "symbol": "DELHIVERY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 21915660000.0,
-            "earnings": 725570000.0,
-            "ebitda": 1054290000.0,
-            "profitMargin": 3.3107376186708497,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 395890000.0,
             "ebitda": 738660000.0,
             "profitMargin": 1.4113795933384337,
-            "revenueYoY": 17.940897229867744,
-            "earningsYoY": 58.43204738274371
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.540246505349651,
             "revenueYoY": 30.04395030767953,
             "earningsYoY": -0.2205162837493281
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 29307300000.0,
+            "earnings": 319060000.0,
+            "ebitda": 640360000.0,
+            "profitMargin": 1.0886707407369496,
+            "revenueYoY": 27.756265145481628,
+            "earningsYoY": -64.95617599894558
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "IONEXCHANG",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8345600000.0,
-            "earnings": 633500000.0,
-            "ebitda": 1005800000.0,
-            "profitMargin": 7.590826303680982,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 203000000.0,
             "ebitda": 548200000.0,
             "profitMargin": 2.764010674799848,
-            "revenueYoY": 6.361964345194132,
-            "earningsYoY": -58.196046128500825
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 2.796344133353412,
             "revenueYoY": 3.4401361196319016,
             "earningsYoY": -61.89423835832676
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7004600000.0,
+            "earnings": 41100000.0,
+            "ebitda": 381000000.0,
+            "profitMargin": 0.5867572737915084,
+            "revenueYoY": 20.108369485073474,
+            "earningsYoY": -91.56057494866529
         }
     ],
     "annual": [

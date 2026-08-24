@@ -2,17 +2,6 @@
     "symbol": "SPORTKING",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5858008000.0,
-            "earnings": 351504000.0,
-            "ebitda": 825079000.0,
-            "profitMargin": 6.000401501670876,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 327622000.0,
             "ebitda": 774940000.0,
             "profitMargin": 5.145008514762796,
-            "revenueYoY": 1.2673680052276763,
-            "earningsYoY": -7.287463141034712
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7036791000.0,
+            "earnings": 759740000.0,
+            "ebitda": 1345271000.0,
+            "profitMargin": 10.796682749281597,
+            "revenueYoY": 20.122591160681242,
+            "earningsYoY": 122.82183110777416
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 25242294000.0,
+            "revenue": 24569390000.0,
             "earnings": 1131460000.0,
-            "ebitda": 2935936000.0,
-            "profitMargin": 4.482397677485255,
-            "revenueYoY": 8.943975214131633,
+            "ebitda": 2830001000.0,
+            "profitMargin": 4.605161137496698,
+            "revenueYoY": 6.0397686195372575,
             "earningsYoY": 60.84303780193786
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 24958566000.0,
+            "revenue": 24380002000.0,
             "earnings": 1197238000.0,
-            "ebitda": 3005737000.0,
-            "profitMargin": 4.796902193819949,
-            "revenueYoY": -1.1240182845505244,
+            "ebitda": 2842255000.0,
+            "profitMargin": 4.910737907240533,
+            "revenueYoY": -0.7708290682023444,
             "earningsYoY": 5.813550633694518
         }
     ]

@@ -2,17 +2,6 @@
     "symbol": "VISHNU",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3459464000.0,
-            "earnings": 322245000.0,
-            "ebitda": 603487000.0,
-            "profitMargin": 9.314882305466975,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 434027000.0,
             "ebitda": 791787000.0,
             "profitMargin": 9.69181498984879,
-            "revenueYoY": 14.5049496343131,
-            "earningsYoY": 11.463886919987262
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4320483000.0,
+            "earnings": 396422000.0,
+            "ebitda": 783474000.0,
+            "profitMargin": 9.175409323448328,
+            "revenueYoY": 24.888797802202884,
+            "earningsYoY": 23.01882108333721
         }
     ],
     "annual": [

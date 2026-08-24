@@ -2,17 +2,6 @@
     "symbol": "DLINKINDIA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3501616000.0,
-            "earnings": 243752000.0,
-            "ebitda": 348056000.0,
-            "profitMargin": 6.961128804529109,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 276118000.0,
             "ebitda": 389770000.0,
             "profitMargin": 6.222880904618537,
-            "revenueYoY": 20.002125730753754,
-            "earningsYoY": 0.659108308118552
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4569606000.0,
+            "earnings": 276065000.0,
+            "ebitda": 394845000.0,
+            "profitMargin": 6.041330477944926,
+            "revenueYoY": 30.499917752260668,
+            "earningsYoY": 13.25650661327907
         }
     ],
     "annual": [

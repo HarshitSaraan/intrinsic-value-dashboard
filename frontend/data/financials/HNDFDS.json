@@ -2,17 +2,6 @@
     "symbol": "HNDFDS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9946900000.0,
-            "earnings": 317300000.0,
-            "ebitda": 834500000.0,
-            "profitMargin": 3.1899385738270216,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 415500000.0,
             "ebitda": 1028600000.0,
             "profitMargin": 3.7206178643384824,
-            "revenueYoY": 16.470072901348516,
-            "earningsYoY": 31.695721077654515
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12010800000.0,
+            "earnings": 427600000.0,
+            "ebitda": 1061600000.0,
+            "profitMargin": 3.5601292170379994,
+            "revenueYoY": 17.904367373783977,
+            "earningsYoY": 32.75380316671841
         }
     ],
     "annual": [

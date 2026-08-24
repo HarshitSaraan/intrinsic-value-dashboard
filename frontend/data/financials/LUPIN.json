@@ -2,23 +2,12 @@
     "symbol": "LUPIN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 55622000000.0,
-            "earnings": 7725200000.0,
-            "ebitda": 13781200000.0,
-            "profitMargin": 13.888749056128871,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 61637500000.0,
             "earnings": 12190300000.0,
-            "ebitda": 16927500000.0,
+            "ebitda": 18062800000.0,
             "profitMargin": 19.777408233624012,
             "revenueYoY": null,
             "earningsYoY": null
@@ -31,8 +20,8 @@
             "earnings": 11755500000.0,
             "ebitda": 19499800000.0,
             "profitMargin": 16.55599293002556,
-            "revenueYoY": 26.374907449595625,
-            "earningsYoY": 37.465503531502875
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 19.755922352950726,
             "revenueYoY": 32.895437057279494,
             "earningsYoY": 89.03588256614715
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 82172300000.0,
+            "earnings": 14150000000.0,
+            "ebitda": 24919400000.0,
+            "profitMargin": 17.219914740125322,
+            "revenueYoY": 33.31543297505577,
+            "earningsYoY": 16.075896409440293
         }
     ],
     "annual": [
