@@ -22,35 +22,80 @@ from backend.utils.paths import CSV_PATH
 router = APIRouter()
 
 
+MONTH_NAMES = {
+    1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
+    7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
+}
+MONTH_MAP = {
+    "jan": "Jan", "january": "Jan",
+    "feb": "Feb", "february": "Feb",
+    "mar": "Mar", "march": "Mar",
+    "apr": "Apr", "april": "Apr",
+    "may": "May",
+    "jun": "Jun", "june": "Jun",
+    "jul": "Jul", "july": "Jul",
+    "aug": "Aug", "august": "Aug",
+    "sep": "Sep", "september": "Sep",
+    "oct": "Oct", "october": "Oct",
+    "nov": "Nov", "november": "Nov",
+    "dec": "Dec", "december": "Dec",
+}
+
+
 def format_yy_mm_to_mm_yy(date_str: str) -> str:
     if not date_str:
         return date_str
-    
-    # 1. Match YY-MMM or YYYY-MMM (e.g., "05-Oct" or "2005-Oct")
-    match = re.match(r"^(\d{2}|\d{4})([-\/])([a-zA-Z]{3})$", date_str)
-    if match:
-        year, sep, month = match.groups()
-        return f"{month}{sep}{year}"
-        
-    # 2. Match YYYY-MM (e.g., "2025-06")
-    match = re.match(r"^(\d{4})([-\/])(\d{2})$", date_str)
-    if match:
-        year, sep, month = match.groups()
-        return f"{month}{sep}{year}"
+    s = str(date_str).strip()
+    if not s:
+        return date_str
 
-    # 3. Match YY-MM (e.g., "25-02")
-    match = re.match(r"^(\d{2})([-\/])(\d{2})$", date_str)
-    if match:
-        part1, sep, part2 = match.groups()
-        val1 = int(part1)
-        val2 = int(part2)
-        if val1 > 12 and val2 <= 12:
-            return f"{part2}{sep}{part1}"
-        elif val1 <= 12 and val2 > 12:
-            return date_str
-        elif val1 <= 12 and val2 <= 12:
-            return f"{part2}{sep}{part1}"
-            
+    # 1. Match Y-MMM, YY-MMM or YYYY-MMM (e.g. "5-Oct", "05-Oct", "19-Apr", "2019-Apr", "19/Apr")
+    m1 = re.match(r"^(\d{1,4})([-\/])([a-zA-Z]{3,9})$", s)
+    if m1:
+        year_str, _, month_str = m1.groups()
+        m_lower = month_str.lower()
+        if m_lower in MONTH_MAP:
+            yy = year_str.zfill(2) if len(year_str) <= 2 else year_str[-2:]
+            return f"{MONTH_MAP[m_lower]}-{yy}"
+
+    # 2. Match MMM-Y, MMM-YY or MMM-YYYY (e.g. "Apr-19", "Oct-05", "Oct-5", "Apr-2019")
+    m2 = re.match(r"^([a-zA-Z]{3,9})([-\/])(\d{1,4})$", s)
+    if m2:
+        month_str, _, year_str = m2.groups()
+        m_lower = month_str.lower()
+        if m_lower in MONTH_MAP:
+            yy = year_str.zfill(2) if len(year_str) <= 2 else year_str[-2:]
+            return f"{MONTH_MAP[m_lower]}-{yy}"
+
+    # 3. Match YYYY-MM-DD (e.g. "2025-06-15")
+    m3 = re.match(r"^(\d{4})([-\/])(\d{1,2})([-\/])(\d{1,2})$", s)
+    if m3:
+        year_str, _, mon_str, _, _ = m3.groups()
+        mon_num = int(mon_str)
+        if 1 <= mon_num <= 12:
+            return f"{MONTH_NAMES[mon_num]}-{year_str[-2:]}"
+
+    # 4. Match YYYY-MM (e.g. "2025-06")
+    m4 = re.match(r"^(\d{4})([-\/])(\d{1,2})$", s)
+    if m4:
+        year_str, _, mon_str = m4.groups()
+        mon_num = int(mon_str)
+        if 1 <= mon_num <= 12:
+            return f"{MONTH_NAMES[mon_num]}-{year_str[-2:]}"
+
+    # 5. Match YY-MM or MM-YY (e.g. "19-04", "25-02", "05-10")
+    m5 = re.match(r"^(\d{1,2})([-\/])(\d{1,2})$", s)
+    if m5:
+        p1, _, p2 = m5.groups()
+        val1 = int(p1)
+        val2 = int(p2)
+        if val1 > 12 and 1 <= val2 <= 12:
+            return f"{MONTH_NAMES[val2]}-{str(val1).zfill(2)}"
+        elif 1 <= val1 <= 12 and val2 > 12:
+            return f"{MONTH_NAMES[val1]}-{str(val2).zfill(2)}"
+        elif 1 <= val1 <= 12 and 1 <= val2 <= 12:
+            return f"{MONTH_NAMES[val2]}-{str(val1).zfill(2)}"
+
     return date_str
 
 

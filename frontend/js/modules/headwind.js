@@ -21,38 +21,82 @@ function ivFormatCompactINR(value) {
       return ivFormatINR(value);
     }
 
+var MONTH_NAMES = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var MONTH_MAP = {
+  jan: 'Jan', january: 'Jan',
+  feb: 'Feb', february: 'Feb',
+  mar: 'Mar', march: 'Mar',
+  apr: 'Apr', april: 'Apr',
+  may: 'May',
+  jun: 'Jun', june: 'Jun',
+  jul: 'Jul', july: 'Jul',
+  aug: 'Aug', august: 'Aug',
+  sep: 'Sep', september: 'Sep',
+  oct: 'Oct', october: 'Oct',
+  nov: 'Nov', november: 'Nov',
+  dec: 'Dec', december: 'Dec'
+};
+
 function formatYYMMtoMMYY(dateStr) {
   if (!dateStr || typeof dateStr !== 'string') return dateStr;
-  
-  // 1. Match YY-MMM or YYYY-MMM (e.g., "05-Oct" or "2005-Oct")
-  var m1 = dateStr.match(/^(\d{2}|\d{4})([-\/])([a-zA-Z]{3})$/);
-  if (m1) {
-    return m1[3] + m1[2] + m1[1];
-  }
-  
-  // 2. Match YYYY-MM (e.g., "2025-06")
-  var m2 = dateStr.match(/^(\d{4})([-\/])(\d{2})$/);
-  if (m2) {
-    return m2[3] + m2[2] + m2[1];
-  }
+  var s = dateStr.trim();
+  if (!s) return dateStr;
 
-  // 3. Match YY-MM (e.g., "25-02")
-  var m3 = dateStr.match(/^(\d{2})([-\/])(\d{2})$/);
-  if (m3) {
-    var part1 = m3[1];
-    var sep = m3[2];
-    var part2 = m3[3];
-    var val1 = parseInt(part1, 10);
-    var val2 = parseInt(part2, 10);
-    if (val1 > 12 && val2 <= 12) {
-      return part2 + sep + part1;
-    } else if (val1 <= 12 && val2 > 12) {
-      return dateStr;
-    } else if (val1 <= 12 && val2 <= 12) {
-      return part2 + sep + part1;
+  // 1. Match Y-MMM, YY-MMM or YYYY-MMM (e.g., 5-Oct, 05-Oct, 19-Apr, 2019-Apr, 19/Apr)
+  var m1 = s.match(/^(\d{1,4})([-\/])([a-zA-Z]{3,9})$/);
+  if (m1) {
+    var mKey = m1[3].toLowerCase();
+    if (MONTH_MAP[mKey]) {
+      var yy = m1[1].length <= 2 ? (m1[1].length === 1 ? '0' + m1[1] : m1[1]) : m1[1].slice(-2);
+      return MONTH_MAP[mKey] + '-' + yy;
     }
   }
-  
+
+  // 2. Match MMM-Y, MMM-YY or MMM-YYYY (e.g., Apr-19, Oct-05, Oct-5, Apr-2019)
+  var m2 = s.match(/^([a-zA-Z]{3,9})([-\/])(\d{1,4})$/);
+  if (m2) {
+    var mKey2 = m2[1].toLowerCase();
+    if (MONTH_MAP[mKey2]) {
+      var yy2 = m2[3].length <= 2 ? (m2[3].length === 1 ? '0' + m2[3] : m2[3]) : m2[3].slice(-2);
+      return MONTH_MAP[mKey2] + '-' + yy2;
+    }
+  }
+
+  // 3. Match YYYY-MM-DD (e.g., 2025-06-15)
+  var m3 = s.match(/^(\d{4})([-\/])(\d{1,2})([-\/])(\d{1,2})$/);
+  if (m3) {
+    var monNum = parseInt(m3[3], 10);
+    if (monNum >= 1 && monNum <= 12) {
+      return MONTH_NAMES[monNum] + '-' + m3[1].slice(-2);
+    }
+  }
+
+  // 4. Match YYYY-MM (e.g., 2025-06)
+  var m4 = s.match(/^(\d{4})([-\/])(\d{1,2})$/);
+  if (m4) {
+    var monNum4 = parseInt(m4[3], 10);
+    if (monNum4 >= 1 && monNum4 <= 12) {
+      return MONTH_NAMES[monNum4] + '-' + m4[1].slice(-2);
+    }
+  }
+
+  // 5. Match YY-MM or MM-YY (e.g., 19-04, 25-02, 05-10)
+  var m5 = s.match(/^(\d{1,2})([-\/])(\d{1,2})$/);
+  if (m5) {
+    var val1 = parseInt(m5[1], 10);
+    var val2 = parseInt(m5[3], 10);
+    if (val1 > 12 && val2 >= 1 && val2 <= 12) {
+      var yy5 = val1 < 10 ? '0' + val1 : '' + val1;
+      return MONTH_NAMES[val2] + '-' + yy5;
+    } else if (val1 >= 1 && val1 <= 12 && val2 > 12) {
+      var yy5b = val2 < 10 ? '0' + val2 : '' + val2;
+      return MONTH_NAMES[val1] + '-' + yy5b;
+    } else if (val1 >= 1 && val1 <= 12 && val2 >= 1 && val2 <= 12) {
+      var yy5c = val1 < 10 ? '0' + val1 : '' + val1;
+      return MONTH_NAMES[val2] + '-' + yy5c;
+    }
+  }
+
   return dateStr;
 }
 
