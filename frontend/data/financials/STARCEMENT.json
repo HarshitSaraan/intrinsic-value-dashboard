@@ -2,17 +2,6 @@
     "symbol": "STARCEMENT",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 10520879000.0,
-            "earnings": 1231660000.0,
-            "ebitda": 2677449000.0,
-            "profitMargin": 11.706816512194466,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 749210000.0,
             "ebitda": 2018519000.0,
             "profitMargin": 8.513717106092999,
-            "revenueYoY": 22.434386900350344,
-            "earningsYoY": 726.9882443843479
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.619672036437102,
             "revenueYoY": 11.544966917688152,
             "earningsYoY": 20.24284299238426
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9428889000.0,
+            "earnings": 747166000.0,
+            "ebitda": 2026903000.0,
+            "profitMargin": 7.924220976617711,
+            "revenueYoY": 3.3877910180182402,
+            "earningsYoY": -24.11083653530703
         }
     ],
     "annual": [

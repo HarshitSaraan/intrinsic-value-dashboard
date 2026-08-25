@@ -2,17 +2,6 @@
     "symbol": "JINDWORLD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5398974000.0,
-            "earnings": 174399000.0,
-            "ebitda": 430309000.0,
-            "profitMargin": 3.23022485383334,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 261331000.0,
             "ebitda": 454185000.0,
             "profitMargin": 4.08214558237872,
-            "revenueYoY": 5.721748792056722,
-            "earningsYoY": 18.672999986376702
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5547165000.0,
+            "earnings": 323961000.0,
+            "ebitda": 518098000.0,
+            "profitMargin": 5.840118330714879,
+            "revenueYoY": 2.7447992896428097,
+            "earningsYoY": 85.75851925756454
         }
     ],
     "annual": [
@@ -75,7 +75,7 @@
             "annualLabel": "FY25",
             "revenue": 22880714000.0,
             "earnings": 755712000.0,
-            "ebitda": 1978197000.0,
+            "ebitda": 1936695000.0,
             "profitMargin": 3.3028339937293913,
             "revenueYoY": 26.810563344998656,
             "earningsYoY": -0.10139078546793764

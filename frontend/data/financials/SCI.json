@@ -2,17 +2,6 @@
     "symbol": "SCI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 13160400000.0,
-            "earnings": 3541700000.0,
-            "ebitda": 3967900000.0,
-            "profitMargin": 26.911795994042738,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4046000000.0,
             "ebitda": 4627100000.0,
             "profitMargin": 26.737861896233834,
-            "revenueYoY": 14.188154151480164,
-            "earningsYoY": 118.53732310683807
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 18465600000.0,
+            "earnings": 6193400000.0,
+            "ebitda": 6657000000.0,
+            "profitMargin": 33.5402044883459,
+            "revenueYoY": 40.31184462478345,
+            "earningsYoY": 74.87082474517887
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "RATNAMANI",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 11516204000.0,
-            "earnings": 1318240000.0,
-            "ebitda": 2184409000.0,
-            "profitMargin": 11.446827444182128,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1046534000.0,
             "ebitda": 1950154000.0,
             "profitMargin": 9.647052858877835,
-            "revenueYoY": -36.750409804882445,
-            "earningsYoY": -49.475752528544184
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9716325000.0,
+            "earnings": 821641000.0,
+            "ebitda": 1797894000.0,
+            "profitMargin": 8.456293917710656,
+            "revenueYoY": -15.62909965818598,
+            "earningsYoY": -37.67136485010317
         }
     ],
     "annual": [

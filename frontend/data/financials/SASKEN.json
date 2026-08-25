@@ -2,17 +2,6 @@
     "symbol": "SASKEN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2735307000.0,
-            "earnings": 94400000.0,
-            "ebitda": 222468000.0,
-            "profitMargin": 3.451166541817792,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 269890000.0,
             "ebitda": 484968000.0,
             "profitMargin": 8.07995590737315,
-            "revenueYoY": 125.67518630372068,
-            "earningsYoY": 144.7826441858567
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3392385000.0,
+            "earnings": 248599000.0,
+            "ebitda": 417917000.0,
+            "profitMargin": 7.328148190727172,
+            "revenueYoY": 24.02209331530245,
+            "earningsYoY": 163.34639830508476
         }
     ],
     "annual": [

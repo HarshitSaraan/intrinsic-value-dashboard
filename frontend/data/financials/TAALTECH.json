@@ -1,5 +1,95 @@
 {
     "symbol": "TAALTECH",
-    "quarterly": [],
-    "annual": []
+    "quarterly": [
+        {
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 457678000.0,
+            "earnings": 137120000.0,
+            "ebitda": 189062000.0,
+            "profitMargin": 29.95992815909875,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 488255000.0,
+            "earnings": 142693000.0,
+            "ebitda": 193890000.0,
+            "profitMargin": 29.225097541243816,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-12-31",
+            "quarterLabel": "Q3 FY26",
+            "annualLabel": "FY26",
+            "revenue": 457925000.0,
+            "earnings": 115779000.0,
+            "ebitda": 158369000.0,
+            "profitMargin": 25.283397936343288,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 570434000.0,
+            "earnings": 171584000.0,
+            "ebitda": 205657000.0,
+            "profitMargin": 30.079553462802007,
+            "revenueYoY": 27.64985208358508,
+            "earningsYoY": 41.384311140408705
+        }
+    ],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 1591416000.0,
+            "earnings": 312269000.0,
+            "ebitda": 510805000.0,
+            "profitMargin": 19.62208498594962,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 1868658000.0,
+            "earnings": 371521000.0,
+            "ebitda": 577630000.0,
+            "profitMargin": 19.881701199470424,
+            "revenueYoY": 17.421089143253553,
+            "earningsYoY": 18.97466607316128
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 1851402000.0,
+            "earnings": 487858000.0,
+            "ebitda": 728287000.0,
+            "profitMargin": 26.35073312008953,
+            "revenueYoY": -0.9234434551426746,
+            "earningsYoY": 31.313707704275128
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1974292000.0,
+            "earnings": 567150000.0,
+            "ebitda": 787374000.0,
+            "profitMargin": 28.726753691956407,
+            "revenueYoY": 6.637672423385088,
+            "earningsYoY": 16.253090038494808
+        }
+    ]
 }

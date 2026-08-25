@@ -2,17 +2,6 @@
     "symbol": "AEGISLOG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 17194100000.0,
-            "earnings": 1313200000.0,
-            "ebitda": 2607300000.0,
-            "profitMargin": 7.637503562268452,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4103700000.0,
             "ebitda": 6588200000.0,
             "profitMargin": 15.817591032959577,
-            "revenueYoY": 52.16006662600291,
-            "earningsYoY": 45.691766961337734
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 23568600000.0,
+            "earnings": 4844400000.0,
+            "ebitda": 7669800000.0,
+            "profitMargin": 20.554466535984318,
+            "revenueYoY": 37.073763674748896,
+            "earningsYoY": 268.9003959792872
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "EMAMILTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 9040900000.0,
-            "earnings": 1642600000.0,
-            "ebitda": 2337000000.0,
-            "profitMargin": 18.168545166963465,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1431800000.0,
             "ebitda": 2094700000.0,
             "profitMargin": 15.477245703167226,
-            "revenueYoY": -3.9406053683609366,
-            "earningsYoY": -11.709934019855707
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10392100000.0,
+            "earnings": 1373500000.0,
+            "ebitda": 2430800000.0,
+            "profitMargin": 13.21677043138538,
+            "revenueYoY": 14.94541472640998,
+            "earningsYoY": -16.382564227444295
         }
     ],
     "annual": [

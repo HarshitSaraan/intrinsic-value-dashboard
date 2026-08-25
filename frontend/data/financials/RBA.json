@@ -2,17 +2,6 @@
     "symbol": "RBA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 6325490000.0,
-            "earnings": -562780000.0,
-            "ebitda": 810130000.0,
-            "profitMargin": -8.897018254712282,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -435350000.0,
             "ebitda": 976110000.0,
             "profitMargin": -6.0917590890137046,
-            "revenueYoY": 11.82946122176895,
-            "earningsYoY": 13.6141757282324
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -6.0848454667123155,
             "revenueYoY": 11.744386600879931,
             "earningsYoY": 23.575820036248622
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8226100000.0,
+            "earnings": -283480000.0,
+            "ebitda": 1199910000.0,
+            "profitMargin": -3.4461044723502026,
+            "revenueYoY": 17.899223617395442,
+            "earningsYoY": 32.40497877819639
         }
     ],
     "annual": [

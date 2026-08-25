@@ -2,17 +2,6 @@
     "symbol": "GAIL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 364402900000.0,
-            "earnings": 24917600000.0,
-            "ebitda": 41998800000.0,
-            "profitMargin": 6.837925823312603,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 17561700000.0,
             "ebitda": 36103600000.0,
             "profitMargin": 4.992896614683211,
-            "revenueYoY": -4.510308613637185,
-            "earningsYoY": -56.97306912063035
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.173310790394234,
             "revenueYoY": -2.3702884911179356,
             "earningsYoY": -40.414807204546186
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 411976100000.0,
+            "earnings": 46653600000.0,
+            "ebitda": 75730500000.0,
+            "profitMargin": 11.324346242415519,
+            "revenueYoY": 16.67181147460202,
+            "earningsYoY": 96.91710281951713
         }
     ],
     "annual": [
@@ -75,7 +75,7 @@
             "annualLabel": "FY25",
             "revenue": 1419016900000.0,
             "earnings": 124498000000.0,
-            "ebitda": 206351400000.0,
+            "ebitda": 208464530000.0,
             "profitMargin": 8.77353891979722,
             "revenueYoY": 6.806584385680531,
             "earningsYoY": 25.765464349716442

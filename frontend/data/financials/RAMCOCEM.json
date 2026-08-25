@@ -2,17 +2,6 @@
     "symbol": "RAMCOCEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 23972700000.0,
-            "earnings": 274100000.0,
-            "ebitda": 3425100000.0,
-            "profitMargin": 1.1433839325566166,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3855900000.0,
             "ebitda": 7759600000.0,
             "profitMargin": 18.311899243949696,
-            "revenueYoY": 6.16249464317225,
-            "earningsYoY": 111.42120846584056
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.772855435348923,
             "revenueYoY": 8.88719251481894,
             "earningsYoY": 449.7628602699745
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22730500000.0,
+            "earnings": 312300000.0,
+            "ebitda": 3258100000.0,
+            "profitMargin": 1.3739249026638218,
+            "revenueYoY": 9.596339475993481,
+            "earningsYoY": -63.27178642831942
         }
     ],
     "annual": [

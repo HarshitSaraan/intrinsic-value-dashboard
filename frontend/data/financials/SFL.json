@@ -2,24 +2,13 @@
     "symbol": "SFL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8496100000.0,
-            "earnings": 130800000.0,
-            "ebitda": 872600000.0,
-            "profitMargin": 1.5395299019550148,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 8214100000.0,
-            "earnings": 74300000.0,
-            "ebitda": 851900000.0,
-            "profitMargin": 0.9045421896495052,
+            "earnings": 65400000.0,
+            "ebitda": 849700000.0,
+            "profitMargin": 0.7961919139041405,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 521300000.0,
             "ebitda": 1300500000.0,
             "profitMargin": 4.8518749476466585,
-            "revenueYoY": 11.096979661052,
-            "earningsYoY": 211.96888090963495
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.692836599813344,
             "revenueYoY": 23.59317804639776,
             "earningsYoY": 597.8593272171254
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10319400000.0,
+            "earnings": 614400000.0,
+            "ebitda": 1312900000.0,
+            "profitMargin": 5.953834525263097,
+            "revenueYoY": 25.630318598507447,
+            "earningsYoY": 839.4495412844037
         }
     ],
     "annual": [

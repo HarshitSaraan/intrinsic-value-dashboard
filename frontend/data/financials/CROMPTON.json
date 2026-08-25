@@ -2,24 +2,13 @@
     "symbol": "CROMPTON",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 20608200000.0,
-            "earnings": 1694800000.0,
-            "ebitda": 2832100000.0,
-            "profitMargin": 8.223910870430217,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 19983400000.0,
+            "revenue": 19983800000.0,
             "earnings": 1222900000.0,
-            "ebitda": 2154100000.0,
-            "profitMargin": 6.119579250778147,
+            "ebitda": 2202000000.0,
+            "profitMargin": 6.11945675997558,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 983100000.0,
             "ebitda": 1880100000.0,
             "profitMargin": 5.1788442290470424,
-            "revenueYoY": 7.287380747841027,
-            "earningsYoY": -10.497086671522213
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -23.384444240059214,
             "revenueYoY": 10.794246950243107,
             "earningsYoY": -415.0401227283456
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22350200000.0,
+            "earnings": 1404800000.0,
+            "ebitda": 2462400000.0,
+            "profitMargin": 6.285402367764046,
+            "revenueYoY": 11.841591689268308,
+            "earningsYoY": 14.874478698176466
         }
     ],
     "annual": [

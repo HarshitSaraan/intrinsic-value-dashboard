@@ -2,17 +2,6 @@
     "symbol": "KAJARIACER",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 12218500000.0,
-            "earnings": 425200000.0,
-            "ebitda": 1578200000.0,
-            "profitMargin": 3.4799688996194296,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 877200000.0,
             "ebitda": 1724400000.0,
             "profitMargin": 7.508602537106467,
-            "revenueYoY": 1.0937851542894723,
-            "earningsYoY": 12.837664008232569
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.340881785415226,
             "revenueYoY": 12.399230674796415,
             "earningsYoY": 266.29821260583253
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 13280800000.0,
+            "earnings": 1694600000.0,
+            "ebitda": 2786400000.0,
+            "profitMargin": 12.759773507620023,
+            "revenueYoY": 20.434553929303373,
+            "earningsYoY": 55.49642136171775
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 46350700000.0,
+            "revenue": 46282600000.0,
             "earnings": 2943500000.0,
-            "ebitda": 6696900000.0,
-            "profitMargin": 6.350497403491209,
-            "revenueYoY": 3.8263986111888895,
+            "ebitda": 6675300000.0,
+            "profitMargin": 6.359841495508031,
+            "revenueYoY": 3.673853390827127,
             "earningsYoY": -30.26699201629907
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 48303600000.0,
+            "revenue": 48246300000.0,
             "earnings": 4854100000.0,
-            "ebitda": 8748400000.0,
-            "profitMargin": 10.049147475550477,
-            "revenueYoY": 4.21331285180159,
+            "ebitda": 8738200000.0,
+            "profitMargin": 10.061082404246543,
+            "revenueYoY": 4.242847203916806,
             "earningsYoY": 64.90912179378292
         }
     ]

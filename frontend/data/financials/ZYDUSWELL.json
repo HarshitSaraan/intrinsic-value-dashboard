@@ -2,17 +2,6 @@
     "symbol": "ZYDUSWELL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9106000000.0,
-            "earnings": 1719000000.0,
-            "ebitda": 1908000000.0,
-            "profitMargin": 18.877663079288382,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -399000000.0,
             "ebitda": 552000000.0,
             "profitMargin": -4.142011834319527,
-            "revenueYoY": 113.68677905944986,
-            "earningsYoY": -723.4375
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.974866201476864,
             "revenueYoY": 62.101910828025474,
             "earningsYoY": -5.7591623036649215
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14299000000.0,
+            "earnings": 1189000000.0,
+            "ebitda": 2455000000.0,
+            "profitMargin": 8.315266801874257,
+            "revenueYoY": 66.71330301970386,
+            "earningsYoY": -7.0367474589523065
         }
     ],
     "annual": [

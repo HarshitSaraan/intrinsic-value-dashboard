@@ -2,13 +2,24 @@
     "symbol": "OMNI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1074110000.0,
-            "earnings": 204690000.0,
-            "ebitda": 442400000.0,
-            "profitMargin": 19.056707413579616,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1032050000.0,
+            "earnings": 52080000.0,
+            "ebitda": 276740000.0,
+            "profitMargin": 5.046267138220047,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2025-09-30",
+            "quarterLabel": "Q2 FY26",
+            "annualLabel": "FY26",
+            "revenue": 1141910000.0,
+            "earnings": 225820000.0,
+            "ebitda": 496240000.0,
+            "profitMargin": 19.775639060871697,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -22,6 +33,17 @@
             "profitMargin": 19.704416936183375,
             "revenueYoY": 38.461610077180175,
             "earningsYoY": 43.16771703551712
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1666580000.0,
+            "earnings": 297290000.0,
+            "ebitda": 563980000.0,
+            "profitMargin": 17.83832759303484,
+            "revenueYoY": 61.4824863136476,
+            "earningsYoY": 470.8333333333333
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SHREECEM",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 55320200000.0,
-            "earnings": 5743200000.0,
-            "ebitda": 15865000000.0,
-            "profitMargin": 10.381741208455502,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 2667000000.0,
             "ebitda": 10928300000.0,
             "profitMargin": 5.555648138118371,
-            "revenueYoY": 4.982636003394071,
-            "earningsYoY": 37.900723888314374
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.61645631863629,
             "revenueYoY": 10.285212273274501,
             "earningsYoY": -8.467404931048893
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 62331300000.0,
+            "earnings": 5291900000.0,
+            "ebitda": 14839100000.0,
+            "profitMargin": 8.489956089476717,
+            "revenueYoY": 18.032032540031206,
+            "earningsYoY": -17.6563034886254
         }
     ],
     "annual": [

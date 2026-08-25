@@ -2,17 +2,6 @@
     "symbol": "EMCURE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 21005370000.0,
-            "earnings": 2069530000.0,
-            "ebitda": 4169690000.0,
-            "profitMargin": 9.852385366218257,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2434030000.0,
             "ebitda": 4938440000.0,
             "profitMargin": 9.855557530601859,
-            "revenueYoY": 16.702130424407382,
-            "earningsYoY": 28.81396296511905
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 25804470000.0,
+            "earnings": 2939800000.0,
+            "ebitda": 5345670000.0,
+            "profitMargin": 11.392599809257852,
+            "revenueYoY": 22.847014834777966,
+            "earningsYoY": 42.05157692809479
         }
     ],
     "annual": [

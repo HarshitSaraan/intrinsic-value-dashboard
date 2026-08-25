@@ -2,17 +2,6 @@
     "symbol": "PNBHOUSING",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8542200000.0,
-            "earnings": 5503800000.0,
-            "ebitda": null,
-            "profitMargin": 64.43070871672403,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 5203500000.0,
             "ebitda": null,
             "profitMargin": 60.1922543031649,
-            "revenueYoY": 10.533179900268507,
-            "earningsYoY": 7.672729530076356
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 71.14881798357436,
             "revenueYoY": 7.90311629322657,
             "earningsYoY": 19.154039027580943
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9234400000.0,
+            "earnings": 5573400000.0,
+            "ebitda": null,
+            "profitMargin": 60.35476046088538,
+            "revenueYoY": 9.4045447006137,
+            "earningsYoY": 4.4686035613870665
         }
     ],
     "annual": [

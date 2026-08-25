@@ -2,17 +2,6 @@
     "symbol": "ANANTRAJ",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5924100000.0,
-            "earnings": 1258800000.0,
-            "ebitda": 1606400000.0,
-            "profitMargin": 21.248797285663645,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1466000000.0,
             "ebitda": 1960200000.0,
             "profitMargin": 22.665079389619827,
-            "revenueYoY": 19.6356237861833,
-            "earningsYoY": 23.567093728927848
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6314000000.0,
+            "earnings": 1496400000.0,
+            "ebitda": 2027400000.0,
+            "profitMargin": 23.699714919227112,
+            "revenueYoY": 6.581590452558195,
+            "earningsYoY": 18.875119161105815
         }
     ],
     "annual": [

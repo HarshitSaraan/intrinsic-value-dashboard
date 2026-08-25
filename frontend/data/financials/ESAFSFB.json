@@ -2,17 +2,6 @@
     "symbol": "ESAFSFB",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5730100000.0,
-            "earnings": -812200000.0,
-            "ebitda": null,
-            "profitMargin": -14.174272700301916,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 235100000.0,
             "ebitda": null,
             "profitMargin": 3.26927355656914,
-            "revenueYoY": 24.17246559494414,
-            "earningsYoY": 112.83366996015067
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8323200000.0,
+            "earnings": 800800000.0,
+            "ebitda": null,
+            "profitMargin": 9.621299500192233,
+            "revenueYoY": 45.25400952862952,
+            "earningsYoY": 198.59640482639745
         }
     ],
     "annual": [

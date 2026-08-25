@@ -2,24 +2,13 @@
     "symbol": "RAYMOND",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5574600000.0,
-            "earnings": 1327600000.0,
-            "ebitda": 884200000.0,
-            "profitMargin": 23.815161625946256,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
             "revenue": 5242900000.0,
-            "earnings": 53251900000.0,
+            "earnings": 53281500000.0,
             "ebitda": 852700000.0,
-            "profitMargin": 1015.6955120257873,
+            "profitMargin": 1016.2600850674245,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 35800000.0,
             "ebitda": 688700000.0,
             "profitMargin": 0.6424866746827946,
-            "revenueYoY": 19.544742657312653,
-            "earningsYoY": -95.03673922085125
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 0.18742432535535983,
             "revenueYoY": 8.153051340006458,
             "earningsYoY": -99.14884001205182
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6056100000.0,
+            "earnings": 308500000.0,
+            "ebitda": 995000000.0,
+            "profitMargin": 5.094037416819405,
+            "revenueYoY": 15.510499914169639,
+            "earningsYoY": -99.42099978416523
         }
     ],
     "annual": [

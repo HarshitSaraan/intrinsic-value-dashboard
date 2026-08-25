@@ -1,5 +1,50 @@
 {
     "symbol": "INDPRUD",
     "quarterly": [],
-    "annual": []
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 59281000.0,
+            "earnings": 447176000.0,
+            "ebitda": 57663000.0,
+            "profitMargin": 754.3327541708136,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 58006000.0,
+            "earnings": 494585000.0,
+            "ebitda": 52524000.0,
+            "profitMargin": 852.6445540116539,
+            "revenueYoY": -2.150773434996036,
+            "earningsYoY": 10.601865931982038
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 72830000.0,
+            "earnings": 596975000.0,
+            "ebitda": 61911000.0,
+            "profitMargin": 819.6828230124949,
+            "revenueYoY": 25.555976967899873,
+            "earningsYoY": 20.70220487883781
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 64899000.0,
+            "earnings": 637300000.0,
+            "ebitda": 55434000.0,
+            "profitMargin": 981.9873957996272,
+            "revenueYoY": -10.88974323767678,
+            "earningsYoY": 6.7548892332174715
+        }
+    ]
 }

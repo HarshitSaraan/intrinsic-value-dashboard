@@ -2,17 +2,6 @@
     "symbol": "TRENT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 48834800000.0,
-            "earnings": 4296900000.0,
-            "ebitda": 8976600000.0,
-            "profitMargin": 8.798848362233489,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 4003300000.0,
             "ebitda": 9392100000.0,
             "profitMargin": 7.962028564098178,
-            "revenueYoY": 19.23314061855279,
-            "earningsYoY": 25.830583058305827
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 57547100000.0,
+            "earnings": 5190100000.0,
+            "ebitda": 11489900000.0,
+            "profitMargin": 9.018873236010155,
+            "revenueYoY": 17.840351552581357,
+            "earningsYoY": 20.78707905699458
         }
     ],
     "annual": [

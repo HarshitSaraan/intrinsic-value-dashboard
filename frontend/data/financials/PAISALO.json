@@ -2,17 +2,6 @@
     "symbol": "PAISALO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2182512000.0,
-            "earnings": 471709000.0,
-            "ebitda": 828985000.0,
-            "profitMargin": 21.61312286026377,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 722300000.0,
             "ebitda": 1091693000.0,
             "profitMargin": 27.682613073107316,
-            "revenueYoY": 34.33130351692978,
-            "earningsYoY": 56.05454023000922
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2594549000.0,
+            "earnings": 613140000.0,
+            "ebitda": 1014300000.0,
+            "profitMargin": 23.631852780579592,
+            "revenueYoY": 18.879025636514253,
+            "earningsYoY": 29.982679999745603
         }
     ],
     "annual": [

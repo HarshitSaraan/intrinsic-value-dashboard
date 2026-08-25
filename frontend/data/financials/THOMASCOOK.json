@@ -2,17 +2,6 @@
     "symbol": "THOMASCOOK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 24079600000.0,
-            "earnings": 720500000.0,
-            "ebitda": 1715900000.0,
-            "profitMargin": 2.9921593381949867,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 386600000.0,
             "ebitda": 1115700000.0,
             "profitMargin": 2.1833296624479726,
-            "revenueYoY": -10.065215403837755,
-            "earningsYoY": -40.126993960043364
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 20918900000.0,
+            "earnings": 719000000.0,
+            "ebitda": 1541500000.0,
+            "profitMargin": 3.4370832118323618,
+            "revenueYoY": -13.126048605458562,
+            "earningsYoY": -0.2081887578070784
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 81395700000.0,
+            "revenue": 79893200000.0,
             "earnings": 2543300000.0,
-            "ebitda": 6148400000.0,
-            "profitMargin": 3.124612233815791,
-            "revenueYoY": 12.861167883616517,
+            "ebitda": 5664900000.0,
+            "profitMargin": 3.1833748053651627,
+            "revenueYoY": 10.777840327675186,
             "earningsYoY": -1.8144616453692624
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 83981700000.0,
+            "revenue": 82311900000.0,
             "earnings": 2188500000.0,
-            "ebitda": 5811400000.0,
-            "profitMargin": 2.6059248622021225,
-            "revenueYoY": 3.1770720074893393,
+            "ebitda": 5301800000.0,
+            "profitMargin": 2.658789312359452,
+            "revenueYoY": 3.0274166011625523,
             "earningsYoY": -13.950379428301812
         }
     ]

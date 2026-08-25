@@ -2,17 +2,6 @@
     "symbol": "JTLIND",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5438600000.0,
-            "earnings": 165492000.0,
-            "ebitda": 291157000.0,
-            "profitMargin": 3.0429154561835765,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 344126000.0,
             "ebitda": 590982000.0,
             "profitMargin": 4.968024278969073,
-            "revenueYoY": 47.54573888979298,
-            "earningsYoY": 104.61037185021344
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7216074000.0,
+            "earnings": 325521000.0,
+            "ebitda": 634816000.0,
+            "profitMargin": 4.5110540717847405,
+            "revenueYoY": 32.68256536608686,
+            "earningsYoY": 99.4149646528382
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "AVALON",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3233080000.0,
-            "earnings": 142140000.0,
-            "ebitda": 315420000.0,
-            "profitMargin": 4.396426936543482,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 411510000.0,
             "ebitda": 687850000.0,
             "profitMargin": 8.575072255991465,
-            "revenueYoY": 39.99684935543063,
-            "earningsYoY": 69.50611690077028
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4844140000.0,
+            "earnings": 348690000.0,
+            "ebitda": 607750000.0,
+            "profitMargin": 7.198181720594368,
+            "revenueYoY": 49.830502183676245,
+            "earningsYoY": 145.3144786829886
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "ITC",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 199182400000.0,
-            "earnings": 49311900000.0,
-            "ebitda": 72043700000.0,
-            "profitMargin": 24.75715725887428,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 49311900000.0,
             "ebitda": 72043700000.0,
             "profitMargin": 24.75715725887428,
-            "revenueYoY": 7.200506341104262,
-            "earningsYoY": -0.07315392721082921
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 30.563296951764972,
             "revenueYoY": -11.493736394380226,
             "earningsYoY": 9.263078486126068
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 190008900000.0,
+            "earnings": 43941300000.0,
+            "ebitda": 63283600000.0,
+            "profitMargin": 23.12591673337407,
+            "revenueYoY": -11.098337944306186,
+            "earningsYoY": -16.209717402082298
         }
     ],
     "annual": [

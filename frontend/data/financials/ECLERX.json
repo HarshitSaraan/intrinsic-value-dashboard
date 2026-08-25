@@ -2,17 +2,6 @@
     "symbol": "ECLERX",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 8982860000.0,
-            "earnings": 1521630000.0,
-            "ebitda": 2505050000.0,
-            "profitMargin": 16.939259879370265,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1919760000.0,
             "ebitda": 3063330000.0,
             "profitMargin": 17.936117017897253,
-            "revenueYoY": 25.357891173911156,
-            "earningsYoY": 40.057927029452316
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 17.101528330053544,
             "revenueYoY": 23.26664336302692,
             "earningsYoY": 24.44746751838489
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 11523580000.0,
+            "earnings": 1643420000.0,
+            "ebitda": 2830960000.0,
+            "profitMargin": 14.261366693336619,
+            "revenueYoY": 23.305398499394364,
+            "earningsYoY": 15.996837900026822
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SIS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 35484850000.0,
-            "earnings": 929480000.0,
-            "ebitda": 1780980000.0,
-            "profitMargin": 2.619371365526415,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1025000000.0,
             "ebitda": 2275500000.0,
             "profitMargin": 2.283206736016751,
-            "revenueYoY": 30.964709863559587,
-            "earningsYoY": 145.89209760465639
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 46035800000.0,
+            "earnings": 1016600000.0,
+            "ebitda": 2270100000.0,
+            "profitMargin": 2.208281381012169,
+            "revenueYoY": 29.733492274178598,
+            "earningsYoY": 9.37062937062937
         }
     ],
     "annual": [

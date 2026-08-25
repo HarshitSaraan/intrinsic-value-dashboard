@@ -2,17 +2,6 @@
     "symbol": "SHAILY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2466927000.0,
-            "earnings": 411277000.0,
-            "ebitda": 703932000.0,
-            "profitMargin": 16.67163235880105,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 401573000.0,
             "ebitda": 692892000.0,
             "profitMargin": 16.956779684276977,
-            "revenueYoY": 8.719793744955869,
-            "earningsYoY": 40.462690587037805
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2806700000.0,
+            "earnings": 480100000.0,
+            "ebitda": 833000000.0,
+            "profitMargin": 17.105497559411408,
+            "revenueYoY": 13.774372694474845,
+            "earningsYoY": 16.755836575875485
         }
     ],
     "annual": [

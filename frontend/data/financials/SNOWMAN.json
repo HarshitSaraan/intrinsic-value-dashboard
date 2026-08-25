@@ -2,17 +2,6 @@
     "symbol": "SNOWMAN",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 1370148000.0,
-            "earnings": 39003000.0,
-            "ebitda": 90392000.0,
-            "profitMargin": 2.846626787763074,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -18731000.0,
             "ebitda": 38716000.0,
             "profitMargin": -1.3032545531460125,
-            "revenueYoY": 9.00844461096692,
-            "earningsYoY": -205.11483955041538
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.895685022904014,
             "revenueYoY": 3.8656407920896134,
             "earningsYoY": 42.14291208368587
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1776774000.0,
+            "earnings": 45463000.0,
+            "ebitda": 135509000.0,
+            "profitMargin": 2.5587384777129785,
+            "revenueYoY": 9.20794805539643,
+            "earningsYoY": 78.79109642913323
         }
     ],
     "annual": [

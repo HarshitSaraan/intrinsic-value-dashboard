@@ -2,17 +2,6 @@
     "symbol": "HINDALCO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 642320000000.0,
-            "earnings": 40040000000.0,
-            "ebitda": 64300000000.0,
-            "profitMargin": 6.233653007846556,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 25970000000.0,
             "ebitda": 44930000000.0,
             "profitMargin": 3.323819640868775,
-            "revenueYoY": 20.408383418092154,
-            "earningsYoY": -50.842324436872985
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 848250000000.0,
+            "earnings": 70130000000.0,
+            "ebitda": 103590000000.0,
+            "profitMargin": 8.267609784851164,
+            "revenueYoY": 32.06034375389214,
+            "earningsYoY": 75.14985014985015
         }
     ],
     "annual": [

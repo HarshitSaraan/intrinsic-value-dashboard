@@ -2,17 +2,6 @@
     "symbol": "GRINFRA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 19877899000.0,
-            "earnings": 2440562000.0,
-            "ebitda": 4901755000.0,
-            "profitMargin": 12.277766377623712,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2069650000.0,
             "ebitda": 4785071000.0,
             "profitMargin": 8.277233925312967,
-            "revenueYoY": 9.880512795407856,
-            "earningsYoY": -48.75787392899463
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 27841109000.0,
+            "earnings": 3572916000.0,
+            "ebitda": 6284159000.0,
+            "profitMargin": 12.833238790882934,
+            "revenueYoY": 40.06062210095745,
+            "earningsYoY": 46.397264236679916
         }
     ],
     "annual": [

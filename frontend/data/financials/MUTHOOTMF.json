@@ -2,17 +2,6 @@
     "symbol": "MUTHOOTMF",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5440820000.0,
-            "earnings": -4011500000.0,
-            "ebitda": 1293410000.0,
-            "profitMargin": -73.72969515624483,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 624430000.0,
             "ebitda": 1229370000.0,
             "profitMargin": 11.509657583862186,
-            "revenueYoY": -16.904275426026278,
-            "earningsYoY": 1543.2368421052631
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.770069670842505,
             "revenueYoY": 11.062303108722581,
             "earningsYoY": 117.72977689143711
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6057360000.0,
+            "earnings": 813380000.0,
+            "ebitda": 1444460000.0,
+            "profitMargin": 13.427962016456013,
+            "revenueYoY": 14.280108292692129,
+            "earningsYoY": 1215.2975420439843
         }
     ],
     "annual": [

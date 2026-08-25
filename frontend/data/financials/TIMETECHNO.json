@@ -2,17 +2,6 @@
     "symbol": "TIMETECHNO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 13526500000.0,
-            "earnings": 951000000.0,
-            "ebitda": 1958000000.0,
-            "profitMargin": 7.030643551546964,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1318400000.0,
             "ebitda": 2459100000.0,
             "profitMargin": 7.863205043329933,
-            "revenueYoY": 14.157032558519548,
-            "earningsYoY": 20.379839298758217
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16927100000.0,
+            "earnings": 1162200000.0,
+            "ebitda": 2254400000.0,
+            "profitMargin": 6.865913239716195,
+            "revenueYoY": 25.140280190736704,
+            "earningsYoY": 22.20820189274448
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "PUNJABCHEM",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3195100000.0,
-            "earnings": 206300000.0,
-            "ebitda": 380700000.0,
-            "profitMargin": 6.456761916684924,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 109800000.0,
             "ebitda": 298500000.0,
             "profitMargin": 5.264672036823936,
-            "revenueYoY": 3.1046074747874233,
-            "earningsYoY": 55.74468085106383
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3472400000.0,
+            "earnings": 220700000.0,
+            "ebitda": 414900000.0,
+            "profitMargin": 6.355834581269439,
+            "revenueYoY": 8.678914587962817,
+            "earningsYoY": 6.98012603005332
         }
     ],
     "annual": [

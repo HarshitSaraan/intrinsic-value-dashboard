@@ -2,17 +2,6 @@
     "symbol": "LICI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2435569500000.0,
-            "earnings": 190386700000.0,
-            "ebitda": null,
-            "profitMargin": 7.816927416770493,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 129304400000.0,
             "ebitda": null,
             "profitMargin": 5.474301379290724,
-            "revenueYoY": 16.098014563605712,
-            "earningsYoY": 17.457090560604616
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.482060418973052,
             "revenueYoY": 13.594947711407949,
             "earningsYoY": 23.260605914173627
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2398668100000.0,
+            "earnings": 135842500000.0,
+            "ebitda": null,
+            "profitMargin": 5.6632470328012445,
+            "revenueYoY": 6.591937112809204,
+            "earningsYoY": 23.97725665210983
         }
     ],
     "annual": [

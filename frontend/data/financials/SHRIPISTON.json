@@ -2,17 +2,6 @@
     "symbol": "SHRIPISTON",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 9884000000.0,
-            "earnings": 1465000000.0,
-            "ebitda": 2378000000.0,
-            "profitMargin": 14.82193443949818,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1230000000.0,
             "ebitda": 2137000000.0,
             "profitMargin": 12.021110242376858,
-            "revenueYoY": 20.674607854699847,
-            "earningsYoY": 2.671118530884808
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.736364885286442,
             "revenueYoY": 47.28854714690409,
             "earningsYoY": 6.689419795221843
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 14744000000.0,
+            "earnings": 1444000000.0,
+            "ebitda": 2828000000.0,
+            "profitMargin": 9.793814432989691,
+            "revenueYoY": 53.05719921104537,
+            "earningsYoY": 8.00299177262528
         }
     ],
     "annual": [

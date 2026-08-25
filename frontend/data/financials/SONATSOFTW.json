@@ -2,17 +2,6 @@
     "symbol": "SONATSOFTW",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 29651800000.0,
-            "earnings": 1093400000.0,
-            "ebitda": 1838700000.0,
-            "profitMargin": 3.687465853674988,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1305000000.0,
             "ebitda": 2146900000.0,
             "profitMargin": 5.145513545909415,
-            "revenueYoY": -3.095292679199144,
-            "earningsYoY": 21.361480517065004
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 32791000000.0,
+            "earnings": 1081100000.0,
+            "ebitda": 1775300000.0,
+            "profitMargin": 3.296941233875149,
+            "revenueYoY": 10.58687836826095,
+            "earningsYoY": -1.1249314066215474
         }
     ],
     "annual": [

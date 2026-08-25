@@ -2,17 +2,6 @@
     "symbol": "AGARWALEYE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4602200000.0,
-            "earnings": 325700000.0,
-            "ebitda": 1439200000.0,
-            "profitMargin": 7.077050106470819,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 337400000.0,
             "ebitda": 1546400000.0,
             "profitMargin": 6.367719775034915,
-            "revenueYoY": 23.01727340267459,
-            "earningsYoY": 51.02954341987467
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 7.039407207814079,
             "revenueYoY": 22.573986354352265,
             "earningsYoY": 21.922014123426468
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6140200000.0,
+            "earnings": 452300000.0,
+            "ebitda": 1768200000.0,
+            "profitMargin": 7.366209569720857,
+            "revenueYoY": 25.97349308604489,
+            "earningsYoY": 50.51580698835274
         }
     ],
     "annual": [

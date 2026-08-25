@@ -2,17 +2,6 @@
     "symbol": "RITES",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 4897400000.0,
-            "earnings": 801000000.0,
-            "ebitda": 1385000000.0,
-            "profitMargin": 16.35561726630457,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1299700000.0,
             "ebitda": 2031500000.0,
             "profitMargin": 16.917449821674953,
-            "revenueYoY": 27.556492719454084,
-            "earningsYoY": -2.0646522492653157
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5322000000.0,
+            "earnings": 872100000.0,
+            "ebitda": 1479600000.0,
+            "profitMargin": 16.386696730552426,
+            "revenueYoY": 8.669906480989912,
+            "earningsYoY": 8.876404494382022
         }
     ],
     "annual": [

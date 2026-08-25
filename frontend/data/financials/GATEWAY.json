@@ -2,17 +2,6 @@
     "symbol": "GATEWAY",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5349390000.0,
-            "earnings": -1930970000.0,
-            "ebitda": -1707757000.0,
-            "profitMargin": -36.097012930446276,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 678439000.0,
             "ebitda": 868374000.0,
             "profitMargin": 12.106019364948736,
-            "revenueYoY": 39.22804482608873,
-            "earningsYoY": -85.10156114981052
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 11.353431771117442,
             "revenueYoY": -0.24094335989710974,
             "earningsYoY": 131.37676918854254
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5492966000.0,
+            "earnings": 488449000.0,
+            "ebitda": 843557000.0,
+            "profitMargin": 8.892263305471033,
+            "revenueYoY": -0.20583922085585515,
+            "earningsYoY": -18.93473938573169
         }
     ],
     "annual": [

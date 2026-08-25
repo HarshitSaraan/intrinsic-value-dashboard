@@ -2,24 +2,13 @@
     "symbol": "NXST",
     "quarterly": [
         {
-            "date": "2024-12-31",
-            "quarterLabel": "Q3 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5943900000.0,
-            "earnings": 1187300000.0,
-            "ebitda": 4443260000.0,
-            "profitMargin": 19.975100523225493,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5803300000.0,
-            "earnings": 1142700000.0,
-            "ebitda": 4334750000.0,
-            "profitMargin": 19.69052091051643,
+            "date": "2025-06-30",
+            "quarterLabel": "Q1 FY26",
+            "annualLabel": "FY26",
+            "revenue": 613580000.0,
+            "earnings": 119580000.0,
+            "ebitda": 447520000.0,
+            "profitMargin": 19.488901202777146,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 1394000000.0,
             "ebitda": 4734800000.0,
             "profitMargin": 20.77001013171226,
-            "revenueYoY": 12.915762378236511,
-            "earningsYoY": 17.409247873326034
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 1.8670386437144564,
             "revenueYoY": 12.413626729619356,
             "earningsYoY": -89.34103439222893
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 680530000.0,
+            "earnings": 156520000.0,
+            "ebitda": 493790000.0,
+            "profitMargin": 22.999720805842504,
+            "revenueYoY": 10.911372600149939,
+            "earningsYoY": 30.891453420304398
         }
     ],
     "annual": [

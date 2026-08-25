@@ -2,17 +2,6 @@
     "symbol": "POLICYBZR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 15078700000.0,
-            "earnings": 1697000000.0,
-            "ebitda": 2129800000.0,
-            "profitMargin": 11.254285846923143,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1893800000.0,
             "ebitda": 2441400000.0,
             "profitMargin": 10.692487931569884,
-            "revenueYoY": 37.12624456109382,
-            "earningsYoY": 164.86713286713285
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 12.667064468086139,
             "revenueYoY": 36.70475571501522,
             "earningsYoY": 53.8656452563347
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 18882800000.0,
+            "earnings": 1628900000.0,
+            "ebitda": 2298300000.0,
+            "profitMargin": 8.626368970703497,
+            "revenueYoY": 40.08115787209104,
+            "earningsYoY": 92.5641328762265
         }
     ],
     "annual": [

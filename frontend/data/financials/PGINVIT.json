@@ -2,17 +2,6 @@
     "symbol": "PGINVIT",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3132840000.0,
-            "earnings": 1907550000.0,
-            "ebitda": 3036700000.0,
-            "profitMargin": 60.88884207300724,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 2439590000.0,
             "ebitda": 3024620000.0,
             "profitMargin": 78.34516201547899,
-            "revenueYoY": 0.020557229399407694,
-            "earningsYoY": -64.47743938308493
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3113780000.0,
+            "earnings": 1851150000.0,
+            "ebitda": 2979760000.0,
+            "profitMargin": 59.45025017823995,
+            "revenueYoY": -0.6083936619808226,
+            "earningsYoY": -2.9566721711095383
         }
     ],
     "annual": [

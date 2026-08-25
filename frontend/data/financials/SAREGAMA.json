@@ -2,17 +2,6 @@
     "symbol": "SAREGAMA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2408200000.0,
-            "earnings": 601300000.0,
-            "ebitda": 1029300000.0,
-            "profitMargin": 24.968856407275144,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 512600000.0,
             "ebitda": 921800000.0,
             "profitMargin": 19.686611874951993,
-            "revenueYoY": -46.13904805245848,
-            "earningsYoY": -17.733911089712727
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 26.22808238241024,
             "revenueYoY": 19.35885723777095,
             "earningsYoY": 25.378346915017463
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 2636000000.0,
+            "earnings": 515600000.0,
+            "ebitda": 963200000.0,
+            "profitMargin": 19.559939301972687,
+            "revenueYoY": 27.484644774387,
+            "earningsYoY": 40.64375340971086
         }
     ],
     "annual": [

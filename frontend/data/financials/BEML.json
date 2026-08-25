@@ -2,17 +2,6 @@
     "symbol": "BEML",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16525300000.0,
-            "earnings": 2875500000.0,
-            "ebitda": 4263300000.0,
-            "profitMargin": 17.400591819815677,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -223800000.0,
             "ebitda": 74400000.0,
             "profitMargin": -2.0659669334514943,
-            "revenueYoY": 23.693435491053588,
-            "earningsYoY": -191.6837361736993
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.022461639643957,
             "revenueYoY": 8.57110007080053,
             "earningsYoY": -37.46478873239437
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 8196200000.0,
+            "earnings": -270100000.0,
+            "ebitda": 35500000.0,
+            "profitMargin": -3.2954295893218806,
+            "revenueYoY": 29.2796416347261,
+            "earningsYoY": 57.86928716268913
         }
     ],
     "annual": [

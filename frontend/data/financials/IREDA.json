@@ -2,17 +2,6 @@
     "symbol": "IREDA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 18906100000.0,
-            "earnings": 5015500000.0,
-            "ebitda": 7553900000.0,
-            "profitMargin": 26.528474936660658,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 5851600000.0,
             "ebitda": 8274000000.0,
             "profitMargin": 27.583931214586734,
-            "revenueYoY": 26.959560957801436,
-            "earningsYoY": 37.561709530302316
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.90396819861915,
             "revenueYoY": 13.764869539460808,
             "earningsYoY": -1.778486691257103
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 22362600000.0,
+            "earnings": 3385300000.0,
+            "ebitda": 8450400000.0,
+            "profitMargin": 15.138221852557395,
+            "revenueYoY": 16.20315520359169,
+            "earningsYoY": 37.12329876863254
         }
     ],
     "annual": [

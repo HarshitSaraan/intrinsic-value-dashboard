@@ -2,17 +2,6 @@
     "symbol": "RATEGAIN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2729150000.0,
-            "earnings": 469320000.0,
-            "ebitda": 703250000.0,
-            "profitMargin": 17.196563032446,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 699890000.0,
             "ebitda": 1496050000.0,
             "profitMargin": 9.781147369156592,
-            "revenueYoY": 174.48310253557867,
-            "earningsYoY": 27.700841133431858
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7850120000.0,
+            "earnings": 949100000.0,
+            "ebitda": 1746160000.0,
+            "profitMargin": 12.090261040595559,
+            "revenueYoY": 187.6397413113973,
+            "earningsYoY": 102.22875649876417
         }
     ],
     "annual": [

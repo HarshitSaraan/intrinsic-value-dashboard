@@ -2,17 +2,6 @@
     "symbol": "GMDCLTD",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 7326000000.0,
-            "earnings": 1637700000.0,
-            "ebitda": 2249400000.0,
-            "profitMargin": 22.354627354627354,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1940900000.0,
             "ebitda": 2400200000.0,
             "profitMargin": 23.84251581598182,
-            "revenueYoY": 3.5318207254413188,
-            "earningsYoY": -14.20298824153479
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 9066400000.0,
+            "earnings": 1634300000.0,
+            "ebitda": 2338600000.0,
+            "profitMargin": 18.025897820524133,
+            "revenueYoY": 23.756483756483757,
+            "earningsYoY": -0.20760823105574894
         }
     ],
     "annual": [

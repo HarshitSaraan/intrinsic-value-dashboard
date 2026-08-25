@@ -2,17 +2,6 @@
     "symbol": "MUTHOOTFIN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 41301040000.0,
-            "earnings": 20162000000.0,
-            "ebitda": null,
-            "profitMargin": 48.81717264262595,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 33494730000.0,
             "ebitda": null,
             "profitMargin": 54.58210660438222,
-            "revenueYoY": 74.52541145132847,
-            "earningsYoY": 126.67091205747386
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 52364260000.0,
+            "earnings": 27990680000.0,
+            "ebitda": null,
+            "profitMargin": 53.453786991356324,
+            "revenueYoY": 27.383155653639417,
+            "earningsYoY": 38.828886023211986
         }
     ],
     "annual": [
@@ -84,11 +84,11 @@
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 202637740000.0,
+            "revenue": 202649320000.0,
             "earnings": 105903370000.0,
             "ebitda": null,
-            "profitMargin": 52.26241173041113,
-            "revenueYoY": 57.660581551825665,
+            "profitMargin": 52.25942529686258,
+            "revenueYoY": 57.66959127298802,
             "earningsYoY": 98.58495377749442
         }
     ]

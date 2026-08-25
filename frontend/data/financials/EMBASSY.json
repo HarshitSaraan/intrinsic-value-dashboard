@@ -2,17 +2,6 @@
     "symbol": "EMBASSY",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 10597860000.0,
-            "earnings": 1551690000.0,
-            "ebitda": 8686360000.0,
-            "profitMargin": 14.641540839377006,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -4300240000.0,
             "ebitda": 9483930000.0,
             "profitMargin": -37.27783003125095,
-            "revenueYoY": 7.306774968930695,
-            "earningsYoY": -77.05350011116693
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12408120000.0,
+            "earnings": 1952180000.0,
+            "ebitda": 10094270000.0,
+            "profitMargin": 15.733084464044515,
+            "revenueYoY": 17.08137303191399,
+            "earningsYoY": 25.80992337386978
         }
     ],
     "annual": [

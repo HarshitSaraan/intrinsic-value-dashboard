@@ -2,17 +2,6 @@
     "symbol": "JKLAKSHMI",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 18976200000.0,
-            "earnings": 1756900000.0,
-            "ebitda": 3745000000.0,
-            "profitMargin": 9.258439518976402,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 569200000.0,
             "ebitda": 2153000000.0,
             "profitMargin": 3.5834802316796774,
-            "revenueYoY": 6.117595184489889,
-            "earningsYoY": -24.035766715601227
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 6.524219970234496,
             "revenueYoY": 0.20604757538390195,
             "earningsYoY": -29.386988445557517
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19047800000.0,
+            "earnings": 1080200000.0,
+            "ebitda": 2751200000.0,
+            "profitMargin": 5.670996125536807,
+            "revenueYoY": 9.411636309328921,
+            "earningsYoY": -28.068189385363258
         }
     ],
     "annual": [

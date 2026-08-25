@@ -2,17 +2,6 @@
     "symbol": "NLCINDIA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 38360000000.0,
-            "earnings": 4819600000.0,
-            "ebitda": 18179000000.0,
-            "profitMargin": 12.564129301355578,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 6660300000.0,
             "ebitda": 17084500000.0,
             "profitMargin": 14.990378231170029,
-            "revenueYoY": 0.7158611528583443,
-            "earningsYoY": -0.3083416904908021
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 27.634527591691356,
             "revenueYoY": 31.45099061522419,
             "earningsYoY": 189.12357872022574
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 47167500000.0,
+            "earnings": 4842700000.0,
+            "ebitda": 16995900000.0,
+            "profitMargin": 10.267027084327133,
+            "revenueYoY": 23.29406290761473,
+            "earningsYoY": -39.28334106495819
         }
     ],
     "annual": [

@@ -2,17 +2,6 @@
     "symbol": "SOMATEX",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 20500000.0,
-            "earnings": 36300000.0,
-            "ebitda": 38300000.0,
-            "profitMargin": 177.0731707317073,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 48800000.0,
             "ebitda": 59900000.0,
             "profitMargin": 9.602518693427784,
-            "revenueYoY": 1213.1782945736434,
-            "earningsYoY": 1933.3333333333333
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 283900000.0,
+            "earnings": 27600000.0,
+            "ebitda": 27900000.0,
+            "profitMargin": 9.721733004579077,
+            "revenueYoY": 1284.878048780488,
+            "earningsYoY": -23.96694214876033
         }
     ],
     "annual": [

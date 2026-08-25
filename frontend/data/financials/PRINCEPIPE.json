@@ -2,17 +2,6 @@
     "symbol": "PRINCEPIPE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 5804160000.0,
-            "earnings": 48210000.0,
-            "ebitda": 423080000.0,
-            "profitMargin": 0.8306111478663579,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 561050000.0,
             "ebitda": 1142020000.0,
             "profitMargin": 6.600021409925971,
-            "revenueYoY": 18.12245884827987,
-            "earningsYoY": 132.04979733642153
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 6094180000.0,
+            "earnings": 337490000.0,
+            "ebitda": 811540000.0,
+            "profitMargin": 5.537906658483996,
+            "revenueYoY": 4.9967609438747385,
+            "earningsYoY": 600.0414851690521
         }
     ],
     "annual": [

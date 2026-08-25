@@ -2,17 +2,6 @@
     "symbol": "NOCIL",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 3396900000.0,
-            "earnings": 207900000.0,
-            "ebitda": 398200000.0,
-            "profitMargin": 6.120286143248256,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 92500000.0,
             "ebitda": 276300000.0,
             "profitMargin": 2.9286980749746707,
-            "revenueYoY": -0.7198315154182252,
-            "earningsYoY": -28.294573643410853
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 5.146057212047828,
             "revenueYoY": -2.7495657805646325,
             "earningsYoY": -18.22991822991823
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4030200000.0,
+            "earnings": 277600000.0,
+            "ebitda": 511200000.0,
+            "profitMargin": 6.8879956329710685,
+            "revenueYoY": 19.867943608351673,
+            "earningsYoY": 60.8342989571263
         }
     ],
     "annual": [

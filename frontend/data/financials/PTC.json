@@ -2,17 +2,6 @@
     "symbol": "PTC",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 39763100000.0,
-            "earnings": 1950500000.0,
-            "ebitda": 3595400000.0,
-            "profitMargin": 4.905301649016299,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1053400000.0,
             "ebitda": 2195500000.0,
             "profitMargin": 2.7290367541716645,
-            "revenueYoY": 33.705008434565435,
-            "earningsYoY": -70.0321470228443
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 47306600000.0,
+            "earnings": 979900000.0,
+            "ebitda": 1467900000.0,
+            "profitMargin": 2.071381160345491,
+            "revenueYoY": 18.971106377520865,
+            "earningsYoY": -49.76159958984876
         }
     ],
     "annual": [

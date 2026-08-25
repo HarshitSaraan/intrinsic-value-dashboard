@@ -2,24 +2,13 @@
     "symbol": "URBANCO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2984500000.0,
-            "earnings": -28400000.0,
-            "ebitda": 133800000.0,
-            "profitMargin": -0.9515831797621043,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 3672670000.0,
-            "earnings": 69380000.0,
-            "ebitda": 178220000.0,
-            "profitMargin": 1.8890888645045703,
+            "revenue": 3672700000.0,
+            "earnings": 69400000.0,
+            "ebitda": 178240000.0,
+            "profitMargin": 1.8896179922128133,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": -212600000.0,
             "ebitda": -62100000.0,
             "profitMargin": -5.555555555555555,
-            "revenueYoY": 32.9119199777716,
-            "earningsYoY": -109.17011732229123
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": -37.87010057336216,
             "revenueYoY": 42.59004858435249,
             "earningsYoY": -5574.647887323944
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5283400000.0,
+            "earnings": -921200000.0,
+            "ebitda": -648500000.0,
+            "profitMargin": -17.435742135745922,
+            "revenueYoY": 43.85601873281237,
+            "earningsYoY": -1427.3775216138329
         }
     ],
     "annual": [

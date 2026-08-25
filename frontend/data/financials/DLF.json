@@ -2,17 +2,6 @@
     "symbol": "DLF",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 31275800000.0,
-            "earnings": 12822000000.0,
-            "ebitda": 11981800000.0,
-            "profitMargin": 40.9965532456404,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 12033600000.0,
             "ebitda": 7890400000.0,
             "profitMargin": 59.56578986447021,
-            "revenueYoY": 32.15194510404197,
-            "earningsYoY": 13.660706695758126
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 69.92932979063538,
             "revenueYoY": -41.99796647887504,
             "earningsYoY": -1.063796599594447
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 12803400000.0,
+            "earnings": 7939000000.0,
+            "ebitda": 4755200000.0,
+            "profitMargin": 62.006966899417336,
+            "revenueYoY": -52.87149850922075,
+            "earningsYoY": 4.094824760381292
         }
     ],
     "annual": [

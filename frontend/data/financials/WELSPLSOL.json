@@ -1,5 +1,50 @@
 {
     "symbol": "WELSPLSOL",
     "quarterly": [],
-    "annual": []
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 4117800000.0,
+            "earnings": -137400000.0,
+            "ebitda": 284300000.0,
+            "profitMargin": -3.3367332070523092,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 6813500000.0,
+            "earnings": 624700000.0,
+            "ebitda": 718300000.0,
+            "profitMargin": 9.16856241285683,
+            "revenueYoY": 65.46456845888581,
+            "earningsYoY": 554.6579330422126
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 7130900000.0,
+            "earnings": -40900000.0,
+            "ebitda": 526200000.0,
+            "profitMargin": -0.5735601396738139,
+            "revenueYoY": 4.658398767153446,
+            "earningsYoY": -106.54714262846166
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 8704900000.0,
+            "earnings": 226700000.0,
+            "ebitda": 632900000.0,
+            "profitMargin": 2.6042803478500614,
+            "revenueYoY": 22.072950118498365,
+            "earningsYoY": 654.2787286063569
+        }
+    ]
 }

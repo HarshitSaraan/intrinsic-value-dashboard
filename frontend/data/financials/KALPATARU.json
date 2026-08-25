@@ -2,17 +2,6 @@
     "symbol": "KALPATARU",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 5968800000.0,
-            "earnings": 140500000.0,
-            "ebitda": 505100000.0,
-            "profitMargin": 2.353906982978153,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": -627800000.0,
             "ebitda": -520100000.0,
             "profitMargin": -12.433652855897964,
-            "revenueYoY": -14.129251700680273,
-            "earningsYoY": -187.19121683440073
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -42,8 +31,19 @@
             "earnings": 2004700000.0,
             "ebitda": 2510500000.0,
             "profitMargin": 11.836006919638903,
-            "revenueYoY": 183.76390564267524,
-            "earningsYoY": 1326.832740213523
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4722000000.0,
+            "earnings": -265200000.0,
+            "ebitda": -43000000.0,
+            "profitMargin": -5.6162642947903425,
+            "revenueYoY": 6.543321299638989,
+            "earningsYoY": 46.33751517604209
         }
     ],
     "annual": [

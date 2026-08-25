@@ -2,17 +2,6 @@
     "symbol": "LLOYDSENGG",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 2170100000.0,
-            "earnings": 301800000.0,
-            "ebitda": 353100000.0,
-            "profitMargin": 13.907193216902447,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 468300000.0,
             "ebitda": 699500000.0,
             "profitMargin": 9.460223829340228,
-            "revenueYoY": 113.40748404897396,
-            "earningsYoY": 156.46221248630889
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5271500000.0,
+            "earnings": 639700000.0,
+            "ebitda": 792300000.0,
+            "profitMargin": 12.135065920515983,
+            "revenueYoY": 142.91507303810883,
+            "earningsYoY": 111.96156394963552
         }
     ],
     "annual": [

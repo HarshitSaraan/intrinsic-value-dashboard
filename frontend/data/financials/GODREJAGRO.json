@@ -2,17 +2,6 @@
     "symbol": "GODREJAGRO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 21254600000.0,
-            "earnings": 707800000.0,
-            "ebitda": 1719300000.0,
-            "profitMargin": 3.3301026601300423,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1148200000.0,
             "ebitda": 2370400000.0,
             "profitMargin": 4.2318097049306,
-            "revenueYoY": 10.988120950323973,
-            "earningsYoY": 2.9868149609830477
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 4.513618342036272,
             "revenueYoY": 9.29257666575706,
             "earningsYoY": 48.13506640293868
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 28522000000.0,
+            "earnings": 1345000000.0,
+            "ebitda": 2675800000.0,
+            "profitMargin": 4.715658088493093,
+            "revenueYoY": 9.560100179770446,
+            "earningsYoY": -16.209818091203587
         }
     ],
     "annual": [

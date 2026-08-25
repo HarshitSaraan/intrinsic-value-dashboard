@@ -2,17 +2,6 @@
     "symbol": "VAKRANGEE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 631771000.0,
-            "earnings": 25426000.0,
-            "ebitda": 83855000.0,
-            "profitMargin": 4.024559531855688,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 31858000.0,
             "ebitda": 92605000.0,
             "profitMargin": 5.300399801014559,
-            "revenueYoY": -11.448704840311274,
-            "earningsYoY": 167.4221438764375
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 3.5835825603916667,
             "revenueYoY": -10.185652712770924,
             "earningsYoY": -20.02674427751121
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 559231000.0,
+            "earnings": 26147000.0,
+            "ebitda": 85961000.0,
+            "profitMargin": 4.675527644211426,
+            "revenueYoY": -18.761648675228763,
+            "earningsYoY": -17.934151470449766
         }
     ],
     "annual": [

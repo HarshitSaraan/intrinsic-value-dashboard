@@ -2,24 +2,13 @@
     "symbol": "IXIGO",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 2841390000.0,
-            "earnings": 167170000.0,
-            "ebitda": 274100000.0,
-            "profitMargin": 5.8833880600691915,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
-            "revenue": 3144720000.0,
-            "earnings": 190850000.0,
-            "ebitda": 301540000.0,
-            "profitMargin": 6.0689027957974,
+            "revenue": 3160500000.0,
+            "earnings": 190900000.0,
+            "ebitda": 301500000.0,
+            "profitMargin": 6.0401835152665715,
             "revenueYoY": null,
             "earningsYoY": null
         },
@@ -31,8 +20,8 @@
             "earnings": 242610000.0,
             "ebitda": 371750000.0,
             "profitMargin": 7.639719867491277,
-            "revenueYoY": 31.354519546163363,
-            "earningsYoY": 56.28059778407627
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 10.376271307486796,
             "revenueYoY": 8.414895526485276,
             "earningsYoY": 91.20655620027517
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 3567500000.0,
+            "earnings": 325000000.0,
+            "ebitda": 495400000.0,
+            "profitMargin": 9.110021023125437,
+            "revenueYoY": 12.877709223224173,
+            "earningsYoY": 70.24620220010476
         }
     ],
     "annual": [

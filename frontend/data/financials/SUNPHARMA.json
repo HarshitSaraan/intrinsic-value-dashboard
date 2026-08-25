@@ -2,17 +2,6 @@
     "symbol": "SUNPHARMA",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 128155800000.0,
-            "earnings": 21498800000.0,
-            "ebitda": 39672800000.0,
-            "profitMargin": 16.775518548516725,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 33688100000.0,
             "ebitda": 50378500000.0,
             "profitMargin": 21.777715143832175,
-            "revenueYoY": 15.1234581683032,
-            "earningsYoY": 16.03062637339928
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 18.64063599993132,
             "revenueYoY": 13.609762492216504,
             "earningsYoY": 26.240999497646378
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 151835500000.0,
+            "earnings": 28947900000.0,
+            "ebitda": 49372000000.0,
+            "profitMargin": 19.06530422727228,
+            "revenueYoY": 10.136899058252279,
+            "earningsYoY": 27.040809609282775
         }
     ],
     "annual": [

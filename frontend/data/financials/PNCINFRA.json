@@ -2,17 +2,6 @@
     "symbol": "PNCINFRA",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 14228008000.0,
-            "earnings": 4314145000.0,
-            "ebitda": 7199596000.0,
-            "profitMargin": 30.32149686730567,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1077574000.0,
             "ebitda": 3270295000.0,
             "profitMargin": 6.664102632130494,
-            "revenueYoY": -5.112645742678618,
-            "earningsYoY": 42.84233410217662
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 16884596000.0,
+            "earnings": 3319480000.0,
+            "ebitda": 5945867000.0,
+            "profitMargin": 19.65981300352108,
+            "revenueYoY": 18.671538559719675,
+            "earningsYoY": -23.055900995446375
         }
     ],
     "annual": [

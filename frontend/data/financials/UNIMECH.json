@@ -2,17 +2,6 @@
     "symbol": "UNIMECH",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 629885000.0,
-            "earnings": 191243000.0,
-            "ebitda": 253461000.0,
-            "profitMargin": 30.361573938099813,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 261019000.0,
             "ebitda": 428417000.0,
             "profitMargin": 31.9085940336495,
-            "revenueYoY": 19.643214955895495,
-            "earningsYoY": -10.6160536949524
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 1076204000.0,
+            "earnings": 278636000.0,
+            "ebitda": 386260000.0,
+            "profitMargin": 25.890630400927705,
+            "revenueYoY": 70.85721996872445,
+            "earningsYoY": 45.697358857579104
         }
     ],
     "annual": [
@@ -73,22 +73,22 @@
             "date": "2025-03-31",
             "quarterLabel": "Q4 FY25",
             "annualLabel": "FY25",
-            "revenue": 2429258000.0,
+            "revenue": 2413999000.0,
             "earnings": 834565000.0,
-            "ebitda": 1168282000.0,
-            "profitMargin": 34.35472889252603,
-            "revenueYoY": 16.666786730886617,
+            "ebitda": 1163727000.0,
+            "profitMargin": 34.571886732347444,
+            "revenueYoY": 15.933962758,
             "earningsYoY": 43.56106933915446
         },
         {
             "date": "2026-03-31",
             "quarterLabel": "Q4 FY26",
             "annualLabel": "FY26",
-            "revenue": 2404904000.0,
+            "revenue": 2398316000.0,
             "earnings": 632830000.0,
-            "ebitda": 1220845000.0,
-            "profitMargin": 26.3141480907346,
-            "revenueYoY": -1.002528344045795,
+            "ebitda": 1122739000.0,
+            "profitMargin": 26.386431145854004,
+            "revenueYoY": -0.6496688689597635,
             "earningsYoY": -24.172473084780695
         }
     ]

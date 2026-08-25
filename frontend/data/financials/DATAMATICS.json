@@ -2,17 +2,6 @@
     "symbol": "DATAMATICS",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 4971500000.0,
-            "earnings": 448600000.0,
-            "ebitda": 825300000.0,
-            "profitMargin": 9.023433571356733,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 363800000.0,
             "ebitda": 684600000.0,
             "profitMargin": 7.1319349147226045,
-            "revenueYoY": 19.89094413237126,
-            "earningsYoY": -51.042928273449064
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 8.514039209644494,
             "revenueYoY": 4.447349894398069,
             "earningsYoY": -1.4489522960321
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 5139100000.0,
+            "earnings": 723200000.0,
+            "ebitda": 1192800000.0,
+            "profitMargin": 14.07250296744566,
+            "revenueYoY": 9.91316622465566,
+            "earningsYoY": 43.54902739182215
         }
     ],
     "annual": [

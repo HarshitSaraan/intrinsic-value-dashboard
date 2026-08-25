@@ -2,17 +2,6 @@
     "symbol": "SMARTLINK",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 370233000.0,
-            "earnings": 21751000.0,
-            "ebitda": 38922000.0,
-            "profitMargin": 5.874949018590995,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 68679000.0,
             "ebitda": 105694000.0,
             "profitMargin": 6.9125759785493655,
-            "revenueYoY": 51.83687504298191,
-            "earningsYoY": 79.05673167170717
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 652749000.0,
+            "earnings": 56066000.0,
+            "ebitda": 87558000.0,
+            "profitMargin": 8.589212698908769,
+            "revenueYoY": 76.3076224971842,
+            "earningsYoY": 157.7628614776332
         }
     ],
     "annual": [

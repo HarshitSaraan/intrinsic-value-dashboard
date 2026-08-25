@@ -2,17 +2,6 @@
     "symbol": "ENRIN",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 17846000000.0,
-            "earnings": 2627000000.0,
-            "ebitda": 3928000000.0,
-            "profitMargin": 14.720385520564832,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 3746000000.0,
             "ebitda": 5442000000.0,
             "profitMargin": 15.646798379349233,
-            "revenueYoY": 27.379622239957435,
-            "earningsYoY": 52.2145469321414
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24856000000.0,
+            "earnings": 4409000000.0,
+            "ebitda": 6430000000.0,
+            "profitMargin": 17.738171869971033,
+            "revenueYoY": 39.280511038888264,
+            "earningsYoY": 67.8340312143129
         }
     ],
     "annual": [

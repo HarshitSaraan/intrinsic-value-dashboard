@@ -2,17 +2,6 @@
     "symbol": "HEROMOTOCO",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 97277500000.0,
-            "earnings": 17052900000.0,
-            "ebitda": 23522800000.0,
-            "profitMargin": 17.5301585669862,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 14600000000.0,
             "ebitda": 20797400000.0,
             "profitMargin": 11.249564657258126,
-            "revenueYoY": 30.17580074244143,
-            "earningsYoY": 25.717926859721178
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 131263500000.0,
+            "earnings": 14123600000.0,
+            "ebitda": 21619600000.0,
+            "profitMargin": 10.759731380010438,
+            "revenueYoY": 34.93716429801342,
+            "earningsYoY": -17.177723437069357
         }
     ],
     "annual": [

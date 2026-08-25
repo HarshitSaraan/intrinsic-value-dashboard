@@ -2,17 +2,6 @@
     "symbol": "GANECOS",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 3371242000.0,
-            "earnings": 107536000.0,
-            "ebitda": 396637000.0,
-            "profitMargin": 3.189803639133589,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 232114000.0,
             "ebitda": 568358000.0,
             "profitMargin": 5.4751447900924015,
-            "revenueYoY": 23.102800134386474,
-            "earningsYoY": -2.2895943221091715
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 4236667000.0,
+            "earnings": 290348000.0,
+            "ebitda": 633098000.0,
+            "profitMargin": 6.853217399432148,
+            "revenueYoY": 25.67080618952896,
+            "earningsYoY": 170.00074393691415
         }
     ],
     "annual": [

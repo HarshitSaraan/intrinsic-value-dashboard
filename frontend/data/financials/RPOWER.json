@@ -2,17 +2,6 @@
     "symbol": "RPOWER",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 18855800000.0,
-            "earnings": 446800000.0,
-            "ebitda": 7047700000.0,
-            "profitMargin": 2.369562680978797,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": -4940000000.0,
             "ebitda": 2537600000.0,
             "profitMargin": -26.175513707703228,
-            "revenueYoY": -4.587944449219164,
-            "earningsYoY": -493.40606832842235
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 19563200000.0,
+            "earnings": 647100000.0,
+            "ebitda": 7098400000.0,
+            "profitMargin": 3.3077410648564656,
+            "revenueYoY": 3.7516307979507633,
+            "earningsYoY": 44.82990152193375
         }
     ],
     "annual": [

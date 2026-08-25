@@ -2,17 +2,6 @@
     "symbol": "PREMIERENE",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 16208350000.0,
-            "earnings": 2778050000.0,
-            "ebitda": 5878780000.0,
-            "profitMargin": 17.139622478537298,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 3917110000.0,
             "ebitda": 6227750000.0,
             "profitMargin": 20.228158127390955,
-            "revenueYoY": 13.02387232296537,
-            "earningsYoY": 53.479141606685964
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 20.482642941340256,
             "revenueYoY": 37.60210015208211,
             "earningsYoY": 64.44088479329025
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 24625940000.0,
+            "earnings": 4630670000.0,
+            "ebitda": 7599450000.0,
+            "profitMargin": 18.804033470397474,
+            "revenueYoY": 35.25222134712112,
+            "earningsYoY": 50.44754104219395
         }
     ],
     "annual": [

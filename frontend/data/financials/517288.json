@@ -2,17 +2,6 @@
     "symbol": "517288",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 46679000.0,
-            "earnings": 28293000.0,
-            "ebitda": 30729000.0,
-            "profitMargin": 60.61183829987789,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 1219000.0,
             "ebitda": 4606000.0,
             "profitMargin": 2.883978423393584,
-            "revenueYoY": 2.8418491484184916,
-            "earningsYoY": -79.75083056478405
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 55313000.0,
+            "earnings": 7026000.0,
+            "ebitda": 11300000.0,
+            "profitMargin": 12.702258058684215,
+            "revenueYoY": 18.496540200089974,
+            "earningsYoY": -75.16700243876578
         }
     ],
     "annual": [
@@ -62,11 +62,11 @@
             "date": "2024-03-31",
             "quarterLabel": "Q4 FY24",
             "annualLabel": "FY24",
-            "revenue": 169139000.0,
+            "revenue": 169228000.0,
             "earnings": 21593000.0,
             "ebitda": 20698000.0,
-            "profitMargin": 12.766422882954256,
-            "revenueYoY": 5.954245336206573,
+            "profitMargin": 12.75970879523483,
+            "revenueYoY": 6.0099978701279175,
             "earningsYoY": -59.24849491384679
         },
         {
@@ -77,7 +77,7 @@
             "earnings": 21448000.0,
             "ebitda": 27650000.0,
             "profitMargin": 12.056617985991657,
-            "revenueYoY": 5.1762160116826985,
+            "revenueYoY": 5.12090197839601,
             "earningsYoY": -0.6715139165470291
         },
         {

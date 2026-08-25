@@ -1,0 +1,50 @@
+{
+    "symbol": "MILKYMIST",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 13873430000.0,
+            "earnings": 272300000.0,
+            "ebitda": 1996020000.0,
+            "profitMargin": 1.9627446132643476,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 18080830000.0,
+            "earnings": 194440000.0,
+            "ebitda": 2189780000.0,
+            "profitMargin": 1.0753931097189675,
+            "revenueYoY": 30.327035203262636,
+            "earningsYoY": -28.593463092177746
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 23328500000.0,
+            "earnings": 460740000.0,
+            "ebitda": 3075830000.0,
+            "profitMargin": 1.9750091090297277,
+            "revenueYoY": 29.02339107220189,
+            "earningsYoY": 136.95741616951244
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 31204360000.0,
+            "earnings": 1270090000.0,
+            "ebitda": 4320370000.0,
+            "profitMargin": 4.070232493151598,
+            "revenueYoY": 33.7606789977924,
+            "earningsYoY": 175.66306376698356
+        }
+    ]
+}

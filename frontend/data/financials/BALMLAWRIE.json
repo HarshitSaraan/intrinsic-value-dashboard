@@ -2,17 +2,6 @@
     "symbol": "BALMLAWRIE",
     "quarterly": [
         {
-            "date": "2025-06-30",
-            "quarterLabel": "Q1 FY26",
-            "annualLabel": "FY26",
-            "revenue": 6806583000.0,
-            "earnings": 689344000.0,
-            "ebitda": 926361000.0,
-            "profitMargin": 10.127607347181398,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-09-30",
             "quarterLabel": "Q2 FY26",
             "annualLabel": "FY26",
@@ -42,8 +31,19 @@
             "earnings": 845224000.0,
             "ebitda": 1334753000.0,
             "profitMargin": 11.361861657803402,
-            "revenueYoY": 22.3217298308409,
-            "earningsYoY": 12.464406797702875
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 7487323000.0,
+            "earnings": 714112000.0,
+            "ebitda": 1104492000.0,
+            "profitMargin": 9.53761444510942,
+            "revenueYoY": 10.001200308583618,
+            "earningsYoY": 3.5929811530962774
         }
     ],
     "annual": [

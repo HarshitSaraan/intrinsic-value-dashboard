@@ -2,17 +2,6 @@
     "symbol": "NAVINFLUOR",
     "quarterly": [
         {
-            "date": "2025-03-31",
-            "quarterLabel": "Q4 FY25",
-            "annualLabel": "FY25",
-            "revenue": 7009400000.0,
-            "earnings": 949600000.0,
-            "ebitda": 1905400000.0,
-            "profitMargin": 13.54752189916398,
-            "revenueYoY": null,
-            "earningsYoY": null
-        },
-        {
             "date": "2025-06-30",
             "quarterLabel": "Q1 FY26",
             "annualLabel": "FY26",
@@ -31,8 +20,8 @@
             "earnings": 1854000000.0,
             "ebitda": 3026800000.0,
             "profitMargin": 20.776135459506705,
-            "revenueYoY": 47.207192345760475,
-            "earningsYoY": 121.77033492822966
+            "revenueYoY": null,
+            "earningsYoY": null
         },
         {
             "date": "2026-03-31",
@@ -44,6 +33,17 @@
             "profitMargin": 22.674387603843403,
             "revenueYoY": 33.77892544297658,
             "earningsYoY": 123.90480202190398
+        },
+        {
+            "date": "2026-06-30",
+            "quarterLabel": "Q1 FY27",
+            "annualLabel": "FY27",
+            "revenue": 10450800000.0,
+            "earnings": 2433100000.0,
+            "ebitda": 3921600000.0,
+            "profitMargin": 23.28147127492632,
+            "revenueYoY": 44.069478908188586,
+            "earningsYoY": 107.67326732673268
         }
     ],
     "annual": [

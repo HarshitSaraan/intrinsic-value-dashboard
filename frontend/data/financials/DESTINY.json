@@ -1,0 +1,50 @@
+{
+    "symbol": "DESTINY",
+    "quarterly": [],
+    "annual": [
+        {
+            "date": "2023-03-31",
+            "quarterLabel": "Q4 FY23",
+            "annualLabel": "FY23",
+            "revenue": 567201000.0,
+            "earnings": 20657000.0,
+            "ebitda": 30948000.0,
+            "profitMargin": 3.641918825954115,
+            "revenueYoY": null,
+            "earningsYoY": null
+        },
+        {
+            "date": "2024-03-31",
+            "quarterLabel": "Q4 FY24",
+            "annualLabel": "FY24",
+            "revenue": 578163000.0,
+            "earnings": 21230000.0,
+            "ebitda": 37854000.0,
+            "profitMargin": 3.6719748583012057,
+            "revenueYoY": 1.9326482146540642,
+            "earningsYoY": 2.77387810427458
+        },
+        {
+            "date": "2025-03-31",
+            "quarterLabel": "Q4 FY25",
+            "annualLabel": "FY25",
+            "revenue": 680614000.0,
+            "earnings": 26214000.0,
+            "ebitda": 52726000.0,
+            "profitMargin": 3.8515223019215004,
+            "revenueYoY": 17.720089317372437,
+            "earningsYoY": 23.47621290626472
+        },
+        {
+            "date": "2026-03-31",
+            "quarterLabel": "Q4 FY26",
+            "annualLabel": "FY26",
+            "revenue": 792047000.0,
+            "earnings": 33969000.0,
+            "ebitda": 60591000.0,
+            "profitMargin": 4.288760641729594,
+            "revenueYoY": 16.37242254787589,
+            "earningsYoY": 29.58342870222019
+        }
+    ]
+}
