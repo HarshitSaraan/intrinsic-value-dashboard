@@ -557,7 +557,12 @@
     var labelStep = Math.max(1, Math.floor(points.length / (labelCount - 1)));
     
     for (var l = 0; l < labelCount; l++) {
-      var idx = Math.min(l * labelStep, points.length - 1);
+      var idx;
+      if (l === labelCount - 1) {
+        idx = points.length - 1; // Guarantee the last label is the absolute latest date
+      } else {
+        idx = Math.min(l * labelStep, points.length - 1);
+      }
       var p = points[idx];
       var x = xAt(idx);
       ctx.fillText(p.date, x, height - padB + 16);
