@@ -225,9 +225,6 @@
         pb: item.pb,
         div_yield: item.div_yield
       };
-    }).filter(function (p) {
-      return (p.pb !== null && p.pb !== undefined && isFinite(p.pb)) || 
-             (p.div_yield !== null && p.div_yield !== undefined && isFinite(p.div_yield));
     });
 
     var rect = canvas.getBoundingClientRect();
@@ -326,19 +323,25 @@
     var pbPoints = points.filter(function (p) { return p.pb !== null && isFinite(p.pb); });
     if (pbPoints.length >= 2) {
       ctx.beginPath();
+      var firstIdx = -1, lastIdx = -1;
       points.forEach(function (p, i) {
-        var x = xAt(i);
-        var y = yAtPB(p.pb !== null ? p.pb : minPB);
-        if (i === 0) ctx.moveTo(x, y);
-        else {
-          var px = xAt(i - 1);
-          var py = yAtPB(points[i - 1].pb !== null ? points[i - 1].pb : minPB);
-          var mx = (px + x) / 2;
-          ctx.bezierCurveTo(mx, py, mx, y, x, y);
+        if (p.pb !== null && isFinite(p.pb)) {
+          var x = xAt(i);
+          var y = yAtPB(p.pb);
+          if (firstIdx === -1) {
+            ctx.moveTo(x, y);
+            firstIdx = i;
+          } else {
+            var px = xAt(lastIdx);
+            var py = yAtPB(points[lastIdx].pb);
+            var mx = (px + x) / 2;
+            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+          }
+          lastIdx = i;
         }
       });
-      ctx.lineTo(xAt(points.length - 1), height - padB);
-      ctx.lineTo(xAt(0), height - padB);
+      ctx.lineTo(xAt(lastIdx), height - padB);
+      ctx.lineTo(xAt(firstIdx), height - padB);
       ctx.closePath();
 
       var fillPB = ctx.createLinearGradient(0, padT, 0, height - padB);
@@ -362,19 +365,25 @@
     var divPoints = points.filter(function (p) { return p.div_yield !== null && isFinite(p.div_yield); });
     if (!isCommodity && divPoints.length >= 2) {
       ctx.beginPath();
+      var firstIdx = -1, lastIdx = -1;
       points.forEach(function (p, i) {
-        var x = xAt(i);
-        var y = yAtDiv(p.div_yield !== null ? p.div_yield : minDiv);
-        if (i === 0) ctx.moveTo(x, y);
-        else {
-          var px = xAt(i - 1);
-          var py = yAtDiv(points[i - 1].div_yield !== null ? points[i - 1].div_yield : minDiv);
-          var mx = (px + x) / 2;
-          ctx.bezierCurveTo(mx, py, mx, y, x, y);
+        if (p.div_yield !== null && isFinite(p.div_yield)) {
+          var x = xAt(i);
+          var y = yAtDiv(p.div_yield);
+          if (firstIdx === -1) {
+            ctx.moveTo(x, y);
+            firstIdx = i;
+          } else {
+            var px = xAt(lastIdx);
+            var py = yAtDiv(points[lastIdx].div_yield);
+            var mx = (px + x) / 2;
+            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+          }
+          lastIdx = i;
         }
       });
-      ctx.lineTo(xAt(points.length - 1), height - padB);
-      ctx.lineTo(xAt(0), height - padB);
+      ctx.lineTo(xAt(lastIdx), height - padB);
+      ctx.lineTo(xAt(firstIdx), height - padB);
       ctx.closePath();
 
       var fillDiv = ctx.createLinearGradient(0, padT, 0, height - padB);
@@ -387,15 +396,21 @@
     // 6. Draw Valuation/PB line
     if (pbPoints.length >= 2) {
       ctx.beginPath();
+      var firstIdx = -1, lastIdx = -1;
       points.forEach(function (p, i) {
-        var x = xAt(i);
-        var y = yAtPB(p.pb !== null ? p.pb : minPB);
-        if (i === 0) ctx.moveTo(x, y);
-        else {
-          var px = xAt(i - 1);
-          var py = yAtPB(points[i - 1].pb !== null ? points[i - 1].pb : minPB);
-          var mx = (px + x) / 2;
-          ctx.bezierCurveTo(mx, py, mx, y, x, y);
+        if (p.pb !== null && isFinite(p.pb)) {
+          var x = xAt(i);
+          var y = yAtPB(p.pb);
+          if (firstIdx === -1) {
+            ctx.moveTo(x, y);
+            firstIdx = i;
+          } else {
+            var px = xAt(lastIdx);
+            var py = yAtPB(points[lastIdx].pb);
+            var mx = (px + x) / 2;
+            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+          }
+          lastIdx = i;
         }
       });
       var strokeColor = '#42A5F5';
@@ -413,15 +428,21 @@
     // 7. Draw Div Yield line (Only if not a commodity)
     if (!isCommodity && divPoints.length >= 2) {
       ctx.beginPath();
+      var firstIdx = -1, lastIdx = -1;
       points.forEach(function (p, i) {
-        var x = xAt(i);
-        var y = yAtDiv(p.div_yield !== null ? p.div_yield : minDiv);
-        if (i === 0) ctx.moveTo(x, y);
-        else {
-          var px = xAt(i - 1);
-          var py = yAtDiv(points[i - 1].div_yield !== null ? points[i - 1].div_yield : minDiv);
-          var mx = (px + x) / 2;
-          ctx.bezierCurveTo(mx, py, mx, y, x, y);
+        if (p.div_yield !== null && isFinite(p.div_yield)) {
+          var x = xAt(i);
+          var y = yAtDiv(p.div_yield);
+          if (firstIdx === -1) {
+            ctx.moveTo(x, y);
+            firstIdx = i;
+          } else {
+            var px = xAt(lastIdx);
+            var py = yAtDiv(points[lastIdx].div_yield);
+            var mx = (px + x) / 2;
+            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+          }
+          lastIdx = i;
         }
       });
       ctx.strokeStyle = '#BCA374'; // Gold line color
@@ -432,55 +453,58 @@
     }
 
     // 7.5 Draw live indicator dots at the end of the lines
-    var lastIdx = points.length - 1;
-    if (lastIdx >= 0) {
-      var endX = xAt(lastIdx);
+    var lastPbIdx = -1;
+    var lastDivIdx = -1;
+    for (var i = points.length - 1; i >= 0; i--) {
+      if (lastPbIdx === -1 && points[i].pb !== null && points[i].pb !== undefined) lastPbIdx = i;
+      if (lastDivIdx === -1 && points[i].div_yield !== null && points[i].div_yield !== undefined) lastDivIdx = i;
+    }
 
-      // Valuation / PB end dot
-      if (points[lastIdx].pb !== null && points[lastIdx].pb !== undefined) {
-        var endY_PB = yAtPB(points[lastIdx].pb);
-        var dotColor = '#42A5F5';
-        if (isCommodity) {
-          if (sectorName.toLowerCase().indexOf('gold') >= 0) dotColor = '#D4AF37';
-          else dotColor = '#C0C0C0';
-        }
-
-        // Outer glow (large translucent circle)
-        ctx.beginPath();
-        ctx.arc(endX, endY_PB, 7.5, 0, Math.PI * 2);
-        ctx.fillStyle = dotColor === '#42A5F5' ? 'rgba(66, 165, 245, 0.35)' :
-                        dotColor === '#D4AF37' ? 'rgba(212, 175, 55, 0.35)' : 'rgba(192, 192, 192, 0.35)';
-        ctx.fill();
-
-        // Inner solid circle with white border
-        ctx.beginPath();
-        ctx.arc(endX, endY_PB, 4, 0, Math.PI * 2);
-        ctx.fillStyle = dotColor;
-        ctx.fill();
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+    if (lastPbIdx >= 0) {
+      var endX = xAt(lastPbIdx);
+      var endY_PB = yAtPB(points[lastPbIdx].pb);
+      var dotColor = '#42A5F5';
+      if (isCommodity) {
+        if (sectorName.toLowerCase().indexOf('gold') >= 0) dotColor = '#D4AF37';
+        else dotColor = '#C0C0C0';
       }
 
-      // Div Yield end dot (if not commodity)
-      if (!isCommodity && points[lastIdx].div_yield !== null && points[lastIdx].div_yield !== undefined) {
-        var endY_Div = yAtDiv(points[lastIdx].div_yield);
+      // Outer glow (large translucent circle)
+      ctx.beginPath();
+      ctx.arc(endX, endY_PB, 7.5, 0, Math.PI * 2);
+      ctx.fillStyle = dotColor === '#42A5F5' ? 'rgba(66, 165, 245, 0.35)' :
+                      dotColor === '#D4AF37' ? 'rgba(212, 175, 55, 0.35)' : 'rgba(192, 192, 192, 0.35)';
+      ctx.fill();
 
-        // Outer glow
-        ctx.beginPath();
-        ctx.arc(endX, endY_Div, 6.5, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(188, 163, 116, 0.3)';
-        ctx.fill();
+      // Inner solid circle with white border
+      ctx.beginPath();
+      ctx.arc(endX, endY_PB, 4, 0, Math.PI * 2);
+      ctx.fillStyle = dotColor;
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
 
-        // Inner solid circle with white border
-        ctx.beginPath();
-        ctx.arc(endX, endY_Div, 3.5, 0, Math.PI * 2);
-        ctx.fillStyle = '#BCA374';
-        ctx.fill();
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-      }
+    // Div Yield end dot (if not commodity)
+    if (!isCommodity && lastDivIdx >= 0) {
+      var endX = xAt(lastDivIdx);
+      var endY_Div = yAtDiv(points[lastDivIdx].div_yield);
+
+      // Outer glow
+      ctx.beginPath();
+      ctx.arc(endX, endY_Div, 6.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(188, 163, 116, 0.3)';
+      ctx.fill();
+
+      // Inner solid circle with white border
+      ctx.beginPath();
+      ctx.arc(endX, endY_Div, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = '#BCA374';
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
     }
 
     // 8. Draw horizontal threshold lines for Gold and Silver
