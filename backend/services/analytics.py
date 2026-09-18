@@ -378,6 +378,8 @@ def compute_headwind_tailwind() -> dict[str, Any]:
 
     change_col = pick_column(frame, "Change in promoter holding")
     industry_col = pick_column(frame, "Industry", "Industry Group", "Sector")
+    ret_3y_col = pick_column(frame, "Return over 3years", "Return over 3 years", "Return 3Years")
+    ret_5y_col = pick_column(frame, "Return over 5years", "Return over 5 years", "Return 5Years")
 
     if change_col is None:
         raise HTTPException(
@@ -389,6 +391,30 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         frame[change_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
         errors="coerce",
     )
+    numeric_ret_3y = pd.to_numeric(
+        frame[ret_3y_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
+        errors="coerce",
+    ) if ret_3y_col else pd.Series(float("nan"), index=frame.index)
+    numeric_ret_5y = pd.to_numeric(
+        frame[ret_5y_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
+        errors="coerce",
+    ) if ret_5y_col else pd.Series(float("nan"), index=frame.index)
+
+    def classify_favor(ret_3y: float | None, ret_5y: float | None) -> str:
+        # Extremely Hot = 5 year returns > 35%
+        if ret_5y is not None and pd.notna(ret_5y) and ret_5y > 35:
+            return "Extremely Hot"
+        # Hot Sector = 3 year returns > 25%
+        elif ret_3y is not None and pd.notna(ret_3y) and ret_3y > 25:
+            return "Hot"
+        # Deep out of favor = 5 yr returns < 0
+        elif ret_5y is not None and pd.notna(ret_5y) and ret_5y < 0:
+            return "Deep out of favor"
+        # Out of Favor = 3 yr returns < -15%
+        elif ret_3y is not None and pd.notna(ret_3y) and ret_3y < -15:
+            return "Out of favor"
+        else:
+            return "Neutral"
 
     valid_mask = numeric_change.notna() & (numeric_change != 0)
     valid = numeric_change[valid_mask]
@@ -401,8 +427,8 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         score: float | None = None
         score_display = "—"
     else:
-        score = round((increase_count / decrease_count), 4)
-        score_display = str(score)
+        score = round((increase_count / decrease_count), 4) if decrease_count > 0 else (float("inf") if increase_count > 0 else None)
+        score_display = str(score) if score is not None else "—"
 
     signal = (
         "Upcycle"
@@ -412,17 +438,23 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         else "Neutral"
     )
 
+    market_avg_3y = round(float(numeric_ret_3y.dropna().mean()), 2) if not numeric_ret_3y.dropna().empty else None
+    market_avg_5y = round(float(numeric_ret_5y.dropna().mean()), 2) if not numeric_ret_5y.dropna().empty else None
+    market_favor = classify_favor(market_avg_3y, market_avg_5y)
+
     sector_breakdown: list[dict[str, Any]] = []
     if industry_col is not None:
         combined = frame[[industry_col]].copy()
         combined["_change"] = numeric_change
+        combined["_ret3y"] = numeric_ret_3y
+        combined["_ret5y"] = numeric_ret_5y
 
         sector_total_map = frame[industry_col].value_counts(dropna=False).to_dict()
-        combined_filtered = combined[valid_mask].copy()
 
-        for sector_name, group in combined_filtered.groupby(industry_col, dropna=True):
-            s_inc = int((group["_change"] > 0).sum())
-            s_dec = int((group["_change"] < 0).sum())
+        for sector_name, group in combined.groupby(industry_col, dropna=True):
+            group_valid = group[group["_change"].notna() & (group["_change"] != 0)]
+            s_inc = int((group_valid["_change"] > 0).sum())
+            s_dec = int((group_valid["_change"] < 0).sum())
             s_total_companies = sector_total_map.get(sector_name, len(group))
 
             if s_total_companies == 0:
@@ -434,6 +466,12 @@ def compute_headwind_tailwind() -> dict[str, Any]:
                 s_score_display = str(s_score)
                 s_signal = "Upcycle" if s_score > 0 else ("Downcycle" if s_score < 0 else "Neutral")
 
+            r3_series = group["_ret3y"].dropna()
+            r5_series = group["_ret5y"].dropna()
+            s_avg_3y = round(float(r3_series.mean()), 2) if not r3_series.empty else None
+            s_avg_5y = round(float(r5_series.mean()), 2) if not r5_series.empty else None
+            s_favor = classify_favor(s_avg_3y, s_avg_5y)
+
             sector_breakdown.append(
                 {
                     "industry": clean_text(sector_name),
@@ -443,6 +481,9 @@ def compute_headwind_tailwind() -> dict[str, Any]:
                     "score": s_score,
                     "scoreDisplay": s_score_display,
                     "signal": s_signal,
+                    "avgReturn3Y": s_avg_3y,
+                    "avgReturn5Y": s_avg_5y,
+                    "favor": s_favor,
                 }
             )
 
@@ -462,6 +503,9 @@ def compute_headwind_tailwind() -> dict[str, Any]:
             "score": score,
             "scoreDisplay": score_display,
             "signal": signal,
+            "avgReturn3Y": market_avg_3y,
+            "avgReturn5Y": market_avg_5y,
+            "favor": market_favor,
         },
         "sectorBreakdown": sector_breakdown,
     }
@@ -756,15 +800,15 @@ def compute_monthly_analysis() -> dict[str, Any]:
         
         def classify_zone(ratio: float) -> str:
             if ratio > 2:
-                return "Extremely Undervalued"
+                return "Extremely Overvalued"
             elif ratio > 1.2:
-                return "Undervalued"
+                return "Overvalued"
             elif ratio >= 0.8:
                 return "Fairly Valued"
             elif ratio >= 0.5:
-                return "Overvalued"
+                return "Undervalued"
             else:
-                return "Extremely Overvalued"
+                return "Extremely Undervalued"
 
         valid_df["valuationZone"] = valid_df["valuationRatio"].apply(classify_zone)
     else:

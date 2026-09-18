@@ -312,6 +312,22 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
         return '<span class="iv-hw-badge neutral">● Neutral</span>';
       }
 
+      function favorBadgeHtml(favor, avg3y, avg5y) {
+        var cls = 'favor-neutral';
+        var label = favor || 'Neutral';
+        if (label === 'Deep out of favor') cls = 'deep-out-of-favor';
+        else if (label === 'Out of favor') cls = 'out-of-favor';
+        else if (label === 'Hot') cls = 'hot';
+        else if (label === 'Extremely Hot') cls = 'extremely-hot';
+
+        var titleTip = '';
+        if (avg3y !== undefined && avg3y !== null && avg5y !== undefined && avg5y !== null) {
+          titleTip = '3Y Avg Return: ' + (avg3y > 0 ? '+' : '') + avg3y + '% | 5Y Avg Return: ' + (avg5y > 0 ? '+' : '') + avg5y + '%';
+        }
+
+        return '<span class="iv-hw-badge ' + cls + '" title="' + titleTip + '">' + label + '</span>';
+      }
+
       function barHtml(s) {
         // score lives in [−1, +1].
         // We split the bar at the centre:
@@ -366,16 +382,18 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       var html = '<tr class="market-row" style="cursor:pointer;" title="Click to view history">' +
         '<td>🌐 Full Market</td>' +
+        '<td class="center">' + favorBadgeHtml(market.favor, market.avgReturn3Y, market.avgReturn5Y) + '</td>' +
         '<td class="right">' + barHtml(mVal) + '</td>' +
         '<td class="center">' + badgeHtml(market.signal) + '</td>' +
         '</tr>';
 
       if (!sectors.length) {
-        html += '<tr><td colspan="3" style="color:#AAB6CC;text-align:center;padding:20px">No sector data available.</td></tr>';
+        html += '<tr><td colspan="4" style="color:#AAB6CC;text-align:center;padding:20px">No sector data available.</td></tr>';
       } else {
         html += sectors.map(function (s) {
           return '<tr class="iv-hw-sector-row" data-industry="' + s.industry + '" style="cursor:pointer;" title="Click to view companies in ranking tool">' +
             '<td>' + s.industry + ' <span style="font-size:10px;color:#AAB6CC;margin-left:4px;">↗</span></td>' +
+            '<td class="center">' + favorBadgeHtml(s.favor, s.avgReturn3Y, s.avgReturn5Y) + '</td>' +
             '<td class="right">' + barHtml(s) + '</td>' +
             '<td class="center">' + badgeHtml(s.signal) + '</td>' +
             '</tr>';
@@ -389,7 +407,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       var tbody = app.querySelector('#ivHeadwindTableBody');
       if (!tbody) return;
 
-      tbody.innerHTML = '<tr><td colspan="3" style="color:#AAB6CC;text-align:center;padding:24px">Loading…</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="4" style="color:#AAB6CC;text-align:center;padding:24px">Loading…</td></tr>';
 
       fetch(baseUrl + '/headwind-tailwind', { cache: 'no-store' })
         .then(function (res) {
@@ -401,7 +419,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           ivBindHeadwindMarketClick(data.market.score);  // ← this line must be here
         })
         .catch(function (err) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="color:#F87171;text-align:center;padding:24px">Failed to load data: ' + err.message + '</td></tr>';
+          if (tbody) tbody.innerHTML = '<tr><td colspan="4" style="color:#F87171;text-align:center;padding:24px">Failed to load data: ' + err.message + '</td></tr>';
         });
     }
     function ivBindHeadwindMarketClick(currentScore) {
@@ -414,11 +432,19 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       newRow.addEventListener('click', function () {
         var existing = app.querySelector('#ivHeadwindChartRow');
-        if (existing) { existing.remove(); return; }
+        if (existing) {
+          existing.remove();
+          var oldTooltips = document.querySelectorAll('#ivHeadwindChartTooltip');
+          oldTooltips.forEach(function (el) { el.remove(); });
+          return;
+        }
+
+        var staleTooltips = document.querySelectorAll('#ivHeadwindChartTooltip');
+        staleTooltips.forEach(function (el) { el.remove(); });
 
         var chartRow = document.createElement('tr');
         chartRow.id = 'ivHeadwindChartRow';
-        chartRow.innerHTML = '<td colspan="3" style="padding:16px 10px;">' +
+        chartRow.innerHTML = '<td colspan="4" style="padding:16px 10px;">' +
           '<div style="position:relative;">' +
           '<canvas id="ivHeadwindHistoryCanvas" style="width:100%;height:220px;display:block;border-radius:14px;background:rgba(6,17,36,0.38);border:1px solid rgba(255,255,255,0.07);"></canvas>' +
           '<div id="ivHeadwindChartTooltip" style="position:fixed;display:none;pointer-events:none;z-index:80;padding:9px 10px;border-radius:12px;background:rgba(6,17,36,0.96);border:1px solid rgba(212,175,55,0.28);color:#fff;font-size:11px;line-height:1.5;"></div>' +
@@ -601,8 +627,13 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       });
 
       canvas.onmousemove = function (e) {
-        var tooltip = app.querySelector('#ivHeadwindChartTooltip') || document.getElementById('ivHeadwindChartTooltip');
-        if (!tooltip || !canvas._ivHwPoints) return;
+        var tooltips = document.querySelectorAll('#ivHeadwindChartTooltip');
+        if (!tooltips.length || !canvas._ivHwPoints) return;
+        var tooltip = tooltips[0];
+        // Remove any redundant duplicates
+        for (var t = 1; t < tooltips.length; t++) {
+          tooltips[t].remove();
+        }
         // Move to body to escape transform stacking context
         if (tooltip.parentNode !== document.body) document.body.appendChild(tooltip);
 
@@ -631,8 +662,8 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       };
 
       canvas.onmouseleave = function () {
-        var tooltip = app.querySelector('#ivHeadwindChartTooltip');
-        if (tooltip) tooltip.style.display = 'none';
+        var tooltips = document.querySelectorAll('#ivHeadwindChartTooltip');
+        tooltips.forEach(function (t) { t.style.display = 'none'; });
       };
     }
 
