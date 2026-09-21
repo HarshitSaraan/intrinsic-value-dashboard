@@ -796,7 +796,7 @@ def compute_monthly_analysis() -> dict[str, Any]:
 
     # Classification
     if not valid_df.empty:
-        valid_df["valuationRatio"] = valid_df["grahamNumber"] / valid_df["currentPrice"]
+        valid_df["valuationRatio"] = valid_df["currentPrice"] / valid_df["grahamNumber"]
         
         def classify_zone(ratio: float) -> str:
             if ratio > 2:
