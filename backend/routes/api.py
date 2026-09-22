@@ -288,7 +288,7 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
     try:
         df, _ = get_stock_master_clean_df()
         if "mcap" in df.columns:
-            df = df[df["mcap"] > 300].copy()
+            df = df[df["mcap"] >= 500].copy()
     except Exception as e:
         print(f"Error loading clean stock master in intrinsic-theme-data: {e}")
         return {"type": type, "quotes": [], "summary": {}}
