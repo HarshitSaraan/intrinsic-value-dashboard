@@ -487,9 +487,20 @@ def compute_headwind_tailwind() -> dict[str, Any]:
                 }
             )
 
+        favor_order = {
+            "deep out of favor": 0,
+            "out of favor": 1,
+            "neutral": 2,
+            "hot": 3,
+            "extremely hot": 4,
+        }
+
         sector_breakdown.sort(
-            key=lambda x: (x["score"] if x["score"] is not None else float("-inf")),
-            reverse=True,
+            key=lambda x: (
+                favor_order.get(str(x.get("favor", "")).strip().lower(), 2),
+                -(x["score"] if x["score"] is not None else float("-inf")),
+                str(x.get("industry", "")).lower(),
+            )
         )
 
     result = {

@@ -291,8 +291,33 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       var tbody = app.querySelector('#ivHeadwindTableBody');
       if (!tbody) return;
 
-      var market = data.market;
-      var sectors = data.sectorBreakdown || [];
+      var market = data.market || {};
+      var sectors = (data.sectorBreakdown || []).slice();
+
+      var FAVOR_ORDER = {
+        'deep out of favor': 0,
+        'out of favor': 1,
+        'neutral': 2,
+        'hot': 3,
+        'extremely hot': 4
+      };
+
+      function getFavorRank(favor) {
+        var key = String(favor || 'neutral').trim().toLowerCase();
+        return FAVOR_ORDER.hasOwnProperty(key) ? FAVOR_ORDER[key] : 2;
+      }
+
+      sectors.sort(function (a, b) {
+        var rankA = getFavorRank(a.favor);
+        var rankB = getFavorRank(b.favor);
+        if (rankA !== rankB) return rankA - rankB;
+
+        var scoreA = (a.score !== null && a.score !== undefined && isFinite(a.score)) ? a.score : -Infinity;
+        var scoreB = (b.score !== null && b.score !== undefined && isFinite(b.score)) ? b.score : -Infinity;
+        if (scoreB !== scoreA) return scoreB - scoreA;
+
+        return String(a.industry || '').localeCompare(String(b.industry || ''));
+      });
 
       // ── helpers ──────────────────────────────────────────────────────────────
       // New formula: score = (inc − dec) / total  →  range [−1, +1], neutral = 0
