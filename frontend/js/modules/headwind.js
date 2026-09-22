@@ -294,23 +294,47 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       var market = data.market || {};
       var sectors = (data.sectorBreakdown || []).slice();
 
-      var FAVOR_ORDER = {
-        'deep out of favor': 0,
-        'out of favor': 1,
-        'neutral': 2,
-        'hot': 3,
-        'extremely hot': 4
-      };
+      function getColorGroup(favor) {
+        var f = String(favor || '').trim().toLowerCase();
+        if (f.indexOf('deep out of favor') >= 0 || f.indexOf('out of favor') >= 0) {
+          return 0; // Green group
+        } else if (f.indexOf('neutral') >= 0) {
+          return 1; // Yellow group
+        } else if (f.indexOf('hot') >= 0) {
+          return 2; // Red group
+        }
+        return 3;
+      }
 
-      function getFavorRank(favor) {
-        var key = String(favor || 'neutral').trim().toLowerCase();
-        return FAVOR_ORDER.hasOwnProperty(key) ? FAVOR_ORDER[key] : 2;
+      function getSignalRank(signal) {
+        var s = String(signal || '').trim().toLowerCase();
+        if (s === 'upcycle') return 0;
+        if (s === 'neutral') return 1;
+        if (s === 'downcycle') return 2;
+        return 3;
+      }
+
+      function getSubFavorRank(favor) {
+        var f = String(favor || '').trim().toLowerCase();
+        if (f.indexOf('deep out of favor') >= 0) return 0;
+        if (f.indexOf('out of favor') >= 0) return 1;
+        if (f === 'hot') return 0;
+        if (f.indexOf('extremely hot') >= 0) return 1;
+        return 0;
       }
 
       sectors.sort(function (a, b) {
-        var rankA = getFavorRank(a.favor);
-        var rankB = getFavorRank(b.favor);
-        if (rankA !== rankB) return rankA - rankB;
+        var grpA = getColorGroup(a.favor);
+        var grpB = getColorGroup(b.favor);
+        if (grpA !== grpB) return grpA - grpB;
+
+        var sigA = getSignalRank(a.signal);
+        var sigB = getSignalRank(b.signal);
+        if (sigA !== sigB) return sigA - sigB;
+
+        var subA = getSubFavorRank(a.favor);
+        var subB = getSubFavorRank(b.favor);
+        if (subA !== subB) return subA - subB;
 
         var scoreA = (a.score !== null && a.score !== undefined && isFinite(a.score)) ? a.score : -Infinity;
         var scoreB = (b.score !== null && b.score !== undefined && isFinite(b.score)) ? b.score : -Infinity;

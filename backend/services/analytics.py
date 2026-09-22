@@ -487,18 +487,44 @@ def compute_headwind_tailwind() -> dict[str, Any]:
                 }
             )
 
-        favor_order = {
-            "deep out of favor": 0,
-            "out of favor": 1,
-            "neutral": 2,
-            "hot": 3,
-            "extremely hot": 4,
-        }
+        def get_color_group(favor: str | None) -> int:
+            f = str(favor or "").strip().lower()
+            if "deep out of favor" in f or "out of favor" in f:
+                return 0  # Green group
+            elif "neutral" in f:
+                return 1  # Yellow group
+            elif "hot" in f:
+                return 2  # Red group
+            return 3
+
+        def get_signal_order(signal: str | None) -> int:
+            s = str(signal or "").strip().lower()
+            if s == "upcycle":
+                return 0
+            elif s == "neutral":
+                return 1
+            elif s == "downcycle":
+                return 2
+            return 3
+
+        def get_sub_favor_order(favor: str | None) -> int:
+            f = str(favor or "").strip().lower()
+            if "deep out of favor" in f:
+                return 0
+            if "out of favor" in f:
+                return 1
+            if f == "hot":
+                return 0
+            if "extremely hot" in f:
+                return 1
+            return 0
 
         sector_breakdown.sort(
             key=lambda x: (
-                favor_order.get(str(x.get("favor", "")).strip().lower(), 2),
-                -(x["score"] if x["score"] is not None else float("-inf")),
+                get_color_group(x.get("favor")),
+                get_signal_order(x.get("signal")),
+                get_sub_favor_order(x.get("favor")),
+                -(x["score"] if x.get("score") is not None else float("-inf")),
                 str(x.get("industry", "")).lower(),
             )
         )
