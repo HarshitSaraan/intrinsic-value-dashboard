@@ -32,16 +32,6 @@
       title: 'Technology Leaders',
       desc: 'Technology innovators, IT providers, and software anchors with solid growth.',
       note: 'Screener Criteria: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%'
-    },
-    'portfolio-anchors': {
-      title: 'Core Compounders',
-      desc: 'Premium compounders with clean leverage, high Piotroski health, and strong ROCE.',
-      note: 'Screener Criteria: Market Cap > 25000 Cr | Piotroski Score >= 7 | Debt to equity < 0.8 | ROCE 3Years > 15%'
-    },
-    'solid-large-growth': {
-      title: 'Large Compounders',
-      desc: 'Mega-cap growth anchors displaying robust capital returns and financial strength.',
-      note: 'Screener Criteria: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0'
     }
   };
 

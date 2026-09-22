@@ -313,12 +313,14 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       }
 
       function favorBadgeHtml(favor, avg3y, avg5y) {
-        var cls = 'favor-neutral';
         var label = favor || 'Neutral';
-        if (label === 'Deep out of favor') cls = 'deep-out-of-favor';
-        else if (label === 'Out of favor') cls = 'out-of-favor';
-        else if (label === 'Hot') cls = 'hot';
-        else if (label === 'Extremely Hot') cls = 'extremely-hot';
+        var lower = label.toLowerCase();
+        var cls = 'favor-neutral';
+        if (lower.indexOf('deep') >= 0) cls = 'deep-out-of-favor';
+        else if (lower.indexOf('out') >= 0) cls = 'out-of-favor';
+        else if (lower.indexOf('extremely') >= 0) cls = 'extremely-hot';
+        else if (lower.indexOf('hot') >= 0) cls = 'hot';
+        else cls = 'favor-neutral';
 
         var titleTip = '';
         if (avg3y !== undefined && avg3y !== null && avg5y !== undefined && avg5y !== null) {

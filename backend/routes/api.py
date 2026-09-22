@@ -324,22 +324,6 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
         # 4. Technology Leader: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%
         tech_mask = df["industryGroup"].fillna("").str.lower().str.contains("software|it -|telecom|tech")
         filtered = df[tech_mask & (df["sales3Y"] > 20)].copy()
-    elif type == "portfolio-anchors":
-        # 5. Core Compounders: Market Cap > 25000 Cr | Piotroski Score >= 7 | Debt to Equity < 0.8 | ROCE 3Years > 15%
-        filtered = df[
-            (df["mcap"] > 25000) &
-            (df["piotroski"] >= 7) &
-            (df["de"] < 0.8) &
-            (df["roce3Y"] > 15)
-        ].copy()
-    elif type == "solid-large-growth":
-        # 6. Large Compounders: Market Cap > 20000 Cr | Sales Growth 3Years > 15% | ROCE 3Years > 18% | Debt to Equity < 1.0
-        filtered = df[
-            (df["mcap"] > 20000) &
-            (df["sales3Y"] > 15) &
-            (df["roce3Y"] > 18) &
-            (df["de"] < 1.0)
-        ].copy()
     else:
         filtered = pd.DataFrame(columns=df.columns)
 
