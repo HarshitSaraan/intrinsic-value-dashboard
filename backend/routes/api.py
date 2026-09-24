@@ -235,10 +235,14 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
             div_col = None
         else:
             cols = sector_columns[s]
-            idx_col = next((c[0] for c in cols if 'index' in c[1].lower() or c[1].lower() == s.lower()), None)
             pe_col = next((c[0] for c in cols if 'p/e' in c[1].lower()), None)
             pb_col = next((c[0] for c in cols if 'p/b' in c[1].lower()), None)
             div_col = next((c[0] for c in cols if 'div' in c[1].lower() or 'yield' in c[1].lower()), None)
+            idx_col = next((c[0] for c in cols if 'index' in c[1].lower() or c[1].lower() == s.lower()), None)
+            if idx_col is None and cols:
+                candidate = cols[0][0]
+                if candidate not in (pe_col, pb_col, div_col):
+                    idx_col = candidate
         
         series = []
         for r_idx in range(2, len(data_matrix)):
