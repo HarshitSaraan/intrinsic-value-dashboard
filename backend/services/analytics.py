@@ -410,8 +410,8 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         # Deep out of favor = 5 yr returns < 0
         elif ret_5y is not None and pd.notna(ret_5y) and ret_5y < 0:
             return "Deep out of favor"
-        # Out of Favor = 3 yr returns < -15%
-        elif ret_3y is not None and pd.notna(ret_3y) and ret_3y < -15:
+        # Out of Favor = 3 yr returns < -5%
+        elif ret_3y is not None and pd.notna(ret_3y) and ret_3y < -5:
             return "Out of favor"
         else:
             return "Neutral"
