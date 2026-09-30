@@ -87,9 +87,9 @@
     var logoName = isDark ? 'logo.png' : 'logo 2.png';
     var isFile = window.location.protocol === 'file:';
     if (isFile) {
-      return '../../' + logoName;
+      return '../../' + logoName + '?v=2';
     } else {
-      return '/static/' + logoName;
+      return '/static/' + logoName + '?v=2';
     }
   }
 
