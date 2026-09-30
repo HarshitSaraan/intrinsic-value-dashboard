@@ -189,10 +189,12 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       rows.forEach(function (row) {
         var industry = ivHeadwindGetField(row, ['Industry', 'industry']) || 'Unclassified';
         var change = ivHeadwindToNumber(ivHeadwindGetField(row, 'Change in promoter holding'));
-        if (!isFinite(change) || change === 0) return;
+        var change3y = ivHeadwindToNumber(ivHeadwindGetField(row, ['Change in promoter holding 3Years', 'Change in promoter holding 3 years', 'Change in promoter holding 3 Years']));
         if (!sectorMap[industry]) sectorMap[industry] = { industry: industry, increase: 0, decrease: 0, score: NaN };
-        if (change > 0) sectorMap[industry].increase += 1;
-        if (change < 0) sectorMap[industry].decrease += 1;
+        if (isFinite(change) && isFinite(change3y)) {
+          if (change > 0 && change3y > 0) sectorMap[industry].increase += 1;
+          else if (change < 0 && change3y < 0) sectorMap[industry].decrease += 1;
+        }
       });
       return Object.keys(sectorMap).map(function (key) {
         var item = sectorMap[key];

@@ -14,6 +14,7 @@ from backend.services.analytics import (
     load_turnaround_sectors,
     pick_column,
     evaluate_portfolio_stock,
+    filter_portfolio_stocks,
     search_stocks,
     compute_ticker_data,
 )
@@ -168,6 +169,23 @@ async def portfolio_evaluate_endpoint(q: str = "") -> dict[str, Any]:
     if not q:
         raise HTTPException(status_code=400, detail="Query parameter 'q' is required")
     return evaluate_portfolio_stock(q)
+
+
+@router.get("/portfolio-filter")
+async def portfolio_filter_endpoint(
+    fundamental_score: int | None = None,
+    management_score: int | None = None,
+    valuation_score: int | None = None,
+    limit: int = 200,
+) -> dict[str, Any]:
+    if fundamental_score is None and management_score is None and valuation_score is None:
+        raise HTTPException(status_code=400, detail="At least one score filter is required")
+    return filter_portfolio_stocks(
+        fundamental_score=fundamental_score,
+        management_score=management_score,
+        valuation_score=valuation_score,
+        limit=limit,
+    )
 
 
 SECTOR_VALUATION_CACHE = {

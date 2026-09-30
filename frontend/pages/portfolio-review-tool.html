@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" href="../assets/onlylogo.PNG">
   <title>Portfolio Review Tool - Quality & Management Stock Evaluation</title>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css?v=9">
+  <link rel="stylesheet" href="../css/pages/portfolio-review-tool.css?v=12">
   <link rel="stylesheet" href="../css/theme-toggle.css">
   <script>
     (function(){
@@ -22,9 +22,115 @@
 </head>
 <body>
   <main class="iv-page-shell iv-portfolio-page">
-    <div class="iv-section-title">
-      <div class="iv-kicker">Portfolio Analysis</div>
-      <h2>Portfolio Review Tool</h2>
+    <div class="iv-section-title iv-portfolio-header">
+      <div class="iv-portfolio-title-group">
+        <div class="iv-kicker">Portfolio Analysis</div>
+        <h2>Portfolio Review Tool</h2>
+      </div>
+      <div class="iv-portfolio-filters" id="ivPortfolioFilters">
+        <div class="iv-filter-bar-title">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <span>Score Filters</span>
+        </div>
+
+        <!-- Fundamental Score Dropdown -->
+        <div class="iv-custom-dropdown" id="ivDropdownFundamental">
+          <button type="button" class="iv-custom-dropdown-trigger" id="ivTriggerFundamental" aria-expanded="false" title="Filter by Fundamental Score">
+            <span class="iv-filter-pill-label">Fundamental</span>
+            <span class="iv-filter-pill-val iv-custom-dropdown-value">All</span>
+            <span class="iv-custom-dropdown-arrow">
+              <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+            </span>
+          </button>
+          <div class="iv-custom-dropdown-menu">
+            <div class="iv-dropdown-menu-header">Fundamental Score</div>
+            <div class="iv-custom-dropdown-item selected" data-value="" data-display="All">All</div>
+            <div class="iv-custom-dropdown-item" data-value="6" data-display="6">6 <span class="iv-item-tag">Best</span></div>
+            <div class="iv-custom-dropdown-item" data-value="5" data-display="5">5</div>
+            <div class="iv-custom-dropdown-item" data-value="4" data-display="4">4</div>
+            <div class="iv-custom-dropdown-item" data-value="3" data-display="3">3</div>
+            <div class="iv-custom-dropdown-item" data-value="2" data-display="2">2</div>
+            <div class="iv-custom-dropdown-item" data-value="1" data-display="1">1</div>
+            <div class="iv-custom-dropdown-item" data-value="0" data-display="0">0</div>
+            <div class="iv-custom-dropdown-item" data-value="-1" data-display="-1">-1</div>
+            <div class="iv-custom-dropdown-item" data-value="-2" data-display="-2">-2</div>
+            <div class="iv-custom-dropdown-item" data-value="-3" data-display="-3">-3</div>
+            <div class="iv-custom-dropdown-item" data-value="-4" data-display="-4">-4</div>
+            <div class="iv-custom-dropdown-item" data-value="-5" data-display="-5">-5</div>
+          </div>
+          <input type="hidden" id="ivFilterFundamental" value="">
+        </div>
+
+        <!-- Management Score Dropdown -->
+        <div class="iv-custom-dropdown" id="ivDropdownManagement">
+          <button type="button" class="iv-custom-dropdown-trigger" id="ivTriggerManagement" aria-expanded="false" title="Filter by Management Score">
+            <span class="iv-filter-pill-label">Management</span>
+            <span class="iv-filter-pill-val iv-custom-dropdown-value">All</span>
+            <span class="iv-custom-dropdown-arrow">
+              <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+            </span>
+          </button>
+          <div class="iv-custom-dropdown-menu">
+            <div class="iv-dropdown-menu-header">Management Score</div>
+            <div class="iv-custom-dropdown-item selected" data-value="" data-display="All">All</div>
+            <div class="iv-custom-dropdown-item" data-value="5" data-display="5">5 <span class="iv-item-tag">Best</span></div>
+            <div class="iv-custom-dropdown-item" data-value="4" data-display="4">4</div>
+            <div class="iv-custom-dropdown-item" data-value="3" data-display="3">3</div>
+            <div class="iv-custom-dropdown-item" data-value="2" data-display="2">2</div>
+            <div class="iv-custom-dropdown-item" data-value="1" data-display="1">1</div>
+            <div class="iv-custom-dropdown-item" data-value="0" data-display="0">0</div>
+            <div class="iv-custom-dropdown-item" data-value="-1" data-display="-1">-1</div>
+            <div class="iv-custom-dropdown-item" data-value="-2" data-display="-2">-2</div>
+            <div class="iv-custom-dropdown-item" data-value="-3" data-display="-3">-3</div>
+            <div class="iv-custom-dropdown-item" data-value="-4" data-display="-4">-4</div>
+            <div class="iv-custom-dropdown-item" data-value="-5" data-display="-5">-5</div>
+            <div class="iv-custom-dropdown-item" data-value="-6" data-display="-6">-6</div>
+          </div>
+          <input type="hidden" id="ivFilterManagement" value="">
+        </div>
+
+        <!-- Valuation Score Dropdown -->
+        <div class="iv-custom-dropdown" id="ivDropdownValuation">
+          <button type="button" class="iv-custom-dropdown-trigger" id="ivTriggerValuation" aria-expanded="false" title="Filter by Valuation Score">
+            <span class="iv-filter-pill-label">Valuation</span>
+            <span class="iv-filter-pill-val iv-custom-dropdown-value">All</span>
+            <span class="iv-custom-dropdown-arrow">
+              <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+            </span>
+          </button>
+          <div class="iv-custom-dropdown-menu">
+            <div class="iv-dropdown-menu-header">Valuation Score</div>
+            <div class="iv-custom-dropdown-item selected" data-value="" data-display="All">All</div>
+            <div class="iv-custom-dropdown-item" data-value="6" data-display="6">6 <span class="iv-item-tag">Best</span></div>
+            <div class="iv-custom-dropdown-item" data-value="5" data-display="5">5</div>
+            <div class="iv-custom-dropdown-item" data-value="4" data-display="4">4</div>
+            <div class="iv-custom-dropdown-item" data-value="3" data-display="3">3</div>
+            <div class="iv-custom-dropdown-item" data-value="2" data-display="2">2</div>
+            <div class="iv-custom-dropdown-item" data-value="1" data-display="1">1</div>
+            <div class="iv-custom-dropdown-item" data-value="0" data-display="0">0</div>
+            <div class="iv-custom-dropdown-item" data-value="-1" data-display="-1">-1</div>
+            <div class="iv-custom-dropdown-item" data-value="-2" data-display="-2">-2</div>
+            <div class="iv-custom-dropdown-item" data-value="-3" data-display="-3">-3</div>
+          </div>
+          <input type="hidden" id="ivFilterValuation" value="">
+        </div>
+
+        <!-- Quick Clear Button (visible when filters are active) -->
+        <button id="ivFilterResetBtn" class="iv-filter-reset-btn" type="button" title="Clear Filters" style="display: none;">
+          <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+
+        <!-- Search Button -->
+        <button id="ivFilterSearchBtn" class="iv-filter-search-btn" type="button">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+        </button>
+      </div>
     </div>
 
     <!-- Search Input & Autocomplete -->
@@ -106,6 +212,17 @@
           </tbody>
         </table>
       </div>
+      <!-- Pagination Controls (shown when > 10 companies) -->
+      <div class="iv-portfolio-pagination" id="ivPortfolioPagination" style="display: none;">
+        <div class="iv-pagination-info" id="ivPaginationInfo">
+          Showing <b style="color: #F4D676;" id="ivPaginationRange">1–10</b> of <b style="color: #F4D676;" id="ivPaginationTotal">0</b> companies
+        </div>
+        <div class="iv-pagination-controls">
+          <button class="iv-pagination-btn" id="ivPrevPageBtn" type="button">‹ Prev</button>
+          <div id="ivPageNumbers" style="display: flex; gap: 4px;"></div>
+          <button class="iv-pagination-btn" id="ivNextPageBtn" type="button">Next ›</button>
+        </div>
+      </div>
     </div>
 
     <!-- Slide-out Drawer for Parameter Breakdown -->
@@ -145,10 +262,10 @@
       <div class="iv-modal-overlay" id="ivConfirmOverlay"></div>
       <div class="iv-modal-content">
         <div class="iv-modal-header">
-          <h3>Clear Portfolio</h3>
+          <h3 id="ivConfirmTitle">Clear Portfolio</h3>
         </div>
         <div class="iv-modal-body">
-          <p>Are you sure you want to clear your portfolio list?</p>
+          <p id="ivConfirmMessage">Are you sure you want to clear your portfolio list?</p>
         </div>
         <div class="iv-modal-footer">
           <button class="iv-modal-btn cancel" id="ivConfirmCancel" type="button">Cancel</button>
@@ -176,7 +293,7 @@
   </main>
 
   <script src="../js/navigation.js?v=2"></script>
-  <script src="../js/modules/portfolio-review-tool.js?v=9"></script>
+  <script src="../js/modules/portfolio-review-tool.js?v=12"></script>
   <script src="../js/traffic-tracker.js"></script>
 </body>
 </html>

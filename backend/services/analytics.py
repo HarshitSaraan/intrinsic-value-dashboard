@@ -377,6 +377,12 @@ def compute_headwind_tailwind() -> dict[str, Any]:
     frame = get_stock_master_raw_df()
 
     change_col = pick_column(frame, "Change in promoter holding")
+    change_3y_col = pick_column(
+        frame,
+        "Change in promoter holding 3Years",
+        "Change in promoter holding 3 years",
+        "Change in promoter holding 3 Years",
+    )
     industry_col = pick_column(frame, "Industry", "Industry Group", "Sector")
     ret_3y_col = pick_column(frame, "Return over 3years", "Return over 3 years", "Return 3Years")
     ret_5y_col = pick_column(frame, "Return over 5years", "Return over 5 years", "Return 5Years")
@@ -386,11 +392,20 @@ def compute_headwind_tailwind() -> dict[str, Any]:
             status_code=422,
             detail="Column 'Change in promoter holding' not found in CSV.",
         )
+    if change_3y_col is None:
+        raise HTTPException(
+            status_code=422,
+            detail="Column 'Change in promoter holding 3Years' not found in CSV.",
+        )
 
     numeric_change = pd.to_numeric(
         frame[change_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
         errors="coerce",
     )
+    numeric_change_3y = pd.to_numeric(
+        frame[change_3y_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
+        errors="coerce",
+    ) if change_3y_col else pd.Series(float("nan"), index=frame.index)
     numeric_ret_3y = pd.to_numeric(
         frame[ret_3y_col].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
         errors="coerce",
@@ -416,10 +431,8 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         else:
             return "Neutral"
 
-    valid_mask = numeric_change.notna() & (numeric_change != 0)
-    valid = numeric_change[valid_mask]
-    increase_count = int((valid > 0).sum())
-    decrease_count = int((valid < 0).sum())
+    increase_count = int(((numeric_change > 0) & (numeric_change_3y > 0)).sum())
+    decrease_count = int(((numeric_change < 0) & (numeric_change_3y < 0)).sum())
     total_count = increase_count + decrease_count
 
     total_companies = int(len(frame))
@@ -446,15 +459,15 @@ def compute_headwind_tailwind() -> dict[str, Any]:
     if industry_col is not None:
         combined = frame[[industry_col]].copy()
         combined["_change"] = numeric_change
+        combined["_change3y"] = numeric_change_3y
         combined["_ret3y"] = numeric_ret_3y
         combined["_ret5y"] = numeric_ret_5y
 
         sector_total_map = frame[industry_col].value_counts(dropna=False).to_dict()
 
         for sector_name, group in combined.groupby(industry_col, dropna=True):
-            group_valid = group[group["_change"].notna() & (group["_change"] != 0)]
-            s_inc = int((group_valid["_change"] > 0).sum())
-            s_dec = int((group_valid["_change"] < 0).sum())
+            s_inc = int(((group["_change"] > 0) & (group["_change3y"] > 0)).sum())
+            s_dec = int(((group["_change"] < 0) & (group["_change3y"] < 0)).sum())
             s_total_companies = sector_total_map.get(sector_name, len(group))
 
             if s_total_companies == 0:
@@ -1046,33 +1059,16 @@ def compute_monthly_analysis() -> dict[str, Any]:
     return result.copy()
 
 
-def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
-    df = get_stock_master_raw_df()
+def build_portfolio_stock_detail(
+    match_row: pd.Series,
+    df: pd.DataFrame,
+    sector_pb: float | None = None,
+    sector_ps: float | None = None,
+) -> dict[str, Any]:
     name_col = pick_column(df, "Name", "Company Name")
     bse_col = pick_column(df, "BSE Code")
     nse_col = pick_column(df, "NSE Code")
     isin_col = pick_column(df, "ISIN Code")
-
-    q = query.strip().lower()
-    match_row = None
-
-    for col in [nse_col, bse_col, isin_col, name_col]:
-      if col:
-        temp = df[df[col].astype(str).str.strip().str.lower() == q]
-        if not temp.empty:
-          match_row = temp.iloc[0]
-          break
-
-    if match_row is None:
-      for col in [nse_col, bse_col, isin_col, name_col]:
-        if col:
-          temp = df[df[col].astype(str).str.lower().str.contains(q, na=False)]
-          if not temp.empty:
-            match_row = temp.iloc[0]
-            break
-
-    if match_row is None:
-        raise HTTPException(status_code=404, detail=f"Stock not found matching: {query}")
 
     def get_val(col_name) -> float | None:
         if col_name is None:
@@ -1239,27 +1235,25 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
     # VALUATION PARAMETERS
     
     # 1. Sectoral Median calculations (based on Industry Group / Industry)
-    sector_pb = None
-    sector_ps = None
-    sector_name = "N/A"
-    
     ind_col = pick_column(df, "Industry")
-    if ind_col:
-        sector_name = clean_text(match_row.get(ind_col)) or "N/A"
-        if sector_name != "N/A":
-            sector_df = df[df[ind_col] == sector_name]
-            
-            pb_col_name = pick_column(df, "Price to book value")
-            if pb_col_name:
-                sector_pb_vals = pd.to_numeric(sector_df[pb_col_name], errors='coerce').dropna()
-                if not sector_pb_vals.empty:
-                    sector_pb = round(float(sector_pb_vals.median()), 2)
-                    
-            ps_col_name = pick_column(df, "Price to Sales")
-            if ps_col_name:
-                sector_ps_vals = pd.to_numeric(sector_df[ps_col_name], errors='coerce').dropna()
-                if not sector_ps_vals.empty:
-                    sector_ps = round(float(sector_ps_vals.median()), 2)
+    if sector_pb is None or sector_ps is None:
+        sector_name = "N/A"
+        if ind_col:
+            sector_name = clean_text(match_row.get(ind_col)) or "N/A"
+            if sector_name != "N/A":
+                sector_df = df[df[ind_col] == sector_name]
+                if sector_pb is None:
+                    pb_col_name = pick_column(df, "Price to book value")
+                    if pb_col_name:
+                        sector_pb_vals = pd.to_numeric(sector_df[pb_col_name], errors='coerce').dropna()
+                        if not sector_pb_vals.empty:
+                            sector_pb = round(float(sector_pb_vals.median()), 2)
+                if sector_ps is None:
+                    ps_col_name = pick_column(df, "Price to Sales")
+                    if ps_col_name:
+                        sector_ps_vals = pd.to_numeric(sector_df[ps_col_name], errors='coerce').dropna()
+                        if not sector_ps_vals.empty:
+                            sector_ps = round(float(sector_ps_vals.median()), 2)
 
     # Valuation parameters scores calculation
     pb_col = pick_column(df, "Price to book value")
@@ -1479,6 +1473,259 @@ def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
             ]
         },
         "remark": ""
+    }
+
+
+def evaluate_portfolio_stock(query: str) -> dict[str, Any]:
+    df = get_stock_master_raw_df()
+    name_col = pick_column(df, "Name", "Company Name")
+    bse_col = pick_column(df, "BSE Code")
+    nse_col = pick_column(df, "NSE Code")
+    isin_col = pick_column(df, "ISIN Code")
+
+    q = query.strip().lower()
+    match_row = None
+
+    for col in [nse_col, bse_col, isin_col, name_col]:
+        if col:
+            temp = df[df[col].astype(str).str.strip().str.lower() == q]
+            if not temp.empty:
+                match_row = temp.iloc[0]
+                break
+
+    if match_row is None:
+        for col in [nse_col, bse_col, isin_col, name_col]:
+            if col:
+                temp = df[df[col].astype(str).str.lower().str.contains(q, na=False)]
+                if not temp.empty:
+                    match_row = temp.iloc[0]
+                    break
+
+    if match_row is None:
+        raise HTTPException(status_code=404, detail=f"Stock not found matching: {query}")
+
+    return build_portfolio_stock_detail(match_row, df)
+
+
+PORTFOLIO_SCORES_CACHE: dict[str, Any] = {
+    "mtime": 0,
+    "q_total": None,
+    "m_total": None,
+    "v_total": None,
+    "sector_pb_map": None,
+    "sector_ps_map": None,
+}
+
+
+def get_or_compute_portfolio_scores() -> dict[str, Any]:
+    global PORTFOLIO_SCORES_CACHE
+    try:
+        current_mtime = CSV_PATH.stat().st_mtime
+    except Exception:
+        current_mtime = 0
+
+    if (
+        PORTFOLIO_SCORES_CACHE["q_total"] is not None
+        and PORTFOLIO_SCORES_CACHE["mtime"] == current_mtime
+    ):
+        return PORTFOLIO_SCORES_CACHE
+
+    df = get_stock_master_raw_df()
+
+    def clean_num(col_name):
+        if not col_name:
+            return pd.Series(float("nan"), index=df.index)
+        return pd.to_numeric(
+            df[col_name].astype(str).str.replace(",", "").str.replace("%", "").str.strip(),
+            errors="coerce",
+        )
+
+    # Quality Parameters (Fundamental Score)
+    bv_10 = clean_num(pick_column(df, "BOOK VALUE GOWTH 10 YR"))
+    bv_5 = clean_num(pick_column(df, "book value growth 5 yrs"))
+    bv_3 = clean_num(pick_column(df, "book value growth 3 years"))
+
+    bv = bv_10.combine_first(bv_5).combine_first(bv_3)
+    bv_yrs = pd.Series(3, index=df.index)
+    bv_yrs[bv_10.notna()] = 10
+    bv_yrs[bv_10.isna() & bv_5.notna()] = 5
+
+    q1 = pd.Series(0, index=df.index)
+    q1[(bv_yrs == 10) & (bv > 259)] = 1
+    q1[(bv_yrs == 10) & (bv < 220) & bv.notna()] = -1
+    q1[(bv_yrs == 5) & (bv > 161)] = 1
+    q1[(bv_yrs == 5) & (bv < 110) & bv.notna()] = -1
+    q1[(bv_yrs == 3) & (bv > 136)] = 1
+    q1[(bv_yrs == 3) & (bv < 100) & bv.notna()] = -1
+    q1[bv.isna()] = 0
+
+    sg = clean_num(pick_column(df, "Sales growth 10Years")).combine_first(
+        clean_num(pick_column(df, "Sales growth 5Years"))
+    ).combine_first(clean_num(pick_column(df, "Sales growth 3Years")))
+    q2 = pd.Series(0, index=df.index)
+    q2[sg > 10] = 1
+    q2[(sg < 0) & sg.notna()] = -1
+
+    roce = clean_num(pick_column(df, "Average return on capital employed 10Years")).combine_first(
+        clean_num(pick_column(df, "Average return on capital employed 5Years"))
+    ).combine_first(clean_num(pick_column(df, "Average return on capital employed 3Years")))
+    q3 = pd.Series(0, index=df.index)
+    q3[roce > 10] = 1
+    q3[(roce < 0) & roce.notna()] = -1
+
+    icr = clean_num(pick_column(df, "Interest Coverage Ratio"))
+    q4 = pd.Series(0, index=df.index)
+    q4[icr > 5] = 1
+    q4[(icr < 2) & icr.notna()] = -1
+
+    nb = clean_num(pick_column(df, "Net block"))
+    nb_prev = clean_num(pick_column(df, "Net block preceding year"))
+    nb_ratio = (nb / nb_prev).round(2)
+    q5 = pd.Series(0, index=df.index)
+    q5[(nb.notna()) & (nb_prev.notna()) & (nb_prev != 0) & (nb_ratio > 2.0)] = 1
+
+    qt = clean_num(pick_column(df, "Quality turnover"))
+    q6 = pd.Series(0, index=df.index)
+    q6[qt > 0.1] = -1
+    q6[(qt >= 0) & (qt <= 0.1)] = 1
+
+    q_total = q1 + q2 + q3 + q4 + q5 + q6
+
+    # Management Parameters
+    sh_var = clean_num(pick_column(df, "shareholder Var", "Pft per Inv"))
+    m1 = pd.Series(0, index=df.index)
+    m1[sh_var < 1.2] = 1
+    m1[sh_var > 2.0] = -1
+
+    pledged = clean_num(pick_column(df, "Pledged percentage"))
+    m2 = pd.Series(1, index=df.index)
+    m2[pledged > 1.0] = -1
+
+    hold_inv = clean_num(pick_column(df, "Holding per Investor"))
+    m3 = pd.Series(1, index=df.index)
+    m3[hold_inv < 0.02] = -1
+
+    c_prom_3y = clean_num(pick_column(df, "Change in promoter holding 3Years"))
+    m4 = pd.Series(0, index=df.index)
+    m4[c_prom_3y > 0.5] = 1
+    m4[(c_prom_3y >= -5.0) & (c_prom_3y < -0.5)] = -1
+    m4[c_prom_3y < -5.0] = -2
+
+    c_prom = clean_num(pick_column(df, "Change in promoter holding"))
+    m5 = pd.Series(0, index=df.index)
+    m5[c_prom > 0.5] = 1
+    m5[(c_prom >= -5.0) & (c_prom < -0.5)] = -1
+    m5[c_prom < -5.0] = -2
+
+    m_total = m1 + m2 + m3 + m4 + m5
+
+    # Valuation Parameters
+    ind_col = pick_column(df, "Industry")
+    pb = clean_num(pick_column(df, "Price to book value"))
+    ps = clean_num(pick_column(df, "Price to Sales"))
+    df_temp = pd.DataFrame({"_ind": df[ind_col] if ind_col else "", "_pb": pb, "_ps": ps}, index=df.index)
+    sector_pb_map = df_temp.groupby("_ind")["_pb"].median().round(2).to_dict() if ind_col else {}
+    sector_ps_map = df_temp.groupby("_ind")["_ps"].median().round(2).to_dict() if ind_col else {}
+
+    sector_pb = df_temp["_ind"].map(sector_pb_map)
+    sector_ps = df_temp["_ind"].map(sector_ps_map)
+
+    v1 = pd.Series(0, index=df.index)
+    v1[pb.notna() & sector_pb.notna() & (pb < sector_pb)] = 1
+
+    v2 = pd.Series(0, index=df.index)
+    v2[ps.notna() & sector_ps.notna() & (ps < sector_ps)] = 1
+
+    cmp = clean_num(pick_column(df, "Current Price"))
+    graham = clean_num(pick_column(df, "Graham Number"))
+    v3 = pd.Series(0, index=df.index)
+    v3[cmp.notna() & graham.notna() & (cmp < graham)] = 1
+    v3[cmp.notna() & graham.notna() & (cmp > graham * 1.5)] = -1
+
+    iv = clean_num(pick_column(df, "Intrinsic Value"))
+    v4 = pd.Series(0, index=df.index)
+    v4[cmp.notna() & iv.notna() & (cmp < iv)] = 1
+    v4[cmp.notna() & iv.notna() & (cmp > iv * 1.5)] = -1
+
+    ev = clean_num(pick_column(df, "Enterprise Value"))
+    cash = clean_num(pick_column(df, "Cash Equivalents")).fillna(0)
+    inv = clean_num(pick_column(df, "Investments")).fillna(0)
+    mcap = clean_num(pick_column(df, "Market Capitalization"))
+    debt = clean_num(pick_column(df, "Debt"))
+    has_cash_or_inv = clean_num(pick_column(df, "Cash Equivalents")).notna() | clean_num(pick_column(df, "Investments")).notna()
+
+    v5 = pd.Series(0, index=df.index)
+    cond1 = ev.notna() & (ev < 0)
+    v5[cond1] = 2
+    cond2 = (~cond1) & mcap.notna() & ((cash + inv) > 2 * mcap) & has_cash_or_inv
+    v5[cond2] = 1
+    cond3 = (~cond1) & (~cond2) & debt.notna() & mcap.notna() & (debt > mcap)
+    v5[cond3] = -1
+
+    v_total = v1 + v2 + v3 + v4 + v5
+
+    PORTFOLIO_SCORES_CACHE = {
+        "mtime": current_mtime,
+        "q_total": q_total,
+        "m_total": m_total,
+        "v_total": v_total,
+        "sector_pb_map": sector_pb_map,
+        "sector_ps_map": sector_ps_map,
+    }
+    return PORTFOLIO_SCORES_CACHE
+
+
+def filter_portfolio_stocks(
+    fundamental_score: int | None = None,
+    management_score: int | None = None,
+    valuation_score: int | None = None,
+    limit: int = 200,
+) -> dict[str, Any]:
+    cache = get_or_compute_portfolio_scores()
+    df = get_stock_master_raw_df()
+
+    mask = pd.Series(True, index=df.index)
+    applied = 0
+    if fundamental_score is not None:
+        mask &= (cache["q_total"] == fundamental_score)
+        applied += 1
+    if management_score is not None:
+        mask &= (cache["m_total"] == management_score)
+        applied += 1
+    if valuation_score is not None:
+        mask &= (cache["v_total"] == valuation_score)
+        applied += 1
+
+    if applied == 0:
+        return {"total": 0, "displayed": 0, "results": []}
+
+    matched_indices = df[mask].index
+    matching_df = df.loc[matched_indices]
+
+    # Sort matching companies by Market Capitalization descending
+    mcap_col = pick_column(df, "Market Capitalization")
+    if mcap_col:
+        mcap_num = pd.to_numeric(
+            matching_df[mcap_col].astype(str).str.replace(",", "").str.strip(),
+            errors="coerce",
+        ).fillna(-1)
+        matching_df = matching_df.assign(_mcap_num=mcap_num).sort_values(by="_mcap_num", ascending=False).drop(columns=["_mcap_num"])
+
+    total_matches = len(matching_df)
+    results_df = matching_df.head(limit)
+
+    results = []
+    ind_col = pick_column(df, "Industry")
+    for _, row in results_df.iterrows():
+        s_ind = clean_text(row.get(ind_col)) if ind_col else None
+        spb = cache["sector_pb_map"].get(s_ind) if s_ind else None
+        sps = cache["sector_ps_map"].get(s_ind) if s_ind else None
+        results.append(build_portfolio_stock_detail(row, df, sector_pb=spb, sector_ps=sps))
+
+    return {
+        "total": total_matches,
+        "displayed": len(results),
+        "results": results,
     }
 
 

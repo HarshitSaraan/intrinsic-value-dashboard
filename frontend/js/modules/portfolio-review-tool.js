@@ -26,26 +26,28 @@ document.addEventListener('DOMContentLoaded', function () {
       if (saved) {
         portfolio = JSON.parse(saved);
         
-        // Refresh each stock's details from backend to ensure up-to-date scoring
-        portfolio.forEach(function (item, index) {
-          var queryVal = item.stock.nseCode || item.stock.bseCode || item.stock.name;
-          if (queryVal) {
-            fetch(baseUrl + '/portfolio-evaluate?q=' + encodeURIComponent(queryVal))
-              .then(function (res) {
-                if (res.ok) return res.json();
-              })
-              .then(function (updatedData) {
-                if (updatedData) {
-                  portfolio[index] = updatedData;
-                  savePortfolio();
-                  renderTable();
-                }
-              })
-              .catch(function (err) {
-                console.error('Failed to auto-refresh stock:', queryVal, err);
-              });
-          }
-        });
+        // Refresh each stock's details from backend if small portfolio list
+        if (portfolio.length <= 15) {
+          portfolio.forEach(function (item, index) {
+            var queryVal = item.stock.nseCode || item.stock.bseCode || item.stock.name;
+            if (queryVal) {
+              fetch(baseUrl + '/portfolio-evaluate?q=' + encodeURIComponent(queryVal))
+                .then(function (res) {
+                  if (res.ok) return res.json();
+                })
+                .then(function (updatedData) {
+                  if (updatedData) {
+                    portfolio[index] = updatedData;
+                    savePortfolio();
+                    renderTable();
+                  }
+                })
+                .catch(function (err) {
+                  console.error('Failed to auto-refresh stock:', queryVal, err);
+                });
+            }
+          });
+        }
       } else {
         portfolio = [];
       }
@@ -71,12 +73,23 @@ document.addEventListener('DOMContentLoaded', function () {
     return 'score-red';
   }
 
+  var currentPage = 1;
+  var pageSize = 10;
+
   // Render portfolio table
   function renderTable() {
     var tbody = document.getElementById('ivPortfolioTableBody');
     if (!tbody) return;
 
+    var paginationEl = document.getElementById('ivPortfolioPagination');
+    var rangeEl = document.getElementById('ivPaginationRange');
+    var totalEl = document.getElementById('ivPaginationTotal');
+    var prevBtn = document.getElementById('ivPrevPageBtn');
+    var nextBtn = document.getElementById('ivNextPageBtn');
+    var pageNumbersEl = document.getElementById('ivPageNumbers');
+
     if (portfolio.length === 0) {
+      if (paginationEl) paginationEl.style.display = 'none';
       tbody.innerHTML = `
         <tr class="empty-row">
           <td colspan="8" style="text-align: center; color: #AAB6CC; padding: 30px;">
@@ -87,8 +100,17 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
+    var totalPages = Math.ceil(portfolio.length / pageSize) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    var startIndex = (currentPage - 1) * pageSize;
+    var endIndex = Math.min(startIndex + pageSize, portfolio.length);
+    var pageItems = portfolio.slice(startIndex, endIndex);
+
     tbody.innerHTML = '';
-    portfolio.forEach(function (item, index) {
+    pageItems.forEach(function (item, pageIdx) {
+      var realIndex = startIndex + pageIdx;
       var tr = document.createElement('tr');
       
       var valScore = item.valuation ? item.valuation.score : '—';
@@ -126,25 +148,25 @@ document.addEventListener('DOMContentLoaded', function () {
           ${codeToDisplay ? `<div class="nse-code-sub">${escapeHtml(codeToDisplay)}</div>` : ''}
         </td>
         <td>
-          <span class="score-badge ${getScoreClass(item.quality.total, 6)}" data-index="${index}" data-type="quality">
+          <span class="score-badge ${getScoreClass(item.quality.total, 6)}" data-index="${realIndex}" data-type="quality">
             ${escapeHtml(item.quality.score)}
           </span>
         </td>
         <td>
-          <span class="score-badge ${getScoreClass(item.management.total, 5)}" data-index="${index}" data-type="management">
+          <span class="score-badge ${getScoreClass(item.management.total, 5)}" data-index="${realIndex}" data-type="management">
             ${escapeHtml(item.management.score)}
           </span>
         </td>
         <td style="font-weight: 600; color: #fff;">${combinedScore} / 11</td>
         <td>
-          <span class="score-badge ${getScoreClass(valTotal, 6)}" data-index="${index}" data-type="valuation">
+          <span class="score-badge ${getScoreClass(valTotal, 6)}" data-index="${realIndex}" data-type="valuation">
             ${escapeHtml(valScore)}
           </span>
         </td>
         <td style="font-weight: 600; color: #fff;">${totalScore} / 17</td>
         <td style="font-weight: 600; color: ${rating === 'Excellent' || rating === 'Good' ? '#34D399' : (rating === 'Average' ? '#F4D676' : '#F87171')};">${escapeHtml(rating)}</td>
         <td>
-          <button class="btn-delete" data-index="${index}" title="Remove Stock">
+          <button class="btn-delete" data-index="${realIndex}" title="Remove Stock">
             <svg style="width:16px;height:16px" viewBox="0 0 24 24">
               <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"/>
             </svg>
@@ -153,6 +175,59 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       tbody.appendChild(tr);
     });
+
+    // Update pagination display
+    if (paginationEl) {
+      if (portfolio.length > pageSize) {
+        paginationEl.style.display = 'flex';
+        if (rangeEl) rangeEl.textContent = (startIndex + 1) + '–' + endIndex;
+        if (totalEl) totalEl.textContent = portfolio.length;
+
+        if (prevBtn) {
+          prevBtn.disabled = currentPage === 1;
+        }
+        if (nextBtn) {
+          nextBtn.disabled = currentPage === totalPages;
+        }
+
+        if (pageNumbersEl) {
+          var pagesHtml = '';
+          var startP = Math.max(1, currentPage - 2);
+          var endP = Math.min(totalPages, startP + 4);
+          if (endP - startP < 4) {
+            startP = Math.max(1, endP - 4);
+          }
+
+          if (startP > 1) {
+            pagesHtml += '<button class="iv-page-num-btn" data-page="1">1</button>';
+            if (startP > 2) pagesHtml += '<span style="color: #667085; padding: 0 4px; align-self: center;">...</span>';
+          }
+
+          for (var p = startP; p <= endP; p++) {
+            pagesHtml += '<button class="iv-page-num-btn ' + (p === currentPage ? 'active' : '') + '" data-page="' + p + '">' + p + '</button>';
+          }
+
+          if (endP < totalPages) {
+            if (endP < totalPages - 1) pagesHtml += '<span style="color: #667085; padding: 0 4px; align-self: center;">...</span>';
+            pagesHtml += '<button class="iv-page-num-btn" data-page="' + totalPages + '">' + totalPages + '</button>';
+          }
+
+          pageNumbersEl.innerHTML = pagesHtml;
+
+          pageNumbersEl.querySelectorAll('.iv-page-num-btn').forEach(function (pBtn) {
+            pBtn.addEventListener('click', function () {
+              var targetPage = parseInt(pBtn.getAttribute('data-page'), 10);
+              if (targetPage !== currentPage) {
+                currentPage = targetPage;
+                renderTable();
+              }
+            });
+          });
+        }
+      } else {
+        paginationEl.style.display = 'none';
+      }
+    }
 
     // Bind event listeners for score clicks (to open drawer)
     tbody.querySelectorAll('.score-badge').forEach(function (badge) {
@@ -174,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add stock to list
   function addStock(stockData) {
-    // Check duplicate
     var exists = portfolio.some(function (item) {
       return item.stock.name.toLowerCase() === stockData.stock.name.toLowerCase();
     });
@@ -184,7 +258,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    portfolio.push(stockData);
+    portfolio.unshift(stockData);
+    currentPage = 1;
     savePortfolio();
     renderTable();
   }
@@ -193,6 +268,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function removeStock(index) {
     if (index >= 0 && index < portfolio.length) {
       portfolio.splice(index, 1);
+      var totalPages = Math.ceil(portfolio.length / pageSize) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
       savePortfolio();
       renderTable();
     }
@@ -469,25 +546,43 @@ document.addEventListener('DOMContentLoaded', function () {
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
-  // Setup Clear Portfolio trigger with Custom Confirmation Modal
+  // Setup Confirmation Modal with support for dynamic title, message, and onConfirm callback
   var clearBtn = document.getElementById('ivClearPortfolio');
   var confirmModal = document.getElementById('ivConfirmModal');
   var confirmOverlay = document.getElementById('ivConfirmOverlay');
   var confirmCancel = document.getElementById('ivConfirmCancel');
   var confirmOk = document.getElementById('ivConfirmOk');
+  var confirmTitleEl = document.getElementById('ivConfirmTitle');
+  var confirmMsgEl = document.getElementById('ivConfirmMessage');
+  var pendingConfirmAction = null;
 
-  function openConfirmModal() {
+  function showConfirmDialog(title, message, okText, onConfirm) {
+    if (confirmTitleEl) confirmTitleEl.textContent = title || 'Confirm';
+    if (confirmMsgEl) confirmMsgEl.textContent = message || 'Are you sure?';
+    if (confirmOk) confirmOk.textContent = okText || 'Confirm';
+    pendingConfirmAction = onConfirm;
     if (confirmModal) confirmModal.style.display = 'flex';
   }
 
   function closeConfirmModal() {
     if (confirmModal) confirmModal.style.display = 'none';
+    pendingConfirmAction = null;
   }
 
   if (clearBtn) {
     clearBtn.addEventListener('click', function () {
       if (portfolio.length > 0) {
-        openConfirmModal();
+        showConfirmDialog(
+          'Clear Portfolio',
+          'Are you sure you want to clear your portfolio list?',
+          'Clear',
+          function () {
+            portfolio = [];
+            currentPage = 1;
+            savePortfolio();
+            renderTable();
+          }
+        );
       }
     });
   }
@@ -497,10 +592,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (confirmOk) {
     confirmOk.addEventListener('click', function () {
-      portfolio = [];
-      savePortfolio();
-      renderTable();
+      var action = pendingConfirmAction;
       closeConfirmModal();
+      if (typeof action === 'function') {
+        action();
+      }
     });
   }
 
@@ -858,7 +954,230 @@ document.addEventListener('DOMContentLoaded', function () {
     processNext();
   }
 
+  // Pagination Prev / Next button listeners
+  var prevBtn = document.getElementById('ivPrevPageBtn');
+  var nextBtn = document.getElementById('ivNextPageBtn');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function () {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+      var totalPages = Math.ceil(portfolio.length / pageSize) || 1;
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+      }
+    });
+  }
+
+  // Setup Luxury Custom Dropdowns (matching navbar dropdown style)
+  function setupCustomDropdowns() {
+    var dropdowns = document.querySelectorAll('.iv-custom-dropdown');
+    var resetBtn = document.getElementById('ivFilterResetBtn');
+
+    function updateResetBtn() {
+      if (!resetBtn) return;
+      var fVal = document.getElementById('ivFilterFundamental') ? document.getElementById('ivFilterFundamental').value : '';
+      var mVal = document.getElementById('ivFilterManagement') ? document.getElementById('ivFilterManagement').value : '';
+      var vVal = document.getElementById('ivFilterValuation') ? document.getElementById('ivFilterValuation').value : '';
+      if (fVal !== '' || mVal !== '' || vVal !== '') {
+        resetBtn.style.display = 'inline-flex';
+      } else {
+        resetBtn.style.display = 'none';
+      }
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        dropdowns.forEach(function (dd) {
+          var hidden = dd.querySelector('input[type="hidden"]');
+          var display = dd.querySelector('.iv-custom-dropdown-value');
+          var items = dd.querySelectorAll('.iv-custom-dropdown-item');
+          if (hidden) hidden.value = '';
+          if (display) display.textContent = 'All';
+          dd.classList.remove('has-value');
+          items.forEach(function (it) {
+            if (it.getAttribute('data-value') === '') {
+              it.classList.add('selected');
+            } else {
+              it.classList.remove('selected');
+            }
+          });
+        });
+        resetBtn.style.display = 'none';
+      });
+    }
+
+    dropdowns.forEach(function (dd) {
+      var trigger = dd.querySelector('.iv-custom-dropdown-trigger');
+      var valDisplay = dd.querySelector('.iv-custom-dropdown-value');
+      var hiddenInput = dd.querySelector('input[type="hidden"]');
+      var items = dd.querySelectorAll('.iv-custom-dropdown-item');
+
+      if (!trigger) return;
+
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = dd.classList.contains('open');
+
+        // Close other custom dropdowns
+        dropdowns.forEach(function (other) {
+          if (other !== dd) {
+            other.classList.remove('open');
+            var otherTrig = other.querySelector('.iv-custom-dropdown-trigger');
+            if (otherTrig) otherTrig.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          dd.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          dd.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      items.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var val = item.getAttribute('data-value');
+          var display = item.getAttribute('data-display') || (val !== '' ? val : 'All');
+
+          if (hiddenInput) hiddenInput.value = val;
+          if (valDisplay) valDisplay.textContent = display;
+
+          items.forEach(function (it) { it.classList.remove('selected'); });
+          item.classList.add('selected');
+
+          if (val !== '') {
+            dd.classList.add('has-value');
+          } else {
+            dd.classList.remove('has-value');
+          }
+
+          updateResetBtn();
+
+          dd.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', function (e) {
+      dropdowns.forEach(function (dd) {
+        if (!dd.contains(e.target)) {
+          dd.classList.remove('open');
+          var trig = dd.querySelector('.iv-custom-dropdown-trigger');
+          if (trig) trig.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // Score Filter Search
+  var filterFundEl = document.getElementById('ivFilterFundamental');
+  var filterMgmtEl = document.getElementById('ivFilterManagement');
+  var filterValEl = document.getElementById('ivFilterValuation');
+  var filterSearchBtn = document.getElementById('ivFilterSearchBtn');
+
+  function executeScoreFilterSearch(fVal, mVal, vVal) {
+    var params = [];
+    if (fVal !== '') params.push('fundamental_score=' + encodeURIComponent(fVal));
+    if (mVal !== '') params.push('management_score=' + encodeURIComponent(mVal));
+    if (vVal !== '') params.push('valuation_score=' + encodeURIComponent(vVal));
+
+    var origBtnHtml = filterSearchBtn.innerHTML;
+    filterSearchBtn.disabled = true;
+    filterSearchBtn.innerHTML = 'Searching...';
+
+    var tbody = document.getElementById('ivPortfolioTableBody');
+    if (tbody) {
+      tbody.innerHTML = `
+        <tr class="empty-row">
+          <td colspan="8" style="text-align: center; color: #F4D676; padding: 30px;">
+            Searching companies matching selected scores...
+          </td>
+        </tr>
+      `;
+    }
+
+    fetch(baseUrl + '/portfolio-filter?' + params.join('&'))
+      .then(function (res) {
+        if (!res.ok) throw new Error('API error: ' + res.statusText);
+        return res.json();
+      })
+      .then(function (data) {
+        filterSearchBtn.disabled = false;
+        filterSearchBtn.innerHTML = origBtnHtml;
+
+        if (!data || !data.results || data.results.length === 0) {
+          showCustomAlert('No Companies Found', 'No companies found with the selected score combination.');
+          renderTable();
+          return;
+        }
+
+        portfolio = data.results;
+        currentPage = 1;
+        savePortfolio();
+        renderTable();
+
+        // Scroll smoothly to evaluation table
+        var tableCard = document.querySelector('.iv-portfolio-table-wrap');
+        if (tableCard) {
+          tableCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      })
+      .catch(function (err) {
+        filterSearchBtn.disabled = false;
+        filterSearchBtn.innerHTML = origBtnHtml;
+        showCustomAlert('Error', 'Failed to filter companies: ' + err.message);
+        renderTable();
+      });
+  }
+
+  if (filterSearchBtn) {
+    filterSearchBtn.addEventListener('click', function () {
+      var fVal = filterFundEl ? filterFundEl.value : '';
+      var mVal = filterMgmtEl ? filterMgmtEl.value : '';
+      var vVal = filterValEl ? filterValEl.value : '';
+
+      if (fVal === '' && mVal === '' && vVal === '') {
+        showCustomAlert('Filter Selection Required', 'Please select at least one score (Fundamental, Management, or Valuation) to search.');
+        return;
+      }
+
+      // If companies are already present in the list, confirm clearing first
+      if (portfolio.length > 0) {
+        showConfirmDialog(
+          'Clear Current Portfolio?',
+          'You currently have ' + portfolio.length + ' company(s) in your portfolio list. Would you like to clear the current list and load the filtered results?',
+          'Clear & Search',
+          function () {
+            portfolio = [];
+            currentPage = 1;
+            renderTable();
+            executeScoreFilterSearch(fVal, mVal, vVal);
+          }
+        );
+        return;
+      }
+
+      executeScoreFilterSearch(fVal, mVal, vVal);
+    });
+  }
+
   // Initialize
+  setupCustomDropdowns();
   loadPortfolio();
   renderTable();
 });
