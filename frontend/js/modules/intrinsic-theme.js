@@ -32,6 +32,16 @@
       title: 'Technology Leaders',
       desc: 'Technology innovators, IT providers, and software anchors with solid growth.',
       note: 'Screener Criteria: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%'
+    },
+    'undervalued-top-ranked': {
+      title: 'Undervalued Top Ranked',
+      desc: 'Companies belonging to the top 15 undervalued sectors in Market Pulse, ranked by composite scoring.',
+      note: 'Screener Criteria: Sector in Top 15 Undervalued Sectors by % (Market Pulse)'
+    },
+    'cash-rich': {
+      title: 'Cash Rich Theme',
+      desc: 'Debt-free, cash-surplus companies trading at negative Enterprise Value.',
+      note: 'Screener Criteria: Enterprise Value < 0'
     }
   };
 

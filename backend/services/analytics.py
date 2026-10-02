@@ -648,6 +648,7 @@ def get_stock_master_clean_df() -> tuple[pd.DataFrame, list[str]]:
     piotroski_col = pick_column(frame, "Piotroski score", "Piotroski Score")
     de_col = pick_column(frame, "Debt to equity", "Debt to Equity", "D/E", "Debt/Equity")
     ind_grp_col = pick_column(frame, "Industry Group", "IndustryGroup")
+    ev_col = pick_column(frame, "Enterprise Value", "Enterprise value", "EV")
 
     def to_num(series: pd.Series) -> pd.Series:
         return pd.to_numeric(
@@ -670,6 +671,7 @@ def get_stock_master_clean_df() -> tuple[pd.DataFrame, list[str]]:
     df["piotroski"] = to_num(frame[piotroski_col]) if piotroski_col else float("nan")
     df["de"] = to_num(frame[de_col]) if de_col else float("nan")
     df["industryGroup"] = frame[ind_grp_col].apply(clean_text) if ind_grp_col else ""
+    df["ev"] = to_num(frame[ev_col]) if ev_col else float("nan")
     
     # Store clean frame in cache
     STOCK_MASTER_CACHE['clean_df'] = df

@@ -303,14 +303,14 @@ async def sector_valuation_endpoint() -> dict[str, Any]:
 
 @router.get("/intrinsic-theme-data")
 async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, Any]:
-    from backend.services.analytics import get_stock_master_clean_df
+    from backend.services.analytics import get_stock_master_clean_df, compute_monthly_analysis
     import pandas as pd
     from typing import Any
 
     try:
         df, _ = get_stock_master_clean_df()
         if "mcap" in df.columns:
-            df = df[df["mcap"] >= 500].copy()
+            df = df[(df["mcap"].notna()) & (df["mcap"] >= 500)].copy()
     except Exception as e:
         print(f"Error loading clean stock master in intrinsic-theme-data: {e}")
         return {"type": type, "quotes": [], "summary": {}}
@@ -318,7 +318,7 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
     if df.empty:
         return {"type": type, "quotes": [], "summary": {}}
 
-    # Filter stocks based on formula
+    # Filter stocks based on formula (min. Market Cap >= 500 Cr enforced across all themes)
     if type == "growth-at-value":
         # 1. Growth at Value: Sales Growth 3Years > 20% | Price to Earning between 0 and 25 | Price to Book value < 4.5
         filtered = df[
@@ -328,7 +328,7 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
             (df["pb"] < 4.5)
         ].copy()
     elif type == "aggressive-smallcaps":
-        # 2. High Growth Small Cap: Market Cap < 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%
+        # 2. High Growth Small Cap: Market Cap between 500 and 2000 Cr | Sales Growth 3Years > 25% | ROCE 3Years > 12%
         filtered = df[
             (df["mcap"] < 2000) &
             (df["sales3Y"] > 25) &
@@ -346,6 +346,21 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
         # 4. Technology Leader: Industry Group contains Software/IT/Telecom/Tech | Sales Growth 3Years > 20%
         tech_mask = df["industryGroup"].fillna("").str.lower().str.contains("software|it -|telecom|tech")
         filtered = df[tech_mask & (df["sales3Y"] > 20)].copy()
+    elif type == "undervalued-top-ranked":
+        # 5. Undervalued Top Ranked: All companies (mcap >= 500 Cr) in top 15 undervalued sectors by % from Market Pulse
+        try:
+            monthly_analysis = compute_monthly_analysis()
+            under_sectors = [s["name"] for s in monthly_analysis.get("underSectors", []) if "name" in s]
+            filtered = df[df["industry"].isin(under_sectors)].copy()
+        except Exception as e:
+            print(f"Error computing monthly analysis in undervalued-top-ranked: {e}")
+            filtered = pd.DataFrame(columns=df.columns)
+    elif type == "cash-rich":
+        # 6. Cash Rich Theme: Enterprise value < 0 and market cap >= 500 cr from stock master
+        filtered = df[
+            (df["ev"].notna()) &
+            (df["ev"] < 0)
+        ].copy()
     else:
         filtered = pd.DataFrame(columns=df.columns)
 
@@ -392,7 +407,8 @@ async def intrinsic_theme_endpoint(type: str = "growth-at-value") -> dict[str, A
             "marketCap": fmt(row["mcap"]),
             "sales3Y": fmt(row["sales3Y"]),
             "roce3Y": fmt(row["roce3Y"]),
-            "pb": fmt(row["pb"])
+            "pb": fmt(row["pb"]),
+            "enterpriseValue": fmt(row.get("ev"))
         }
         for _, row in filtered.iterrows()
     ]

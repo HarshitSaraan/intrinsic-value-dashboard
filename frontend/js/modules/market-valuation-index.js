@@ -175,7 +175,11 @@
     var canvas = app.querySelector('#ivSectorValuationCanvas');
     var status = getValuationStatus(pbVal, divVal, sectorName, canvas);
 
-    badge.textContent = status.text;
+    var badgeText = status.text;
+    if (isCommoditySector(sectorName) && pbVal !== null && !isNaN(pbVal)) {
+      badgeText = status.text + ' (' + pbVal.toFixed(2) + ')';
+    }
+    badge.textContent = badgeText;
     if (status.text === 'Undervalued') {
       badge.style.background = 'rgba(var(--iv-success-rgb), 0.12)';
       badge.style.color = 'var(--iv-success)';
@@ -248,7 +252,7 @@
     }
 
     var isCommodity = isCommoditySector(sectorName);
-    var padL = 25;
+    var padL = isCommodity ? 44 : 25;
     var padR = 25;
     var padT = 24;
     var padB = 40;
@@ -260,21 +264,31 @@
     var minPB = pbValues.length ? Math.min.apply(null, pbValues) : 0;
     var maxPB = pbValues.length ? Math.max.apply(null, pbValues) : 1;
 
-    // Adjust Y bounds for Gold/Silver to fit thresholds
+    // Adjust Y bounds and ticks for Gold and Silver
+    var commodityTicks = [];
     if (isCommodity) {
-      if (sectorName.toLowerCase().indexOf('gold') >= 0) {
-        minPB = Math.min(minPB, 5);
-        maxPB = Math.max(maxPB, 16);
-      } else if (sectorName.toLowerCase().indexOf('silver') >= 0) {
-        minPB = Math.min(minPB, 7);
-        maxPB = Math.max(maxPB, 23);
+      if (sectorName.toLowerCase().indexOf('silver') >= 0) {
+        minPB = 0;
+        maxPB = 30;
+        commodityTicks = [0, 5, 10, 15, 20, 25, 30];
+      } else if (sectorName.toLowerCase().indexOf('gold') >= 0) {
+        minPB = 0;
+        maxPB = 16;
+        commodityTicks = [0, 2, 4, 6, 8, 10, 12, 14, 16];
+      } else {
+        minPB = 0;
+        maxPB = Math.ceil(maxPB * 1.1);
+        var step = Math.max(1, Math.round((maxPB - minPB) / 5));
+        for (var t = 0; t <= maxPB; t += step) {
+          commodityTicks.push(t);
+        }
       }
+    } else {
+      var pbRange = maxPB - minPB;
+      var pbPad = pbRange * 0.1 || 0.2;
+      minPB = Math.max(0, minPB - pbPad);
+      maxPB += pbPad;
     }
-
-    var pbRange = maxPB - minPB;
-    var pbPad = pbRange * 0.1 || 0.2;
-    minPB = Math.max(0, minPB - pbPad);
-    maxPB += pbPad;
 
     // Calculate Right Y-axis bounds (Div Yield %)
     var minDiv = 0, maxDiv = 1;
@@ -305,19 +319,39 @@
     canvas._yAtDiv = yAtDiv;
     canvas._plotH = plotH;
 
-    // 1. Draw horizontal gridlines based on left Y-axis levels
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
-    ctx.lineWidth = 1;
-    var gridCount = 4;
-    for (var g = 0; g <= gridCount; g++) {
-      var gy = padT + plotH * g / gridCount;
-      ctx.beginPath();
-      ctx.moveTo(padL, gy);
-      ctx.lineTo(width - padR, gy);
-      ctx.stroke();
-    }
+    // 1. Draw horizontal gridlines and Y-axis tick values
+    if (isCommodity) {
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      ctx.font = '10px Poppins, -apple-system, BlinkMacSystemFont, Arial, sans-serif';
+      
+      commodityTicks.forEach(function (tick) {
+        var gy = yAtPB(tick);
+        
+        // Draw gridline across the plot
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padL, gy);
+        ctx.lineTo(width - padR, gy);
+        ctx.stroke();
 
-    // 2. Left and Right Y-axis values/titles hidden per requirements (P/B and Div Yield are not displayed directly)
+        // Draw Y-axis tick value
+        ctx.fillStyle = 'rgba(203, 213, 232, 0.75)';
+        ctx.fillText(tick.toString(), padL - 8, gy);
+      });
+    } else {
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      var gridCount = 4;
+      for (var g = 0; g <= gridCount; g++) {
+        var gy = padT + plotH * g / gridCount;
+        ctx.beginPath();
+        ctx.moveTo(padL, gy);
+        ctx.lineTo(width - padR, gy);
+        ctx.stroke();
+      }
+    }
 
     // 4. Draw Area Gradient under Valuation/PB Line
     var pbPoints = points.filter(function (p) { return p.pb !== null && isFinite(p.pb); });
@@ -332,10 +366,14 @@
             ctx.moveTo(x, y);
             firstIdx = i;
           } else {
-            var px = xAt(lastIdx);
-            var py = yAtPB(points[lastIdx].pb);
-            var mx = (px + x) / 2;
-            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+            if (isCommodity) {
+              ctx.lineTo(x, y);
+            } else {
+              var px = xAt(lastIdx);
+              var py = yAtPB(points[lastIdx].pb);
+              var mx = (px + x) / 2;
+              ctx.bezierCurveTo(mx, py, mx, y, x, y);
+            }
           }
           lastIdx = i;
         }
@@ -405,10 +443,14 @@
             ctx.moveTo(x, y);
             firstIdx = i;
           } else {
-            var px = xAt(lastIdx);
-            var py = yAtPB(points[lastIdx].pb);
-            var mx = (px + x) / 2;
-            ctx.bezierCurveTo(mx, py, mx, y, x, y);
+            if (isCommodity) {
+              ctx.lineTo(x, y);
+            } else {
+              var px = xAt(lastIdx);
+              var py = yAtPB(points[lastIdx].pb);
+              var mx = (px + x) / 2;
+              ctx.bezierCurveTo(mx, py, mx, y, x, y);
+            }
           }
           lastIdx = i;
         }
@@ -515,35 +557,37 @@
 
       // Draw lower limit (Undervalued)
       var yLow = yAtPB(lowLimit);
-      ctx.strokeStyle = 'rgba(46, 125, 50, 0.4)'; // green
-      ctx.lineWidth = 1.2;
-      ctx.setLineDash([5, 5]);
+      ctx.strokeStyle = 'rgba(76, 175, 80, 0.7)'; // clear green
+      ctx.lineWidth = 1.4;
+      ctx.setLineDash([5, 4]);
       ctx.beginPath();
       ctx.moveTo(padL, yLow);
       ctx.lineTo(width - padR, yLow);
       ctx.stroke();
 
       // Label lower limit
-      ctx.fillStyle = 'rgba(102, 187, 106, 0.8)';
-      ctx.font = '9px Poppins, Arial';
+      ctx.fillStyle = '#81C784';
+      ctx.font = '600 10px Poppins, Arial, sans-serif';
       ctx.textAlign = 'right';
-      ctx.fillText('Undervalued', width - padR - 5, yLow - 4);
+      ctx.textBaseline = 'bottom';
+      ctx.fillText('Undervalued (' + lowLimit + ')', width - padR - 6, yLow - 3);
 
       // Draw upper limit (Overvalued)
       var yHigh = yAtPB(highLimit);
-      ctx.strokeStyle = 'rgba(198, 40, 40, 0.4)'; // red
-      ctx.lineWidth = 1.2;
-      ctx.setLineDash([5, 5]);
+      ctx.strokeStyle = 'rgba(244, 67, 54, 0.7)'; // clear red
+      ctx.lineWidth = 1.4;
+      ctx.setLineDash([5, 4]);
       ctx.beginPath();
       ctx.moveTo(padL, yHigh);
       ctx.lineTo(width - padR, yHigh);
       ctx.stroke();
 
       // Label upper limit
-      ctx.fillStyle = 'rgba(239, 83, 80, 0.8)';
-      ctx.font = '9px Poppins, Arial';
+      ctx.fillStyle = '#E57373';
+      ctx.font = '600 10px Poppins, Arial, sans-serif';
       ctx.textAlign = 'right';
-      ctx.fillText('Overvalued', width - padR - 5, yHigh - 4);
+      ctx.textBaseline = 'bottom';
+      ctx.fillText('Overvalued (' + highLimit + ')', width - padR - 6, yHigh - 3);
 
       // Reset line dash
       ctx.setLineDash([]);
@@ -680,7 +724,13 @@
                        '</div>';
         }
 
+        var valHtml = '';
+        if (isCommoditySector(currentSector) && closest.pb !== null && closest.pb !== undefined) {
+          valHtml = '<div style="color:var(--iv-text-secondary);font-size:11px;margin:2px 0;">Valuation: <strong style="color:#fff;">' + closest.pb.toFixed(2) + '</strong></div>';
+        }
+
         tooltip.innerHTML = '<div style="font-weight:600;margin-bottom:2px;color:#fff;font-size:12px;">' + closest.date + '</div>' +
+                            valHtml +
                             statusHtml;
         tooltip.style.display = 'block';
 
