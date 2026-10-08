@@ -1689,13 +1689,13 @@ def filter_portfolio_stocks(
     mask = pd.Series(True, index=df.index)
     applied = 0
     if fundamental_score is not None:
-        mask &= (cache["q_total"] == fundamental_score)
+        mask &= (cache["q_total"] >= fundamental_score)
         applied += 1
     if management_score is not None:
-        mask &= (cache["m_total"] == management_score)
+        mask &= (cache["m_total"] >= management_score)
         applied += 1
     if valuation_score is not None:
-        mask &= (cache["v_total"] == valuation_score)
+        mask &= (cache["v_total"] >= valuation_score)
         applied += 1
 
     if applied == 0:

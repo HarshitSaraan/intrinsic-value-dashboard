@@ -252,7 +252,7 @@
     }
 
     var isCommodity = isCommoditySector(sectorName);
-    var padL = isCommodity ? 44 : 25;
+    var padL = 25;
     var padR = 25;
     var padT = 24;
     var padB = 40;
@@ -264,24 +264,17 @@
     var minPB = pbValues.length ? Math.min.apply(null, pbValues) : 0;
     var maxPB = pbValues.length ? Math.max.apply(null, pbValues) : 1;
 
-    // Adjust Y bounds and ticks for Gold and Silver
-    var commodityTicks = [];
+    // Adjust Y bounds for Gold and Silver
     if (isCommodity) {
       if (sectorName.toLowerCase().indexOf('silver') >= 0) {
         minPB = 0;
         maxPB = 30;
-        commodityTicks = [0, 5, 10, 15, 20, 25, 30];
       } else if (sectorName.toLowerCase().indexOf('gold') >= 0) {
         minPB = 0;
         maxPB = 16;
-        commodityTicks = [0, 2, 4, 6, 8, 10, 12, 14, 16];
       } else {
         minPB = 0;
         maxPB = Math.ceil(maxPB * 1.1);
-        var step = Math.max(1, Math.round((maxPB - minPB) / 5));
-        for (var t = 0; t <= maxPB; t += step) {
-          commodityTicks.push(t);
-        }
       }
     } else {
       var pbRange = maxPB - minPB;
@@ -319,39 +312,19 @@
     canvas._yAtDiv = yAtDiv;
     canvas._plotH = plotH;
 
-    // 1. Draw horizontal gridlines and Y-axis tick values
-    if (isCommodity) {
-      ctx.textAlign = 'right';
-      ctx.textBaseline = 'middle';
-      ctx.font = '10px Poppins, -apple-system, BlinkMacSystemFont, Arial, sans-serif';
-      
-      commodityTicks.forEach(function (tick) {
-        var gy = yAtPB(tick);
-        
-        // Draw gridline across the plot
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(padL, gy);
-        ctx.lineTo(width - padR, gy);
-        ctx.stroke();
-
-        // Draw Y-axis tick value
-        ctx.fillStyle = 'rgba(203, 213, 232, 0.75)';
-        ctx.fillText(tick.toString(), padL - 8, gy);
-      });
-    } else {
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
-      ctx.lineWidth = 1;
-      var gridCount = 4;
-      for (var g = 0; g <= gridCount; g++) {
-        var gy = padT + plotH * g / gridCount;
-        ctx.beginPath();
-        ctx.moveTo(padL, gy);
-        ctx.lineTo(width - padR, gy);
-        ctx.stroke();
-      }
+    // 1. Draw horizontal gridlines based on left Y-axis levels
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    ctx.lineWidth = 1;
+    var gridCount = 4;
+    for (var g = 0; g <= gridCount; g++) {
+      var gy = padT + plotH * g / gridCount;
+      ctx.beginPath();
+      ctx.moveTo(padL, gy);
+      ctx.lineTo(width - padR, gy);
+      ctx.stroke();
     }
+
+    // 2. Left and Right Y-axis values/titles hidden per requirements (P/B and Div Yield are not displayed directly)
 
     // 4. Draw Area Gradient under Valuation/PB Line
     var pbPoints = points.filter(function (p) { return p.pb !== null && isFinite(p.pb); });
