@@ -363,11 +363,36 @@ HEADWIND_TAILWIND_CACHE = {
 }
 
 
+def get_latest_headwind_history_entry() -> dict[str, Any] | None:
+    if not HW_HISTORY_PATH.exists():
+        return None
+    latest_row = None
+    with open(HW_HISTORY_PATH, newline="", encoding="utf-8") as file_obj:
+        reader = csv_module.DictReader(file_obj)
+        for row in reader:
+            if any(str(val).strip() for val in row.values() if val is not None):
+                latest_row = dict(row)
+    return latest_row
+
+
+def pick_hist_val(row: dict[str, Any], *candidates: str) -> Any:
+    for c in candidates:
+        if c in row and row[c] is not None:
+            return row[c]
+        c_lower = c.strip().lower()
+        for k, v in row.items():
+            if k.strip().lower() == c_lower and v is not None:
+                return v
+    return None
+
+
 def compute_headwind_tailwind() -> dict[str, Any]:
     global HEADWIND_TAILWIND_CACHE
     import time
     try:
-        current_mtime = CSV_PATH.stat().st_mtime
+        csv_mtime = CSV_PATH.stat().st_mtime if CSV_PATH.exists() else 0
+        hw_mtime = HW_HISTORY_PATH.stat().st_mtime if HW_HISTORY_PATH.exists() else 0
+        current_mtime = csv_mtime + hw_mtime
     except Exception:
         current_mtime = 0
 
@@ -431,25 +456,52 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         else:
             return "Neutral"
 
-    increase_count = int(((numeric_change > 0) & (numeric_change_3y > 0)).sum())
-    decrease_count = int(((numeric_change < 0) & (numeric_change_3y < 0)).sum())
-    total_count = increase_count + decrease_count
+    # Full Market values are taken directly from headwind_tailwind_history.csv without calculating via formula
+    latest_hist = get_latest_headwind_history_entry()
+    if latest_hist:
+        hist_inc_str = str(pick_hist_val(latest_hist, "change in promoter Holding >0", "increase", "inc") or "").strip()
+        hist_dec_str = str(pick_hist_val(latest_hist, "change in promoter Holding <0", "decrease", "dec") or "").strip()
+        hist_score_str = str(pick_hist_val(latest_hist, "Headwind tailwind indicator", "indicator", "score") or "").strip()
+        hist_result_str = str(pick_hist_val(latest_hist, "Result", "signal", "status") or "").strip()
+        hist_date_str = str(pick_hist_val(latest_hist, "Date", "date") or "").strip()
 
-    total_companies = int(len(frame))
-    if total_companies == 0:
-        score: float | None = None
-        score_display = "—"
+        def _clean_hist_num(val: str) -> float | None:
+            try:
+                c = val.replace(",", "").replace("%", "").strip()
+                return float(c) if c else None
+            except Exception:
+                return None
+
+        inc_num = _clean_hist_num(hist_inc_str)
+        dec_num = _clean_hist_num(hist_dec_str)
+        score_num = _clean_hist_num(hist_score_str)
+
+        increase_count = int(inc_num) if inc_num is not None else 0
+        decrease_count = int(dec_num) if dec_num is not None else 0
+        total_count = increase_count + decrease_count
+        score = score_num
+        score_display = hist_score_str if hist_score_str else ("—" if score is None else str(score))
+
+        res_lower = hist_result_str.lower()
+        if "tailwind" in res_lower or "upcycle" in res_lower:
+            signal = "Upcycle"
+        elif "headwind" in res_lower or "downcycle" in res_lower:
+            signal = "Downcycle"
+        elif "reversal" in res_lower or "neutral" in res_lower:
+            signal = "Neutral"
+        elif score is not None:
+            signal = "Upcycle" if score > 1.0 else ("Downcycle" if score < 1.0 else "Neutral")
+        else:
+            signal = "Neutral"
     else:
-        score = round((increase_count / decrease_count), 4) if decrease_count > 0 else (float("inf") if increase_count > 0 else None)
-        score_display = str(score) if score is not None else "—"
-
-    signal = (
-        "Upcycle"
-        if (score is not None and score > 1)
-        else "Downcycle"
-        if (score is not None and score < 1)
-        else "Neutral"
-    )
+        increase_count = 0
+        decrease_count = 0
+        total_count = 0
+        score = None
+        score_display = "—"
+        signal = "Neutral"
+        hist_result_str = None
+        hist_date_str = None
 
     market_avg_3y = round(float(numeric_ret_3y.dropna().mean()), 2) if not numeric_ret_3y.dropna().empty else None
     market_avg_5y = round(float(numeric_ret_5y.dropna().mean()), 2) if not numeric_ret_5y.dropna().empty else None
@@ -553,6 +605,8 @@ def compute_headwind_tailwind() -> dict[str, Any]:
             "score": score,
             "scoreDisplay": score_display,
             "signal": signal,
+            "result": hist_result_str,
+            "date": hist_date_str,
             "avgReturn3Y": market_avg_3y,
             "avgReturn5Y": market_avg_5y,
             "favor": market_favor,

@@ -350,17 +350,22 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       // Positive = Upcycle (green), Negative = Downcycle (red), 0 = Neutral (gold)
 
       function colorFor(signal) {
-        if (signal === 'Upcycle') return '#34D399';   // green
-        if (signal === 'Downcycle') return '#F87171';   // red
+        var s = String(signal || '').trim().toLowerCase();
+        if (s === 'upcycle' || s === 'tailwind') return '#34D399';   // green
+        if (s === 'downcycle' || s === 'headwind') return '#F87171';   // red
         return '#F4D676';                               // gold / neutral
       }
 
-      function badgeHtml(signal) {
-        if (signal === 'Upcycle')
-          return '<span class="iv-hw-badge tailwind">▲ Upcycle</span>';
-        if (signal === 'Downcycle')
-          return '<span class="iv-hw-badge headwind">▼ Downcycle</span>';
-        return '<span class="iv-hw-badge neutral">● Neutral</span>';
+      function badgeHtml(signal, result) {
+        var label = result || signal || 'Neutral';
+        var s = String(label).trim().toLowerCase();
+        if (s === 'upcycle' || s === 'tailwind')
+          return '<span class="iv-hw-badge tailwind">▲ ' + (result || 'Upcycle') + '</span>';
+        if (s === 'downcycle' || s === 'headwind')
+          return '<span class="iv-hw-badge headwind">▼ ' + (result || 'Downcycle') + '</span>';
+        if (s === 'reversal')
+          return '<span class="iv-hw-badge neutral">● Reversal</span>';
+        return '<span class="iv-hw-badge neutral">● ' + label + '</span>';
       }
 
       function favorBadgeHtml(favor, avg3y, avg5y) {
@@ -382,21 +387,18 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       }
 
       function barHtml(s) {
-        // score lives in [−1, +1].
-        // We split the bar at the centre:
-        //   positive score → green bar grows rightward from centre
-        //   negative score → red bar grows leftward from centre
-        // The bar track is split 50/50 with a centre divider.
-
         var score = (s.score !== null && s.score !== undefined) ? s.score : 0;
-        // Cap at ±1 just in case of floating-point edge cases
-        var clamped = Math.max(-1, Math.min(1, score));
+        var isMarket = !!s.isMarket;
+        // For market, neutral is 1.0 (from CSV indicator inc/dec).
+        // For sectors, neutral is 0.0 (from (inc-dec)/total).
+        var delta = isMarket ? (score - 1.0) : score;
+        var clamped = Math.max(-1, Math.min(1, delta));
         var pct = Math.abs(clamped) * 50;   // max 50% of track width per side
-        var color = colorFor(s.signal);
+        var color = colorFor(s.result || s.signal);
         var label = (s.scoreDisplay !== undefined && s.scoreDisplay !== null)
-          ? s.scoreDisplay : '—';
-        // Show +/− prefix for clarity
-        if (s.score !== null && isFinite(s.score) && s.score > 0) label = '+' + label;
+          ? String(s.scoreDisplay) : '—';
+        // Show +/− prefix for sectors; for market show exact CSV value without +
+        if (!isMarket && s.score !== null && isFinite(s.score) && s.score > 0) label = '+' + label;
 
         // Two-sided bar: negative side (left) | centre | positive side (right)
         if (clamped >= 0) {
@@ -418,7 +420,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           return '<div class="iv-hw-bar-wrap">' +
             '<div class="iv-hw-bar-bg" style="display:flex;align-items:center;">' +
             '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:99px 0 0 99px;overflow:hidden;direction:rtl;">' +
-            '<div style="height:100%;width:' + (pct * 2).toFixed(1) + '%;background:' + color + ';border-radius:99px 0 0 99px;"></div>' +
+            '<div style="height:100%;width:' + (pct * 2).toFixed(1) + '%;background:' + color + ';border-radius:99px 0 99px 0;"></div>' +
             '</div>' +
             '<div style="width:2px;height:10px;background:rgba(255,255,255,0.25);flex-shrink:0;"></div>' +
             '<div style="flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:0 99px 99px 0;overflow:hidden;">' +
@@ -431,13 +433,19 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       }
 
       // ── render ────────────────────────────────────────────────────────────────
-      var mVal = { score: market.score, signal: market.signal, scoreDisplay: market.scoreDisplay };
+      var mVal = {
+        score: market.score,
+        signal: market.signal,
+        result: market.result,
+        scoreDisplay: market.scoreDisplay,
+        isMarket: true
+      };
 
       var html = '<tr class="market-row" style="cursor:pointer;" title="Click to view history">' +
         '<td>🌐 Full Market</td>' +
         '<td class="center">' + favorBadgeHtml(market.favor, market.avgReturn3Y, market.avgReturn5Y) + '</td>' +
         '<td class="right">' + barHtml(mVal) + '</td>' +
-        '<td class="center">' + badgeHtml(market.signal) + '</td>' +
+        '<td class="center">' + badgeHtml(market.signal, market.result) + '</td>' +
         '</tr>';
 
       if (!sectors.length) {
