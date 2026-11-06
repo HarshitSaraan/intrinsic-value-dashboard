@@ -349,22 +349,38 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
       // New formula: score = (inc − dec) / total  →  range [−1, +1], neutral = 0
       // Positive = Upcycle (green), Negative = Downcycle (red), 0 = Neutral (gold)
 
-      function colorFor(signal) {
+      function colorFor(signal, score, isMarket) {
+        if (isMarket && score !== undefined && score !== null && isFinite(score)) {
+          if (score > 1.05) return '#34D399';   // green
+          if (score < 0.95) return '#F87171';   // red
+          return '#F4D676';                     // gold / neutral
+        }
         var s = String(signal || '').trim().toLowerCase();
         if (s === 'upcycle' || s === 'tailwind') return '#34D399';   // green
         if (s === 'downcycle' || s === 'headwind') return '#F87171';   // red
         return '#F4D676';                               // gold / neutral
       }
 
-      function badgeHtml(signal, result) {
+      function badgeHtml(signal, result, score, isMarket) {
+        var sig = signal;
         var label = result || signal || 'Neutral';
-        var s = String(label).trim().toLowerCase();
+        if (isMarket && score !== undefined && score !== null && isFinite(score)) {
+          if (score > 1.05) {
+            sig = 'tailwind';
+            label = result || 'Tailwind';
+          } else if (score < 0.95) {
+            sig = 'headwind';
+            label = result || 'Headwind';
+          } else {
+            sig = 'reversal';
+            label = result || 'Reversal';
+          }
+        }
+        var s = String(sig || label).trim().toLowerCase();
         if (s === 'upcycle' || s === 'tailwind')
-          return '<span class="iv-hw-badge tailwind">▲ ' + (result || 'Upcycle') + '</span>';
+          return '<span class="iv-hw-badge tailwind">▲ ' + label + '</span>';
         if (s === 'downcycle' || s === 'headwind')
-          return '<span class="iv-hw-badge headwind">▼ ' + (result || 'Downcycle') + '</span>';
-        if (s === 'reversal')
-          return '<span class="iv-hw-badge neutral">● Reversal</span>';
+          return '<span class="iv-hw-badge headwind">▼ ' + label + '</span>';
         return '<span class="iv-hw-badge neutral">● ' + label + '</span>';
       }
 
@@ -394,7 +410,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
         var delta = isMarket ? (score - 1.0) : score;
         var clamped = Math.max(-1, Math.min(1, delta));
         var pct = Math.abs(clamped) * 50;   // max 50% of track width per side
-        var color = colorFor(s.result || s.signal);
+        var color = colorFor(s.result || s.signal, s.score, isMarket);
         var label = (s.scoreDisplay !== undefined && s.scoreDisplay !== null)
           ? String(s.scoreDisplay) : '—';
         // Show +/− prefix for sectors; for market show exact CSV value without +
@@ -445,7 +461,7 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
         '<td>🌐 Full Market</td>' +
         '<td class="center">' + favorBadgeHtml(market.favor, market.avgReturn3Y, market.avgReturn5Y) + '</td>' +
         '<td class="right">' + barHtml(mVal) + '</td>' +
-        '<td class="center">' + badgeHtml(market.signal, market.result) + '</td>' +
+        '<td class="center">' + badgeHtml(market.signal, market.result, market.score, true) + '</td>' +
         '</tr>';
 
       if (!sectors.length) {
@@ -705,9 +721,9 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
           if (!closest || Math.abs(p.x - mx) < Math.abs(closest.x - mx)) closest = p;
         });
         if (!closest) return;
-        var scoreColor = closest.score > 0 ? '#34D399' : closest.score < 0 ? '#F87171' : '#F4D676';
+        var scoreColor = closest.score > 1.05 ? '#34D399' : closest.score < 0.95 ? '#F87171' : '#F4D676';
         tooltip.innerHTML = '<b>' + closest.label + '</b><br>Score: <span style="color:' + scoreColor + '">' +
-          (closest.score > 0 ? '+' : '') + closest.score.toFixed(4) + '</span>' +
+          closest.score.toFixed(2) + '</span>' +
           (closest.isCurrent ? '<br><span style="color:#4C8DFF">● Current</span>' : '');
         tooltip.style.display = 'block';
         var ttW = tooltip.offsetWidth || 120;
