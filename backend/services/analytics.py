@@ -483,21 +483,22 @@ def compute_headwind_tailwind() -> dict[str, Any]:
         score_display = hist_score_str if hist_score_str else ("—" if score is None else str(score))
 
         # Thresholds for Full Market:
-        # score > 1.05: Green (Upcycle / Tailwind)
-        # score < 0.95: Red (Downcycle / Headwind)
-        # 0.95 <= score <= 1.05: Yellow / Neutral (Reversal)
+        # score > 1.05: Green (Upcycle)
+        # score < 0.95: Red (Downcycle)
+        # 0.95 <= score <= 1.05: Yellow / Neutral
         if score is not None:
             if score > 1.05:
                 signal = "Upcycle"
-                hist_result_str = hist_result_str if (hist_result_str and hist_result_str.lower() in ("tailwind", "upcycle")) else "Tailwind"
+                hist_result_str = "Upcycle"
             elif score < 0.95:
                 signal = "Downcycle"
-                hist_result_str = hist_result_str if (hist_result_str and hist_result_str.lower() in ("headwind", "downcycle")) else "Headwind"
+                hist_result_str = "Downcycle"
             else:
                 signal = "Neutral"
-                hist_result_str = hist_result_str if (hist_result_str and hist_result_str.lower() in ("reversal", "neutral")) else "Reversal"
+                hist_result_str = "Neutral"
         else:
             signal = "Neutral"
+            hist_result_str = "Neutral"
     else:
         increase_count = 0
         decrease_count = 0

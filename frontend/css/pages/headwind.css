@@ -11,13 +11,15 @@
               transition: all 0.3s ease;
             }
 
-             .iv-headwind-page .iv-hw-badge.tailwind {
+             .iv-headwind-page .iv-hw-badge.tailwind,
+             .iv-headwind-page .iv-hw-badge.upcycle {
               background: rgba(52, 211, 153, 0.13);
               border: 1px solid rgba(52, 211, 153, 0.35);
               color: var(--iv-success);
             }
 
-             .iv-headwind-page .iv-hw-badge.headwind {
+             .iv-headwind-page .iv-hw-badge.headwind,
+             .iv-headwind-page .iv-hw-badge.downcycle {
               background: rgba(248, 113, 113, 0.13);
               border: 1px solid rgba(248, 113, 113, 0.35);
               color: var(--iv-danger);

@@ -363,24 +363,40 @@ function ivDrawRoundedRect(ctx, x, y, w, h, r) {
 
       function badgeHtml(signal, result, score, isMarket) {
         var sig = signal;
-        var label = result || signal || 'Neutral';
+        var label = signal || 'Neutral';
         if (isMarket && score !== undefined && score !== null && isFinite(score)) {
           if (score > 1.05) {
-            sig = 'tailwind';
-            label = result || 'Tailwind';
+            sig = 'upcycle';
+            label = 'Upcycle';
           } else if (score < 0.95) {
-            sig = 'headwind';
-            label = result || 'Headwind';
+            sig = 'downcycle';
+            label = 'Downcycle';
           } else {
-            sig = 'reversal';
-            label = result || 'Reversal';
+            sig = 'neutral';
+            label = 'Neutral';
+          }
+        } else if (result) {
+          var rLow = String(result).trim().toLowerCase();
+          if (rLow === 'tailwind' || rLow === 'upcycle') {
+            sig = 'upcycle';
+            label = 'Upcycle';
+          } else if (rLow === 'headwind' || rLow === 'downcycle') {
+            sig = 'downcycle';
+            label = 'Downcycle';
+          } else if (rLow === 'reversal' || rLow === 'neutral') {
+            sig = 'neutral';
+            label = 'Neutral';
           }
         }
         var s = String(sig || label).trim().toLowerCase();
-        if (s === 'upcycle' || s === 'tailwind')
-          return '<span class="iv-hw-badge tailwind">▲ ' + label + '</span>';
-        if (s === 'downcycle' || s === 'headwind')
-          return '<span class="iv-hw-badge headwind">▼ ' + label + '</span>';
+        if (s === 'tailwind') { s = 'upcycle'; label = 'Upcycle'; }
+        if (s === 'headwind') { s = 'downcycle'; label = 'Downcycle'; }
+        if (s === 'reversal') { s = 'neutral'; label = 'Neutral'; }
+
+        if (s === 'upcycle')
+          return '<span class="iv-hw-badge tailwind upcycle">▲ ' + label + '</span>';
+        if (s === 'downcycle')
+          return '<span class="iv-hw-badge headwind downcycle">▼ ' + label + '</span>';
         return '<span class="iv-hw-badge neutral">● ' + label + '</span>';
       }
 
